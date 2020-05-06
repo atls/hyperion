@@ -4,9 +4,7 @@
   "license": "MIT",
   "main": "src/index.ts",
   "devDependencies": {
-    "@types/styled-system": "5.1.4"
-  },
-  "peerDependencies": {
+    "@types/styled-system": "5.1.4",
     "@emotion/styled": "^10.0.0",
     "@styled-system/should-forward-prop": "^5.1.0",
     "styled-system": "^5.1.0",
