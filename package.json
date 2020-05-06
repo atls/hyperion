@@ -1,29 +1,28 @@
 {
-  "name": "@au/ui",
-  "version": "1.0.0",
-  "main": "src/",
   "license": "MIT",
+  "private": true,
   "scripts": {
-    "docs:server": "docsnow server --summary Readme.md --config config/docsnow.config.js",
-    "docs:build": "docsnow build --summary Readme.md --config config/docsnow.config.js",
-    "lint": "eslint config src -f table"
+    "lint": "mctl lint",
+    "test": "mctl test",
+    "commit": "mctl commit",
+    "format": "mctl format",
+    "typecheck": "mctl typecheck",
+    "checkcommit": "mctl precommit",
+    "build": "lerna run build"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-eslint": "^9.0.0",
-    "babel-loader": "^8.0.0",
-    "docsnow": "^0.4.8",
-    "elementum": "^0.4.2",
-    "eslint": "^5.6.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1",
-    "flex-layouts": "^0.5.2",
-    "react": "^16.5.1",
-    "react-swipeable": "^4.3.0"
+    "@monstrs/mctl": "^0.1.82",
+    "husky": "4.2.3",
+    "lerna": "3.20.2",
+    "typescript": "3.7.5"
+  },
+  "workspaces": [
+    "packages/**/*"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "mctl precommit",
+      "commit-msg": "mctl commitmsg"
+    }
   }
 }
