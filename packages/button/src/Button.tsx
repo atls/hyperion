@@ -83,6 +83,7 @@ const ContentPart = styled.span({
 })
 
 const Button = ({ children, ...props }) => (
+  // @ts-ignore
   <StyledButton {...props}>{divideChildren(children, ContentPart)}</StyledButton>
 )
 
