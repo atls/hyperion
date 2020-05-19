@@ -21,7 +21,6 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "mctl precommit",
       "commit-msg": "mctl commitmsg"
     }
   }
