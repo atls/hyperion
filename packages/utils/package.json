@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/utils",
   "repository": "git://github.com/Atlantis-Lab/ui.git",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
@@ -15,11 +15,11 @@
     "prepack": "pubflow store",
     "postpack": "pubflow restore"
   },
-  "peerDependencies": {
+  "dependencies": {
     "react": "^16.9.0"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
-  }
+    "access": "public"
+  },
+  "gitHead": "ce98c44a72144354cbc7cdc79e512df59f760109"
 }

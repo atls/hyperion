@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/button",
   "repository": "git://github.com/Atlantis-Lab/ui.git",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
@@ -28,8 +28,7 @@
     "@types/styled-system": "^5.1.9"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
-  "gitHead": "cba86fc8ed668ebef3c7ce450a14e658801c7b3b"
+  "gitHead": "ce98c44a72144354cbc7cdc79e512df59f760109"
 }
