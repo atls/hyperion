@@ -1,6 +1,6 @@
 {
   "name": "@atlantis-lab/utils",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
@@ -23,5 +23,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "ce98c44a72144354cbc7cdc79e512df59f760109"
+  "gitHead": "9cf09561b0c03acd463041d1495c7683c1fac8b0"
 }
