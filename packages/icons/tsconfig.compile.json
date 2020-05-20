@@ -1,6 +1,8 @@
 {
   "extends": "@monstrs/tsconfig/tsconfig.lib.json",
   "compilerOptions": {
-    "module": "commonjs"
-  }
+    "outDir": "dist"
+  },
+  "exclude": ["node_modules", "src/**/*.test.ts"],
+  "include": ["src"]
 }
