@@ -17,6 +17,9 @@
   "dependencies": {
     "react": "^16.9.0"
   },
+  "devDependencies": {
+    "@monstrs/publish-flow": "^0.1.3"
+  },
   "publishConfig": {
     "access": "public"
   },
