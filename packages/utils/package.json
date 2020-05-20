@@ -1,6 +1,5 @@
 {
   "name": "@atlantis-lab/utils",
-  "repository": "git://github.com/Atlantis-Lab/ui.git",
   "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
