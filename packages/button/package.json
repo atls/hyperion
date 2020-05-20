@@ -1,9 +1,8 @@
 {
   "name": "@atlantis-lab/button",
-  "repository": "git://github.com/Atlantis-Lab/ui.git",
   "version": "0.1.1",
   "license": "MIT",
-  "main": "dist/index.ts",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
