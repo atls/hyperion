@@ -7,8 +7,7 @@ import { ifProp, switchProp }                  from 'styled-tools'
 import { StyledButtonProps }                   from './types'
 import { divideChildren }                      from './utils'
 
-const base: any = ({ theme }) => ({
-  fontFamily: theme.fonts.default,
+const base: any = () => ({
   boxSizing: 'border-box',
   display: 'flex',
   alignItems: 'center',
@@ -23,18 +22,6 @@ const base: any = ({ theme }) => ({
 })
 
 const fill = ifProp('fill', { width: '100%' })
-
-const colors = switchProp('color', ({ theme }) => ({
-  default: {
-    background: theme.colors.default,
-  },
-  primary: {
-    background: theme.colors.primary,
-  },
-  secondary: {
-    background: theme.colors.secondary,
-  },
-}))
 
 const sizes = switchProp('size', ({ theme, equal }) => ({
   small: {
@@ -55,6 +42,12 @@ const sizes = switchProp('size', ({ theme, equal }) => ({
     width: equal ? 48 : null,
     height: 48,
   },
+  giant: {
+    fontSize: theme.fontSizes.default,
+    padding: equal ? 0 : '0px 16px',
+    width: equal ? 60 : null,
+    height: 60,
+  },
 }))
 
 const bg = system({
@@ -70,7 +63,6 @@ const StyledButton = styled('button', { shouldForwardProp })<StyledButtonProps>(
   base,
   fill,
   sizes,
-  colors,
   border,
   typography,
   bg,
@@ -89,7 +81,6 @@ const Button = ({ children, ...props }) => (
 Button.defaultProps = {
   borderRadius: 'normal',
   justifyContent: 'center',
-  color: 'white',
   size: 'normal',
 }
 
