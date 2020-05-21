@@ -1,19 +1,24 @@
-import React                                                   from 'react'
-import styled                                                  from '@emotion/styled'
-import { background, border, flexbox, height, padding, width } from 'styled-system'
+import React                                                 from 'react'
+import styled                                                from '@emotion/styled'
+import { backgroundColor, border, flexbox, layout, padding } from 'styled-system'
 
-import { StyledButtonProps }                                   from './types'
-import { divideChildren }                                      from './utils'
+import { StyledButtonProps }                                 from './types'
+import { divideChildren }                                    from './utils'
 
 const base: any = () => ({
   boxSizing: 'border-box',
   display: 'flex',
-  alignItems: 'center',
   whiteSpace: 'nowrap',
   cursor: 'pointer',
   border: 'none',
   outline: 'none',
   padding: 0,
+  fontSize: 'inherit',
+  fontWeight: 'inherit',
+  lineHeight: 'inherit',
+  fontFamily: 'inherit',
+  textAlign: 'inherit',
+  letterSpacing: 'inherit',
   '&:active': {
     transform: 'scale(0.98)',
   },
@@ -23,10 +28,9 @@ const StyledButton = styled('button')<StyledButtonProps>(
   base,
   border,
   flexbox,
-  height,
-  width,
+  layout,
   padding,
-  background
+  backgroundColor
 )
 
 const ContentPart = styled.span({
@@ -41,6 +45,7 @@ const Button = ({ children, ...props }) => (
 Button.defaultProps = {
   borderRadius: 'normal',
   justifyContent: 'center',
+  alignItems: 'center',
 }
 
 export { Button }
