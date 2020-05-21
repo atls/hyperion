@@ -15,13 +15,13 @@
     "postpack": "pubflow restore"
   },
   "dependencies": {
+    "@atlantis-lab/icons": "^0.1.0",
+    "@atlantis-lab/utils": "^0.2.0",
     "@emotion/styled": "^10.0.0",
     "styled-system": "^5.1.0",
     "styled-tools": "^1.7.0"
   },
   "devDependencies": {
-    "@atlantis-lab/icons": "^0.1.0",
-    "@atlantis-lab/utils": "^0.2.0",
     "@types/styled-system": "5.1.4",
     "react-swipeable": "5.5.0"
   },
