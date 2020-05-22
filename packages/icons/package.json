@@ -10,7 +10,7 @@
     "compile": "ts-node --project=./tsconfig.compile.json svgr.ts",
     "clean": "rm -r -f dist",
     "prepublishOnly": "yarn run build",
-    "prebuild": "yarn clean",
+    "prebuild": "yarn clean && yarn compile",
     "build": "tsc -p tsconfig.json",
     "prepack": "pubflow store",
     "postpack": "pubflow restore"
