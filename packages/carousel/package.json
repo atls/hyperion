@@ -1,6 +1,6 @@
 {
   "name": "@atlantis-lab/carousel",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
@@ -19,9 +19,9 @@
     "@atlantis-lab/utils": "^0.2.0",
     "@emotion/styled": "^10.0.0",
     "react": "^16.9.0",
+    "react-swipeable": "5.5.0",
     "styled-system": "^5.1.0",
-    "styled-tools": "^1.7.0",
-    "react-swipeable": "5.5.0"
+    "styled-tools": "^1.7.0"
   },
   "devDependencies": {
     "@types/styled-system": "5.1.4"
