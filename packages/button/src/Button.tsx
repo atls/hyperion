@@ -1,9 +1,9 @@
-import React                                                 from 'react'
-import styled                                                from '@emotion/styled'
-import { backgroundColor, border, flexbox, layout, padding } from 'styled-system'
+import React                                       from 'react'
+import styled                                      from '@emotion/styled'
+import { border, color, flexbox, layout, padding } from 'styled-system'
 
-import { StyledButtonProps }                                 from './types'
-import { divideChildren }                                    from './utils'
+import { StyledButtonProps }                       from './types'
+import { divideChildren }                          from './utils'
 
 const base: any = () => ({
   boxSizing: 'border-box',
@@ -19,6 +19,7 @@ const base: any = () => ({
   fontFamily: 'inherit',
   textAlign: 'inherit',
   letterSpacing: 'inherit',
+  color: 'inherit',
   '&:active': {
     transform: 'scale(0.98)',
   },
@@ -30,7 +31,7 @@ const StyledButton = styled('button')<StyledButtonProps>(
   flexbox,
   layout,
   padding,
-  backgroundColor
+  color
 )
 
 const ContentPart = styled.span({
