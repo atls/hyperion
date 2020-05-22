@@ -41,7 +41,7 @@ const Screen = styled.div(
   layout
 )
 
-export const Carousel = ({ children, disableButton = false }) => {
+export const Carousel = ({ children, disableButton = false, step = 1 }) => {
   const [enableTransition, setEnableTransition] = useState(true)
   const [innerWidth, setInnerWidth] = useState(null)
   const [fullWidth, setFullWidth] = useState(null)
@@ -124,14 +124,14 @@ export const Carousel = ({ children, disableButton = false }) => {
     let newLeft = 0
     if (direction === 'left') {
       childWidth.forEach((item, index) => {
-        if (activeSlide - 1 > index) {
+        if (activeSlide - 1 - (step - 1) > index) {
           newLeft -= item
         }
       })
     }
     if (direction === 'right') {
       childWidth.forEach((item, index) => {
-        if (activeSlide > index) {
+        if (activeSlide + (step - 1) > index) {
           newLeft -= item
         }
       })
