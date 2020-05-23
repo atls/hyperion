@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/Atlantis-Lab/ui/compare/@atlantis-lab/button@1.1.0...@atlantis-lab/button@1.1.1) (2020-05-23)
+
+### Bug Fixes
+
+- packages config update ([b07017f](https://github.com/Atlantis-Lab/ui/commit/b07017fc2ab910122597074bd77ccd9a18f81ae6))
+
 # 1.1.0 (2020-05-22)
 
 # 1.0.0 (2020-05-22)
