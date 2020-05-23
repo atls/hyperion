@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
+  "source": "src/index.ts",
   "files": [
     "dist"
   ],
@@ -26,5 +27,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "88d7a3f00297b2b7c15c39390358ebf250512687"
 }
