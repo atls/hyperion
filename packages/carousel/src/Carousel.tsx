@@ -41,7 +41,7 @@ const Screen = styled.div(
   layout
 )
 
-export const Carousel = ({ children, disableButton = false, step = 1 }) => {
+export const Carousel = ({ children, disableButton = false, step = 1, halfControls }) => {
   const [enableTransition, setEnableTransition] = useState(true)
   const [innerWidth, setInnerWidth] = useState(null)
   const [fullWidth, setFullWidth] = useState(null)
@@ -168,7 +168,8 @@ export const Carousel = ({ children, disableButton = false, step = 1 }) => {
       <SlideButton
         onClick={() => handleClick('left')}
         disabled={disableButton || buttonLeftDisabled}
-        direction='left'
+        direction={halfControls ? 'none' : 'left'}
+        halfControls={halfControls ? 'left' : 'none'}
       >
         <ArrowBackwardIcon width={24} height={24} />
       </SlideButton>
@@ -185,7 +186,8 @@ export const Carousel = ({ children, disableButton = false, step = 1 }) => {
       <SlideButton
         onClick={() => handleClick('right')}
         disabled={disableButton || buttonRightDisabled}
-        direction='right'
+        direction={halfControls ? 'none' : 'right'}
+        halfControls={halfControls ? 'right' : 'none'}
       >
         <ArrowForwardIcon width={24} height={24} />
       </SlideButton>

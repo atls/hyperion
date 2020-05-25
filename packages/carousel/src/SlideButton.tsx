@@ -3,6 +3,15 @@ import { ifProp, switchProp } from 'styled-tools'
 
 const disabled = ifProp('disabled', { display: 'none' })
 
+const halfControls = switchProp('halfControls', {
+  left: {
+    left: '-33px',
+  },
+  right: {
+    right: '-33px',
+  },
+})
+
 const directions = switchProp('direction', () => ({
   left: {
     left: '20px',
@@ -21,7 +30,7 @@ export const SlideButton = styled.div<any>(
     background: theme.colors.white,
     boxSizing: 'border-box',
     borderRadius: '50%',
-    boxShadow: theme.shadows.codgray,
+    boxShadow: theme.shadows.controls,
     zIndex: 9,
     display: 'flex',
     alignItems: 'center',
@@ -39,5 +48,6 @@ export const SlideButton = styled.div<any>(
     },
   }),
   disabled,
-  directions
+  directions,
+  halfControls
 )
