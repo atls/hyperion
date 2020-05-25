@@ -1,6 +1,6 @@
 {
   "name": "@atlantis-lab/slideshow",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -16,7 +16,7 @@
     "postpack": "pubflow restore"
   },
   "dependencies": {
-    "@atlantis-lab/utils": "^0.2.0",
+    "@atlantis-lab/utils": "0.3.0",
     "@emotion/styled": "^10.0.0",
     "react": "^16.9.0",
     "styled-system": "^5.1.0",
