@@ -28,5 +28,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Atlantis-Lab/uikit.git"
+  },
   "gitHead": "88d7a3f00297b2b7c15c39390358ebf250512687"
 }
