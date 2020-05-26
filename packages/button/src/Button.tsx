@@ -5,7 +5,7 @@ import { border, color, flexbox, layout, padding } from 'styled-system'
 import { StyledButtonProps }                       from './types'
 import { divideChildren }                          from './utils'
 
-const base: any = () => ({
+const base: any = ({ hoverBackgroundColor, backgroundColor }) => ({
   boxSizing: 'border-box',
   display: 'flex',
   whiteSpace: 'nowrap',
@@ -22,6 +22,9 @@ const base: any = () => ({
   color: 'inherit',
   '&:active': {
     transform: 'scale(0.98)',
+  },
+  '&:hover': {
+    backgroundColor: hoverBackgroundColor || backgroundColor,
   },
 })
 
