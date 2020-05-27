@@ -8,10 +8,7 @@ import { ArrowBackwardIcon, ArrowForwardIcon } from '@atlantis-lab/icons'
 import { contentWidth, widthWithMargin }       from '@atlantis-lab/utils'
 
 import { SlideButton }                         from './SlideButton'
-
-interface CarouselProps {
-  transition: boolean
-}
+import { CarouselProps }                       from './types'
 
 const transition = ifProp('transition', { transition: '0.3s' })
 
