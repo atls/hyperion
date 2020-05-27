@@ -1,11 +1,6 @@
 import { useEffect, useState } from 'react'
 
-interface WindowDimensions {
-  innerWidth: number | null
-  innerHeight: number | null
-  outerWidth: number | null
-  outerHeight: number | null
-}
+import { WindowDimensions }    from './types'
 
 const initialValue: WindowDimensions = {
   innerWidth: null,

@@ -1,3 +1,6 @@
 {
-  "extends": "@monstrs/tsconfig/tsconfig.lib.json"
+  "extends": "@monstrs/tsconfig/tsconfig.base.json",
+  "compilerOptions": {
+    "module": "commonjs"
+  }
 }
