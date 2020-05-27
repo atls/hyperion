@@ -7,33 +7,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
 
-
-
-
-
 ## [0.3.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.3.0...@atlantis-lab/slideshow@0.3.1) (2020-05-25)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
 
-
-
-
-
 # 0.3.0 (2020-05-25)
-
 
 ### Bug Fixes
 
-* packages config update ([b07017f](https://github.com/Atlantis-Lab/uikit/commit/b07017fc2ab910122597074bd77ccd9a18f81ae6))
-
+- packages config update ([b07017f](https://github.com/Atlantis-Lab/uikit/commit/b07017fc2ab910122597074bd77ccd9a18f81ae6))
 
 ### Features
 
-* **slideshow:** slideshow init ([494b065](https://github.com/Atlantis-Lab/uikit/commit/494b065b907c41deaa481a86e2a9bb94dc089c9d))
-
-
-
-
+- **slideshow:** slideshow init ([494b065](https://github.com/Atlantis-Lab/uikit/commit/494b065b907c41deaa481a86e2a9bb94dc089c9d))
 
 # 0.2.0 (2020-05-25)
 
