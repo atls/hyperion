@@ -1,0 +1,28 @@
+{
+  "name": "@atlantis-lab/hamburger",
+  "repository": "git@github.com:Atlantis-Lab/uikit.git",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "typings": "dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -r -f dist",
+    "prepublishOnly": "yarn run build",
+    "prebuild": "yarn clean",
+    "build": "tsc -p tsconfig.json",
+    "prepack": "pubflow store",
+    "postpack": "pubflow restore"
+  },
+  "dependencies": {
+    "@emotion/styled": "^10.0.0",
+    "styled-tools": "^1.7.0",
+    "react": "^16.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
