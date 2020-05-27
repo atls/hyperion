@@ -1,9 +1,11 @@
 {
   "name": "@atlantis-lab/carousel",
+  "repository": "git@github.com:Atlantis-Lab/uikit.git",
   "version": "0.3.2",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
+  "typings": "dist/types.d.ts",
   "files": [
     "dist"
   ],
@@ -25,13 +27,11 @@
     "styled-tools": "^1.7.0"
   },
   "devDependencies": {
+    "@atlantis-lab/icons": "0.3.2",
+    "@atlantis-lab/utils": "0.4.2",
     "@types/styled-system": "5.1.4"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Atlantis-Lab/uikit.git"
   }
 }
