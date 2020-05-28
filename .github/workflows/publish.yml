@@ -65,8 +65,8 @@ jobs:
       - name: Release and Publish
         run: |
           yarn lerna version --yes
-          yarn lerna publish from-package --no-verify-access --yes
           yarn lerna publish from-package --no-verify-access --yes --registry="https://npm.pkg.github.com/:_authToken=$NPM_TOKEN"
+          yarn lerna publish from-package --no-verify-access --yes --registry="https://registry.npmjs.org/:_authToken=$NPM_TOKEN"
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
