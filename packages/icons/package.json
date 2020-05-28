@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/icons",
   "repository": "git@github.com:Atlantis-Lab/uikit.git",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -19,9 +19,9 @@
     "postpack": "pubflow restore"
   },
   "peerDependencies": {
-    "react": "^16.9.0",
     "@monstrs/prettier-config": "^0.1.0 || ^0.2.0",
-    "prettier": "^1.18.0"
+    "prettier": "^1.18.0",
+    "react": "^16.9.0"
   },
   "devDependencies": {
     "@monstrs/publish-flow": "^0.1.3",
