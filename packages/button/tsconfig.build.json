@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@monstrs/tsconfig/tsconfig.lib.json",
   "compilerOptions": {
     "outDir": "dist"
   },
