@@ -8,8 +8,10 @@ export function contentWidth(el) {
 
 export function widthWithMargin(el) {
   const style = window.getComputedStyle(el, null)
+  const bLeft = Number(style.getPropertyValue('border-left').replace(/px.*/, ''))
+  const bRight = Number(style.getPropertyValue('border-right').replace(/px.*/, ''))
   const mleft = Number(style.getPropertyValue('margin-left').replace('px', ''))
   const mright = Number(style.getPropertyValue('margin-right').replace('px', ''))
 
-  return el.clientWidth + mleft + mright
+  return el.clientWidth + bLeft + bRight + mleft + mright
 }
