@@ -14,7 +14,7 @@
     "clean": "rm -r -f dist",
     "prepublishOnly": "yarn run build",
     "prebuild": "yarn clean && yarn compile",
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.build.json",
     "prepack": "pubflow store",
     "postpack": "pubflow restore"
   },
