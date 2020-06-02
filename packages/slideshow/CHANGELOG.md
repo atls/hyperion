@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.8](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.3.7...@atlantis-lab/slideshow@0.3.8) (2020-06-02)
+
+
+### Bug Fixes
+
+* **packages/slideshow:** fix linter ([d945a51](https://github.com/Atlantis-Lab/uikit/commit/d945a5122137b691495faa0f73e4c38810e83d4d))
+
+
+
+
+
 ## [0.3.7](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.3.6...@atlantis-lab/slideshow@0.3.7) (2020-06-02)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
