@@ -1,11 +1,12 @@
-import styled                                 from '@emotion/styled'
-import React, { useEffect, useRef, useState } from 'react'
-import { Swipeable }                          from 'react-swipeable'
+import styled                                     from '@emotion/styled'
+import React, { FC, useEffect, useRef, useState } from 'react'
+import { Swipeable }                              from 'react-swipeable'
 
-import { contentWidth }                       from '@atlantis-lab/utils'
+import { contentWidth }                           from '@atlantis-lab/utils'
 
-import { Dots }                               from './Dots'
-import { Slices }                             from './Slices'
+import { Dots }                                   from './Dots'
+import { Slices }                                 from './Slices'
+import { SlideshowProps }                         from './types'
 
 const Container = styled.div({
   width: '100%',
@@ -13,7 +14,11 @@ const Container = styled.div({
   position: 'relative',
 })
 
-export const Slideshow = ({ children, time = 10000, controlsType = 'slices' }) => {
+export const Slideshow: FC<SlideshowProps> = ({
+  children,
+  time = 10000,
+  controlsType = 'slices',
+}) => {
   const [slide, setSlide] = useState(0)
   const [containerWidth, setContainerWidth] = useState(null)
   const containerNode = useRef(null)
