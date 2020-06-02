@@ -22,7 +22,7 @@
     "@atlantis-lab/utils": "0.4.6",
     "@emotion/styled": "^10.0.0",
     "react": "^16.9.0",
-    "react-swipeable": "5.5.0",
+    "react-swipeable": "5.5.1",
     "styled-system": "^5.1.0",
     "styled-tools": "^1.7.0"
   },
