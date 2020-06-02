@@ -4,7 +4,7 @@ import { Swipeable }                          from 'react-swipeable'
 
 import { contentWidth }                       from '@atlantis-lab/utils'
 
-import { Circles }                            from './Circles'
+import { Dots }                               from './Dots'
 import { Slices }                             from './Slices'
 
 const Container = styled.div({
@@ -58,8 +58,8 @@ export const Slideshow = ({ children, time = 10000, controlsType = 'slices' }) =
       >
         {children[slide]}
       </Swipeable>
-      {controlsType === 'circles' && (
-        <Circles
+      {controlsType === 'dots' && (
+        <Dots
           slides={children}
           currentSlide={slide}
           containerWidth={containerWidth}
