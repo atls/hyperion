@@ -1,6 +1,6 @@
 import styled                                  from '@emotion/styled'
 import React, { useEffect, useRef, useState }  from 'react'
-import { useSwipeable }                        from 'react-swipeable'
+import { Swipeable }                           from 'react-swipeable'
 import { layout }                              from 'styled-system'
 import { ifProp }                              from 'styled-tools'
 
@@ -46,6 +46,7 @@ export const Carousel = ({ children, disableButton = false, step = 1, halfContro
   const [buttonLeftDisabled, setButtonLeftDisabled] = useState(true)
   const [buttonRightDisabled, setButtonRightDisabled] = useState(false)
   const [left, setLeft] = useState(0)
+  const [deltaX, setDeltaX] = useState(0)
   const containerNode = useRef()
   const screenNode = useRef(null)
 
@@ -84,8 +85,7 @@ export const Carousel = ({ children, disableButton = false, step = 1, halfContro
     if (innerWidth >= fullWidth) {
       return
     }
-    let newLeft = 0
-    newLeft = data.event.movementX * 2 + left
+    const newLeft = deltaX - data.deltaX + left
 
     if (!disableButton) {
       if (newLeft >= -10) {
@@ -101,9 +101,18 @@ export const Carousel = ({ children, disableButton = false, step = 1, halfContro
       }
     }
 
-    if (newLeft >= 2 || fullWidth <= innerWidth - newLeft - 2) return
+    if (newLeft >= 2) {
+      setLeft(0)
+      return
+    }
 
-    setLeft(data.event.movementX * 2 + left)
+    if (fullWidth <= innerWidth - newLeft - 2) {
+      setLeft(innerWidth - fullWidth)
+      return
+    }
+
+    setDeltaX(data.deltaX)
+    setLeft(newLeft)
     setEnableTransition(false)
   }
 
@@ -152,14 +161,6 @@ export const Carousel = ({ children, disableButton = false, step = 1, halfContro
     setLeft(newLeft)
   }
 
-  const handlers = useSwipeable({
-    onSwiping: data => swiping(data),
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true,
-    trackTouch: true,
-    delta: 15,
-  })
-
   return (
     <Container show={children.length !== 0}>
       <SlideButton
@@ -171,14 +172,18 @@ export const Carousel = ({ children, disableButton = false, step = 1, halfContro
         <ArrowBackwardIcon width={24} height={24} />
       </SlideButton>
       <Screen ref={containerNode} maxWidth='100%'>
-        <StyledCarousel
-          {...handlers}
-          ref={screenNode}
-          style={{ left }}
-          transition={enableTransition}
+        <Swipeable
+          onSwiping={data => swiping(data)}
+          onSwiped={() => setDeltaX(0)}
+          preventDefaultTouchmoveEvent
+          trackMouse
+          trackTouch
+          delta={15}
         >
-          {children}
-        </StyledCarousel>
+          <StyledCarousel ref={screenNode} style={{ left }} transition={enableTransition}>
+            {children}
+          </StyledCarousel>
+        </Swipeable>
       </Screen>
       <SlideButton
         onClick={() => handleClick('right')}

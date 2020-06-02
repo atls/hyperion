@@ -3,29 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.3.7](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.3.6...@atlantis-lab/button@1.3.7) (2020-06-01)
+## [1.3.8](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.3.7...@atlantis-lab/button@1.3.8) (2020-06-02)
 
 **Note:** Version bump only for package @atlantis-lab/button
 
 
 
 
+
+## [1.3.7](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.3.6...@atlantis-lab/button@1.3.7) (2020-06-01)
+
+**Note:** Version bump only for package @atlantis-lab/button
 
 ## [1.3.6](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.3.5...@atlantis-lab/button@1.3.6) (2020-06-01)
 
 **Note:** Version bump only for package @atlantis-lab/button
 
-
-
-
-
 ## [1.3.5](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.3.3...@atlantis-lab/button@1.3.5) (2020-06-01)
 
 **Note:** Version bump only for package @atlantis-lab/button
-
-
-
-
 
 ## [1.3.4](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.3.3...@atlantis-lab/button@1.3.4) (2020-05-28)
 
