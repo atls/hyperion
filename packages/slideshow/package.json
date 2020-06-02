@@ -19,15 +19,15 @@
   },
   "dependencies": {
     "@atlantis-lab/utils": "0.4.6",
-    "@emotion/styled": "^10.0.0",
+    "@emotion/styled": "^10.0.27",
     "react-swipeable": "5.5.1",
     "react": "^16.9.0",
-    "styled-system": "^5.1.0",
-    "styled-tools": "^1.7.0"
+    "styled-system": "5.1.5",
+    "styled-tools": "1.7.1"
   },
   "devDependencies": {
-    "@atlantis-lab/utils": "0.4.2",
-    "@types/styled-system": "5.1.4"
+    "@atlantis-lab/utils": "0.4.6",
+    "@types/styled-system": "5.1.9"
   },
   "publishConfig": {
     "access": "public"

@@ -2,7 +2,7 @@ import styled              from '@emotion/styled'
 import React, { Fragment } from 'react'
 import { ifProp }          from 'styled-tools'
 
-const CirclesItem = styled.div<any>(
+const DotsItem = styled.div<any>(
   ({ theme }) => ({
     display: 'flex',
     height: '8px',
@@ -19,7 +19,7 @@ const CirclesItem = styled.div<any>(
   })
 )
 
-const CirclesContainer = styled.div<any>(({ containerWidth }) => ({
+const DotsContainer = styled.div<any>(({ containerWidth }) => ({
   display: 'flex',
   position: 'absolute',
   justifyContent: 'center',
@@ -29,12 +29,12 @@ const CirclesContainer = styled.div<any>(({ containerWidth }) => ({
   left: `calc(50% - ${(containerWidth * 0.9) / 2}px)`,
 }))
 
-export const Circles = ({ slides, currentSlide, lastSlide, containerWidth }) => (
-  <CirclesContainer containerWidth={containerWidth}>
+export const Dots = ({ slides, currentSlide, lastSlide, containerWidth }) => (
+  <DotsContainer containerWidth={containerWidth}>
     {slides.map((item, index) => (
       <Fragment key={`${item.name}`}>
-        <CirclesItem active={index === currentSlide} lastSlide={index === lastSlide} />
+        <DotsItem active={index === currentSlide} lastSlide={index === lastSlide} />
       </Fragment>
     ))}
-  </CirclesContainer>
+  </DotsContainer>
 )
