@@ -32,7 +32,7 @@ const CirclesContainer = styled.div<any>(({ containerWidth }) => ({
 export const Circles = ({ slides, currentSlide, lastSlide, containerWidth }) => (
   <CirclesContainer containerWidth={containerWidth}>
     {slides.map((item, index) => (
-      <Fragment key={`${index}as`}>
+      <Fragment key={`${item.name}`}>
         <CirclesItem active={index === currentSlide} lastSlide={index === lastSlide} />
       </Fragment>
     ))}
