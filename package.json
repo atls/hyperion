@@ -12,7 +12,7 @@
     "build": "lerna run build"
   },
   "devDependencies": {
-    "@monstrs/mctl": "^0.1.82",
+    "@monstrs/mctl": "0.1.82",
     "husky": "4.2.3",
     "lerna": "3.20.2",
     "typescript": "3.7.5"
