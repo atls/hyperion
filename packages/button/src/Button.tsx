@@ -1,6 +1,7 @@
 import React                                       from 'react'
-import styled                                      from '@emotion/styled'
 import { border, color, flexbox, layout, padding } from 'styled-system'
+
+import styled                                      from '@emotion/styled'
 
 import { StyledButtonProps }                       from './types'
 import { divideChildren }                          from './utils'
