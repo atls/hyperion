@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/hamburger@0.2.2...@atlantis-lab/hamburger@0.2.3) (2020-06-05)
+
+
+### Bug Fixes
+
+* fix format ([7044035](https://github.com/Atlantis-Lab/uikit/commit/7044035b873661f5be1833844155feff77899f1d))
+
+
+
+
+
 ## [0.2.2](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/hamburger@0.2.1...@atlantis-lab/hamburger@0.2.2) (2020-06-02)
 
 **Note:** Version bump only for package @atlantis-lab/hamburger
