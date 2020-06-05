@@ -1,0 +1,37 @@
+{
+  "name": "@atlantis-lab/input",
+  "repository": "git@github.com:Atlantis-Lab/uikit.git",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -r -f dist",
+    "prepublishOnly": "yarn run build",
+    "prebuild": "yarn clean",
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "pubflow store",
+    "postpack": "pubflow restore"
+  },
+  "dependencies": {
+    "@emotion/styled": "10.0.23",
+    "styled-system": "5.1.4",
+    "react-text-mask": "5.4.3",
+    "text-mask-addons": "3.8.0"
+  },
+  "peerDependencies": {
+    "@styled-system/should-forward-prop": "^5.1.0",
+    "@emotion/styled": "^10.0.0",
+    "styled-system": "^5.1.0",
+    "styled-tools": "^1.7.0",
+    "react": "^16.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "9cf09561b0c03acd463041d1495c7683c1fac8b0"
+}
