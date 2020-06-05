@@ -1,9 +1,9 @@
-import styled                                  from '@emotion/styled'
 import React, { useEffect, useRef, useState }  from 'react'
 import { Swipeable }                           from 'react-swipeable'
 import { layout }                              from 'styled-system'
 import { ifProp }                              from 'styled-tools'
 
+import styled                                  from '@emotion/styled'
 import { ArrowBackwardIcon, ArrowForwardIcon } from '@atlantis-lab/icons'
 import { contentWidth, widthWithMargin }       from '@atlantis-lab/utils'
 
