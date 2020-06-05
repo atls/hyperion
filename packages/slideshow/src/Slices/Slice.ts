@@ -1,5 +1,6 @@
-import styled     from '@emotion/styled'
 import { ifProp } from 'styled-tools'
+
+import styled     from '@emotion/styled'
 
 export const Slice = styled.div<any>(
   {

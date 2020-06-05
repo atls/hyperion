@@ -7,17 +7,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @atlantis-lab/carousel
 
-
-
-
-
 ## [0.3.7](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.6...@atlantis-lab/carousel@0.3.7) (2020-06-02)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
-
-
-
-
 
 ## [0.3.6](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.5...@atlantis-lab/carousel@0.3.6) (2020-06-01)
 
