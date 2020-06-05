@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @atlantis-lab/hamburger
 
-
-
-
-
 ## [0.2.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/hamburger@0.2.0...@atlantis-lab/hamburger@0.2.1) (2020-06-01)
 
 **Note:** Version bump only for package @atlantis-lab/hamburger
