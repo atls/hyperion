@@ -1,5 +1,6 @@
-import styled                 from '@emotion/styled'
 import { ifProp, switchProp } from 'styled-tools'
+
+import styled                 from '@emotion/styled'
 
 const disabled = ifProp('disabled', { display: 'none' })
 
