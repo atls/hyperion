@@ -7,17 +7,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @atlantis-lab/icons
 
-
-
-
-
 ## [0.3.6](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/icons@0.3.5...@atlantis-lab/icons@0.3.6) (2020-06-02)
 
 **Note:** Version bump only for package @atlantis-lab/icons
-
-
-
-
 
 ## [0.3.5](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/icons@0.3.4...@atlantis-lab/icons@0.3.5) (2020-06-01)
 
