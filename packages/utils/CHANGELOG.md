@@ -7,17 +7,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @atlantis-lab/utils
 
-
-
-
-
 ## [0.4.7](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/utils@0.4.6...@atlantis-lab/utils@0.4.7) (2020-06-02)
 
 **Note:** Version bump only for package @atlantis-lab/utils
-
-
-
-
 
 ## [0.4.6](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/utils@0.4.5...@atlantis-lab/utils@0.4.6) (2020-06-01)
 
