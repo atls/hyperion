@@ -3,16 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.3.9](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.8...@atlantis-lab/carousel@0.3.9) (2020-06-05)
+## [0.3.10](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.9...@atlantis-lab/carousel@0.3.10) (2020-06-05)
 
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+## [0.3.9](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.8...@atlantis-lab/carousel@0.3.9) (2020-06-05)
 
 ### Bug Fixes
 
-* fix format ([7044035](https://github.com/Atlantis-Lab/uikit/commit/7044035b873661f5be1833844155feff77899f1d))
-
-
-
-
+- fix format ([7044035](https://github.com/Atlantis-Lab/uikit/commit/7044035b873661f5be1833844155feff77899f1d))
 
 ## [0.3.8](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.7...@atlantis-lab/carousel@0.3.8) (2020-06-02)
 
