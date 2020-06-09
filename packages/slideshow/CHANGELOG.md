@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.3.9...@atlantis-lab/slideshow@0.4.0) (2020-06-09)
+
+
+### Bug Fixes
+
+* fix format ([8e28c71](https://github.com/Atlantis-Lab/uikit/commit/8e28c7179d7472dfafc60612bee898cfb328dec7))
+
+
+### Features
+
+* **modal:** init ([6aa6a3b](https://github.com/Atlantis-Lab/uikit/commit/6aa6a3b46be9dfe391b0ec67502eedc228e3d9f6))
+
+
+
+
+
 ## [0.3.9](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.3.8...@atlantis-lab/slideshow@0.3.9) (2020-06-05)
 
 ### Bug Fixes
