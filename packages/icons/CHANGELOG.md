@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.10](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/icons@0.3.9...@atlantis-lab/icons@0.3.10) (2020-06-09)
+
+
+### Bug Fixes
+
+* fix format ([8e28c71](https://github.com/Atlantis-Lab/uikit/commit/8e28c7179d7472dfafc60612bee898cfb328dec7))
+
+
+
+
+
 ## [0.3.9](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/icons@0.3.8...@atlantis-lab/icons@0.3.9) (2020-06-05)
 
 **Note:** Version bump only for package @atlantis-lab/icons
