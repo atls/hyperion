@@ -1,4 +1,3 @@
-import React                           from 'react'
 import { color, position, typography } from 'styled-system'
 
 import styled                          from '@emotion/styled'
