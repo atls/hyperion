@@ -26,7 +26,7 @@
     "styled-tools": "^1.7.0"
   },
   "devDependencies": {
-    "@types/styled-system": "5.1.4"
+    "@types/styled-system": "5.1.9"
   },
   "publishConfig": {
     "access": "public"
