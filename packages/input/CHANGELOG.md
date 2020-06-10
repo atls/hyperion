@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/input@0.2.2...@atlantis-lab/input@0.3.0) (2020-06-10)
+
+
+### Bug Fixes
+
+* **input:** fix linter ([7594247](https://github.com/Atlantis-Lab/uikit/commit/75942479ef88b8dca083e94abac8ce9cbc9dd528))
+
+
+### Features
+
+* **input:** add input-label-addon ([864862e](https://github.com/Atlantis-Lab/uikit/commit/864862e634274eeef484abdc64b41a27eeebf3ac))
+
+
+
+
+
 ## [0.2.2](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/input@0.2.1...@atlantis-lab/input@0.2.2) (2020-06-10)
 
 **Note:** Version bump only for package @atlantis-lab/input
