@@ -1,10 +1,4 @@
 {
-  "extends": "@monstrs/tsconfig/tsconfig.lib.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@atlantis-lab/*": ["packages/*/src"]
-    }
-  },
+  "extends": "@monstrs/tsconfig/tsconfig.base.json",
   "include": ["packages/**/*"]
 }
