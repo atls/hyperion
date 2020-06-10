@@ -1,7 +1,7 @@
-import React                                from 'react'
+import React                                                from 'react'
 
-import { Addons, Attachments, StyledInput } from './parts'
-import { useHooks }                         from './hooks'
+import { Addons, Attachments, LabelContainer, StyledInput } from './parts'
+import { useHooks }                                         from './hooks'
 
 const Input = (props: any) => {
   const hooksProps = useHooks(props)
@@ -10,7 +10,9 @@ const Input = (props: any) => {
   return (
     <Addons {...finalProps}>
       <Attachments {...finalProps}>
-        <StyledInput {...finalProps} />
+        <LabelContainer {...finalProps}>
+          <StyledInput {...finalProps} />
+        </LabelContainer>
       </Attachments>
     </Addons>
   )
