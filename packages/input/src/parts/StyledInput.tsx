@@ -1,10 +1,20 @@
-import { createShouldForwardProp }                           from '@styled-system/should-forward-prop'
-import { border, color, layout, space, styleFn, typography } from 'styled-system'
-import { ifProp, switchProp }                                from 'styled-tools'
+import { createShouldForwardProp } from '@styled-system/should-forward-prop'
+import {
+  border,
+  color,
+  height,
+  minHeight,
+  minWidth,
+  space,
+  styleFn,
+  typography,
+  width,
+} from 'styled-system'
+import { ifProp, switchProp }      from 'styled-tools'
 
-import styled                                                from '@emotion/styled'
+import styled                      from '@emotion/styled'
 
-import { offset }                                            from './PrefixSuffix'
+import { offset }                  from './PrefixSuffix'
 
 const clear: styleFn = () => ({
   boxSizing: 'border-box',
@@ -54,7 +64,10 @@ const StyledInput = styled('input', { shouldForwardProp })(
   offset,
   attach,
   invalid,
-  layout,
+  height,
+  width,
+  minHeight,
+  minWidth,
   space
 )
 
