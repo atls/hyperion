@@ -3,6 +3,7 @@ import document               from 'global/document'
 import React, { useRef }      from 'react'
 import { motion }             from 'framer-motion'
 import { createPortal }       from 'react-dom'
+import { flexbox }            from 'styled-system'
 import { ifProp, switchProp } from 'styled-tools'
 
 import styled                 from '@emotion/styled'
@@ -44,10 +45,11 @@ const StyledContainer = styled(motion.nav)<ContainerProps>(
     alignItems: 'center',
   },
   isVisible,
-  opacities
+  opacities,
+  flexbox
 )
 
-export const Modal = ({ children, visible, onClose, opacity = 'large' }) => {
+export const Modal = ({ children, visible, onClose, opacity = 'large', ...rest }) => {
   if (typeof window !== 'undefined') {
     const node = useRef(null)
 
@@ -66,6 +68,7 @@ export const Modal = ({ children, visible, onClose, opacity = 'large' }) => {
             variants={variants}
             visible={visible}
             opacity={opacity}
+            {...rest}
             ref={node}
           >
             {children}
