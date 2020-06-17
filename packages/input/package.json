@@ -19,7 +19,7 @@
   "dependencies": {
     "@emotion/styled": "10.0.23",
     "react-text-mask": "5.4.3",
-    "styled-system": "5.1.4",
+    "styled-system": "5.1.5",
     "text-mask-addons": "3.8.0"
   },
   "peerDependencies": {
