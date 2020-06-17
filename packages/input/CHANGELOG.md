@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/input@0.3.2...@atlantis-lab/input@0.3.3) (2020-06-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency styled-system to v5.1.5 ([c258069](https://github.com/Atlantis-Lab/uikit/commit/c258069163a114ab5409266cd4cfb375abb5e753))
+
+
+
+
+
 ## [0.3.2](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/input@0.3.1...@atlantis-lab/input@0.3.2) (2020-06-10)
 
 **Note:** Version bump only for package @atlantis-lab/input

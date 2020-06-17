@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.14](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.13...@atlantis-lab/carousel@0.3.14) (2020-06-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency styled-system to v5.1.5 ([c258069](https://github.com/Atlantis-Lab/uikit/commit/c258069163a114ab5409266cd4cfb375abb5e753))
+
+
+
+
+
 ## [0.3.13](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.12...@atlantis-lab/carousel@0.3.13) (2020-06-10)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
