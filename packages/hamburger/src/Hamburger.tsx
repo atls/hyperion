@@ -1,7 +1,6 @@
 import React                      from 'react'
-import { ifProp, switchProp }     from 'styled-tools'
-
 import styled                     from '@emotion/styled'
+import { ifProp, switchProp }     from 'styled-tools'
 
 import { BurgerProps, LineProps } from './types'
 

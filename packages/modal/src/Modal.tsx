@@ -1,12 +1,11 @@
 import ScrollLock             from 'react-scrolllock'
+import styled                 from '@emotion/styled'
 import document               from 'global/document'
 import React, { useRef }      from 'react'
 import { motion }             from 'framer-motion'
 import { createPortal }       from 'react-dom'
 import { flexbox }            from 'styled-system'
 import { ifProp, switchProp } from 'styled-tools'
-
-import styled                 from '@emotion/styled'
 
 interface ContainerProps {
   visible: boolean
