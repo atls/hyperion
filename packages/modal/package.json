@@ -19,7 +19,7 @@
   "dependencies": {
     "framer-motion": "1.11.1",
     "global": "4.4.0",
-    "react-scrolllock": "4.0.1",
+    "react-scrolllock": "5.0.1",
     "styled-system": "5.1.5"
   },
   "devDependencies": {

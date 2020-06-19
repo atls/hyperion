@@ -9119,18 +9119,12 @@ react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-node-resolver@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/react-node-resolver/-/react-node-resolver-2.0.1.tgz#1f0cc83938bf590a1cf42006b23f6b8f68e7b886"
-  integrity sha512-+PPy/FtAAo5wsLQYMlHkxJ3AMUGL33gpEIx/HBzS8OrcIfacRhGaNVWUJ8bhEbc64en+/bbCNTVZR+pkhqXEbA==
-
-react-scrolllock@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/react-scrolllock/-/react-scrolllock-4.0.1.tgz#05bb1e1575c97cbd869f2b60623a0e8227695b60"
-  integrity sha512-XWtRucd411402AfwnUyR0cZqN/beJy0NAygX92APzgeAhkHzpfWrsiakqKVIVqMNkgM8s2lIku/hzaFoTgw7Gw==
+react-scrolllock@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/react-scrolllock/-/react-scrolllock-5.0.1.tgz#da1cfb7b6d55c86ae41dbad5274b778c307752b7"
+  integrity sha512-poeEsjnZAlpA6fJlaNo4rZtcip2j6l5mUGU/SJe1FFlicEudS943++u7ZSdA7lk10hoyYK3grOD02/qqt5Lxhw==
   dependencies:
     exenv "^1.2.2"
-    react-node-resolver "^2.0.1"
 
 react-swipeable@5.5.1:
   version "5.5.1"
