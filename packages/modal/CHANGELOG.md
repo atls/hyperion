@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/modal@0.1.6...@atlantis-lab/modal@0.1.7) (2020-06-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v1.11.1 ([cac8cbe](https://github.com/Atlantis-Lab/uikit/commit/cac8cbe868a91cccd3ab75f21f77cb4ef2f0b632))
+* **deps:** update dependency react-scrolllock to v5 ([73eaf8a](https://github.com/Atlantis-Lab/uikit/commit/73eaf8af61e7c0c3caaa36bdf40854791a684a9b))
+
+
+
+
+
 ## [0.1.6](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/modal@0.1.5...@atlantis-lab/modal@0.1.6) (2020-06-10)
 
 **Note:** Version bump only for package @atlantis-lab/modal
