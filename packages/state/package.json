@@ -1,0 +1,28 @@
+{
+  "name": "@atlantis-lab/state",
+  "repository": "git@github.com:Atlantis-Lab/uikit.git",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -r -f dist",
+    "prepublishOnly": "yarn run build",
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "pubflow store",
+    "postpack": "pubflow restore"
+  },
+  "peerDependencies": {
+    "react": "16.13.1"
+  },
+  "devDependencies": {
+    "react": "16.13.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
