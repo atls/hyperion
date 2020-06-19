@@ -7,74 +7,39 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @atlantis-lab/carousel
 
-
-
-
-
 ## [0.3.17](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.16...@atlantis-lab/carousel@0.3.17) (2020-06-19)
-
 
 ### Bug Fixes
 
-* **ui:** fix lint ([bc7cc57](https://github.com/Atlantis-Lab/uikit/commit/bc7cc57a063b35e122c8818485f0dc6757be081a))
-
-
-
-
+- **ui:** fix lint ([bc7cc57](https://github.com/Atlantis-Lab/uikit/commit/bc7cc57a063b35e122c8818485f0dc6757be081a))
 
 ## [0.3.16](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.15...@atlantis-lab/carousel@0.3.16) (2020-06-19)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
 
-
-
-
-
 ## [0.3.15](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.14...@atlantis-lab/carousel@0.3.15) (2020-06-17)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
 
-
-
-
-
 ## [0.3.14](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.13...@atlantis-lab/carousel@0.3.14) (2020-06-17)
-
 
 ### Bug Fixes
 
-* **deps:** update dependency styled-system to v5.1.5 ([c258069](https://github.com/Atlantis-Lab/uikit/commit/c258069163a114ab5409266cd4cfb375abb5e753))
-
-
-
-
+- **deps:** update dependency styled-system to v5.1.5 ([c258069](https://github.com/Atlantis-Lab/uikit/commit/c258069163a114ab5409266cd4cfb375abb5e753))
 
 ## [0.3.13](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.12...@atlantis-lab/carousel@0.3.13) (2020-06-10)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
 
-
-
-
-
 ## [0.3.12](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.11...@atlantis-lab/carousel@0.3.12) (2020-06-10)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
 
-
-
-
-
 ## [0.3.11](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.10...@atlantis-lab/carousel@0.3.11) (2020-06-09)
-
 
 ### Bug Fixes
 
-* fix format ([8e28c71](https://github.com/Atlantis-Lab/uikit/commit/8e28c7179d7472dfafc60612bee898cfb328dec7))
-
-
-
-
+- fix format ([8e28c71](https://github.com/Atlantis-Lab/uikit/commit/8e28c7179d7472dfafc60612bee898cfb328dec7))
 
 ## [0.3.10](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.9...@atlantis-lab/carousel@0.3.10) (2020-06-05)
 

@@ -5,46 +5,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.4.3](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.4.2...@atlantis-lab/slideshow@0.4.3) (2020-06-19)
 
-
 ### Bug Fixes
 
-* **ui:** fix lint ([bc7cc57](https://github.com/Atlantis-Lab/uikit/commit/bc7cc57a063b35e122c8818485f0dc6757be081a))
-
-
-
-
+- **ui:** fix lint ([bc7cc57](https://github.com/Atlantis-Lab/uikit/commit/bc7cc57a063b35e122c8818485f0dc6757be081a))
 
 ## [0.4.2](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.4.1...@atlantis-lab/slideshow@0.4.2) (2020-06-10)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
 
-
-
-
-
 ## [0.4.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.4.0...@atlantis-lab/slideshow@0.4.1) (2020-06-10)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
 
-
-
-
-
 # [0.4.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.3.9...@atlantis-lab/slideshow@0.4.0) (2020-06-09)
-
 
 ### Bug Fixes
 
-* fix format ([8e28c71](https://github.com/Atlantis-Lab/uikit/commit/8e28c7179d7472dfafc60612bee898cfb328dec7))
-
+- fix format ([8e28c71](https://github.com/Atlantis-Lab/uikit/commit/8e28c7179d7472dfafc60612bee898cfb328dec7))
 
 ### Features
 
-* **modal:** init ([6aa6a3b](https://github.com/Atlantis-Lab/uikit/commit/6aa6a3b46be9dfe391b0ec67502eedc228e3d9f6))
-
-
-
-
+- **modal:** init ([6aa6a3b](https://github.com/Atlantis-Lab/uikit/commit/6aa6a3b46be9dfe391b0ec67502eedc228e3d9f6))
 
 ## [0.3.9](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.3.8...@atlantis-lab/slideshow@0.3.9) (2020-06-05)
 
