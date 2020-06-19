@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.16](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.15...@atlantis-lab/carousel@0.3.16) (2020-06-19)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
 ## [0.3.15](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.14...@atlantis-lab/carousel@0.3.15) (2020-06-17)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
