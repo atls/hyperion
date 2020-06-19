@@ -1,7 +1,6 @@
+import styled                       from '@emotion/styled'
 import { styleFn }                  from 'styled-system'
 import { switchProp }               from 'styled-tools'
-
-import styled                       from '@emotion/styled'
 
 import { PrefixProps, SuffixProps } from './types'
 

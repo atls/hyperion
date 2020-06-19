@@ -1,3 +1,4 @@
+import styled                      from '@emotion/styled'
 import { createShouldForwardProp } from '@styled-system/should-forward-prop'
 import {
   border,
@@ -11,8 +12,6 @@ import {
   width,
 } from 'styled-system'
 import { ifProp, switchProp }      from 'styled-tools'
-
-import styled                      from '@emotion/styled'
 
 import { offset }                  from './PrefixSuffix'
 
