@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.17](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.16...@atlantis-lab/carousel@0.3.17) (2020-06-19)
+
+
+### Bug Fixes
+
+* **ui:** fix lint ([bc7cc57](https://github.com/Atlantis-Lab/uikit/commit/bc7cc57a063b35e122c8818485f0dc6757be081a))
+
+
+
+
+
 ## [0.3.16](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.3.15...@atlantis-lab/carousel@0.3.16) (2020-06-19)
 
 **Note:** Version bump only for package @atlantis-lab/carousel

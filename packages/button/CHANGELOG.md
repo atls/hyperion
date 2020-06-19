@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.4](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.4.3...@atlantis-lab/button@1.4.4) (2020-06-19)
+
+
+### Bug Fixes
+
+* **ui:** fix lint ([bc7cc57](https://github.com/Atlantis-Lab/uikit/commit/bc7cc57a063b35e122c8818485f0dc6757be081a))
+
+
+
+
+
 ## [1.4.3](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.4.2...@atlantis-lab/button@1.4.3) (2020-06-19)
 
 **Note:** Version bump only for package @atlantis-lab/button
