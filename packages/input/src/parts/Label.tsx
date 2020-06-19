@@ -1,6 +1,5 @@
-import { color, position, typography } from 'styled-system'
-
 import styled                          from '@emotion/styled'
+import { color, position, typography } from 'styled-system'
 
 export const Label = styled.label(
   {
