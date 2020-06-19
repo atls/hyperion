@@ -15,18 +15,6 @@
     "@octokit/graphql" "^2.0.1"
     "@octokit/rest" "^16.15.0"
 
-"@admui/icons@0.1.13":
-  version "0.1.13"
-  resolved "https://registry.yarnpkg.com/@admui/icons/-/icons-0.1.13.tgz#b2c4802196507918587bb3393ba68bf6378dd1d0"
-  integrity sha512-CRvnXsjaMkH1L1xT0+H/dl8pFl+ldAZ2JaejHK2NjV1UMqbf4hQaPKxu0yQc8qvn18VYa2A2InPMeBgJDDyjmA==
-
-"@admui/progress@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@admui/progress/-/progress-0.3.0.tgz#5137173fdc9669e7ccb59b6db119ecd5273b6185"
-  integrity sha512-JIwUwffDxQsY8cEIH0ix6Rk7rEAcflsLsOwFyrsmFWiHFTUfUZ9nJPlfPQBA7KHbMX2dcN8ZpAWumr2j56FXKA==
-  dependencies:
-    styled-tools "1.7.1"
-
 "@angular-devkit/core@7.3.8":
   version "7.3.8"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-7.3.8.tgz#702b0944a69c71cce3a1492e0d62de18df22a993"
