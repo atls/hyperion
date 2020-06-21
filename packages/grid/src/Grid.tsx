@@ -10,7 +10,6 @@ export const Grid = ({
   children,
   data = [],
   rowHeight = 40,
-  bodyHeight = 'auto',
   loading,
   loadMore,
   order,
@@ -20,11 +19,11 @@ export const Grid = ({
   const { width } = useComponentSize(ref)
 
   return (
-    <Column ref={ref}>
+    <Column height='100%' ref={ref}>
       <Layout>
         <Header columns={children} order={order} onOrder={onOrder} />
       </Layout>
-      <Layout height={bodyHeight} flexGrow={1}>
+      <Layout height='100%' flexGrow={1}>
         {width && (
           <Body
             data={data}
