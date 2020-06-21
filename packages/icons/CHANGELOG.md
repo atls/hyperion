@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/icons@0.3.15...@atlantis-lab/icons@0.4.0) (2020-06-21)
+
+
+### Features
+
+* **grid:** init ([386a948](https://github.com/Atlantis-Lab/uikit/commit/386a9487c4044506dee666c599bdf7c98e5fb0d4))
+
+
+
+
+
 ## [0.3.15](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/icons@0.3.14...@atlantis-lab/icons@0.3.15) (2020-06-19)
 
 **Note:** Version bump only for package @atlantis-lab/icons
