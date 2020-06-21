@@ -1,8 +1,8 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState }            from 'react'
 import { DataProvider, LayoutProvider, RecyclerListView } from 'recyclerlistview/web'
 
-import { Actions }                             from './Actions'
-import { Row }                                 from './Row'
+import { Actions }                                        from './Actions'
+import { Row }                                            from './Row'
 
 export const Body = ({ columns = [], data = [], rowHeight, rowWidth, loading, loadMore }: any) => {
   const [dataProvider, setDataProvider] = useState(() =>
@@ -18,8 +18,10 @@ export const Body = ({ columns = [], data = [], rowHeight, rowWidth, loading, lo
       new LayoutProvider(
         index => index,
         (type, dim) => {
+          /* eslint-disable */
           dim.width = rowWidth
           dim.height = rowHeight
+          /* eslint-enable */
         }
       ),
     [rowWidth, rowHeight]
@@ -30,7 +32,9 @@ export const Body = ({ columns = [], data = [], rowHeight, rowWidth, loading, lo
     loadMore,
   ])
 
-  const rowRenderer = (type, data, index) => <Row data={data} index={index} columns={columns} />
+  const rowRenderer = (type, rowData, index) => (
+    <Row data={rowData} index={index} columns={columns} />
+  )
 
   return (
     <RecyclerListView

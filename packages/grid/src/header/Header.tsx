@@ -1,6 +1,8 @@
 import styled              from '@emotion/styled'
 import React, { Children } from 'react'
 
+import { unique }          from '@atlantis-lab/utils'
+
 import { Cell }            from './Cell'
 
 const Container = styled.div({
@@ -14,12 +16,7 @@ const Container = styled.div({
 export const Header = ({ columns, order, onOrder }) => (
   <Container>
     {Children.toArray(columns).map((column, index) => (
-      <Cell
-        key={`header-${column.props.name || index}`}
-        column={column}
-        order={order}
-        onOrder={onOrder}
-      />
+      <Cell key={`header-${unique()}`} column={column} order={order} onOrder={onOrder} />
     ))}
   </Container>
 )
