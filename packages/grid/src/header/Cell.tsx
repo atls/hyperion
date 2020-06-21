@@ -1,5 +1,5 @@
-import React                   from 'react'
 import styled                  from '@emotion/styled'
+import React, { FC }           from 'react'
 import { ifProp }              from 'styled-tools'
 
 import { useHover, withState } from '@atlantis-lab/state'
@@ -34,7 +34,8 @@ const Container = styled.div<ContainerProps>(
 const getContent = column => {
   if (typeof column.props.header === 'function') {
     return column.props.header()
-  } else if (column.props.header) {
+  }
+  if (column.props.header) {
     return column.props.header
   }
 
@@ -46,29 +47,31 @@ const getSize = basis => ({
   flexShrink: basis.includes('px') || basis.includes('%') ? 0 : 1,
 })
 
-export const Cell = withHover(({ column, hover, order, onMouseEnter, onMouseLeave, onOrder }) => (
-  <Container
-    hover={column.props.orderBy && hover}
-    style={getSize(column.props.basis)}
-    onMouseEnter={column.props.orderBy && onMouseEnter}
-    onMouseLeave={column.props.orderBy && onMouseLeave}
-    onClick={() => {
-      if (column.props.orderBy) {
-        let direction = 'asc'
+export const Cell: FC<any> = withHover(
+  ({ column, hover, order, onMouseEnter, onMouseLeave, onOrder }) => (
+    <Container
+      hover={column.props.orderBy && hover}
+      style={getSize(column.props.basis)}
+      onMouseEnter={column.props.orderBy && onMouseEnter}
+      onMouseLeave={column.props.orderBy && onMouseLeave}
+      onClick={() => {
+        if (column.props.orderBy) {
+          let direction = 'asc'
 
-        if (order && order.by === column.props.orderBy) {
-          direction = order.direction === 'asc' ? 'desc' : 'asc'
-        }
+          if (order && order.by === column.props.orderBy) {
+            direction = order.direction === 'asc' ? 'desc' : 'asc'
+          }
 
-        if (onOrder) {
-          onOrder({ by: column.props.orderBy, direction })
+          if (onOrder) {
+            onOrder({ by: column.props.orderBy, direction })
+          }
         }
-      }
-    }}
-  >
-    {getContent(column)}
-    {column.props.orderBy && (hover || (order && order.by === column.props.orderBy)) && (
-      <Order direction={order && order.by === column.props.orderBy ? order.direction : null} />
-    )}
-  </Container>
-))
+      }}
+    >
+      {getContent(column)}
+      {column.props.orderBy && (hover || (order && order.by === column.props.orderBy)) && (
+        <Order direction={order && order.by === column.props.orderBy ? order.direction : null} />
+      )}
+    </Container>
+  )
+)

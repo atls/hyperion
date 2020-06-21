@@ -1,5 +1,5 @@
 import styled                  from '@emotion/styled'
-import React, { Children }     from 'react'
+import React, { Children, FC } from 'react'
 import { ifProp }              from 'styled-tools'
 
 import { useHover, withState } from '@atlantis-lab/state'
@@ -27,7 +27,7 @@ const Container = styled.div<ContainerProps>(
 
 const withHover = withState([useHover])
 
-export const Row = withHover(
+export const Row: FC<any> = withHover(
   ({ columns = [], data = {}, index, hover, onMouseEnter, onMouseLeave }: any) => (
     <Container hover={hover} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       {Children.map(columns, column => (
