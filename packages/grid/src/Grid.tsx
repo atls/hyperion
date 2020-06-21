@@ -23,7 +23,7 @@ export const Grid = ({
       <Layout>
         <Header columns={children} order={order} onOrder={onOrder} />
       </Layout>
-      <Layout flexGrow={1}>
+      <Layout height='100%' flexGrow={1}>
         {width && (
           <Body
             data={data}
