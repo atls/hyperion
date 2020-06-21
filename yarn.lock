@@ -15,6 +15,11 @@
     "@octokit/graphql" "^2.0.1"
     "@octokit/rest" "^16.15.0"
 
+"@admui/layout@^0.4.12":
+  version "0.4.12"
+  resolved "https://registry.yarnpkg.com/@admui/layout/-/layout-0.4.12.tgz#5ff70ba36cde5e3944885bd28534526efcbac74c"
+  integrity sha512-q9+8o0WKkMWa/4OeFbMzRbN0PzT/DmAeQJ5MVIwn+Ct9nLyCPcwaqkvdNA6kpO7xxwU9yjtJjth7aYd2vVCqNw==
+
 "@angular-devkit/core@7.3.8":
   version "7.3.8"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-7.3.8.tgz#702b0944a69c71cce3a1492e0d62de18df22a993"

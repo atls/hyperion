@@ -15,7 +15,7 @@ export const Header = ({ columns, order, onOrder }) => (
   <Container>
     {Children.toArray(columns).map((column, index) => (
       <Cell
-        key={`header-${column.props.name || index}`}
+        key={`header-${column || index}${index}`}
         column={column}
         order={order}
         onOrder={onOrder}
