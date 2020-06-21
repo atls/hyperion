@@ -3,7 +3,7 @@ import styled                         from '@emotion/styled'
 
 import { ArrowDownIcon, ArrowUpIcon } from '@atlantis-lab/icons'
 
-export const Link = styled.a({
+export const TextUI = styled.span({
   marginLeft: 4,
   display: 'inline-flex',
   alignItems: 'center',
@@ -15,8 +15,8 @@ export const Link = styled.a({
 })
 
 export const Order = ({ direction }) => (
-  <Link>
+  <TextUI>
     <ArrowUpIcon strokeWidth={direction === 'asc' ? 3 : 1} />
     <ArrowDownIcon strokeWidth={direction === 'desc' ? 3 : 1} />
-  </Link>
+  </TextUI>
 )

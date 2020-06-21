@@ -1,6 +1,7 @@
 import useComponentSize   from '@rehooks/component-size'
 import React, { useRef }  from 'react'
-import { Column, Layout } from '@admui/layout'
+
+import { Column, Layout } from '@atlantis-lab/layout'
 
 import { Body }           from './body'
 import { Header }         from './header'
@@ -18,11 +19,11 @@ export const Grid = ({
   const { width } = useComponentSize(ref)
 
   return (
-    <Column fill ref={ref}>
+    <Column ref={ref}>
       <Layout>
         <Header columns={children} order={order} onOrder={onOrder} />
       </Layout>
-      <Layout grow={1}>
+      <Layout flexGrow={1}>
         {width && (
           <Body
             data={data}
