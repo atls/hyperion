@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/modal@0.1.8...@atlantis-lab/modal@0.2.0) (2020-06-21)
+
+
+### Features
+
+* **grid:** init ([386a948](https://github.com/Atlantis-Lab/uikit/commit/386a9487c4044506dee666c599bdf7c98e5fb0d4))
+
+
+
+
+
 ## [0.1.8](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/modal@0.1.7...@atlantis-lab/modal@0.1.8) (2020-06-19)
 
 ### Bug Fixes
