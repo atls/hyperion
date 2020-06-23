@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/grid@0.1.2...@atlantis-lab/grid@0.1.3) (2020-06-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency recyclerlistview to v3 ([f46038c](https://github.com/Atlantis-Lab/uikit/commit/f46038ccb8b3ed2747760beeb94c8fd3d80d29d1))
+
+
+
+
+
 ## [0.1.2](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/grid@0.1.1...@atlantis-lab/grid@0.1.2) (2020-06-21)
 
 **Note:** Version bump only for package @atlantis-lab/grid
