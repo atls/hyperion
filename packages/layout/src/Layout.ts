@@ -1,11 +1,11 @@
-import styled                             from '@emotion/styled'
-import { flexbox, layout, space, system } from 'styled-system'
+import styled                                              from '@emotion/styled'
+import { color, flexbox, layout, position, space, system } from 'styled-system'
 
 const boxSizing = system({
   boxSizing: true,
 })
 
-export const Column = styled.div(layout, space, flexbox, boxSizing)
+export const Column = styled.div(layout, space, flexbox, position, boxSizing)
 
 Column.defaultProps = {
   width: '100%',
@@ -13,7 +13,7 @@ Column.defaultProps = {
   display: 'flex',
 }
 
-export const Row = styled.div(layout, space, flexbox, boxSizing)
+export const Row = styled.div(layout, space, flexbox, position, boxSizing)
 
 Row.defaultProps = {
   width: '100%',
@@ -21,7 +21,7 @@ Row.defaultProps = {
   display: 'flex',
 }
 
-export const Layout = styled.div(layout, space, flexbox, boxSizing)
+export const Layout = styled.div(layout, space, flexbox, position, color, boxSizing)
 
 Layout.defaultProps = {
   display: 'flex',
