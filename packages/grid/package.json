@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/grid",
   "repository": "git@github.com:Atlantis-Lab/uikit.git",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -30,7 +30,7 @@
     "@atlantis-lab/layout": "0.2.1",
     "@atlantis-lab/progress": "0.1.0",
     "@atlantis-lab/state": "0.1.0",
-    "@atlantis-lab/utils": "0.6.0",
+    "@atlantis-lab/utils": "0.6.1",
     "@rehooks/component-size": "^1.0.2",
     "recyclerlistview": "^3.0.0",
     "styled-tools": "^1.7.1"
