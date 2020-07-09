@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.4.1...@atlantis-lab/carousel@0.4.2) (2020-07-09)
+
+
+### Bug Fixes
+
+* **carousel:** remove ifprop ([a6af3cf](https://github.com/Atlantis-Lab/uikit/commit/a6af3cf3e6afb842377451183a422c8e67ab85db))
+
+
+
+
+
 ## [0.4.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.4.0...@atlantis-lab/carousel@0.4.1) (2020-07-09)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
