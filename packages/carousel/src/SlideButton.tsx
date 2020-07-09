@@ -1,7 +1,5 @@
-import styled                 from '@emotion/styled'
-import { ifProp, switchProp } from 'styled-tools'
-
-const disabled = ifProp('disabled', { display: 'none' })
+import styled         from '@emotion/styled'
+import { switchProp } from 'styled-tools'
 
 const halfControls = switchProp('halfControls', {
   left: {
@@ -22,7 +20,7 @@ const directions = switchProp('direction', () => ({
 }))
 
 export const SlideButton = styled.div<any>(
-  ({ theme }: any) => ({
+  ({ theme, disabled }: any) => ({
     position: 'absolute',
     top: 'calc(50% - 33px)',
     width: 64,
@@ -32,7 +30,7 @@ export const SlideButton = styled.div<any>(
     borderRadius: '50%',
     boxShadow: theme.shadows.controls,
     zIndex: 9,
-    display: 'flex',
+    display: disabled ? 'none' : 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     cursor: 'pointer',
@@ -47,7 +45,6 @@ export const SlideButton = styled.div<any>(
       height: 50,
     },
   }),
-  disabled,
   directions,
   halfControls
 )
