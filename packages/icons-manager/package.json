@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/icons-manager",
   "repository": "git@github.com:Atlantis-Lab/uikit.git",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -17,9 +17,9 @@
     "postpack": "pubflow restore"
   },
   "dependencies": {
-    "react": "^16.13.1",
     "@emotion/styled": "^10.0.27",
-    "emotion-theming": "^10.0.27"
+    "emotion-theming": "^10.0.27",
+    "react": "^16.13.1"
   },
   "publishConfig": {
     "access": "public"
