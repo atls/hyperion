@@ -48,7 +48,9 @@ export const Carousel = ({ children, disableButton = false, step = 1, halfContro
   const setWidth = () => {
     setInnerWidth(contentWidth(containerNode.current))
     setChildWidth(
-      Array.prototype.map.call(screenNode.current.children, item => widthWithMargin(item))
+      Array.prototype.map.call(screenNode.current && screenNode.current.children, item =>
+        widthWithMargin(item)
+      )
     )
     if (!disableButton && innerWidth === fullWidth) {
       setButtonRightDisabled(true)
