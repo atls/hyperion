@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.4.2...@atlantis-lab/carousel@0.4.3) (2020-07-10)
+
+
+### Bug Fixes
+
+* **carousel:** add value check, downgrade scrolllock version ([e16b6d7](https://github.com/Atlantis-Lab/uikit/commit/e16b6d78efc0b46808ec166a33c624d20ad1ade4))
+
+
+
+
+
 ## [0.4.2](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.4.1...@atlantis-lab/carousel@0.4.2) (2020-07-09)
 
 
