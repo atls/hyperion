@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.5.0...@atlantis-lab/button@1.6.0) (2020-07-12)
+
+
+### Features
+
+* **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
+
+
+
+
+
 # [1.5.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.4.4...@atlantis-lab/button@1.5.0) (2020-06-21)
 
 ### Features

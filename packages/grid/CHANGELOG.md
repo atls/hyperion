@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/grid@0.1.5...@atlantis-lab/grid@0.2.0) (2020-07-12)
+
+
+### Features
+
+* **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
+
+
+
+
+
 ## [0.1.5](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/grid@0.1.4...@atlantis-lab/grid@0.1.5) (2020-07-09)
 
 **Note:** Version bump only for package @atlantis-lab/grid
