@@ -5,14 +5,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.5.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.4.4...@atlantis-lab/button@1.5.0) (2020-06-21)
 
-
 ### Features
 
-* **grid:** init ([386a948](https://github.com/Atlantis-Lab/uikit/commit/386a9487c4044506dee666c599bdf7c98e5fb0d4))
-
-
-
-
+- **grid:** init ([386a948](https://github.com/Atlantis-Lab/uikit/commit/386a9487c4044506dee666c599bdf7c98e5fb0d4))
 
 ## [1.4.4](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.4.3...@atlantis-lab/button@1.4.4) (2020-06-19)
 

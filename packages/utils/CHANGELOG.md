@@ -5,30 +5,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.6.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/utils@0.6.0...@atlantis-lab/utils@0.6.1) (2020-07-09)
 
-
 ### Bug Fixes
 
-* **slideshow:** add valid keys, add validation check to getElementSize in utils ([0bebd0d](https://github.com/Atlantis-Lab/uikit/commit/0bebd0dfcdfac47aa7dd978af90b8dc79612945d))
-
-
-
-
+- **slideshow:** add valid keys, add validation check to getElementSize in utils ([0bebd0d](https://github.com/Atlantis-Lab/uikit/commit/0bebd0dfcdfac47aa7dd978af90b8dc79612945d))
 
 # [0.6.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/utils@0.5.2...@atlantis-lab/utils@0.6.0) (2020-06-21)
 
-
 ### Bug Fixes
 
-* **grid:** fix linter ([ea78b0e](https://github.com/Atlantis-Lab/uikit/commit/ea78b0e6e4ecc2ea85d168e23cdd3e3d3d16211d))
-
+- **grid:** fix linter ([ea78b0e](https://github.com/Atlantis-Lab/uikit/commit/ea78b0e6e4ecc2ea85d168e23cdd3e3d3d16211d))
 
 ### Features
 
-* **grid:** init ([386a948](https://github.com/Atlantis-Lab/uikit/commit/386a9487c4044506dee666c599bdf7c98e5fb0d4))
-
-
-
-
+- **grid:** init ([386a948](https://github.com/Atlantis-Lab/uikit/commit/386a9487c4044506dee666c599bdf7c98e5fb0d4))
 
 ## [0.5.2](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/utils@0.5.1...@atlantis-lab/utils@0.5.2) (2020-06-10)
 
