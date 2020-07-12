@@ -5,25 +5,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.5.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.5.0...@atlantis-lab/slideshow@0.5.1) (2020-07-09)
 
-
 ### Bug Fixes
 
-* **slideshow:** add valid keys, add validation check to getElementSize in utils ([0bebd0d](https://github.com/Atlantis-Lab/uikit/commit/0bebd0dfcdfac47aa7dd978af90b8dc79612945d))
-
-
-
-
+- **slideshow:** add valid keys, add validation check to getElementSize in utils ([0bebd0d](https://github.com/Atlantis-Lab/uikit/commit/0bebd0dfcdfac47aa7dd978af90b8dc79612945d))
 
 # [0.5.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.4.3...@atlantis-lab/slideshow@0.5.0) (2020-06-21)
 
-
 ### Features
 
-* **grid:** init ([386a948](https://github.com/Atlantis-Lab/uikit/commit/386a9487c4044506dee666c599bdf7c98e5fb0d4))
-
-
-
-
+- **grid:** init ([386a948](https://github.com/Atlantis-Lab/uikit/commit/386a9487c4044506dee666c599bdf7c98e5fb0d4))
 
 ## [0.4.3](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.4.2...@atlantis-lab/slideshow@0.4.3) (2020-06-19)
 
