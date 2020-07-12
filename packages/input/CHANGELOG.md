@@ -5,14 +5,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.4.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/input@0.3.4...@atlantis-lab/input@0.4.0) (2020-06-21)
 
-
 ### Features
 
-* **grid:** init ([386a948](https://github.com/Atlantis-Lab/uikit/commit/386a9487c4044506dee666c599bdf7c98e5fb0d4))
-
-
-
-
+- **grid:** init ([386a948](https://github.com/Atlantis-Lab/uikit/commit/386a9487c4044506dee666c599bdf7c98e5fb0d4))
 
 ## [0.3.4](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/input@0.3.3...@atlantis-lab/input@0.3.4) (2020-06-19)
 
