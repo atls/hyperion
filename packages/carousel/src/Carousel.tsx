@@ -65,9 +65,10 @@ export const Carousel = ({ children, disableButton = false, step = 1, halfContro
   })
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setWidth()
     }, 100)
+    return () => clearTimeout(timeout)
   }, [fullWidth])
 
   useEffect(() => {
