@@ -3,24 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.2.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/layout@0.2.0...@atlantis-lab/layout@0.2.1) (2020-06-25)
-
-**Note:** Version bump only for package @atlantis-lab/layout
-
-
-
-
-
-# [0.2.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/layout@0.1.1...@atlantis-lab/layout@0.2.0) (2020-06-21)
+# [0.3.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/layout@0.2.1...@atlantis-lab/layout@0.3.0) (2020-07-12)
 
 
 ### Features
 
-* **grid:** init ([386a948](https://github.com/Atlantis-Lab/uikit/commit/386a9487c4044506dee666c599bdf7c98e5fb0d4))
+* **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
 
 
 
 
+
+## [0.2.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/layout@0.2.0...@atlantis-lab/layout@0.2.1) (2020-06-25)
+
+**Note:** Version bump only for package @atlantis-lab/layout
+
+# [0.2.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/layout@0.1.1...@atlantis-lab/layout@0.2.0) (2020-06-21)
+
+### Features
+
+- **grid:** init ([386a948](https://github.com/Atlantis-Lab/uikit/commit/386a9487c4044506dee666c599bdf7c98e5fb0d4))
 
 ## [0.1.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/layout@0.1.0...@atlantis-lab/layout@0.1.1) (2020-06-19)
 
