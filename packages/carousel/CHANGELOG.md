@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.5.0...@atlantis-lab/carousel@0.5.1) (2020-07-13)
+
+
+### Bug Fixes
+
+* **carousel:** fix memory leak + uncaught errors ([8d7d613](https://github.com/Atlantis-Lab/uikit/commit/8d7d6132a7e3991966cfcab526e46a452deeaeb0))
+
+
+
+
+
 # [0.5.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.4.3...@atlantis-lab/carousel@0.5.0) (2020-07-12)
 
 
