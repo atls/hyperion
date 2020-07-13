@@ -20,12 +20,12 @@ const base: any = ({ theme, hoverBackgroundColor, activeBackgroundColor, backgro
   textAlign: 'inherit',
   letterSpacing: 'inherit',
   color: 'inherit',
+  '&:hover': {
+    backgroundColor: theme.colors[hoverBackgroundColor] || theme.colors[backgroundColor],
+  },
   '&:active': {
     transform: 'scale(0.98)',
     backgroundColor: theme.colors[activeBackgroundColor] || theme.colors[backgroundColor],
-  },
-  '&:hover': {
-    backgroundColor: theme.colors[hoverBackgroundColor] || theme.colors[backgroundColor],
   },
 })
 
