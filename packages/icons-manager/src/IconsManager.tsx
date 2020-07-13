@@ -28,10 +28,10 @@ export const IconsManager: FC<Props> = ({ children, hoverColor, clickedColor, co
 
   return (
     <IconUI
-      onMouseEnter={() => setCurrentColor(themeHoverColor || color)}
-      onMouseLeave={() => setCurrentColor(color)}
-      onMouseDown={() => setCurrentColor(themeClickedColor || color)}
-      onMouseUp={() => setCurrentColor(color)}
+      onMouseEnter={() => setCurrentColor(themeHoverColor || themeColor)}
+      onMouseLeave={() => setCurrentColor(themeColor)}
+      onMouseDown={() => setCurrentColor(themeClickedColor || themeColor)}
+      onMouseUp={() => setCurrentColor(themeColor)}
     >
       {React.cloneElement(children, { key: 'a', color: currentColor })}
     </IconUI>
