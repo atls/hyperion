@@ -1,6 +1,7 @@
 import styled                                     from '@emotion/styled'
 import React, { FC, useEffect, useRef, useState } from 'react'
 import { Swipeable }                              from 'react-swipeable'
+import { layout }                                 from 'styled-system'
 
 import { contentWidth }                           from '@atlantis-lab/utils'
 
@@ -8,12 +9,11 @@ import { Dots }                                   from './Dots'
 import { Slices }                                 from './Slices'
 import { SlideshowProps }                         from './types'
 
-const Container = styled.div<any>(({ width, height }) => ({
+const Container = styled.div<any>({
   display: 'flex',
   position: 'relative',
-  width,
-  height,
-}))
+  layout,
+})
 
 const StyledSlide = styled.div<any>(({ opacity, transition }) => ({
   position: 'absolute',
@@ -39,17 +39,13 @@ export const Slideshow: FC<SlideshowProps> = ({
     if (data.dir === 'Left') {
       if (slide < children.length - 1) {
         setSlide(slide + 1)
-        setActiveWidth(0)
       } else {
         setSlide(0)
-        setActiveWidth(0)
       }
     } else if (slide > 0) {
       setSlide(slide - 1)
-      setActiveWidth(0)
     } else {
       setSlide(children.length - 1)
-      setActiveWidth(0)
     }
   }
 
@@ -80,7 +76,15 @@ export const Slideshow: FC<SlideshowProps> = ({
   }, [activeWidth, stop])
   /* eslint-disable */
   return (
-    <Container ref={containerNode} onMouseEnter={() => setStop(true)} width={width} height={height}>
+    <Container
+      ref={containerNode}
+      onMouseEnter={() => {
+        setActiveWidth(100)
+        setStop(true)
+      }}
+      width={width}
+      height={height}
+    >
       <Swipeable
         onSwiped={data => swiped(data)}
         preventDefaultTouchmoveEvent
@@ -89,7 +93,11 @@ export const Slideshow: FC<SlideshowProps> = ({
         delta={15}
       >
         {children.map((item, index) => (
-          <StyledSlide transition={transition} key={`slide-${index}`} opacity={slide === index ? 1 : 0}>
+          <StyledSlide
+            transition={transition}
+            key={`slide-${index}`}
+            opacity={slide === index ? 1 : 0}
+          >
             {item}
           </StyledSlide>
         ))}
