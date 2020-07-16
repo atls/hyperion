@@ -3,6 +3,7 @@ import { ReactNode } from 'react'
 export interface SlideshowProps {
   time?: number
   width?: string | string[]
+  transition?: string
   height?: string | string[]
   controlsType?: 'dots' | 'slices'
   children?: Array<ReactNode>

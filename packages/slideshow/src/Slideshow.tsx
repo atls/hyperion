@@ -15,9 +15,9 @@ const Container = styled.div<any>(({ width, height }) => ({
   height,
 }))
 
-const StyledSlide = styled.div<any>(({ opacity }) => ({
+const StyledSlide = styled.div<any>(({ opacity, transition }) => ({
   position: 'absolute',
-  transition: '0.35s',
+  transition,
   opacity,
 }))
 
@@ -25,6 +25,7 @@ export const Slideshow: FC<SlideshowProps> = ({
   children,
   width,
   height,
+  transition,
   time = 10000,
   controlsType = 'slices',
 }) => {
@@ -88,7 +89,7 @@ export const Slideshow: FC<SlideshowProps> = ({
         delta={15}
       >
         {children.map((item, index) => (
-          <StyledSlide key={`slide-${index}`} opacity={slide === index ? 1 : 0}>
+          <StyledSlide transition={transition} key={`slide-${index}`} opacity={slide === index ? 1 : 0}>
             {item}
           </StyledSlide>
         ))}
