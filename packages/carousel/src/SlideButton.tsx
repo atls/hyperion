@@ -34,6 +34,7 @@ export const SlideButton = styled.div<any>(
     alignItems: 'center',
     justifyContent: 'center',
     cursor: 'pointer',
+    transition: '0.35s',
     '&:hover': {
       boxShadow: theme.shadows.woodsmoke,
     },
