@@ -1,21 +1,33 @@
-import React, { FC, Fragment } from 'react'
+import React, { FC }     from 'react'
 
-import { unique }              from '@atlantis-lab/utils'
+import { Box }           from '@atlantis-lab/layout'
 
-import { ControlsProps }       from '../types'
-import { Container }           from './Container'
-import { Slice }               from './Slice'
+import { ControlsProps } from '../types'
+import { Container }     from './Container'
+import { Slice }         from './Slice'
 
-export const Slices: FC<ControlsProps> = ({ slides, currentSlide, lastSlide, containerWidth }) => (
+/* eslint-disable */
+export const Slices: FC<ControlsProps> = ({
+  slides,
+  activeWidth,
+  currentSlide,
+  lastSlide,
+  containerWidth,
+}) => (
   <Container containerWidth={containerWidth}>
     {slides.map((item, index) => (
-      <Fragment key={`${unique()}`}>
-        <Slice
-          style={{ flexBasis: `${containerWidth / slides.length - 6}px` }}
-          active={index === currentSlide}
-          lastSlide={index === lastSlide}
-        />
-      </Fragment>
+      <Box
+        key={`slice-${index}`}
+        position='relative'
+        flexBasis={`${containerWidth / slides.length - 6}px`}
+        height='2px'
+        backgroundColor='rgba(255, 255, 255, 0.5)'
+        overflow='hidden'
+        marginRight={lastSlide === index ? '0px' : '6px'}
+      >
+        <Slice activeWidth={index === currentSlide ? activeWidth : '0px'} />
+      </Box>
     ))}
   </Container>
 )
+/* eslint-enable */

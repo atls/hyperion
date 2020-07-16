@@ -5,7 +5,7 @@ import { ContainerProps } from '../types'
 export const Container = styled.div<ContainerProps>(({ containerWidth }) => ({
   display: 'flex',
   position: 'absolute',
-  justifyContent: 'center',
+  justifyContent: 'space-between',
   bottom: '30px',
   zIndex: 3,
   width: `${containerWidth * 0.9}px`,
