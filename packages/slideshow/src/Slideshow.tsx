@@ -8,18 +8,30 @@ import { Dots }                                   from './Dots'
 import { Slices }                                 from './Slices'
 import { SlideshowProps }                         from './types'
 
-const Container = styled.div({
-  width: '100%',
+const Container = styled.div<any>(({ width, height }) => ({
   display: 'flex',
   position: 'relative',
-})
+  width,
+  height,
+}))
+
+const StyledSlide = styled.div<any>(({ opacity, transition }) => ({
+  position: 'absolute',
+  transition,
+  opacity,
+}))
 
 export const Slideshow: FC<SlideshowProps> = ({
   children,
+  width,
+  height,
+  transition,
   time = 10000,
   controlsType = 'slices',
 }) => {
   const [slide, setSlide] = useState(0)
+  const [activeWidth, setActiveWidth] = useState(0)
+  const [stop, setStop] = useState(false)
   const [containerWidth, setContainerWidth] = useState(null)
   const containerNode = useRef(null)
 
@@ -27,13 +39,17 @@ export const Slideshow: FC<SlideshowProps> = ({
     if (data.dir === 'Left') {
       if (slide < children.length - 1) {
         setSlide(slide + 1)
+        setActiveWidth(0)
       } else {
         setSlide(0)
+        setActiveWidth(0)
       }
     } else if (slide > 0) {
       setSlide(slide - 1)
+      setActiveWidth(0)
     } else {
       setSlide(children.length - 1)
+      setActiveWidth(0)
     }
   }
 
@@ -42,18 +58,29 @@ export const Slideshow: FC<SlideshowProps> = ({
   }, [children.length])
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    if (activeWidth > 110) {
       if (slide < children.length - 1) {
         setSlide(slide + 1)
+        setActiveWidth(0)
       } else {
         setSlide(0)
+        setActiveWidth(0)
       }
-    }, time)
-    return () => clearInterval(interval)
-  }, [children.length, slide])
+    }
+  }, [children.length, activeWidth])
 
+  useEffect(() => {
+    let timeout = null
+    if (!stop) {
+      timeout = setTimeout(() => {
+        setActiveWidth(activeWidth + 2)
+      }, time / 50)
+    }
+    return () => clearTimeout(timeout)
+  }, [activeWidth, stop])
+  /* eslint-disable */
   return (
-    <Container ref={containerNode}>
+    <Container ref={containerNode} onMouseEnter={() => setStop(true)} width={width} height={height}>
       <Swipeable
         onSwiped={data => swiped(data)}
         preventDefaultTouchmoveEvent
@@ -61,7 +88,11 @@ export const Slideshow: FC<SlideshowProps> = ({
         trackTouch
         delta={15}
       >
-        {children[slide]}
+        {children.map((item, index) => (
+          <StyledSlide transition={transition} key={`slide-${index}`} opacity={slide === index ? 1 : 0}>
+            {item}
+          </StyledSlide>
+        ))}
       </Swipeable>
       {controlsType === 'dots' && (
         <Dots
@@ -75,10 +106,12 @@ export const Slideshow: FC<SlideshowProps> = ({
         <Slices
           slides={children}
           currentSlide={slide}
+          activeWidth={activeWidth}
           containerWidth={containerWidth}
           lastSlide={children.length - 1}
         />
       )}
     </Container>
   )
+  /* eslint-enable */
 }
