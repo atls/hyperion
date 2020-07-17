@@ -37,6 +37,11 @@ export const Slideshow: FC<SlideshowProps> = ({
   const [containerWidth, setContainerWidth] = useState(null)
   const containerNode = useRef(null)
 
+  const stopSlideshow = () => {
+    setActiveWidth(100)
+    setStop(true)
+  }
+
   const swiped = data => {
     if (data.dir === 'Left') {
       if (slide < children.length - 1) {
@@ -49,6 +54,7 @@ export const Slideshow: FC<SlideshowProps> = ({
     } else {
       setSlide(children.length - 1)
     }
+    stopSlideshow()
   }
 
   useEffect(() => {
@@ -78,15 +84,7 @@ export const Slideshow: FC<SlideshowProps> = ({
   }, [activeWidth, stop])
   /* eslint-disable */
   return (
-    <Container
-      ref={containerNode}
-      onMouseEnter={() => {
-        setActiveWidth(100)
-        setStop(true)
-      }}
-      width={width}
-      height={height}
-    >
+    <Container ref={containerNode} onMouseEnter={stopSlideshow} width={width} height={height}>
       <Swipeable
         onSwiped={data => swiped(data)}
         preventDefaultTouchmoveEvent
