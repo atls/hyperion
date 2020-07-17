@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.3](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.6.2...@atlantis-lab/slideshow@0.6.3) (2020-07-17)
+
+**Note:** Version bump only for package @atlantis-lab/slideshow
+
+
+
+
+
 ## [0.6.2](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.6.1...@atlantis-lab/slideshow@0.6.2) (2020-07-17)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
