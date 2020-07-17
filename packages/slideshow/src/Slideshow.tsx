@@ -9,11 +9,13 @@ import { Dots }                                   from './Dots'
 import { Slices }                                 from './Slices'
 import { SlideshowProps }                         from './types'
 
-const Container = styled.div<any>({
-  display: 'flex',
-  position: 'relative',
-  layout,
-})
+const Container = styled.div<any>(
+  {
+    display: 'flex',
+    position: 'relative',
+  },
+  layout
+)
 
 const StyledSlide = styled.div<any>(({ opacity, transition }) => ({
   position: 'absolute',
