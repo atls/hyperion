@@ -26,30 +26,49 @@ const Input = styled.input({
   width: 0,
 })
 
-const CheckMark = styled.div(({ theme }: any) => ({
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  width: 18,
-  height: 18,
-  boxSizing: 'border-box',
-  borderRadius: theme.radii.small,
-  backgroundColor: theme.colors.alto,
-  '&:after': {
-    content: '""',
+const CheckMark = styled.div(
+  ({
+    theme,
+    width,
+    height,
+    borderRadius,
+    markColor,
+    markBorderWidth,
+    markWidth,
+    markHeight,
+  }: any) => ({
     position: 'absolute',
-    display: 'none',
-    left: 6,
-    top: 1,
-    width: 5,
-    height: 10,
-    border: 'solid white',
-    borderWidth: '0 2px 2px 0',
-    transform: 'rotate(45deg)',
-  },
-}))
+    top: 0,
+    left: 0,
+    width: width || 18,
+    height: height || 18,
+    boxSizing: 'border-box',
+    borderRadius: theme.radii[borderRadius] || theme.radii.small,
+    backgroundColor: theme.colors.alto,
+    '&:after': {
+      content: '""',
+      position: 'absolute',
+      display: 'none',
+      left: 6,
+      top: 1,
+      width: markWidth || 5,
+      height: markHeight || 10,
+      border: (markColor && `solid ${theme.colors[markColor]}`) || 'solid white',
+      borderWidth: (markWidth && `0 ${markBorderWidth} ${markBorderWidth} 0`) || '0 2px 2px 0',
+      transform: 'rotate(45deg)',
+    },
+  })
+)
 
-export const Checkbox = ({ children, ...props }) => (
+export const Checkbox = ({
+  children,
+  borderRadius,
+  markColor,
+  markWidth,
+  width,
+  height,
+  ...props
+}) => (
   <Container>
     {children}
     <Input
@@ -57,6 +76,6 @@ export const Checkbox = ({ children, ...props }) => (
       onChange={({ target }) => props.onChange && props.onChange(target.value)}
       {...props}
     />
-    <CheckMark />
+    <CheckMark {...props} />
   </Container>
 )
