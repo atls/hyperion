@@ -60,15 +60,7 @@ const CheckMark = styled.div(
   })
 )
 
-export const Checkbox = ({
-  children,
-  borderRadius,
-  markColor,
-  markWidth,
-  width,
-  height,
-  ...props
-}) => (
+export const Checkbox = ({ children, ...props }) => (
   <Container>
     {children}
     <Input
