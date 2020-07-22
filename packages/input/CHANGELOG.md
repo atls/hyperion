@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/input@0.5.1...@atlantis-lab/input@0.5.2) (2020-07-22)
+
+
+### Bug Fixes
+
+* **checkbox:** fix lint ([5e4b82f](https://github.com/Atlantis-Lab/uikit/commit/5e4b82f34c68c2841f9dcf29b1e5e92214485381))
+
+
+
+
+
 ## [0.5.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/input@0.5.0...@atlantis-lab/input@0.5.1) (2020-07-22)
 
 **Note:** Version bump only for package @atlantis-lab/input
