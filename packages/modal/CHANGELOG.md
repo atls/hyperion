@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.5](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/modal@0.3.4...@atlantis-lab/modal@0.3.5) (2020-08-26)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v2.6.2 ([9299284](https://github.com/Atlantis-Lab/uikit/commit/92992849412dad0f5f165c4a686b6a701f6c6cb4))
+
+
+
+
+
 ## [0.3.4](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/modal@0.3.3...@atlantis-lab/modal@0.3.4) (2020-07-22)
 
 
