@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/progress@0.2.0...@atlantis-lab/progress@0.2.1) (2020-08-31)
+
+
+### Bug Fixes
+
+* **deps:** update dependency styled-tools to v1.7.2 ([3dd760a](https://github.com/Atlantis-Lab/uikit/commit/3dd760a585be0fefa5984f8374ae09dd6d6119c5))
+
+
+
+
+
 # [0.2.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/progress@0.1.0...@atlantis-lab/progress@0.2.0) (2020-07-12)
 
 
