@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.6](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/modal@0.3.5...@atlantis-lab/modal@0.3.6) (2020-08-31)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v2.6.5 ([09728fc](https://github.com/Atlantis-Lab/uikit/commit/09728fcf11eb9cf00f8ce798e08024771192e777))
+* **deps:** update dependency styled-tools to v1.7.2 ([3dd760a](https://github.com/Atlantis-Lab/uikit/commit/3dd760a585be0fefa5984f8374ae09dd6d6119c5))
+* **modals:** fix types ([a5ffcf9](https://github.com/Atlantis-Lab/uikit/commit/a5ffcf9d4898acff8ade4502af75902b1c53b2a8))
+
+
+
+
+
 ## [0.3.5](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/modal@0.3.4...@atlantis-lab/modal@0.3.5) (2020-08-26)
 
 
