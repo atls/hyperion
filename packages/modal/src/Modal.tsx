@@ -1,11 +1,11 @@
-import ScrollLock             from 'react-scrolllock'
-import styled                 from '@emotion/styled'
-import document               from 'global/document'
-import React, { useRef }      from 'react'
-import { motion }             from 'framer-motion'
-import { createPortal }       from 'react-dom'
-import { flexbox }            from 'styled-system'
-import { ifProp, switchProp } from 'styled-tools'
+import ScrollLock        from 'react-scrolllock'
+import styled            from '@emotion/styled'
+import document          from 'global/document'
+import React, { useRef } from 'react'
+import { motion }        from 'framer-motion'
+import { createPortal }  from 'react-dom'
+import { flexbox }       from 'styled-system'
+import { switchProp }    from 'styled-tools'
 
 // TODO downgrade scrolllock version (5.0.1 -> 4.0.1).
 // Не навешивается listener в библиотеке. Надо разобраться, что изменилось
@@ -20,8 +20,6 @@ const variants = {
   hidden: { opacity: 0 },
 }
 
-const isVisible = ifProp('visible', { display: 'flex', zIndex: 10 })
-
 const opacities = switchProp('opacity', () => ({
   small: {
     background: 'rgba(0, 0, 0, 0.2)',
@@ -32,11 +30,12 @@ const opacities = switchProp('opacity', () => ({
 }))
 
 const StyledContainer = styled(motion.nav)<ContainerProps>(
-  {
+  ({ visible }) => ({
     width: '100%',
     height: '100%',
     position: 'fixed',
-    display: 'none',
+    display: visible ? 'flex' : 'none',
+    zIndex: visible ? 10 : 'initial',
     background: 'rgba(0, 0, 0, 0.8)',
     top: 0,
     left: 0,
@@ -45,8 +44,7 @@ const StyledContainer = styled(motion.nav)<ContainerProps>(
     overflowY: 'scroll',
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  isVisible,
+  }),
   opacities,
   flexbox
 )
