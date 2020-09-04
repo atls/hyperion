@@ -13,14 +13,16 @@ const Container = styled.div<any>(
   {
     display: 'flex',
     position: 'relative',
+    touchAction: 'pan-y',
   },
   layout
 )
 
-const StyledSlide = styled.div<any>(({ opacity, transition }) => ({
+const StyledSlide = styled.div<any>(({ opacity, transition, visibility }) => ({
   position: 'absolute',
   transition,
   opacity,
+  visibility,
 }))
 
 export const Slideshow: FC<SlideshowProps> = ({
@@ -43,18 +45,20 @@ export const Slideshow: FC<SlideshowProps> = ({
   }
 
   const swiped = data => {
-    if (data.dir === 'Left') {
-      if (slide < children.length - 1) {
-        setSlide(slide + 1)
+    if (data.dir !== 'Up' && data.dir !== 'Down') {
+      if (data.dir === 'Left') {
+        if (slide < children.length - 1) {
+          setSlide(slide + 1)
+        } else {
+          setSlide(0)
+        }
+      } else if (slide > 0) {
+        setSlide(slide - 1)
       } else {
-        setSlide(0)
+        setSlide(children.length - 1)
       }
-    } else if (slide > 0) {
-      setSlide(slide - 1)
-    } else {
-      setSlide(children.length - 1)
+      stopSlideshow()
     }
-    stopSlideshow()
   }
 
   useEffect(() => {
@@ -85,18 +89,13 @@ export const Slideshow: FC<SlideshowProps> = ({
   /* eslint-disable */
   return (
     <Container ref={containerNode} onMouseEnter={stopSlideshow} width={width} height={height}>
-      <Swipeable
-        onSwiped={data => swiped(data)}
-        preventDefaultTouchmoveEvent
-        trackMouse
-        trackTouch
-        delta={15}
-      >
+      <Swipeable onSwiped={data => swiped(data)} trackMouse trackTouch delta={30}>
         {children.map((item, index) => (
           <StyledSlide
             transition={transition}
             key={`slide-${index}`}
             opacity={slide === index ? 1 : 0}
+            visibility={slide === index ? 'visible' : 'hidden'}
           >
             {item}
           </StyledSlide>
