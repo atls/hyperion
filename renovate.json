@@ -6,7 +6,6 @@
     "dependencies"
   ],
   "schedule": [
-    "after 6am every weekday",
-    "before 9am every weekday"
+    "before 9am on the first day of the month"
   ]
 }
