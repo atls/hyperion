@@ -1,34 +1,14 @@
-import styled         from '@emotion/styled'
-import { switchProp } from 'styled-tools'
-
-const halfControls = switchProp('halfControls', {
-  left: {
-    left: '-33px',
-  },
-  right: {
-    right: '-33px',
-  },
-})
-
-const directions = switchProp('direction', () => ({
-  left: {
-    left: '20px',
-  },
-  right: {
-    right: '20px',
-  },
-}))
+import styled               from '@emotion/styled'
+import { layout, position } from 'styled-system'
 
 export const SlideButton = styled.div<any>(
-  ({ theme, disabled }: any) => ({
+  ({ theme, isSquareControls, disabled }: any) => ({
     position: 'absolute',
-    top: 'calc(50% - 33px)',
-    width: 64,
-    height: 64,
     background: theme.colors.white,
     boxSizing: 'border-box',
-    borderRadius: '50%',
+    borderRadius: isSquareControls ? '3px' : '50%',
     boxShadow: theme.shadows.controls,
+    border: theme.borders.controls,
     zIndex: 9,
     display: disabled ? 'none' : 'flex',
     alignItems: 'center',
@@ -41,11 +21,13 @@ export const SlideButton = styled.div<any>(
     '&:active': {
       transform: 'scale(0.9)',
     },
-    '@media (max-width: 40em)': {
-      width: 50,
-      height: 50,
-    },
   }),
-  directions,
-  halfControls
+  position,
+  layout
 )
+
+SlideButton.defaultProps = {
+  width: '64px',
+  height: '64px',
+  top: 'calc(50% - 32px)',
+}
