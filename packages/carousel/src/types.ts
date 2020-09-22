@@ -3,4 +3,6 @@ export interface CarouselProps {
   disableButton?: boolean
   step?: number
   halfControls?: boolean
+  isSquareControls?: boolean
+  isOverflowHidden?: boolean
 }
