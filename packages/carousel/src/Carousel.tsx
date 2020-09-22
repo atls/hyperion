@@ -43,9 +43,13 @@ export const Carousel = ({
   children,
   disableButton = false,
   step = 1,
+  controlWidth,
+  controlHeight,
+  controlRight,
+  controlLeft,
+  controlTop,
   isOverflowHidden,
   isSquareControls,
-  halfControls,
 }) => {
   const [enableTransition, setEnableTransition] = useState(true)
   const [innerWidth, setInnerWidth] = useState(null)
@@ -177,8 +181,10 @@ export const Carousel = ({
       <SlideButton
         onClick={() => handleClick('left')}
         disabled={disableButton || buttonLeftDisabled}
-        direction={halfControls ? 'none' : 'left'}
-        halfControls={halfControls ? 'left' : 'none'}
+        width={controlWidth}
+        height={controlHeight}
+        left={controlLeft}
+        top={controlTop}
         isSquareControls={isSquareControls}
       >
         {!isSquareControls && <ArrowBackwardIcon width={24} height={24} />}
@@ -201,8 +207,10 @@ export const Carousel = ({
       <SlideButton
         onClick={() => handleClick('right')}
         disabled={disableButton || buttonRightDisabled}
-        direction={halfControls ? 'none' : 'right'}
-        halfControls={halfControls ? 'right' : 'none'}
+        width={controlWidth}
+        height={controlHeight}
+        right={controlRight}
+        top={controlTop}
         isSquareControls={isSquareControls}
       >
         {!isSquareControls && <ArrowForwardIcon width={24} height={24} />}
