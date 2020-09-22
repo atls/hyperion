@@ -1,13 +1,18 @@
-import styled                                  from '@emotion/styled'
-import React, { useEffect, useRef, useState }  from 'react'
-import { Swipeable }                           from 'react-swipeable'
-import { layout }                              from 'styled-system'
+import styled                                 from '@emotion/styled'
+import React, { useEffect, useRef, useState } from 'react'
+import { Swipeable }                          from 'react-swipeable'
+import { layout }                             from 'styled-system'
 
-import { ArrowBackwardIcon, ArrowForwardIcon } from '@atlantis-lab/icons'
-import { contentWidth, widthWithMargin }       from '@atlantis-lab/utils'
+import {
+  ArrowBackwardIcon,
+  ArrowForwardIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+} from '@atlantis-lab/icons'
+import { contentWidth, widthWithMargin }      from '@atlantis-lab/utils'
 
-import { SlideButton }                         from './SlideButton'
-import { CarouselProps }                       from './types'
+import { SlideButton }                        from './SlideButton'
+import { CarouselProps }                      from './types'
 
 const StyledCarousel = styled.div<CarouselProps>(({ transition }) => ({
   position: 'relative',
@@ -27,13 +32,25 @@ const Container = styled.div<any>(({ show }) => ({
 }))
 
 const Screen = styled.div(
-  {
+  ({ isOverflowHidden }) => ({
     display: 'flex',
-  },
+    overflow: isOverflowHidden ? 'hidden' : 'initial',
+  }),
   layout
 )
 
-export const Carousel = ({ children, disableButton = false, step = 1, halfControls }) => {
+export const Carousel = ({
+  children,
+  disableButton = false,
+  step = 1,
+  controlWidth,
+  controlHeight,
+  controlRight,
+  controlLeft,
+  controlTop,
+  isOverflowHidden,
+  isSquareControls,
+}) => {
   const [enableTransition, setEnableTransition] = useState(true)
   const [innerWidth, setInnerWidth] = useState(null)
   const [fullWidth, setFullWidth] = useState(null)
@@ -164,12 +181,16 @@ export const Carousel = ({ children, disableButton = false, step = 1, halfContro
       <SlideButton
         onClick={() => handleClick('left')}
         disabled={disableButton || buttonLeftDisabled}
-        direction={halfControls ? 'none' : 'left'}
-        halfControls={halfControls ? 'left' : 'none'}
+        width={controlWidth}
+        height={controlHeight}
+        left={controlLeft}
+        top={controlTop}
+        isSquareControls={isSquareControls}
       >
-        <ArrowBackwardIcon width={24} height={24} />
+        {!isSquareControls && <ArrowBackwardIcon width={24} height={24} />}
+        {isSquareControls && <ArrowLeftIcon width={20} height={10} />}
       </SlideButton>
-      <Screen ref={containerNode} maxWidth='100%'>
+      <Screen ref={containerNode} isOverflowHidden={isOverflowHidden} maxWidth='100%'>
         <Swipeable
           onSwiping={data => swiping(data)}
           onSwiped={() => setDeltaX(0)}
@@ -186,10 +207,14 @@ export const Carousel = ({ children, disableButton = false, step = 1, halfContro
       <SlideButton
         onClick={() => handleClick('right')}
         disabled={disableButton || buttonRightDisabled}
-        direction={halfControls ? 'none' : 'right'}
-        halfControls={halfControls ? 'right' : 'none'}
+        width={controlWidth}
+        height={controlHeight}
+        right={controlRight}
+        top={controlTop}
+        isSquareControls={isSquareControls}
       >
-        <ArrowForwardIcon width={24} height={24} />
+        {!isSquareControls && <ArrowForwardIcon width={24} height={24} />}
+        {isSquareControls && <ArrowRightIcon width={20} height={10} />}
       </SlideButton>
     </Container>
   )
