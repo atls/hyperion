@@ -36,6 +36,10 @@ export const Body = ({ columns = [], data = [], rowHeight, rowWidth, loading, lo
     <Row data={rowData} index={index} columns={columns} />
   )
 
+  if (data && data.length === 0 && !loading && !loadMore) {
+    return null
+  }
+
   return (
     <RecyclerListView
       layoutProvider={layoutProvider}
