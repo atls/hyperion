@@ -39,6 +39,18 @@ const Screen = styled.div(
   layout
 )
 
+const defaultTheme = {
+  colors: {
+    white: '#fff',
+  },
+  shadows: {
+    controls: '0 0 10px rgba(0,0,0,0.5)',
+  },
+  borders: {
+    controls: '2px solid black',
+  },
+}
+
 export const Carousel = ({
   children,
   disableButton = false,
@@ -186,6 +198,7 @@ export const Carousel = ({
         left={controlLeft}
         top={controlTop}
         isSquareControls={isSquareControls}
+        theme={defaultTheme}
       >
         {!isSquareControls && <ArrowBackwardIcon width={24} height={24} />}
         {isSquareControls && <ArrowLeftIcon width={20} height={10} />}
@@ -212,6 +225,7 @@ export const Carousel = ({
         right={controlRight}
         top={controlTop}
         isSquareControls={isSquareControls}
+        theme={defaultTheme}
       >
         {!isSquareControls && <ArrowForwardIcon width={24} height={24} />}
         {isSquareControls && <ArrowRightIcon width={20} height={10} />}
