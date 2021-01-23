@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.6.5...@atlantis-lab/button@1.7.0) (2021-01-23)
+
+
+### Features
+
+* **carousel:** add stories ([575998f](https://github.com/Atlantis-Lab/uikit/commit/575998fe54904668c763b24d501c70ec22d2e26e)), closes [#144](https://github.com/Atlantis-Lab/uikit/issues/144)
+
+
+
+
+
 ## [1.6.5](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.6.4...@atlantis-lab/button@1.6.5) (2020-09-04)
 
 **Note:** Version bump only for package @atlantis-lab/button

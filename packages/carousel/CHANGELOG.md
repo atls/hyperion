@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.5.5...@atlantis-lab/carousel@0.6.0) (2021-01-23)
+
+
+### Bug Fixes
+
+* **carousel:** fix lint ([2dc9fae](https://github.com/Atlantis-Lab/uikit/commit/2dc9faeb66bae7e455399c30f6a8785c123ead91))
+
+
+### Features
+
+* **carousel:** add stories ([575998f](https://github.com/Atlantis-Lab/uikit/commit/575998fe54904668c763b24d501c70ec22d2e26e)), closes [#144](https://github.com/Atlantis-Lab/uikit/issues/144)
+
+
+
+
+
 ## [0.5.5](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.5.4...@atlantis-lab/carousel@0.5.5) (2020-09-22)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
