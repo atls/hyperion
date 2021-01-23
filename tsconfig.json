@@ -1,4 +1,4 @@
 {
   "extends": "@monstrs/tsconfig/tsconfig.base.json",
-  "include": ["packages/**/*"]
+  "include": ["packages/**/*", "src/**/*.story.tsx"]
 }
