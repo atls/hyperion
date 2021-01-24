@@ -23,7 +23,7 @@
     "styled-system": "5.1.5"
   },
   "devDependencies": {
-    "@emotion/styled": "10.0.27",
+    "@emotion/styled": "11.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "styled-tools": "1.7.2"

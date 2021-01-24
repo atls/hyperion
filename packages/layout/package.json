@@ -17,11 +17,11 @@
     "postpack": "pubflow restore"
   },
   "peerDependencies": {
-    "@emotion/styled": "10.0.27",
+    "@emotion/styled": "11.0.0",
     "react": "16.13.1"
   },
   "devDependencies": {
-    "@emotion/styled": "10.0.27",
+    "@emotion/styled": "11.0.0",
     "react": "16.13.1",
     "react-test-renderer": "16.13.1"
   },

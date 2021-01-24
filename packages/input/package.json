@@ -17,13 +17,13 @@
     "postpack": "pubflow restore"
   },
   "dependencies": {
-    "@emotion/styled": "10.0.27",
+    "@emotion/styled": "11.0.0",
     "react-text-mask": "5.4.3",
     "styled-system": "5.1.5",
     "text-mask-addons": "3.8.0"
   },
   "peerDependencies": {
-    "@emotion/styled": "^10.0.0",
+    "@emotion/styled": "^10.0.0 || ^11.0.0",
     "@styled-system/should-forward-prop": "^5.1.0",
     "react": "^16.9.0",
     "styled-system": "^5.1.0",
