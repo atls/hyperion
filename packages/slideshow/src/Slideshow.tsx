@@ -9,6 +9,15 @@ import { Dots }                                   from './Dots'
 import { Slices }                                 from './Slices'
 import { SlideshowProps }                         from './types'
 
+type SlideshowComponentProps = {
+  children: any
+  width?: string
+  height?: string
+  transition?: string
+  time?: number
+  controlsType?: 'slices' | 'dots'
+}
+
 const Container = styled.div<any>(
   {
     display: 'flex',
@@ -32,7 +41,7 @@ export const Slideshow: FC<SlideshowProps> = ({
   transition,
   time = 10000,
   controlsType = 'slices',
-}) => {
+}: SlideshowComponentProps) => {
   const [slide, setSlide] = useState(0)
   const [activeWidth, setActiveWidth] = useState(0)
   const [stop, setStop] = useState(false)
@@ -89,7 +98,7 @@ export const Slideshow: FC<SlideshowProps> = ({
   /* eslint-disable */
   return (
     <Container ref={containerNode} onMouseEnter={stopSlideshow} width={width} height={height}>
-      <Swipeable onSwiped={data => swiped(data)} trackMouse trackTouch delta={30}>
+      <Swipeable onSwiped={(data) => swiped(data)} trackMouse trackTouch delta={30}>
         {children.map((item, index) => (
           <StyledSlide
             transition={transition}
