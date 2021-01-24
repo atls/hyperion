@@ -1,6 +1,7 @@
 import styled                                 from '@emotion/styled'
 import React, { useEffect, useRef, useState } from 'react'
 import { Swipeable }                          from 'react-swipeable'
+import { useTheme }                           from '@emotion/react'
 import { layout }                             from 'styled-system'
 
 import {
@@ -13,6 +14,19 @@ import { contentWidth, widthWithMargin }      from '@atlantis-lab/utils'
 
 import { SlideButton }                        from './SlideButton'
 import { CarouselProps }                      from './types'
+
+type CarouselComponentProps = {
+  children: any
+  disableButton?: boolean
+  step?: number
+  controlWidth: number
+  controlHeight: number
+  controlRight: number
+  controlLeft: number
+  controlTop: number
+  isOverflowHidden: boolean
+  isSquareControls: boolean
+}
 
 const StyledCarousel = styled.div<CarouselProps>(({ transition }) => ({
   position: 'relative',
@@ -39,18 +53,6 @@ const Screen = styled.div(
   layout
 )
 
-const defaultTheme = {
-  colors: {
-    white: '#fff',
-  },
-  shadows: {
-    controls: '0 0 10px rgba(0,0,0,0.5)',
-  },
-  borders: {
-    controls: '2px solid black',
-  },
-}
-
 export const Carousel = ({
   children,
   disableButton = false,
@@ -62,7 +64,7 @@ export const Carousel = ({
   controlTop,
   isOverflowHidden,
   isSquareControls,
-}) => {
+}: CarouselComponentProps) => {
   const [enableTransition, setEnableTransition] = useState(true)
   const [innerWidth, setInnerWidth] = useState(null)
   const [fullWidth, setFullWidth] = useState(null)
@@ -73,6 +75,7 @@ export const Carousel = ({
   const [deltaX, setDeltaX] = useState(0)
   const containerNode = useRef()
   const screenNode = useRef(null)
+  const theme = useTheme()
 
   const setWidth = () => {
     setInnerWidth(contentWidth(containerNode.current))
@@ -198,7 +201,7 @@ export const Carousel = ({
         left={controlLeft}
         top={controlTop}
         isSquareControls={isSquareControls}
-        theme={defaultTheme}
+        theme={theme}
       >
         {!isSquareControls && <ArrowBackwardIcon width={24} height={24} />}
         {isSquareControls && <ArrowLeftIcon width={20} height={10} />}
@@ -225,7 +228,7 @@ export const Carousel = ({
         right={controlRight}
         top={controlTop}
         isSquareControls={isSquareControls}
-        theme={defaultTheme}
+        theme={theme}
       >
         {!isSquareControls && <ArrowForwardIcon width={24} height={24} />}
         {isSquareControls && <ArrowRightIcon width={20} height={10} />}
