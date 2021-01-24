@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.6.0...@atlantis-lab/carousel@0.7.0) (2021-01-24)
+
+
+### Features
+
+* **carousel & slideshow:** add stories ([d09ff0b](https://github.com/Atlantis-Lab/uikit/commit/d09ff0b31f6beee1c6bdd228732e65af8c8cf250)), closes [#141](https://github.com/Atlantis-Lab/uikit/issues/141)
+
+
+
+
+
 # [0.6.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.5.5...@atlantis-lab/carousel@0.6.0) (2021-01-23)
 
 
