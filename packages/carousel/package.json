@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/carousel",
   "repository": "git@github.com:Atlantis-Lab/uikit.git",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -29,11 +29,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
+    "@emotion/react": "^11.1.4",
     "@storybook/addon-actions": "^6.1.15",
     "@storybook/addon-essentials": "^6.1.15",
     "@storybook/addon-links": "^6.1.15",
     "@storybook/react": "^6.1.15",
-    "@emotion/react": "^11.1.4",
     "@types/styled-system": "5.1.10",
     "babel-loader": "^8.2.2"
   },
