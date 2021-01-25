@@ -1,22 +1,12 @@
-import React                       from 'react'
-import { ThemeProvider, useTheme } from '@emotion/react'
+import React        from 'react'
+import { useTheme } from '@emotion/react'
 
-import { Button }                  from '../index'
+import { Button }   from '../index'
 
 type ExampleProps = {
   backgroundColor: 'red' | 'black' | 'yellow' | 'white'
   hoverBackgroundColor: 'red' | 'black' | 'yellow' | 'white'
   activeBackgroundColor: 'red' | 'black' | 'yellow' | 'white'
-}
-
-const defaultTheme = {
-  colors: {
-    red: 'red',
-    black: 'black',
-    white: 'white',
-    yellow: 'yellow',
-    blue: 'blue',
-  },
 }
 
 export const ExpampleButton = ({
@@ -41,11 +31,4 @@ export const ExpampleButton = ({
 export default {
   title: 'Button',
   component: ExpampleButton,
-  decorators: [
-    Story => (
-      <ThemeProvider theme={defaultTheme}>
-        <Story />
-      </ThemeProvider>
-    ),
-  ],
 }

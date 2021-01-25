@@ -1,19 +1,6 @@
-import React             from 'react'
-import { ThemeProvider } from '@emotion/react'
+import React        from 'react'
 
-import { Carousel }      from '../index'
-
-const defaultTheme = {
-  colors: {
-    white: '#fff',
-  },
-  shadows: {
-    controls: '0 0 10px rgba(0,0,0,0.5)',
-  },
-  borders: {
-    controls: '2px solid black',
-  },
-}
+import { Carousel } from '../index'
 
 export const ExampleCarousel = ({
   controlWidth = 50,
@@ -46,11 +33,4 @@ export const ExampleCarousel = ({
 export default {
   title: 'Carousel',
   component: Carousel,
-  decorators: [
-    Story => (
-      <ThemeProvider theme={defaultTheme}>
-        <Story />
-      </ThemeProvider>
-    ),
-  ],
 }
