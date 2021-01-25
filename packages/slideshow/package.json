@@ -20,7 +20,7 @@
     "@atlantis-lab/layout": "^0.3.0",
     "@atlantis-lab/utils": "0.7.0",
     "@emotion/styled": "^10.0.27",
-    "react": "^16.9.0",
+    "react": "^17.0.0",
     "react-swipeable": "5.5.1",
     "styled-system": "5.1.5",
     "styled-tools": "1.7.2"

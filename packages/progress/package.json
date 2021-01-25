@@ -18,11 +18,11 @@
   },
   "peerDependencies": {
     "@emotion/styled": "10.0.27",
-    "react": "16.13.1"
+    "react": "17.0.1"
   },
   "devDependencies": {
     "@emotion/styled": "10.0.27",
-    "react": "16.13.1"
+    "react": "17.0.1"
   },
   "dependencies": {
     "styled-tools": "1.7.2"

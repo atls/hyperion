@@ -19,7 +19,7 @@
   "dependencies": {
     "@emotion/styled": "^10.0.27",
     "emotion-theming": "^10.0.27",
-    "react": "^16.13.1"
+    "react": "^17.0.0"
   },
   "publishConfig": {
     "access": "public"
