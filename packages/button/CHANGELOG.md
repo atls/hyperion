@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.8.0...@atlantis-lab/button@1.8.1) (2021-01-25)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
 # [1.8.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.7.0...@atlantis-lab/button@1.8.0) (2021-01-24)
 
 
