@@ -1,14 +1,6 @@
-import React             from 'react'
-import { ThemeProvider } from '@emotion/react'
+import React         from 'react'
 
-import { Slideshow }     from '../index'
-
-const defaultTheme = {
-  colors: {
-    lightGray: 'gray',
-    green: 'green',
-  },
-}
+import { Slideshow } from '../index'
 
 export const ExampleSlideshow = ({ time, transition = '.5s', controlsType }) => (
   <Slideshow time={time} transition={transition} controlsType={controlsType}>
@@ -21,11 +13,4 @@ export const ExampleSlideshow = ({ time, transition = '.5s', controlsType }) => 
 export default {
   title: 'Slideshow',
   component: Slideshow,
-  decorators: [
-    Story => (
-      <ThemeProvider theme={defaultTheme}>
-        <Story />
-      </ThemeProvider>
-    ),
-  ],
 }

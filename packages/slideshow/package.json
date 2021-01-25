@@ -14,9 +14,7 @@
     "prepublishOnly": "yarn run build",
     "build": "tsc -p tsconfig.build.json",
     "prepack": "pubflow store",
-    "postpack": "pubflow restore",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "postpack": "pubflow restore"
   },
   "dependencies": {
     "@atlantis-lab/layout": "^0.3.0",
@@ -28,14 +26,8 @@
     "styled-tools": "1.7.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
     "@emotion/react": "^11.1.4",
-    "@storybook/addon-actions": "^6.1.15",
-    "@storybook/addon-essentials": "^6.1.15",
-    "@storybook/addon-links": "^6.1.15",
-    "@storybook/react": "^6.1.15",
-    "@types/styled-system": "5.1.10",
-    "babel-loader": "^8.2.2"
+    "@types/styled-system": "5.1.10"
   },
   "publishConfig": {
     "access": "public"
