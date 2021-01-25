@@ -29,7 +29,7 @@
     "camelcase": "6.0.0",
     "fs-extra-promise": "1.0.1",
     "glob-promise": "3.4.0",
-    "react": "16.13.1",
+    "react": "16.14.0",
     "ts-node": "9.0.0"
   },
   "publishConfig": {
