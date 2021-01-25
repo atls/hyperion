@@ -1,5 +1,5 @@
 {
-  "name": "@atlantis-lab/storybook-config",
+  "name": "@atlantis-lab/storybook",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -16,5 +16,8 @@
     "@storybook/react": "^6.1.15",
     "babel-loader": "^8.2.2",
     "react": "^16.9.0"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
 }
