@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/grid@0.2.4...@atlantis-lab/grid@0.3.0) (2021-01-25)
+
+
+### Features
+
+* **grid:** add stories ([8d9d4dc](https://github.com/Atlantis-Lab/uikit/commit/8d9d4dc8385f94615f6dd6c9819139469fb92a66)), closes [#150](https://github.com/Atlantis-Lab/uikit/issues/150)
+
+
+
+
+
 ## [0.2.4](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/grid@0.2.3...@atlantis-lab/grid@0.2.4) (2020-09-24)
 
 **Note:** Version bump only for package @atlantis-lab/grid
