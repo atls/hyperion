@@ -24,6 +24,7 @@
   },
   "peerDependencies": {
     "@emotion/styled": "^10.0.0",
+    "@emotion/react": "^11.1.4",
     "@styled-system/should-forward-prop": "^5.1.0",
     "react": "^16.9.0",
     "styled-system": "^5.1.0",

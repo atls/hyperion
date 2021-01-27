@@ -4,7 +4,7 @@ import { Column, Grid } from '../index'
 
 export const ExampleGrid = ({
   cols = ['Column', 'Another'],
-  colsBasis = '100px',
+  colsBasis = '150px',
   colsOrderBy = 'desc',
   order = { by: 'desc' },
   rowHeight = 40,
