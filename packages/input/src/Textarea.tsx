@@ -1,15 +1,21 @@
 import React           from 'react'
 import styled          from '@emotion/styled'
+import { useTheme }    from '@emotion/react'
 import { boxShadow }   from 'styled-system'
 
 import { StyledInput } from './parts'
 
-const Input = props => (
-  <StyledInput
-    {...props}
-    onChange={({ target }) => props.onChange && props.onChange(target.value)}
-  />
-)
+const Input = props => {
+  const theme = useTheme()
+
+  return (
+    <StyledInput
+      theme={theme}
+      {...props}
+      onChange={({ target }) => props.onChange && props.onChange(target.value)}
+    />
+  )
+}
 
 const Textarea = styled(Input)(
   () => ({
