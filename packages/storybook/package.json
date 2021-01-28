@@ -1,6 +1,6 @@
 {
   "name": "@atlantis-lab/storybook",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 6006 -c ./",
