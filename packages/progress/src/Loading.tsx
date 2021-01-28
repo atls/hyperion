@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Loading = () => (
-  <svg width='20' height='22' viewBox='0 0 135 140' fill='#fff'>
+export const Loading = ({ fill = '#fff' }) => (
+  <svg width='20' height='22' viewBox='0 0 135 140' fill={fill}>
     <rect y='10' width='15' height='120' rx='6'>
       <animate
         attributeName='height'
