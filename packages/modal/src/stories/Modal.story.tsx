@@ -13,34 +13,14 @@ export const ExampleModal = ({
   opacity = 'large',
   bigText = false,
 }: ExampleProps) => {
-  const [vis, setVis] = useState(visible)
+  const [isVisible, setIsVisible] = useState(visible)
 
   return (
     <>
-      <Modal visible={vis} opacity={opacity} onClose={() => setVis(!vis)}>
-        {bigText ? (
-          <h1>
-            {(() => {
-              let str = ''
-              for (let i = 0; i < 5000; i += 1) {
-                str += '| |'
-              }
-              return str
-            })()}
-          </h1>
-        ) : (
-          <h1>Modal</h1>
-        )}
+      <Modal visible={isVisible} opacity={opacity} onClose={() => setIsVisible(!isVisible)}>
+        {bigText ? <h1>{'| |'.repeat(5000)}</h1> : <h1>Modal</h1>}
       </Modal>
-      <h1 style={{ color: 'red' }}>
-        {(() => {
-          let str = ''
-          for (let i = 0; i < 1500; i += 1) {
-            str += '- -'
-          }
-          return str
-        })()}
-      </h1>
+      <h1 style={{ color: 'red' }}>{'- -'.repeat(1500)}</h1>
     </>
   )
 }
