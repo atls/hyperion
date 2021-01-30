@@ -1,7 +1,6 @@
 import styled                                 from '@emotion/styled'
 import React, { useEffect, useRef, useState } from 'react'
 import { Swipeable }                          from 'react-swipeable'
-import { useTheme }                           from '@emotion/react'
 import { layout }                             from 'styled-system'
 
 import {
@@ -26,6 +25,7 @@ type CarouselComponentProps = {
   controlTop: number
   isOverflowHidden: boolean
   isSquareControls: boolean
+  theme: {}
 }
 
 const StyledCarousel = styled.div<CarouselProps>(({ transition }) => ({
@@ -64,6 +64,7 @@ export const Carousel = ({
   controlTop,
   isOverflowHidden,
   isSquareControls,
+  theme,
 }: CarouselComponentProps) => {
   const [enableTransition, setEnableTransition] = useState(true)
   const [innerWidth, setInnerWidth] = useState(null)
@@ -75,7 +76,6 @@ export const Carousel = ({
   const [deltaX, setDeltaX] = useState(0)
   const containerNode = useRef()
   const screenNode = useRef(null)
-  const theme = useTheme()
 
   const setWidth = () => {
     setInnerWidth(contentWidth(containerNode.current))
