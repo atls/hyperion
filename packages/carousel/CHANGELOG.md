@@ -3,126 +3,93 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## 0.7.5 (2021-01-30)
+## 0.7.11 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
 
+## 0.7.10 (2021-01-30)
 
+**Note:** Version bump only for package @atlantis-lab/carousel
 
+## 0.7.9 (2021-01-30)
 
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+## 0.7.8 (2021-01-30)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+## 0.7.7 (2021-01-30)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+## 0.7.6 (2021-01-30)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+## 0.7.5 (2021-01-30)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
 
 ## 0.7.4 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
 
-
-
-
-
 ## 0.7.3 (2021-01-29)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
-
-
-
-
 
 ## 0.7.2 (2021-01-28)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
 
-
-
-
-
 ## [0.7.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.7.0...@atlantis-lab/carousel@0.7.1) (2021-01-25)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
 
-
-
-
-
 # [0.7.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.6.0...@atlantis-lab/carousel@0.7.0) (2021-01-24)
-
 
 ### Features
 
-* **carousel & slideshow:** add stories ([d09ff0b](https://github.com/Atlantis-Lab/uikit/commit/d09ff0b31f6beee1c6bdd228732e65af8c8cf250)), closes [#141](https://github.com/Atlantis-Lab/uikit/issues/141)
-
-
-
-
+- **carousel & slideshow:** add stories ([d09ff0b](https://github.com/Atlantis-Lab/uikit/commit/d09ff0b31f6beee1c6bdd228732e65af8c8cf250)), closes [#141](https://github.com/Atlantis-Lab/uikit/issues/141)
 
 # [0.6.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.5.5...@atlantis-lab/carousel@0.6.0) (2021-01-23)
 
-
 ### Bug Fixes
 
-* **carousel:** fix lint ([2dc9fae](https://github.com/Atlantis-Lab/uikit/commit/2dc9faeb66bae7e455399c30f6a8785c123ead91))
-
+- **carousel:** fix lint ([2dc9fae](https://github.com/Atlantis-Lab/uikit/commit/2dc9faeb66bae7e455399c30f6a8785c123ead91))
 
 ### Features
 
-* **carousel:** add stories ([575998f](https://github.com/Atlantis-Lab/uikit/commit/575998fe54904668c763b24d501c70ec22d2e26e)), closes [#144](https://github.com/Atlantis-Lab/uikit/issues/144)
-
-
-
-
+- **carousel:** add stories ([575998f](https://github.com/Atlantis-Lab/uikit/commit/575998fe54904668c763b24d501c70ec22d2e26e)), closes [#144](https://github.com/Atlantis-Lab/uikit/issues/144)
 
 ## [0.5.5](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.5.4...@atlantis-lab/carousel@0.5.5) (2020-09-22)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
 
-
-
-
-
 ## [0.5.4](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.5.3...@atlantis-lab/carousel@0.5.4) (2020-08-31)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
-
-
-
-
 
 ## [0.5.3](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.5.2...@atlantis-lab/carousel@0.5.3) (2020-08-26)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
 
-
-
-
-
 ## [0.5.2](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.5.1...@atlantis-lab/carousel@0.5.2) (2020-07-16)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
 
-
-
-
-
 ## [0.5.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.5.0...@atlantis-lab/carousel@0.5.1) (2020-07-13)
-
 
 ### Bug Fixes
 
-* **carousel:** fix memory leak + uncaught errors ([8d7d613](https://github.com/Atlantis-Lab/uikit/commit/8d7d6132a7e3991966cfcab526e46a452deeaeb0))
-
-
-
-
+- **carousel:** fix memory leak + uncaught errors ([8d7d613](https://github.com/Atlantis-Lab/uikit/commit/8d7d6132a7e3991966cfcab526e46a452deeaeb0))
 
 # [0.5.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.4.3...@atlantis-lab/carousel@0.5.0) (2020-07-12)
 
-
 ### Features
 
-* **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
-
-
-
-
+- **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
 
 ## [0.4.3](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/carousel@0.4.2...@atlantis-lab/carousel@0.4.3) (2020-07-10)
 

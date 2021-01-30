@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/grid",
   "repository": "git@github.com:Atlantis-Lab/uikit.git",
-  "version": "0.3.4",
+  "version": "0.3.10",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -23,14 +23,16 @@
   },
   "devDependencies": {
     "@emotion/styled": "10.0.27",
-    "react": "16.13.1"
+    "@types/jest": "^26.0.20",
+    "react": "16.13.1",
+    "react-test-renderer": "^17.0.1"
   },
   "dependencies": {
-    "@atlantis-lab/icons": "0.5.6",
-    "@atlantis-lab/layout": "0.3.4",
-    "@atlantis-lab/progress": "0.2.5",
-    "@atlantis-lab/state": "0.2.4",
-    "@atlantis-lab/utils": "0.7.4",
+    "@atlantis-lab/icons": "0.5.12",
+    "@atlantis-lab/layout": "0.3.10",
+    "@atlantis-lab/progress": "0.2.11",
+    "@atlantis-lab/state": "0.2.10",
+    "@atlantis-lab/utils": "0.7.10",
     "@rehooks/component-size": "^1.0.2",
     "recyclerlistview": "^3.0.0",
     "styled-tools": "^1.7.1"
