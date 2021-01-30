@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid should render correctly 1`] = `
+.emotion-7 {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 0.5px solid #1f2639;
+  box-sizing: border-box;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Lato",sans-serif;
+  padding: 10px 0px;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #6d84a9;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 10px;
+  outline: none;
+}
+
+.emotion-0 {
+  margin-left: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-0 svg:last-child {
+  position: relative;
+  left: -3px;
+}
+
+.emotion-6 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+<div
+  className="emotion-7"
+  display="flex"
+  height="100%"
+  width="100%"
+>
+  <div
+    className="emotion-5"
+    display="flex"
+  >
+    <div
+      className="emotion-4"
+    >
+      <div
+        className="emotion-1"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "flexBasis": "100px",
+            "flexShrink": 0,
+          }
+        }
+      >
+        Column 0
+        <span
+          className="emotion-0"
+        >
+          <svg
+            fill="none"
+            height="1em"
+            stroke="#ffffff"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1}
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M12 19V6M5 12l7-7 7 7"
+            />
+          </svg>
+          <svg
+            fill="none"
+            height="1em"
+            stroke="#ffffff"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1}
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M12 5v13M5 12l7 7 7-7"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="emotion-1"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "flexBasis": "100px",
+            "flexShrink": 0,
+          }
+        }
+      >
+        Another 1
+        <span
+          className="emotion-0"
+        >
+          <svg
+            fill="none"
+            height="1em"
+            stroke="#ffffff"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1}
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M12 19V6M5 12l7-7 7 7"
+            />
+          </svg>
+          <svg
+            fill="none"
+            height="1em"
+            stroke="#ffffff"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1}
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M12 5v13M5 12l7 7 7-7"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="emotion-6"
+    display="flex"
+    height="100%"
+  >
+    0
+  </div>
+</div>
+`;
