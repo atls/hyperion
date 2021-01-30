@@ -3,56 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## 0.6.5 (2021-01-30)
+## 0.6.11 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/icons-manager
 
+## 0.6.10 (2021-01-30)
 
+**Note:** Version bump only for package @atlantis-lab/icons-manager
 
+## 0.6.9 (2021-01-30)
 
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+## 0.6.8 (2021-01-30)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+## 0.6.7 (2021-01-30)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+## 0.6.6 (2021-01-30)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+## 0.6.5 (2021-01-30)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
 
 ## 0.6.4 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/icons-manager
 
-
-
-
-
 ## 0.6.3 (2021-01-29)
 
 **Note:** Version bump only for package @atlantis-lab/icons-manager
-
-
-
-
 
 ## 0.6.2 (2021-01-28)
 
 **Note:** Version bump only for package @atlantis-lab/icons-manager
 
-
-
-
-
 ## [0.6.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/icons-manager@0.6.0...@atlantis-lab/icons-manager@0.6.1) (2020-07-13)
 
 **Note:** Version bump only for package @atlantis-lab/icons-manager
 
-
-
-
-
 # [0.6.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/icons-manager@0.5.0...@atlantis-lab/icons-manager@0.6.0) (2020-07-12)
-
 
 ### Features
 
-* **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
-
-
-
-
+- **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
 
 # 0.5.0 (2020-07-09)
 
