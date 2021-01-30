@@ -7,162 +7,83 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
 
-
-
-
-
 ## 0.7.10 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
-
-
-
-
 
 ## 0.7.9 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
 
-
-
-
-
 ## 0.7.8 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
-
-
-
-
 
 ## 0.7.7 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
 
-
-
-
-
 ## 0.7.6 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
-
-
-
-
 
 ## 0.7.5 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
 
-
-
-
-
 ## 0.7.4 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
-
-
-
-
 
 ## 0.7.3 (2021-01-29)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
 
-
-
-
-
 ## 0.7.2 (2021-01-28)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
-
-
-
-
 
 ## [0.7.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.7.0...@atlantis-lab/slideshow@0.7.1) (2021-01-25)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
 
-
-
-
-
 # [0.7.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.6.6...@atlantis-lab/slideshow@0.7.0) (2021-01-24)
-
 
 ### Features
 
-* **carousel & slideshow:** add stories ([d09ff0b](https://github.com/Atlantis-Lab/uikit/commit/d09ff0b31f6beee1c6bdd228732e65af8c8cf250)), closes [#141](https://github.com/Atlantis-Lab/uikit/issues/141)
-
-
-
-
+- **carousel & slideshow:** add stories ([d09ff0b](https://github.com/Atlantis-Lab/uikit/commit/d09ff0b31f6beee1c6bdd228732e65af8c8cf250)), closes [#141](https://github.com/Atlantis-Lab/uikit/issues/141)
 
 ## [0.6.6](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.6.5...@atlantis-lab/slideshow@0.6.6) (2020-09-04)
 
-
 ### Bug Fixes
 
-* **slideshow:** fix visibility, fix preventTouchMoveEvent, multiply x2 delta px before swiping ([a1f13f2](https://github.com/Atlantis-Lab/uikit/commit/a1f13f29821c07d8ae9bcbc3b9aa4fbff359c843))
-
-
-
-
+- **slideshow:** fix visibility, fix preventTouchMoveEvent, multiply x2 delta px before swiping ([a1f13f2](https://github.com/Atlantis-Lab/uikit/commit/a1f13f29821c07d8ae9bcbc3b9aa4fbff359c843))
 
 ## [0.6.5](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.6.4...@atlantis-lab/slideshow@0.6.5) (2020-08-31)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
 
-
-
-
-
 ## [0.6.4](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.6.3...@atlantis-lab/slideshow@0.6.4) (2020-07-17)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
-
-
-
-
 
 ## [0.6.3](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.6.2...@atlantis-lab/slideshow@0.6.3) (2020-07-17)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
 
-
-
-
-
 ## [0.6.2](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.6.1...@atlantis-lab/slideshow@0.6.2) (2020-07-17)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
-
-
-
-
 
 ## [0.6.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.6.0...@atlantis-lab/slideshow@0.6.1) (2020-07-16)
 
 **Note:** Version bump only for package @atlantis-lab/slideshow
 
-
-
-
-
 # [0.6.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.5.1...@atlantis-lab/slideshow@0.6.0) (2020-07-12)
-
 
 ### Features
 
-* **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
-
-
-
-
+- **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
 
 ## [0.5.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/slideshow@0.5.0...@atlantis-lab/slideshow@0.5.1) (2020-07-09)
 

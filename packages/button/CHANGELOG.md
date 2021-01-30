@@ -7,162 +7,83 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @atlantis-lab/button
 
-
-
-
-
 ## 1.8.10 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/button
-
-
-
-
 
 ## 1.8.9 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/button
 
-
-
-
-
 ## 1.8.8 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/button
-
-
-
-
 
 ## 1.8.7 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/button
 
-
-
-
-
 ## 1.8.6 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/button
-
-
-
-
 
 ## 1.8.5 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/button
 
-
-
-
-
 ## 1.8.4 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/button
-
-
-
-
 
 ## 1.8.3 (2021-01-29)
 
 **Note:** Version bump only for package @atlantis-lab/button
 
-
-
-
-
 ## 1.8.2 (2021-01-28)
 
 **Note:** Version bump only for package @atlantis-lab/button
-
-
-
-
 
 ## [1.8.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.8.0...@atlantis-lab/button@1.8.1) (2021-01-25)
 
 **Note:** Version bump only for package @atlantis-lab/button
 
-
-
-
-
 # [1.8.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.7.0...@atlantis-lab/button@1.8.0) (2021-01-24)
-
 
 ### Features
 
-* **button:** add stories ([f8f7ef9](https://github.com/Atlantis-Lab/uikit/commit/f8f7ef961bad8f05dddc51f757a13a02ca933b8e)), closes [#148](https://github.com/Atlantis-Lab/uikit/issues/148)
-
-
-
-
+- **button:** add stories ([f8f7ef9](https://github.com/Atlantis-Lab/uikit/commit/f8f7ef961bad8f05dddc51f757a13a02ca933b8e)), closes [#148](https://github.com/Atlantis-Lab/uikit/issues/148)
 
 # [1.7.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.6.5...@atlantis-lab/button@1.7.0) (2021-01-23)
 
-
 ### Features
 
-* **carousel:** add stories ([575998f](https://github.com/Atlantis-Lab/uikit/commit/575998fe54904668c763b24d501c70ec22d2e26e)), closes [#144](https://github.com/Atlantis-Lab/uikit/issues/144)
-
-
-
-
+- **carousel:** add stories ([575998f](https://github.com/Atlantis-Lab/uikit/commit/575998fe54904668c763b24d501c70ec22d2e26e)), closes [#144](https://github.com/Atlantis-Lab/uikit/issues/144)
 
 ## [1.6.5](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.6.4...@atlantis-lab/button@1.6.5) (2020-09-04)
 
 **Note:** Version bump only for package @atlantis-lab/button
 
-
-
-
-
 ## [1.6.4](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.6.3...@atlantis-lab/button@1.6.4) (2020-08-31)
 
 **Note:** Version bump only for package @atlantis-lab/button
-
-
-
-
 
 ## [1.6.3](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.6.2...@atlantis-lab/button@1.6.3) (2020-08-26)
 
 **Note:** Version bump only for package @atlantis-lab/button
 
-
-
-
-
 ## [1.6.2](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.6.1...@atlantis-lab/button@1.6.2) (2020-07-14)
 
 **Note:** Version bump only for package @atlantis-lab/button
-
-
-
-
 
 ## [1.6.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.6.0...@atlantis-lab/button@1.6.1) (2020-07-13)
 
 **Note:** Version bump only for package @atlantis-lab/button
 
-
-
-
-
 # [1.6.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.5.0...@atlantis-lab/button@1.6.0) (2020-07-12)
-
 
 ### Features
 
-* **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
-
-
-
-
+- **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
 
 # [1.5.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/button@1.4.4...@atlantis-lab/button@1.5.0) (2020-06-21)
 

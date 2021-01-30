@@ -7,92 +7,47 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @atlantis-lab/hamburger
 
-
-
-
-
 ## 0.5.9 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/hamburger
-
-
-
-
 
 ## 0.5.8 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/hamburger
 
-
-
-
-
 ## 0.5.7 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/hamburger
-
-
-
-
 
 ## 0.5.6 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/hamburger
 
-
-
-
-
 ## 0.5.5 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/hamburger
-
-
-
-
 
 ## 0.5.4 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/hamburger
 
-
-
-
-
 ## 0.5.3 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/hamburger
-
-
-
-
 
 ## 0.5.2 (2021-01-29)
 
 **Note:** Version bump only for package @atlantis-lab/hamburger
 
-
-
-
-
 ## 0.5.1 (2021-01-28)
 
 **Note:** Version bump only for package @atlantis-lab/hamburger
 
-
-
-
-
 # [0.5.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/hamburger@0.4.0...@atlantis-lab/hamburger@0.5.0) (2020-07-12)
-
 
 ### Features
 
-* **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
-
-
-
-
+- **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
 
 # [0.4.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/hamburger@0.3.3...@atlantis-lab/hamburger@0.4.0) (2020-06-21)
 
