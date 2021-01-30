@@ -4,7 +4,7 @@
   "version": "0.0.3",
   "license": "MIT",
   "scripts": {
-    "storybook": "start-storybook -p 6006 -c ./src",
+    "storybook": "start-storybook --ci -p 6006 -c ./src",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
