@@ -61,7 +61,7 @@ const CheckMark = styled.div(
 )
 
 export const Checkbox = ({ children, ...props }) => (
-  <Container>
+  <Container {...props}>
     {children}
     <Input
       type='checkbox'
