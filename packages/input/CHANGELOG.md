@@ -7,111 +7,57 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @atlantis-lab/input
 
-
-
-
-
 ## 0.5.11 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/input
-
-
-
-
 
 ## 0.5.10 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/input
 
-
-
-
-
 ## 0.5.9 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/input
-
-
-
-
 
 ## 0.5.8 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/input
 
-
-
-
-
 ## 0.5.7 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/input
-
-
-
-
 
 ## 0.5.6 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/input
 
-
-
-
-
 ## 0.5.5 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/input
-
-
-
-
 
 ## 0.5.4 (2021-01-29)
 
 **Note:** Version bump only for package @atlantis-lab/input
 
-
-
-
-
 ## 0.5.3 (2021-01-28)
 
 **Note:** Version bump only for package @atlantis-lab/input
 
-
-
-
-
 ## [0.5.2](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/input@0.5.1...@atlantis-lab/input@0.5.2) (2020-07-22)
-
 
 ### Bug Fixes
 
-* **checkbox:** fix lint ([5e4b82f](https://github.com/Atlantis-Lab/uikit/commit/5e4b82f34c68c2841f9dcf29b1e5e92214485381))
-
-
-
-
+- **checkbox:** fix lint ([5e4b82f](https://github.com/Atlantis-Lab/uikit/commit/5e4b82f34c68c2841f9dcf29b1e5e92214485381))
 
 ## [0.5.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/input@0.5.0...@atlantis-lab/input@0.5.1) (2020-07-22)
 
 **Note:** Version bump only for package @atlantis-lab/input
 
-
-
-
-
 # [0.5.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/input@0.4.0...@atlantis-lab/input@0.5.0) (2020-07-12)
-
 
 ### Features
 
-* **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
-
-
-
-
+- **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
 
 # [0.4.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/input@0.3.4...@atlantis-lab/input@0.4.0) (2020-06-21)
 

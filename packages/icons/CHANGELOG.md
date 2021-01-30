@@ -7,108 +7,55 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @atlantis-lab/icons
 
-
-
-
-
 ## 0.5.11 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/icons
-
-
-
-
 
 ## 0.5.10 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/icons
 
-
-
-
-
 ## 0.5.9 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/icons
-
-
-
-
 
 ## 0.5.8 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/icons
 
-
-
-
-
 ## 0.5.7 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/icons
-
-
-
-
 
 ## 0.5.6 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/icons
 
-
-
-
-
 ## 0.5.5 (2021-01-30)
 
 **Note:** Version bump only for package @atlantis-lab/icons
-
-
-
-
 
 ## 0.5.4 (2021-01-29)
 
 **Note:** Version bump only for package @atlantis-lab/icons
 
-
-
-
-
 ## 0.5.3 (2021-01-28)
 
 **Note:** Version bump only for package @atlantis-lab/icons
-
-
-
-
 
 ## [0.5.2](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/icons@0.5.1...@atlantis-lab/icons@0.5.2) (2020-09-22)
 
 **Note:** Version bump only for package @atlantis-lab/icons
 
-
-
-
-
 ## [0.5.1](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/icons@0.5.0...@atlantis-lab/icons@0.5.1) (2020-08-26)
 
 **Note:** Version bump only for package @atlantis-lab/icons
 
-
-
-
-
 # [0.5.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/icons@0.4.0...@atlantis-lab/icons@0.5.0) (2020-07-12)
-
 
 ### Features
 
-* **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
-
-
-
-
+- **input:** add PriceInput ([6a16425](https://github.com/Atlantis-Lab/uikit/commit/6a164253f9288e3de8276331b71ce5e698ecf9cf))
 
 # [0.4.0](https://github.com/Atlantis-Lab/uikit/compare/@atlantis-lab/icons@0.3.15...@atlantis-lab/icons@0.4.0) (2020-06-21)
 

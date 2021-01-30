@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PriceInput should render correctly 1`] = `
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  width: 100%;
+  font-family: primary;
+  font-weight: medium;
+  border-radius: extra;
+  border: black;
+  color: #000;
+  background-color: #fff;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: #C0C0C0;
+}
+
+.emotion-0::-moz-placeholder {
+  color: #C0C0C0;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: #C0C0C0;
+}
+
+.emotion-0::placeholder {
+  color: #C0C0C0;
+}
+
+<div
+  className="emotion-1"
+>
+  <input
+    className="emotion-0"
+    mask={[Function]}
+    onChange={[Function]}
+    placeholder="Placeholder"
+    size="normal"
+    type="text"
+  />
+</div>
+`;
