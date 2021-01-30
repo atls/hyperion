@@ -7,9 +7,6 @@ import { createPortal }  from 'react-dom'
 import { flexbox }       from 'styled-system'
 import { switchProp }    from 'styled-tools'
 
-// TODO downgrade scrolllock version (5.0.1 -> 4.0.1).
-// Не навешивается listener в библиотеке. Надо разобраться, что изменилось
-
 interface ContainerProps {
   visible: boolean
   opacity: string
