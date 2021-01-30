@@ -23,7 +23,9 @@
   },
   "devDependencies": {
     "@emotion/styled": "10.0.27",
-    "react": "16.13.1"
+    "@types/jest": "^26.0.20",
+    "react": "16.13.1",
+    "react-test-renderer": "^17.0.1"
   },
   "dependencies": {
     "@atlantis-lab/icons": "0.5.9",
