@@ -27,7 +27,9 @@
   },
   "devDependencies": {
     "@emotion/react": "^11.1.4",
-    "@types/styled-system": "5.1.10"
+    "@types/jest": "^26.0.20",
+    "@types/styled-system": "5.1.10",
+    "react-test-renderer": "^17.0.1"
   },
   "publishConfig": {
     "access": "public"
