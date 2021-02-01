@@ -27,6 +27,12 @@ const Container = styled.div<any>(
   layout
 )
 
+const SpaceCreator = styled.div<any>({
+  position: 'relative',
+  visibility: 'hidden',
+  opacity: '0',
+})
+
 const StyledSlide = styled.div<any>(({ opacity, transition, visibility }) => ({
   position: 'absolute',
   transition,
@@ -46,7 +52,9 @@ export const Slideshow: FC<SlideshowProps> = ({
   const [activeWidth, setActiveWidth] = useState(0)
   const [stop, setStop] = useState(false)
   const [containerWidth, setContainerWidth] = useState(null)
+  const [maxHeightSlide, setMaxHeightSlide] = useState(React.createElement('div'))
   const containerNode = useRef(null)
+  const childrenNodes = children.map(() => useRef(null))
 
   const stopSlideshow = () => {
     setActiveWidth(100)
@@ -95,12 +103,25 @@ export const Slideshow: FC<SlideshowProps> = ({
     }
     return () => clearTimeout(timeout)
   }, [activeWidth, stop])
+
+  useEffect(() => {
+    const childrenHeights = childrenNodes.map(node => node.current.clientHeight)
+
+    const maxHeight = Math.max(...childrenHeights)
+
+    childrenHeights.forEach((nodeHeight, index) => {
+      if (nodeHeight === maxHeight) {
+        setMaxHeightSlide(children[index])
+      }
+    })
+  }, [children])
   /* eslint-disable */
   return (
     <Container ref={containerNode} onMouseEnter={stopSlideshow} width={width} height={height}>
       <Swipeable onSwiped={(data) => swiped(data)} trackMouse trackTouch delta={30}>
         {children.map((item, index) => (
           <StyledSlide
+            ref={childrenNodes[index]}
             transition={transition}
             key={`slide-${index}`}
             opacity={slide === index ? 1 : 0}
@@ -110,6 +131,7 @@ export const Slideshow: FC<SlideshowProps> = ({
           </StyledSlide>
         ))}
       </Swipeable>
+      <SpaceCreator>{maxHeightSlide}</SpaceCreator>
       {controlsType === 'dots' && (
         <Dots
           slides={children}
