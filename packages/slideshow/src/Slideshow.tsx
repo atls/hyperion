@@ -61,7 +61,7 @@ export const Slideshow: FC<SlideshowProps> = ({
     setStop(true)
   }
 
-  const swiped = (data) => {
+  const swiped = data => {
     if (data.dir !== 'Up' && data.dir !== 'Down') {
       if (data.dir === 'Left') {
         if (slide < children.length - 1) {
@@ -105,7 +105,7 @@ export const Slideshow: FC<SlideshowProps> = ({
   }, [activeWidth, stop])
 
   useEffect(() => {
-    const childrenHeights = childrenNodes.map((node) => node.current.clientHeight)
+    const childrenHeights = childrenNodes.map(node => node.current.clientHeight)
 
     const maxHeight = Math.max(...childrenHeights)
 
