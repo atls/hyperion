@@ -18,7 +18,10 @@ exports[`Carousel should render correctly 1`] = `
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   border: 2px solid black;
   z-index: 9;
-  display: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -69,6 +72,10 @@ exports[`Carousel should render correctly 1`] = `
   pointer-events: none;
 }
 
+.emotion-1:hover {
+  cursor: pointer;
+}
+
 .emotion-3 {
   position: absolute;
   background: #fff;
@@ -109,7 +116,7 @@ exports[`Carousel should render correctly 1`] = `
 >
   <div
     className="emotion-0"
-    disabled={true}
+    disabled={false}
     height={50}
     onClick={[Function]}
     width={50}
