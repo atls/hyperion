@@ -25,6 +25,7 @@ type CarouselComponentProps = {
   controlTop: number
   isOverflowHidden: boolean
   isSquareControls: boolean
+  transition?: boolean
   theme: {}
 }
 
@@ -36,6 +37,9 @@ const StyledCarousel = styled.div<CarouselProps>(({ transition }) => ({
   height: 'auto',
   '&:focus': {
     pointerEvents: 'none',
+  },
+  '&:hover': {
+    cursor: 'pointer',
   },
 }))
 
@@ -70,8 +74,6 @@ export const Carousel = ({
   const [innerWidth, setInnerWidth] = useState(null)
   const [fullWidth, setFullWidth] = useState(null)
   const [childWidth, setChildWidth] = useState(null)
-  const [buttonLeftDisabled, setButtonLeftDisabled] = useState(true)
-  const [buttonRightDisabled, setButtonRightDisabled] = useState(false)
   const [left, setLeft] = useState(0)
   const [deltaX, setDeltaX] = useState(0)
   const containerNode = useRef()
@@ -84,12 +86,6 @@ export const Carousel = ({
         widthWithMargin(item)
       )
     )
-    if (!disableButton && innerWidth === fullWidth) {
-      setButtonRightDisabled(true)
-    }
-    if (!disableButton && innerWidth !== fullWidth) {
-      setButtonRightDisabled(false)
-    }
   }
 
   useEffect(() => {
@@ -117,27 +113,13 @@ export const Carousel = ({
     }
     const newLeft = deltaX - data.deltaX + left
 
-    if (!disableButton) {
-      if (newLeft >= -10) {
-        setButtonLeftDisabled(true)
-      } else {
-        setButtonLeftDisabled(false)
-      }
-
-      if (fullWidth <= innerWidth - newLeft + 10) {
-        setButtonRightDisabled(true)
-      } else {
-        setButtonRightDisabled(false)
-      }
-    }
-
-    if (newLeft >= 2) {
-      setLeft(0)
+    if (newLeft > 500) {
+      setLeft(left)
       return
     }
 
-    if (fullWidth <= innerWidth - newLeft - 2) {
-      setLeft(innerWidth - fullWidth)
+    if (newLeft < innerWidth - fullWidth - 500) {
+      setLeft(left)
       return
     }
 
@@ -173,21 +155,19 @@ export const Carousel = ({
       })
     }
 
-    if (newLeft >= 0) {
-      setButtonLeftDisabled(true)
-      setButtonRightDisabled(false)
-      setLeft(0)
+    if (left === 0 && newLeft >= 0) {
+      setLeft(innerWidth - fullWidth)
       return
     }
     if (innerWidth - newLeft >= fullWidth) {
-      setButtonRightDisabled(true)
-      setButtonLeftDisabled(false)
+      if (left === innerWidth - fullWidth && innerWidth - newLeft > innerWidth - fullWidth) {
+        setLeft(0)
+        return
+      }
       setLeft(innerWidth - fullWidth)
       return
     }
 
-    setButtonRightDisabled(false)
-    setButtonLeftDisabled(false)
     setLeft(newLeft)
   }
 
@@ -195,7 +175,7 @@ export const Carousel = ({
     <Container show={children.length !== 0}>
       <SlideButton
         onClick={() => handleClick('left')}
-        disabled={disableButton || buttonLeftDisabled}
+        disabled={disableButton}
         width={controlWidth}
         height={controlHeight}
         left={controlLeft}
@@ -209,7 +189,20 @@ export const Carousel = ({
       <Screen ref={containerNode} isOverflowHidden={isOverflowHidden} maxWidth='100%'>
         <Swipeable
           onSwiping={data => swiping(data)}
-          onSwiped={() => setDeltaX(0)}
+          onSwiped={() => {
+            setDeltaX(0)
+            if (left > 0) {
+              setEnableTransition(true)
+              setLeft(0)
+              if (left === 0) setEnableTransition(false)
+            }
+
+            if (left <= innerWidth - fullWidth) {
+              setEnableTransition(true)
+              setLeft(innerWidth - fullWidth)
+              if (left === innerWidth - fullWidth) setEnableTransition(false)
+            }
+          }}
           preventDefaultTouchmoveEvent
           trackMouse
           trackTouch
@@ -222,7 +215,7 @@ export const Carousel = ({
       </Screen>
       <SlideButton
         onClick={() => handleClick('right')}
-        disabled={disableButton || buttonRightDisabled}
+        disabled={disableButton}
         width={controlWidth}
         height={controlHeight}
         right={controlRight}
