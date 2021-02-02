@@ -66,13 +66,6 @@
     "@angular-devkit/core" "8.3.20"
     rxjs "6.4.0"
 
-"@atlantis-lab/layout@^0.3.16":
-  version "0.3.16"
-  resolved "https://registry.yarnpkg.com/@atlantis-lab/layout/-/layout-0.3.16.tgz#8817c7ca3a41f63bf9738494069a20acc7abc7a6"
-  integrity sha512-1QegaeM5pWX/yjhOMcW5juZqTXAfeN0epGM7O6OQ9H2kR2N4MJ5UUqPeohfzHQt/Clvq5TnYzxmhbQWu1WiL3g==
-  dependencies:
-    styled-system "5.1.5"
-
 "@babel/code-frame@7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.8.3.tgz#33e25903d7481181534e12ec0a25f16b6fcf419e"
