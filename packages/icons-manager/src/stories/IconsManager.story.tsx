@@ -1,4 +1,5 @@
 import React            from 'react'
+import { useTheme }     from '@emotion/react'
 
 import { IconsManager } from '../index'
 
@@ -14,11 +15,15 @@ export const ExampleIconsManager = ({
   color = 'red',
   hoverColor = 'yellow',
   clickedColor = 'black',
-}: ExampleProps) => (
-  <IconsManager color={color} hoverColor={hoverColor} clickedColor={clickedColor}>
-    <Icon />
-  </IconsManager>
-)
+}: ExampleProps) => {
+  const theme = useTheme()
+
+  return (
+    <IconsManager theme={theme} color={color} hoverColor={hoverColor} clickedColor={clickedColor}>
+      <Icon />
+    </IconsManager>
+  )
+}
 
 export default {
   title: 'IconsManager',
