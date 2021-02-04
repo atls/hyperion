@@ -1,0 +1,30 @@
+{
+  "name": "@atlantis-lab/design-ui",
+  "repository": "git@github.com:Atlantis-Lab/uikit.git",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -r -f dist",
+    "prepublishOnly": "yarn run build",
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "pubflow store",
+    "postpack": "pubflow restore"
+  },
+  "devDependencies": {
+    "@types/styled-system": "5.1.4"
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "@emotion/styled": "10.0.23",
+    "styled-system": "5.1.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
