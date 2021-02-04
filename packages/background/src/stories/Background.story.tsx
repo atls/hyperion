@@ -2,8 +2,7 @@ import React          from 'react'
 
 import { Background } from '../index'
 
-const stubImageUrl =
-  'https://images.pexels.com/photos/399973/pexels-photo-399973.jpeg?cs=srgb&dl=pexels-sevenstorm-juhaszimrus-399973.jpg&fm=jpg'
+const stubImageUrl = 'https://storybook.js.org/images/home/build-addons.png'
 
 type ExampleProps = {
   backgroundSize: 'cover' | 'contain' | 'auto'
