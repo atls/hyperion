@@ -1,12 +1,12 @@
 import styled                             from '@emotion/styled'
 import React, { FC, useEffect, useState } from 'react'
-import { useTheme }                       from '@emotion/react'
 
 interface Props {
   color?: string
   hoverColor?: string
   clickedColor?: string
   children?: any
+  theme: any
 }
 
 const IconUI = styled.div({
@@ -14,13 +14,9 @@ const IconUI = styled.div({
   display: 'inline-flex',
 })
 
-export const IconsManager: FC<Props> = ({ children, hoverColor, clickedColor, color }) => {
-  const theme = useTheme()
-  // @ts-ignore
+export const IconsManager: FC<Props> = ({ theme, children, hoverColor, clickedColor, color }) => {
   const themeColor = theme.colors[color] || color
-  // @ts-ignore
   const themeHoverColor = theme.colors[hoverColor] || hoverColor
-  // @ts-ignore
   const themeClickedColor = theme.colors[clickedColor] || clickedColor
 
   const [currentColor, setCurrentColor] = useState(themeColor)

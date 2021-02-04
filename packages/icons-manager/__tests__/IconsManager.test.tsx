@@ -1,8 +1,7 @@
-import React             from 'react'
-import renderer          from 'react-test-renderer'
-import { ThemeProvider } from '@emotion/react'
+import React            from 'react'
+import renderer         from 'react-test-renderer'
 
-import { IconsManager }  from '../src/index'
+import { IconsManager } from '../src/index'
 
 it('IconsManager should render correctly', () => {
   const defaultTheme = {
@@ -26,11 +25,9 @@ it('IconsManager should render correctly', () => {
 
   const tree = renderer
     .create(
-      <ThemeProvider theme={defaultTheme}>
-        <IconsManager color='red' hoverColor='yellow' clickedColor='black'>
-          <Icon />
-        </IconsManager>
-      </ThemeProvider>
+      <IconsManager theme={defaultTheme} color='red' hoverColor='yellow' clickedColor='black'>
+        <Icon />
+      </IconsManager>
     )
     .toJSON()
 
