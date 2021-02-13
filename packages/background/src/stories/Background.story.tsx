@@ -5,12 +5,18 @@ import { Background } from '../index'
 const stubImageUrl = 'https://storybook.js.org/images/home/build-addons.png'
 
 type ExampleProps = {
+  position: 'relative' | 'absolute' | 'fixed' | 'inherit'
+  width: any
+  height: any
   backgroundSize: 'cover' | 'contain' | 'auto'
   withImage: boolean
   backgroundColor: any
 }
 
 export const ExampleBackground = ({
+  position,
+  width,
+  height,
   backgroundSize,
   backgroundColor,
   withImage = true,
@@ -19,6 +25,9 @@ export const ExampleBackground = ({
     backgroundImage={withImage && `url(${stubImageUrl})`}
     backgroundColor={backgroundColor}
     backgroundSize={backgroundSize}
+    position={position}
+    width={width}
+    height={height}
   />
 )
 
