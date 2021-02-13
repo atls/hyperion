@@ -1,6 +1,6 @@
 import React                          from 'react'
-import styled                         from '@emotion/styled'
 
+import styled                         from '@emotion/styled'
 import { ArrowDownIcon, ArrowUpIcon } from '@atlantis-lab/icons'
 
 export const TextUI = styled.span({

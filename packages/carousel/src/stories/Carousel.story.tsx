@@ -5,6 +5,19 @@ import { Box, Column, Layout, Row } from '@atlantis-lab/layout'
 
 import { Carousel }                 from '../index'
 
+interface CarouselProps {
+  transition?: boolean
+  disableButton?: boolean
+  step?: number
+  isSquareControls?: boolean
+  isOverflowHidden?: boolean
+  controlWidth?: string | number | string[] | number[]
+  controlHeight?: string | number | string[] | number[]
+  controlRight?: string | number | string[] | number[]
+  controlLeft?: string | number | string[] | number[]
+  controlTop?: string | number | string[] | number[]
+}
+
 const Card = ({ name, text }) => {
   return (
     <Box
@@ -44,8 +57,7 @@ export const ExampleCarousel = ({
   controlTop = 100,
   isOverflowHidden = true,
   isSquareControls = false,
-  transition,
-}) => {
+}: CarouselProps) => {
   const theme = useTheme()
 
   return (
@@ -57,7 +69,6 @@ export const ExampleCarousel = ({
       controlTop={controlTop}
       isOverflowHidden={isOverflowHidden}
       isSquareControls={isSquareControls}
-      transition={transition}
       theme={theme}
     >
       {helperArray(10).map(i => (
@@ -69,5 +80,5 @@ export const ExampleCarousel = ({
 
 export default {
   title: 'Carousel',
-  component: Carousel,
+  component: ExampleCarousel,
 }
