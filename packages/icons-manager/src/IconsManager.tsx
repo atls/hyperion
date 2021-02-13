@@ -1,5 +1,6 @@
-import styled                             from '@emotion/styled'
 import React, { FC, useEffect, useState } from 'react'
+
+import styled                             from '@emotion/styled'
 
 interface Props {
   color?: string

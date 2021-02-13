@@ -1,7 +1,7 @@
-import styled                  from '@emotion/styled'
 import React, { Children, FC } from 'react'
 import { ifProp }              from 'styled-tools'
 
+import styled                  from '@emotion/styled'
 import { useHover, withState } from '@atlantis-lab/state'
 
 import { Cell }                from './Cell'

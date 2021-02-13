@@ -1,6 +1,6 @@
-import styled              from '@emotion/styled'
 import React, { Children } from 'react'
 
+import styled              from '@emotion/styled'
 import { unique }          from '@atlantis-lab/utils'
 
 import { Cell }            from './Cell'
