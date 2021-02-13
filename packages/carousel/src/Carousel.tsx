@@ -1,8 +1,8 @@
-import styled                                 from '@emotion/styled'
 import React, { useEffect, useRef, useState } from 'react'
 import { Swipeable }                          from 'react-swipeable'
 import { layout }                             from 'styled-system'
 
+import styled                                 from '@emotion/styled'
 import {
   ArrowBackwardIcon,
   ArrowForwardIcon,
@@ -13,21 +13,6 @@ import { contentWidth, widthWithMargin }      from '@atlantis-lab/utils'
 
 import { SlideButton }                        from './SlideButton'
 import { CarouselProps }                      from './types'
-
-type CarouselComponentProps = {
-  children: any
-  disableButton?: boolean
-  step?: number
-  controlWidth: number
-  controlHeight: number
-  controlRight: number
-  controlLeft: number
-  controlTop: number
-  isOverflowHidden: boolean
-  isSquareControls: boolean
-  transition?: boolean
-  theme: {}
-}
 
 const StyledCarousel = styled.div<CarouselProps>(({ transition }) => ({
   position: 'relative',
@@ -69,7 +54,7 @@ export const Carousel = ({
   isOverflowHidden,
   isSquareControls,
   theme,
-}: CarouselComponentProps) => {
+}) => {
   const [enableTransition, setEnableTransition] = useState(true)
   const [innerWidth, setInnerWidth] = useState(null)
   const [fullWidth, setFullWidth] = useState(null)
