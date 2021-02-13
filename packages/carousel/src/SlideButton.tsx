@@ -1,5 +1,6 @@
-import styled               from '@emotion/styled'
 import { layout, position } from 'styled-system'
+
+import styled               from '@emotion/styled'
 
 export const SlideButton = styled.div<any>(
   ({ theme, isSquareControls, disabled }: any) => ({

@@ -1,8 +1,8 @@
-import styled                                     from '@emotion/styled'
 import React, { FC, useEffect, useRef, useState } from 'react'
 import { Swipeable }                              from 'react-swipeable'
 import { layout }                                 from 'styled-system'
 
+import styled                                     from '@emotion/styled'
 import { contentWidth }                           from '@atlantis-lab/utils'
 
 import { Dots }                                   from './Dots'
