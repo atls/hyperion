@@ -9,7 +9,8 @@
     "typecheck": "mctl typecheck",
     "checkcommit": "mctl precommit",
     "postinstall": "lerna run compile",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "storybook": "yarn workspace @atlantis-lab/storybook storybook"
   },
   "devDependencies": {
     "@monstrs/mctl": "0.1.82",
