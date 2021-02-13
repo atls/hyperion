@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.26 (2021-02-13)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
 ## 0.7.25 (2021-02-13)
 
 **Note:** Version bump only for package @atlantis-lab/carousel
