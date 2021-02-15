@@ -1,3 +1,1 @@
-export const borders: {[key: string]: string}  = {
-
-}
+export const borders: { [key: string]: string } = {}
