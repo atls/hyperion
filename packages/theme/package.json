@@ -1,0 +1,35 @@
+{
+  "name": "@atlantis-lab/theme",
+  "repository": "git@github.com:Atlantis-Lab/uikit.git",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -r -f dist",
+    "prepublishOnly": "yarn run build",
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "pubflow store",
+    "postpack": "pubflow restore"
+  },
+  "dependencies": {
+    "@atlantis-lab/config": "^0.1.5",
+    "@emotion/styled": "^11.0.0",
+    "emotion": "10.0.27",
+    "emotion-theming": "10.0.27",
+    "react": "16.9.0",
+    "styled-system": "^5.1.5"
+  },
+  "devDependencies": {
+    "@atlantis-lab/design": "^0.0.2",
+    "@storybook/react": "6.1.16",
+    "@types/styled-system": "5.1.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
