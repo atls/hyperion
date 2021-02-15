@@ -17,6 +17,7 @@
     "postpack": "pubflow restore"
   },
   "dependencies": {
+    "@atlantis-lab/tsconfig": "^0.1.5",
     "@emotion/styled": "^11.0.0",
     "emotion": "10.0.27",
     "emotion-theming": "10.0.27",

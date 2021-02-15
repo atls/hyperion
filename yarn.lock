@@ -73,6 +73,11 @@
   dependencies:
     styled-system "5.1.5"
 
+"@atlantis-lab/tsconfig@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@atlantis-lab/tsconfig/-/tsconfig-0.1.5.tgz#968e4772eb8143c9218d12cb439044b8a4b98489"
+  integrity sha512-jOPJD9MisitrDnKcLme+LHweEDMnibDrOO+9UIuel9ZW0D+7DGaFB6/IwA45jBcwM/+/RVnkGylcsqftK5Rqfw==
+
 "@babel/code-frame@7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.8.3.tgz#33e25903d7481181534e12ec0a25f16b6fcf419e"
