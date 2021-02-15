@@ -8,11 +8,12 @@ export const injectGlobalStyles = (html: {} = {}, body: {} = {
   WebkitOverflowScrolling: 'touch',
   height: '100%',
   margin: 0,
-}) => {
+}, ...rest) => {
   injectFontFaces(fontFaces)
 
   injectGlobal({
     html,
-    body
+    body,
+    ...rest
   })
 }
