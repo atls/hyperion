@@ -1,3 +1,2 @@
-export const fonts = {
-  
+export const fonts: { [key: string]: string } = {
 }

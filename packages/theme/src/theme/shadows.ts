@@ -1,4 +1,4 @@
-export const shadows = {
+export const shadows: {[key: string]: string} = {
   black: '0 2px 4px rgba(0, 0, 0, 0.03)',
   codgray: '0 16px 32px rgba(0, 0, 0, 0.12)',
   woodsmoke: '0 16px 32px rgba(0, 0, 0, 0.06)',

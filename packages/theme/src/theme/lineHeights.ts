@@ -1,4 +1,4 @@
-export const lineHeights = {
+export const lineHeights: { [key: string]: number } = {
   small: 0.9,
   normal: 1,
   extra: 1.3,

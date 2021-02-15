@@ -1,4 +1,4 @@
-export const borders = {
+export const borders: {[key: string]: string}  = {
   black: '1px solid rgba(0, 0, 0, 0.08)',
   codgray: '1px solid rgba(0, 0, 0, 0.06)',
   white: '1px solid rgba(255, 255, 255, 0.32)',

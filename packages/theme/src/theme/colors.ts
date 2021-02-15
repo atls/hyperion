@@ -1,4 +1,4 @@
-export const colors = {
+export const colors: { [key:string]: string } = {
   white: 'rgb(255, 255, 255)',
   alabaster: 'rgb(252, 252, 252)',
   wildsand: 'rgb(250, 250, 250)',

@@ -1,4 +1,4 @@
-export const radii = {
+export const radii: { [key: string]: number } = {
   small: 2,
   normal: 3,
   extra: 4,
