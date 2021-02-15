@@ -85,6 +85,15 @@
     "@atlantis-lab/prettier-config" "0.1.5"
     "@atlantis-lab/tsconfig" "0.1.5"
 
+"@atlantis-lab/design@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@atlantis-lab/design/-/design-0.0.2.tgz#0c7eaa8e7094c13a48c34b75673109d973d2a5d9"
+  integrity sha512-2m///1Jy1U0/BrcHWEgd9FN96lyZFVk99j/Kk/MHdenUQaymkX4LWYtDh2kv2T8Qk2fEmjW9z9DPi58EZwLLtQ==
+  dependencies:
+    "@emotion/styled" "10.0.23"
+    react "^16.9.0"
+    styled-system "5.1.4"
+
 "@atlantis-lab/eslint-config@0.1.5":
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/@atlantis-lab/eslint-config/-/eslint-config-0.1.5.tgz#93ebbd25ee56e9f2b20b0664db2b15f0c609ac6b"

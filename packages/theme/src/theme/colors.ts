@@ -1,3 +1,1 @@
-export const colors: { [key:string]: string } = {
-
-}
+export const colors: { [key: string]: string } = {}

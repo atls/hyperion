@@ -1,2 +1,1 @@
-export const fonts: { [key: string]: string } = {
-}
+export const fonts: { [key: string]: string } = {}

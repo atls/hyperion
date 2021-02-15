@@ -1,3 +1,1 @@
-export const shadows: {[key: string]: string} = {
-
-}
+export const shadows: { [key: string]: string } = {}
