@@ -1,3 +1,1 @@
-export const radii: { [key: string]: number | string } = {
-
-}
+export const radii: { [key: string]: number | string } = {}

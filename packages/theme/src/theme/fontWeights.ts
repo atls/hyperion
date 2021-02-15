@@ -1,3 +1,1 @@
-export const fontWeights: { [key: string]: number | string } = {
-
-}
+export const fontWeights: { [key: string]: number | string } = {}

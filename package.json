@@ -1,5 +1,5 @@
 {
-  "license": "MIT",
+  "license": "BSD 3-Clause",
   "private": true,
   "scripts": {
     "lint": "mctl lint",
@@ -25,6 +25,5 @@
       "pre-commit": "mctl precommit",
       "commit-msg": "mctl commitmsg"
     }
-  },
-  "dependencies": {}
+  }
 }
