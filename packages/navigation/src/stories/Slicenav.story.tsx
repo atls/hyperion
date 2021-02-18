@@ -6,6 +6,7 @@ export const SliceNavExample = ({
     amount = 3,
     activeFragment = 1,
     width = '300px',
+    keepActive = true
                                 }) => {
 
     return (
@@ -14,6 +15,7 @@ export const SliceNavExample = ({
             activeFragment={activeFragment}
             width={width}
             activeBackgroundColor={'red'}
+            keepActive={keepActive}
         />
     )
 }

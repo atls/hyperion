@@ -23,18 +23,7 @@ exports[`should render Slicenav correctly 1`] = `
   width: 28.333333333333336px;
   height: 2px;
   background-color: green;
-}
-
-.emotion-1 {
-  -webkit-transition: 0.35s;
-  transition: 0.35s;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 28.333333333333336px;
-  height: 2px;
-  background-color: red;
+  border-radius: 8px;
 }
 
 <div
@@ -48,7 +37,7 @@ exports[`should render Slicenav correctly 1`] = `
     width={28.333333333333336}
   />
   <div
-    className="emotion-1"
+    className="emotion-0"
     height="2px"
     width={28.333333333333336}
   />

@@ -14,6 +14,8 @@ export const SliceNav: FC<ControlsProps> = ({
     activeFragment,
     backgroundColor = 'grey',
     activeBackgroundColor = 'green',
+    wereActiveBackgroundColor = 'green',
+    keepActive = false,
                                           }) => {
     let elements = []
 
@@ -31,7 +33,13 @@ export const SliceNav: FC<ControlsProps> = ({
             elements.map(element => <Slice
                 key={element}
                 width={sliceWidth}
-                backgroundColor={activeFragment-1===element ? activeBackgroundColor : backgroundColor}
+                backgroundColor={
+                    keepActive
+                    ?
+                    activeFragment-1>=element ? wereActiveBackgroundColor : backgroundColor
+                    :
+                    activeFragment-1===element ? activeBackgroundColor : backgroundColor
+                }
             />)
         }
     </Container>

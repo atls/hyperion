@@ -5,7 +5,7 @@ import { SliceNav } from '../src'
 
 it('should render Slicenav correctly', () => {
     const tree = renderer.create(
-        <SliceNav amount={3} backgroundColor={'green'} activeBackgroundColor={'red'} activeFragment={2} />
+        <SliceNav amount={3} backgroundColor={'green'} activeBackgroundColor={'red'} activeFragment={2} keepActive={true} />
     )
         .toJSON()
 

@@ -11,4 +11,6 @@ export interface ControlsProps {
     activeFragment?: number
     backgroundColor?: string
     activeBackgroundColor?: string
+    wereActiveBackgroundColor?: string
+    keepActive?: boolean
 }
