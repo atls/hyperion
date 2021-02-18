@@ -1,0 +1,31 @@
+{
+  "name": "@atlantis-lab/navigation",
+  "repository": "git@github.com:Atlantis-Lab/uikit.git",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -r -f dist",
+    "prepublishOnly": "yarn run build",
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "pubflow store",
+    "postpack": "pubflow restore"
+  },
+  "dependencies": {
+    "@emotion/styled": "^11.1.5",
+    "styled-system": "^5.1.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "react": "^16.9.0",
+    "react-test-renderer": "^17.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
