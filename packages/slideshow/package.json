@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/slideshow",
   "repository": "git@github.com:Atlantis-Lab/uikit.git",
-  "version": "0.7.27",
+  "version": "0.7.28",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -17,8 +17,8 @@
     "postpack": "pubflow restore"
   },
   "dependencies": {
-    "@atlantis-lab/layout": "0.3.26",
-    "@atlantis-lab/utils": "0.7.26",
+    "@atlantis-lab/layout": "0.3.27",
+    "@atlantis-lab/utils": "0.7.27",
     "@emotion/styled": "^10.0.27",
     "react": "^16.9.0",
     "react-swipeable": "5.5.1",
