@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.39 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.38 (2021-02-22)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.37 (2021-02-15)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.36 (2021-02-13)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
 ## 0.3.35 (2021-02-13)
 
 **Note:** Version bump only for package @atlantis-lab/modal

@@ -31,7 +31,7 @@ const Card = ({ name, text }) => {
   )
 }
 
-const helperArray = number => {
+const helperArray = (number) => {
   const array = []
   for (let i = 0; i < number; i += 1) array.push(i)
   return array
@@ -45,6 +45,7 @@ export const ExampleCarousel = ({
   controlTop = 100,
   isOverflowHidden = true,
   isSquareControls = false,
+  step,
 }: CarouselProps) => {
   const theme = useTheme()
 
@@ -57,6 +58,7 @@ export const ExampleCarousel = ({
       controlTop={controlTop}
       isOverflowHidden={isOverflowHidden}
       isSquareControls={isSquareControls}
+      step={step}
       theme={theme}
     >
       {helperArray(10).map(i => (

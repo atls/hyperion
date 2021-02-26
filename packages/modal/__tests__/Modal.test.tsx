@@ -4,7 +4,7 @@ import ReactDOM  from 'react-dom'
 import { Modal } from '../src/index'
 
 it('Modal should render correctly', () => {
-  ReactDOM.createPortal = node => node
+  ReactDOM.createPortal = (node) => node
 
   expect(
     ReactDOM.createPortal(

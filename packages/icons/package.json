@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/icons",
   "repository": "git@github.com:Atlantis-Lab/uikit.git",
-  "version": "0.5.26",
+  "version": "0.5.30",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -19,11 +19,11 @@
     "postpack": "pubflow restore"
   },
   "peerDependencies": {
-    "@monstrs/prettier-config": "^0.1.0 || ^0.2.0",
     "prettier": "^1.18.0 || ^2.0.0",
     "react": "^16.9.0"
   },
   "devDependencies": {
+    "@atlantis-lab/config": "^0.1.9",
     "@monstrs/publish-flow": "0.1.3",
     "@svgr/core": "5.4.0",
     "camelcase": "6.2.0",
@@ -35,5 +35,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "9cf09561b0c03acd463041d1495c7683c1fac8b0"
+  "gitHead": "9cf09561b0c03acd463041d1495c7683c1fac8b0",
+  "dependencies": {
+    "@atlantis-lab/prettier-config": "^0.1.8"
+  }
 }

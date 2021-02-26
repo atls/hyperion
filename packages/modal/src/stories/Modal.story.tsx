@@ -4,8 +4,8 @@ import { Modal }           from '../index'
 
 type ExampleProps = {
   visible: boolean
-  opacity?: 'large' | 'small'
-  bigText?: boolean
+  opacity: 'large' | 'small'
+  bigText: boolean
 }
 
 export const ExampleModal = ({
