@@ -31,7 +31,7 @@ const Card = ({ name, text }) => {
   )
 }
 
-const helperArray = number => {
+const helperArray = (number) => {
   const array = []
   for (let i = 0; i < number; i += 1) array.push(i)
   return array
@@ -61,7 +61,7 @@ export const ExampleCarousel = ({
       step={step}
       theme={theme}
     >
-      {helperArray(10).map(i => (
+      {helperArray(10).map((i) => (
         <Card key={i} text={'placeholder text '.repeat(15)} name={`Slide no${i}`} />
       ))}
     </Carousel>
