@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.30 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/input
+
+
+
+
+
+## 0.5.29 (2021-02-22)
+
+**Note:** Version bump only for package @atlantis-lab/input
+
+
+
+
+
+## 0.5.28 (2021-02-15)
+
+**Note:** Version bump only for package @atlantis-lab/input
+
+
+
+
+
+## 0.5.27 (2021-02-13)
+
+**Note:** Version bump only for package @atlantis-lab/input
+
+
+
+
+
 ## 0.5.26 (2021-02-13)
 
 **Note:** Version bump only for package @atlantis-lab/input

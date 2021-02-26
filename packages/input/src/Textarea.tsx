@@ -6,7 +6,7 @@ import styled          from '@emotion/styled'
 
 import { StyledInput } from './parts'
 
-const Input = props => {
+const Input = (props) => {
   const theme = useTheme()
 
   return (

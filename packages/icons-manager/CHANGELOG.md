@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.29 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.28 (2021-02-22)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.27 (2021-02-15)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.26 (2021-02-13)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
 ## 0.6.25 (2021-02-13)
 
 **Note:** Version bump only for package @atlantis-lab/icons-manager

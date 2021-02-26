@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/design",
   "repository": "git@github.com:Atlantis-Lab/uikit.git",
-  "version": "0.0.4",
+  "version": "0.0.8",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -17,6 +17,7 @@
     "postpack": "pubflow restore"
   },
   "devDependencies": {
+    "@atlantis-lab/config": "^0.1.9",
     "@types/styled-system": "5.1.4"
   },
   "dependencies": {

@@ -4,13 +4,13 @@ import { useTheme }   from '@emotion/react'
 import { PriceInput } from '../index'
 
 type ExampleProps = {
-  placeholder?: string
+  placeholder: string
   border: string
-  offset?: string
-  width?: string
-  height?: string
-  minHeight?: string
-  minWidth?: string
+  offset: string
+  width: string
+  height: string
+  minHeight: string
+  minWidth: string
 }
 
 export const ExamplePriceInput = ({
