@@ -6,7 +6,7 @@ export interface SlideshowProps {
   transition?: string
   height?: string | string[]
   controlsType?: 'dots' | 'slices'
-  children?: Array<ReactNode>
+  children?: any
 }
 export interface ControlsProps {
   slides?: Array<ReactNode>
