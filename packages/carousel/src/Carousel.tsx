@@ -67,7 +67,7 @@ export const Carousel = ({
   const setWidth = () => {
     setInnerWidth(contentWidth(containerNode.current))
     setChildWidth(
-      Array.prototype.map.call(screenNode.current && screenNode.current.children, item =>
+      Array.prototype.map.call(screenNode.current && screenNode.current.children, (item) =>
         widthWithMargin(item)
       )
     )
@@ -92,7 +92,7 @@ export const Carousel = ({
     return undefined
   }, [])
 
-  const swiping = data => {
+  const swiping = (data) => {
     if (innerWidth >= fullWidth) {
       return
     }
@@ -113,7 +113,7 @@ export const Carousel = ({
     setEnableTransition(false)
   }
 
-  const handleClick = direction => {
+  const handleClick = (direction) => {
     let activeSlide = 0
     let activeLeft = 0
     for (;;) {
@@ -173,7 +173,7 @@ export const Carousel = ({
       </SlideButton>
       <Screen ref={containerNode} isOverflowHidden={isOverflowHidden} maxWidth='100%'>
         <Swipeable
-          onSwiping={data => swiping(data)}
+          onSwiping={(data) => swiping(data)}
           onSwiped={() => {
             setDeltaX(0)
             if (left > 0) {

@@ -26,6 +26,7 @@
     "styled-tools": "1.7.2"
   },
   "devDependencies": {
+    "@atlantis-lab/config": "^0.1.9",
     "@emotion/react": "^11.1.4",
     "@types/jest": "^26.0.20",
     "@types/styled-system": "5.1.10",
