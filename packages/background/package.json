@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/background",
   "repository": "git@github.com:Atlantis-Lab/uikit.git",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -22,6 +22,7 @@
     "styled-system": "5.1.5"
   },
   "devDependencies": {
+    "@atlantis-lab/config": "^0.1.9",
     "@types/jest": "^26.0.20",
     "react": "^16.9.0",
     "react-test-renderer": "^17.0.1"

@@ -4,15 +4,15 @@ import { useTheme } from '@emotion/react'
 import { Input }    from '../index'
 
 type ExampleProps = {
-  placeholder?: string
+  placeholder: string
   border: string
-  offset?: string
-  typography?: string
-  width?: string
-  height?: string
-  invalid?: boolean
-  minHeight?: string
-  minWidth?: string
+  offset: string
+  typography: string
+  width: string
+  height: string
+  invalid: boolean
+  minHeight: string
+  minWidth: string
 }
 
 export const ExampleInput = ({

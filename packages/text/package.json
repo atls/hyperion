@@ -1,0 +1,36 @@
+{
+  "name": "@atlantis-lab/text",
+  "version": "0.0.2",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -r -f dist",
+    "prepublishOnly": "yarn run build",
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "pubflow store",
+    "postpack": "pubflow restore"
+  },
+  "devDependencies": {
+    "@atlantis-lab/config": "^0.1.9",
+    "@atlantis-lab/design": "0.0.8",
+    "@atlantis-lab/theme": "0.0.3",
+    "@storybook/addon-knobs": "^6.1.18",
+    "@storybook/react": "^6.1.18",
+    "@types/jest": "^26.0.20",
+    "react-test-renderer": "^17.0.1"
+  },
+  "dependencies": {
+    "@emotion/styled": "^10.0.0",
+    "@types/styled-system": "5.1.5",
+    "react": "^16.9.0",
+    "styled-system": "5.1.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

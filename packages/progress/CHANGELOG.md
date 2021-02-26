@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.29 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/progress
+
+
+
+
+
+## 0.2.28 (2021-02-22)
+
+**Note:** Version bump only for package @atlantis-lab/progress
+
+
+
+
+
 ## 0.2.27 (2021-02-15)
 
 **Note:** Version bump only for package @atlantis-lab/progress
