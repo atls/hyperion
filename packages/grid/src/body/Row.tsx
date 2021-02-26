@@ -30,7 +30,7 @@ const withHover = withState([useHover])
 export const Row: FC<any> = withHover(
   ({ columns = [], data = {}, index, hover, onMouseEnter, onMouseLeave }: any) => (
     <Container hover={hover} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-      {Children.map(columns, column => (
+      {Children.map(columns, (column) => (
         <Cell
           key={`${data.id}-${column.name}-${index}`}
           column={column}

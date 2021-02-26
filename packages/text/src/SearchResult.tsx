@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 
 import styled from '@emotion/styled'
 
@@ -17,7 +17,7 @@ export const SearchResult = ({ children, match }) => {
     return children
   }
 
-  const length = match.length
+  const { length } = match
 
   return [
     <span

@@ -4,19 +4,7 @@ import { useTheme }                 from '@emotion/react'
 import { Box, Column, Layout, Row } from '@atlantis-lab/layout'
 
 import { Carousel }                 from '../index'
-
-interface CarouselProps {
-  transition?: boolean
-  disableButton?: boolean
-  step?: number
-  isSquareControls?: boolean
-  isOverflowHidden?: boolean
-  controlWidth?: string | number | string[] | number[]
-  controlHeight?: string | number | string[] | number[]
-  controlRight?: string | number | string[] | number[]
-  controlLeft?: string | number | string[] | number[]
-  controlTop?: string | number | string[] | number[]
-}
+import { CarouselProps }            from '../types'
 
 const Card = ({ name, text }) => {
   return (
@@ -43,7 +31,7 @@ const Card = ({ name, text }) => {
   )
 }
 
-const helperArray = number => {
+const helperArray = (number) => {
   const array = []
   for (let i = 0; i < number; i += 1) array.push(i)
   return array
@@ -57,6 +45,7 @@ export const ExampleCarousel = ({
   controlTop = 100,
   isOverflowHidden = true,
   isSquareControls = false,
+  step,
 }: CarouselProps) => {
   const theme = useTheme()
 
@@ -69,9 +58,10 @@ export const ExampleCarousel = ({
       controlTop={controlTop}
       isOverflowHidden={isOverflowHidden}
       isSquareControls={isSquareControls}
+      step={step}
       theme={theme}
     >
-      {helperArray(10).map(i => (
+      {helperArray(10).map((i) => (
         <Card text={'placeholder text '.repeat(15)} name={`Slide no${i}`} />
       ))}
     </Carousel>
