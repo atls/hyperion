@@ -9,15 +9,6 @@ import { Dots }                                   from './Dots'
 import { Slices }                                 from './Slices'
 import { SlideshowProps }                         from './types'
 
-type SlideshowComponentProps = {
-  children: any
-  width?: string
-  height?: string
-  transition?: string
-  time?: number
-  controlsType?: 'slices' | 'dots'
-}
-
 const Container = styled.div<any>(
   {
     display: 'flex',
@@ -47,7 +38,7 @@ export const Slideshow: FC<SlideshowProps> = ({
   transition,
   time = 10000,
   controlsType = 'slices',
-}: SlideshowComponentProps) => {
+}) => {
   const [slide, setSlide] = useState(0)
   const [activeWidth, setActiveWidth] = useState(0)
   const [stop, setStop] = useState(false)
@@ -61,7 +52,7 @@ export const Slideshow: FC<SlideshowProps> = ({
     setStop(true)
   }
 
-  const swiped = data => {
+  const swiped = (data) => {
     if (data.dir !== 'Up' && data.dir !== 'Down') {
       if (data.dir === 'Left') {
         if (slide < children.length - 1) {
@@ -105,7 +96,7 @@ export const Slideshow: FC<SlideshowProps> = ({
   }, [activeWidth, stop])
 
   useEffect(() => {
-    const childrenHeights = childrenNodes.map(node => node.current.clientHeight)
+    const childrenHeights = childrenNodes.map((node) => node.current.clientHeight)
 
     const maxHeight = Math.max(...childrenHeights)
 

@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/layout",
   "repository": "git@github.com:Atlantis-Lab/uikit.git",
-  "version": "0.3.26",
+  "version": "0.3.28",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -21,6 +21,7 @@
     "react": "16.13.1"
   },
   "devDependencies": {
+    "@atlantis-lab/config": "^0.1.9",
     "@emotion/styled": "10.0.27",
     "@types/jest": "^26.0.20",
     "react": "16.13.1",

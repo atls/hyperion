@@ -2,7 +2,7 @@ import React  from 'react'
 
 import styled from '@emotion/styled'
 
-const getSize = basis => ({
+const getSize = (basis) => ({
   flexBasis: basis,
   flexShrink: basis.includes('px') || basis.includes('%') ? 0 : 1,
 })

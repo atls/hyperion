@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/button",
   "repository": "git@github.com:Atlantis-Lab/uikit.git",
-  "version": "1.8.27",
+  "version": "1.8.29",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -24,6 +24,7 @@
     "styled-tools": "^1.7.0"
   },
   "devDependencies": {
+    "@atlantis-lab/config": "^0.1.9",
     "@emotion/react": "^11.1.4",
     "@monstrs/publish-flow": "0.1.3",
     "@types/jest": "^26.0.20",
