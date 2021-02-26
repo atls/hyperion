@@ -59,6 +59,9 @@ export const Carousel = ({
   const [innerWidth, setInnerWidth] = useState(null)
   const [fullWidth, setFullWidth] = useState(null)
   const [childWidth, setChildWidth] = useState(null)
+  const [inertia, setInertia] = useState(false)
+  const [isSwiping, setIsSwiping] = useState(false)
+  const [swipingStart, setSwipingStart] = useState(0)
   const [left, setLeft] = useState(0)
   const [deltaX, setDeltaX] = useState(0)
   const containerNode = useRef()
@@ -92,7 +95,19 @@ export const Carousel = ({
     return undefined
   }, [])
 
+  useEffect(() => {
+    if (!isSwiping) {
+      if (Math.floor(performance.now() - swipingStart) <= 100) {
+        setInertia(true)
+      }
+      return
+    }
+    setSwipingStart(performance.now())
+  }, [isSwiping])
+
   const swiping = (data) => {
+    setIsSwiping(true)
+
     if (innerWidth >= fullWidth) {
       return
     }
@@ -175,6 +190,22 @@ export const Carousel = ({
         <Swipeable
           onSwiping={(data) => swiping(data)}
           onSwiped={() => {
+            const inertiaStep = 300
+
+            setIsSwiping(false)
+
+            if (inertia) {
+              setEnableTransition(true)
+              if (deltaX < 0) {
+                if (left + inertiaStep > 0) setLeft(0)
+                else setLeft(left + inertiaStep)
+              }
+              if (deltaX > 0) {
+                if (left - inertiaStep <= innerWidth - fullWidth) setLeft(innerWidth - fullWidth)
+                else setLeft(left - inertiaStep)
+              }
+            }
+
             setDeltaX(0)
             if (left > 0) {
               setEnableTransition(true)
