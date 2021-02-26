@@ -18,12 +18,12 @@
   },
   "peerDependencies": {
     "@atlantis-lab/layout": "0.1.1",
-    "@emotion/styled": "10.0.27",
+    "@emotion/styled": "11.1.5",
     "react": "16.13.1"
   },
   "devDependencies": {
     "@atlantis-lab/config": "^0.1.9",
-    "@emotion/styled": "10.0.27",
+    "@emotion/styled": "11.1.5",
     "@types/jest": "^26.0.20",
     "react": "16.13.1",
     "react-test-renderer": "^17.0.1"

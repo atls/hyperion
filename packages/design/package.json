@@ -21,7 +21,7 @@
     "@types/styled-system": "5.1.4"
   },
   "dependencies": {
-    "@emotion/styled": "10.0.23",
+    "@emotion/styled": "11.1.5",
     "react": "^16.9.0",
     "styled-system": "5.1.4"
   },
