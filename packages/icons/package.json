@@ -30,7 +30,7 @@
     "fs-extra-promise": "1.0.1",
     "glob-promise": "3.4.0",
     "react": "16.13.1",
-    "ts-node": "9.0.0"
+    "ts-node": "9.1.1"
   },
   "publishConfig": {
     "access": "public"
