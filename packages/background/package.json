@@ -24,7 +24,7 @@
   "devDependencies": {
     "@atlantis-lab/config": "^0.1.9",
     "@types/jest": "^26.0.20",
-    "react": "^16.9.0",
+    "react": "^17.0.0",
     "react-test-renderer": "^17.0.1"
   },
   "publishConfig": {

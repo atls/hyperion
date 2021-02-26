@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@emotion/styled": "11.1.5",
-    "react": "^16.9.0",
+    "react": "^17.0.0",
     "styled-system": "5.1.4"
   },
   "publishConfig": {
