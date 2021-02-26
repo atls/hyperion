@@ -4,5 +4,5 @@
     "outDir": "./dist"
   },
   "include": ["src"],
-  "exclude": ["src/stories"]
+  "exclude": ["src/stories","__tests__"]
 }

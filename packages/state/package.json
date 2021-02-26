@@ -23,5 +23,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@atlantis-lab/config": "^0.1.9"
   }
 }
