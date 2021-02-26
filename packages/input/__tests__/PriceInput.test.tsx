@@ -3,7 +3,7 @@ import renderer       from 'react-test-renderer'
 
 import { PriceInput } from '../src/index'
 
-jest.mock('react-text-mask', () => (props) => <input type='text' {...{ ...props }} />)
+jest.mock('react-text-mask', () => props => <input type='text' {...{ ...props }} />)
 
 it('PriceInput should render correctly', () => {
   const defaultTheme = {

@@ -31,7 +31,7 @@ const Container = styled.div<ContainerProps>(
   })
 )
 
-const getContent = (column) => {
+const getContent = column => {
   if (typeof column.props.header === 'function') {
     return column.props.header()
   }
@@ -42,7 +42,7 @@ const getContent = (column) => {
   return column.props.title
 }
 
-const getSize = (basis) => ({
+const getSize = basis => ({
   flexBasis: basis,
   flexShrink: basis.includes('px') || basis.includes('%') ? 0 : 1,
 })

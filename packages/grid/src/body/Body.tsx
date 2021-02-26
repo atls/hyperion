@@ -16,7 +16,7 @@ export const Body = ({ columns = [], data = [], rowHeight, rowWidth, loading, lo
   const layoutProvider = useMemo(
     () =>
       new LayoutProvider(
-        (index) => index,
+        index => index,
         (type, dim) => {
           /* eslint-disable */
           dim.width = rowWidth
