@@ -62,7 +62,7 @@ export const ExampleCarousel = ({
       theme={theme}
     >
       {helperArray(10).map((i) => (
-        <Card text={'placeholder text '.repeat(15)} name={`Slide no${i}`} />
+        <Card key={i} text={'placeholder text '.repeat(15)} name={`Slide no${i}`} />
       ))}
     </Carousel>
   )
