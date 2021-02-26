@@ -19,7 +19,7 @@
   "dependencies": {
     "@atlantis-lab/icons": "0.5.34",
     "@atlantis-lab/utils": "0.7.32",
-    "@emotion/styled": "^10.0.27",
+    "@emotion/styled": "^11.0.0",
     "react": "^16.9.0",
     "react-swipeable": "5.5.1",
     "styled-system": "^5.1.5",
