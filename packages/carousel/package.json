@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/carousel",
   "repository": "git@github.com:Atlantis-Lab/uikit.git",
-  "version": "0.7.30",
+  "version": "0.7.31",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -17,8 +17,8 @@
     "postpack": "pubflow restore"
   },
   "dependencies": {
-    "@atlantis-lab/icons": "0.5.31",
-    "@atlantis-lab/utils": "0.7.29",
+    "@atlantis-lab/icons": "0.5.32",
+    "@atlantis-lab/utils": "0.7.30",
     "@emotion/styled": "^10.0.27",
     "react": "^16.9.0",
     "react-swipeable": "5.5.1",
@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@atlantis-lab/config": "^0.1.9",
-    "@atlantis-lab/layout": "0.3.29",
+    "@atlantis-lab/layout": "0.3.30",
     "@emotion/react": "^11.1.4",
     "@types/jest": "^26.0.20",
     "@types/styled-system": "5.1.10",
