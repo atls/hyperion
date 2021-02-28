@@ -19,7 +19,7 @@
   "dependencies": {
     "@emotion/styled": "^11.0.0",
     "emotion": "10.0.27",
-    "emotion-theming": "10.0.27",
+    "emotion-theming": "11.0.0",
     "react": "17.0.1",
     "styled-system": "^5.1.5"
   },
