@@ -26,7 +26,7 @@
     "@atlantis-lab/config": "^0.1.9",
     "@emotion/styled": "11.1.5",
     "@types/jest": "^26.0.20",
-    "react": "16.13.1",
+    "react": "17.0.1",
     "react-dom": "17.0.1",
     "styled-tools": "1.7.2"
   },
