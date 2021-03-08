@@ -1,4 +1,4 @@
-import { Colors } from '../../../src/theme'
+import { Colors } from '../../../src'
 
 export const colors: Colors = {
   white: '#fff',

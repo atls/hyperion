@@ -1,4 +1,4 @@
-import { Radii } from '../../../src/theme'
+import { Radii } from '../../../src'
 
 export const radii: Radii = {
   small: 1,

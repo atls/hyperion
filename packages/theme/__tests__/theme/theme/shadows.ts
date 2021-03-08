@@ -1,4 +1,4 @@
-import { Shadows } from '../../../src/theme'
+import { Shadows } from '../../../src'
 
 export const shadows: Shadows = {
   primary: 'anyshadow',
