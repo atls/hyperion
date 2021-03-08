@@ -1,1 +1,1 @@
-export const fontFaces: { family: string; weight: number; type: string }[] = []
+export type FontFaces = { family: string; weight: number; type: string }[]

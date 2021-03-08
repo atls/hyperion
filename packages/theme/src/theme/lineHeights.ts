@@ -1,1 +1,1 @@
-export const lineHeights: { [key: string]: number } = {}
+export type LineHeights = { [key: string]: number }
