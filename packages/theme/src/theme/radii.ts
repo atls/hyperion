@@ -1,1 +1,1 @@
-export const radii: { [key: string]: number | string } = {}
+export type Radii = { [key: string]: number | string }

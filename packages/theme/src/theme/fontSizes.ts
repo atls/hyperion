@@ -1,1 +1,1 @@
-export const fontSizes: { [key: string]: number | string } = {}
+export type FontSizes = { [key: string]: number | string }
