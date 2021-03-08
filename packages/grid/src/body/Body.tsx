@@ -6,7 +6,7 @@ import { Row }                                            from './Row'
 
 export const Body = ({ columns = [], data = [], rowHeight, rowWidth, loading, loadMore }: any) => {
   const [dataProvider, setDataProvider] = useState(() =>
-    new DataProvider((r1, r2) => !Object.is(r1, r2)).cloneWithRows(data)
+    new DataProvider((r1, r2) => !Object.is(r1, r2)).cloneWithRows(data),
   )
 
   useEffect(() => {
@@ -22,9 +22,9 @@ export const Body = ({ columns = [], data = [], rowHeight, rowWidth, loading, lo
           dim.width = rowWidth
           dim.height = rowHeight
           /* eslint-enable */
-        }
+        },
       ),
-    [rowWidth, rowHeight]
+    [rowWidth, rowHeight],
   )
 
   const renderFooter = useMemo(() => () => <Actions loading={loading} loadMore={loadMore} />, [

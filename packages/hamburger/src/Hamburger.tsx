@@ -38,7 +38,7 @@ const Burger = styled.div<BurgerProps>(
     white: {
       color: '#ffffff',
     },
-  }))
+  })),
 )
 
 const Line = styled.div<LineProps>(
@@ -62,7 +62,7 @@ const Line = styled.div<LineProps>(
       '&:last-child': {
         transform: 'rotate(-45deg) translateZ(0)',
       },
-    }
+    },
   ),
   switchProp('color', () => ({
     alto: {
@@ -71,7 +71,7 @@ const Line = styled.div<LineProps>(
     white: {
       backgroundColor: '#ffffff',
     },
-  }))
+  })),
 )
 
 export const Hamburger = ({

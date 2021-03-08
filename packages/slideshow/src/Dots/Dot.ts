@@ -16,5 +16,5 @@ export const Dot = styled.div<any>(
   })),
   ifProp('lastSlide', {
     marginRight: '0px',
-  })
+  }),
 )
