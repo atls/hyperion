@@ -1,4 +1,4 @@
-import { Fonts } from '../../../src/theme'
+import { Fonts } from '../../../src'
 
 export const fonts: Fonts = {
   primary: 'anyfont',
