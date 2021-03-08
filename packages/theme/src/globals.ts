@@ -4,6 +4,8 @@ import { FontFaces }       from './theme'
 import { injectFontFaces } from './utils'
 
 export const injectGlobalStyles = (
+  fontsPath: string,
+  fontFaces: FontFaces,
   html: {} = {},
   body: {} = {
     WebkitFontSmoothing: 'antialiased',
@@ -11,10 +13,9 @@ export const injectGlobalStyles = (
     height: '100%',
     margin: 0,
   },
-  fontFaces: FontFaces,
   ...rest
 ) => {
-  injectFontFaces(fontFaces)
+  injectFontFaces(fontFaces, fontsPath)
 
   injectGlobal({
     html,
