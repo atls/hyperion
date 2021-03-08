@@ -12,7 +12,7 @@ describe('test suit for theme', () => {
     const ThemeConsumer = () => {
       const theme = useTheme()
 
-      expect(theme).toBe(actualTheme)
+      expect(theme).toMatchObject(actualTheme)
 
       return <p>Inside provider</p>
     }
