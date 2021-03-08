@@ -10,7 +10,7 @@ it('Modal should render correctly', () => {
     ReactDOM.createPortal(
       <Modal visible opacity='large' onClick={Function} onClose={Function}>
         Something
-      </Modal>
-    )
+      </Modal>,
+    ),
   ).toMatchSnapshot()
 })

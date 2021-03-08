@@ -10,5 +10,5 @@ export const Label = styled.label(
   },
   color,
   position,
-  typography
+  typography,
 )

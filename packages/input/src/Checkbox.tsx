@@ -58,7 +58,7 @@ const CheckMark = styled.div(
       borderWidth: (markWidth && `0 ${markBorderWidth} ${markBorderWidth} 0`) || '0 2px 2px 0',
       transform: 'rotate(45deg)',
     },
-  })
+  }),
 )
 
 export const Checkbox = ({ children, ...props }) => (

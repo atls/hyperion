@@ -36,7 +36,7 @@ const StyledButton = styled('button')<StyledButtonProps>(
   flexbox,
   layout,
   padding,
-  color
+  color,
 )
 
 const ContentPart = styled.span({

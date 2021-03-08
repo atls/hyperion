@@ -10,7 +10,7 @@ it('Slideshow should render correctly', () => {
         <h1>Slide 1</h1>
         <h1>Slide 2</h1>
         <h1>Slide 3</h1>
-      </Slideshow>
+      </Slideshow>,
     )
     .toJSON()
 
