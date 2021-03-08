@@ -1,4 +1,4 @@
-import { FontSizes } from '../../../src/theme'
+import { FontSizes } from '../../../src'
 
 export const fontSizes: FontSizes = {
   small: 1,

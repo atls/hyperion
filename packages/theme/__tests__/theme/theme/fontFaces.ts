@@ -1,4 +1,4 @@
-import { FontFaces } from '../../../src/theme'
+import { FontFaces } from '../../../src'
 
 export const fontFaces: FontFaces = [
   {

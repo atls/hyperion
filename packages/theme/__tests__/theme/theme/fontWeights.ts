@@ -1,4 +1,4 @@
-import { FontWeights } from '../../../src/theme'
+import { FontWeights } from '../../../src'
 
 export const fontWeights: FontWeights = {
   small: 1,
