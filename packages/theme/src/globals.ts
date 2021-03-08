@@ -4,21 +4,22 @@ import { FontFaces }       from './theme'
 import { injectFontFaces } from './utils'
 
 export const injectGlobalStyles = (
-  html: {} = {},
-  body: {} = {
-    WebkitFontSmoothing: 'antialiased',
-    WebkitOverflowScrolling: 'touch',
-    height: '100%',
-    margin: 0,
-  },
-  fontFaces: FontFaces,
-  ...rest
+    fontsPath: string,
+    fontFaces: FontFaces,
+    html: {} = {},
+    body: {} = {
+        WebkitFontSmoothing: 'antialiased',
+        WebkitOverflowScrolling: 'touch',
+        height: '100%',
+        margin: 0,
+    },
+    ...rest
 ) => {
-  injectFontFaces(fontFaces)
+    injectFontFaces(fontFaces, fontsPath)
 
-  injectGlobal({
-    html,
-    body,
-    ...rest,
-  })
+    injectGlobal({
+        html,
+        body,
+        ...rest,
+    })
 }
