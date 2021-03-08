@@ -1,1 +1,1 @@
-export const fonts: { [key: string]: string } = {}
+export type Fonts = { [key: string]: string }

@@ -68,7 +68,7 @@ const StyledInput = styled('input', { shouldForwardProp })(
   width,
   minHeight,
   minWidth,
-  space
+  space,
 )
 
 StyledInput.defaultProps = {

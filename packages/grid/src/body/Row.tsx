@@ -22,7 +22,7 @@ const Container = styled.div<ContainerProps>(
   }),
   ifProp('hover', {
     background: 'rgba(72, 89, 116, 0.3)',
-  })
+  }),
 )
 
 const withHover = withState([useHover])
@@ -40,5 +40,5 @@ export const Row: FC<any> = withHover(
         />
       ))}
     </Container>
-  )
+  ),
 )

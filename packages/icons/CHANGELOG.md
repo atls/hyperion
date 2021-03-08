@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.39 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/icons
+
+
+
+
+
+## 0.5.38 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/icons
+
+
+
+
+
+## 0.5.37 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/icons
+
+
+
+
+
 ## 0.5.36 (2021-02-28)
 
 **Note:** Version bump only for package @atlantis-lab/icons
