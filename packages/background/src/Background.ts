@@ -19,7 +19,7 @@ export const Background = styled(Box)<any>(
   backgroundPosition,
   system({
     cursor: true,
-  })
+  }),
 )
 
 Background.defaultProps = {

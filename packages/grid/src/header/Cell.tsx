@@ -28,7 +28,7 @@ const Container = styled.div<ContainerProps>(
   }),
   ifProp('hover', {
     background: 'rgba(72, 89, 116, 0.2)',
-  })
+  }),
 )
 
 const getContent = (column) => {
@@ -73,5 +73,5 @@ export const Cell: FC<any> = withHover(
         <Order direction={order && order.by === column.props.orderBy ? order.direction : null} />
       )}
     </Container>
-  )
+  ),
 )

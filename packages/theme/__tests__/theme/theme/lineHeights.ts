@@ -1,5 +1,5 @@
 import { LineHeights } from '../../../src/theme'
 
 export const lineHeights: LineHeights = {
-    primary: 1,
+  primary: 1,
 }
