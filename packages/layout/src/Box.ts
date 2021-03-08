@@ -14,7 +14,7 @@ export const Box = styled.div(
   flexbox,
   boxShadow,
   position,
-  border
+  border,
 )
 
 Box.defaultProps = {

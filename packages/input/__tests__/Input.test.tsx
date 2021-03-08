@@ -39,7 +39,7 @@ it('Input should render correctly valid&invalid states', () => {
       placeholder='placeholder'
       border='1px solid black'
       invalid={false}
-    />
+    />,
   )
 
   const treeInvalid = renderer
@@ -49,7 +49,7 @@ it('Input should render correctly valid&invalid states', () => {
         placeholder='placeholder'
         border='1px solid black'
         invalid={false}
-      />
+      />,
     )
     .toJSON()
 

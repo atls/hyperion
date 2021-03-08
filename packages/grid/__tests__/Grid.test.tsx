@@ -12,7 +12,7 @@ it('Grid should render correctly', () => {
         {cols.map((i, idx) => (
           <Column header={`${i} ${idx}`} orderBy='desc' basis='100px' />
         ))}
-      </Grid>
+      </Grid>,
     )
     .toJSON()
 

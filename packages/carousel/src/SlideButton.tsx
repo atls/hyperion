@@ -24,7 +24,7 @@ export const SlideButton = styled.div<any>(
     },
   }),
   position,
-  layout
+  layout,
 )
 
 SlideButton.defaultProps = {

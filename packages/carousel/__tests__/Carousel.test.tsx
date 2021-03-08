@@ -34,7 +34,7 @@ it('Carousel should render correctly', () => {
         theme={defaultTheme}
       >
         <h1>{'bigtext'.repeat(100)}</h1>
-      </Carousel>
+      </Carousel>,
     )
     .toJSON()
 

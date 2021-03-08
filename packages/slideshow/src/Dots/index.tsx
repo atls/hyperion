@@ -1,7 +1,7 @@
 import React, { FC, Fragment } from 'react'
-import { useTheme }            from '@emotion/react'
 
 import { unique }              from '@atlantis-lab/utils'
+import { useTheme }            from '@emotion/react'
 
 import { ControlsProps }       from '../types'
 import { Container }           from './Container'

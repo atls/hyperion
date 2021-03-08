@@ -8,7 +8,7 @@ it('should render Text component correctly', () => {
     .create(
       <Text color='red' fontFamily='Courier' fontSize='2vh'>
         This is test
-      </Text>
+      </Text>,
     )
     .toJSON()
 
