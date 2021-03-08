@@ -13,7 +13,7 @@
     "storybook": "yarn workspace @atlantis-lab/storybook storybook"
   },
   "devDependencies": {
-    "@atlantis-lab/actl": "^0.4.17",
+    "@atlantis-lab/actl": "^0.4.23",
     "husky": "4.3.8",
     "lerna": "3.22.1",
     "typescript": "4.0.3"

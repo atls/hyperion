@@ -1,1 +1,1 @@
-export const borders: { [key: string]: string } = {}
+export type Borders = { [key: string]: string }

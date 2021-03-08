@@ -39,7 +39,7 @@ const Screen = styled.div(
     display: 'flex',
     overflow: isOverflowHidden ? 'hidden' : 'initial',
   }),
-  layout
+  layout,
 )
 
 export const Carousel = ({
@@ -71,8 +71,8 @@ export const Carousel = ({
     setInnerWidth(contentWidth(containerNode.current))
     setChildWidth(
       Array.prototype.map.call(screenNode.current && screenNode.current.children, (item) =>
-        widthWithMargin(item)
-      )
+        widthWithMargin(item),
+      ),
     )
   }
 

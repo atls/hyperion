@@ -1,8 +1,8 @@
 import React           from 'react'
-import { useTheme }    from '@emotion/react'
 import { boxShadow }   from 'styled-system'
 
 import styled          from '@emotion/styled'
+import { useTheme }    from '@emotion/react'
 
 import { StyledInput } from './parts'
 
@@ -24,7 +24,7 @@ const Textarea = styled(Input)(
     resize: 'none',
     height: 'auto',
   }),
-  boxShadow
+  boxShadow,
 )
 
 Textarea.defaultProps = {

@@ -49,7 +49,7 @@ const Prefix = styled.span<PrefixProps>(
     left: 0,
   },
   base,
-  size
+  size,
 )
 
 const Suffix = styled.span<SuffixProps>(
@@ -57,7 +57,7 @@ const Suffix = styled.span<SuffixProps>(
     right: 0,
   },
   base,
-  size
+  size,
 )
 
 export { Prefix, Suffix, offset }

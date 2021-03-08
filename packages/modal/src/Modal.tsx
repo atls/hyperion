@@ -44,7 +44,7 @@ const StyledContainer = styled(motion.nav)<ContainerProps>(
     alignItems: 'center',
   }),
   opacities,
-  flexbox
+  flexbox,
 )
 
 export const Modal = ({ children, visible, onClose, opacity = 'large', ...rest }) => {
@@ -72,7 +72,7 @@ export const Modal = ({ children, visible, onClose, opacity = 'large', ...rest }
             {children}
           </StyledContainer>
         </ScrollLock>,
-        document.body
+        document.body,
       )
     }
   }

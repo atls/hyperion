@@ -1,9 +1,11 @@
 import { injectGlobal }    from '@emotion/css'
 
-import { fontFaces }       from './theme'
+import { FontFaces }       from './theme'
 import { injectFontFaces } from './utils'
 
 export const injectGlobalStyles = (
+  fontsPath: string,
+  fontFaces: FontFaces,
   html: {} = {},
   body: {} = {
     WebkitFontSmoothing: 'antialiased',
@@ -13,7 +15,7 @@ export const injectGlobalStyles = (
   },
   ...rest
 ) => {
-  injectFontFaces(fontFaces)
+  injectFontFaces(fontFaces, fontsPath)
 
   injectGlobal({
     html,

@@ -27,7 +27,7 @@ it('IconsManager should render correctly', () => {
     .create(
       <IconsManager theme={defaultTheme} color='red' hoverColor='yellow' clickedColor='black'>
         <Icon />
-      </IconsManager>
+      </IconsManager>,
     )
     .toJSON()
 
