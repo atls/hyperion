@@ -4,6 +4,12 @@ on:
   pull_request:
     types: [closed]
     branches: [master]
+    paths:
+      - '**'
+      - '!.github/**'
+      - '!renovate.json'
+      - '!lerna.json'
+      - '!**tsconfig.json'
 
 jobs:
   publishing:
