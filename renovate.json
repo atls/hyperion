@@ -1,5 +1,5 @@
 {
-  "automerge": false,
+  "automerge": true,
   "timezone": "Europe/Moscow",
   "schedule": ["before 9am on the first day of the month"],
   "semanticCommitScope": "deps",
