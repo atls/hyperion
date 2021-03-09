@@ -18,7 +18,9 @@
   },
   "devDependencies": {
     "@atlantis-lab/config": "^0.1.9",
-    "@types/styled-system": "5.1.4"
+    "@types/jest": "^26.0.20",
+    "@types/styled-system": "5.1.4",
+    "react-test-renderer": "^17.0.1"
   },
   "dependencies": {
     "@emotion/styled": "11.1.5",
