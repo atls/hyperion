@@ -28,7 +28,7 @@
     "@atlantis-lab/design": "^0.0.2",
     "@emotion/react": "^11.1.5",
     "@storybook/react": "6.1.21",
-    "@types/styled-system": "5.1.5",
+    "@types/styled-system": "5.1.10",
     "react-test-renderer": "^17.0.1"
   },
   "publishConfig": {
