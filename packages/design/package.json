@@ -19,13 +19,13 @@
   "devDependencies": {
     "@atlantis-lab/config": "^0.1.9",
     "@types/jest": "^26.0.20",
-    "@types/styled-system": "5.1.4",
+    "@types/styled-system": "5.1.10",
     "react-test-renderer": "^17.0.1"
   },
   "dependencies": {
     "@emotion/styled": "11.1.5",
     "react": "^17.0.0",
-    "styled-system": "5.1.4"
+    "styled-system": "5.1.5"
   },
   "publishConfig": {
     "access": "public"
