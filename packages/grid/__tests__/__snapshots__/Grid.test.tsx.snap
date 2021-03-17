@@ -121,6 +121,7 @@ exports[`Grid should render correctly 1`] = `
             strokeWidth={1}
             viewBox="0 0 24 24"
             width="1em"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M12 19V6M5 12l7-7 7 7"
@@ -135,6 +136,7 @@ exports[`Grid should render correctly 1`] = `
             strokeWidth={1}
             viewBox="0 0 24 24"
             width="1em"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M12 5v13M5 12l7 7 7-7"
@@ -167,6 +169,7 @@ exports[`Grid should render correctly 1`] = `
             strokeWidth={1}
             viewBox="0 0 24 24"
             width="1em"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M12 19V6M5 12l7-7 7 7"
@@ -181,6 +184,7 @@ exports[`Grid should render correctly 1`] = `
             strokeWidth={1}
             viewBox="0 0 24 24"
             width="1em"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M12 5v13M5 12l7 7 7-7"
