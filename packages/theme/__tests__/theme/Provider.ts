@@ -1,7 +1,8 @@
 import { createElement }                         from 'react'
 
+import { ThemeProvider as EmotionThemeProvider } from '@atlantis-lab/theme'
+
 import * as theme                                from './theme'
-import { ThemeProvider as EmotionThemeProvider } from '../../src'
 
 export const ThemeProvider = (props) =>
   createElement(EmotionThemeProvider, {
