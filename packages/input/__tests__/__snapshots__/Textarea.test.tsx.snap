@@ -33,6 +33,10 @@ exports[`Textarea should render correctly 1`] = `
   color: #C0C0C0;
 }
 
+
+
+
+
 <textarea
   className="emotion-0"
   onChange={[Function]}
