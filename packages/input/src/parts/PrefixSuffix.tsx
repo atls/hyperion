@@ -1,7 +1,7 @@
 import { styleFn }                  from 'styled-system'
 import { switchProp }               from 'styled-tools'
 
-import styled                       from '@emotion/styled'
+import styled, { StyledComponent }  from '@emotion/styled'
 
 import { PrefixProps, SuffixProps } from './types'
 
@@ -44,7 +44,7 @@ const offset: styleFn = switchProp('size', ({ prefix, suffix }) => ({
   },
 }))
 
-const Prefix = styled.span<PrefixProps>(
+const Prefix: StyledComponent<any> = styled.span<PrefixProps>(
   {
     left: 0,
   },
@@ -52,7 +52,7 @@ const Prefix = styled.span<PrefixProps>(
   size,
 )
 
-const Suffix = styled.span<SuffixProps>(
+const Suffix: StyledComponent<any> = styled.span<SuffixProps>(
   {
     right: 0,
   },

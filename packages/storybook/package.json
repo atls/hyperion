@@ -8,7 +8,6 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@atlantis-lab/config": "^0.1.9",
     "@babel/core": "^7.12.10",
     "@emotion/react": "^11.1.4",
     "@monstrs/publish-flow": "0.1.3",
