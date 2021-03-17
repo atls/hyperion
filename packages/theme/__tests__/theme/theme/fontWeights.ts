@@ -1,4 +1,4 @@
-import { FontWeights } from '../../../src'
+import { FontWeights } from '@atlantis-lab/theme'
 
 export const fontWeights: FontWeights = {
   small: 1,

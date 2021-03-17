@@ -1,4 +1,4 @@
-import { FontSizes } from '../../../src'
+import { FontSizes } from '@atlantis-lab/theme'
 
 export const fontSizes: FontSizes = {
   small: 1,
