@@ -24,9 +24,8 @@
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
-    "@atlantis-lab/theme": "0.0.22",
-    "@atlantis-lab/config": "^0.1.9",
     "@atlantis-lab/design": "^0.0.2",
+    "@atlantis-lab/theme": "0.0.22",
     "@emotion/react": "^11.1.5",
     "@storybook/react": "6.1.21",
     "@types/styled-system": "5.1.10",
