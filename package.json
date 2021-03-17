@@ -14,7 +14,6 @@
   },
   "devDependencies": {
     "@atlantis-lab/actl": "^0.4.23",
-    "@atlantis-lab/config": "^0.1.12",
     "husky": "5.1.3",
     "lerna": "3.22.1",
     "typescript": "4.2.3"
@@ -27,6 +26,5 @@
       "pre-commit": "actl precommit",
       "commit-msg": "actl commitmsg"
     }
-  },
-  "dependencies": {}
+  }
 }
