@@ -1,3 +1,5 @@
+import path             from 'path'
+
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable global-require */
 /* eslint-disable no-empty */
@@ -9,8 +11,8 @@ const fontFace = (family, type, weight, fontsPath, style = 'normal') => ({
     fontWeight: weight,
     fontStyle: style,
     src: `local('${family}-${type}'),
-          url('${require(`${fontsPath}/${family}-${type}.woff`)}') format('woff'),
-          url('${require(`${fontsPath}/${family}-${type}.woff2`)}') format('woff2')`,
+          url('${path.resolve(`${fontsPath}/${family}-${type}.woff`)}') format('woff'),
+          url('${path.resolve(`${fontsPath}/${family}-${type}.woff2`)}') format('woff2')`,
   },
 })
 
