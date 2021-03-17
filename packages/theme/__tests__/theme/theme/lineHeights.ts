@@ -1,4 +1,4 @@
-import { LineHeights } from '../../../src'
+import { LineHeights } from '@atlantis-lab/theme'
 
 export const lineHeights: LineHeights = {
   primary: 1,

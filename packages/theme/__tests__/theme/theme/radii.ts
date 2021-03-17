@@ -1,4 +1,4 @@
-import { Radii } from '../../../src'
+import { Radii } from '@atlantis-lab/theme'
 
 export const radii: Radii = {
   small: 1,

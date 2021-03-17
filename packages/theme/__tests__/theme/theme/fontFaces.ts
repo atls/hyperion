@@ -1,4 +1,4 @@
-import { FontFaces } from '../../../src'
+import { FontFaces } from '@atlantis-lab/theme'
 
 export const fontFaces: FontFaces = [
   {
