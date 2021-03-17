@@ -165,14 +165,6 @@
     "@commitlint/config-conventional" "11.0.0"
     "@commitlint/config-lerna-scopes" "11.0.0"
 
-"@atlantis-lab/commitlint-config@0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@atlantis-lab/commitlint-config/-/commitlint-config-0.1.9.tgz#dd9fc1ee6a06f06c496e6871eb7f6256e535ab85"
-  integrity sha512-52eh+m3Ok1bk2tLScaxX3zb6Sg8NOlkEnMgPAb70WVMVYDwvN5VfPWHaAOl/OUyJ2N4PYitO/SRbgnr9UXDpww==
-  dependencies:
-    "@commitlint/config-conventional" "11.0.0"
-    "@commitlint/config-lerna-scopes" "11.0.0"
-
 "@atlantis-lab/config@^0.1.10":
   version "0.1.10"
   resolved "https://registry.yarnpkg.com/@atlantis-lab/config/-/config-0.1.10.tgz#ec1d22b8754298ad117bbc6ede4586a119be0f55"
@@ -183,17 +175,6 @@
     "@atlantis-lab/jest-config" "0.1.10"
     "@atlantis-lab/prettier-config" "0.1.10"
     "@atlantis-lab/tsconfig" "0.1.10"
-
-"@atlantis-lab/config@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@atlantis-lab/config/-/config-0.1.9.tgz#02f710f9e0abbe99b031162516a68b6ceb4d85dd"
-  integrity sha512-dk26JXphAvb6r2RDJfki1YtjapfpbNs0aXyYUsZXUQCD3Q/lo/x0LSE0nCbeQSerIuoJrW/mq6/+ZD8/n1tf3A==
-  dependencies:
-    "@atlantis-lab/commitlint-config" "0.1.9"
-    "@atlantis-lab/eslint-config" "0.1.9"
-    "@atlantis-lab/jest-config" "0.1.9"
-    "@atlantis-lab/prettier-config" "0.1.9"
-    "@atlantis-lab/tsconfig" "0.1.9"
 
 "@atlantis-lab/design@^0.0.2":
   version "0.0.2"
@@ -218,33 +199,10 @@
     eslint-plugin-prettier "3.3.1"
     eslint-plugin-react "7.22.0"
 
-"@atlantis-lab/eslint-config@0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@atlantis-lab/eslint-config/-/eslint-config-0.1.9.tgz#7302b4e21872ebedf5dbc3bf6334d77626ff7d18"
-  integrity sha512-qGN3IHP6PXOiOx26DpMtDsidXaJm4CFstOqP+HexqZHwq9IBjdt8myt+XX2Rt6PrPb8u3n7qahqjg/xWQjiaGQ==
-  dependencies:
-    "@typescript-eslint/eslint-plugin" "4.15.2"
-    "@typescript-eslint/parser" "4.15.2"
-    eslint-config-airbnb-typescript "12.3.1"
-    eslint-config-prettier "8.0.0"
-    eslint-plugin-import "2.22.1"
-    eslint-plugin-jsx-a11y "6.4.1"
-    eslint-plugin-prettier "3.3.1"
-    eslint-plugin-react "7.22.0"
-
 "@atlantis-lab/jest-config@0.1.10":
   version "0.1.10"
   resolved "https://registry.yarnpkg.com/@atlantis-lab/jest-config/-/jest-config-0.1.10.tgz#cf8148ac8d3a0b54e62b86b676248b1f55a5ded8"
   integrity sha512-Z2F6RZvUzFNu8ig7Ef3mDkW7FyY5xOI4TCQQ7iSQ6pij49bxniob7DYbCRlAdobo1oGVvM7w+au95CBZmCPKyQ==
-  dependencies:
-    jest-emotion "10.0.32"
-    jest-static-stubs "0.0.1"
-    ts-jest "26.4.1"
-
-"@atlantis-lab/jest-config@0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@atlantis-lab/jest-config/-/jest-config-0.1.9.tgz#1b5820cac150946f8fcec732f3c1546f746ac558"
-  integrity sha512-k02MoS6ux0ghMxJJjQ/MfUbKSlstXvl/H0tIVUmv3F+aRhZQDndS4yqzsXCa3mHyW4uFQI0IUFj7lrUlhGllgw==
   dependencies:
     jest-emotion "10.0.32"
     jest-static-stubs "0.0.1"
@@ -263,13 +221,6 @@
   integrity sha512-PYiTZP9GsBVpVCpHQUCLsG/FwX43rOHXYZ4pF6EIhlFlfUv4L937d4ap2tHrVWzSWNHDqdqyB1Mzp20PeKQouA==
   dependencies:
     "@atlantis-lab/prettier-plugin-import-sort" "0.1.10"
-
-"@atlantis-lab/prettier-config@0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@atlantis-lab/prettier-config/-/prettier-config-0.1.9.tgz#7796c9b60845a89167575ad07d1f790e8da7552e"
-  integrity sha512-W1AWAw8FmXcFkqMwVhpCvC5PV5H/DLseJZ6AFKDdnEtPKo7pswWXd9UBLuIlsO1hWz+ggStQ4Sz02ivx4HRfcA==
-  dependencies:
-    "@atlantis-lab/prettier-plugin-import-sort" "0.1.9"
 
 "@atlantis-lab/prettier-config@^0.1.8":
   version "0.1.8"
@@ -296,24 +247,21 @@
     import-sort-parser-typescript "^6.0.0"
     import-sort-style "^6.0.0"
 
-"@atlantis-lab/prettier-plugin-import-sort@0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@atlantis-lab/prettier-plugin-import-sort/-/prettier-plugin-import-sort-0.1.9.tgz#4e02102cfa1ddec040251eadfb1a8980b990f119"
-  integrity sha512-zQGpka7qKklxUugUVFSJ6s7/jPsiYUjK0MQZOk8bQy39jepnoGM90qOmmFNmNqQ7FkSlyRD1Dm7THOgMbHSW1w==
+"@atlantis-lab/theme@0.0.22":
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/@atlantis-lab/theme/-/theme-0.0.22.tgz#22f495419476787bedda957853135874a74bd872"
+  integrity sha512-u4yiiOwr4aRTQ110Wa7xXScfkBZtx6WDUXK3UnqAkXM+8SN5w/j71MCrrAmGzY8g5olxLTMBWeYlT3UTJktGcQ==
   dependencies:
-    import-sort "^6.0.0"
-    import-sort-parser-typescript "^6.0.0"
-    import-sort-style "^6.0.0"
+    "@emotion/css" "^11.1.3"
+    "@emotion/react" "^11.1.5"
+    "@emotion/styled" "^11.1.5"
+    react "17.0.1"
+    styled-system "^5.1.5"
 
 "@atlantis-lab/tsconfig@0.1.10":
   version "0.1.10"
   resolved "https://registry.yarnpkg.com/@atlantis-lab/tsconfig/-/tsconfig-0.1.10.tgz#0652e3198a631bb6ef78113908ae84373e3da8b4"
   integrity sha512-FLFYYr1IyMOAFP08MvkOFohHV1EOC5616+opY/tnH57Txdh9uxdaDjWx8Ypc8gAcb6QSSk/o1McYpg0oc8Ixug==
-
-"@atlantis-lab/tsconfig@0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@atlantis-lab/tsconfig/-/tsconfig-0.1.9.tgz#ee66321c83737d433bd05c9bd0a10d46ec52c475"
-  integrity sha512-LAMMpjpgqKeFWaDmEGDz2qf005Qpnep3TPWA6/9m6K/MYquMZ0oVNimMomejciD7PR5P4f/Z/9C4awLqiiiYHA==
 
 "@babel/code-frame@7.10.4", "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4":
   version "7.10.4"

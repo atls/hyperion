@@ -17,15 +17,12 @@ exports[`Button should render correctly 1`] = `
   line-height: inherit;
   font-family: inherit;
   text-align: inherit;
-  -webkit-letter-spacing: inherit;
-  -moz-letter-spacing: inherit;
-  -ms-letter-spacing: inherit;
   letter-spacing: inherit;
   color: inherit;
   border-radius: normal;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -40,6 +37,7 @@ exports[`Button should render correctly 1`] = `
 
 .emotion-0:active {
   -webkit-transform: scale(0.98);
+  -moz-transform: scale(0.98);
   -ms-transform: scale(0.98);
   transform: scale(0.98);
   background-color: #0f0;

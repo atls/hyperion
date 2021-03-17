@@ -26,6 +26,5 @@
       "pre-commit": "actl precommit",
       "commit-msg": "actl commitmsg"
     }
-  },
-  "dependencies": {}
+  }
 }

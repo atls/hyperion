@@ -1,9 +1,9 @@
 import React                          from 'react'
 
-import styled                         from '@emotion/styled'
+import styled, { StyledComponent }    from '@emotion/styled'
 import { ArrowDownIcon, ArrowUpIcon } from '@atlantis-lab/icons'
 
-export const TextUI = styled.span({
+export const TextUI: StyledComponent<any> = styled.span({
   marginLeft: 4,
   display: 'inline-flex',
   alignItems: 'center',

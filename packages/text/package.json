@@ -17,7 +17,6 @@
     "postpack": "pubflow restore"
   },
   "devDependencies": {
-    "@atlantis-lab/config": "^0.1.9",
     "@atlantis-lab/design": "0.0.28",
     "@atlantis-lab/theme": "0.0.23",
     "@storybook/addon-knobs": "^6.1.18",

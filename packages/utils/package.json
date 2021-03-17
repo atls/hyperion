@@ -20,7 +20,6 @@
     "react": "^17.0.0"
   },
   "devDependencies": {
-    "@atlantis-lab/config": "^0.1.9",
     "@monstrs/publish-flow": "0.1.3"
   },
   "publishConfig": {
