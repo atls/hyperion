@@ -1,11 +1,9 @@
 /* eslint-disable react/require-default-props */
 
-import Link          from 'next/link'
-import React         from 'react'
+import Link       from 'next/link'
+import React      from 'react'
 
-import { withTheme } from '@emotion/react'
-
-import { LinkUI }    from './LinkUI'
+import { LinkUI } from './LinkUI'
 
 interface NextLinkProps {
   fontFamily?: string
