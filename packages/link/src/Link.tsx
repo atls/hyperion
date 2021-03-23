@@ -2,8 +2,6 @@
 
 import React, { FC, useState } from 'react'
 
-import { withTheme }           from '@emotion/react'
-
 import { LinkUI }              from './LinkUI'
 
 interface LinkProps {
