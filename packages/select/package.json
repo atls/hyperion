@@ -1,0 +1,38 @@
+{
+  "name": "@atlantis-lab/select",
+  "repository": "git@github.com:Atlantis-Lab/uikit.git",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -r -f dist",
+    "prepublishOnly": "yarn run build",
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "pubflow store",
+    "postpack": "pubflow restore"
+  },
+  "dependencies": {
+    "@atlantis-lab/icons": "^0.5.51",
+    "@atlantis-lab/input": "^0.5.51",
+    "@emotion/styled": "^11.0.0",
+    "react": "^17.0.0",
+    "react-intl": "^5.13.5",
+    "react-onclickoutside": "^6.10.0",
+    "recompose": "^0.30.0"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.1.4",
+    "@types/jest": "^26.0.20",
+    "@types/styled-system": "5.1.10",
+    "react-test-renderer": "^17.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "88d7a3f00297b2b7c15c39390358ebf250512687"
+}
