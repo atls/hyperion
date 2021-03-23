@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test suit for link should render Link correctly 1`] = `
+.emotion-0 {
+  font-family: primary;
+  font-weight: ;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  cursor: pointer;
+}
+
+.emotion-0::after {
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+  bottom: -3px;
+  left: 0px;
+}
+
+<a
+  className="emotion-0"
+  fontFamily="primary"
+  fontWeight=""
+  href="/nowhere"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+>
+  Click
+</a>
+`;
