@@ -1,7 +1,9 @@
-import React     from 'react'
-import renderer  from 'react-test-renderer'
+import React             from 'react'
+import renderer          from 'react-test-renderer'
 
-import { Input } from '../src/index'
+import { ThemeProvider } from '@emotion/react'
+
+import { Input }         from '../src/index'
 
 it('Input should render correctly valid&invalid states', () => {
   const defaultTheme = {
@@ -34,22 +36,16 @@ it('Input should render correctly valid&invalid states', () => {
   }
 
   const treeValid = renderer.create(
-    <Input
-      theme={defaultTheme}
-      placeholder='placeholder'
-      border='1px solid black'
-      invalid={false}
-    />,
+    <ThemeProvider theme={defaultTheme}>
+      <Input placeholder='placeholder' border='1px solid black' invalid={false} />
+    </ThemeProvider>,
   )
 
   const treeInvalid = renderer
     .create(
-      <Input
-        theme={defaultTheme}
-        placeholder='placeholder'
-        border='1px solid black'
-        invalid={false}
-      />,
+      <ThemeProvider theme={defaultTheme}>
+        <Input placeholder='placeholder' border='1px solid black' />
+      </ThemeProvider>,
     )
     .toJSON()
 

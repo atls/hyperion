@@ -19,8 +19,8 @@ exports[`PriceInput should render correctly 1`] = `
   font-weight: medium;
   border-radius: extra;
   border: black;
-  color: #000;
-  background-color: #fff;
+  color: black;
+  background-color: white;
 }
 
 .emotion-0::-webkit-input-placeholder {
