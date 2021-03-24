@@ -3,7 +3,7 @@
 import Link              from 'next/link'
 import React             from 'react'
 
-import ThemedLinkUI      from './LinkUI'
+import { LinkUI }        from './LinkUI'
 import { NextLinkProps } from './types'
 
 export const NextLink = ({
@@ -15,7 +15,7 @@ export const NextLink = ({
   ...props
 }: NextLinkProps) => (
   <Link href={{ pathname: href, query: query || {} }} as={as || href} passHref={passHref}>
-    <ThemedLinkUI {...props}>{children}</ThemedLinkUI>
+    <LinkUI {...props}>{children}</LinkUI>
   </Link>
 )
 
