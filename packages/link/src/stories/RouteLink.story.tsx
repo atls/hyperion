@@ -1,28 +1,18 @@
-import React             from 'react'
-import { MemoryRouter }  from 'react-router-dom'
+import React            from 'react'
+import { MemoryRouter } from 'react-router-dom'
 
-import { Text }          from '@atlantis-lab/text'
-import { ThemeProvider } from '@emotion/react'
+import { Text }         from '@atlantis-lab/text'
 
-import { RouteLink }     from '..'
-
-const defaultTheme = {
-  colors: {
-    white: '#FFF',
-    lightBlue: '#00F',
-  },
-}
+import { RouteLink }    from '..'
 
 export const ExampleRouteLink = () => (
-  <ThemeProvider theme={defaultTheme}>
-    <MemoryRouter>
-      <RouteLink to='/'>
-        <Text color='red' fontSize='60px' fontWeight={700}>
-          Nowhere
-        </Text>
-      </RouteLink>
-    </MemoryRouter>
-  </ThemeProvider>
+  <MemoryRouter>
+    <RouteLink to='/'>
+      <Text color='red' fontSize='60px' fontWeight={700}>
+        Nowhere
+      </Text>
+    </RouteLink>
+  </MemoryRouter>
 )
 
 export default {
