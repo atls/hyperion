@@ -13,6 +13,7 @@ import {
 import { ifProp, switchProp }      from 'styled-tools'
 
 import styled                      from '@emotion/styled'
+import { useTheme }                from '@emotion/react'
 
 import { offset }                  from './PrefixSuffix'
 
@@ -23,11 +24,14 @@ const clear: styleFn = () => ({
   width: '100%',
 })
 
-const base: styleFn = ({ theme }) => ({
-  '&::placeholder': {
-    color: theme.colors.silver,
-  },
-})
+const base: styleFn = () => {
+  const theme: any = useTheme()
+  return {
+    '&::placeholder': {
+      color: theme.colors.silver,
+    },
+  }
+}
 
 const attach: styleFn = switchProp('attach', () => ({
   left: {
@@ -43,9 +47,12 @@ const attach: styleFn = switchProp('attach', () => ({
   },
 }))
 
-const invalid: styleFn = ifProp('invalid', ({ theme }) => ({
-  borderColor: theme.colors.red,
-}))
+const invalid: styleFn = ifProp('invalid', () => {
+  const theme: any = useTheme()
+  return {
+    borderColor: theme.colors.red,
+  }
+})
 
 const shouldForwardProp = createShouldForwardProp([
   'fontFamily',

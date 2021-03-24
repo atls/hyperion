@@ -2,6 +2,7 @@ import { border, color, styleFn, typography } from 'styled-system'
 import { switchProp }                         from 'styled-tools'
 
 import styled                                 from '@emotion/styled'
+import { useTheme }                           from '@emotion/react'
 
 import { AddonProps }                         from './types'
 
@@ -11,26 +12,29 @@ const base: styleFn = () => ({
   boxSizing: 'border-box',
 })
 
-const size: styleFn = switchProp('size', ({ theme }) => ({
-  normal: {
-    fontSize: theme.fontSizes.tiny,
-    paddingRight: 20,
-    paddingLeft: 20,
-    height: 50,
-  },
-  medium: {
-    fontSize: theme.fontSizes.normal,
-    paddingRight: 24,
-    paddingLeft: 24,
-    height: 58,
-  },
-  large: {
-    fontSize: theme.fontSizes.regular,
-    paddingRight: 28,
-    paddingLeft: 28,
-    height: 64,
-  },
-}))
+const size: styleFn = switchProp('size', () => {
+  const theme: any = useTheme()
+  return {
+    normal: {
+      fontSize: theme.fontSizes.tiny,
+      paddingRight: 20,
+      paddingLeft: 20,
+      height: 50,
+    },
+    medium: {
+      fontSize: theme.fontSizes.normal,
+      paddingRight: 24,
+      paddingLeft: 24,
+      height: 58,
+    },
+    large: {
+      fontSize: theme.fontSizes.regular,
+      paddingRight: 28,
+      paddingLeft: 28,
+      height: 64,
+    },
+  }
+})
 
 const position: styleFn = switchProp('position', () => ({
   before: {
