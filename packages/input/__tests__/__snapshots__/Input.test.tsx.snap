@@ -19,8 +19,8 @@ exports[`Input should render correctly valid&invalid states 1`] = `
   font-weight: medium;
   border: 1px solid black;
   border-radius: extra;
-  color: #000;
-  background-color: #fff;
+  color: black;
+  background-color: white;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -73,8 +73,8 @@ exports[`Input should render correctly valid&invalid states 2`] = `
   font-weight: medium;
   border: 1px solid black;
   border-radius: extra;
-  color: #000;
-  background-color: #fff;
+  color: black;
+  background-color: white;
 }
 
 .emotion-0::-webkit-input-placeholder {
