@@ -7,18 +7,7 @@ import { LinkProps }           from './types'
 
 export const Link: FC<LinkProps> = React.forwardRef(
   (
-    {
-      children,
-      href,
-      fontSize,
-      lineHeight,
-      fontWeight,
-      color,
-      hoverColor,
-      clickedColor,
-      underline,
-      ...props
-    },
+    { children, href, fontSize, lineHeight, fontWeight, color, hoverColor, clickedColor, ...props },
     ref,
   ) => {
     const [hovered, setHovered] = useState(false)
@@ -32,7 +21,6 @@ export const Link: FC<LinkProps> = React.forwardRef(
         /* eslint-disable no-nested-ternary */
         color={clicked ? clickedColor || color : hovered ? hoverColor || color : color}
         href={href}
-        underline={underline}
         onMouseOver={() => setHovered(true)}
         onFocus={() => setHovered(true)}
         onMouseLeave={() => {

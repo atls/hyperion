@@ -1,4 +1,6 @@
-export interface NextLinkProps {
+import { LayoutProps } from 'styled-system'
+
+export interface NextLinkProps extends LayoutProps {
   fontFamily?: string
   fontWeight?: string | number | string[] | number[]
   lineHeight?: string | number | string[] | number[]
@@ -13,17 +15,13 @@ export interface NextLinkProps {
   query?: any
   textTransform?: string
   textAlign?: string
-  underline?: boolean
-  width?: string
   whiteSpace?: string
   dangerouslySetInnerHTML?: any
-  textDecorationStyle?: string
-  textDecorationColor?: string
   passHref?: boolean
   children?: any
 }
 
-export interface LinkProps {
+export interface LinkProps extends LayoutProps {
   children?: any
   href?: string
   fontWeight?: string | number | string[] | number[]
@@ -34,13 +32,9 @@ export interface LinkProps {
   dangerouslySetInnerHTML?: any
   color?: string
   hoverColor?: string
-  textDecorationStyle?: string
-  textDecorationColor?: string
   clickedColor?: string
   textTransform?: string
-  underline?: boolean
   target?: string
-  width?: string
   pt?: string
   onClick?: any
   onMouseOver?: () => void
