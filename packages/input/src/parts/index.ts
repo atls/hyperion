@@ -1,7 +1,10 @@
-export * from './StyledInput'
+import Addon       from './Addon'
+import StyledInput from './StyledInput'
+
 export * from './PrefixSuffix'
-export * from './Addon'
 export * from './LabelContainer'
 
 export * from './Attachments'
 export * from './Addons'
+
+export { Addon, StyledInput }
