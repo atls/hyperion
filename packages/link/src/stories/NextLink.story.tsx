@@ -14,7 +14,7 @@ const defaultTheme = {
 
 export const ExampleNextLink = () => (
   <ThemeProvider theme={defaultTheme}>
-    <NextLink href='/' underline textDecorationStyle='dashed' textDecorationColor='lightBlue'>
+    <NextLink href='/'>
       <Text color='red' fontSize='60px' fontWeight={700}>
         Nowhere
       </Text>

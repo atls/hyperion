@@ -3,19 +3,10 @@
 exports[`test suit for link should render Link correctly 1`] = `
 .emotion-1 {
   position: relative;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-transition: 0.35s;
-  transition: 0.35s;
-  cursor: pointer;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: #00F;
 }
 
 .emotion-0 {

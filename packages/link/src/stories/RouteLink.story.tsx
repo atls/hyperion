@@ -16,7 +16,7 @@ const defaultTheme = {
 export const ExampleRouteLink = () => (
   <ThemeProvider theme={defaultTheme}>
     <MemoryRouter>
-      <RouteLink to='/' underline textDecorationStyle='wavy' textDecorationColor='lightBlue'>
+      <RouteLink to='/'>
         <Text color='red' fontSize='60px' fontWeight={700}>
           Nowhere
         </Text>

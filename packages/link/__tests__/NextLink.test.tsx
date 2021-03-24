@@ -18,12 +18,7 @@ describe('test suit for link', () => {
     const tree = renderer
       .create(
         <ThemeProvider theme={defaultTheme}>
-          <NextLink
-            href='/nowhere'
-            underline
-            textDecorationStyle='dotted'
-            textDecorationColor='lightBlue'
-          >
+          <NextLink href='/nowhere'>
             <Text color='green' fontSize='60px' fontWeight={700}>
               Nowhere
             </Text>

@@ -14,7 +14,7 @@ const defaultTheme = {
 
 export const ExampleLink = () => (
   <ThemeProvider theme={defaultTheme}>
-    <Link href='/' underline textDecorationStyle='dotted' textDecorationColor='lightBlue'>
+    <Link href='/'>
       <Text color='green' fontSize='60px' fontWeight={700}>
         Nowhere
       </Text>
