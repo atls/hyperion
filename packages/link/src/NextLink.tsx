@@ -1,32 +1,10 @@
 /* eslint-disable react/require-default-props */
 
-import Link       from 'next/link'
-import React      from 'react'
+import Link              from 'next/link'
+import React             from 'react'
 
-import { LinkUI } from './LinkUI'
-
-interface NextLinkProps {
-  fontFamily?: string
-  fontWeight?: string | number | string[] | number[]
-  lineHeight?: string | number | string[] | number[]
-  fontSize?: string | number | string[] | number[]
-  color?: string
-  hoverColor?: string
-  clickedColor?: string
-  href: string
-  target?: string
-  display?: string
-  as?: string
-  query?: any
-  textTransform?: string
-  textAlign?: string
-  width?: string
-  whiteSpace?: string
-  dangerouslySetInnerHTML?: any
-  underline?: boolean
-  passHref?: boolean
-  children?: any
-}
+import ThemedLinkUI      from './LinkUI'
+import { NextLinkProps } from './types'
 
 export const NextLink = ({
   href,
@@ -37,7 +15,7 @@ export const NextLink = ({
   ...props
 }: NextLinkProps) => (
   <Link href={{ pathname: href, query: query || {} }} as={as || href} passHref={passHref}>
-    <LinkUI {...props}>{children}</LinkUI>
+    <ThemedLinkUI {...props}>{children}</ThemedLinkUI>
   </Link>
 )
 

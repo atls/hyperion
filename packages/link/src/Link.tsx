@@ -2,30 +2,8 @@
 
 import React, { FC, useState } from 'react'
 
-import { LinkUI }              from './LinkUI'
-
-interface LinkProps {
-  children?: any
-  href?: string
-  fontWeight?: string | number | string[] | number[]
-  lineHeight?: string | number | string[] | number[]
-  fontSize?: string | number | string[] | number[]
-  fontFamily?: string
-  whiteSpace?: string
-  dangerouslySetInnerHTML?: any
-  color?: string
-  hoverColor?: string
-  underlineColor?: string
-  clickedColor?: string
-  textTransform?: string
-  underline?: boolean
-  target?: string
-  width?: string
-  pt?: string
-  onClick?: any
-  onMouseOver?: () => void
-  onMouseLeave?: () => void
-}
+import ThemedLinkUI            from './LinkUI'
+import { LinkProps }           from './types'
 
 export const Link: FC<LinkProps> = React.forwardRef(
   (
@@ -39,7 +17,6 @@ export const Link: FC<LinkProps> = React.forwardRef(
       hoverColor,
       clickedColor,
       underline,
-      underlineColor,
       ...props
     },
     ref,
@@ -47,7 +24,7 @@ export const Link: FC<LinkProps> = React.forwardRef(
     const [hovered, setHovered] = useState(false)
     const [clicked, setClicked] = useState(false)
     return (
-      <LinkUI
+      <ThemedLinkUI
         fontSize={fontSize}
         lineHeight={lineHeight}
         ref={ref}
@@ -55,8 +32,7 @@ export const Link: FC<LinkProps> = React.forwardRef(
         /* eslint-disable no-nested-ternary */
         color={clicked ? clickedColor || color : hovered ? hoverColor || color : color}
         href={href}
-        underline={underline && hovered && ((!clicked && clickedColor) || !clickedColor)}
-        underlineColor={underlineColor}
+        underline={underline}
         onMouseOver={() => setHovered(true)}
         onFocus={() => setHovered(true)}
         onMouseLeave={() => {
@@ -68,7 +44,7 @@ export const Link: FC<LinkProps> = React.forwardRef(
         {...props}
       >
         {children}
-      </LinkUI>
+      </ThemedLinkUI>
     )
   },
 )
