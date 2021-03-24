@@ -1,51 +1,16 @@
 import React                        from 'react'
-import { IntlProvider }             from 'react-intl'
-
-import { ThemeProvider }            from '@emotion/react'
+import { Option }                   from 'rc-select'
 
 import { Select as TemplateSelect } from '..'
 
-const defaultTheme = {
-  colors: {
-    white: '#FFF',
-    silver: 'silver',
-    gray: '#333',
-    semiGray: '#666',
-    black: '#000',
-    semiBlack: '#222',
-  },
-  fontWeight: {},
-  fontHeights: {},
-  fontSizes: {},
-  lineHeights: {},
-}
-
-const Select = (props) => (
-  <TemplateSelect
-    optionsBackground='white'
-    optionsBorderRadius='normal'
-    optionFontSize='normal'
-    optionLineHeight='normal'
-    optionFontWeight='normal'
-    optionBackgroundColor='semiGray'
-    optionHoverBackgroundColor='semiBlack'
-    optionActiveBackgroundColor='gray'
-    {...props}
-  />
-)
+const Select = (props) => <TemplateSelect {...props} />
 
 export const ExampleSelect = () => {
   return (
-    <IntlProvider locale='ru'>
-      <ThemeProvider theme={defaultTheme}>
-        <Select
-          options={[
-            { id: '1', value: 'first' },
-            { id: '2', value: 'second' },
-          ]}
-        />
-      </ThemeProvider>
-    </IntlProvider>
+    <Select>
+      <Option value='One'>One</Option>
+      <Option value='Two'>Two</Option>
+    </Select>
   )
 }
 

@@ -18,17 +18,14 @@
   },
   "dependencies": {
     "@atlantis-lab/icons": "^0.5.51",
-    "@atlantis-lab/input": "^0.5.51",
-    "@emotion/styled": "^11.0.0",
-    "react": "^17.0.0",
-    "react-intl": "^5.13.5",
-    "react-onclickoutside": "^6.10.0",
-    "recompose": "^0.30.0"
+    "@emotion/styled": "^11.1.5",
+    "rc-select": "^12.1.7",
+    "react": "^17.0.0"
   },
   "devDependencies": {
-    "@emotion/react": "^11.1.4",
     "@types/jest": "^26.0.20",
     "@types/styled-system": "5.1.10",
+    "emotion-theming": "10.0.27",
     "react-test-renderer": "^17.0.1"
   },
   "publishConfig": {
