@@ -1,8 +1,8 @@
 import React             from 'react'
 import renderer          from 'react-test-renderer'
+import { ThemeProvider } from 'emotion-theming'
 
 import { Text }          from '@atlantis-lab/text'
-import { ThemeProvider } from '@emotion/react'
 
 import { Link }          from '../src'
 
