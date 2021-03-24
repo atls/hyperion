@@ -18,7 +18,7 @@ describe('test suit for link', () => {
     const tree = renderer
       .create(
         <ThemeProvider theme={defaultTheme}>
-          <Link href='/' underline textDecorationStyle='dotted' textDecorationColor='lightBlue'>
+          <Link href='/'>
             <Text color='green' fontSize='60px' fontWeight={700}>
               Nowhere
             </Text>

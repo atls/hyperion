@@ -20,12 +20,7 @@ describe('test suit for link', () => {
       .create(
         <MemoryRouter>
           <ThemeProvider theme={defaultTheme}>
-            <RouteLink
-              to='/nowhere'
-              underline
-              textDecorationStyle='wavy'
-              textDecorationColor='lightBlue'
-            >
+            <RouteLink to='/nowhere'>
               <Text color='green' fontSize='60px' fontWeight={700}>
                 Nowhere
               </Text>
