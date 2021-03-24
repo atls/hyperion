@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test suit for link should render Link correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   position: relative;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -12,29 +12,36 @@ exports[`test suit for link should render Link correctly 1`] = `
   -webkit-transition: 0.35s;
   transition: 0.35s;
   cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #00F;
 }
 
-.emotion-0::after {
-  -webkit-transition: 0.35s;
-  transition: 0.35s;
-  content: "";
-  height: 1px;
-  width: 100%;
-  background-color: transparent;
-  position: absolute;
-  bottom: -3px;
-  left: 0px;
+.emotion-0 {
+  color: green;
+  font-size: 60px;
+  font-weight: 700;
+  font-family: primary;
 }
 
 <a
-  className="emotion-0"
-  href="/nowhere"
+  className="emotion-1"
+  href="/"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={[Function]}
   onMouseUp={[Function]}
 >
-  Click
+  <span
+    className="emotion-0"
+    color="green"
+    fontFamily="primary"
+    fontSize="60px"
+    fontWeight={700}
+  >
+    Nowhere
+  </span>
 </a>
 `;

@@ -1,6 +1,7 @@
 import React             from 'react'
 import renderer          from 'react-test-renderer'
 
+import { Text }          from '@atlantis-lab/text'
 import { ThemeProvider } from '@emotion/react'
 
 import { NextLink }      from '../src'
@@ -17,7 +18,16 @@ describe('test suit for link', () => {
     const tree = renderer
       .create(
         <ThemeProvider theme={defaultTheme}>
-          <NextLink href='/nowhere'>Click</NextLink>
+          <NextLink
+            href='/nowhere'
+            underline
+            textDecorationStyle='dotted'
+            textDecorationColor='lightBlue'
+          >
+            <Text color='green' fontSize='60px' fontWeight={700}>
+              Nowhere
+            </Text>
+          </NextLink>
         </ThemeProvider>,
       )
       .toJSON()

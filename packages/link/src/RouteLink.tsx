@@ -1,5 +1,14 @@
-import { Link }   from 'react-router-dom'
+import React        from 'react'
+import { Link }     from 'react-router-dom'
 
-import { LinkUI } from './LinkUI'
+import { useTheme } from '@emotion/react'
 
-export const RouteLink = LinkUI.withComponent(Link)
+import { LinkUI }   from './LinkUI'
+
+const RouteLinkStyled = LinkUI.withComponent(Link)
+
+export const RouteLink = (props) => {
+  const theme = useTheme()
+
+  return <RouteLinkStyled theme={theme} {...props} />
+}
