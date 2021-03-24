@@ -1,8 +1,8 @@
-import React  from 'react'
+import React     from 'react'
 
-import styled from '@emotion/styled'
+import styled    from '@emotion/styled'
 
-import Addon  from './Addon'
+import { Addon } from './Addon'
 
 const Container = styled.div({
   width: '100%',

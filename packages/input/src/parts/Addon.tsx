@@ -2,7 +2,6 @@ import { border, color, styleFn, typography } from 'styled-system'
 import { switchProp }                         from 'styled-tools'
 
 import styled                                 from '@emotion/styled'
-import { withTheme }                          from '@emotion/react'
 
 import { AddonProps }                         from './types'
 
@@ -58,4 +57,4 @@ Addon.defaultProps = {
   bg: 'white',
 }
 
-export default withTheme(Addon)
+export { Addon }

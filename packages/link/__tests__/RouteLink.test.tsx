@@ -1,9 +1,9 @@
 import React             from 'react'
 import renderer          from 'react-test-renderer'
+import { ThemeProvider } from 'emotion-theming'
 import { MemoryRouter }  from 'react-router-dom'
 
 import { Text }          from '@atlantis-lab/text'
-import { ThemeProvider } from '@emotion/react'
 
 import { RouteLink }     from '../src'
 
