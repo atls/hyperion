@@ -13,7 +13,6 @@ import {
 import { ifProp, switchProp }      from 'styled-tools'
 
 import styled                      from '@emotion/styled'
-import { withTheme }               from '@emotion/react'
 
 import { offset }                  from './PrefixSuffix'
 
@@ -81,4 +80,4 @@ StyledInput.defaultProps = {
   bg: 'white',
 }
 
-export default withTheme(StyledInput)
+export { StyledInput }
