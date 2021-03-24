@@ -1,7 +1,6 @@
 import React             from 'react'
 import renderer          from 'react-test-renderer'
-
-import { ThemeProvider } from '@emotion/react'
+import { ThemeProvider } from 'emotion-theming'
 
 import { Input }         from '../src/index'
 

@@ -1,8 +1,6 @@
-import React        from 'react'
+import React     from 'react'
 
-import { useTheme } from '@emotion/react'
-
-import { Input }    from '../index'
+import { Input } from '../index'
 
 type ExampleProps = {
   placeholder: string
@@ -26,24 +24,19 @@ export const ExampleInput = ({
   invalid = false,
   minHeight,
   minWidth,
-}: ExampleProps) => {
-  const theme = useTheme()
-
-  return (
-    <Input
-      theme={theme}
-      placeholder={placeholder}
-      border={border}
-      offset={offset}
-      typography={typography}
-      width={width}
-      height={height}
-      invalid={invalid}
-      minHeight={minHeight}
-      minWidth={minWidth}
-    />
-  )
-}
+}: ExampleProps) => (
+  <Input
+    placeholder={placeholder}
+    border={border}
+    offset={offset}
+    typography={typography}
+    width={width}
+    height={height}
+    invalid={invalid}
+    minHeight={minHeight}
+    minWidth={minWidth}
+  />
+)
 
 export default {
   title: 'Input',

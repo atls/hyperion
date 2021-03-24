@@ -22,7 +22,6 @@
     "text-mask-addons": "3.8.0"
   },
   "peerDependencies": {
-    "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "@styled-system/should-forward-prop": "^5.1.0",
     "react": "^17.0.0",
@@ -35,6 +34,7 @@
   "gitHead": "9cf09561b0c03acd463041d1495c7683c1fac8b0",
   "devDependencies": {
     "@types/jest": "^26.0.20",
+    "emotion-theming": "10.0.27",
     "react-test-renderer": "^17.0.1"
   }
 }
