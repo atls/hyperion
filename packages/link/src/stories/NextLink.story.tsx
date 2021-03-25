@@ -1,25 +1,15 @@
-import React             from 'react'
+import React        from 'react'
 
-import { Text }          from '@atlantis-lab/text'
-import { ThemeProvider } from '@emotion/react'
+import { Text }     from '@atlantis-lab/text'
 
-import { NextLink }      from '..'
-
-const defaultTheme = {
-  colors: {
-    white: '#FFF',
-    lightBlue: '#00F',
-  },
-}
+import { NextLink } from '..'
 
 export const ExampleNextLink = () => (
-  <ThemeProvider theme={defaultTheme}>
-    <NextLink href='/'>
-      <Text color='red' fontSize='60px' fontWeight={700}>
-        Nowhere
-      </Text>
-    </NextLink>
-  </ThemeProvider>
+  <NextLink href='/'>
+    <Text color='red' fontSize='60px' fontWeight={700}>
+      Nowhere
+    </Text>
+  </NextLink>
 )
 
 export default {

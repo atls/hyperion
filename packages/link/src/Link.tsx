@@ -2,7 +2,7 @@
 
 import React, { FC, useState } from 'react'
 
-import ThemedLinkUI            from './LinkUI'
+import { LinkUI }              from './LinkUI'
 import { LinkProps }           from './types'
 
 export const Link: FC<LinkProps> = React.forwardRef(
@@ -13,7 +13,7 @@ export const Link: FC<LinkProps> = React.forwardRef(
     const [hovered, setHovered] = useState(false)
     const [clicked, setClicked] = useState(false)
     return (
-      <ThemedLinkUI
+      <LinkUI
         fontSize={fontSize}
         lineHeight={lineHeight}
         ref={ref}
@@ -32,7 +32,7 @@ export const Link: FC<LinkProps> = React.forwardRef(
         {...props}
       >
         {children}
-      </ThemedLinkUI>
+      </LinkUI>
     )
   },
 )
