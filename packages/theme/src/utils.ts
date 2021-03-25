@@ -1,5 +1,4 @@
 import path             from 'path'
-
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable global-require */
 /* eslint-disable no-empty */
