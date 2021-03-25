@@ -1,25 +1,15 @@
-import React             from 'react'
+import React    from 'react'
 
-import { Text }          from '@atlantis-lab/text'
-import { ThemeProvider } from '@emotion/react'
+import { Text } from '@atlantis-lab/text'
 
-import { Link }          from '..'
-
-const defaultTheme = {
-  colors: {
-    white: '#FFF',
-    lightBlue: '#00F',
-  },
-}
+import { Link } from '..'
 
 export const ExampleLink = () => (
-  <ThemeProvider theme={defaultTheme}>
-    <Link href='/'>
-      <Text color='green' fontSize='60px' fontWeight={700}>
-        Nowhere
-      </Text>
-    </Link>
-  </ThemeProvider>
+  <Link href='/'>
+    <Text color='green' fontSize='60px' fontWeight={700}>
+      Nowhere
+    </Text>
+  </Link>
 )
 
 export default {

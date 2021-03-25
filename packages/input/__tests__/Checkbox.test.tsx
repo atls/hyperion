@@ -1,7 +1,8 @@
-import React        from 'react'
-import renderer     from 'react-test-renderer'
+import React             from 'react'
+import renderer          from 'react-test-renderer'
+import { ThemeProvider } from 'emotion-theming'
 
-import { Checkbox } from '../src/index'
+import { Checkbox }      from '../src/index'
 
 it('Checkbox should render correctly', () => {
   const defaultTheme = {
@@ -33,7 +34,13 @@ it('Checkbox should render correctly', () => {
     },
   }
 
-  const tree = renderer.create(<Checkbox theme={defaultTheme}>Check this</Checkbox>).toJSON()
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={defaultTheme}>
+        <Checkbox>Check this</Checkbox>
+      </ThemeProvider>,
+    )
+    .toJSON()
 
   expect(tree).toMatchSnapshot()
 })
