@@ -4,6 +4,7 @@ import { border, color, layout, typography } from 'styled-system'
 
 import styled                                from '@emotion/styled'
 
+import { SelectProps }                       from './types'
 import { dropdownStyles }                    from './styles'
 
 const BaseSelect = ({
@@ -15,21 +16,21 @@ const BaseSelect = ({
   backgroundColor,
   // eslint-disable-next-line @typescript-eslint/no-shadow
   color,
-  activeColor,
+  itemHoverColor,
   fontSize,
   fontWeight,
   fontFamily,
   dropdownMaxHeight,
   borderRadius,
   ...props
-}) =>
+}: SelectProps) =>
   React.createElement(
     RcSelect,
     {
       dropdownClassName: `${dropdownStyles({
         backgroundColor,
         color,
-        activeColor,
+        itemHoverColor,
         fontSize,
         fontWeight,
         fontFamily,

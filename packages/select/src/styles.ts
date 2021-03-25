@@ -5,7 +5,7 @@ export const dropdownStyles = ({
   borderRadius,
   maxHeight,
   color,
-  activeColor,
+  itemHoverColor,
   fontFamily,
   fontWeight,
   fontSize,
@@ -55,7 +55,7 @@ export const dropdownStyles = ({
       padding-bottom: 19px;
     }
     .rc-select-dropdown-menu-item-active {
-      color: ${activeColor || '#bebebe'};
+      color: ${itemHoverColor || '#bebebe'};
     }
   }
 `
