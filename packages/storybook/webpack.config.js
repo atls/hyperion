@@ -4,6 +4,5 @@ module.exports = async ({ config }) => {
     resolve: {
       ...config.resolve,
       mainFields: ['source', 'module', 'main'],
-    },
-  }
-}
+    }
+}}
