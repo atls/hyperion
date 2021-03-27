@@ -18,6 +18,7 @@ addDecorator(story => (
 
 addParameters({
   backgrounds: [{ name: 'default', value: '#f6f6f6', default: true }],
+  actions: { argTypesRegex: '^on[A-Z].*' },
 })
 
 const loadStories = () => {
