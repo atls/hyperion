@@ -5,6 +5,9 @@ on:
     paths:
       - '**'
       - '!.github/**'
+      - '!renovate.json'
+      - '!lerna.json'
+      - '!**tsconfig.json'
 
 jobs:
   checking:

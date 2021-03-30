@@ -39,6 +39,10 @@ exports[`Input should render correctly valid&invalid states 1`] = `
   color: #C0C0C0;
 }
 
+
+
+
+
 <div
   className="emotion-1"
 >
@@ -88,6 +92,10 @@ exports[`Input should render correctly valid&invalid states 2`] = `
 .emotion-0::placeholder {
   color: #C0C0C0;
 }
+
+
+
+
 
 <div
   className="emotion-1"

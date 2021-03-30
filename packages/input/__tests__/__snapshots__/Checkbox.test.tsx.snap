@@ -15,15 +15,15 @@ exports[`Checkbox should render correctly 1`] = `
   user-select: none;
 }
 
-.emotion-2:hover input ~ div {
+.emotion-2:hover input~div {
   background-color: #ecece3;
 }
 
-.emotion-2 input:checked ~ div {
+.emotion-2 input:checked~div {
   background-color: #ecece3;
 }
 
-.emotion-2 input:checked ~ div:after {
+.emotion-2 input:checked~div:after {
   display: block;
 }
 
@@ -57,6 +57,7 @@ exports[`Checkbox should render correctly 1`] = `
   border: solid white;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }

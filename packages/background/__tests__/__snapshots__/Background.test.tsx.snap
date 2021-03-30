@@ -11,8 +11,10 @@ exports[`Background should render correctly 1`] = `
   background-color: #00f;
   position: fixed;
   background-color: #00f;
+  -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-background-position: center;
   background-position: center;
 }
 

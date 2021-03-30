@@ -1,1 +1,1 @@
-export const shadows: { [key: string]: string } = {}
+export type Shadows = { [key: string]: string }

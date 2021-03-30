@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Modal should render correctly 1`] = `
-<Unknown
+<Modal
   onClick={[Function]}
   onClose={[Function]}
   opacity="large"
   visible={true}
 >
   Something
-</Unknown>
+</Modal>
 `;

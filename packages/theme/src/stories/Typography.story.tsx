@@ -4,7 +4,7 @@ import { Column, Layout, List, Text } from '@atlantis-lab/design'
 import { storiesOf }                  from '@storybook/react'
 
 import { Garniture, Size }            from './components'
-import { fontFaces, fontSizes }       from '../theme'
+import { fontFaces, fontSizes }       from './theme'
 
 fontFaces.sort((a, b) => b.weight - a.weight).sort((a, b) => (a.family > b.family ? 1 : -1))
 

@@ -3,7 +3,7 @@ import React                                  from 'react'
 import { Column, Layout, List, Sample, Text } from '@atlantis-lab/design'
 import { storiesOf }                          from '@storybook/react'
 
-import { shadows }                            from '../theme'
+import { shadows }                            from './theme'
 
 storiesOf('Дизайн Токены', module).add('Тени', () => (
   <Column>

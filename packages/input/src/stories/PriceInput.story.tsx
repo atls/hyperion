@@ -1,5 +1,4 @@
 import React          from 'react'
-import { useTheme }   from '@emotion/react'
 
 import { PriceInput } from '../index'
 
@@ -21,22 +20,17 @@ export const ExamplePriceInput = ({
   height,
   minHeight,
   minWidth,
-}: ExampleProps) => {
-  const theme = useTheme()
-
-  return (
-    <PriceInput
-      placeholder={placeholder}
-      border={border}
-      offset={offset}
-      width={width}
-      height={height}
-      minHeight={minHeight}
-      minWidth={minWidth}
-      theme={theme}
-    />
-  )
-}
+}: ExampleProps) => (
+  <PriceInput
+    placeholder={placeholder}
+    border={border}
+    offset={offset}
+    width={width}
+    height={height}
+    minHeight={minHeight}
+    minWidth={minWidth}
+  />
+)
 
 export default {
   title: 'Input',

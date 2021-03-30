@@ -30,7 +30,7 @@ it('Button should render correctly', () => {
         activeBackgroundColor='green'
       >
         Button
-      </Button>
+      </Button>,
     )
     .toJSON()
 

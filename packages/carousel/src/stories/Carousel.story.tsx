@@ -1,7 +1,7 @@
 import React                        from 'react'
-import { useTheme }                 from '@emotion/react'
 
 import { Box, Column, Layout, Row } from '@atlantis-lab/layout'
+import { useTheme }                 from '@emotion/react'
 
 import { Carousel }                 from '../index'
 import { CarouselProps }            from '../types'
@@ -62,7 +62,7 @@ export const ExampleCarousel = ({
       theme={theme}
     >
       {helperArray(10).map((i) => (
-        <Card text={'placeholder text '.repeat(15)} name={`Slide no${i}`} />
+        <Card key={i} text={'placeholder text '.repeat(15)} name={`Slide no${i}`} />
       ))}
     </Carousel>
   )

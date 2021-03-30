@@ -3,6 +3,206 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.53 (2021-03-25)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.52 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.51 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.50 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.49 (2021-03-17)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.48 (2021-03-17)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.47 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.46 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.45 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.44 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.43 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.42 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.41 (2021-03-09)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.40 (2021-03-09)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.39 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.38 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.37 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.36 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.35 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.34 (2021-02-28)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.33 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.32 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.31 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.30 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
+## 0.5.29 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
 ## 0.5.28 (2021-02-26)
 
 **Note:** Version bump only for package @atlantis-lab/hamburger

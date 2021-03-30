@@ -3,6 +3,206 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.54 (2021-03-25)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.53 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.52 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.51 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.50 (2021-03-17)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.49 (2021-03-17)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.48 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.47 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.46 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.45 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.44 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.43 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.42 (2021-03-09)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.41 (2021-03-09)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.40 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.39 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.38 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.37 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.36 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.35 (2021-02-28)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.34 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.33 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.32 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.31 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
+## 0.7.30 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/carousel
+
+
+
+
+
 ## 0.7.29 (2021-02-26)
 
 **Note:** Version bump only for package @atlantis-lab/carousel

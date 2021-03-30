@@ -3,6 +3,206 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.53 (2021-03-25)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.52 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.51 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.50 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.49 (2021-03-17)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.48 (2021-03-17)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.47 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.46 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.45 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.44 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.43 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.42 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.41 (2021-03-09)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.40 (2021-03-09)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.39 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.38 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.37 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.36 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.35 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.34 (2021-02-28)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.33 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.32 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.31 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.30 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
+## 0.2.29 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/state
+
+
+
+
+
 ## 0.2.28 (2021-02-26)
 
 **Note:** Version bump only for package @atlantis-lab/state

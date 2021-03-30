@@ -3,6 +3,206 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.64 (2021-03-25)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.63 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.62 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.61 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.60 (2021-03-17)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.59 (2021-03-17)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.58 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.57 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.56 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.55 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.54 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.53 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.52 (2021-03-09)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.51 (2021-03-09)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.50 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.49 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.48 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.47 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.46 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.45 (2021-02-28)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.44 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.43 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.42 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.41 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
+## 0.3.40 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/modal
+
+
+
+
+
 ## 0.3.39 (2021-02-26)
 
 **Note:** Version bump only for package @atlantis-lab/modal
