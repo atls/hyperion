@@ -1,7 +1,8 @@
-import React          from 'react'
-import renderer       from 'react-test-renderer'
+import React             from 'react'
+import renderer          from 'react-test-renderer'
+import { ThemeProvider } from 'emotion-theming'
 
-import { PriceInput } from '../src/index'
+import { PriceInput }    from '../src/index'
 
 jest.mock('react-text-mask', () => (props) => <input type='text' {...{ ...props }} />)
 
@@ -36,7 +37,11 @@ it('PriceInput should render correctly', () => {
   }
 
   const tree = renderer
-    .create(<PriceInput placeholder='Placeholder' theme={defaultTheme} onChange={Function} />)
+    .create(
+      <ThemeProvider theme={defaultTheme}>
+        <PriceInput placeholder='Placeholder' onChange={Function} />
+      </ThemeProvider>,
+    )
     .toJSON()
 
   expect(tree).toMatchSnapshot()

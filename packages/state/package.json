@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/state",
   "repository": "git@github.com:Atlantis-Lab/uikit.git",
-  "version": "0.2.28",
+  "version": "0.2.53",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -18,13 +18,10 @@
   },
   "dependencies": {
     "@types/jest": "^26.0.20",
-    "react": "16.13.1",
+    "react": "17.0.1",
     "react-test-renderer": "^17.0.1"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "devDependencies": {
-    "@atlantis-lab/config": "^0.1.9"
   }
 }

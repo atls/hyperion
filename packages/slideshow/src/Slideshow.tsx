@@ -15,7 +15,7 @@ const Container = styled.div<any>(
     position: 'relative',
     touchAction: 'pan-y',
   },
-  layout
+  layout,
 )
 
 const SpaceCreator = styled.div<any>({

@@ -3,6 +3,206 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.54 (2021-03-25)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.53 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.52 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.51 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.50 (2021-03-17)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.49 (2021-03-17)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.48 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.47 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.46 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.45 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.44 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.43 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.42 (2021-03-09)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.41 (2021-03-09)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.40 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.39 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.38 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.37 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.36 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.35 (2021-02-28)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.34 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.33 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.32 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.31 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
+## 0.6.30 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/icons-manager
+
+
+
+
+
 ## 0.6.29 (2021-02-26)
 
 **Note:** Version bump only for package @atlantis-lab/icons-manager

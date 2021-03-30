@@ -1,10 +1,11 @@
-import prettierConfig from '@atlantis-lab/prettier-config'
 import svgr           from '@svgr/core'
 import camelcase      from 'camelcase'
 import fs             from 'fs-extra-promise'
 import glob           from 'glob-promise'
 import path           from 'path'
 import prettier       from 'prettier'
+
+import prettierConfig from '@atlantis-lab/prettier-config'
 
 const TARGET_DIR = path.join(__dirname, 'src')
 
@@ -25,7 +26,7 @@ const read = (files) =>
         pascalCase: true,
       }).replace('50+', 'FiftyPlus')}Icon`,
       source: (await fs.readFileAsync(iconPath)).toString(),
-    }))
+    })),
   )
 
 const compile = (icons) =>
@@ -38,9 +39,9 @@ const compile = (icons) =>
           icon: true,
           template: svgrTemplate,
         },
-        { componentName: icon.name.replace('50+', 'FiftyPlus') }
+        { componentName: icon.name.replace('50+', 'FiftyPlus') },
       ),
-    }))
+    })),
   )
 
 const save = async (sources) => {
@@ -51,16 +52,16 @@ const save = async (sources) => {
         `/* eslint-disable */\n${prettier.format(source.code, {
           parser: 'babel',
           ...prettierConfig,
-        })}`
-      )
-    )
+        })}`,
+      ),
+    ),
   )
 }
 
 const createIndex = (sources) =>
   fs.writeFileAsync(
     path.join(TARGET_DIR, 'index.ts'),
-    sources.map((source) => `export * from './${source.name}'`).join('\n')
+    sources.map((source) => `export * from './${source.name}'`).join('\n'),
   )
 
 const build = async () => {

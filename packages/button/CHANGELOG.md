@@ -3,6 +3,206 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.8.54 (2021-03-25)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.53 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.52 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.51 (2021-03-24)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.50 (2021-03-17)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.49 (2021-03-17)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.48 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.47 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.46 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.45 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.44 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.43 (2021-03-10)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.42 (2021-03-09)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.41 (2021-03-09)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.40 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.39 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.38 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.37 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.36 (2021-03-08)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.35 (2021-02-28)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.34 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.33 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.32 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.31 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
+## 1.8.30 (2021-02-26)
+
+**Note:** Version bump only for package @atlantis-lab/button
+
+
+
+
+
 ## 1.8.29 (2021-02-26)
 
 **Note:** Version bump only for package @atlantis-lab/button

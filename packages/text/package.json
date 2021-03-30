@@ -1,6 +1,7 @@
 {
   "name": "@atlantis-lab/text",
-  "version": "0.0.2",
+  "repository": "git@github.com:Atlantis-Lab/uikit.git",
+  "version": "0.0.27",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -16,18 +17,17 @@
     "postpack": "pubflow restore"
   },
   "devDependencies": {
-    "@atlantis-lab/config": "^0.1.9",
-    "@atlantis-lab/design": "0.0.8",
-    "@atlantis-lab/theme": "0.0.3",
+    "@atlantis-lab/design": "0.0.33",
+    "@atlantis-lab/theme": "0.0.28",
     "@storybook/addon-knobs": "^6.1.18",
     "@storybook/react": "^6.1.18",
     "@types/jest": "^26.0.20",
     "react-test-renderer": "^17.0.1"
   },
   "dependencies": {
-    "@emotion/styled": "^10.0.0",
-    "@types/styled-system": "5.1.5",
-    "react": "^16.9.0",
+    "@emotion/styled": "^11.0.0",
+    "@types/styled-system": "5.1.10",
+    "react": "^17.0.0",
     "styled-system": "5.1.5"
   },
   "publishConfig": {

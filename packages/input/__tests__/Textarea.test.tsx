@@ -1,6 +1,6 @@
 import React             from 'react'
 import renderer          from 'react-test-renderer'
-import { ThemeProvider } from '@emotion/react'
+import { ThemeProvider } from 'emotion-theming'
 
 import { Textarea }      from '../src/index'
 
@@ -38,7 +38,7 @@ it('Textarea should render correctly', () => {
     .create(
       <ThemeProvider theme={defaultTheme}>
         <Textarea placeholder='Placeholder' border='1px solid black' />
-      </ThemeProvider>
+      </ThemeProvider>,
     )
     .toJSON()
 
