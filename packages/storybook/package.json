@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "start-storybook -p 8001 -c ./src",
-    "build": "build-storybook -c ./src"
+    "build": "build-storybook -c ./src -o dist"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
