@@ -10,7 +10,7 @@
     "checkcommit": "actl precommit",
     "postinstall": "lerna run compile",
     "build": "lerna run build",
-    "storybook": "yarn workspace @atlantis-lab/storybook storybook"
+    "storybook": "yarn workspace @atlantis-lab/storybook dev"
   },
   "devDependencies": {
     "@atlantis-lab/actl": "^0.4.23",
