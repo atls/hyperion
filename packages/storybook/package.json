@@ -4,8 +4,9 @@
   "version": "0.0.55",
   "license": "MIT",
   "scripts": {
-    "storybook": "start-storybook --ci -p 6006 -c ./src",
-    "build-storybook": "build-storybook"
+    "clean": "rm -rf dist",
+    "dev": "start-storybook -p 8001 -c ./src",
+    "build-storybook": "build-storybook -c ./src -o dist"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
