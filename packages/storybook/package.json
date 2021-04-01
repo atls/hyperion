@@ -16,7 +16,7 @@
     "@storybook/addon-links": "^6.1.15",
     "@storybook/react": "^6.1.15",
     "babel-loader": "^8.2.2",
-    "emotion-theming": "10.0.27",
+    "emotion-theming": "11.0.0",
     "react": "^17.0.0"
   },
   "publishConfig": {
