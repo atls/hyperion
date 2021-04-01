@@ -16147,10 +16147,10 @@ rc-menu@^7.3.0:
     resize-observer-polyfill "^1.5.0"
     shallowequal "^1.1.0"
 
-rc-select@9.2.2:
-  version "9.2.2"
-  resolved "https://registry.yarnpkg.com/rc-select/-/rc-select-9.2.2.tgz#c21b3b9c74aad4ef78bf7841ca47f3be2d0ab28d"
-  integrity sha512-+NXatBt/wrT03L2e6hDEQfvMG4ihrQymuMtbDVi9+99Qlq2Ip7rASE/5XUYR2bOak7Ce9xXUckfKwhN3Jpp4MA==
+rc-select@9.2.3:
+  version "9.2.3"
+  resolved "https://registry.yarnpkg.com/rc-select/-/rc-select-9.2.3.tgz#64340e2d6ef64e8bc3cfc6f468ffd28625589ac2"
+  integrity sha512-WhswxOMWiNnkXRbxyrj0kiIvyCfo/BaRPaYbsDetSIAU2yEDwKHF798blCP5u86KLOBKBvtxWLFCkSsQw1so5w==
   dependencies:
     babel-runtime "^6.23.0"
     classnames "2.x"
