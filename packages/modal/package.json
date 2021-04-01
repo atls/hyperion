@@ -17,7 +17,7 @@
     "postpack": "pubflow restore"
   },
   "dependencies": {
-    "framer-motion": "3.10.6",
+    "framer-motion": "4.1.2",
     "global": "4.4.0",
     "react-scrolllock": "5.0.1",
     "styled-system": "5.1.5"
