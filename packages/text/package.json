@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/text",
   "repository": "git@github.com:Atlantis-Lab/uikit.git",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -17,8 +17,8 @@
     "postpack": "pubflow restore"
   },
   "devDependencies": {
-    "@atlantis-lab/design": "0.0.37",
-    "@atlantis-lab/theme": "0.0.32",
+    "@atlantis-lab/design": "0.0.38",
+    "@atlantis-lab/theme": "0.0.33",
     "@storybook/addon-knobs": "^6.1.18",
     "@storybook/react": "^6.1.18",
     "@types/jest": "^26.0.20",
