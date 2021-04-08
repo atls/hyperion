@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layer should render layer correctly 1`] = `
+.emotion-0 {
+  border: 1px solid black;
+}
+
+<div
+  id="appRoot"
+>
+  <div
+    className="emotion-0"
+  >
+    Portal
+  </div>
+</div>
+`;
