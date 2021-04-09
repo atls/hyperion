@@ -8,7 +8,13 @@ export const ExampleLayer = ({ onClickOutside = true }: { onClickOutside: boolea
   return (
     <>
       <button type='button'>Fake button</button>
-      <Layer active={active} setActive={setActive} border='1px solid red' borderRadius='50' padding={100}>
+      <Layer
+        active={active}
+        setActive={setActive}
+        border='1px solid red'
+        borderRadius='50'
+        padding={100}
+      >
         It wont disappear onClickInside
       </Layer>
       <button type='button' onClick={() => setActive(!active)}>
