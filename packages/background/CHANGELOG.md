@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.47 (2021-04-10)
+
+**Note:** Version bump only for package @atlantis-lab/background
+
+
+
+
+
 ## 0.0.46 (2021-04-01)
 
 **Note:** Version bump only for package @atlantis-lab/background
