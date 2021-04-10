@@ -1,7 +1,5 @@
 import React            from 'react'
 
-import { useTheme }     from '@emotion/react'
-
 import { IconsManager } from '../index'
 
 type ExampleProps = {
@@ -17,10 +15,8 @@ export const ExampleIconsManager = ({
   hoverColor = 'yellow',
   clickedColor = 'black',
 }: ExampleProps) => {
-  const theme = useTheme()
-
   return (
-    <IconsManager theme={theme} color={color} hoverColor={hoverColor} clickedColor={clickedColor}>
+    <IconsManager color={color} hoverColor={hoverColor} clickedColor={clickedColor}>
       <Icon />
     </IconsManager>
   )
