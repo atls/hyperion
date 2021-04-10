@@ -1,6 +1,6 @@
 {
   "name": "@atlantis-lab/storybook",
-  "repository": "git@github.com:Atlantis-Lab/uikit.git",
+  "repository": "git@github.com:atls/uikit.git",
   "version": "0.0.65",
   "license": "MIT",
   "scripts": {

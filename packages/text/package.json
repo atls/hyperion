@@ -1,6 +1,6 @@
 {
   "name": "@atlantis-lab/text",
-  "repository": "git@github.com:Atlantis-Lab/uikit.git",
+  "repository": "git@github.com:atls/uikit.git",
   "version": "0.0.38",
   "license": "MIT",
   "main": "dist/index.js",

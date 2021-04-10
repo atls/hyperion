@@ -1,6 +1,6 @@
 {
   "name": "@atlantis-lab/carousel",
-  "repository": "git@github.com:Atlantis-Lab/uikit.git",
+  "repository": "git@github.com:atls/uikit.git",
   "version": "0.7.65",
   "license": "MIT",
   "main": "dist/index.js",

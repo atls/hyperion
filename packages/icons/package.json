@@ -1,6 +1,6 @@
 {
   "name": "@atlantis-lab/icons",
-  "repository": "git@github.com:Atlantis-Lab/uikit.git",
+  "repository": "git@github.com:atls/uikit.git",
   "version": "0.5.66",
   "license": "MIT",
   "main": "dist/index.js",
