@@ -53,7 +53,6 @@ export const Carousel = ({
   controlTop,
   isOverflowHidden,
   isSquareControls,
-  theme,
 }) => {
   const [enableTransition, setEnableTransition] = useState(true)
   const [innerWidth, setInnerWidth] = useState(null)
@@ -181,7 +180,6 @@ export const Carousel = ({
         left={controlLeft}
         top={controlTop}
         isSquareControls={isSquareControls}
-        theme={theme}
       >
         {!isSquareControls && <ArrowBackwardIcon width={24} height={24} />}
         {isSquareControls && <ArrowLeftIcon width={20} height={10} />}
@@ -237,7 +235,6 @@ export const Carousel = ({
         right={controlRight}
         top={controlTop}
         isSquareControls={isSquareControls}
-        theme={theme}
       >
         {!isSquareControls && <ArrowForwardIcon width={24} height={24} />}
         {isSquareControls && <ArrowRightIcon width={20} height={10} />}
