@@ -25,7 +25,7 @@ it('IconsManager should render correctly', () => {
 
   const tree = renderer
     .create(
-      <IconsManager theme={defaultTheme} color='red' hoverColor='yellow' clickedColor='black'>
+      <IconsManager color='red' hoverColor='yellow' clickedColor='black'>
         <Icon />
       </IconsManager>,
     )

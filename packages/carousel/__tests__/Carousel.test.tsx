@@ -31,7 +31,6 @@ it('Carousel should render correctly', () => {
         controlTop={100}
         isOverflowHidden={false}
         isSquareControls={false}
-        theme={defaultTheme}
       >
         <h1>{'bigtext'.repeat(100)}</h1>
       </Carousel>,
