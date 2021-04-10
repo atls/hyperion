@@ -1,6 +1,6 @@
 {
   "name": "@atlantis-lab/progress",
-  "repository": "git@github.com:Atlantis-Lab/uikit.git",
+  "repository": "git@github.com:atls/uikit.git",
   "version": "0.2.65",
   "license": "MIT",
   "main": "dist/index.js",
