@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/storybook",
   "repository": "git@github.com:atls/uikit.git",
-  "version": "0.0.65",
+  "version": "0.0.66",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist",
