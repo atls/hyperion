@@ -27,7 +27,7 @@
   "dependencies": {
     "@emotion/styled": "^11.0.0",
     "@types/styled-system": "5.1.10",
-    "react": "^17.0.0",
+    "react": "^17.0.1",
     "styled-system": "5.1.5"
   },
   "publishConfig": {

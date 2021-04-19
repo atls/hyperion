@@ -17,7 +17,7 @@
     "@storybook/react": "^6.1.15",
     "babel-loader": "^8.2.2",
     "emotion-theming": "11.0.0",
-    "react": "^17.0.0"
+    "react": "^17.0.1"
   },
   "publishConfig": {
     "access": "public"
