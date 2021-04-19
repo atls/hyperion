@@ -17,7 +17,7 @@
     "postpack": "pubflow restore"
   },
   "dependencies": {
-    "react": "^17.0.0"
+    "react": "^17.0.1"
   },
   "devDependencies": {
     "@monstrs/publish-flow": "0.1.3"
