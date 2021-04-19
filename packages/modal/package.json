@@ -25,7 +25,7 @@
   "devDependencies": {
     "@emotion/styled": "11.1.5",
     "@types/jest": "^26.0.20",
-    "react": "17.0.1",
+    "react": "17.0.2",
     "react-dom": "17.0.2",
     "styled-tools": "1.7.2"
   },

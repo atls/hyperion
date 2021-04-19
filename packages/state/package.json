@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@types/jest": "^26.0.20",
-    "react": "17.0.1",
+    "react": "17.0.2",
     "react-test-renderer": "^17.0.1"
   },
   "publishConfig": {

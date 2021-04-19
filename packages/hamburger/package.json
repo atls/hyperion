@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@emotion/styled": "^11.0.0",
-    "react": "^17.0.0",
+    "react": "^17.0.1",
     "styled-tools": "^1.7.0"
   },
   "publishConfig": {
