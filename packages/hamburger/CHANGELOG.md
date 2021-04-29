@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.66 (2021-04-29)
+
+**Note:** Version bump only for package @atlantis-lab/hamburger
+
+
+
+
+
 ## 0.5.65 (2021-04-10)
 
 **Note:** Version bump only for package @atlantis-lab/hamburger
