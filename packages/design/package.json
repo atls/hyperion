@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/design",
   "repository": "git@github.com:atls/uikit.git",
-  "version": "0.0.45",
+  "version": "0.0.46",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
