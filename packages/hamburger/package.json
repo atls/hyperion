@@ -1,7 +1,7 @@
 {
   "name": "@atlantis-lab/hamburger",
   "repository": "git@github.com:atls/uikit.git",
-  "version": "0.5.68",
+  "version": "0.5.69",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
