@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`withState should provide all hocs to the component 1`] = `
-<button
-  type="submit"
->
-  false, false and false
-</button>
-`;
