@@ -1,30 +1,15 @@
 {
+  "name": "ui",
   "license": "BSD 3-Clause",
   "private": true,
-  "scripts": {
-    "lint": "actl lint",
-    "test": "actl test",
-    "commit": "actl commit",
-    "format": "actl format",
-    "typecheck": "actl typecheck",
-    "checkcommit": "actl precommit",
-    "postinstall": "lerna run compile",
-    "build": "lerna run build",
-    "storybook": "yarn workspace @atlantis-lab/storybook dev"
-  },
   "devDependencies": {
-    "@atlantis-lab/actl": "^0.4.23",
+    "@atls/actl-cli": "^0.4.40",
+    "@types/node": "^14.14.41",
     "husky": "6.0.0",
-    "lerna": "4.0.0",
-    "typescript": "4.2.3"
+    "typescript": "^4.2.4"
   },
   "workspaces": [
-    "packages/**/*"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "actl precommit",
-      "commit-msg": "actl commitmsg"
-    }
-  }
+    "ui-parts/*",
+    "ui-proto/*"
+  ]
 }
