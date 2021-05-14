@@ -1,0 +1,23 @@
+{
+  "name": "@au-proto/layout",
+  "repository": "git@github.com:atls/ui.git",
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn app library build",
+    "postpack": "rm -rf dist",
+    "prepack": "yarn run build"
+  },
+  "dependencies": {
+    "@au-parts/layout": "workspace:0.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  }
+}

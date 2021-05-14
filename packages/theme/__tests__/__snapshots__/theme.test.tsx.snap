@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`test suit for theme should render ThemeProvider correctly 1`] = `
-<p>
-  Inside provider
-</p>
-`;
