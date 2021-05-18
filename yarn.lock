@@ -205,7 +205,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/storybook-google-fonts@workspace:storybook/google-fonts":
+"@atls/storybook-google-fonts@workspace:0.0.0, @atls/storybook-google-fonts@workspace:storybook/google-fonts":
   version: 0.0.0-use.local
   resolution: "@atls/storybook-google-fonts@workspace:storybook/google-fonts"
   dependencies:
@@ -231,6 +231,52 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@au-parts/conditional-render@workspace:0.0.0, @au-parts/conditional-render@workspace:ui-parts/conditional-render":
+  version: 0.0.0-use.local
+  resolution: "@au-parts/conditional-render@workspace:ui-parts/conditional-render"
+  dependencies:
+    "@types/react": ^17.0.3
+    react: ^17.0.2
+  peerDependencies:
+    react: ^17.0.1
+  languageName: unknown
+  linkType: soft
+
+"@au-parts/events-state@workspace:0.0.0, @au-parts/events-state@workspace:ui-parts/events-state":
+  version: 0.0.0-use.local
+  resolution: "@au-parts/events-state@workspace:ui-parts/events-state"
+  dependencies:
+    "@types/react": ^17.0.3
+    react: ^17.0.2
+  peerDependencies:
+    react: ^17.0.1
+  languageName: unknown
+  linkType: soft
+
+"@au-parts/input@workspace:ui-parts/input":
+  version: 0.0.0-use.local
+  resolution: "@au-parts/input@workspace:ui-parts/input"
+  dependencies:
+    "@atls/storybook-google-fonts": "workspace:0.0.0"
+    "@au-parts/conditional-render": "workspace:0.0.0"
+    "@au-parts/events-state": "workspace:0.0.0"
+    "@au-parts/layout": "workspace:0.0.0"
+    "@au-parts/styles": "workspace:0.0.0"
+    "@emotion/styled": ^11.3.0
+    "@types/jest": ^26.0.22
+    "@types/react": ^17.0.3
+    "@types/styled-system": ^5.1.11
+    react: ^17.0.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  languageName: unknown
+  linkType: soft
+
 "@au-parts/layout@workspace:0.0.0, @au-parts/layout@workspace:ui-parts/layout":
   version: 0.0.0-use.local
   resolution: "@au-parts/layout@workspace:ui-parts/layout"
@@ -243,6 +289,17 @@ __metadata:
   peerDependencies:
     "@emotion/styled": ^11.1.5
     react: ^17.0.1
+    styled-system: ^5.1.5
+  languageName: unknown
+  linkType: soft
+
+"@au-parts/styles@workspace:0.0.0, @au-parts/styles@workspace:ui-parts/styles":
+  version: 0.0.0-use.local
+  resolution: "@au-parts/styles@workspace:ui-parts/styles"
+  dependencies:
+    "@types/styled-system": ^5.1.11
+    styled-system: ^5.1.5
+  peerDependencies:
     styled-system: ^5.1.5
   languageName: unknown
   linkType: soft
@@ -1394,6 +1451,16 @@ __metadata:
   dependencies:
     "@types/istanbul-lib-report": "*"
   checksum: 8aee794ea2e8065aa83e0a1017420068d10110f5e67f8473f5751e74462509306c451f79db3856e6848507519bf1d4de7d101daede6539701cc4d74b4646acd9
+  languageName: node
+  linkType: hard
+
+"@types/jest@npm:^26.0.22":
+  version: 26.0.23
+  resolution: "@types/jest@npm:26.0.23"
+  dependencies:
+    jest-diff: ^26.0.0
+    pretty-format: ^26.0.0
+  checksum: a015676b78bdc51be6f6315acef10d9106ea8064e3e49143bca3c75b834b61285b45c5f5ccfd049a80107f1e2869a9183cdb5be85816c073ea8dd05852fafdc6
   languageName: node
   linkType: hard
 
@@ -4890,7 +4957,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"jest-diff@npm:^26.6.2":
+"jest-diff@npm:^26.0.0, jest-diff@npm:^26.6.2":
   version: 26.6.2
   resolution: "jest-diff@npm:26.6.2"
   dependencies:
@@ -6537,7 +6604,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"pretty-format@npm:^26.6.2":
+"pretty-format@npm:^26.0.0, pretty-format@npm:^26.6.2":
   version: 26.6.2
   resolution: "pretty-format@npm:26.6.2"
   dependencies:
@@ -7657,6 +7724,13 @@ resolve@^2.0.0-next.3:
     "@styled-system/variant": ^5.1.5
     object-assign: ^4.1.1
   checksum: d19e71b3d3f7ee4f056d1290f117ac73a940ee84688bc7522e061fd0ddbf80f266fc89e4fa425c31442ce31a48bfbee3610e6ef511aa4378d579ff31af29fd0c
+  languageName: node
+  linkType: hard
+
+"styled-tools@npm:^1.7.2":
+  version: 1.7.2
+  resolution: "styled-tools@npm:1.7.2"
+  checksum: 15e58df323ac9dba908737f6cdbbcabf29454e611005b5c9e94508d3cf1a5f44375ae5d3f34618cb0581aaf1ca56684a429d6b3de9af43f00efc42bed6a6f0b6
   languageName: node
   linkType: hard
 
