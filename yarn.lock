@@ -217,9 +217,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@au-admin/theme@workspace:au-admin/theme":
+"@au-admin/theme@workspace:ui-admin/theme":
   version: 0.0.0-use.local
-  resolution: "@au-admin/theme@workspace:au-admin/theme"
+  resolution: "@au-admin/theme@workspace:ui-admin/theme"
   dependencies:
     "@emotion/react": ^11.1.5
     "@types/node": ^14.14.41
@@ -231,9 +231,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@au-parts/conditional-render@workspace:0.0.0, @au-parts/conditional-render@workspace:au-parts/conditional-render":
+"@au-parts/conditional-render@workspace:0.0.0, @au-parts/conditional-render@workspace:ui-parts/conditional-render":
   version: 0.0.0-use.local
-  resolution: "@au-parts/conditional-render@workspace:au-parts/conditional-render"
+  resolution: "@au-parts/conditional-render@workspace:ui-parts/conditional-render"
   dependencies:
     "@types/react": ^17.0.3
     react: ^17.0.2
@@ -242,9 +242,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@au-parts/events-state@workspace:0.0.0, @au-parts/events-state@workspace:au-parts/events-state":
+"@au-parts/events-state@workspace:0.0.0, @au-parts/events-state@workspace:ui-parts/events-state":
   version: 0.0.0-use.local
-  resolution: "@au-parts/events-state@workspace:au-parts/events-state"
+  resolution: "@au-parts/events-state@workspace:ui-parts/events-state"
   dependencies:
     "@types/react": ^17.0.3
     react: ^17.0.2
@@ -253,9 +253,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@au-parts/input@workspace:au-parts/input":
+"@au-parts/input@workspace:ui-parts/input":
   version: 0.0.0-use.local
-  resolution: "@au-parts/input@workspace:au-parts/input"
+  resolution: "@au-parts/input@workspace:ui-parts/input"
   dependencies:
     "@atls/storybook-google-fonts": "workspace:0.0.0"
     "@au-parts/conditional-render": "workspace:0.0.0"
@@ -277,9 +277,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@au-parts/layout@workspace:0.0.0, @au-parts/layout@workspace:au-parts/layout":
+"@au-parts/layout@workspace:0.0.0, @au-parts/layout@workspace:ui-parts/layout":
   version: 0.0.0-use.local
-  resolution: "@au-parts/layout@workspace:au-parts/layout"
+  resolution: "@au-parts/layout@workspace:ui-parts/layout"
   dependencies:
     "@emotion/styled": ^11.3.0
     "@types/react": ^17.0.3
@@ -293,9 +293,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@au-parts/styles@workspace:0.0.0, @au-parts/styles@workspace:au-parts/styles":
+"@au-parts/styles@workspace:0.0.0, @au-parts/styles@workspace:ui-parts/styles":
   version: 0.0.0-use.local
-  resolution: "@au-parts/styles@workspace:au-parts/styles"
+  resolution: "@au-parts/styles@workspace:ui-parts/styles"
   dependencies:
     "@types/styled-system": ^5.1.11
     styled-system: ^5.1.5
@@ -304,9 +304,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@au-proto/layout@workspace:au-proto/layout":
+"@au-proto/layout@workspace:ui-proto/layout":
   version: 0.0.0-use.local
-  resolution: "@au-proto/layout@workspace:au-proto/layout"
+  resolution: "@au-proto/layout@workspace:ui-proto/layout"
   dependencies:
     "@au-parts/layout": "workspace:0.0.0"
   languageName: unknown
