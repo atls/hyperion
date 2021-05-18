@@ -1,0 +1,27 @@
+{
+  "name": "@au-parts/styles",
+  "repository": "git@github.com:atls/ui.git",
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn app library build",
+    "postpack": "rm -rf dist",
+    "prepack": "yarn run build"
+  },
+  "devDependencies": {
+    "@types/styled-system": "^5.1.11",
+    "styled-system": "^5.1.5"
+  },
+  "peerDependencies": {
+    "styled-system": "^5.1.5"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  }
+}
