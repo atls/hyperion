@@ -205,6 +205,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@au-admin/theme@workspace:ui-admin/theme":
+  version: 0.0.0-use.local
+  resolution: "@au-admin/theme@workspace:ui-admin/theme"
+  dependencies:
+    "@emotion/react": ^11.1.5
+    "@types/node": ^14.14.41
+    "@types/react": ^17.0.3
+    react: ^17.0.2
+  peerDependencies:
+    "@emotion/react": ^11.1.5
+    react: ^17.0.1
+  languageName: unknown
+  linkType: soft
+
 "@au-parts/layout@workspace:0.0.0, @au-parts/layout@workspace:ui-parts/layout":
   version: 0.0.0-use.local
   resolution: "@au-parts/layout@workspace:ui-parts/layout"
@@ -781,7 +795,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:11.4.0":
+"@emotion/react@npm:11.4.0, @emotion/react@npm:^11.1.5":
   version: 11.4.0
   resolution: "@emotion/react@npm:11.4.0"
   dependencies:
@@ -1434,14 +1448,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^17.0.3":
-  version: 17.0.5
-  resolution: "@types/react@npm:17.0.5"
+"@types/react@npm:^17.0.2":
+  version: 17.0.6
+  resolution: "@types/react@npm:17.0.6"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: f9793e8113f14122d6ed20643b4fe27d30e10d7c80571a1d238c13f8171864f2a7b337194bf41310724498586ed4560fffd081a2d21e488afbb1aca33534189b
+  checksum: dcd8e559f758de7c856bd24136d9005e2b6fbae3d6d81704ba33c6a8ba787874f738b7aae8cfffd89ee35f05658800c43d7fdb9493b79c06a3bcdc1e37ea4635
   languageName: node
   linkType: hard
 
