@@ -23,6 +23,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."
       },
       {
+        "name": "@atls/storybook-google-fonts",
+        "reference": "workspace:storybook/google-fonts"
+      },
+      {
         "name": "@au-admin/theme",
         "reference": "workspace:ui-admin/theme"
       },
@@ -38,6 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
+      ["@atls/storybook-google-fonts", ["workspace:storybook/google-fonts"]],
       ["@au-admin/theme", ["workspace:ui-admin/theme"]],
       ["@au-parts/layout", ["virtual:27039c0d77b6f258789d6ca8b547f93a3e0a480bf725bf9b0bf96d374cb71aa9115436e8085c7a0672fdbb777df7dd37aba3c96fa238fa0ddf187353cdd993ac#workspace:ui-parts/layout", "workspace:ui-parts/layout"]],
       ["@au-proto/layout", ["workspace:ui-proto/layout"]],
@@ -316,6 +321,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "prettier"
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["@atls/storybook-google-fonts", [
+        ["workspace:storybook/google-fonts", {
+          "packageLocation": "./storybook/google-fonts/",
+          "packageDependencies": [
+            ["@atls/storybook-google-fonts", "workspace:storybook/google-fonts"],
+            ["google-fonts-complete", "npm:2.1.1"],
+            ["google-fonts-loader", "npm:1.0.0"],
+            ["react", "npm:17.0.2"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["@au-admin/theme", [
@@ -4971,6 +4988,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["google-fonts-complete", [
+        ["npm:2.1.1", {
+          "packageLocation": "./.yarn/cache/google-fonts-complete-npm-2.1.1-5be3b4944d-c3cb691b83.zip/node_modules/google-fonts-complete/",
+          "packageDependencies": [
+            ["google-fonts-complete", "npm:2.1.1"],
+            ["postcss", "npm:7.0.35"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["google-fonts-loader", [
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/google-fonts-loader-npm-1.0.0-28f8c6262b-7c95d6ea93.zip/node_modules/google-fonts-loader/",
+          "packageDependencies": [
+            ["google-fonts-loader", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["graceful-fs", [
         ["npm:4.2.6", {
           "packageLocation": "./.yarn/cache/graceful-fs-npm-4.2.6-535b2234f1-84d39c7756.zip/node_modules/graceful-fs/",
@@ -7660,6 +7696,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["postcss", [
+        ["npm:7.0.35", {
+          "packageLocation": "./.yarn/cache/postcss-npm-7.0.35-d0709e0a47-8a979ea979.zip/node_modules/postcss/",
+          "packageDependencies": [
+            ["postcss", "npm:7.0.35"],
+            ["chalk", "npm:2.4.2"],
+            ["source-map", "npm:0.6.1"],
+            ["supports-color", "npm:6.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["prelude-ls", [
         ["npm:1.1.2", {
           "packageLocation": "./.yarn/cache/prelude-ls-npm-1.1.2-a0daac0886-189c969c92.zip/node_modules/prelude-ls/",
@@ -8952,6 +9000,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/supports-color-npm-5.5.0-183ac537bc-edacee6425.zip/node_modules/supports-color/",
           "packageDependencies": [
             ["supports-color", "npm:5.5.0"],
+            ["has-flag", "npm:3.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:6.1.0", {
+          "packageLocation": "./.yarn/cache/supports-color-npm-6.1.0-7d19cd7f55-8682157129.zip/node_modules/supports-color/",
+          "packageDependencies": [
+            ["supports-color", "npm:6.1.0"],
             ["has-flag", "npm:3.0.0"]
           ],
           "linkType": "HARD",
