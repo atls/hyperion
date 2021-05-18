@@ -10,9 +10,9 @@
   },
   "workspaces": [
     "storybook/*",
-    "ui-admin/*",
-    "ui-parts/*",
-    "ui-proto/*"
+    "au-admin/*",
+    "au-parts/*",
+    "au-proto/*"
   ],
   "resolutions": {
     "@types/react": "^17.0.2"
