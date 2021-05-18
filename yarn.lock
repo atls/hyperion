@@ -205,6 +205,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls/storybook-google-fonts@workspace:storybook/google-fonts":
+  version: 0.0.0-use.local
+  resolution: "@atls/storybook-google-fonts@workspace:storybook/google-fonts"
+  dependencies:
+    google-fonts-complete: ^2.1.1
+    google-fonts-loader: ^1.0.0
+    react: ^17.0.2
+  peerDependencies:
+    react: ^17.0.1
+  languageName: unknown
+  linkType: soft
+
 "@au-admin/theme@workspace:ui-admin/theme":
   version: 0.0.0-use.local
   resolution: "@au-admin/theme@workspace:ui-admin/theme"
@@ -4040,6 +4052,22 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
+"google-fonts-complete@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "google-fonts-complete@npm:2.1.1"
+  dependencies:
+    postcss: ^7.0.18
+  checksum: c3cb691b830d93d7504d6526ec40a7d43d1cf0d4d0ce9d8279be7ed72a4d548040125f7f3e3e6b92f74fa654ec18b236272dbe9ceaa6e66d835be4263af2000f
+  languageName: node
+  linkType: hard
+
+"google-fonts-loader@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "google-fonts-loader@npm:1.0.0"
+  checksum: 7c95d6ea93fb1508f1b3953566a8dc910b01c34a03f26584b092a83e1ba9be05c33cdf0032aeaf16dd72e6beaea20a92ed6e208279d74c54a9218e1abe858df2
+  languageName: node
+  linkType: hard
+
 "graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.3, graceful-fs@npm:^4.2.4":
   version: 4.2.6
   resolution: "graceful-fs@npm:4.2.6"
@@ -6447,6 +6475,17 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
+"postcss@npm:^7.0.18":
+  version: 7.0.35
+  resolution: "postcss@npm:7.0.35"
+  dependencies:
+    chalk: ^2.4.2
+    source-map: ^0.6.1
+    supports-color: ^6.1.0
+  checksum: 8a979ea9799dd48399337708a395ddb8cf0e328515201ed35c99f5ba5eaa7688eae65764c570bf49b5be0b106226e2f222abc210de068b3d3da9a9a3bbb70567
+  languageName: node
+  linkType: hard
+
 "prelude-ls@npm:^1.2.1":
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
@@ -7634,6 +7673,15 @@ resolve@^2.0.0-next.3:
   dependencies:
     has-flag: ^3.0.0
   checksum: edacee6425498440744c418be94b0660181aad2a1828bcf2be85c42bd385da2fd8b2b358d9b62b0c5b03ff5cd3e992458d7b8f879d9fb42f2201fe05a4848a29
+  languageName: node
+  linkType: hard
+
+"supports-color@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "supports-color@npm:6.1.0"
+  dependencies:
+    has-flag: ^3.0.0
+  checksum: 86821571295ad9f808d5e0149f13c2b0ca6faaf1325c427b369e6f4b2b1e4759046b7a4ea0e3c3c7f2546035fa2fb0d6a90f31c6c4f751eaedbcdc1b983a08cc
   languageName: node
   linkType: hard
 
