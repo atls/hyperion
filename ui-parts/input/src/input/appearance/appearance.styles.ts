@@ -1,7 +1,7 @@
 import { styleFn }               from 'styled-system'
 
-import { execAndSerialize }      from '@au-parts/styles'
-import { combine }               from '@au-parts/styles'
+import { execAndSerialize }      from '@atls-ui-parts/styles'
+import { combine }               from '@atls-ui-parts/styles'
 
 import { InputAppearanceStyles } from './appearance.interfaces'
 
