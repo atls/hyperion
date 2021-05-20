@@ -1,8 +1,8 @@
 releases:
-  "@au-admin/theme": patch
-  "@au-parts/conditional-render": patch
-  "@au-parts/events-state": patch
-  "@au-parts/input": patch
-  "@au-parts/layout": patch
-  "@au-parts/styles": patch
-  "@au-proto/layout": patch
+  "@atls-ui-admin/theme": patch
+  "@atls-ui-parts/conditional-render": patch
+  "@atls-ui-parts/events-state": patch
+  "@atls-ui-parts/input": patch
+  "@atls-ui-parts/layout": patch
+  "@atls-ui-parts/styles": patch
+  "@atls-ui-proto/layout": patch

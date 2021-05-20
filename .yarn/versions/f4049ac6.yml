@@ -1,5 +1,5 @@
 releases:
-  "@au-parts/conditional-render": patch
-  "@au-parts/events-state": patch
-  "@au-parts/input": patch
-  "@au-parts/styles": patch
+  "@atls-ui-parts/conditional-render": patch
+  "@atls-ui-parts/events-state": patch
+  "@atls-ui-parts/input": patch
+  "@atls-ui-parts/styles": patch
