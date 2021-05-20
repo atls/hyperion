@@ -1,1 +1,1 @@
-export * from '@au-parts/layout'
+export * from '@atls-ui-parts/layout'

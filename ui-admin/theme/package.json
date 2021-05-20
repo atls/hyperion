@@ -1,6 +1,5 @@
 {
-  "name": "@au-admin/theme",
-  "repository": "git@github.com:atls/ui.git",
+  "name": "@atls-ui-admin/theme",
   "version": "0.0.0",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",

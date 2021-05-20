@@ -5,9 +5,9 @@ import { useRef }                           from 'react'
 import styled                               from '@emotion/styled'
 
 import { fontNames, useGoogleFonts }        from '@atls/storybook-google-fonts'
-import { ConditionalRender }                from '@au-parts/conditional-render'
-import { ForwardEventsState }               from '@au-parts/events-state'
-import { Box }                              from '@au-parts/layout'
+import { ConditionalRender }                from '@atls-ui-parts/conditional-render'
+import { ForwardEventsState }               from '@atls-ui-parts/events-state'
+import { Box }                              from '@atls-ui-parts/layout'
 
 import { createAttachmentAppearanceStyles } from './attachment'
 import { createAttachmentBaseStyles }       from './attachment'
