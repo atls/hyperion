@@ -1,7 +1,6 @@
 {
   "name": "@atls/storybook-google-fonts",
   "private": true,
-  "repository": "git@github.com:atls/ui.git",
   "version": "0.0.0",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
