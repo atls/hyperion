@@ -1,8 +1,8 @@
 import { styleFn }               from 'styled-system'
 import { ifProp }                from 'styled-tools'
 
-import { execAndSerialize }      from '@au-parts/styles'
-import { combine }               from '@au-parts/styles'
+import { execAndSerialize }      from '@atls-ui-parts/styles'
+import { combine }               from '@atls-ui-parts/styles'
 
 import { AddonsContainerStyles } from './addons-container.interfaces'
 
