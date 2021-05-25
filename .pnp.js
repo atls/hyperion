@@ -51,6 +51,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:ui-parts/styles"
       },
       {
+        "name": "@atls-ui-proto/input",
+        "reference": "workspace:ui-proto/input"
+      },
+      {
         "name": "@atls-ui-proto/layout",
         "reference": "workspace:ui-proto/layout"
       }
@@ -61,9 +65,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-admin/theme", ["workspace:ui-admin/theme"]],
       ["@atls-ui-parts/conditional-render", ["virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/conditional-render", "workspace:ui-parts/conditional-render"]],
       ["@atls-ui-parts/events-state", ["virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/events-state", "workspace:ui-parts/events-state"]],
-      ["@atls-ui-parts/input", ["workspace:ui-parts/input"]],
+      ["@atls-ui-parts/input", ["virtual:983e90d201be39c4ff8e0a3f68062f8a73ea05cf7709c05aeeb3aa254b7a1e862cebd5d11082eb05a48085a14df845b5a53fbe9ef25ee2a3c2b50144d3b6861f#workspace:ui-parts/input", "workspace:ui-parts/input"]],
       ["@atls-ui-parts/layout", ["virtual:05661ed084282549d2e8c0be1bd6ecb8f024bad5e0c094b66edb1977b4494bc4013d21d7a79374c70845f540c8b4016534937277bba9260d1676f2955ea22484#workspace:ui-parts/layout", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/layout", "workspace:ui-parts/layout"]],
       ["@atls-ui-parts/styles", ["virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/styles", "workspace:ui-parts/styles"]],
+      ["@atls-ui-proto/input", ["workspace:ui-proto/input"]],
       ["@atls-ui-proto/layout", ["workspace:ui-proto/layout"]],
       ["@atls/storybook-google-fonts", ["virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:storybook/google-fonts", "workspace:storybook/google-fonts"]],
       ["ui", ["workspace:."]]
@@ -147,6 +152,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@atls-ui-parts/input", [
+        ["virtual:983e90d201be39c4ff8e0a3f68062f8a73ea05cf7709c05aeeb3aa254b7a1e862cebd5d11082eb05a48085a14df845b5a53fbe9ef25ee2a3c2b50144d3b6861f#workspace:ui-parts/input", {
+          "packageLocation": "./.yarn/$$virtual/@atls-ui-parts-input-virtual-ec2eafd54e/1/ui-parts/input/",
+          "packageDependencies": [
+            ["@atls-ui-parts/input", "virtual:983e90d201be39c4ff8e0a3f68062f8a73ea05cf7709c05aeeb3aa254b7a1e862cebd5d11082eb05a48085a14df845b5a53fbe9ef25ee2a3c2b50144d3b6861f#workspace:ui-parts/input"],
+            ["@atls-ui-parts/conditional-render", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/conditional-render"],
+            ["@atls-ui-parts/events-state", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/events-state"],
+            ["@atls-ui-parts/layout", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/layout"],
+            ["@atls-ui-parts/styles", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/styles"],
+            ["@atls/storybook-google-fonts", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:storybook/google-fonts"],
+            ["@emotion/styled", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#npm:11.3.0"],
+            ["@types/emotion__styled", null],
+            ["@types/jest", "npm:26.0.23"],
+            ["@types/react", "npm:17.0.6"],
+            ["@types/styled-system", "npm:5.1.11"],
+            ["@types/styled-tools", null],
+            ["react", "npm:17.0.2"],
+            ["styled-system", "npm:5.1.5"],
+            ["styled-tools", "npm:1.7.2"]
+          ],
+          "packagePeers": [
+            "@emotion/styled",
+            "@types/emotion__styled",
+            "@types/react",
+            "@types/styled-system",
+            "@types/styled-tools",
+            "react",
+            "styled-system",
+            "styled-tools"
+          ],
+          "linkType": "SOFT",
+        }],
         ["workspace:ui-parts/input", {
           "packageLocation": "./ui-parts/input/",
           "packageDependencies": [
@@ -238,6 +274,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls-ui-parts/styles", "workspace:ui-parts/styles"],
             ["@types/styled-system", "npm:5.1.11"],
             ["styled-system", "npm:5.1.5"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@atls-ui-proto/input", [
+        ["workspace:ui-proto/input", {
+          "packageLocation": "./ui-proto/input/",
+          "packageDependencies": [
+            ["@atls-ui-proto/input", "workspace:ui-proto/input"],
+            ["@atls-ui-parts/conditional-render", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/conditional-render"],
+            ["@atls-ui-parts/input", "virtual:983e90d201be39c4ff8e0a3f68062f8a73ea05cf7709c05aeeb3aa254b7a1e862cebd5d11082eb05a48085a14df845b5a53fbe9ef25ee2a3c2b50144d3b6861f#workspace:ui-parts/input"],
+            ["@emotion/styled", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#npm:11.3.0"],
+            ["@types/react", "npm:17.0.6"],
+            ["@types/styled-system", "npm:5.1.11"],
+            ["react", "npm:17.0.2"],
+            ["styled-system", "npm:5.1.5"],
+            ["styled-tools", "npm:1.7.2"]
           ],
           "linkType": "SOFT",
         }]
