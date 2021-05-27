@@ -5,6 +5,25 @@ __metadata:
   version: 4
   cacheKey: 7
 
+"@atls-ui-admin/button@workspace:ui-admin/button":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-admin/button@workspace:ui-admin/button"
+  dependencies:
+    "@atls-ui-parts/button": "workspace:0.0.0"
+    "@emotion/styled": ^11.3.0
+    "@types/react": ^17.0.3
+    "@types/styled-system": ^5.1.11
+    react: ^17.0.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-admin/theme@workspace:ui-admin/theme":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/theme@workspace:ui-admin/theme"
@@ -16,6 +35,27 @@ __metadata:
   peerDependencies:
     "@emotion/react": ^11.1.5
     react: ^17.0.1
+  languageName: unknown
+  linkType: soft
+
+"@atls-ui-parts/button@workspace:0.0.0, @atls-ui-parts/button@workspace:ui-parts/button":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-parts/button@workspace:ui-parts/button"
+  dependencies:
+    "@atls-ui-parts/styles": "workspace:0.0.1"
+    "@atls/storybook-google-fonts": "workspace:0.0.0"
+    "@emotion/styled": ^11.3.0
+    "@types/jest": ^26.0.22
+    "@types/react": ^17.0.3
+    "@types/styled-system": ^5.1.11
+    react: ^17.0.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
   languageName: unknown
   linkType: soft
 
@@ -105,6 +145,25 @@ __metadata:
     "@emotion/styled": ^11.1.5
     react: ^17.0.1
     styled-system: ^5.1.5
+  languageName: unknown
+  linkType: soft
+
+"@atls-ui-proto/button@workspace:ui-proto/button":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-proto/button@workspace:ui-proto/button"
+  dependencies:
+    "@atls-ui-parts/button": "workspace:0.0.0"
+    "@emotion/styled": ^11.3.0
+    "@types/react": ^17.0.3
+    "@types/styled-system": ^5.1.11
+    react: ^17.0.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
   languageName: unknown
   linkType: soft
 
@@ -8252,6 +8311,7 @@ typescript@^4.2.4:
   resolution: "ui@workspace:."
   dependencies:
     "@atls/actl-cli": ^0.4.40
+    "@types/jest": ^26.0.22
     "@types/node": ^14.14.41
     husky: 6.0.0
     typescript: ^4.2.4

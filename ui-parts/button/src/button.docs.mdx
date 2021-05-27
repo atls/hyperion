@@ -1,0 +1,386 @@
+import { Preview } from '@storybook/addon-docs/blocks'
+import { SyntaxHighlighter } from '@storybook/components'
+import { ArgsTable } from '@storybook/components'
+
+import { Button } from './button.stories'
+
+# Кнопка
+
+- [Описание](#описание)
+- [Нативное представление](#нативное-представление)
+- [Базовое представление](#базовое-представление)
+- [Представление формы](#представление-формы)
+  - [Размер](#размер)
+  - [Равная высота и ширина](#равная-высота-и-ширина)
+  - [Во всю ширину](#во-всю-ширину)
+  - [Отступы](#отступы)
+  - [Круглая](#круглая)
+  - [Скругление](#скругление)
+- [Представление внешнего вида](#представление-внешнего-вида)
+  - [Основная](#основная)
+  - [Второстепенная](#второстепенная)
+  - [Опасное действие](#опасное-действие)
+  - [Ссылка](#ссылка)
+
+## Описание
+
+Кнопки - это интерактивные элементы, которые используются для запуска действий. Они передают призывы к действию пользователю и позволяют пользователям взаимодействовать со страницами различными способами. Метки кнопок показывают, какое действие будет происходить, когда пользователь взаимодействует с ним.
+
+<Preview>
+  <Button size={24}>маленькая</Button>
+  <Button size={36}>стандартная</Button>
+  <Button size={48}>большая</Button>
+  <Button size={36} shape='square'>
+    С
+  </Button>
+  <Button size={36} shape='circle'>
+    К
+  </Button>
+  <Button size={36} rounding={12}>
+    округлая
+  </Button>
+</Preview>
+
+## Нативное представление
+
+HTML-элемент `<button>` создает кликабельную кнопку, которая может быть использована в формах или в любом другом месте документа, который требует простой, стандартной кнопки. По умолчанию, кнопки HTML обычно представлены в стиле, аналогичном стилю хост-платформы, на которой работает user agent, но вы можете изменить внешний вид кнопки, используя CSS.
+
+<Preview>
+  <button type='button'>Нативная</button>
+</Preview>
+
+## Базовое представление
+
+Модифицирует нативную кнопку от предустановленных стилей и поведения браузера в базовое состояние - убирает отступы, обводки, контуры и устанавливает выравнивание по середине.
+
+<Preview>
+  <Button>Базовая</Button>
+</Preview>
+
+## Представление формы
+
+Отвечает за изменение параметров, связанных с формой и размером кнопки - высота, ширина, отступы, скругления и размер текста. Содержит несколько модификаторов:
+
+### Размер
+
+Отвечает за высоту и размер шрифта.
+
+<Preview>
+  <Button size={24}>маленькая</Button>
+  <Button size={36}>стандартная</Button>
+  <Button size={48}>большая</Button>
+</Preview>
+
+### Равная высота и ширина
+
+Устанавливает высоту кнопки, равную его ширине, независимо от размера.
+
+<Preview>
+  <Button size={24} shape='square'>
+    М
+  </Button>
+  <Button size={36} shape='square'>
+    С
+  </Button>
+  <Button size={48} shape='square'>
+    Б
+  </Button>
+</Preview>
+
+### Во всю ширину
+
+Кнопка заполняет всю ширину контейнера, в котором находится.
+
+<Preview>
+  <Button size={36} fill>
+    Во всю ширину
+  </Button>
+</Preview>
+
+### Круглая
+
+Возможность сделать кнопку круглой.
+
+<Preview>
+  <Button size={36} shape='circle'>
+    К
+  </Button>
+</Preview>
+
+### Скругление
+
+Детальное управление скругление кнопки.
+
+<Preview>
+  <Button size={36} rounding={0}>
+    без скругления
+  </Button>
+  <Button size={36} rounding={4}>
+    небольшое скругление
+  </Button>
+  <Button size={36} rounding={12}>
+    округлая
+  </Button>
+</Preview>
+
+## Представление внешнего вида
+
+Отвечает за визуальное отображение - цвет заливки, обводки, текста и состояния. Служит для создания различных видов/вариантов кнопок:
+
+### Основная
+
+<Preview>
+  <Button size={36} fontColor='white' backgroundColor='blue'>
+    основная
+  </Button>
+</Preview>
+
+### Второстепенная
+
+<Preview>
+  <Button size={36} fontColor='white' backgroundColor='gray'>
+    второстепенная
+  </Button>
+</Preview>
+
+### Опасное действие
+
+<Preview>
+  <Button size={36} fontColor='white' backgroundColor='red'>
+    опасное действие
+  </Button>
+</Preview>
+
+### Ссылка
+
+<Preview>
+  <Button size={36} fontColor='blue' backgroundColor='transparent'>
+    ссылка
+  </Button>
+</Preview>
+
+## API
+
+<div style={{ height: 32 }} />
+
+<SyntaxHighlighter>{'createBaseStyles()'}</SyntaxHighlighter>
+
+<ArgsTable
+  rows={{
+    numberType: {
+      description: 'Нет параметров',
+      name: 'Нет параметров',
+      table: {
+        defaultValue: 'Нет параметров',
+      },
+    },
+  }}
+/>
+
+<SyntaxHighlighter>{'createContentStyles()'}</SyntaxHighlighter>
+
+<ArgsTable
+  rows={{
+    numberType: {
+      description: 'Нет параметров',
+      name: 'Нет параметров',
+      table: {
+        defaultValue: 'Нет параметров',
+      },
+    },
+  }}
+/>
+
+<SyntaxHighlighter>{'createShapeStyles()'}</SyntaxHighlighter>
+
+<ArgsTable
+  rows={{
+    size: {
+      description: 'Размер',
+      name: 'size',
+      table: {
+        defaultValue: {
+          summary: '-',
+        },
+        type: {
+          summary: 'number',
+        },
+      },
+      type: {
+        required: true,
+      },
+    },
+    fontFamily: {
+      description: 'Семейство шрифта',
+      name: 'fontFamily',
+      table: {
+        defaultValue: {
+          summary: '-',
+        },
+        type: {
+          summary: 'string',
+        },
+      },
+      type: {
+        required: false,
+      },
+    },
+    fontSize: {
+      description: 'Размер шрифта',
+      name: 'fontSize',
+      table: {
+        defaultValue: {
+          summary: '-',
+        },
+        type: {
+          summary: 'number',
+        },
+      },
+      type: {
+        required: false,
+      },
+    },
+    fontWeight: {
+      description: 'Насыщенность шрифта',
+      name: 'fontWeight',
+      table: {
+        defaultValue: {
+          summary: '-',
+        },
+        type: {
+          summary: 'number',
+        },
+      },
+      type: {
+        required: false,
+      },
+    },
+    rounding: {
+      description: 'Скругление',
+      name: 'rounding',
+      table: {
+        defaultValue: {
+          summary: '0',
+        },
+        type: {
+          summary: 'number',
+        },
+      },
+      type: {
+        required: false,
+      },
+    },
+    paddingLeft: {
+      description: 'Отступ слева',
+      name: 'paddingLeft',
+      table: {
+        defaultValue: {
+          summary: '-',
+        },
+        type: {
+          summary: 'number',
+        },
+      },
+      type: {
+        required: false,
+      },
+    },
+    paddingRight: {
+      description: 'Отступ справа',
+      name: 'paddingRight',
+      table: {
+        defaultValue: {
+          summary: '-',
+        },
+        type: {
+          summary: 'number',
+        },
+      },
+      type: {
+        required: false,
+      },
+    },
+    paddingRatio: {
+      description: 'Соотношение оступов от высоты',
+      name: 'paddingRatio',
+      table: {
+        defaultValue: {
+          summary: '0.5',
+        },
+        type: {
+          summary: 'number',
+        },
+      },
+      type: {
+        required: false,
+      },
+    },
+  }}
+/>
+
+<SyntaxHighlighter>{'createAppearanceStyles()'}</SyntaxHighlighter>
+
+<ArgsTable
+  rows={{
+    fontColor: {
+      description: 'Цвет шрифта',
+      name: 'fontColor',
+      table: {
+        defaultValue: {
+          summary: '-',
+        },
+        type: {
+          summary: 'string',
+        },
+      },
+      type: {
+        required: true,
+      },
+    },
+    backgroundColor: {
+      description: 'Цвет заливки',
+      name: 'backgroundColor',
+      table: {
+        defaultValue: {
+          summary: '-',
+        },
+        type: {
+          summary: 'string',
+        },
+      },
+      type: {
+        required: true,
+      },
+    },
+    borderColor: {
+      description: 'Размер шрифта',
+      name: 'borderColor',
+      table: {
+        defaultValue: {
+          summary: 'backgroundColor',
+        },
+        type: {
+          summary: 'string',
+        },
+      },
+      type: {
+        required: false,
+      },
+    },
+    invertedBorderWidth: {
+      description: 'Ширина обводки',
+      name: 'invertedBorderWidth',
+      table: {
+        defaultValue: {
+          summary: '1',
+        },
+        type: {
+          summary: 'number',
+        },
+      },
+      type: {
+        required: false,
+      },
+    },
+  }}
+/>
