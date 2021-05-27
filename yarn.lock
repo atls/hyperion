@@ -92,6 +92,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui-parts/text@workspace:0.0.0, @atls-ui-parts/text@workspace:ui-parts/text":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-parts/text@workspace:ui-parts/text"
+  dependencies:
+    "@emotion/styled": ^11.3.0
+    "@types/react": ^17.0.3
+    "@types/styled-system": ^5.1.11
+    react: ^17.0.2
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-proto/input@workspace:ui-proto/input":
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/input@workspace:ui-proto/input"
@@ -117,6 +133,16 @@ __metadata:
   resolution: "@atls-ui-proto/layout@workspace:ui-proto/layout"
   dependencies:
     "@atls-ui-parts/layout": "workspace:0.0.1"
+  languageName: unknown
+  linkType: soft
+
+"@atls-ui-proto/text@workspace:ui-proto/text":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-proto/text@workspace:ui-proto/text"
+  dependencies:
+    "@atls-ui-parts/text": "workspace:0.0.0"
+    "@types/react": ^17.0.3
+    react: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -1547,14 +1573,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^17.0.2":
-  version: 17.0.6
-  resolution: "@types/react@npm:17.0.6"
+"@types/react@npm:^17.0.3":
+  version: 17.0.8
+  resolution: "@types/react@npm:17.0.8"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: dcd8e559f758de7c856bd24136d9005e2b6fbae3d6d81704ba33c6a8ba787874f738b7aae8cfffd89ee35f05658800c43d7fdb9493b79c06a3bcdc1e37ea4635
+  checksum: b59a3abafd240b2880f9e6a11b2b7f75165888260c56e95a77ed10a7dd55570b307fb2356eda7fde2a8e1255d2def11797e4ae9800ae114a1f578546acabda67
   languageName: node
   linkType: hard
 

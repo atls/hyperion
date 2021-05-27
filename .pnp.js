@@ -51,12 +51,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:ui-parts/styles"
       },
       {
+        "name": "@atls-ui-parts/text",
+        "reference": "workspace:ui-parts/text"
+      },
+      {
         "name": "@atls-ui-proto/input",
         "reference": "workspace:ui-proto/input"
       },
       {
         "name": "@atls-ui-proto/layout",
         "reference": "workspace:ui-proto/layout"
+      },
+      {
+        "name": "@atls-ui-proto/text",
+        "reference": "workspace:ui-proto/text"
       }
     ],
     "enableTopLevelFallback": true,
@@ -68,8 +76,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-parts/input", ["virtual:983e90d201be39c4ff8e0a3f68062f8a73ea05cf7709c05aeeb3aa254b7a1e862cebd5d11082eb05a48085a14df845b5a53fbe9ef25ee2a3c2b50144d3b6861f#workspace:ui-parts/input", "workspace:ui-parts/input"]],
       ["@atls-ui-parts/layout", ["virtual:05661ed084282549d2e8c0be1bd6ecb8f024bad5e0c094b66edb1977b4494bc4013d21d7a79374c70845f540c8b4016534937277bba9260d1676f2955ea22484#workspace:ui-parts/layout", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/layout", "workspace:ui-parts/layout"]],
       ["@atls-ui-parts/styles", ["virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/styles", "workspace:ui-parts/styles"]],
+      ["@atls-ui-parts/text", ["virtual:724857ebd92f731dbe22ca19638a1eefd7cdf062f09334ebb849eaae933e2a98886dee3b8808a6fa055d81319d6fa63acb3fb3ef6b1f160b59a6c75b1cb0555c#workspace:ui-parts/text", "workspace:ui-parts/text"]],
       ["@atls-ui-proto/input", ["workspace:ui-proto/input"]],
       ["@atls-ui-proto/layout", ["workspace:ui-proto/layout"]],
+      ["@atls-ui-proto/text", ["workspace:ui-proto/text"]],
       ["@atls/storybook-google-fonts", ["virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:storybook/google-fonts", "workspace:storybook/google-fonts"]],
       ["ui", ["workspace:."]]
     ],
@@ -97,7 +107,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls-ui-admin/theme", "workspace:ui-admin/theme"],
             ["@emotion/react", "virtual:72c331b17fb0576d77b770423bdd2164b43cabf73bc3a7c9fdf98503a6a661ca4a1aa01448401f3bf39a97b4e34cbc32af207798868ef8462528a9c6b1265967#npm:11.4.0"],
             ["@types/node", "npm:14.14.41"],
-            ["@types/react", "npm:17.0.6"],
+            ["@types/react", "npm:17.0.8"],
             ["react", "npm:17.0.2"]
           ],
           "linkType": "SOFT",
@@ -108,7 +118,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/$$virtual/@atls-ui-parts-conditional-render-virtual-070c550466/1/ui-parts/conditional-render/",
           "packageDependencies": [
             ["@atls-ui-parts/conditional-render", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/conditional-render"],
-            ["@types/react", "npm:17.0.6"],
+            ["@types/react", "npm:17.0.8"],
             ["react", "npm:17.0.2"]
           ],
           "packagePeers": [
@@ -121,7 +131,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./ui-parts/conditional-render/",
           "packageDependencies": [
             ["@atls-ui-parts/conditional-render", "workspace:ui-parts/conditional-render"],
-            ["@types/react", "npm:17.0.6"],
+            ["@types/react", "npm:17.0.8"],
             ["react", "npm:17.0.2"]
           ],
           "linkType": "SOFT",
@@ -132,7 +142,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/$$virtual/@atls-ui-parts-events-state-virtual-29fe11f569/1/ui-parts/events-state/",
           "packageDependencies": [
             ["@atls-ui-parts/events-state", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/events-state"],
-            ["@types/react", "npm:17.0.6"],
+            ["@types/react", "npm:17.0.8"],
             ["react", "npm:17.0.2"]
           ],
           "packagePeers": [
@@ -145,7 +155,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./ui-parts/events-state/",
           "packageDependencies": [
             ["@atls-ui-parts/events-state", "workspace:ui-parts/events-state"],
-            ["@types/react", "npm:17.0.6"],
+            ["@types/react", "npm:17.0.8"],
             ["react", "npm:17.0.2"]
           ],
           "linkType": "SOFT",
@@ -164,7 +174,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/styled", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#npm:11.3.0"],
             ["@types/emotion__styled", null],
             ["@types/jest", "npm:26.0.23"],
-            ["@types/react", "npm:17.0.6"],
+            ["@types/react", "npm:17.0.8"],
             ["@types/styled-system", "npm:5.1.11"],
             ["@types/styled-tools", null],
             ["react", "npm:17.0.2"],
@@ -194,7 +204,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls/storybook-google-fonts", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:storybook/google-fonts"],
             ["@emotion/styled", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#npm:11.3.0"],
             ["@types/jest", "npm:26.0.23"],
-            ["@types/react", "npm:17.0.6"],
+            ["@types/react", "npm:17.0.8"],
             ["@types/styled-system", "npm:5.1.11"],
             ["react", "npm:17.0.2"],
             ["styled-system", "npm:5.1.5"],
@@ -210,7 +220,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls-ui-parts/layout", "virtual:05661ed084282549d2e8c0be1bd6ecb8f024bad5e0c094b66edb1977b4494bc4013d21d7a79374c70845f540c8b4016534937277bba9260d1676f2955ea22484#workspace:ui-parts/layout"],
             ["@emotion/styled", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#npm:11.3.0"],
             ["@types/emotion__styled", null],
-            ["@types/react", "npm:17.0.6"],
+            ["@types/react", "npm:17.0.8"],
             ["@types/styled-system", "npm:5.1.11"],
             ["react", "npm:17.0.2"],
             ["styled-system", "npm:5.1.5"]
@@ -226,7 +236,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls-ui-parts/layout", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/layout"],
             ["@emotion/styled", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#npm:11.3.0"],
             ["@types/emotion__styled", null],
-            ["@types/react", "npm:17.0.6"],
+            ["@types/react", "npm:17.0.8"],
             ["@types/styled-system", "npm:5.1.11"],
             ["react", "npm:17.0.2"],
             ["styled-system", "npm:5.1.5"]
@@ -246,7 +256,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@atls-ui-parts/layout", "workspace:ui-parts/layout"],
             ["@emotion/styled", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#npm:11.3.0"],
-            ["@types/react", "npm:17.0.6"],
+            ["@types/react", "npm:17.0.8"],
             ["@types/styled-system", "npm:5.1.11"],
             ["react", "npm:17.0.2"],
             ["styled-system", "npm:5.1.5"]
@@ -278,6 +288,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
+      ["@atls-ui-parts/text", [
+        ["virtual:724857ebd92f731dbe22ca19638a1eefd7cdf062f09334ebb849eaae933e2a98886dee3b8808a6fa055d81319d6fa63acb3fb3ef6b1f160b59a6c75b1cb0555c#workspace:ui-parts/text", {
+          "packageLocation": "./.yarn/$$virtual/@atls-ui-parts-text-virtual-92814c3035/1/ui-parts/text/",
+          "packageDependencies": [
+            ["@atls-ui-parts/text", "virtual:724857ebd92f731dbe22ca19638a1eefd7cdf062f09334ebb849eaae933e2a98886dee3b8808a6fa055d81319d6fa63acb3fb3ef6b1f160b59a6c75b1cb0555c#workspace:ui-parts/text"],
+            ["@emotion/styled", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#npm:11.3.0"],
+            ["@types/emotion__styled", null],
+            ["@types/react", "npm:17.0.8"],
+            ["@types/styled-system", "npm:5.1.11"],
+            ["react", "npm:17.0.2"],
+            ["styled-system", "npm:5.1.5"]
+          ],
+          "packagePeers": [
+            "@types/emotion__styled",
+            "@types/react",
+            "react"
+          ],
+          "linkType": "SOFT",
+        }],
+        ["workspace:ui-parts/text", {
+          "packageLocation": "./ui-parts/text/",
+          "packageDependencies": [
+            ["@atls-ui-parts/text", "workspace:ui-parts/text"],
+            ["@emotion/styled", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#npm:11.3.0"],
+            ["@types/react", "npm:17.0.8"],
+            ["@types/styled-system", "npm:5.1.11"],
+            ["react", "npm:17.0.2"],
+            ["styled-system", "npm:5.1.5"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
       ["@atls-ui-proto/input", [
         ["workspace:ui-proto/input", {
           "packageLocation": "./ui-proto/input/",
@@ -286,7 +328,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls-ui-parts/conditional-render", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/conditional-render"],
             ["@atls-ui-parts/input", "virtual:983e90d201be39c4ff8e0a3f68062f8a73ea05cf7709c05aeeb3aa254b7a1e862cebd5d11082eb05a48085a14df845b5a53fbe9ef25ee2a3c2b50144d3b6861f#workspace:ui-parts/input"],
             ["@emotion/styled", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#npm:11.3.0"],
-            ["@types/react", "npm:17.0.6"],
+            ["@types/react", "npm:17.0.8"],
             ["@types/styled-system", "npm:5.1.11"],
             ["react", "npm:17.0.2"],
             ["styled-system", "npm:5.1.5"],
@@ -301,6 +343,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@atls-ui-proto/layout", "workspace:ui-proto/layout"],
             ["@atls-ui-parts/layout", "virtual:05661ed084282549d2e8c0be1bd6ecb8f024bad5e0c094b66edb1977b4494bc4013d21d7a79374c70845f540c8b4016534937277bba9260d1676f2955ea22484#workspace:ui-parts/layout"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@atls-ui-proto/text", [
+        ["workspace:ui-proto/text", {
+          "packageLocation": "./ui-proto/text/",
+          "packageDependencies": [
+            ["@atls-ui-proto/text", "workspace:ui-proto/text"],
+            ["@atls-ui-parts/text", "virtual:724857ebd92f731dbe22ca19638a1eefd7cdf062f09334ebb849eaae933e2a98886dee3b8808a6fa055d81319d6fa63acb3fb3ef6b1f160b59a6c75b1cb0555c#workspace:ui-parts/text"],
+            ["@types/react", "npm:17.0.8"],
+            ["react", "npm:17.0.2"]
           ],
           "linkType": "SOFT",
         }]
@@ -568,7 +622,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/$$virtual/@atls-storybook-google-fonts-virtual-8c3b2f3c3d/1/storybook/google-fonts/",
           "packageDependencies": [
             ["@atls/storybook-google-fonts", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:storybook/google-fonts"],
-            ["@types/react", "npm:17.0.6"],
+            ["@types/react", "npm:17.0.8"],
             ["google-fonts-complete", "npm:2.1.1"],
             ["google-fonts-loader", "npm:1.0.0"],
             ["react", "npm:17.0.2"]
@@ -1375,7 +1429,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/utils", "npm:1.0.0"],
             ["@emotion/weak-memoize", "npm:0.2.5"],
             ["@types/babel__core", null],
-            ["@types/react", "npm:17.0.6"],
+            ["@types/react", "npm:17.0.8"],
             ["hoist-non-react-statics", "npm:3.3.2"],
             ["react", "npm:17.0.2"]
           ],
@@ -1432,7 +1486,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/utils", "npm:1.0.0"],
             ["@types/babel__core", null],
             ["@types/emotion__react", null],
-            ["@types/react", "npm:17.0.6"],
+            ["@types/react", "npm:17.0.8"],
             ["react", "npm:17.0.2"]
           ],
           "packagePeers": [
@@ -2122,10 +2176,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/react", [
-        ["npm:17.0.6", {
-          "packageLocation": "./.yarn/cache/@types-react-npm-17.0.6-e56f24c908-dcd8e559f7.zip/node_modules/@types/react/",
+        ["npm:17.0.8", {
+          "packageLocation": "./.yarn/cache/@types-react-npm-17.0.8-1688553ccc-b59a3abafd.zip/node_modules/@types/react/",
           "packageDependencies": [
-            ["@types/react", "npm:17.0.6"],
+            ["@types/react", "npm:17.0.8"],
             ["@types/prop-types", "npm:15.7.3"],
             ["@types/scheduler", "npm:0.16.1"],
             ["csstype", "npm:3.0.6"]
