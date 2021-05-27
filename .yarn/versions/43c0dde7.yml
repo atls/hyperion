@@ -1,0 +1,4 @@
+releases:
+  "@atls-ui-admin/button": patch
+  "@atls-ui-parts/button": patch
+  "@atls-ui-proto/button": patch
