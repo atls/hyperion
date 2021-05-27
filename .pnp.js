@@ -59,6 +59,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:ui-parts/styles"
       },
       {
+        "name": "@atls-ui-parts/text",
+        "reference": "workspace:ui-parts/text"
+      },
+      {
         "name": "@atls-ui-proto/button",
         "reference": "workspace:ui-proto/button"
       },
@@ -69,6 +73,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "@atls-ui-proto/layout",
         "reference": "workspace:ui-proto/layout"
+      },
+      {
+        "name": "@atls-ui-proto/text",
+        "reference": "workspace:ui-proto/text"
       }
     ],
     "enableTopLevelFallback": true,
@@ -82,9 +90,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-parts/input", ["virtual:983e90d201be39c4ff8e0a3f68062f8a73ea05cf7709c05aeeb3aa254b7a1e862cebd5d11082eb05a48085a14df845b5a53fbe9ef25ee2a3c2b50144d3b6861f#workspace:ui-parts/input", "workspace:ui-parts/input"]],
       ["@atls-ui-parts/layout", ["virtual:05661ed084282549d2e8c0be1bd6ecb8f024bad5e0c094b66edb1977b4494bc4013d21d7a79374c70845f540c8b4016534937277bba9260d1676f2955ea22484#workspace:ui-parts/layout", "virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:ui-parts/layout", "workspace:ui-parts/layout"]],
       ["@atls-ui-parts/styles", ["virtual:dbe1a421eee484ea0bdb9d0589d44d9184c9819d8f5bfcb1a73e3d85271cc45ecf4365a26e00f2a3256c13de48b40272578801688978809175001fb2693bc747#workspace:ui-parts/styles", "workspace:ui-parts/styles"]],
+      ["@atls-ui-parts/text", ["virtual:724857ebd92f731dbe22ca19638a1eefd7cdf062f09334ebb849eaae933e2a98886dee3b8808a6fa055d81319d6fa63acb3fb3ef6b1f160b59a6c75b1cb0555c#workspace:ui-parts/text", "workspace:ui-parts/text"]],
       ["@atls-ui-proto/button", ["workspace:ui-proto/button"]],
       ["@atls-ui-proto/input", ["workspace:ui-proto/input"]],
       ["@atls-ui-proto/layout", ["workspace:ui-proto/layout"]],
+      ["@atls-ui-proto/text", ["workspace:ui-proto/text"]],
       ["@atls/storybook-google-fonts", ["virtual:dbe1a421eee484ea0bdb9d0589d44d9184c9819d8f5bfcb1a73e3d85271cc45ecf4365a26e00f2a3256c13de48b40272578801688978809175001fb2693bc747#workspace:storybook/google-fonts", "workspace:storybook/google-fonts"]],
       ["ui", ["workspace:."]]
     ],
@@ -356,6 +366,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
+      ["@atls-ui-parts/text", [
+        ["virtual:724857ebd92f731dbe22ca19638a1eefd7cdf062f09334ebb849eaae933e2a98886dee3b8808a6fa055d81319d6fa63acb3fb3ef6b1f160b59a6c75b1cb0555c#workspace:ui-parts/text", {
+          "packageLocation": "./.yarn/$$virtual/@atls-ui-parts-text-virtual-92814c3035/1/ui-parts/text/",
+          "packageDependencies": [
+            ["@atls-ui-parts/text", "virtual:724857ebd92f731dbe22ca19638a1eefd7cdf062f09334ebb849eaae933e2a98886dee3b8808a6fa055d81319d6fa63acb3fb3ef6b1f160b59a6c75b1cb0555c#workspace:ui-parts/text"],
+            ["@emotion/styled", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:11.3.0"],
+            ["@types/emotion__styled", null],
+            ["@types/react", "npm:17.0.8"],
+            ["@types/styled-system", "npm:5.1.11"],
+            ["react", "npm:17.0.2"],
+            ["styled-system", "npm:5.1.5"]
+          ],
+          "packagePeers": [
+            "@types/emotion__styled",
+            "@types/react",
+            "react"
+          ],
+          "linkType": "SOFT",
+        }],
+        ["workspace:ui-parts/text", {
+          "packageLocation": "./ui-parts/text/",
+          "packageDependencies": [
+            ["@atls-ui-parts/text", "workspace:ui-parts/text"],
+            ["@emotion/styled", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:11.3.0"],
+            ["@types/react", "npm:17.0.8"],
+            ["@types/styled-system", "npm:5.1.11"],
+            ["react", "npm:17.0.2"],
+            ["styled-system", "npm:5.1.5"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
       ["@atls-ui-proto/button", [
         ["workspace:ui-proto/button", {
           "packageLocation": "./ui-proto/button/",
@@ -395,6 +437,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@atls-ui-proto/layout", "workspace:ui-proto/layout"],
             ["@atls-ui-parts/layout", "virtual:05661ed084282549d2e8c0be1bd6ecb8f024bad5e0c094b66edb1977b4494bc4013d21d7a79374c70845f540c8b4016534937277bba9260d1676f2955ea22484#workspace:ui-parts/layout"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@atls-ui-proto/text", [
+        ["workspace:ui-proto/text", {
+          "packageLocation": "./ui-proto/text/",
+          "packageDependencies": [
+            ["@atls-ui-proto/text", "workspace:ui-proto/text"],
+            ["@atls-ui-parts/text", "virtual:724857ebd92f731dbe22ca19638a1eefd7cdf062f09334ebb849eaae933e2a98886dee3b8808a6fa055d81319d6fa63acb3fb3ef6b1f160b59a6c75b1cb0555c#workspace:ui-parts/text"],
+            ["@types/react", "npm:17.0.8"],
+            ["react", "npm:17.0.2"]
           ],
           "linkType": "SOFT",
         }]
