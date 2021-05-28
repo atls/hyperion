@@ -65,6 +65,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "@atls-ui-proto/text",
         "reference": "workspace:ui-proto/text"
+      },
+      {
+        "name": "@atls-ui-proto/theme",
+        "reference": "workspace:ui-proto/theme"
       }
     ],
     "enableTopLevelFallback": true,
@@ -80,6 +84,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-proto/input", ["workspace:ui-proto/input"]],
       ["@atls-ui-proto/layout", ["workspace:ui-proto/layout"]],
       ["@atls-ui-proto/text", ["workspace:ui-proto/text"]],
+      ["@atls-ui-proto/theme", ["workspace:ui-proto/theme"]],
       ["@atls/storybook-google-fonts", ["virtual:0adf6a8ae6efe99d22bfda8542d873e3adc926631a85a25f0df739d82119fb12c780f0f348bbecba4d5fc39ac7b5d0c2834e380232526d5e5e8f1fe8ac45c122#workspace:storybook/google-fonts", "workspace:storybook/google-fonts"]],
       ["ui", ["workspace:."]]
     ],
@@ -353,6 +358,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@atls-ui-proto/text", "workspace:ui-proto/text"],
             ["@atls-ui-parts/text", "virtual:724857ebd92f731dbe22ca19638a1eefd7cdf062f09334ebb849eaae933e2a98886dee3b8808a6fa055d81319d6fa63acb3fb3ef6b1f160b59a6c75b1cb0555c#workspace:ui-parts/text"],
+            ["@types/react", "npm:17.0.8"],
+            ["react", "npm:17.0.2"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@atls-ui-proto/theme", [
+        ["workspace:ui-proto/theme", {
+          "packageLocation": "./ui-proto/theme/",
+          "packageDependencies": [
+            ["@atls-ui-proto/theme", "workspace:ui-proto/theme"],
+            ["@emotion/react", "virtual:72c331b17fb0576d77b770423bdd2164b43cabf73bc3a7c9fdf98503a6a661ca4a1aa01448401f3bf39a97b4e34cbc32af207798868ef8462528a9c6b1265967#npm:11.4.0"],
+            ["@types/node", "npm:14.14.41"],
             ["@types/react", "npm:17.0.8"],
             ["react", "npm:17.0.2"]
           ],
