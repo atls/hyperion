@@ -100,7 +100,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-proto/layout", ["workspace:ui-proto/layout"]],
       ["@atls-ui-proto/text", ["workspace:ui-proto/text"]],
       ["@atls-ui-proto/theme", ["workspace:ui-proto/theme"]],
-      ["@atls/storybook-google-fonts", ["virtual:dbe1a421eee484ea0bdb9d0589d44d9184c9819d8f5bfcb1a73e3d85271cc45ecf4365a26e00f2a3256c13de48b40272578801688978809175001fb2693bc747#workspace:storybook/google-fonts", "workspace:storybook/google-fonts"]],      ["ui", ["workspace:."]]
+      ["@atls/storybook-google-fonts", ["virtual:dbe1a421eee484ea0bdb9d0589d44d9184c9819d8f5bfcb1a73e3d85271cc45ecf4365a26e00f2a3256c13de48b40272578801688978809175001fb2693bc747#workspace:storybook/google-fonts", "workspace:storybook/google-fonts"]],
+      ["ui", ["workspace:."]]
     ],
     "fallbackPool": [
     ],
@@ -462,7 +463,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./ui-proto/theme/",
           "packageDependencies": [
             ["@atls-ui-proto/theme", "workspace:ui-proto/theme"],
-            ["@emotion/react", "virtual:72c331b17fb0576d77b770423bdd2164b43cabf73bc3a7c9fdf98503a6a661ca4a1aa01448401f3bf39a97b4e34cbc32af207798868ef8462528a9c6b1265967#npm:11.4.0"],
+            ["@emotion/react", "virtual:05fb87b9daa9a7aaf7f55a840525a62e407f1d962b52d4228e75423837e0ffbd1748a7b6f34aa46b762da7f52a5ecd4e2f90d8e6f9e044c30221a2493f8c290c#npm:11.4.0"],
             ["@types/node", "npm:14.14.41"],
             ["@types/react", "npm:17.0.8"],
             ["react", "npm:17.0.2"]
