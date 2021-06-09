@@ -11,8 +11,8 @@ const builtinSignatures = {
 
 const Currency: FC<CurrencyProps> = ({ amount, currency, currencySignatures, ...props }) => (
   <Text {...props}>
-    `${amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '\u00A0')}$
-    {(currencySignatures && currencySignatures[currency]) || currency}`
+    {amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '\u00A0')}
+    {(currencySignatures && currencySignatures[currency]) || currency}
   </Text>
 )
 
