@@ -13,6 +13,7 @@
     "storybook/*",
     "ui-admin/*",
     "ui-parts/*",
-    "ui-proto/*"
+    "ui-proto/*",
+    "ui/*"
   ]
 }

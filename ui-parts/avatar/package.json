@@ -1,0 +1,43 @@
+{
+  "name": "@atls-ui-parts/avatar",
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn app library build",
+    "postpack": "rm -rf dist",
+    "prepack": "yarn run build"
+  },
+  "dependencies": {
+    "@atls-ui-parts/styles": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "@atls-ui-parts/image": "workspace:0.0.0",
+    "@atls-ui-parts/scalable-content": "workspace:0.0.0",
+    "@atls-ui-parts/text-transform": "workspace:0.0.0",
+    "@atls/storybook-google-fonts": "workspace:0.0.0",
+    "@emotion/styled": "^11.3.0",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.41",
+    "@types/react": "^17.0.3",
+    "@types/styled-system": "^5.1.11",
+    "react": "^17.0.2",
+    "string-to-color": "^2.2.2",
+    "styled-system": "^5.1.5",
+    "styled-tools": "^1.7.2"
+  },
+  "peerDependencies": {
+    "@emotion/styled": "^11.1.5",
+    "react": "^17.0.1",
+    "styled-system": "^5.1.5",
+    "styled-tools": "^1.7.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  }
+}
