@@ -1,0 +1,3 @@
+releases:
+  "@atls-ui-parts/checkbox": patch
+  "@atls-ui-parts/hidden-input": patch
