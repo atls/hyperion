@@ -1,0 +1,6 @@
+releases:
+  "@atls-ui-admin/button": patch
+  "@atls-ui-parts/avatar": patch
+  "@atls-ui-parts/button": patch
+  "@atls-ui-proto/avatar": patch
+  "@atls-ui-proto/button": patch
