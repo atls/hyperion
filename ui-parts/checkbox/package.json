@@ -1,0 +1,40 @@
+{
+  "name": "@atls-ui-parts/checkbox",
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn app library build",
+    "postpack": "rm -rf dist",
+    "prepack": "yarn run build"
+  },
+  "dependencies": {
+    "@atls-ui-parts/styles": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "@atls-ui-parts/conditional-render": "workspace:0.0.1",
+    "@atls-ui-parts/hidden-input": "workspace:0.0.0",
+    "@atls/storybook-google-fonts": "workspace:0.0.0",
+    "@emotion/styled": "^11.3.0",
+    "@types/jest": "^26.0.22",
+    "@types/react": "^17.0.3",
+    "@types/styled-system": "^5.1.11",
+    "react": "^17.0.2",
+    "styled-system": "^5.1.5",
+    "styled-tools": "^1.7.2"
+  },
+  "peerDependencies": {
+    "@emotion/styled": "^11.1.5",
+    "react": "^17.0.1",
+    "styled-system": "^5.1.5",
+    "styled-tools": "^1.7.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  }
+}
