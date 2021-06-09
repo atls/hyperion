@@ -78,8 +78,7 @@ export const Avatar = ({
 
 Avatar.args = {
   contentType: 'scalable-text',
-  src:
-    'https://media.istockphoto.com/vectors/default-profile-picture-avatar-photo-placeholder-vector-illustration-vector-id1223671392?s=170x170',
+  src: 'https://media.istockphoto.com/vectors/default-profile-picture-avatar-photo-placeholder-vector-illustration-vector-id1223671392?s=170x170',
   text: 'Аватар',
   fontColor: 'white',
   backgroundColor: 'blue',

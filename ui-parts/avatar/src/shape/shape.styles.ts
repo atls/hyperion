@@ -6,19 +6,21 @@ import { combine }           from '@atls-ui-parts/styles'
 
 import { AvatarShapeStyles } from './shape.interfaces'
 
-export const createBaseShapeStyles: styleFn = (
-  padding: number,
-  borderWidth: number,
-  fontSize: number | Function,
-  fontWeight: string | number | Function,
-  fontFamily: string | Function
-) => () => ({
-  padding,
-  borderWidth,
-  fontSize,
-  fontWeight,
-  fontFamily,
-})
+export const createBaseShapeStyles: styleFn =
+  (
+    padding: number,
+    borderWidth: number,
+    fontSize: number | Function,
+    fontWeight: string | number | Function,
+    fontFamily: string | Function
+  ) =>
+  () => ({
+    padding,
+    borderWidth,
+    fontSize,
+    fontWeight,
+    fontFamily,
+  })
 
 export const createPatternStyles: styleFn = (size: number, borderRadius: number) =>
   switchProp(prop('shape', 'circle'), {
