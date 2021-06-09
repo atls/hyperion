@@ -1,3 +1,5 @@
+export * from './currency.component'
+export * from './currency.interface'
 export * from './space.interfaces'
 export * from './space.component'
 export * from './text.interfaces'
