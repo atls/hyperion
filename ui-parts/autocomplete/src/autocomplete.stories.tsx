@@ -42,7 +42,7 @@ export const WithInputChange = () => {
       setInputOptions(options as any)
     } else {
       setInputOptions(
-        options.filter(option =>
+        options.filter((option) =>
           option.value.toLowerCase().startsWith(inputValue.toLowerCase())
         ) as any
       )

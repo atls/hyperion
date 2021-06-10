@@ -3,7 +3,7 @@
 import React, { useEffect, useState }                  from 'react'
 import { useCombobox }                                 from 'downshift'
 
-import { Input }                                       from '@atls-ui-parts/input'
+import { Input }                                       from '@atls-ui-proto/input'
 
 import { Arrow, Indicator }                            from './indicator'
 import { Layer }                                       from './layer'
@@ -18,7 +18,7 @@ const LayerRenderer = createLayerRenderer(Layer)
 const MenuRenderer = createMenuRenderer(Menu)
 const inputRenderer = createInputRenderer(Input)
 
-const defaultGetOptionLabel = option => (option ? option.value : '')
+const defaultGetOptionLabel = (option) => (option ? option.value : '')
 
 const Autocomplete = (
   { options = [], value, getOptionLabel = defaultGetOptionLabel, onChange, onInputChange }: any,
@@ -55,16 +55,14 @@ const Autocomplete = (
   useEffect(() => {
     if (inputValue && selectedItem && inputValue !== getOptionLabel(selectedItem)) {
       setItems(
-        options.filter(item =>
-          getOptionLabel(item)
-            .toLowerCase()
-            .startsWith(inputValue.toLowerCase())
+        options.filter((item) =>
+          getOptionLabel(item).toLowerCase().startsWith(inputValue.toLowerCase())
         )
       )
     } else {
       setItems(options)
     }
-  }, [options, inputValue, selectedItem])
+  }, [options, inputValue, selectedItem, getOptionLabel])
 
   useEffect(() => {
     if (onInputChange) {
