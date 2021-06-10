@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import { useCallback, useEffect, useState }       from 'react'
 
 import { OnChangeCallback, UseSwitchStateResult } from './interfaces'
@@ -5,7 +7,7 @@ import { OnChangeCallback, UseSwitchStateResult } from './interfaces'
 export const useSwitchState = (
   defaultValue: boolean = false,
   disabled: boolean = false,
-  onChange: OnChangeCallback
+  onChange: OnChangeCallback | undefined
 ): UseSwitchStateResult => {
   const [checked, setChecked] = useState<boolean>(defaultValue)
 

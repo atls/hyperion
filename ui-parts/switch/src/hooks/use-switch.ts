@@ -8,7 +8,7 @@ export const useSwitch = (
   node: RefObject<HTMLButtonElement>,
   defaultValue: boolean = false,
   disabled: boolean = false,
-  onChange: OnChangeCallback
+  onChange: OnChangeCallback | undefined
 ): UseSwitchStateResult => {
   const [checked, setChecked] = useSwitchState(defaultValue, disabled, onChange)
 

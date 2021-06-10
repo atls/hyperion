@@ -5,7 +5,7 @@ import { ThumbElementProps }                 from './thumb.interfaces'
 import { thumbMotionVariants }               from './thumb.motion'
 
 const ThumbElement: FunctionComponent<ThumbElementProps> = ({ checked, ...props }) => {
-  const initial = useMemo(() => (checked ? 'checked' : 'visible'), [])
+  const initial = useMemo(() => (checked ? 'checked' : 'visible'), [checked])
 
   return <motion.span initial={initial} animate={checked ? 'checked' : 'visible'} {...props} />
 }
