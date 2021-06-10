@@ -10,12 +10,14 @@ export const useKeyboard = (node: RefObject<HTMLButtonElement>, setChecked) => {
       }
     }
 
-    node.current.addEventListener('keydown', onKeyDownHandler)
+    const current = node?.current || null
+
+    current?.addEventListener('keydown', onKeyDownHandler)
 
     return () => {
-      node.current.removeEventListener('keydown', onKeyDownHandler)
+      current?.removeEventListener('keydown', onKeyDownHandler)
     }
-  }, [node])
+  }, [node, setChecked])
 
   return null
 }
