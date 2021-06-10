@@ -1,0 +1,3 @@
+releases:
+  "@atls-ui-parts/text": patch
+  "@atls-ui-proto/text": patch
