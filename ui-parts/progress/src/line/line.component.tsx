@@ -4,9 +4,9 @@ import { LineContainer }                      from '../line-container'
 import { LinePercent }                        from '../line-percent'
 import { LineProps }                          from './line.interfaces'
 
-export const sortGradient = gradients => {
+export const sortGradient = (gradients) => {
   let tempArr: any[] = []
-  Object.keys(gradients).forEach(key => {
+  Object.keys(gradients).forEach((key) => {
     const formattedKey = parseFloat(key.replace(/%/g, ''))
     if (!Number.isNaN(formattedKey)) {
       tempArr.push({
@@ -19,7 +19,7 @@ export const sortGradient = gradients => {
   return tempArr.map(({ key, value }) => `${value} ${key}%`).join(', ')
 }
 
-export const handleGradient = strokeColor => {
+export const handleGradient = (strokeColor) => {
   const { from = '#1890ff', to = '#1890ff', direction = 'to right', ...rest } = strokeColor
   if (Object.keys(rest).length !== 0) {
     const sortedGradients = sortGradient(rest)
@@ -38,9 +38,9 @@ const Line: FunctionComponent<LineProps> = ({
 }) => {
   const percentList = Array.isArray(percent) ? percent : [percent]
   const strokeColorList = Array.isArray(strokeColor) ? strokeColor : [strokeColor]
-  const [keysList, setKeysList] = useState([])
+  const [keysList, setKeysList] = useState<number[]>([])
 
-  const getKey = index => {
+  const getKey = (index) => {
     if (keysList[index]) {
       return keysList[index]
     }

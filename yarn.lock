@@ -73,7 +73,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/button@0.0.1, @atls-ui-parts/button@workspace:0.0.1, @atls-ui-parts/button@workspace:ui-parts/button":
+"@atls-ui-parts/button@workspace:0.0.1, @atls-ui-parts/button@workspace:ui-parts/button":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/button@workspace:ui-parts/button"
   dependencies:
@@ -243,7 +243,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/layout@0.0.1, @atls-ui-parts/layout@workspace:0.0.1, @atls-ui-parts/layout@workspace:ui-parts/layout":
+"@atls-ui-parts/layout@workspace:0.0.1, @atls-ui-parts/layout@workspace:ui-parts/layout":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/layout@workspace:ui-parts/layout"
   dependencies:
@@ -263,16 +263,25 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/progress@workspace:ui-parts/progress"
   dependencies:
-    "@atls-ui-parts/button": 0.0.1
-    "@atls-ui-parts/layout": 0.0.1
+    "@atls-ui-parts/layout": "workspace:ui-parts/layout"
+    "@atls-ui-proto/button": "workspace:ui-proto/button"
+    "@emotion/react": ^11.4.0
+    "@emotion/styled": ^11.3.0
     "@testing-library/react": 10.4.7
+    "@types/react": ^17.0.3
+    "@types/react-dom": ^17.0.3
+    "@types/styled-system": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
   peerDependencies:
-    "@emotion/core": ^10.0.0
-    "@emotion/styled": ^10.0.0
-    react: ^16.12.0
-    react-dom: ^16.12.0
-    styled-system: ^5.1.0
-    styled-tools: ^1.7.0
+    "@emotion/react": ^11.4.0
+    "@emotion/styled": ^11.3.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
   languageName: unknown
   linkType: soft
 
@@ -3015,7 +3024,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:11.4.0, @emotion/react@npm:^11.1.5":
+"@emotion/react@npm:11.4.0, @emotion/react@npm:^11.1.5, @emotion/react@npm:^11.4.0":
   version: 11.4.0
   resolution: "@emotion/react@npm:11.4.0"
   dependencies:

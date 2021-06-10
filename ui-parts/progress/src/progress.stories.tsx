@@ -1,6 +1,6 @@
 import React, { useState }     from 'react'
 
-import { Button, Group }       from '@atls-ui-parts/button'
+import { Button }              from '@atls-ui-proto/button'
 import { Column, Layout, Row } from '@atls-ui-parts/layout'
 
 import { Circle }              from './circle'
@@ -84,10 +84,8 @@ export const Dinamic = () => {
       </Layout>
       <Layout flexBasis={16} />
       <Layout>
-        <Group>
-          <Button onClick={() => decline()}>Отнять</Button>
-          <Button onClick={() => increase()}>Прибавить</Button>
-        </Group>
+        <Button onClick={() => decline()}>Отнять</Button>
+        <Button onClick={() => increase()}>Прибавить</Button>
       </Layout>
       <Layout flexBasis={16} />
       <Layout width='100%'>
