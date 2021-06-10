@@ -6,5 +6,5 @@ export interface CurrencyProps
   extends StyledComponent<TextProps, any, HTMLAttributes<HTMLSpanElement>> {
   amount: number
   currency: string
-  format?: string
+  locale?: string
 }

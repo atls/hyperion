@@ -3,9 +3,9 @@ import { FC }            from 'react'
 import { Text }          from './text.component'
 import { CurrencyProps } from './currency.interface'
 
-const Currency: FC<CurrencyProps> = ({ amount, currency, format, ...props }) => (
+const Currency: FC<CurrencyProps> = ({ amount, currency, locale, ...props }) => (
   <Text {...props}>
-    {new Intl.NumberFormat(format, { style: 'currency', currency })
+    {new Intl.NumberFormat(locale, { style: 'currency', currency })
       .format(amount)
       .replace(',00', '')}
   </Text>
@@ -14,7 +14,7 @@ const Currency: FC<CurrencyProps> = ({ amount, currency, format, ...props }) => 
 Currency.defaultProps = {
   amount: 0,
   currency: 'USD',
-  format: 'ru-RU',
+  locale: 'ru-RU',
 }
 
 export { Currency }
