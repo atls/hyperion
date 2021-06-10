@@ -3,23 +3,17 @@ import { FC }            from 'react'
 import { Text }          from './text.component'
 import { CurrencyProps } from './currency.interface'
 
-const builtinSignatures = {
-  rub: '\u20BD',
-  usd: '$',
-  eur: '\u20AC',
-}
-
-const Currency: FC<CurrencyProps> = ({ amount, currency, currencySignatures, ...props }) => (
+const Currency: FC<CurrencyProps> = ({ amount, currency, ...props }) => (
   <Text {...props}>
-    {amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '\u00A0')}
-    {(currencySignatures && currencySignatures[currency]) || currency}
+    {new Intl.NumberFormat('ru-RU', { style: 'currency', currency })
+      .format(amount)
+      .replace(',00', '')}
   </Text>
 )
 
 Currency.defaultProps = {
   amount: 0,
-  currency: 'usd',
-  currencySignatures: builtinSignatures,
+  currency: 'USD',
 }
 
 export { Currency }
