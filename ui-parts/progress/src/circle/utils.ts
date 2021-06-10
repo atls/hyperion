@@ -1,11 +1,9 @@
-export const toArray = symArray => {
-  return Array.isArray(symArray) ? symArray : [symArray]
-}
+export const toArray = (symArray) => (Array.isArray(symArray) ? symArray : [symArray])
 
-export const getGradientId = strokeColor => {
-  const id = []
+export const getGradientId = (strokeColor) => {
+  const id: string[] = []
 
-  toArray(strokeColor).forEach(color => {
+  toArray(strokeColor).forEach((color) => {
     if (Object.prototype.toString.call(color) === '[object Object]') {
       id.push(
         Object.keys(color).reduce((prev, current, index) => {

@@ -25,9 +25,9 @@ const Circle: FunctionComponent<CircleProps> = ({
     gapDegree,
     gapPosition
   )
-  const [keysList, setKeysList] = useState([])
+  const [keysList, setKeysList] = useState<number[]>([])
 
-  const getKey = index => {
+  const getKey = (index) => {
     if (keysList[index]) {
       return keysList[index]
     }
@@ -39,7 +39,7 @@ const Circle: FunctionComponent<CircleProps> = ({
   }
 
   const gradients = toArray(strokeColor).filter(
-    color => Object.prototype.toString.call(color) === '[object Object]'
+    (color) => Object.prototype.toString.call(color) === '[object Object]'
   )
 
   const getStrokeList = () => {
@@ -87,7 +87,7 @@ const Circle: FunctionComponent<CircleProps> = ({
           <linearGradient id={`${gradientId[index]}`} x1='100%' y1='0%' x2='0%' y2='0%'>
             {Object.keys(gradient)
               .sort((a, b) => +a.replace('%', '') - +b.replace('%', ''))
-              .map(key => (
+              .map((key) => (
                 <stop key={key + gradient[key]} offset={key} stopColor={gradient[key]} />
               ))}
           </linearGradient>

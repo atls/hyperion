@@ -1,4 +1,4 @@
-import { CSSObject }        from '@emotion/core'
+import { CSSObject }        from '@emotion/react'
 import { styleFn }          from 'styled-system'
 import { prop, switchProp } from 'styled-tools'
 
