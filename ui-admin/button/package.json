@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-admin/button",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "BSD-3-Clause",
   "files": [
     "dist"
@@ -11,7 +11,7 @@
     "prepack": "yarn run build"
   },
   "dependencies": {
-    "@atls-ui-parts/button": "workspace:0.0.1"
+    "@atls-ui-parts/button": "workspace:0.0.2"
   },
   "devDependencies": {
     "@emotion/styled": "^11.3.0",
