@@ -15,12 +15,13 @@ export interface SelectProps
   items: string[]
   label?: string
   width?: number | string | number[] | string[]
+  height?: number | string | number[] | string[]
   placeholder?: string
   buttonColor?: string
   dropdownColor?: string
   hoverBackgroundColor?: string
   hoverFontColor?: string
-  arrowIcon?: boolean
+  arrow?: boolean
   arrowSize?: number | string
   onChange: (value: string) => void
 }

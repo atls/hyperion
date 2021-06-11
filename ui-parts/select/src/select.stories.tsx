@@ -10,7 +10,6 @@ export const Select = (props) => {
   return (
     <SelectComponent
       label={value && value.length < 15 && value}
-      placeholder='Toggle'
       items={['Item 1', 'Item 2', 'OVERLOAD '.repeat(15), 'Item 3']}
       onChange={(item) => {
         setValue(item)
@@ -22,6 +21,10 @@ export const Select = (props) => {
 
 Select.args = {
   width: 300,
+  height: 50,
+  arrow: true,
+  arrowSize: 15,
+  placeholder: 'Toggle',
   dropdownColor: 'lightSilver',
   hoverBackgroundColor: 'lightBlue',
   hoverFontColor: 'white',
@@ -37,6 +40,28 @@ Select.argTypes = {
     },
     control: {
       type: 'number',
+    },
+  },
+  height: {
+    name: 'Высота',
+    description: 'Высота',
+    table: {
+      category: 'Представление',
+      subcategory: 'Размеры',
+    },
+    control: {
+      type: 'number',
+    },
+  },
+  buttonColor: {
+    name: 'Цвет кнопки',
+    description: 'Цвет кнопки',
+    table: {
+      category: 'Представление',
+      subcategory: 'Внешний вид',
+    },
+    control: {
+      type: 'color',
     },
   },
   dropdownColor: {
@@ -70,6 +95,39 @@ Select.argTypes = {
     },
     control: {
       type: 'color',
+    },
+  },
+  arrow: {
+    name: 'Стрелка',
+    description: 'Стрелка',
+    table: {
+      category: 'Представление',
+      subcategory: 'Внешний вид',
+    },
+    control: {
+      type: 'boolean',
+    },
+  },
+  arrowSize: {
+    name: 'Размер стрелки',
+    description: 'Размер стрелки',
+    table: {
+      category: 'Представление',
+      subcategory: 'Размеры',
+    },
+    control: {
+      type: 'number',
+    },
+  },
+  placeholder: {
+    name: 'Placeholder',
+    description: 'Начальный текст',
+    table: {
+      category: 'Представление',
+      subcategory: 'Значения',
+    },
+    control: {
+      type: 'text',
     },
   },
 }
