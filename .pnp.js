@@ -840,7 +840,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["framer-motion", "virtual:9c076913ffd643939b8ac6e8c374fd1470f44689001261d35898fb07091ea0aa596a24d8bcdfb508f949d0c68789b448702cfb68072c423229496303e9a11342#npm:4.1.17"],
             ["react", "npm:17.0.2"],
             ["react-laag", "virtual:9c076913ffd643939b8ac6e8c374fd1470f44689001261d35898fb07091ea0aa596a24d8bcdfb508f949d0c68789b448702cfb68072c423229496303e9a11342#npm:2.0.2"],
-            ["styled-system", "npm:5.1.5"]
+            ["styled-system", "npm:5.1.5"],
+            ["styled-tools", "npm:1.7.2"]
           ],
           "linkType": "SOFT",
         }]
