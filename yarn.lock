@@ -243,7 +243,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/layout@0.0.1, @atls-ui-parts/layout@workspace:0.0.1, @atls-ui-parts/layout@workspace:ui-parts/layout":
+"@atls-ui-parts/layout@workspace:0.0.1, @atls-ui-parts/layout@workspace:ui-parts/layout":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/layout@workspace:ui-parts/layout"
   dependencies:
@@ -263,8 +263,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/progress@workspace:ui-parts/progress"
   dependencies:
-    "@atls-ui-parts/layout": 0.0.1
-    "@atls-ui-proto/button": 0.0.1
+    "@atls-ui-parts/layout": "workspace:0.0.1"
+    "@atls-ui-proto/button": "workspace:0.0.1"
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
     "@testing-library/react": 10.4.7
@@ -366,7 +366,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-proto/button@0.0.1, @atls-ui-proto/button@workspace:0.0.1, @atls-ui-proto/button@workspace:ui-proto/button":
+"@atls-ui-proto/button@workspace:0.0.1, @atls-ui-proto/button@workspace:ui-proto/button":
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/button@workspace:ui-proto/button"
   dependencies:
