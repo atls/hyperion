@@ -5,6 +5,6 @@ import { TextProps }       from './text.interfaces'
 export interface CurrencyProps
   extends StyledComponent<TextProps, any, HTMLAttributes<HTMLSpanElement>> {
   amount: number
-  currency: 'rub' | 'usd' | 'eur' | string
-  currencySignatures?: { [key: string]: string }
+  currency: string
+  locale?: string
 }
