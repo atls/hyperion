@@ -281,7 +281,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/select@workspace:ui-parts/select"
   dependencies:
-    "@atls-ui-parts/styles": 0.0.1
+    "@atls-ui-parts/styles": "workspace:0.0.1"
     "@emotion/styled": ^11.1.5
     "@types/react": ^17.0.3
     "@types/styled-system": ^5.1.11
@@ -294,7 +294,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/styles@0.0.1, @atls-ui-parts/styles@workspace:0.0.1, @atls-ui-parts/styles@workspace:ui-parts/styles":
+"@atls-ui-parts/styles@workspace:0.0.1, @atls-ui-parts/styles@workspace:ui-parts/styles":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/styles@workspace:ui-parts/styles"
   dependencies:
