@@ -1,16 +1,25 @@
-import React, { useEffect } from 'react'
-import { FC }               from 'react'
-import { useLayer }         from 'react-laag'
-import { useSelect }        from 'downshift'
-import { AnimatePresence }  from 'framer-motion'
+import React, { useEffect }       from 'react'
+import { FC }                     from 'react'
+import { useLayer }               from 'react-laag'
+import { useSelect }              from 'downshift'
 
-import { Box }              from './box'
-import { Label }            from './label'
-import { Item }             from './item'
-import { Button }           from './button'
-import { Menu }             from './menu'
-import { SelectProps }      from './select.interfaces'
-import { ArrowDownIcon }    from './icons'
+import { Label }                  from './label'
+import { Item }                   from './item'
+import { Button }                 from './button'
+import { Menu }                   from './menu'
+import { SelectProps }            from './select.interfaces'
+
+import { createButtonRenderer }   from './factories'
+import { createLabelRenderer }    from './factories'
+import { createMenuRenderer }     from './factories'
+import { createMenuItemRenderer } from './factories'
+import { createLayerRenderer }    from './factories'
+
+const ButtonRenderer = createButtonRenderer(Button)
+const LabelRenderer = createLabelRenderer(Label)
+const MenuRenderer = createMenuRenderer(Menu)
+const MenuItemRenderer = createMenuItemRenderer(Item)
+const LayerRenderer = createLayerRenderer()
 
 export const Select: FC<SelectProps> = ({
   label,
@@ -47,52 +56,42 @@ export const Select: FC<SelectProps> = ({
   })
   return (
     <>
-      {label && (
-        <Label {...getLabelProps()} {...props}>
-          {label}
-        </Label>
-      )}
-      <Button
-        width={width}
+      <LabelRenderer getLabelProps={getLabelProps} label={label} {...props} />
+      <ButtonRenderer
         height={height}
-        backgroundColor={buttonColor}
+        width={width}
+        buttonColor={buttonColor}
+        placeholder={placeholder}
+        arrow={arrow}
+        arrowSize={arrowSize}
+        isOpen={isOpen}
+        selectedItem={selectedItem}
+        triggerProps={triggerProps}
+        getToggleButtonProps={getToggleButtonProps}
         {...props}
-        {...getToggleButtonProps(triggerProps)}
-      >
-        <Box height={height} overflow>
-          {selectedItem || placeholder}
-        </Box>
-        <Box>{arrow && <ArrowDownIcon width={arrowSize} height={arrowSize} active={isOpen} />}</Box>
-      </Button>
-      {renderLayer(
-        <AnimatePresence>
-          {isOpen && (
-            <Menu
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              width={triggerBounds?.width}
-              backgroundColor={dropdownColor}
+      />
+      <LayerRenderer isOpen={isOpen} renderLayer={renderLayer}>
+        <MenuRenderer
+          triggerBounds={triggerBounds}
+          dropdownColor={dropdownColor}
+          layerProps={layerProps}
+          getMenuProps={getMenuProps}
+          {...props}
+        >
+          {items.map((item, index) => (
+            <MenuItemRenderer
+              hoverTrigger={highlightedIndex === index}
+              hoverBackgroundColor={hoverBackgroundColor}
+              hoverFontColor={hoverFontColor}
+              key={`${item}${Math.random()}`}
+              item={item}
+              index={index}
+              getItemProps={getItemProps}
               {...props}
-              {...getMenuProps(layerProps)}
-            >
-              {items.map((item, index) => (
-                <Item
-                  hoverTrigger={highlightedIndex === index}
-                  hoverBackgroundColor={hoverBackgroundColor}
-                  hoverFontColor={hoverFontColor}
-                  key={`${item}${Math.random()}`}
-                  {...props}
-                  {...getItemProps({ item, index })}
-                >
-                  {item}
-                </Item>
-              ))}
-            </Menu>
-          )}
-        </AnimatePresence>
-      )}
+            />
+          ))}
+        </MenuRenderer>
+      </LayerRenderer>
     </>
   )
 }
