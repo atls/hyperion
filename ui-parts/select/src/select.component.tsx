@@ -4,6 +4,7 @@ import { useLayer }         from 'react-laag'
 import { useSelect }        from 'downshift'
 import { AnimatePresence }  from 'framer-motion'
 
+import { Box }              from './box'
 import { Label }            from './label'
 import { Item }             from './item'
 import { Button }           from './button'
@@ -15,12 +16,13 @@ export const Select: FC<SelectProps> = ({
   label,
   items,
   width,
+  height,
   placeholder = '',
   buttonColor = 'white',
   dropdownColor = 'white',
   hoverBackgroundColor = 'lightBlue',
   hoverFontColor = 'white',
-  arrowIcon = true,
+  arrow = true,
   arrowSize = 15,
   onChange,
   ...props
@@ -52,12 +54,15 @@ export const Select: FC<SelectProps> = ({
       )}
       <Button
         width={width}
+        height={height}
         backgroundColor={buttonColor}
         {...props}
         {...getToggleButtonProps(triggerProps)}
       >
-        {selectedItem || placeholder}
-        {arrowIcon && <ArrowDownIcon width={arrowSize} height={arrowSize} active={isOpen} />}
+        <Box height={height} overflow>
+          {selectedItem || placeholder}
+        </Box>
+        <Box>{arrow && <ArrowDownIcon width={arrowSize} height={arrowSize} active={isOpen} />}</Box>
       </Button>
       {renderLayer(
         <AnimatePresence>
