@@ -37,7 +37,7 @@
     "styled-tools": "^1.7.2"
   },
   "dependencies": {
-    "@atls-ui-proto/input": "workspace:ui-proto/input",
+    "@atls-ui-proto/input": "workspace:0.0.1",
     "downshift": "^5.0.5",
     "react-laag": "^1.7.3"
   }

@@ -51,7 +51,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/autocomplete@workspace:ui-parts/autocomplete"
   dependencies:
-    "@atls-ui-proto/input": "workspace:ui-proto/input"
+    "@atls-ui-proto/input": "workspace:0.0.1"
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
     "@testing-library/react": 10.4.7
