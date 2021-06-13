@@ -1,20 +1,18 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 
 const createInputRenderer =
   (Input) =>
   (getInputProps, inputProps = {}) =>
   ({ triggerRef, isOpen, layerSide }) => {
-    const props = useMemo(() => {
-      const { onChange, ...restProps } = getInputProps({
-        ...inputProps,
-        ref: triggerRef,
-      })
+    const { onChange, ...restProps } = getInputProps({
+      ...inputProps,
+      ref: triggerRef,
+    })
 
-      return {
-        ...restProps,
-        onChangeNative: onChange,
-      }
-    }, [triggerRef])
+    const props = {
+      ...restProps,
+      onChangeNative: onChange,
+    }
 
     return <Input {...props} />
   }
