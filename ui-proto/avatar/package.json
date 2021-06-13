@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/avatar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,7 +12,7 @@
     "prepack": "yarn run build"
   },
   "dependencies": {
-    "@atls-ui-parts/avatar": "workspace:0.0.1",
+    "@atls-ui-parts/avatar": "workspace:0.0.2",
     "@atls-ui-parts/image": "workspace:0.0.0",
     "@atls-ui-parts/text-transform": "workspace:0.0.0"
   },
