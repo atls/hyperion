@@ -7,7 +7,13 @@ export interface AppearanceStyles {
   cellActiveFontColor?: string
   cellHoverColor?: string
   cellHoverFontColor?: string
-  fontFamily?: string
-  fontStyle?: string
-  fontWeight?: string
+  cellInRangeColor?: string
+  cellInRangeFontColor?: string
+  cellInRangeHoverColor?: string
+  cellInRangeHoverFontColor?: string
+  dividerColor?: string
+  headerBackgroundColor?: string
+  inputBackgroundColor?: string
+  inputBorderColor?: string
+  inputActiveBorderColor?: string
 }
