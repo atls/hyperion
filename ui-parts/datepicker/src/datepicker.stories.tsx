@@ -72,7 +72,6 @@ Datepicker.args = {
   fontStyle: 'normal',
   fontWeight: 400,
   headerBackgroundColor: 'white',
-  inRangeBorderRadius: 0,
   inputActiveBorderColor: '#376EFF',
   inputBorderColor: 'silver',
   inputBorderWidth: 1,
@@ -197,6 +196,123 @@ Datepicker.argTypes = {
     },
     control: {
       type: 'number',
+    },
+  },
+  cellInRangeBorderRadius: {
+    name: 'Закругление ячейки в выбранном диапазоне',
+    description: 'Закругление ячейки в выбранном диапазоне',
+    table: {
+      category: 'Форма',
+    },
+    control: {
+      type: 'number',
+    },
+  },
+  cellInRangeColor: {
+    name: 'Цвет ячейки в выбранном диапазоне',
+    description: 'Цвет ячейки в выбранном диапазоне',
+    table: {
+      category: 'Представление',
+      subcategory: 'Цвет',
+    },
+    control: {
+      type: 'color',
+    },
+  },
+  cellInRangeFontColor: {
+    name: 'Цвет текста ячейки в выбранном диапазоне',
+    description: 'Цвет текста ячейки в выбранном диапазоне',
+    table: {
+      category: 'Представление',
+      subcategory: 'Цвет',
+    },
+    control: {
+      type: 'color',
+    },
+  },
+  cellInRangeHoverColor: {
+    name: 'Цвет ячейки в выбранном диапазоне при наведении',
+    description: 'Цвет ячейки в выбранном диапазоне при наведении',
+    table: {
+      category: 'Представление',
+      subcategory: 'Цвет',
+    },
+    control: {
+      type: 'color',
+    },
+  },
+  cellInRangeHoverFontColor: {
+    name: 'Цвет текста ячейки в выбранном диапазоне при наведении',
+    description: 'Цвет текста ячейки в выбранном диапазоне при наведении',
+    table: {
+      category: 'Представление',
+      subcategory: 'Цвет',
+    },
+    control: {
+      type: 'color',
+    },
+  },
+  headerBackgroundColor: {
+    name: 'Цвет шапки календаря',
+    description: 'Цвет шапки календаря',
+    table: {
+      category: 'Представление',
+      subcategory: 'Цвет',
+    },
+    control: {
+      type: 'color',
+    },
+  },
+  inputBorderColor: {
+    name: 'Цвет рамки поля для ввода',
+    description: 'Цвет рамки поля для',
+    table: {
+      category: 'Представление',
+      subcategory: 'Цвет',
+    },
+    control: {
+      type: 'color',
+    },
+  },
+  inputActiveBorderColor: {
+    name: 'Цвет рамки поля для ввода в активном состоянии',
+    description: 'Цвет рамки поля для ввода в активном состоянии',
+    table: {
+      category: 'Представление',
+      subcategory: 'Цвет',
+    },
+    control: {
+      type: 'color',
+    },
+  },
+  inputBorderWidth: {
+    name: 'Толщина рамки поля для ввода',
+    description: 'Толщина рамки поля для ввода',
+    table: {
+      category: 'Форма',
+    },
+    control: {
+      type: 'number',
+    },
+  },
+  inputBorderRadius: {
+    name: 'Закругление поля для ввода',
+    description: 'Закругление поля для ввода',
+    table: {
+      category: 'Форма',
+    },
+    control: {
+      type: 'number',
+    },
+  },
+  inputPadding: {
+    name: 'Внутренний отступ поля для ввода',
+    description: 'Внутренний отступ поля для ввода',
+    table: {
+      category: 'Форма',
+    },
+    control: {
+      type: 'text',
     },
   },
   dividerPosition: {
