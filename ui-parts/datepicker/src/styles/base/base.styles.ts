@@ -2,6 +2,21 @@ import { injectGlobal } from '@emotion/css'
 
 export const createInjectableBaseStyles = () => () =>
   injectGlobal`
+.react-datepicker__input-container>input {
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: row;
+    alignItems: center;
+    cursor: text; 
+ }
+ 
 .react-datepicker__navigation-icon::before, .react-datepicker__year-read-view--down-arrow,
 .react-datepicker__month-read-view--down-arrow,
 .react-datepicker__month-year-read-view--down-arrow {
@@ -750,13 +765,13 @@ export const createInjectableBaseStyles = () => () =>
 
 .react-datepicker__close-icon::after {
   cursor: pointer;
-  background-color: #216ba5;
-  color: #fff;
+  background-color: rgba(38, 44, 52, 0.05);
+  color: #BDC2C9;
   border-radius: 50%;
   height: 16px;
   width: 16px;
   padding: 2px;
-  font-size: 12px;
+  font-size: 17px;
   line-height: 1;
   text-align: center;
   display: table-cell;

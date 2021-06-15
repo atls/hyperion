@@ -136,10 +136,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/datepicker@workspace:ui-parts/datepicker"
   dependencies:
+    "@atls-ui-proto/input": "workspace:ui-proto/input"
     "@emotion/css": ^11.1.3
     "@emotion/styled": ^11.3.0
     "@types/react": ^17.0.3
+    "@types/react-datepicker": ^3.1.8
     "@types/styled-system": ^5.1.11
+    date-fns: ^2.22.1
     react: ^17.0.2
     react-datepicker: ^4.1.1
     styled-system: ^5.1.5
@@ -5237,6 +5240,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-datepicker@npm:^3.1.8":
+  version: 3.1.8
+  resolution: "@types/react-datepicker@npm:3.1.8"
+  dependencies:
+    "@types/react": "*"
+    date-fns: ^2.0.1
+    popper.js: ^1.14.1
+  checksum: 69ca050c733680e9c20d211c56facf5ee1b353ab87a63e7d369be7b5d4e23cb76cfdcf4f4c1a298b8b65b4e08a26e1e3e088b32cae84024f4414ef44dad78e90
+  languageName: node
+  linkType: hard
+
 "@types/react-dom@npm:^17.0.3":
   version: 17.0.7
   resolution: "@types/react-dom@npm:17.0.7"
@@ -9023,7 +9037,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:^2.0.1":
+"date-fns@npm:^2.0.1, date-fns@npm:^2.22.1":
   version: 2.22.1
   resolution: "date-fns@npm:2.22.1"
   checksum: a89dc6cdf3929b3f0d54d129a3c288df995fc3e6c8099dacc215e5404b4950fc8551d11a58968dfd3b8d576d0c5e637072f615e8f9c3e47d82c81e3952007d5b
@@ -16145,6 +16159,13 @@ fsevents@^1.2.7:
   dependencies:
     "@babel/runtime": ^7.14.0
   checksum: 1ba2b0a8d7ca9e229359abf3a743eabe861b2b17ea69b088de5b0905d78401ac2b258371804208af5b412818a6d5ee28359ef6c79cd054245c159fe6c756a85c
+  languageName: node
+  linkType: hard
+
+"popper.js@npm:^1.14.1":
+  version: 1.16.1
+  resolution: "popper.js@npm:1.16.1"
+  checksum: eb53806fb7680e31c7d1db096f95438a40a7cb869f7ee0e27100c0860f11583a0d322606c6073618e7fe8865f834ec36482901b547256d9a0cf2b22434bca75d
   languageName: node
   linkType: hard
 
