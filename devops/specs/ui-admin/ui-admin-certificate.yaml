@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: ui-admin
+  namespace: istio-system
+spec:
+  secretName: ui-admin-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: 'ui-admin.ui.atls.tech'
+  dnsNames:
+    - 'ui-admin.ui.atls.tech'
