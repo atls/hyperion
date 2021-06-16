@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/checkbox",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@atls-ui-parts/conditional-render": "workspace:0.0.1",
-    "@atls-ui-parts/hidden-input": "workspace:0.0.2",
+    "@atls-ui-parts/hidden-input": "workspace:0.0.3",
     "@atls/storybook-google-fonts": "workspace:0.0.0",
     "@emotion/styled": "^11.3.0",
     "@types/jest": "^26.0.22",
