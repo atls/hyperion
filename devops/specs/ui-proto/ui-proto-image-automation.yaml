@@ -1,0 +1,17 @@
+apiVersion: image.toolkit.fluxcd.io/v1alpha1
+kind: ImageUpdateAutomation
+metadata:
+  name: ui-proto-design
+  namespace: flux-system
+spec:
+  checkout:
+    branch: master
+    gitRepositoryRef:
+      name: ui
+  commit:
+    authorEmail: updatebot@atls.tech
+    authorName: updatebot
+    messageTemplate: '[ci skip] update image'
+  interval: 1m0s
+  update:
+    strategy: Setters
