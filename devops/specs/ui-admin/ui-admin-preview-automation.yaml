@@ -1,0 +1,26 @@
+apiVersion: preview.atls.tech/v1alpha1
+kind: PreviewAutomation
+metadata:
+  name: ui-admin
+  namespace: ui
+spec:
+  gatewayRef:
+    name: ui-preview
+    namespace: istio-system
+
+  imageRepositoryRef:
+    name: ui-admin-design
+    namespace: flux-system
+
+  sourceRef:
+    kind: GitRepository
+    namespace: flux-system
+    name: ui
+
+  resources:
+    - name: ui-admin
+      kind: Deployment
+      version: apps/v1
+    - name: ui-admin
+      kind: Service
+      version: v1
