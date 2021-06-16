@@ -1,0 +1,4 @@
+releases:
+  "@atls-ui-parts/autocomplete": patch
+  "@atls-ui-parts/input": patch
+  "@atls-ui-proto/input": patch
