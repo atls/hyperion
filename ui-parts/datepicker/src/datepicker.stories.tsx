@@ -26,6 +26,10 @@ export const Datepicker = (props) => {
     setStartDate(date)
   }
 
+  const dateRangeValue = `${Intl.DateTimeFormat('ru').format(startDate)}-${Intl.DateTimeFormat(
+    'ru'
+  ).format(endDate)}`
+
   return (
     <DatepickerComponent
       isClearable
@@ -38,9 +42,7 @@ export const Datepicker = (props) => {
       customInput={
         <CustomInput
           // @ts-ignore
-          customValue={`${Intl.DateTimeFormat('ru').format(startDate)}-${Intl.DateTimeFormat(
-            'ru'
-          ).format(endDate)}`}
+          customValue={dateRangeValue}
         />
       }
       {...props}

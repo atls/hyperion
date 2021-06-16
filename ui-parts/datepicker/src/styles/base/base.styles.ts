@@ -463,6 +463,7 @@ export const createInjectableBaseStyles = () => () =>
   line-height: 1.7rem;
   text-align: center;
   margin: 0.166rem;
+  outline: none;
 }
 
 .react-datepicker__month--selected, .react-datepicker__month--in-selecting-range, .react-datepicker__month--in-range,
