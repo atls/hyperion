@@ -159,6 +159,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui-parts/datepicker@workspace:ui-parts/datepicker":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-parts/datepicker@workspace:ui-parts/datepicker"
+  dependencies:
+    "@atls-ui-proto/input": "workspace:0.0.1"
+    "@emotion/css": ^11.1.3
+    "@emotion/styled": ^11.3.0
+    "@types/react": ^17.0.3
+    "@types/react-datepicker": ^3.1.8
+    "@types/styled-system": ^5.1.11
+    date-fns: ^2.22.1
+    react: ^17.0.2
+    react-datepicker: ^4.1.1
+    styled-system: ^5.1.5
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-parts/design@workspace:ui-parts/design":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/design@workspace:ui-parts/design"
@@ -2947,7 +2964,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/babel-plugin@npm:^11.3.0":
+"@emotion/babel-plugin@npm:^11.0.0, @emotion/babel-plugin@npm:^11.3.0":
   version: 11.3.0
   resolution: "@emotion/babel-plugin@npm:11.3.0"
   dependencies:
@@ -2981,7 +2998,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/cache@npm:^11.4.0":
+"@emotion/cache@npm:^11.1.3, @emotion/cache@npm:^11.4.0":
   version: 11.4.0
   resolution: "@emotion/cache@npm:11.4.0"
   dependencies:
@@ -3028,6 +3045,24 @@ __metadata:
     "@emotion/utils": 0.11.3
     babel-plugin-emotion: ^10.0.27
   checksum: 6c8246c63bcb83a1b77fe174c831255f1ba9dc6e040a529ac95e379c272a94b8fd3d207cc4b8e47982928d52a74b80e7389a0a1977c65105731f92bed814f6b7
+  languageName: node
+  linkType: hard
+
+"@emotion/css@npm:^11.1.3":
+  version: 11.1.3
+  resolution: "@emotion/css@npm:11.1.3"
+  dependencies:
+    "@emotion/babel-plugin": ^11.0.0
+    "@emotion/cache": ^11.1.3
+    "@emotion/serialize": ^1.0.0
+    "@emotion/sheet": ^1.0.0
+    "@emotion/utils": ^1.0.0
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+  checksum: df7bf3f5e7abd677c4860411bf5f2cade961fe8e2d7f7411d267ab43662fe7555c2c16c48b8b958ef6338130a307ac7d50183ef8474b5e5e5ef320e2ee6733ec
   languageName: node
   linkType: hard
 
@@ -3114,7 +3149,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/serialize@npm:*, @emotion/serialize@npm:^1.0.2":
+"@emotion/serialize@npm:*, @emotion/serialize@npm:^1.0.0, @emotion/serialize@npm:^1.0.2":
   version: 1.0.2
   resolution: "@emotion/serialize@npm:1.0.2"
   dependencies:
@@ -3652,7 +3687,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:^2.5.4, @popperjs/core@npm:^2.6.0":
+"@popperjs/core@npm:^2.5.4, @popperjs/core@npm:^2.6.0, @popperjs/core@npm:^2.9.2":
   version: 2.9.2
   resolution: "@popperjs/core@npm:2.9.2"
   checksum: cc4de8b46fc190805619224f1c683bee6a162276430af3728d35087099ad83a80da3c11c4eac7cb2b5aa2fa59d4c7c689e211a3e955136588ed6dedb5bff32c5
@@ -5330,6 +5365,17 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: 52cdde63e520101179a2f83f504906a8eb389220b9e0e9de2330d806230f83a7ca17889f8f69aa2ee3f4800727c1f236de59ef55e1b52b307d62487f937aba43
+  languageName: node
+  linkType: hard
+
+"@types/react-datepicker@npm:^3.1.8":
+  version: 3.1.8
+  resolution: "@types/react-datepicker@npm:3.1.8"
+  dependencies:
+    "@types/react": "*"
+    date-fns: ^2.0.1
+    popper.js: ^1.14.1
+  checksum: 69ca050c733680e9c20d211c56facf5ee1b353ab87a63e7d369be7b5d4e23cb76cfdcf4f4c1a298b8b65b4e08a26e1e3e088b32cae84024f4414ef44dad78e90
   languageName: node
   linkType: hard
 
@@ -8246,7 +8292,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.2.5":
+"classnames@npm:^2.2.5, classnames@npm:^2.2.6":
   version: 2.3.1
   resolution: "classnames@npm:2.3.1"
   checksum: 57d536edede609f81425d24b062d8d720a466565faf1e38d32c881e883920baa71519ac70c7b565e9cd39201fb1c1ff9bdf8aabf8e26544bac481e7924867c83
@@ -9132,6 +9178,13 @@ __metadata:
     whatwg-mimetype: ^2.3.0
     whatwg-url: ^8.0.0
   checksum: 42239927c6a202e2d02b7f41c94ca53e3cea036898b97b8bf6120ed1b25e0dd11c48ec7aa5c84cf807c2cb9f3a637df9fb50f3ca25a52863186a4ac46254726b
+  languageName: node
+  linkType: hard
+
+"date-fns@npm:^2.0.1, date-fns@npm:^2.22.1":
+  version: 2.22.1
+  resolution: "date-fns@npm:2.22.1"
+  checksum: a89dc6cdf3929b3f0d54d129a3c288df995fc3e6c8099dacc215e5404b4950fc8551d11a58968dfd3b8d576d0c5e637072f615e8f9c3e47d82c81e3952007d5b
   languageName: node
   linkType: hard
 
@@ -16315,6 +16368,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"popper.js@npm:^1.14.1":
+  version: 1.16.1
+  resolution: "popper.js@npm:1.16.1"
+  checksum: eb53806fb7680e31c7d1db096f95438a40a7cb869f7ee0e27100c0860f11583a0d322606c6073618e7fe8865f834ec36482901b547256d9a0cf2b22434bca75d
+  languageName: node
+  linkType: hard
+
 "posix-character-classes@npm:^0.1.0":
   version: 0.1.1
   resolution: "posix-character-classes@npm:0.1.1"
@@ -16996,6 +17056,23 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"react-datepicker@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "react-datepicker@npm:4.1.1"
+  dependencies:
+    "@popperjs/core": ^2.9.2
+    classnames: ^2.2.6
+    date-fns: ^2.0.1
+    prop-types: ^15.7.2
+    react-onclickoutside: ^6.10.0
+    react-popper: ^2.2.5
+  peerDependencies:
+    react: ^16.9.0 || ^17
+    react-dom: ^16.9.0 || ^17
+  checksum: 2c7090cac0550c005e70b62a0a0afd6f1c51397c20a787003d44fa365b22bc02cebe8f8610367a876930524eff3bebf0d43a18a83fa87a07e70f5ea67cf4c87f
+  languageName: node
+  linkType: hard
+
 "react-dev-utils@npm:^11.0.3":
   version: 11.0.4
   resolution: "react-dev-utils@npm:11.0.4"
@@ -17211,6 +17288,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"react-onclickoutside@npm:^6.10.0":
+  version: 6.11.2
+  resolution: "react-onclickoutside@npm:6.11.2"
+  peerDependencies:
+    react: ^15.5.x || ^16.x || ^17.x
+    react-dom: ^15.5.x || ^16.x || ^17.x
+  checksum: 7c201f204532908cd89e4b2d814f643111fba0c258cf3c17036b0aa1dd819d84d956bd80fc4aa871008fbda9e66dbcc394b76a88e730cc1b28a2f9338db5daad
+  languageName: node
+  linkType: hard
+
 "react-popper-tooltip@npm:^3.1.1":
   version: 3.1.1
   resolution: "react-popper-tooltip@npm:3.1.1"
@@ -17225,7 +17312,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-popper@npm:^2.2.4":
+"react-popper@npm:^2.2.4, react-popper@npm:^2.2.5":
   version: 2.2.5
   resolution: "react-popper@npm:2.2.5"
   dependencies:
