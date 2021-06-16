@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: ui-preview
+  namespace: istio-system
+spec:
+  secretName: ui-preview-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: 'preview.ui.atls.tech'
+  dnsNames:
+    - 'preview.ui.atls.tech'
+    - '*.preview.ui.atls.tech'
