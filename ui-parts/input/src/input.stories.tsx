@@ -46,7 +46,7 @@ const getAddonPosition = (addonBefore, addonAfter) => {
 }
 
 export const Input = ({
-  containerWith,
+  containerWidth,
   size,
   prefix,
   suffix,
@@ -168,7 +168,7 @@ export const Input = ({
   const attach = getAddonPosition(addonBefore, addonAfter)
 
   return (
-    <Box width={containerWith} justifyContent='center'>
+    <Box width={containerWidth} justifyContent='center'>
       <AddonsContainer>
         <Addon>{addonBefore}</Addon>
         <ForwardEventsState ref={ref} events={['focus', 'blur']}>
@@ -185,7 +185,7 @@ export const Input = ({
 }
 
 Input.args = {
-  containerWith: 300,
+  containerWidth: 300,
   prefix: '',
   suffix: '',
   addonBefore: '',
@@ -208,7 +208,7 @@ Input.args = {
 }
 
 Input.argTypes = {
-  containerWith: {
+  containerWidth: {
     name: 'Контейнер',
     description: 'Ширина контейнера',
     table: {
