@@ -10,7 +10,7 @@
   "devDependencies": {
     "@atls-ui-parts/avatar": "workspace:0.0.3",
     "@atls-ui-parts/button": "workspace:0.0.4",
-    "@atls-ui-parts/input": "workspace:0.0.2",
+    "@atls-ui-parts/input": "workspace:0.0.3",
     "@atls/storybook-addon-development-templates": "workspace:0.0.0",
     "@babel/core": "^7.13.16",
     "@emotion/babel-plugin": "^11.3.0",
