@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/autocomplete",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -37,7 +37,7 @@
     "styled-tools": "^1.7.2"
   },
   "dependencies": {
-    "@atls-ui-proto/input": "workspace:0.0.2",
+    "@atls-ui-proto/input": "workspace:0.0.3",
     "downshift": "^5.0.5",
     "react-laag": "^1.7.3"
   }
