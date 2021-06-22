@@ -303,7 +303,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/link@workspace:0.0.0, @atls-ui-parts/link@workspace:ui-parts/link":
+"@atls-ui-parts/link@workspace:0.0.1, @atls-ui-parts/link@workspace:ui-parts/link":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/link@workspace:ui-parts/link"
   dependencies:
@@ -547,7 +547,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/link@workspace:ui-proto/link"
   dependencies:
-    "@atls-ui-parts/link": "workspace:0.0.0"
+    "@atls-ui-parts/link": "workspace:0.0.1"
     "@types/react": ^17.0.3
     react: ^17.0.2
   languageName: unknown
