@@ -20,7 +20,9 @@
   },
   "peerDependencies": {
     "@emotion/styled": "^11.1.5",
-    "react": "^17.0.1",
+    "react": "^17.0.1"
+  },
+  "dependencies": {
     "styled-system": "^5.1.5"
   },
   "publishConfig": {
