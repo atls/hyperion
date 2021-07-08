@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/link",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -30,6 +30,6 @@
     "typings": "dist/index.d.ts"
   },
   "dependencies": {
-    "@atls-ui-parts/text": "workspace:0.0.4"
+    "@atls-ui-parts/text": "workspace:0.0.5"
   }
 }
