@@ -442,7 +442,6 @@ __metadata:
   peerDependencies:
     "@emotion/styled": ^11.1.5
     react: ^17.0.1
-    styled-system: ^5.1.5
   languageName: unknown
   linkType: soft
 
