@@ -27,8 +27,8 @@
   },
   "publishConfig": {
     "access": "public",
-    "main": "index.js",
-    "typings": "index.d.ts"
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
   },
   "peerDependencies": {
     "@emotion/react": "^11.4.0",
