@@ -1,4 +1,5 @@
 import React, { FunctionComponent, useState }    from 'react'
+import { useTheme }                              from '@emotion/react'
 
 import { CircleProps }                           from './circle.interfaces'
 import { getGradientId, getPathStyles, toArray } from './utils'
@@ -14,8 +15,10 @@ const Circle: FunctionComponent<CircleProps> = ({
   width = 100,
   height = 100,
   percent,
+  children,
   ...props
 }) => {
+  const theme: any = useTheme() || {}
   const gradientId = getGradientId(strokeColor)
   const { pathString, pathStyle } = getPathStyles(
     0,
@@ -37,6 +40,11 @@ const Circle: FunctionComponent<CircleProps> = ({
 
     return newKey
   }
+
+  const getThemeColor = (color) => (theme.colors && theme.colors[color]) || color
+
+  trailColor = getThemeColor(trailColor)
+  strokeColor = getThemeColor(strokeColor)
 
   const gradients = toArray(strokeColor).filter(
     (color) => Object.prototype.toString.call(color) === '[object Object]'
@@ -101,6 +109,7 @@ const Circle: FunctionComponent<CircleProps> = ({
         fillOpacity='0'
         style={pathStyle}
       />
+      {children}
       {getStrokeList().reverse()}
     </svg>
   )
