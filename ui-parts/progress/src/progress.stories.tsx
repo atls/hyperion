@@ -33,7 +33,7 @@ export const Size = () => (
     </Layout>
     <Layout flexBasis={16} />
     <Layout>
-      <Line percent={50} strokeWidth={15} />
+      <Line percent={50} strokeWeight={15} />
     </Layout>
     <Layout flexBasis={16} />
     <Layout width='100%'>
@@ -43,11 +43,11 @@ export const Size = () => (
         </Layout>
         <Layout flexBasis={16} />
         <Layout>
-          <Circle percent={50} trailWidth={2} strokeWidth={12} width={100} height={100} />
+          <Circle percent={50} trailWidth={2} strokeWeight={12} width={100} height={100} />
         </Layout>
         <Layout flexBasis={16} />
         <Layout>
-          <Circle percent={80} trailWidth={8} strokeWidth={15} width={150} height={150} />
+          <Circle percent={80} trailWidth={8} strokeWeight={15} width={150} height={150} />
         </Layout>
       </Row>
     </Layout>
