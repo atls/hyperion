@@ -1,18 +1,37 @@
-import React                                   from 'react'
+import React                              from 'react'
+import styled                             from '@emotion/styled'
 
-import { Link as LinkComponent }               from './index'
-import { NextLink as NextLinkComponent }       from './index'
-import { NextNavLink as NextNavLinkComponent } from './index'
+import { Link as LinkBase }               from './index'
+import { NextLink as NextLinkBase }       from './index'
+import { NextNavLink as NextNavLinkBase } from './index'
+import { createActiveStyles }             from './index'
+import { createHoverStyles }              from './index'
+import { createTransitionStyles }         from './index'
 
 export default {
   title: 'Components/Link',
 }
 
-export const Link = (props) => <LinkComponent {...props} />
+const activeStyles = createActiveStyles({ color: 'yellow' })
+const hoverStyles = createHoverStyles({ color: 'blue' })
+const transitionStyles = createTransitionStyles('.2s')
 
-export const NextLink = (props) => <NextLinkComponent {...props} />
+const applyStyles = (Component) => styled(Component)(activeStyles, hoverStyles, transitionStyles)
 
-export const NextNavLink = (props) => <NextNavLinkComponent {...props} />
+export const Link = (props) => {
+  const LinkComponent = applyStyles(LinkBase)
+  return <LinkComponent {...props} />
+}
+
+export const NextLink = (props) => {
+  const NextLinkComponent = applyStyles(NextLinkBase)
+  return <NextLinkComponent {...props} />
+}
+
+export const NextNavLink = (props) => {
+  const NextNavLinkComponent = applyStyles(NextNavLinkBase)
+  return <NextNavLinkComponent {...props} />
+}
 
 Link.args = {
   children: 'Clickable',

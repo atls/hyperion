@@ -1015,6 +1015,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["styled-system", null]
           ],
           "packagePeers": [
+            "@emotion/styled",
             "@types/emotion__styled",
             "@types/next",
             "@types/react",
@@ -1486,6 +1487,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@atls-ui-proto/link", "workspace:ui-proto/link"],
             ["@atls-ui-parts/link", "virtual:9df4b6121afbf3178186530d8221f13c6edd37dae07cfff1c8d82eab5c7ad2c6a836d4984d5ca98b1ff48958789f0963eb1ab0f81bceb13866053f0d4c336b43#workspace:ui-parts/link"],
+            ["@emotion/styled", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:11.3.0"],
             ["@types/react", "npm:17.0.11"],
             ["react", "npm:17.0.2"]
           ],
@@ -16961,6 +16963,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["eslint-module-utils", "npm:2.6.1"],
             ["debug", "virtual:d9426786c635bc4b52511d6cc4b56156f50d780a698c0e20fc6caf10d3be51cbf176e79cff882f4d42a23ff4d0f89fe94222849578214e7fbae0f2754c82af02#npm:3.2.7"],
+            ["eslint-import-resolver-node", "npm:0.3.6"],
             ["pkg-dir", "npm:2.0.0"]
           ],
           "linkType": "HARD",
@@ -16970,6 +16973,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["eslint-module-utils", "npm:2.6.2"],
             ["debug", "virtual:d9426786c635bc4b52511d6cc4b56156f50d780a698c0e20fc6caf10d3be51cbf176e79cff882f4d42a23ff4d0f89fe94222849578214e7fbae0f2754c82af02#npm:3.2.7"],
+            ["eslint-import-resolver-node", "npm:0.3.6"],
             ["pkg-dir", "npm:2.0.0"]
           ],
           "linkType": "HARD",
