@@ -4,7 +4,7 @@ export type GapPositionType = 'top' | 'left' | 'right' | 'bottom'
 
 export interface CircleProps {
   percent: number | Array<number>
-  strokeWidth?: number
+  strokeWeight?: number
   trailWidth?: number
   gapDegree?: number
   gapPosition?: GapPositionType
