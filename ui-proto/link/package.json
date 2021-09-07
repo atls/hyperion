@@ -12,6 +12,7 @@
     "prepack": "yarn run build"
   },
   "devDependencies": {
+    "@emotion/styled": "^11.3.0",
     "@types/react": "^17.0.3",
     "react": "^17.0.2"
   },
