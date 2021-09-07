@@ -1,8 +1,11 @@
-import React, { FunctionComponent, useState } from 'react'
+import React                 from 'react'
+import { FunctionComponent } from 'react'
+import { useState }          from 'react'
+import { useTheme }          from '@emotion/react'
 
-import { LineContainer }                      from '../line-container'
-import { LinePercent }                        from '../line-percent'
-import { LineProps }                          from './line.interfaces'
+import { LineContainer }     from '../line-container'
+import { LinePercent }       from '../line-percent'
+import { LineProps }         from './line.interfaces'
 
 export const sortGradient = (gradients) => {
   let tempArr: any[] = []
@@ -34,10 +37,15 @@ const Line: FunctionComponent<LineProps> = ({
   strokeLinecap,
   trailLinecap,
   trailColor,
-  strokeWidth = 8,
+  strokeWeight = 8,
 }) => {
+  const theme: any = useTheme() || {}
+  const getThemeColor = (color) => (theme.colors && theme.colors[color]) || color
+
   const percentList = Array.isArray(percent) ? percent : [percent]
-  const strokeColorList = Array.isArray(strokeColor) ? strokeColor : [strokeColor]
+  const strokeColorList = Array.isArray(strokeColor)
+    ? getThemeColor(strokeColor)
+    : [getThemeColor(strokeColor)]
   const [keysList, setKeysList] = useState<number[]>([])
 
   const getKey = (index) => {
@@ -52,7 +60,7 @@ const Line: FunctionComponent<LineProps> = ({
   }
 
   return (
-    <LineContainer trailLinecap={trailLinecap} height={strokeWidth} backgroundColor={trailColor}>
+    <LineContainer trailLinecap={trailLinecap} height={strokeWeight} backgroundColor={trailColor}>
       {percentList
         .map((item, index) => {
           let backgroundProps = {}

@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+
 import React, { FunctionComponent, useState }    from 'react'
 import { useTheme }                              from '@emotion/react'
 
@@ -5,7 +7,7 @@ import { CircleProps }                           from './circle.interfaces'
 import { getGradientId, getPathStyles, toArray } from './utils'
 
 const Circle: FunctionComponent<CircleProps> = ({
-  strokeWidth = 6,
+  strokeWeight = 6,
   trailWidth,
   gapDegree,
   gapPosition = 'top',
@@ -24,7 +26,7 @@ const Circle: FunctionComponent<CircleProps> = ({
     0,
     100,
     trailColor,
-    strokeWidth,
+    strokeWeight,
     gapDegree,
     gapPosition
   )
@@ -67,7 +69,7 @@ const Circle: FunctionComponent<CircleProps> = ({
         stackPtg,
         ptg,
         color,
-        strokeWidth,
+        strokeWeight,
         gapDegree,
         gapPosition
       )
@@ -80,7 +82,7 @@ const Circle: FunctionComponent<CircleProps> = ({
           d={strokePathString}
           stroke={gradient ? `url(#${gradientId[gradientIndex]})` : undefined}
           strokeLinecap={strokeLinecap}
-          strokeWidth={ptg === 0 ? 0 : strokeWidth}
+          strokeWidth={ptg === 0 ? 0 : strokeWeight}
           fillOpacity='0'
           style={strokePathStyle}
         />
@@ -105,7 +107,7 @@ const Circle: FunctionComponent<CircleProps> = ({
         d={pathString}
         stroke={trailColor}
         strokeLinecap={strokeLinecap}
-        strokeWidth={trailWidth || strokeWidth}
+        strokeWidth={trailWidth || strokeWeight}
         fillOpacity='0'
         style={pathStyle}
       />
