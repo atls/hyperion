@@ -154,6 +154,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui-parts/carousel@workspace:ui-parts/carousel":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-parts/carousel@workspace:ui-parts/carousel"
+  dependencies:
+    "@atls-ui-parts/dom": "workspace:0.0.0"
+    "@atls-ui-parts/styles": "workspace:0.0.1"
+    "@emotion/styled": ^11.3.0
+    "@types/jest": ^26.0.22
+    "@types/react": ^17.0.3
+    "@types/styled-system": ^5.1.11
+    framer-motion: 4.1.7
+    react: ^17.0.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-parts/checkbox@workspace:ui-parts/checkbox":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/checkbox@workspace:ui-parts/checkbox"
@@ -12240,6 +12262,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:4.1.7":
+  version: 4.1.7
+  resolution: "framer-motion@npm:4.1.7"
+  dependencies:
+    "@emotion/is-prop-valid": ^0.8.2
+    framesync: 5.3.0
+    hey-listen: ^1.0.8
+    popmotion: 9.3.5
+    style-value-types: 4.1.4
+    tslib: ^2.1.0
+  peerDependencies:
+    react: ">=16.8 || ^17.0.0"
+    react-dom: ">=16.8 || ^17.0.0"
+  dependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+  checksum: 5335c1822c1280d853e6c1a9afa537dac73520e27ea15b3da532b028ef394e79a2c876cf85e858b111820dd1f26ed210cf04b06b4ca79fc9878e85e12c4ce440
+  languageName: node
+  linkType: hard
+
 "framer-motion@npm:^4.1.17":
   version: 4.1.17
   resolution: "framer-motion@npm:4.1.17"
@@ -17556,6 +17598,18 @@ fsevents@^1.2.7:
   dependencies:
     "@babel/runtime": ^7.14.0
   checksum: 1ba2b0a8d7ca9e229359abf3a743eabe861b2b17ea69b088de5b0905d78401ac2b258371804208af5b412818a6d5ee28359ef6c79cd054245c159fe6c756a85c
+  languageName: node
+  linkType: hard
+
+"popmotion@npm:9.3.5":
+  version: 9.3.5
+  resolution: "popmotion@npm:9.3.5"
+  dependencies:
+    framesync: 5.3.0
+    hey-listen: ^1.0.8
+    style-value-types: 4.1.4
+    tslib: ^2.1.0
+  checksum: b78d79a8eaf8614d3fe07544f400932447fc68c84c6fa91e67c1dd2d40dbf91b45034b4c067ead52b25eea5de4493dae3532e01dfc78fcb785f826cd8c8a6705
   languageName: node
   linkType: hard
 
