@@ -53,23 +53,17 @@ export const Carousel = ({
     <Slide style={{ background: 'white' }}>{number}</Slide>
   ))
 
-  const {
-    slides,
-    activeSlide,
-    slidesLength,
-    slideToIndex,
-    slideToTwoIndexes,
-    wrapperOptions,
-  } = useCarousel(containerRef, items, {
-    direction,
-    slidesPerView,
-    spaceBetween,
-    dragElastic,
-    transitionDuration,
-    swipeThreshold,
-    centered,
-    loop,
-  })
+  const { slides, activeSlide, slidesLength, slideToIndex, slideToTwoIndexes, wrapperOptions } =
+    useCarousel(containerRef, items, {
+      direction,
+      slidesPerView,
+      spaceBetween,
+      dragElastic,
+      transitionDuration,
+      swipeThreshold,
+      centered,
+      loop,
+    })
 
   const withPagination = useAddonPagination({
     slidesLength,
