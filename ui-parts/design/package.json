@@ -8,7 +8,7 @@
     "dev": "start-storybook --config-dir ./src -p 3000"
   },
   "devDependencies": {
-    "@atls-ui-parts/avatar": "workspace:0.0.3",
+    "@atls-ui-parts/avatar": "workspace:0.0.4",
     "@atls-ui-parts/button": "workspace:0.0.4",
     "@atls-ui-parts/input": "workspace:0.0.3",
     "@atls/storybook-addon-development-templates": "workspace:0.0.0",

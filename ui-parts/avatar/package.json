@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/avatar",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@atls-ui-parts/image": "workspace:0.0.0",
-    "@atls-ui-parts/scalable-content": "workspace:0.0.0",
+    "@atls-ui-parts/scalable-content": "workspace:0.0.1",
     "@atls-ui-parts/text-transform": "workspace:0.0.0",
     "@atls/storybook-google-fonts": "workspace:0.0.0",
     "@emotion/styled": "^11.3.0",

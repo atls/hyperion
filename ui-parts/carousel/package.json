@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/carousel",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "BSD 3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -16,7 +16,7 @@
     "framer-motion": "4.1.7"
   },
   "devDependencies": {
-    "@atls-ui-parts/dom": "workspace:0.0.0",
+    "@atls-ui-parts/dom": "workspace:0.0.1",
     "@emotion/styled": "^11.3.0",
     "@types/jest": "^26.0.22",
     "@types/react": "^17.0.3",
