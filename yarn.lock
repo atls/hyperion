@@ -103,12 +103,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/avatar@workspace:0.0.3, @atls-ui-parts/avatar@workspace:ui-parts/avatar":
+"@atls-ui-parts/avatar@workspace:0.0.4, @atls-ui-parts/avatar@workspace:ui-parts/avatar":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/avatar@workspace:ui-parts/avatar"
   dependencies:
     "@atls-ui-parts/image": "workspace:0.0.0"
-    "@atls-ui-parts/scalable-content": "workspace:0.0.0"
+    "@atls-ui-parts/scalable-content": "workspace:0.0.1"
     "@atls-ui-parts/styles": "workspace:0.0.1"
     "@atls-ui-parts/text-transform": "workspace:0.0.0"
     "@atls/storybook-google-fonts": "workspace:0.0.0"
@@ -158,7 +158,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/carousel@workspace:ui-parts/carousel"
   dependencies:
-    "@atls-ui-parts/dom": "workspace:0.0.0"
+    "@atls-ui-parts/dom": "workspace:0.0.1"
     "@atls-ui-parts/styles": "workspace:0.0.1"
     "@emotion/styled": ^11.3.0
     "@types/jest": ^26.0.22
@@ -231,7 +231,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/design@workspace:ui-parts/design"
   dependencies:
-    "@atls-ui-parts/avatar": "workspace:0.0.3"
+    "@atls-ui-parts/avatar": "workspace:0.0.4"
     "@atls-ui-parts/button": "workspace:0.0.4"
     "@atls-ui-parts/input": "workspace:0.0.3"
     "@atls/storybook-addon-development-templates": "workspace:0.0.0"
@@ -260,7 +260,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/dom@workspace:0.0.0, @atls-ui-parts/dom@workspace:ui-parts/dom":
+"@atls-ui-parts/dom@workspace:0.0.1, @atls-ui-parts/dom@workspace:ui-parts/dom":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/dom@workspace:ui-parts/dom"
   dependencies:
@@ -398,11 +398,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/scalable-content@workspace:0.0.0, @atls-ui-parts/scalable-content@workspace:ui-parts/scalable-content":
+"@atls-ui-parts/scalable-content@workspace:0.0.1, @atls-ui-parts/scalable-content@workspace:ui-parts/scalable-content":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/scalable-content@workspace:ui-parts/scalable-content"
   dependencies:
-    "@atls-ui-parts/dom": "workspace:0.0.0"
+    "@atls-ui-parts/dom": "workspace:0.0.1"
     "@emotion/styled": ^11.3.0
     "@types/jest": ^26.0.22
     "@types/react": ^17.0.3
@@ -500,7 +500,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/avatar@workspace:ui-proto/avatar"
   dependencies:
-    "@atls-ui-parts/avatar": "workspace:0.0.3"
+    "@atls-ui-parts/avatar": "workspace:0.0.4"
     "@atls-ui-parts/image": "workspace:0.0.0"
     "@atls-ui-parts/text-transform": "workspace:0.0.0"
     "@emotion/styled": ^11.3.0
