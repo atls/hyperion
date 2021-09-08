@@ -1,0 +1,6 @@
+releases:
+  "@atls-ui-parts/avatar": patch
+  "@atls-ui-parts/carousel": patch
+  "@atls-ui-parts/dom": patch
+  "@atls-ui-parts/scalable-content": patch
+  "@atls-ui-proto/avatar": patch
