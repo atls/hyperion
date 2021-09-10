@@ -154,7 +154,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/carousel@workspace:ui-parts/carousel":
+"@atls-ui-parts/carousel@workspace:0.0.1, @atls-ui-parts/carousel@workspace:ui-parts/carousel":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/carousel@workspace:ui-parts/carousel"
   dependencies:
@@ -526,6 +526,27 @@ __metadata:
     "@emotion/styled": ^11.3.0
     "@types/react": ^17.0.3
     "@types/styled-system": ^5.1.11
+    react: ^17.0.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  languageName: unknown
+  linkType: soft
+
+"@atls-ui-proto/carousel@workspace:ui-proto/carousel":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-proto/carousel@workspace:ui-proto/carousel"
+  dependencies:
+    "@atls-ui-parts/carousel": "workspace:0.0.1"
+    "@emotion/styled": ^11.3.0
+    "@types/node": ^14.14.41
+    "@types/react": ^17.0.3
+    "@types/styled-system": ^5.1.11
+    framer-motion: ^4.1.7
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -12282,7 +12303,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:^4.1.17":
+"framer-motion@npm:^4.1.17, framer-motion@npm:^4.1.7":
   version: 4.1.17
   resolution: "framer-motion@npm:4.1.17"
   dependencies:
