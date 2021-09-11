@@ -5,7 +5,7 @@ import { prop }             from 'styled-tools'
 import { execAndSerialize } from '@atls-ui-parts/styles'
 import { combine }          from '@atls-ui-parts/styles'
 
-export const createDirectionStyles: styleFn = () =>
+const createDirectionStyles: styleFn = () =>
   switchProp(prop('direction'), () => ({
     horizontal: {
       flexDirection: 'row',
