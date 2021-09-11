@@ -6,7 +6,7 @@ import { combine }               from '@atls-ui-parts/styles'
 
 import { PaginationShapeStyles } from './shape.interfaces'
 
-export const createBaseShapeStyles: styleFn =
+const createBaseShapeStyles: styleFn =
   (
     size: number | string,
     margin: number | string,
@@ -15,7 +15,7 @@ export const createBaseShapeStyles: styleFn =
   ) =>
   () => ({ width: size, height: size, margin, borderWidth, borderRadius })
 
-export const createShapeActiveStyles: styleFn = (
+const createShapeActiveStyles: styleFn = (
   activeSize: number | string,
   activeMargin: number | string,
   activeBorderWidth: number | string,

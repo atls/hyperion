@@ -8,14 +8,14 @@ import { combine }               from '@atls-ui-parts/styles'
 
 import { NavigationShapeStyles } from './shape.interfaces'
 
-export const createBaseShapeStyles: styleFn =
+const createBaseShapeStyles: styleFn =
   (width: number | string, borderWidth: number | string, borderRadius: number | string) => () => ({
     width,
     borderWidth,
     borderRadius,
   })
 
-export const createFillStyles: styleFn = (height: number) =>
+const createFillStyles: styleFn = (height: number) =>
   ifProp(
     'fill',
     () => ({
@@ -29,7 +29,7 @@ export const createFillStyles: styleFn = (height: number) =>
     }
   )
 
-export const createAttachStyles: styleFn = (offset: number | string) =>
+const createAttachStyles: styleFn = (offset: number | string) =>
   switchProp(prop('attach'), () => ({
     prev: {
       left: offset || 0,
