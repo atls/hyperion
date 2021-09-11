@@ -1,0 +1,3 @@
+releases:
+  "@atls-ui-parts/carousel": patch
+  "@atls-ui-proto/carousel": patch
