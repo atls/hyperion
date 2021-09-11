@@ -6,7 +6,7 @@ import { combine }                    from '@atls-ui-parts/styles'
 
 import { PaginationAppearanceStyles } from './appearance.interfaces'
 
-export const createColorStyles: styleFn =
+const createColorStyles: styleFn =
   (color: string, backgroundColor: string, borderColor: string, borderStyle: string) => () => ({
     color,
     backgroundColor,
@@ -14,7 +14,7 @@ export const createColorStyles: styleFn =
     borderStyle,
   })
 
-export const createAppearanceActiveStyles: styleFn = (
+const createAppearanceActiveStyles: styleFn = (
   activeFontColor: string,
   activeBackgroundColor: string,
   activeBorderColor: string
