@@ -1,6 +1,7 @@
 import React             from 'react'
 import { FC }            from 'react'
 import styled            from '@emotion/styled'
+import isPropValid       from '@emotion/is-prop-valid'
 
 import { Content }       from '@atls-ui-parts/button'
 
@@ -10,7 +11,14 @@ import { shapeStyles }   from './button.styles'
 import { contentStyles } from './button.styles'
 import { variantStyles } from './button.styles'
 
-export const ButtonElement = styled.button(baseStyles, contentStyles, shapeStyles, variantStyles)
+const shouldForwardProp = (prop) => isPropValid(prop) && !['fill'].includes(prop)
+
+export const ButtonElement = styled('button', { shouldForwardProp })(
+  baseStyles,
+  contentStyles,
+  shapeStyles,
+  variantStyles
+)
 
 export const Button: FC<ButtonProps> = ({ children, ...props }) => (
   <ButtonElement {...props}>
