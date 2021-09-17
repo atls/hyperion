@@ -1346,6 +1346,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@atls-ui-proto/button", "virtual:8ab0d223413e4a5b27571f1c73894c535886604495082c387b7a0550543032cc9edb2f3bacbd8a158ce759eb80f55bdc97c04ada24d35b3a9f99344dd6001802#workspace:ui-proto/button"],
             ["@atls-ui-parts/button", "virtual:bc5cbd7653326f8f5e186c235496dacb580620d644a7f1dd280fc06bab3a11c86bf693dd2abcd8151d4b0dae92b99aca7e17731096cee651f2895b606837d409#workspace:ui-parts/button"],
+            ["@emotion/is-prop-valid", "npm:1.1.0"],
             ["@emotion/styled", "virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#npm:11.3.0"],
             ["@types/emotion__styled", null],
             ["@types/react", "npm:17.0.11"],
@@ -1369,6 +1370,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@atls-ui-proto/button", "virtual:c7650fe93d93d6badbf40c247530f86eaec9d8a36e117d7f3b39338dbb28c3785f1a2bbe765bd4495ac8e44c34ce280fcb986eba497de7f2dccdfac3d3df5836#workspace:ui-proto/button"],
             ["@atls-ui-parts/button", "virtual:1d245a6d23a7a705a599fb7b129d66ea8110f33d8604371d534a7af75dd999ba4f34cbdc5dcaf253fb5116f4033c69d50b6b2388f9b7dae203c48d741154b0af#workspace:ui-parts/button"],
+            ["@emotion/is-prop-valid", "npm:1.1.0"],
             ["@emotion/styled", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#npm:11.3.0"],
             ["@types/emotion__styled", null],
             ["@types/react", "npm:17.0.11"],
@@ -1395,6 +1397,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@atls-ui-proto/button", "workspace:ui-proto/button"],
             ["@atls-ui-parts/button", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#workspace:ui-parts/button"],
+            ["@emotion/is-prop-valid", "npm:1.1.0"],
             ["@emotion/styled", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:11.3.0"],
             ["@types/react", "npm:17.0.11"],
             ["@types/styled-system", "npm:5.1.11"],

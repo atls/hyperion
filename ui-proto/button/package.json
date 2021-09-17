@@ -12,7 +12,8 @@
     "prepack": "yarn run build"
   },
   "dependencies": {
-    "@atls-ui-parts/button": "workspace:0.0.4"
+    "@atls-ui-parts/button": "workspace:0.0.4",
+    "@emotion/is-prop-valid": "^1.1.0"
   },
   "devDependencies": {
     "@emotion/styled": "^11.3.0",
