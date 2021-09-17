@@ -2,9 +2,9 @@ import React                          from 'react'
 
 import { Box }                        from '@atls-ui-proto/layout'
 
+import { BackgroundImagePlaceholder } from './background-image'
 import { ImagePlaceholder }           from './image'
 import { ImageBoxPlaceholder }        from './image-box'
-import { BackgroundImagePlaceholder } from './background-image'
 import { LogoPlaceholder }            from './logo'
 
 export default {
