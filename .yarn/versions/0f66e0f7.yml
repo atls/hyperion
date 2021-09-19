@@ -1,0 +1,4 @@
+releases:
+  "@atls-ui-parts/avatar": patch
+  "@atls-ui-parts/image": patch
+  "@atls-ui-proto/avatar": patch
