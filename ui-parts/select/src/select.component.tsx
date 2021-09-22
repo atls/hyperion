@@ -3,9 +3,9 @@ import { FC }                     from 'react'
 import { useLayer }               from 'react-laag'
 import { useSelect }              from 'downshift'
 
+import { Button }                 from './button'
 import { Label }                  from './label'
 import { Item }                   from './item'
-import { Button }                 from './button'
 import { Menu }                   from './menu'
 import { SelectProps }            from './select.interfaces'
 
