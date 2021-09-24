@@ -17,18 +17,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@admui/theme@npm:0.4.9":
-  version: 0.4.9
-  resolution: "@admui/theme@npm:0.4.9"
-  peerDependencies:
-    "@emotion/core": ^10.0.10
-    emotion: ^10.0.10
-    emotion-theming: ^10.0.10
-    react: ^16.12.0
-  checksum: 613bfaa3e19ce0cff1450ac32478ebd06868361b5930e1b4dc37e82c5c75cac2552803f322c0c772198fa731804dc3b325881c92d78ba4d5ea8dbae36be78cec
-  languageName: node
-  linkType: hard
-
 "@apollo/client@npm:3.1.1":
   version: 3.1.1
   resolution: "@apollo/client@npm:3.1.1"
@@ -143,7 +131,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-admin/icon@workspace:ui-admin/icon":
+"@atls-ui-admin/icon@workspace:0.0.0, @atls-ui-admin/icon@workspace:ui-admin/icon":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/icon@workspace:ui-admin/icon"
   dependencies:
@@ -167,12 +155,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-admin/icons@workspace:ui-admin/icons":
+"@atls-ui-admin/icons@workspace:0.0.0, @atls-ui-admin/icons@workspace:ui-admin/icons":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/icons@workspace:ui-admin/icons"
   dependencies:
     "@atlantis-lab/prettier-config": ^0.1.12
     "@atlantis-lab/tsconfig": ^0.1.12
+    "@atls-ui-admin/icon": "workspace:0.0.0"
     "@svgr/core": 5.4.0
     "@testing-library/react": 9.5.0
     "@types/prettier": ^2
@@ -213,8 +202,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/upload@workspace:ui-admin/upload"
   dependencies:
-    "@admui/theme": 0.4.9
     "@apollo/client": 3.1.1
+    "@atls-ui-admin/icon": "workspace:0.0.0"
+    "@atls-ui-admin/icons": "workspace:0.0.0"
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@monstrs/react-upload": ^0.1.6
@@ -228,6 +218,8 @@ __metadata:
     styled-tools: ^1.7.2
     typescript: 3.9.7
   peerDependencies:
+    "@atls-ui-admin/icon": "*"
+    "@atls-ui-admin/icons": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
