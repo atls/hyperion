@@ -1,20 +1,28 @@
 {
-  "name": "@admui/upload",
-  "version": "0.4.16",
+  "name": "@atls-ui-admin/upload",
+  "version": "0.0.0",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
     "dist"
   ],
+  "scripts": {
+    "build": "yarn app library build",
+    "postpack": "rm -rf dist",
+    "prepack": "yarn run build"
+  },
   "devDependencies": {
     "@admui/theme": "0.4.9",
     "@apollo/client": "3.1.1",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
     "@testing-library/react": "9.5.0",
     "@types/node": "13.13.2",
     "@types/react": "16.9.22",
-    "graphql": "14.6.0",
-    "graphql-tag": "2.11.0",
-    "react": "16.13.1",
+    "graphql": "^15.6.0",
+    "graphql-tag": "^2.12.5",
+    "react": "^17.0.2",
+    "styled-tools": "^1.7.2",
     "typescript": "3.9.7"
   },
   "publishConfig": {
@@ -23,11 +31,11 @@
     "typings": "dist/index.d.ts"
   },
   "peerDependencies": {
-    "@admui/icons": "^0.4.0",
-    "@emotion/styled": "^10.0.0",
-    "react": "^16.12.0",
-    "styled-system": "^5.1.0",
-    "styled-tools": "^1.7.0"
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "styled-system": "*",
+    "styled-tools": "*"
   },
   "dependencies": {
     "@monstrs/react-upload": "^0.1.6",
