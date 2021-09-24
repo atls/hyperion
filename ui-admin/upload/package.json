@@ -1,0 +1,36 @@
+{
+  "name": "@admui/upload",
+  "version": "0.4.16",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@admui/theme": "0.4.9",
+    "@apollo/client": "3.1.1",
+    "@testing-library/react": "9.5.0",
+    "@types/node": "13.13.2",
+    "@types/react": "16.9.22",
+    "graphql": "14.6.0",
+    "graphql-tag": "2.11.0",
+    "react": "16.13.1",
+    "typescript": "3.9.7"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  },
+  "peerDependencies": {
+    "@admui/icons": "^0.4.0",
+    "@emotion/styled": "^10.0.0",
+    "react": "^16.12.0",
+    "styled-system": "^5.1.0",
+    "styled-tools": "^1.7.0"
+  },
+  "dependencies": {
+    "@monstrs/react-upload": "^0.1.6",
+    "react-dropzone": "^10.2.1"
+  }
+}
