@@ -131,6 +131,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:ui-parts/text-transform"
       },
       {
+        "name": "@atls-ui-parts/textarea",
+        "reference": "workspace:ui-parts/textarea"
+      },
+      {
         "name": "@atls-ui-proto/avatar",
         "reference": "workspace:ui-proto/avatar"
       },
@@ -203,6 +207,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-parts/switch", ["workspace:ui-parts/switch"]],
       ["@atls-ui-parts/text", ["virtual:724857ebd92f731dbe22ca19638a1eefd7cdf062f09334ebb849eaae933e2a98886dee3b8808a6fa055d81319d6fa63acb3fb3ef6b1f160b59a6c75b1cb0555c#workspace:ui-parts/text", "virtual:b2254c2d82af19fb4b66316f70568d9bb842b90577af32d06ce4041b067382e4019e46921576ca16c5e94d26ef67d71a84d5e6edc1d9dc8c1caf4ef71a29968c#workspace:ui-parts/text", "workspace:ui-parts/text"]],
       ["@atls-ui-parts/text-transform", ["virtual:144bd10b47610de450c041ff553326fefe11958aedc1da4a2a09dafd48e073b7fc7fd88c35623eafbf7d353919a302f576bfc9d4dea4795b88e73d2fea0dc288#workspace:ui-parts/text-transform", "workspace:ui-parts/text-transform"]],
+      ["@atls-ui-parts/textarea", ["workspace:ui-parts/textarea"]],
       ["@atls-ui-proto/avatar", ["workspace:ui-proto/avatar"]],
       ["@atls-ui-proto/button", ["virtual:8ab0d223413e4a5b27571f1c73894c535886604495082c387b7a0550543032cc9edb2f3bacbd8a158ce759eb80f55bdc97c04ada24d35b3a9f99344dd6001802#workspace:ui-proto/button", "virtual:c7650fe93d93d6badbf40c247530f86eaec9d8a36e117d7f3b39338dbb28c3785f1a2bbe765bd4495ac8e44c34ce280fcb986eba497de7f2dccdfac3d3df5836#workspace:ui-proto/button", "workspace:ui-proto/button"]],
       ["@atls-ui-proto/carousel", ["workspace:ui-proto/carousel"]],
@@ -1322,6 +1327,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.14.41"],
             ["@types/react", "npm:17.0.11"],
             ["react", "npm:17.0.2"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@atls-ui-parts/textarea", [
+        ["workspace:ui-parts/textarea", {
+          "packageLocation": "./ui-parts/textarea/",
+          "packageDependencies": [
+            ["@atls-ui-parts/textarea", "workspace:ui-parts/textarea"],
+            ["@atls-ui-parts/input", "virtual:06d683907c14911994e2a02867c1b5b4197c4512082058768cfb8fe82016a26ecc574a47a037646830ae1b791fc69c394f911f46edc22afbdd2382987e463280#workspace:ui-parts/input"],
+            ["@emotion/styled", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:11.3.0"],
+            ["@types/react", "npm:17.0.11"],
+            ["@types/styled-system", "npm:5.1.11"],
+            ["react", "npm:17.0.2"],
+            ["styled-system", "npm:5.1.5"]
           ],
           "linkType": "SOFT",
         }]
