@@ -40,4 +40,8 @@ node_modules
 # This is the Yarn install state cache, it can be rebuilt anytime
 /.yarn/install-state.gz
 
+# Icons
+
+ui-admin/icons/src/
+
 dist/

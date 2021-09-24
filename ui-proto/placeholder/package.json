@@ -1,0 +1,32 @@
+{
+  "name": "@atls-ui-proto/placeholder",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn app library build",
+    "postpack": "rm -rf dist",
+    "prepack": "yarn run build"
+  },
+  "dependencies": {
+    "@atls-ui-proto/layout": "workspace:0.0.2",
+    "@atls-ui-proto/text": "workspace:0.0.5"
+  },
+  "devDependencies": {
+    "@emotion/styled": "^11.3.0",
+    "@types/react": "^17.0.3",
+    "react": "^17.0.2"
+  },
+  "peerDependencies": {
+    "@emotion/styled": "^11.1.5",
+    "react": "^17.0.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  }
+}

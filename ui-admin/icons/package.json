@@ -1,0 +1,44 @@
+{
+  "name": "@atls-ui-admin/icons",
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn app library build",
+    "build-icons": "ts-node --project=./tsconfig.compile.json svgr.ts",
+    "postpack": "rm -rf dist",
+    "prepack": "yarn run build"
+  },
+  "devDependencies": {
+    "@atlantis-lab/prettier-config": "^0.1.12",
+    "@atlantis-lab/tsconfig": "^0.1.12",
+    "@svgr/core": "5.4.0",
+    "@testing-library/react": "9.5.0",
+    "@types/prettier": "^2",
+    "camelcase": "6.0.0",
+    "fs-extra-promise": "1.0.1",
+    "glob-promise": "3.4.0",
+    "prettier": "^2.4.1",
+    "react": "^17.0.2",
+    "ts-node": "8.10.2",
+    "typescript": "3.9.7"
+  },
+  "peerDependencies": {
+    "@atlantis-lab/prettier-config": "*",
+    "@atlantis-lab/tsconfig": "*",
+    "@atls-ui-admin/icon": "^0.4.0",
+    "@emotion/styled": "^10.0.0",
+    "prettier": "^1.18.0",
+    "react": "^16.12.0",
+    "styled-system": "^5.1.0",
+    "styled-tools": "^1.7.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  }
+}
