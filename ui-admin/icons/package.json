@@ -15,6 +15,7 @@
   "devDependencies": {
     "@atlantis-lab/prettier-config": "^0.1.12",
     "@atlantis-lab/tsconfig": "^0.1.12",
+    "@atls-ui-admin/icon": "workspace:0.0.0",
     "@svgr/core": "5.4.0",
     "@testing-library/react": "9.5.0",
     "@types/prettier": "^2",
@@ -29,7 +30,7 @@
   "peerDependencies": {
     "@atlantis-lab/prettier-config": "*",
     "@atlantis-lab/tsconfig": "*",
-    "@atls-ui-admin/icon": "^0.4.0",
+    "@atls-ui-admin/icon": "*",
     "@emotion/styled": "^10.0.0",
     "prettier": "^1.18.0",
     "react": "^16.12.0",

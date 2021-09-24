@@ -1,0 +1,47 @@
+{
+  "name": "@atls-ui-admin/upload",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn app library build",
+    "postpack": "rm -rf dist",
+    "prepack": "yarn run build"
+  },
+  "devDependencies": {
+    "@apollo/client": "3.1.1",
+    "@atls-ui-admin/icon": "workspace:0.0.0",
+    "@atls-ui-admin/icons": "workspace:0.0.0",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@testing-library/react": "9.5.0",
+    "@types/node": "13.13.2",
+    "@types/react": "16.9.22",
+    "graphql": "^15.6.0",
+    "graphql-tag": "^2.12.5",
+    "react": "^17.0.2",
+    "styled-tools": "^1.7.2",
+    "typescript": "3.9.7"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  },
+  "peerDependencies": {
+    "@atls-ui-admin/icon": "*",
+    "@atls-ui-admin/icons": "*",
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "styled-system": "*",
+    "styled-tools": "*"
+  },
+  "dependencies": {
+    "@monstrs/react-upload": "^0.1.6",
+    "react-dropzone": "^10.2.1"
+  }
+}
