@@ -15,18 +15,12 @@ const Upload: any = ({
 }) => {
   const upload = useUpload()
 
-  const {
-    getRootProps,
-    getInputProps,
-    isDragActive,
-    isDragAccept,
-    isDragReject,
-    acceptedFiles,
-  } = useDropzone({ accept, multiple })
+  const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject, acceptedFiles } =
+    useDropzone({ accept, multiple })
 
   useEffect(() => {
-    acceptedFiles.forEach(file => {
-      let preview = null
+    acceptedFiles.forEach((file) => {
+      let preview: string | null = null
 
       if (onPreview) {
         preview = URL.createObjectURL(file)
@@ -38,7 +32,7 @@ const Upload: any = ({
         })
       }
 
-      upload(file).then(data => {
+      upload(file).then((data) => {
         if (preview) {
           onFile({ ...data, preview })
         } else {
@@ -46,7 +40,8 @@ const Upload: any = ({
         }
       })
     })
-  }, [acceptedFiles.map(file => file.name).join()])
+    // eslint-disable-next-line
+  }, [acceptedFiles.map((file) => file.name).join()])
 
   const child = Children.only(children)
 

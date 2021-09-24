@@ -1,10 +1,10 @@
 import React                           from 'react'
 import { MockedProvider }              from '@apollo/client/testing'
 
-import { DropzonePlaceholder, Upload } from '.'
+import { DropzonePlaceholder, Upload } from './index'
 
 export default {
-  title: 'Компоненты/Загрузка',
+  title: 'Components/Upload',
 }
 
 export const Base = () => (
@@ -18,7 +18,3 @@ export const Base = () => (
     </Upload>
   </MockedProvider>
 )
-
-Base.story = {
-  name: 'Базовое',
-}
