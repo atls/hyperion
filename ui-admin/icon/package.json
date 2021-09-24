@@ -1,0 +1,29 @@
+{
+  "name": "@atls-ui-admin/icon",
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@admui/theme": "0.4.14",
+    "@testing-library/react": "9.5.0",
+    "@types/node": "13.13.2",
+    "@types/react": "16.9.22",
+    "react": "16.13.1",
+    "typescript": "3.9.7"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.0",
+    "@emotion/styled": "^10.0.0",
+    "react": "^16.12.0",
+    "styled-system": "^5.1.0",
+    "styled-tools": "^1.7.0"
+  }
+}
