@@ -2,6 +2,9 @@
   "name": "ui",
   "license": "BSD 3-Clause",
   "private": true,
+  "scripts": {
+    "postinstall": "yarn workspace @atls-ui-admin/icons build-icons"
+  },
   "devDependencies": {
     "@atls/actl-cli": "^0.4.48",
     "@types/glob": "^7",
