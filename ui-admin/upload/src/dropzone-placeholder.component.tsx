@@ -1,6 +1,8 @@
 import React                 from 'react'
 import styled                from '@emotion/styled'
 
+import { UploadIcon }        from '@atls-ui-admin/icons'
+
 import { PlaceholderAccept } from './placeholder-accept'
 import { PlaceholderIcon }   from './placeholder-icon'
 import { PlaceholderLink }   from './placeholder-link'
@@ -14,8 +16,7 @@ const Container = styled.div({
 const DropzonePlaceholder = ({ accept, children }: any) => (
   <Container>
     <PlaceholderIcon>
-      {/* TODO use icon  */}
-      Icon
+      <UploadIcon height={40} width={40} />
     </PlaceholderIcon>
     <PlaceholderAccept>{accept}</PlaceholderAccept>
     <PlaceholderLink>{children}</PlaceholderLink>

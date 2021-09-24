@@ -12,8 +12,9 @@
     "prepack": "yarn run build"
   },
   "devDependencies": {
-    "@admui/theme": "0.4.9",
     "@apollo/client": "3.1.1",
+    "@atls-ui-admin/icon": "workspace:0.0.0",
+    "@atls-ui-admin/icons": "workspace:0.0.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@testing-library/react": "9.5.0",
@@ -31,6 +32,8 @@
     "typings": "dist/index.d.ts"
   },
   "peerDependencies": {
+    "@atls-ui-admin/icon": "*",
+    "@atls-ui-admin/icons": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "react": "*",
