@@ -69,7 +69,9 @@ const save = async (sources) =>
 const createIndex = (sources) =>
   fs.writeFileAsync(
     path.join(TARGET_DIR, 'index.ts'),
-    sources.map((source) => `export * from './${source.filename}'`).join('\n')
+    `/* eslint-disable */\n${sources
+      .map((source) => `export * from './${source.filename}'`)
+      .join('\n')}`
   )
 
 const build = async () => {
