@@ -186,7 +186,7 @@ __metadata:
   peerDependencies:
     "@atlantis-lab/prettier-config": "*"
     "@atlantis-lab/tsconfig": "*"
-    "@atls-ui-admin/icon": ^0.4.0
+    "@atls-ui-admin/icon": "*"
     "@emotion/styled": ^10.0.0
     prettier: ^1.18.0
     react: ^16.12.0
