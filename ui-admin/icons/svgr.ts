@@ -1,4 +1,4 @@
-import prettierConfig   from '@monstrs/prettier-config'
+import prettierConfig   from '@atlantis-lab/prettier-config'
 import svgr             from '@svgr/core'
 import camelcase        from 'camelcase'
 import fs               from 'fs-extra-promise'
@@ -10,25 +10,23 @@ import { replacements } from './replacements'
 
 const TARGET_DIR = path.join(__dirname, 'src')
 
-const replaceElement = (code: string) => {
-  return code.replace('<svg', '<Icon').replace('</svg', '</Icon')
-}
+const replaceElement = (code: string) => code.replace('<svg', '<Icon').replace('</svg', '</Icon')
 
 const svgrTemplate = ({ template }, opts, { componentName, jsx }) => {
   const typeScriptTpl = template.smart({ plugins: ['typescript', 'prettier'] })
 
   return typeScriptTpl.ast`
 import React from 'react'
-import { Icon, IconProps } from '@admui/icon'
+import { Icon, IconProps } from '@atls-ui-admin/icon'
 
 export const ${componentName.name} = (props: IconProps) => ${jsx}
 ${componentName.name}.displayName = '${componentName.name}'
 `
 }
 
-const read = files =>
+const read = (files) =>
   Promise.all(
-    files.map(async iconPath => ({
+    files.map(async (iconPath) => ({
       name: `${camelcase(path.basename(iconPath, path.extname(iconPath)), {
         pascalCase: true,
       })}Icon`,
@@ -37,9 +35,9 @@ const read = files =>
     }))
   )
 
-const compile = icons =>
+const compile = (icons) =>
   Promise.all(
-    icons.map(async icon => ({
+    icons.map(async (icon) => ({
       filename: icon.filename,
       name: icon.name,
       code: await svgr(
@@ -54,11 +52,12 @@ const compile = icons =>
     }))
   )
 
-const save = async sources => {
-  return Promise.all(
-    sources.map(source =>
+const save = async (sources) =>
+  Promise.all(
+    sources.map((source) =>
       fs.writeFileAsync(
         path.join(TARGET_DIR, `${source.filename}.tsx`),
+        // @ts-ignore
         `/* eslint-disable */\n${prettier.format(replaceElement(source.code), {
           parser: 'babel',
           ...prettierConfig,
@@ -66,12 +65,11 @@ const save = async sources => {
       )
     )
   )
-}
 
-const createIndex = sources =>
+const createIndex = (sources) =>
   fs.writeFileAsync(
     path.join(TARGET_DIR, 'index.ts'),
-    sources.map(source => `export * from './${source.filename}'`).join('\n')
+    sources.map((source) => `export * from './${source.filename}'`).join('\n')
   )
 
 const build = async () => {

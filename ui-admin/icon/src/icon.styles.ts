@@ -1,4 +1,4 @@
-import { CSSObject, keyframes } from '@emotion/core'
+import { CSSObject, keyframes } from '@emotion/css'
 import { styleFn }              from 'styled-system'
 import { ifProp }               from 'styled-tools'
 
