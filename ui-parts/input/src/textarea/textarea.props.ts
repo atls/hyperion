@@ -6,7 +6,7 @@ interface TextareaProps {
     style: { maxWidth: string }
   }
   containerProps: {
-    style: { height: string }
+    style: { height: string; flexDirection: string }
   }
 }
 
@@ -16,7 +16,7 @@ const createTextareaProps = (): TextareaProps => ({
     style: { maxWidth: '100%' },
   },
   containerProps: {
-    style: { height: 'min-content' },
+    style: { height: 'min-content', flexDirection: 'column' },
   },
 })
 

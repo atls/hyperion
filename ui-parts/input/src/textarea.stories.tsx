@@ -1,29 +1,27 @@
-import React                                from 'react'
-import { useState }                         from 'react'
-import { useMemo }                          from 'react'
-import { useRef }                           from 'react'
-import styled                               from '@emotion/styled'
+import React                                  from 'react'
+import { useState }                           from 'react'
+import { useMemo }                            from 'react'
+import { useRef }                             from 'react'
+import styled                                 from '@emotion/styled'
 
-import { fontNames, useGoogleFonts }        from '@atls/storybook-google-fonts'
-import { ConditionalRender }                from '@atls-ui-parts/conditional-render'
-import { ForwardEventsState }               from '@atls-ui-parts/events-state'
-import { Box }                              from '@atls-ui-parts/layout'
+import { fontNames, useGoogleFonts }          from '@atls/storybook-google-fonts'
+import { ConditionalRender }                  from '@atls-ui-parts/conditional-render'
+import { ForwardEventsState }                 from '@atls-ui-parts/events-state'
+import { Box }                                from '@atls-ui-parts/layout'
+import { Upload }                             from '@atls-ui-parts/upload'
 
-import { createAttachmentAppearanceStyles } from './attachment'
-import { createAttachmentBaseStyles }       from './attachment'
-import { createAttachmentPositionStyles }   from './attachment'
-import { createAttachmentShapeStyles }      from './attachment'
-import { createBaseStyles }                 from './input'
-import { createShapeStyles }                from './input'
-import { createAppearanceStyles }           from './input'
-import { RawInput }                         from './input'
-import { createAddonsContainerStyles }      from './addon'
-import { createAddonPositionStyles }        from './addon'
-import { createTextareaProps }              from './textarea'
-import { FileUploadAddon }                  from './textarea'
-import { FileUploadLink }                   from './textarea'
-import { FilesUploaded }                    from './textarea'
-import { createContainerPositionStyles }    from './textarea'
+import { createAttachmentAppearanceStyles }   from './attachment'
+import { createAttachmentBaseStyles }         from './attachment'
+import { createAttachmentPositionStyles }     from './attachment'
+import { createAttachmentShapeStyles }        from './attachment'
+import { createBaseStyles }                   from './input'
+import { createShapeStyles }                  from './input'
+import { createAppearanceStyles }             from './input'
+import { RawInput }                           from './input'
+import { createAddonsContainerStyles }        from './addon'
+import { createAddonPositionStyles }          from './addon'
+import { createTextareaProps }                from './textarea'
+import { createTextareaAddonContainerStyles } from './textarea'
 
 export default {
   title: 'Components/Input',
@@ -33,14 +31,6 @@ export default {
     },
   },
 }
-
-const LinkPlaceholder = ({ onClick }) => <span onClick={onClick}>Link placeholder</span>
-const FileList = ({ files }) =>
-  files.map((file) => (
-    <span>
-      {file.name} {file.type} {file.size}
-    </span>
-  ))
 
 const getAddonPosition = (addonBefore, addonAfter) => {
   if (addonBefore && addonAfter) {
@@ -163,8 +153,7 @@ export const Textarea = ({
           fontColor,
           backgroundColor,
           borderColor,
-        }),
-        createContainerPositionStyles()
+        })
       ),
     [
       size,
@@ -181,6 +170,8 @@ export const Textarea = ({
     ]
   )
 
+  const TextareaAddon = styled.div(createTextareaAddonContainerStyles())
+
   const attach = getAddonPosition(addonBefore, addonAfter)
 
   return (
@@ -196,12 +187,13 @@ export const Textarea = ({
               onChange={(event) => setValue(event.target.value)}
               {...rawInputProps}
             />
+            <TextareaAddon>
+              {/* TODO move example to proto */}
+              <Upload multiple>
+                {(files) => `Files: ${files.map((file) => file.name).join(',')}`}
+              </Upload>
+            </TextareaAddon>
             <Attachment type='suffix'>{suffix}</Attachment>
-            <FileUploadAddon>
-              <FileUploadLink LinkPlaceholder={LinkPlaceholder} />
-              <div style={{ display: 'flex', flexBasis: '30px' }} />
-              <FilesUploaded FileList={FileList} />
-            </FileUploadAddon>
           </StoryTextarea>
         </ForwardEventsState>
         <Addon position='after'>{addonAfter}</Addon>

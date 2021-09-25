@@ -18,6 +18,7 @@
   "devDependencies": {
     "@atls-ui-parts/conditional-render": "workspace:0.0.1",
     "@atls-ui-parts/layout": "workspace:0.0.2",
+    "@atls-ui-parts/upload": "workspace:0.0.0",
     "@atls/storybook-google-fonts": "workspace:0.0.0",
     "@emotion/styled": "^11.3.0",
     "@types/jest": "^26.0.22",
