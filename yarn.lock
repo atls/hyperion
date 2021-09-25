@@ -658,19 +658,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/textarea@workspace:ui-parts/textarea":
+"@atls-ui-parts/upload@workspace:ui-parts/upload":
   version: 0.0.0-use.local
-  resolution: "@atls-ui-parts/textarea@workspace:ui-parts/textarea"
+  resolution: "@atls-ui-parts/upload@workspace:ui-parts/upload"
   dependencies:
-    "@atls-ui-parts/input": "workspace:0.0.3"
+    "@atls-ui-parts/styles": "workspace:0.0.1"
+    "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
-    "@types/react": ^17.0.3
     "@types/styled-system": ^5.1.11
     react: ^17.0.2
+    react-dropzone: ^10.2.1
     styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+    typescript: 3.9.7
   peerDependencies:
-    "@emotion/styled": ^11.1.5
-    react: ^17.0.1
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    styled-system: "*"
+    styled-tools: "*"
   languageName: unknown
   linkType: soft
 

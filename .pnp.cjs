@@ -143,8 +143,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:ui-parts/text-transform"
       },
       {
-        "name": "@atls-ui-parts/textarea",
-        "reference": "workspace:ui-parts/textarea"
+        "name": "@atls-ui-parts/upload",
+        "reference": "workspace:ui-parts/upload"
       },
       {
         "name": "@atls-ui-proto/avatar",
@@ -222,7 +222,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-parts/switch", ["workspace:ui-parts/switch"]],
       ["@atls-ui-parts/text", ["virtual:724857ebd92f731dbe22ca19638a1eefd7cdf062f09334ebb849eaae933e2a98886dee3b8808a6fa055d81319d6fa63acb3fb3ef6b1f160b59a6c75b1cb0555c#workspace:ui-parts/text", "virtual:b2254c2d82af19fb4b66316f70568d9bb842b90577af32d06ce4041b067382e4019e46921576ca16c5e94d26ef67d71a84d5e6edc1d9dc8c1caf4ef71a29968c#workspace:ui-parts/text", "workspace:ui-parts/text"]],
       ["@atls-ui-parts/text-transform", ["virtual:144bd10b47610de450c041ff553326fefe11958aedc1da4a2a09dafd48e073b7fc7fd88c35623eafbf7d353919a302f576bfc9d4dea4795b88e73d2fea0dc288#workspace:ui-parts/text-transform", "workspace:ui-parts/text-transform"]],
-      ["@atls-ui-parts/textarea", ["workspace:ui-parts/textarea"]],
+      ["@atls-ui-parts/upload", ["workspace:ui-parts/upload"]],
       ["@atls-ui-proto/avatar", ["workspace:ui-proto/avatar"]],
       ["@atls-ui-proto/button", ["virtual:8ab0d223413e4a5b27571f1c73894c535886604495082c387b7a0550543032cc9edb2f3bacbd8a158ce759eb80f55bdc97c04ada24d35b3a9f99344dd6001802#workspace:ui-proto/button", "virtual:c7650fe93d93d6badbf40c247530f86eaec9d8a36e117d7f3b39338dbb28c3785f1a2bbe765bd4495ac8e44c34ce280fcb986eba497de7f2dccdfac3d3df5836#workspace:ui-proto/button", "workspace:ui-proto/button"]],
       ["@atls-ui-proto/carousel", ["workspace:ui-proto/carousel"]],
@@ -1670,17 +1670,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
-      ["@atls-ui-parts/textarea", [
-        ["workspace:ui-parts/textarea", {
-          "packageLocation": "./ui-parts/textarea/",
+      ["@atls-ui-parts/upload", [
+        ["workspace:ui-parts/upload", {
+          "packageLocation": "./ui-parts/upload/",
           "packageDependencies": [
-            ["@atls-ui-parts/textarea", "workspace:ui-parts/textarea"],
-            ["@atls-ui-parts/input", "virtual:06d683907c14911994e2a02867c1b5b4197c4512082058768cfb8fe82016a26ecc574a47a037646830ae1b791fc69c394f911f46edc22afbdd2382987e463280#workspace:ui-parts/input"],
-            ["@emotion/styled", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:11.3.0"],
-            ["@types/react", "npm:17.0.11"],
+            ["@atls-ui-parts/upload", "workspace:ui-parts/upload"],
+            ["@atls-ui-parts/styles", "virtual:dbe1a421eee484ea0bdb9d0589d44d9184c9819d8f5bfcb1a73e3d85271cc45ecf4365a26e00f2a3256c13de48b40272578801688978809175001fb2693bc747#workspace:ui-parts/styles"],
+            ["@emotion/react", "virtual:8eb691db84fd68975b95c7b7751e750446f82576951f5264566adefecbbef8688299b9be5a741e618cd4e5792a084b105995a5c92b7bd7f7d69bde2692db614b#npm:11.4.1"],
+            ["@emotion/styled", "virtual:8eb691db84fd68975b95c7b7751e750446f82576951f5264566adefecbbef8688299b9be5a741e618cd4e5792a084b105995a5c92b7bd7f7d69bde2692db614b#npm:11.3.0"],
             ["@types/styled-system", "npm:5.1.11"],
             ["react", "npm:17.0.2"],
-            ["styled-system", "npm:5.1.5"]
+            ["react-dropzone", "virtual:0f78743c3a966899499b1c9d77fbab0531b4c6f8711125a1165b786d45b5dfa4039ba3515183a925753c3f64da03ce3cc1a5175d4609c8a2ba30693d2398d35c#npm:10.2.2"],
+            ["styled-system", "npm:5.1.5"],
+            ["styled-tools", "npm:1.7.2"],
+            ["typescript", "patch:typescript@npm%3A4.2.4#~builtin<compat/typescript>::version=4.2.4&hash=32657b"]
           ],
           "linkType": "SOFT",
         }]
@@ -27043,6 +27046,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dropzone", "npm:10.2.2"]
           ],
           "linkType": "SOFT",
+        }],
+        ["virtual:0f78743c3a966899499b1c9d77fbab0531b4c6f8711125a1165b786d45b5dfa4039ba3515183a925753c3f64da03ce3cc1a5175d4609c8a2ba30693d2398d35c#npm:10.2.2", {
+          "packageLocation": "./.yarn/__virtual__/react-dropzone-virtual-4dd623b408/0/cache/react-dropzone-npm-10.2.2-7979927b58-25d38168ff.zip/node_modules/react-dropzone/",
+          "packageDependencies": [
+            ["react-dropzone", "virtual:0f78743c3a966899499b1c9d77fbab0531b4c6f8711125a1165b786d45b5dfa4039ba3515183a925753c3f64da03ce3cc1a5175d4609c8a2ba30693d2398d35c#npm:10.2.2"],
+            ["@types/react", null],
+            ["attr-accept", "npm:2.2.2"],
+            ["file-selector", "npm:0.1.19"],
+            ["prop-types", "npm:15.7.2"],
+            ["react", "npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@types/react",
+            "react"
+          ],
+          "linkType": "HARD",
         }],
         ["virtual:ecc6b1bbaecda01b4876fa1e192199007fc275ac98b826098f5b047b9f5e5078bc2e874010bd031f331dc7f74a04d19db38a9dc54b7d146b32d9430495098e39#npm:10.2.2", {
           "packageLocation": "./.yarn/__virtual__/react-dropzone-virtual-245cc37c7f/0/cache/react-dropzone-npm-10.2.2-7979927b58-25d38168ff.zip/node_modules/react-dropzone/",
