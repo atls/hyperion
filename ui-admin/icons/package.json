@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-admin/icons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -15,7 +15,7 @@
   "devDependencies": {
     "@atlantis-lab/prettier-config": "^0.1.12",
     "@atlantis-lab/tsconfig": "^0.1.12",
-    "@atls-ui-admin/icon": "workspace:0.0.1",
+    "@atls-ui-admin/icon": "workspace:0.0.2",
     "@svgr/core": "5.4.0",
     "@testing-library/react": "9.5.0",
     "@types/prettier": "^2",
