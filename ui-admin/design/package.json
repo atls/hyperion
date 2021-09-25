@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@atls-ui-admin/button": "workspace:0.0.4",
-    "@atls-ui-admin/theme": "workspace:0.0.1",
+    "@atls-ui-admin/theme": "workspace:0.0.2",
     "@babel/core": "^7.13.16",
     "@emotion/babel-plugin": "^11.3.0",
     "@emotion/react": "^11.1.5",

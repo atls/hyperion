@@ -107,7 +107,7 @@ __metadata:
   resolution: "@atls-ui-admin/design@workspace:ui-admin/design"
   dependencies:
     "@atls-ui-admin/button": "workspace:0.0.4"
-    "@atls-ui-admin/theme": "workspace:0.0.1"
+    "@atls-ui-admin/theme": "workspace:0.0.2"
     "@babel/core": ^7.13.16
     "@emotion/babel-plugin": ^11.3.0
     "@emotion/react": ^11.1.5
@@ -131,7 +131,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-admin/icon@workspace:0.0.0, @atls-ui-admin/icon@workspace:ui-admin/icon":
+"@atls-ui-admin/icon@workspace:0.0.1, @atls-ui-admin/icon@workspace:ui-admin/icon":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/icon@workspace:ui-admin/icon"
   dependencies:
@@ -155,13 +155,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-admin/icons@workspace:0.0.0, @atls-ui-admin/icons@workspace:ui-admin/icons":
+"@atls-ui-admin/icons@workspace:0.0.1, @atls-ui-admin/icons@workspace:ui-admin/icons":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/icons@workspace:ui-admin/icons"
   dependencies:
     "@atlantis-lab/prettier-config": ^0.1.12
     "@atlantis-lab/tsconfig": ^0.1.12
-    "@atls-ui-admin/icon": "workspace:0.0.0"
+    "@atls-ui-admin/icon": "workspace:0.0.1"
     "@svgr/core": 5.4.0
     "@testing-library/react": 9.5.0
     "@types/prettier": ^2
@@ -184,7 +184,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-admin/theme@workspace:0.0.1, @atls-ui-admin/theme@workspace:ui-admin/theme":
+"@atls-ui-admin/theme@workspace:0.0.2, @atls-ui-admin/theme@workspace:ui-admin/theme":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/theme@workspace:ui-admin/theme"
   dependencies:
@@ -203,8 +203,8 @@ __metadata:
   resolution: "@atls-ui-admin/upload@workspace:ui-admin/upload"
   dependencies:
     "@apollo/client": 3.1.1
-    "@atls-ui-admin/icon": "workspace:0.0.0"
-    "@atls-ui-admin/icons": "workspace:0.0.0"
+    "@atls-ui-admin/icon": "workspace:0.0.1"
+    "@atls-ui-admin/icons": "workspace:0.0.1"
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@monstrs/react-upload": ^0.1.6

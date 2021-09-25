@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-admin/upload",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
@@ -13,8 +13,8 @@
   },
   "devDependencies": {
     "@apollo/client": "3.1.1",
-    "@atls-ui-admin/icon": "workspace:0.0.0",
-    "@atls-ui-admin/icons": "workspace:0.0.0",
+    "@atls-ui-admin/icon": "workspace:0.0.1",
+    "@atls-ui-admin/icons": "workspace:0.0.1",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@testing-library/react": "9.5.0",
