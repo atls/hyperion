@@ -1,4 +1,7 @@
 export * from './input.interfaces'
+export * from './addon'
 export * from './attachment'
 export * from './input'
 export * from './value'
+export * from './textarea'
+export * from './fields-addon'
