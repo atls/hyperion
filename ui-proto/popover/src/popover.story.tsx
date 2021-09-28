@@ -1,7 +1,7 @@
 import styled              from '@emotion/styled'
 import React, { useState } from 'react'
 
-import { Column, Layout }  from '@ui-parts/layout'
+import { Column, Layout }  from '@atls-ui-parts/layout'
 
 import { Popover }         from './popover.component'
 
