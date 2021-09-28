@@ -1,0 +1,32 @@
+{
+  "name": "@atls-ui-parts/popover",
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "files": [
+    "**/*.js",
+    "**/*.d.ts"
+  ],
+  "scripts": {
+    "build": "yarn app library build",
+    "postpack": "rm -rf dist",
+    "prepack": "yarn run build"
+  },
+  "devDependencies": {
+    "@atls-ui-parts/layout": "workspace:0.0.2",
+    "@atls-ui-parts/tooltip": "workspace:0.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "index.js",
+    "typings": "index.d.ts"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^11.0.0",
+    "@emotion/styled": "^11.1.5",
+    "framer-motion": "^4.1.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.2",
+    "styled-system": "^5.1.0"
+  }
+}
