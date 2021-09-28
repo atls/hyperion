@@ -1,7 +1,7 @@
 import styled                                   from '@emotion/styled'
 import React, { FunctionComponent, forwardRef } from 'react'
 
-import { Arrow }                                from '@ui-parts/tooltip'
+import { Arrow }                                from '@atls-ui-parts/tooltip'
 
 import { ContainerInner }                       from '../container-inner'
 import { ContainerTitle }                       from '../container-title'

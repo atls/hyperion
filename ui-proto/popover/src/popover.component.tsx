@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 
-import { Tooltip }                  from '@ui-parts/tooltip'
+import { Tooltip }                  from '@atls-ui-parts/tooltip'
 
 import { Container }                from './container'
 import { TooltipProps }             from './popover.interfaces'
