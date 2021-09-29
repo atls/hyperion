@@ -1,0 +1,29 @@
+{
+  "name": "@atls-ui-parts/portal",
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn app library build",
+    "postpack": "rm -rf dist",
+    "prepack": "yarn run build"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "index.js",
+    "typings": "index.d.ts"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
