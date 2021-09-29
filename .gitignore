@@ -45,3 +45,5 @@ node_modules
 ui-admin/icons/src/
 
 dist/
+
+*.iml
