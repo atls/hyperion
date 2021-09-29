@@ -525,6 +525,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui-parts/modal@workspace:ui-proto/modal":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-parts/modal@workspace:ui-proto/modal"
+  dependencies:
+    "@atls-ui-parts/portal": "workspace:0.0.0"
+    "@emotion/css": ^11.1.3
+    "@emotion/styled": ^11.3.0
+    "@types/react": ^17.0.3
+    "@types/react-dom": ^17.0.3
+    framer-motion: ^4.1.17
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    "@emotion/css": ^11.1.3
+    "@emotion/styled": ^11.1.5
+    framer-motion: ^4.1.17
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-parts/popover@workspace:ui-proto/popover":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/popover@workspace:ui-proto/popover"
@@ -547,6 +568,20 @@ __metadata:
     react: ^17.0.1
     react-dom: ^17.0.2
     styled-system: ^5.1.0
+  languageName: unknown
+  linkType: soft
+
+"@atls-ui-parts/portal@workspace:0.0.0, @atls-ui-parts/portal@workspace:ui-parts/portal":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-parts/portal@workspace:ui-parts/portal"
+  dependencies:
+    "@types/react": ^17.0.3
+    "@types/react-dom": ^17.0.3
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
