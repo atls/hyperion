@@ -546,6 +546,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui-parts/popover@workspace:ui-proto/popover":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-parts/popover@workspace:ui-proto/popover"
+  dependencies:
+    "@atls-ui-parts/layout": "workspace:0.0.2"
+    "@atls-ui-parts/tooltip": "workspace:0.0.0"
+    "@emotion/react": ^11.4.1
+    "@emotion/styled": ^11.3.0
+    "@types/react": ^17.0.3
+    "@types/react-dom": ^17.0.3
+    "@types/styled-system": ^5.1.11
+    framer-motion: ^4.1.17
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-laag: 1.7.3
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    framer-motion: ^4.1.7
+    react: ^17.0.1
+    react-dom: ^17.0.2
+    styled-system: ^5.1.0
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-parts/portal@workspace:0.0.0, @atls-ui-parts/portal@workspace:ui-parts/portal":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/portal@workspace:ui-parts/portal"
@@ -691,6 +716,31 @@ __metadata:
   peerDependencies:
     "@emotion/styled": ^11.1.5
     react: ^17.0.1
+  languageName: unknown
+  linkType: soft
+
+"@atls-ui-parts/tooltip@workspace:0.0.0, @atls-ui-parts/tooltip@workspace:ui-parts/tooltip":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-parts/tooltip@workspace:ui-parts/tooltip"
+  dependencies:
+    "@atls-ui-parts/layout": "workspace:0.0.2"
+    "@emotion/styled": ^11.3.0
+    "@testing-library/react": 10.4.7
+    "@types/react": ^17.0.3
+    "@types/react-dom": ^17.0.3
+    "@types/styled-system": ^5.1.11
+    framer-motion: ^4.1.17
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-laag: 1.7.3
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    framer-motion: ^4.1.7
+    react: ^17.0.1
+    react-dom: ^17.0.2
+    react-laag: 1.7.3
+    styled-system: ^5.1.0
   languageName: unknown
   linkType: soft
 
@@ -19511,6 +19561,16 @@ fsevents@^1.2.7:
   version: 17.0.1
   resolution: "react-is@npm:17.0.1"
   checksum: 5e6945a286367894d11b24f41a0065607ba62bdac0df0b567294b2e299c037e3641434e66f9be30536b8c47f7ad94d44e633feb2ba25959c2c42423844e6c2f1
+  languageName: node
+  linkType: hard
+
+"react-laag@npm:1.7.3":
+  version: 1.7.3
+  resolution: "react-laag@npm:1.7.3"
+  peerDependencies:
+    react: ^16.8.0 || ^16.9.0
+    react-dom: ^16.8.0 || ^16.9.0
+  checksum: 82da25fefd8bbc12ebb671ecb2638540569c2a62c1dd99f1bd76b9ee04cc046271ae821985cf62c6336f02d72dab15769252cb1315584ab0b76a5f14346c8abe
   languageName: node
   linkType: hard
 
