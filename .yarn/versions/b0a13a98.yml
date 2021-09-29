@@ -1,5 +1,0 @@
-releases:
-  "@atls-ui-parts/modal": patch
-  "@atls-ui-parts/popover": patch
-  "@atls-ui-parts/portal": patch
-  "@atls-ui-parts/tooltip": patch
