@@ -1,0 +1,3 @@
+releases:
+  "@atls-ui-proto/modal": patch
+  "@atls-ui-proto/popover": patch
