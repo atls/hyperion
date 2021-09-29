@@ -1,0 +1,13 @@
+releases:
+  "@atls-ui-admin/icon": patch
+  "@atls-ui-admin/icons": patch
+  "@atls-ui-admin/theme": patch
+  "@atls-ui-admin/upload": patch
+  "@atls-ui-parts/autocomplete": patch
+  "@atls-ui-parts/datepicker": patch
+  "@atls-ui-parts/input": patch
+  "@atls-ui-parts/popover": patch
+  "@atls-ui-parts/select": patch
+  "@atls-ui-parts/tooltip": patch
+  "@atls-ui-parts/upload": patch
+  "@atls-ui-proto/input": patch
