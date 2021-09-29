@@ -1461,7 +1461,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./ui-proto/modal/",
           "packageDependencies": [
             ["@atls-ui-parts/modal", "workspace:ui-proto/modal"],
-            ["@atls-ui-parts/portal", "virtual:050a86fffb2eb73b56c6b3dbe17191abbd520891079fc6b0e56f64cbd5e49d931fb9ef05f60e13097321308ed67e0a7f57cc17655a9cd8e999106fd71ad7e34c#workspace:ui-parts/portal"]
+            ["@atls-ui-parts/portal", "virtual:050a86fffb2eb73b56c6b3dbe17191abbd520891079fc6b0e56f64cbd5e49d931fb9ef05f60e13097321308ed67e0a7f57cc17655a9cd8e999106fd71ad7e34c#workspace:ui-parts/portal"],
+            ["@emotion/css", "virtual:8eb691db84fd68975b95c7b7751e750446f82576951f5264566adefecbbef8688299b9be5a741e618cd4e5792a084b105995a5c92b7bd7f7d69bde2692db614b#npm:11.1.3"],
+            ["@emotion/styled", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:11.3.0"],
+            ["@types/react", "npm:17.0.11"],
+            ["@types/react-dom", "npm:17.0.7"],
+            ["framer-motion", "virtual:9c076913ffd643939b8ac6e8c374fd1470f44689001261d35898fb07091ea0aa596a24d8bcdfb508f949d0c68789b448702cfb68072c423229496303e9a11342#npm:4.1.17"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#npm:17.0.2"]
           ],
           "linkType": "SOFT",
         }]
@@ -1471,10 +1478,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-portal-virtual-5df2f1c82f/1/ui-parts/portal/",
           "packageDependencies": [
             ["@atls-ui-parts/portal", "virtual:050a86fffb2eb73b56c6b3dbe17191abbd520891079fc6b0e56f64cbd5e49d931fb9ef05f60e13097321308ed67e0a7f57cc17655a9cd8e999106fd71ad7e34c#workspace:ui-parts/portal"],
-            ["@types/react", null],
-            ["@types/react-dom", null],
-            ["react", null],
-            ["react-dom", null]
+            ["@types/react", "npm:17.0.11"],
+            ["@types/react-dom", "npm:17.0.7"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#npm:17.0.2"]
           ],
           "packagePeers": [
             "@types/react-dom",
@@ -1487,7 +1494,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["workspace:ui-parts/portal", {
           "packageLocation": "./ui-parts/portal/",
           "packageDependencies": [
-            ["@atls-ui-parts/portal", "workspace:ui-parts/portal"]
+            ["@atls-ui-parts/portal", "workspace:ui-parts/portal"],
+            ["@types/react", "npm:17.0.11"],
+            ["@types/react-dom", "npm:17.0.7"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#npm:17.0.2"]
           ],
           "linkType": "SOFT",
         }]

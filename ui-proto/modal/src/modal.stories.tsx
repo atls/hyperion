@@ -3,7 +3,7 @@ import React     from 'react'
 import { Modal } from '.'
 
 export default {
-  title: 'Компоненты/Модальное окно/Примеры',
+  title: 'Components/Modal',
 }
 
 export const Base = () => (
