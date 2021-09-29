@@ -167,6 +167,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:ui-proto/design"
       },
       {
+        "name": "@atls-ui-proto/divider",
+        "reference": "workspace:ui-proto/divider"
+      },
+      {
         "name": "@atls-ui-proto/input",
         "reference": "workspace:ui-proto/input"
       },
@@ -237,6 +241,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-proto/button", ["virtual:8ab0d223413e4a5b27571f1c73894c535886604495082c387b7a0550543032cc9edb2f3bacbd8a158ce759eb80f55bdc97c04ada24d35b3a9f99344dd6001802#workspace:ui-proto/button", "virtual:c7650fe93d93d6badbf40c247530f86eaec9d8a36e117d7f3b39338dbb28c3785f1a2bbe765bd4495ac8e44c34ce280fcb986eba497de7f2dccdfac3d3df5836#workspace:ui-proto/button", "workspace:ui-proto/button"]],
       ["@atls-ui-proto/carousel", ["workspace:ui-proto/carousel"]],
       ["@atls-ui-proto/design", ["workspace:ui-proto/design"]],
+      ["@atls-ui-proto/divider", ["workspace:ui-proto/divider"]],
       ["@atls-ui-proto/input", ["virtual:8ab0d223413e4a5b27571f1c73894c535886604495082c387b7a0550543032cc9edb2f3bacbd8a158ce759eb80f55bdc97c04ada24d35b3a9f99344dd6001802#workspace:ui-proto/input", "virtual:9327d95985dbaa552b114b3d4e85ad244ec46c632fd10bba0eadffef89dbb7753d95ac2e47d1e17487a6c00d4d327fc50bbab27644c34e1dfc251376c43233e7#workspace:ui-proto/input", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-proto/input", "workspace:ui-proto/input"]],
       ["@atls-ui-proto/layout", ["workspace:ui-proto/layout"]],
       ["@atls-ui-proto/link", ["workspace:ui-proto/link"]],
@@ -2023,6 +2028,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#npm:17.0.2"],
             ["react-is", "npm:17.0.2"],
             ["typescript", "patch:typescript@npm%3A4.2.4#~builtin<compat/typescript>::version=4.2.4&hash=32657b"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@atls-ui-proto/divider", [
+        ["workspace:ui-proto/divider", {
+          "packageLocation": "./ui-proto/divider/",
+          "packageDependencies": [
+            ["@atls-ui-proto/divider", "workspace:ui-proto/divider"],
+            ["@atls-ui-parts/layout", "virtual:43d6e06c0c27a021d4c15d7eafd33a855ff1785e6333f6689dd48ce11bba4ca522b8c66f8695987ad0edeac39bde87ffb47012b888094a7a47c901d4c0dba05b#workspace:ui-parts/layout"],
+            ["@emotion/styled", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:11.3.0"],
+            ["@types/react", "npm:17.0.11"],
+            ["@types/styled-system", "npm:5.1.11"],
+            ["react", "npm:17.0.2"],
+            ["styled-system", "npm:5.1.5"],
+            ["styled-tools", "npm:1.7.2"]
           ],
           "linkType": "SOFT",
         }]
