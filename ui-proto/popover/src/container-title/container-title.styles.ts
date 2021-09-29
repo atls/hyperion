@@ -1,6 +1,6 @@
 import { styleFn } from 'styled-system'
 
-export const baseContainerTitleStyles: styleFn = {
+export const baseContainerTitleStyles: styleFn = () => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -9,4 +9,4 @@ export const baseContainerTitleStyles: styleFn = {
   minHeight: 32,
   width: '100%',
   boxSizing: 'border-box',
-}
+})
