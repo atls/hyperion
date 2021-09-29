@@ -13,9 +13,7 @@ export type TooltipAnchor =
   | 'RIGHT_CENTER'
   | 'CENTER'
 export type TooltipTrigger = 'click' | 'hover' | 'menu'
-export type LayerDimensions = (
-  layerSide: string
-) => {
+export type LayerDimensions = (layerSide: string) => {
   width: number
   height: number
 }

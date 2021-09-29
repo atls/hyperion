@@ -6,7 +6,7 @@ import { Column, Layout }  from '@atls-ui-parts/layout'
 import { Popover }         from './popover.component'
 
 export default {
-  title: 'Компоненты/Поповер/Примеры',
+  title: 'Components/Popover',
 }
 
 const TestButton = styled.div({

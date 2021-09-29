@@ -6,7 +6,7 @@ import { Column, Layout, Row } from '@atls-ui-parts/layout'
 import { Tooltip }             from './tooltip.component'
 
 export default {
-  title: 'Компоненты/Тултип/Примеры',
+  title: 'Components/Tooltip',
 }
 
 const TestContainer = styled.div({ width: 50, height: 30, background: 'green', margin: 0 })

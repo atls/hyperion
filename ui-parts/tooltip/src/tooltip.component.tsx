@@ -48,7 +48,7 @@ export const Tooltip: FunctionComponent<TooltipProps> = ({
     delayLeave: mouseLeaveDelay,
   })
 
-  const getTriggerProps = toggle => {
+  const getTriggerProps = (toggle) => {
     if (typeof isOpen === 'boolean') {
       return {}
     }
@@ -56,7 +56,7 @@ export const Tooltip: FunctionComponent<TooltipProps> = ({
       (trigger === 'hover' && hoverProps) ||
       (trigger === 'click' && { onClick: toggle }) ||
       (trigger === 'menu' && {
-        onContextMenu: event => {
+        onContextMenu: (event) => {
           event.preventDefault()
           toggle()
         },
@@ -71,6 +71,7 @@ export const Tooltip: FunctionComponent<TooltipProps> = ({
           return (
             <AnimatePresence>
               {isOpenLayer &&
+                // @ts-ignore
                 cloneElement(container, {
                   ref: layerProps.ref,
                   style: layerProps.style,
@@ -86,6 +87,7 @@ export const Tooltip: FunctionComponent<TooltipProps> = ({
         }
         return (
           isOpenLayer &&
+          // @ts-ignore
           cloneElement(container, {
             ref: layerProps.ref,
             style: layerProps.style,

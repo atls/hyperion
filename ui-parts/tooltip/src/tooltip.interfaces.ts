@@ -14,9 +14,7 @@ export type TooltipAnchor =
   | 'CENTER'
 export type TooltipTrigger = 'click' | 'hover' | 'menu'
 export type TooltipCloseOnDisappear = 'partial' | 'full'
-export type LayerDimensions = (
-  layerSide: string
-) => {
+export type LayerDimensions = (layerSide: string) => {
   width: number
   height: number
 }
