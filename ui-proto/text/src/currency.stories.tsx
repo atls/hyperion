@@ -15,6 +15,9 @@ Currency.args = {
   currency: 'USD',
   amount: 100,
   locale: 'ru-RU',
+  options: {
+    maximumFractionDigits: 2,
+  },
 }
 
 Currency.argTypes = {

@@ -5,9 +5,9 @@ import styled            from '@emotion/styled'
 import { Text }          from './text.component'
 import { CurrencyProps } from './currency.interface'
 
-const CurrencyChildren: FC<CurrencyProps> = ({ amount, currency, locale, ...props }) => (
+const CurrencyChildren: FC<CurrencyProps> = ({ amount, currency, locale, options, ...props }) => (
   <span {...props}>
-    {new Intl.NumberFormat(locale, { style: 'currency', currency })
+    {new Intl.NumberFormat(locale, { style: 'currency', currency, ...options })
       .format(amount)
       .replace(',00', '')}
   </span>
