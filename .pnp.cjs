@@ -1454,11 +1454,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.11"],
             ["@types/styled-system", "npm:5.1.11"],
             ["react", "npm:17.0.2"],
-            ["styled-system", "virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#npm:1.1.7"]
+            ["styled-system", "npm:5.1.5"]
           ],
           "packagePeers": [
             "@emotion/styled",
             "@types/emotion__styled",
+            "@types/styled-system",
             "react",
             "styled-system"
           ],
@@ -1663,9 +1664,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@fortawesome/fontawesome-svg-core", "npm:1.2.28"],
             ["@fortawesome/free-solid-svg-icons", "npm:5.13.0"],
             ["@fortawesome/react-fontawesome", "virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#npm:0.1.10"],
+            ["@types/styled-system", "npm:5.1.11"],
             ["framer-motion", "virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#npm:4.1.17"],
             ["react", "npm:17.0.2"],
-            ["styled-system", "virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#npm:1.1.7"],
+            ["styled-system", "npm:5.1.5"],
             ["styled-tools", "npm:1.7.2"]
           ],
           "linkType": "SOFT",
@@ -1711,7 +1713,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/styled-tools", null],
             ["framer-motion", "virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#npm:4.1.17"],
             ["react", "npm:17.0.2"],
-            ["styled-system", "virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#npm:1.1.7"],
+            ["styled-system", "npm:5.1.5"],
             ["styled-tools", "npm:1.7.2"]
           ],
           "packagePeers": [
@@ -1719,6 +1721,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/emotion__react",
             "@types/emotion__styled",
             "@types/framer-motion",
+            "@types/styled-system",
             "@types/styled-tools",
             "framer-motion",
             "react",
@@ -7206,14 +7209,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@fortawesome/react-fontawesome", "virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#npm:0.1.10"],
             ["@fortawesome/fontawesome-svg-core", "npm:1.2.28"],
             ["@types/fortawesome__fontawesome-svg-core", null],
-            ["@types/react", null],
+            ["@types/react", "npm:17.0.11"],
             ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"]
           ],
           "packagePeers": [
             "@fortawesome/fontawesome-svg-core",
             "@types/fortawesome__fontawesome-svg-core",
-            "@types/react",
             "react"
           ],
           "linkType": "HARD",
@@ -30228,13 +30230,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["styled-system", [
-        ["npm:1.1.7", {
-          "packageLocation": "./.yarn/cache/styled-system-npm-1.1.7-24febc1766-e37f7c7e18.zip/node_modules/styled-system/",
-          "packageDependencies": [
-            ["styled-system", "npm:1.1.7"]
-          ],
-          "linkType": "SOFT",
-        }],
         ["npm:5.1.5", {
           "packageLocation": "./.yarn/cache/styled-system-npm-5.1.5-64d59c22e4-e1345f88e0.zip/node_modules/styled-system/",
           "packageDependencies": [
@@ -30252,20 +30247,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@styled-system/typography", "npm:5.1.2"],
             ["@styled-system/variant", "npm:5.1.5"],
             ["object-assign", "npm:4.1.1"]
-          ],
-          "linkType": "HARD",
-        }],
-        ["virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#npm:1.1.7", {
-          "packageLocation": "./.yarn/__virtual__/styled-system-virtual-a8004f5cd9/0/cache/styled-system-npm-1.1.7-24febc1766-e37f7c7e18.zip/node_modules/styled-system/",
-          "packageDependencies": [
-            ["styled-system", "virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#npm:1.1.7"],
-            ["@types/react", null],
-            ["prop-types", "npm:15.7.2"],
-            ["react", "npm:17.0.2"]
-          ],
-          "packagePeers": [
-            "@types/react",
-            "react"
           ],
           "linkType": "HARD",
         }]

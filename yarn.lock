@@ -621,16 +621,17 @@ __metadata:
     "@fortawesome/fontawesome-svg-core": 1.2.28
     "@fortawesome/free-solid-svg-icons": 5.13.0
     "@fortawesome/react-fontawesome": 0.1.10
+    "@types/styled-system": ^5.1.11
     framer-motion: 4.1.17
     react: 17.0.2
-    styled-system: 1.1.7
-    styled-tools: 1.7.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
   peerDependencies:
     "@emotion/styled": 11.3.0
     framer-motion: 4.1.17
     react: 17.0.2
-    styled-system: 1.1.7
-    styled-tools: 1.7.2
+    styled-system: "*"
+    styled-tools: "*"
   languageName: unknown
   linkType: soft
 
@@ -21746,17 +21747,6 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"styled-system@npm:1.1.7":
-  version: 1.1.7
-  resolution: "styled-system@npm:1.1.7"
-  dependencies:
-    prop-types: ^15.6.0
-  peerDependencies:
-    react: ^0.14.x || ^15.x || ^16.x
-  checksum: e37f7c7e18ec03abde46d6c117910ac71d4d03af385d514a79f3dc58dba7d3c5d7c58955036e482c14f35e24b893afafe149a2cc285cf9a5aace3f348f9a20c9
-  languageName: node
-  linkType: hard
-
 "styled-system@npm:^5.1.5":
   version: 5.1.5
   resolution: "styled-system@npm:5.1.5"
@@ -21778,7 +21768,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"styled-tools@npm:1.7.2, styled-tools@npm:^1.7.2":
+"styled-tools@npm:^1.7.2":
   version: 1.7.2
   resolution: "styled-tools@npm:1.7.2"
   checksum: 00cc1796085589b8d95d5a4183806d45b1d332fbc1dcf19922b01b81bd871c5a499fce64e82bb63bbead5bb8fe317f60a6e91c2fe01bf1ed79f5953977a05065

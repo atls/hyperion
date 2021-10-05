@@ -14,9 +14,7 @@
   "dependencies": {
     "@emotion/styled": "11.3.0",
     "framer-motion": "4.1.17",
-    "react": "17.0.2",
-    "styled-system": "1.1.7",
-    "styled-tools": "1.7.2"
+    "react": "17.0.2"
   },
   "devDependencies": {
     "@atls-ui-parts/layout": "workspace:0.0.2",
@@ -24,7 +22,10 @@
     "@emotion/css": "^11.1.3",
     "@fortawesome/fontawesome-svg-core": "1.2.28",
     "@fortawesome/free-solid-svg-icons": "5.13.0",
-    "@fortawesome/react-fontawesome": "0.1.10"
+    "@fortawesome/react-fontawesome": "0.1.10",
+    "@types/styled-system": "^5.1.11",
+    "styled-system": "^5.1.5",
+    "styled-tools": "^1.7.2"
   },
   "publishConfig": {
     "access": "public",
@@ -35,7 +36,7 @@
     "@emotion/styled": "11.3.0",
     "framer-motion": "4.1.17",
     "react": "17.0.2",
-    "styled-system": "1.1.7",
-    "styled-tools": "1.7.2"
+    "styled-system": "*",
+    "styled-tools": "*"
   }
 }
