@@ -610,6 +610,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui-parts/sidebar@workspace:ui-parts/sidebar":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-parts/sidebar@workspace:ui-parts/sidebar"
+  dependencies:
+    "@atls-ui-parts/layout": "workspace:0.0.2"
+    "@atls-ui-parts/switch": "workspace:0.0.3"
+    "@emotion/css": ^11.1.3
+    "@emotion/styled": 11.3.0
+    "@fortawesome/fontawesome-svg-core": 1.2.28
+    "@fortawesome/free-solid-svg-icons": 5.13.0
+    "@fortawesome/react-fontawesome": 0.1.10
+    "@types/styled-system": ^5.1.11
+    framer-motion: 4.1.17
+    react: 17.0.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/styled": 11.3.0
+    framer-motion: 4.1.17
+    react: 17.0.2
+    styled-system: "*"
+    styled-tools: "*"
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-parts/styles@workspace:0.0.1, @atls-ui-parts/styles@workspace:ui-parts/styles":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/styles@workspace:ui-parts/styles"
@@ -621,7 +646,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/switch@workspace:ui-parts/switch":
+"@atls-ui-parts/switch@workspace:0.0.3, @atls-ui-parts/switch@workspace:ui-parts/switch":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/switch@workspace:ui-parts/switch"
   dependencies:
@@ -3907,20 +3932,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:^10.0.27":
-  version: 10.0.27
-  resolution: "@emotion/styled@npm:10.0.27"
-  dependencies:
-    "@emotion/styled-base": ^10.0.27
-    babel-plugin-emotion: ^10.0.27
-  peerDependencies:
-    "@emotion/core": ^10.0.27
-    react: ">=16.3.0"
-  checksum: 09e86fe47adbca1eabb34f36cee17289fbe1f2332c40051d4d5a6077eed1682612685663efb7fd68a8f290d20f9f5cb6ad1c9ca18dcdfc05ee51784d707d279c
-  languageName: node
-  linkType: hard
-
-"@emotion/styled@npm:^11.3.0":
+"@emotion/styled@npm:11.3.0, @emotion/styled@npm:^11.3.0":
   version: 11.3.0
   resolution: "@emotion/styled@npm:11.3.0"
   dependencies:
@@ -3939,6 +3951,19 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 5e5c1e89d2022696e44d2a44e352aba56ab0961d9c4a78eff5d1bfa3deae08487fb17641610446595471d74e956b791e619d3a9006c18e145ed849ef7062e1b5
+  languageName: node
+  linkType: hard
+
+"@emotion/styled@npm:^10.0.27":
+  version: 10.0.27
+  resolution: "@emotion/styled@npm:10.0.27"
+  dependencies:
+    "@emotion/styled-base": ^10.0.27
+    babel-plugin-emotion: ^10.0.27
+  peerDependencies:
+    "@emotion/core": ^10.0.27
+    react: ">=16.3.0"
+  checksum: 09e86fe47adbca1eabb34f36cee17289fbe1f2332c40051d4d5a6077eed1682612685663efb7fd68a8f290d20f9f5cb6ad1c9ca18dcdfc05ee51784d707d279c
   languageName: node
   linkType: hard
 
@@ -4008,6 +4033,43 @@ __metadata:
     minimatch: ^3.0.4
     strip-json-comments: ^3.1.1
   checksum: 03a7704150b868c318aab6a94d87a33d30dc2ec579d27374575014f06237ba1370ae11178db772f985ef680d469dc237e7b16a1c5d8edaaeb8c3733e7a95a6d3
+  languageName: node
+  linkType: hard
+
+"@fortawesome/fontawesome-common-types@npm:^0.2.28":
+  version: 0.2.36
+  resolution: "@fortawesome/fontawesome-common-types@npm:0.2.36"
+  checksum: d604ac51da0b1597127fde70c64157b70ead6af7f2643ab7dfca268ef99d4ed0b4cc823afba206362422a622e389828408bec573df802bf4f02b118d0fa18dc8
+  languageName: node
+  linkType: hard
+
+"@fortawesome/fontawesome-svg-core@npm:1.2.28":
+  version: 1.2.28
+  resolution: "@fortawesome/fontawesome-svg-core@npm:1.2.28"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": ^0.2.28
+  checksum: 6536c6582cfdc5c9ef98ef190dd481c50c78f5be396cb8bdf557258ff969b3c9c66186eb07f6a7e1c9ac1b68cf8e89f4ba2a0b5a1a2e32bd65e5f06b7f3a9500
+  languageName: node
+  linkType: hard
+
+"@fortawesome/free-solid-svg-icons@npm:5.13.0":
+  version: 5.13.0
+  resolution: "@fortawesome/free-solid-svg-icons@npm:5.13.0"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": ^0.2.28
+  checksum: c697891bfcb2b393e5b0126684332acb74d81d74327ab4952498e40480292e551cbf47fc4ac35e71a6dc6c5e34a1642b0c0cea134eb5b69f774253da57acf20b
+  languageName: node
+  linkType: hard
+
+"@fortawesome/react-fontawesome@npm:0.1.10":
+  version: 0.1.10
+  resolution: "@fortawesome/react-fontawesome@npm:0.1.10"
+  dependencies:
+    prop-types: ^15.7.2
+  peerDependencies:
+    "@fortawesome/fontawesome-svg-core": ^1.2.20
+    react: 16.x
+  checksum: d44b1a752e881dd63d1f39a271c44b0976c3e5e3f7f5cb38d5653570a4d5bbff752a3d4328f51e3333f716821a547e2a73a69960e886f26fa4473971cf567359
   languageName: node
   linkType: hard
 
@@ -13174,6 +13236,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:4.1.17, framer-motion@npm:^4.1.17, framer-motion@npm:^4.1.7":
+  version: 4.1.17
+  resolution: "framer-motion@npm:4.1.17"
+  dependencies:
+    "@emotion/is-prop-valid": ^0.8.2
+    framesync: 5.3.0
+    hey-listen: ^1.0.8
+    popmotion: 9.3.6
+    style-value-types: 4.1.4
+    tslib: ^2.1.0
+  peerDependencies:
+    react: ">=16.8 || ^17.0.0"
+    react-dom: ">=16.8 || ^17.0.0"
+  dependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+  checksum: f6b5fc8f189e6760353aa5b67515b6576ebaa164d8df73118780a09d1d4a162e54dfeb126a05c6a28727af88f4a80f8b94900ff9510be44dada6496a99273fde
+  languageName: node
+  linkType: hard
+
 "framer-motion@npm:4.1.7":
   version: 4.1.7
   resolution: "framer-motion@npm:4.1.7"
@@ -13191,26 +13273,6 @@ __metadata:
     "@emotion/is-prop-valid":
       optional: true
   checksum: 492578368de9e2b173c72fb8e459374f2dd1b4399e6b1d14c81fb1945facb6bf7ef7ef70435b21dcc54827abb4f0f4b30e4ea31cd6dfa60e4e5e20a4e51795e8
-  languageName: node
-  linkType: hard
-
-"framer-motion@npm:^4.1.17, framer-motion@npm:^4.1.7":
-  version: 4.1.17
-  resolution: "framer-motion@npm:4.1.17"
-  dependencies:
-    "@emotion/is-prop-valid": ^0.8.2
-    framesync: 5.3.0
-    hey-listen: ^1.0.8
-    popmotion: 9.3.6
-    style-value-types: 4.1.4
-    tslib: ^2.1.0
-  peerDependencies:
-    react: ">=16.8 || ^17.0.0"
-    react-dom: ">=16.8 || ^17.0.0"
-  dependenciesMeta:
-    "@emotion/is-prop-valid":
-      optional: true
-  checksum: f6b5fc8f189e6760353aa5b67515b6576ebaa164d8df73118780a09d1d4a162e54dfeb126a05c6a28727af88f4a80f8b94900ff9510be44dada6496a99273fde
   languageName: node
   linkType: hard
 
@@ -19747,6 +19809,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"react@npm:17.0.2, react@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "react@npm:17.0.2"
+  dependencies:
+    loose-envify: ^1.1.0
+    object-assign: ^4.1.1
+  checksum: b254cc17ce3011788330f7bbf383ab653c6848902d7936a87b09d835d091e3f295f7e9dd1597c6daac5dc80f90e778c8230218ba8ad599f74adcc11e33b9d61b
+  languageName: node
+  linkType: hard
+
 "react@npm:^16.8.0":
   version: 16.14.0
   resolution: "react@npm:16.14.0"
@@ -19755,16 +19827,6 @@ fsevents@^1.2.7:
     object-assign: ^4.1.1
     prop-types: ^15.6.2
   checksum: 8484f3ecb13414526f2a7412190575fc134da785c02695eb92bb6028c930bfe1c238d7be2a125088fec663cc7cda0a3623373c46807cf2c281f49c34b79881ac
-  languageName: node
-  linkType: hard
-
-"react@npm:^17.0.2":
-  version: 17.0.2
-  resolution: "react@npm:17.0.2"
-  dependencies:
-    loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-  checksum: b254cc17ce3011788330f7bbf383ab653c6848902d7936a87b09d835d091e3f295f7e9dd1597c6daac5dc80f90e778c8230218ba8ad599f74adcc11e33b9d61b
   languageName: node
   linkType: hard
 
