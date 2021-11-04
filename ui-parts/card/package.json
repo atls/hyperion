@@ -3,6 +3,14 @@
   "version": "0.0.1",
   "license": "MIT",
   "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn app library build",
+    "postpack": "rm -rf dist",
+    "prepack": "yarn run build"
+  },
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
@@ -22,5 +30,10 @@
     "react-scrolllock": "^5.0.1",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
   }
 }
