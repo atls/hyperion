@@ -1,8 +1,9 @@
 import styled                  from '@emotion/styled'
-import { motion }              from 'framer-motion'
+
+import { Box }                 from '@atls-ui-parts/layout'
 
 import { baseContainerStyles } from './container.styles'
 
-const Container = styled(motion.div)(baseContainerStyles)
+const Container = styled(Box)(baseContainerStyles)
 
 export { Container }

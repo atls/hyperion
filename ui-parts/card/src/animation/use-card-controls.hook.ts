@@ -1,58 +1,41 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
-import { useAnimation }         from 'framer-motion'
-import { useEffect }            from 'react'
-import { useState }             from 'react'
-import { useRef }               from 'react'
+import { useEffect }              from 'react'
+import { useState }               from 'react'
+import { useRef }                 from 'react'
 
-import { getContentDimensions } from '@atls-ui-parts/dom'
+import { getContentDimensions }   from '@atls-ui-parts/dom'
 
-interface UseCardControlsArgs {
-  onClose?: () => any
-  fill?: boolean
-  topOffset?: number
-}
+import { UseCardControlsOptions } from './animation.interfaces'
 
 const useCardControls = ({
-  fill = false,
-  onClose = () => {},
   topOffset = 0,
-}: UseCardControlsArgs) => {
+  duration = 0.5,
+  isOpen = false,
+  scrollThreshold = false,
+}: UseCardControlsOptions) => {
   const [windowHeight, setWindowHeight] = useState<number>(0)
-  const [opened, setOpened] = useState<boolean>(false)
-  const containerNode = useRef(null)
-  const controls = useAnimation()
+  const [cardHeight, setCardHeight] = useState<number>(0)
+  const [opened, setOpened] = useState<boolean>(isOpen)
+  const cardNode = useRef(null)
 
-  let cardHeight
-  let visiblePosition
+  const show = () => setOpened(true)
+  const hide = () => setOpened(false)
+  const toggle = () => setOpened(!opened)
+
+  const slideInPosition =
+    windowHeight - cardHeight >= topOffset ? windowHeight - cardHeight : topOffset
 
   const updateWindowHeight = () => {
     setWindowHeight(window.innerHeight)
   }
 
-  const close = () => {
-    setOpened(false)
-    onClose()
-  }
+  const onScrollToThreshold = () => {
+    const scrollPosition = (cardNode.current as any).getBoundingClientRect().y
 
-  const show = () => {
-    if (fill) {
-      visiblePosition = windowHeight - cardHeight
+    if (scrollPosition >= slideInPosition) {
+      hide()
     }
-
-    if (!fill) {
-      visiblePosition = topOffset
-    }
-
-    controls.set({ visibility: 'visible' })
-    controls.start({ y: visiblePosition })
-  }
-
-  const hide = () => {
-    controls.start({ y: windowHeight }).then(() => {
-      controls.set({ visibility: 'hidden' })
-    })
-    close()
   }
 
   useEffect(() => {
@@ -60,37 +43,53 @@ const useCardControls = ({
 
     document.addEventListener('resize', updateWindowHeight)
 
-    controls.set({ y: windowHeight })
-  }, [controls, windowHeight])
+    return () => document.removeEventListener('resize', updateWindowHeight)
+  }, [])
 
   useEffect(() => {
-    cardHeight = getContentDimensions(containerNode.current as any).height
+    if (cardNode?.current) setCardHeight(getContentDimensions(cardNode.current).height)
+  })
 
-    if (opened) {
-      show()
-    }
-    if (!opened) {
-      hide()
-    }
-  }, [controls, opened, windowHeight])
-
-  const onScrollToThreshold = () => {
-    const scrollPosition = (containerNode.current as any).getBoundingClientRect().y
-
-    if (scrollPosition >= visiblePosition) {
-      hide()
-    }
+  const slideIn = {
+    y: slideInPosition,
+  }
+  const slideOut = {
+    y: windowHeight,
+  }
+  const appear = {
+    opacity: 1,
+  }
+  const disappear = {
+    opacity: 0,
   }
 
-  return {
+  const cardProps = {
+    animate: slideIn,
+    exit: slideOut,
+    initial: slideOut,
+    transition: { duration },
+    ref: cardNode,
+    key: 'card-container',
+  }
+
+  const backdropProps = {
+    animate: appear,
+    exit: disappear,
+    initial: disappear,
+    transition: { duration },
+    key: 'card-backdrop',
+  }
+
+  const rendererProps = {
     opened,
-    setOpened,
-    controls,
-    containerNode,
-    show,
-    hide,
-    onScrollToThreshold,
+    onScroll: onScrollToThreshold,
   }
+
+  const triggerProps = {
+    onClick: toggle,
+  }
+
+  return { cardProps, backdropProps, rendererProps, triggerProps, show, hide, toggle, opened }
 }
 
 export { useCardControls }
