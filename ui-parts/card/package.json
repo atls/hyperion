@@ -14,7 +14,8 @@
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
-    "react": "*"
+    "react": "*",
+    "react-dom": "*"
   },
   "devDependencies": {
     "@emotion/react": "^11.4.1",

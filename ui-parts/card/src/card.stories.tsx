@@ -1,6 +1,9 @@
 import React                          from 'react'
 import styled                         from '@emotion/styled'
 
+import { Box }                        from '@atls-ui-parts/layout'
+import { Column }                     from '@atls-ui-parts/layout'
+
 import { useCardControls }            from './animation'
 import { Backdrop }                   from './backdrop'
 import { Container as BaseContainer } from './container'
@@ -12,14 +15,14 @@ export default {
 
 const Condition = ({ match, children }) => (match && children) || null
 
-const CardComponent = ({ children, container, backdrop = false }) => {
+const CardComponent = ({ children, container, backdrop = false, ghost = false }) => {
   const { cardProps, backdropProps, rendererProps, triggerProps, hide } = useCardControls({
     scrollThreshold: true,
   })
 
   const Container = styled(BaseContainer)({
-    backgroundColor: 'red',
-    borderRadius: 8,
+    backgroundColor: !ghost ? 'red' : 'transparent',
+    borderRadius: !ghost ? 8 : 0,
     height: 'min-content',
   })
 
@@ -36,8 +39,29 @@ const CardComponent = ({ children, container, backdrop = false }) => {
   )
 }
 
+const LargeContent = () => {
+  const Block = ({ idx }) => (
+    <Box backgroundColor={`#${idx.toString().repeat(6)}`} width='100%' height={100}>
+      Item no{idx}
+    </Box>
+  )
+
+  return (
+    <Column width='100%'>
+      {[...Array(9)].map((i, idx) => (
+        <Block idx={idx} />
+      ))}
+    </Column>
+  )
+}
+
 export const Card = () => (
-  <CardComponent backdrop container={<h1>Card content</h1>}>
-    Click me
-  </CardComponent>
+  <>
+    <CardComponent backdrop container={<h1>Card content</h1>}>
+      <button type='button'>Open notify</button>
+    </CardComponent>
+    <CardComponent ghost container={<LargeContent />}>
+      <button type='button'>Open large content</button>
+    </CardComponent>
+  </>
 )

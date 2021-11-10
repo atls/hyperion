@@ -325,6 +325,7 @@ __metadata:
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 

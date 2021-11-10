@@ -13,15 +13,22 @@ const useCardControls = ({
   duration = 0.5,
   isOpen = false,
   scrollThreshold = false,
+  onClose = () => {},
 }: UseCardControlsOptions) => {
   const [windowHeight, setWindowHeight] = useState<number>(0)
   const [cardHeight, setCardHeight] = useState<number>(0)
   const [opened, setOpened] = useState<boolean>(isOpen)
   const cardNode = useRef(null)
 
+  let isScrolled = false
+
   const show = () => setOpened(true)
-  const hide = () => setOpened(false)
-  const toggle = () => setOpened(!opened)
+  const hide = () => {
+    isScrolled = false
+    setOpened(false)
+    onClose()
+  }
+  const toggle = () => (opened ? hide() : show())
 
   const slideInPosition =
     windowHeight - cardHeight >= topOffset ? windowHeight - cardHeight : topOffset
@@ -33,8 +40,18 @@ const useCardControls = ({
   const onScrollToThreshold = () => {
     const scrollPosition = (cardNode.current as any).getBoundingClientRect().y
 
+    if (!isScrolled) isScrolled = true
+
     if (scrollPosition >= slideInPosition) {
       hide()
+    }
+  }
+
+  const onCloseBeforeScroll = ({ deltaY }) => {
+    if (!isScrolled) {
+      if (deltaY < 0) {
+        hide()
+      }
     }
   }
 
@@ -82,7 +99,8 @@ const useCardControls = ({
 
   const rendererProps = {
     opened,
-    onScroll: onScrollToThreshold,
+    onScroll: scrollThreshold ? onScrollToThreshold : () => {},
+    onWheel: scrollThreshold ? onCloseBeforeScroll : () => {},
   }
 
   const triggerProps = {
