@@ -3,4 +3,5 @@ export interface UseCardControlsOptions {
   duration?: number
   isOpen?: boolean
   scrollThreshold?: boolean
+  onClose?: () => any
 }
