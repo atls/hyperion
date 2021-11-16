@@ -12,5 +12,5 @@ export const createLabelRenderer =
       [getLabelProps, labelProps]
     )
 
-    return label && <Label {...props}>{label}</Label>
+    return label ? <Label {...props}>{label}</Label> : null
   }
