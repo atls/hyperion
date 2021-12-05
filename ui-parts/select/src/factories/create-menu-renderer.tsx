@@ -1,26 +1,19 @@
 import React       from 'react'
 import { useMemo } from 'react'
 
-export const createMenuRenderer =
+const createMenuRenderer =
+  (getMenuProps) =>
   (Menu) =>
-  ({ dropdownColor, triggerBounds, layerProps, getMenuProps, ...menuProps }) => {
+  ({ ...menuProps }) => {
     const props = useMemo(
       () => ({
-        ...getMenuProps(layerProps),
+        ...getMenuProps(),
         ...menuProps,
       }),
-      [layerProps, menuProps, getMenuProps]
+      [menuProps]
     )
 
-    return (
-      <Menu
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.2 }}
-        width={triggerBounds?.width}
-        backgroundColor={dropdownColor}
-        {...props}
-      />
-    )
+    return <Menu {...props} />
   }
+
+export { createMenuRenderer }

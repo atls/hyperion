@@ -1,1 +1,1 @@
-export * from './ArrowDownIcon'
+export * from './arrow-down.icon'

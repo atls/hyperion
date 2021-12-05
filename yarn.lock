@@ -611,16 +611,16 @@ __metadata:
   resolution: "@atls-ui-parts/select@workspace:ui-parts/select"
   dependencies:
     "@atls-ui-parts/styles": "workspace:0.0.1"
+    "@emotion/css": ^11.5.0
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@types/react": ^17.0.3
     "@types/react-dom": ^17.0.3
     "@types/styled-system": ^5.1.11
-    downshift: ^6.1.3
-    framer-motion: ^4.1.17
+    downshift: ^6.1.7
+    nanoid: ^3.1.30
     react: ^17.0.2
     react-dom: ^17.0.2
-    react-laag: ^2.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -3495,6 +3495,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.14.8":
+  version: 7.16.3
+  resolution: "@babel/runtime@npm:7.16.3"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: ab8ac887096d76185ddbf291d28fb976cd32473696dc497ad4905b784acbd5aa462533ad83a5c5104e10ead28c2e0e119840ee28ed8eff90dcdde9d57f916eda
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.12.13, @babel/template@npm:^7.12.7, @babel/template@npm:^7.3.3":
   version: 7.12.13
   resolution: "@babel/template@npm:7.12.13"
@@ -3725,6 +3734,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/cache@npm:^11.5.0":
+  version: 11.6.0
+  resolution: "@emotion/cache@npm:11.6.0"
+  dependencies:
+    "@emotion/memoize": ^0.7.4
+    "@emotion/sheet": ^1.1.0
+    "@emotion/utils": ^1.0.0
+    "@emotion/weak-memoize": ^0.2.5
+    stylis: ^4.0.10
+  checksum: 3c72c50bfe06fd7ec2728988181173664183d2320305a01bb757caa6a9d485de25fccde1b173d810423d2ff88a178d5a72cc21db76b9e458311a8ce3044dd2a1
+  languageName: node
+  linkType: hard
+
 "@emotion/core@npm:^10.1.1":
   version: 10.1.1
   resolution: "@emotion/core@npm:10.1.1"
@@ -3777,6 +3799,24 @@ __metadata:
     "@babel/core":
       optional: true
   checksum: dc50283f65bd65d282636b7ccdcfdc4d71b1cd8d604dc54207971eb13bc0204f2d787a2131fb4660348889779369c1c59454d40c986b44c6d4fc770b0e46aaac
+  languageName: node
+  linkType: hard
+
+"@emotion/css@npm:^11.5.0":
+  version: 11.5.0
+  resolution: "@emotion/css@npm:11.5.0"
+  dependencies:
+    "@emotion/babel-plugin": ^11.0.0
+    "@emotion/cache": ^11.5.0
+    "@emotion/serialize": ^1.0.0
+    "@emotion/sheet": ^1.0.3
+    "@emotion/utils": ^1.0.0
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+  checksum: 45d01333c36a6449fcc4415470088ef2ee515d48a76d054bce9cf5c45fba17e5eec661aed34b4ea38f7003fd6a7e15ddf781e921977b4428875674621ef037f0
   languageName: node
   linkType: hard
 
@@ -3930,6 +3970,13 @@ __metadata:
   version: 1.0.2
   resolution: "@emotion/sheet@npm:1.0.2"
   checksum: 188d43dbc1a21964635226df9efa3917dd288915d497bce35c4ee2d86028e7e591d03e1f7cb1c05a7baa762e4341c37ee030f0d0c7155039d5e1d5edfabf241c
+  languageName: node
+  linkType: hard
+
+"@emotion/sheet@npm:^1.0.3, @emotion/sheet@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@emotion/sheet@npm:1.1.0"
+  checksum: a4b74e16a8fea1157413efe4904f5f679d724323cb605d66d20a0b98744422f5d411fca927ceb52e4de454a0a819c5273ca9496db9f011b4ecd17b9f1b212007
   languageName: node
   linkType: hard
 
@@ -11617,7 +11664,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"downshift@npm:^6.0.15, downshift@npm:^6.1.3":
+"downshift@npm:^6.0.15":
   version: 6.1.3
   resolution: "downshift@npm:6.1.3"
   dependencies:
@@ -11628,6 +11675,21 @@ __metadata:
   peerDependencies:
     react: ">=16.12.0"
   checksum: 10c862029c7be1291f86020688072d984ebee6645123ad24bd15f98e9619d961e468b002c19932106e62a171b535c0fb79fd13c0df00912b82ed07a344110981
+  languageName: node
+  linkType: hard
+
+"downshift@npm:^6.1.7":
+  version: 6.1.7
+  resolution: "downshift@npm:6.1.7"
+  dependencies:
+    "@babel/runtime": ^7.14.8
+    compute-scroll-into-view: ^1.0.17
+    prop-types: ^15.7.2
+    react-is: ^17.0.2
+    tslib: ^2.3.0
+  peerDependencies:
+    react: ">=16.12.0"
+  checksum: 0904ed8f285d31ee00e471dcddd57e72468bee354b191167bcaebe690ec292647fe4c31f483665094d750e72dd71e5d7db695acef33ab5dba6a39fed0112bab6
   languageName: node
   linkType: hard
 
@@ -17395,6 +17457,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^3.1.30":
+  version: 3.1.30
+  resolution: "nanoid@npm:3.1.30"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 276d0d4b0c41c46aeefec5f09f093e4085a2352d06881c845db22b84f8ef72cc8defae6d76bfb1d8a2a128eb2dec42ab148d16582be4e7754c97905806ef57b6
+  languageName: node
+  linkType: hard
+
 "nanomatch@npm:^1.2.9":
   version: 1.2.13
   resolution: "nanomatch@npm:1.2.13"
@@ -19704,18 +19775,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-laag@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "react-laag@npm:2.0.2"
-  dependencies:
-    tiny-warning: ^1.0.3
-  peerDependencies:
-    react: ^16.0.0 || ^17.0.0
-    react-dom: ^16.0.0 || ^17.0.0
-  checksum: a2678e3630a80ebefdb0bd9a945fb51f847c9cafba4a2c66538a4950a7809e284676694a5912f787558ba01e1bca27d30cb174cf77fc6c8f99347209ea72bbfb
-  languageName: node
-  linkType: hard
-
 "react-lifecycles-compat@npm:^3.0.4":
   version: 3.0.4
   resolution: "react-lifecycles-compat@npm:3.0.4"
@@ -21841,6 +21900,13 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"stylis@npm:^4.0.10":
+  version: 4.0.10
+  resolution: "stylis@npm:4.0.10"
+  checksum: 0fecaf5c234ec3ffcb0afc21478742a815a21cb964365259789be9c1692e72e13d8c081c1150fd76ed2146633a3251cdecd6e0c120b158f44bd74c38f81cafb3
+  languageName: node
+  linkType: hard
+
 "stylis@npm:^4.0.3":
   version: 4.0.7
   resolution: "stylis@npm:4.0.7"
@@ -22243,13 +22309,6 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"tiny-warning@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "tiny-warning@npm:1.0.3"
-  checksum: da62c4acac565902f0624b123eed6dd3509bc9a8d30c06e017104bedcf5d35810da8ff72864400ad19c5c7806fc0a8323c68baf3e326af7cb7d969f846100d71
-  languageName: node
-  linkType: hard
-
 "tmp@npm:^0.0.33":
   version: 0.0.33
   resolution: "tmp@npm:0.0.33"
@@ -22564,6 +22623,13 @@ resolve@^2.0.0-next.3:
   version: 2.2.0
   resolution: "tslib@npm:2.2.0"
   checksum: a48c9639f7496fa701ea8ffe0561070fcb44c104a59632f7f845c0af00825c99b6373575ec59b2b5cdbfd7505875086dbe5dc83312304d8979f22ce571218ca3
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.3.0":
+  version: 2.3.1
+  resolution: "tslib@npm:2.3.1"
+  checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
   languageName: node
   linkType: hard
 

@@ -1,3 +1,10 @@
-import { createBaseStyles } from './base'
+import { CSSObject } from '@emotion/css'
 
-export const baseStyles = createBaseStyles()
+export const baseMenuStyles: CSSObject = {
+  display: 'flex',
+  boxSizing: 'border-box',
+  flexDirection: 'column',
+  listStyleType: 'none',
+  outline: 'none',
+  padding: 0,
+}

@@ -1,5 +1,11 @@
-import { createAppearanceStyles } from './appearance'
-import { createBaseStyles }       from './base'
+import { CSSObject } from '@emotion/css'
 
-export const baseStyles = createBaseStyles()
-export const appearanceStyles = createAppearanceStyles()
+export const baseItemStyles: CSSObject = {
+  display: 'flex',
+  boxSizing: 'border-box',
+  width: '100%',
+  cursor: 'pointer',
+  hyphens: 'auto',
+  alignItems: 'center',
+  padding: 10,
+}
