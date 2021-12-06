@@ -1,1 +1,6 @@
-export * from './select.component'
+export * from './select.interfaces'
+export * from './use-select.hook'
+export * from './item'
+export * from './menu'
+export * from './icons'
+export * from './factories'

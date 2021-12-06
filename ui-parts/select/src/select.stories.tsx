@@ -1,133 +1,45 @@
-import React                         from 'react'
-import { useState }                  from 'react'
+import React              from 'react'
+import { useState }       from 'react'
+import styled             from '@emotion/styled'
+import { nanoid }         from 'nanoid'
 
-import { Select as SelectComponent } from './select.component'
+import { baseMenuStyles } from './menu'
+import { baseItemStyles } from './item'
+import { useSelect }      from './use-select.hook'
 
 export default { title: 'Components/Select' }
 
 export const Select = (props) => {
-  const [value, setValue] = useState('')
+  const items = ['Item1', 'Item2', 'Item3']
+
+  const [value, setValue] = useState('Placeholder')
+
+  const { renderButton, renderLabel, renderMenu, renderMenuItem } = useSelect({
+    items,
+    onChange: setValue,
+  })
+
+  const StyledButton = styled.button({ width: 200 })
+  const StyledLabel = styled.label()
+  const StyledMenu = styled.ul(baseMenuStyles)
+  const StyledMenuItem = styled.li<{ highlighted: boolean }>(baseItemStyles, ({ highlighted }) => ({
+    color: highlighted ? 'aqua' : 'black',
+  }))
+
+  const Button = renderButton(StyledButton)
+  const Label = renderLabel(StyledLabel)
+  const Menu = renderMenu(StyledMenu)
+  const MenuItem = renderMenuItem(StyledMenuItem)
+
   return (
-    <SelectComponent
-      label={value && value.length < 15 && value}
-      items={['Item 1', 'Item 2', 'OVERLOAD '.repeat(15), 'Item 3']}
-      onChange={(item) => {
-        setValue(item)
-      }}
-      {...props}
-    />
+    <>
+      <Label>Label</Label>
+      <Button>{value}</Button>
+      <Menu>
+        {items.map((item, index) => (
+          <MenuItem key={nanoid()} index={index} item={item} />
+        ))}
+      </Menu>
+    </>
   )
-}
-
-Select.args = {
-  width: 300,
-  height: 50,
-  arrow: true,
-  arrowSize: 15,
-  placeholder: 'Toggle',
-  dropdownColor: 'lightSilver',
-  hoverBackgroundColor: 'lightBlue',
-  hoverFontColor: 'white',
-}
-
-Select.argTypes = {
-  width: {
-    name: 'Ширина',
-    description: 'Ширина',
-    table: {
-      category: 'Представление',
-      subcategory: 'Размеры',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  height: {
-    name: 'Высота',
-    description: 'Высота',
-    table: {
-      category: 'Представление',
-      subcategory: 'Размеры',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  buttonColor: {
-    name: 'Цвет кнопки',
-    description: 'Цвет кнопки',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  dropdownColor: {
-    name: 'Цвет фона выпадающего окна',
-    description: 'Цвет фона выпадающего окна',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  hoverBackgroundColor: {
-    name: 'Цвет фона при наведении',
-    description: 'Цвет фона при наведении',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  hoverFontColor: {
-    name: 'Цвет текста при наведении',
-    description: 'Цвет текста при наведении',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  arrow: {
-    name: 'Стрелка',
-    description: 'Стрелка',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'boolean',
-    },
-  },
-  arrowSize: {
-    name: 'Размер стрелки',
-    description: 'Размер стрелки',
-    table: {
-      category: 'Представление',
-      subcategory: 'Размеры',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  placeholder: {
-    name: 'Placeholder',
-    description: 'Начальный текст',
-    table: {
-      category: 'Представление',
-      subcategory: 'Значения',
-    },
-    control: {
-      type: 'text',
-    },
-  },
 }

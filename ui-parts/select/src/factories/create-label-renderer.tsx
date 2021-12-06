@@ -1,16 +1,19 @@
 import React       from 'react'
 import { useMemo } from 'react'
 
-export const createLabelRenderer =
+const createLabelRenderer =
+  (getLabelProps) =>
   (Label) =>
-  ({ getLabelProps, label, ...labelProps }) => {
+  ({ children, ...labelProps }) => {
     const props = useMemo(
       () => ({
         ...getLabelProps(),
         ...labelProps,
       }),
-      [getLabelProps, labelProps]
+      [labelProps]
     )
 
-    return label ? <Label {...props}>{label}</Label> : null
+    return children ? <Label {...props}>{children}</Label> : null
   }
+
+export { createLabelRenderer }

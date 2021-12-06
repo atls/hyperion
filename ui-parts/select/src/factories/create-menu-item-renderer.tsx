@@ -1,34 +1,23 @@
 import React       from 'react'
 import { useMemo } from 'react'
 
-export const createMenuItemRenderer =
+const createMenuItemRenderer =
+  (getItemProps, highlightedIndex, isOpen) =>
   (MenuItem) =>
-  ({
-    hoverTrigger,
-    hoverBackgroundColor,
-    hoverFontColor,
-    item,
-    index,
-    getItemProps,
-    ...menuItemProps
-  }) => {
+  ({ item, index, ...menuItemProps }) => {
     const props = useMemo(
       () => ({
-        ...getItemProps({ item, index }),
+        ...getItemProps({ index, item }),
         ...menuItemProps,
       }),
-      [getItemProps, item, index, menuItemProps]
+      [menuItemProps, index, item]
     )
 
-    return (
-      <MenuItem
-        hoverTrigger={hoverTrigger}
-        hoverBackgroundColor={hoverBackgroundColor}
-        hoverFontColor={hoverFontColor}
-        key={`${item}${Math.random()}`}
-        {...props}
-      >
+    return isOpen ? (
+      <MenuItem highlighted={index === highlightedIndex} {...props}>
         {item}
       </MenuItem>
-    )
+    ) : null
   }
+
+export { createMenuItemRenderer }
