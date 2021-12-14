@@ -9,7 +9,7 @@ import { useSelect }      from './use-select.hook'
 
 export default { title: 'Components/Select' }
 
-export const Select = (props) => {
+export const Select = () => {
   const items = ['Item1', 'Item2', 'Item3']
 
   const [value, setValue] = useState('Placeholder')
@@ -26,20 +26,24 @@ export const Select = (props) => {
     color: highlighted ? 'aqua' : 'black',
   }))
 
-  const Button = renderButton(StyledButton)
-  const Label = renderLabel(StyledLabel)
-  const Menu = renderMenu(StyledMenu)
-  const MenuItem = renderMenuItem(StyledMenuItem)
+  const Button = (props) => <StyledButton {...props}>{value}</StyledButton>
+  const Label = (props) => <StyledLabel {...props}>Label</StyledLabel>
+  const MenuItem = ({ highlightedIndex, index, item, ...props }) => (
+    <StyledMenuItem key={nanoid()} highlighted={highlightedIndex === index} {...props}>
+      {item}
+    </StyledMenuItem>
+  )
+  const Menu = (props) => (
+    <StyledMenu {...props}>
+      {items.map((item, index) => renderMenuItem(MenuItem, item, index))}
+    </StyledMenu>
+  )
 
   return (
     <>
-      <Label>Label</Label>
-      <Button>{value}</Button>
-      <Menu>
-        {items.map((item, index) => (
-          <MenuItem key={nanoid()} index={index} item={item} />
-        ))}
-      </Menu>
+      {/* <Label>Label</Label> */}
+      {renderButton(Button)}
+      {renderMenu(Menu)}
     </>
   )
 }

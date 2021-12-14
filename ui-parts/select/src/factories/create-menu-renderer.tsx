@@ -1,8 +1,9 @@
-import React       from 'react'
-import { useMemo } from 'react'
+import React               from 'react'
+import { useMemo }         from 'react'
+import { AnimatePresence } from 'framer-motion'
 
 const createMenuRenderer =
-  (getMenuProps) =>
+  (getMenuProps, renderLayer, isOpen) =>
   (Menu) =>
   ({ ...menuProps }) => {
     const props = useMemo(
@@ -13,7 +14,7 @@ const createMenuRenderer =
       [menuProps]
     )
 
-    return <Menu {...props} />
+    return renderLayer(<AnimatePresence>{isOpen && <Menu {...props} />}</AnimatePresence>)
   }
 
 export { createMenuRenderer }
