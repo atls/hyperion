@@ -6291,10 +6291,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:7.16.3", {
-          "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.16.3-b53f079b37-ab8ac88709.zip/node_modules/@babel/runtime/",
+        ["npm:7.16.5", {
+          "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.16.5-324a158d8a-b96e67280e.zip/node_modules/@babel/runtime/",
           "packageDependencies": [
-            ["@babel/runtime", "npm:7.16.3"],
+            ["@babel/runtime", "npm:7.16.5"],
             ["regenerator-runtime", "npm:0.13.7"]
           ],
           "linkType": "HARD",
@@ -17947,7 +17947,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/downshift-virtual-33cc64ca8e/0/cache/downshift-npm-6.1.7-22c05c4fb9-0904ed8f28.zip/node_modules/downshift/",
           "packageDependencies": [
             ["downshift", "virtual:9c076913ffd643939b8ac6e8c374fd1470f44689001261d35898fb07091ea0aa596a24d8bcdfb508f949d0c68789b448702cfb68072c423229496303e9a11342#npm:6.1.7"],
-            ["@babel/runtime", "npm:7.16.3"],
+            ["@babel/runtime", "npm:7.16.5"],
             ["@types/react", "npm:17.0.11"],
             ["compute-scroll-into-view", "npm:1.0.17"],
             ["prop-types", "npm:15.7.2"],

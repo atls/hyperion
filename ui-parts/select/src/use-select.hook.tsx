@@ -4,13 +4,9 @@ import { useLayer }                        from 'react-laag'
 import { useSelect as useDownshiftSelect } from 'downshift'
 import { AnimatePresence }                 from 'framer-motion'
 
-import { createButtonRenderer }            from './factories'
-import { createMenuRenderer }              from './factories'
-import { createMenuItemRenderer }          from './factories'
-import { createLabelRenderer }             from './factories'
 import { UseSelectProps }                  from './select.interfaces'
 
-const useSelect = ({ items, onChange }: UseSelectProps) => {
+const useSelect = ({ items, onChange, ...props }: UseSelectProps) => {
   const {
     isOpen,
     highlightedIndex,
@@ -19,8 +15,9 @@ const useSelect = ({ items, onChange }: UseSelectProps) => {
     getLabelProps,
     getMenuProps,
     getItemProps,
-  } = useDownshiftSelect({ items })
-  const { renderLayer, layerProps, triggerProps } = useLayer({
+  } = useDownshiftSelect({ items, ...props })
+
+  const { renderLayer, layerProps, triggerProps, triggerBounds } = useLayer({
     isOpen,
     placement: 'bottom-center',
   })
@@ -29,27 +26,25 @@ const useSelect = ({ items, onChange }: UseSelectProps) => {
     if (onChange && selectedItem) onChange(selectedItem)
   }, [selectedItem, onChange])
 
-  const renderLabel = (Label) => <Label {...getLabelProps()} />
-  const renderButton = (Button) => <Button {...getToggleButtonProps()} {...triggerProps} />
-  const renderMenu = (Menu) =>
-    renderLayer(
-      <AnimatePresence>{isOpen && <Menu {...getMenuProps(layerProps)} />}</AnimatePresence>
-    )
-  const renderMenuItem = (MenuItem, item, index) => (
-    <MenuItem {...getItemProps} item={item} index={index} highlightedIndex={highlightedIndex} />
-  )
-
-  // const renderLabel = createLabelRenderer(getLabelProps)
-  // const renderButton = createButtonRenderer(getToggleButtonProps)
-  // const renderMenu = createMenuRenderer(getMenuProps, renderLayer, isOpen)
-  // const renderMenuItem = createMenuItemRenderer(getItemProps, highlightedIndex, isOpen)
+  const labelProps = getLabelProps()
+  const buttonProps = getToggleButtonProps(triggerProps)
+  const menuProps = {
+    ...getMenuProps(layerProps),
+    triggerBounds,
+  }
+  const getMenuItemProps = (item, index) => getItemProps({ item, index })
+  const renderMenu = (menu) => renderLayer(<AnimatePresence>{isOpen && menu}</AnimatePresence>)
 
   return {
-    renderLabel,
-    renderButton,
+    labelProps,
+    buttonProps,
+    menuProps,
+    getMenuItemProps,
     renderMenu,
-    renderMenuItem,
     selectedItem,
+    isOpen,
+    highlightedIndex,
+    triggerBounds,
   }
 }
 
