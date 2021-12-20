@@ -1,5 +1,6 @@
 import React              from 'react'
 import { useState }       from 'react'
+import { motion }         from 'framer-motion'
 import styled             from '@emotion/styled'
 import { nanoid }         from 'nanoid'
 
@@ -9,37 +10,43 @@ import { useSelect }      from './use-select.hook'
 
 export default { title: 'Components/Select' }
 
-export const Select = (props) => {
+// TODO throw an error if they were created inside component where useSelect was called
+const Button = styled.button({ width: 200 })
+const Label = styled.label()
+const Menu = styled(motion.ul)(baseMenuStyles)
+const MenuItem = styled.li<{ highlighted: boolean }>(baseItemStyles, ({ highlighted }) => ({
+  backgroundColor: highlighted ? 'aqua' : 'transparent',
+  height: 40,
+}))
+
+export const Select = () => {
   const items = ['Item1', 'Item2', 'Item3']
 
   const [value, setValue] = useState('Placeholder')
 
-  const { renderButton, renderLabel, renderMenu, renderMenuItem } = useSelect({
-    items,
-    onChange: setValue,
-  })
-
-  const StyledButton = styled.button({ width: 200 })
-  const StyledLabel = styled.label()
-  const StyledMenu = styled.ul(baseMenuStyles)
-  const StyledMenuItem = styled.li<{ highlighted: boolean }>(baseItemStyles, ({ highlighted }) => ({
-    color: highlighted ? 'aqua' : 'black',
-  }))
-
-  const Button = renderButton(StyledButton)
-  const Label = renderLabel(StyledLabel)
-  const Menu = renderMenu(StyledMenu)
-  const MenuItem = renderMenuItem(StyledMenuItem)
+  const { getMenuItemProps, labelProps, buttonProps, menuProps, renderMenu, highlightedIndex } =
+    useSelect({
+      items,
+      onChange: setValue,
+    })
 
   return (
     <>
-      <Label>Label</Label>
-      <Button>{value}</Button>
-      <Menu>
-        {items.map((item, index) => (
-          <MenuItem key={nanoid()} index={index} item={item} />
-        ))}
-      </Menu>
+      <Label {...labelProps}>Label</Label>
+      <Button {...buttonProps}>{value}</Button>
+      {renderMenu(
+        <Menu {...menuProps}>
+          {items.map((item, index) => (
+            <MenuItem
+              key={nanoid()}
+              highlighted={index === highlightedIndex}
+              {...getMenuItemProps(item, index)}
+            >
+              {item}
+            </MenuItem>
+          ))}
+        </Menu>
+      )}
     </>
   )
 }

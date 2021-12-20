@@ -7,5 +7,4 @@ export const baseItemStyles: CSSObject = {
   cursor: 'pointer',
   hyphens: 'auto',
   alignItems: 'center',
-  padding: 10,
 }
