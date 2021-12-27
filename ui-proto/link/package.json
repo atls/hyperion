@@ -17,7 +17,8 @@
     "react": "^17.0.2"
   },
   "dependencies": {
-    "@atls-ui-parts/link": "workspace:0.0.4"
+    "@atls-ui-parts/link": "workspace:0.0.4",
+    "@atls-ui-proto/text": "workspace:0.0.6"
   },
   "publishConfig": {
     "access": "public",
