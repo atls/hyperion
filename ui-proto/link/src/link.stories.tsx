@@ -1,36 +1,32 @@
-import React                              from 'react'
-import styled                             from '@emotion/styled'
+import React                 from 'react'
+import styled                from '@emotion/styled'
 
-import { Link as LinkBase }               from './index'
-import { NextLink as NextLinkBase }       from './index'
-import { NextNavLink as NextNavLinkBase } from './index'
-import { createActiveStyles }             from './index'
-import { createHoverStyles }              from './index'
-import { createTransitionStyles }         from './index'
+import { createBaseStyles }  from '@atls-ui-parts/link'
+import { createNextLink }    from '@atls-ui-parts/link'
+import { createNextNavLink } from '@atls-ui-parts/link'
+import { Text }              from '@atls-ui-proto/text'
 
 export default {
   title: 'Components/Link',
 }
 
-const activeStyles = createActiveStyles({ color: 'yellow' })
-const hoverStyles = createHoverStyles({ color: 'blue' })
-const transitionStyles = createTransitionStyles('.2s')
+const BaseLink = styled(Text.withComponent('a'))<{ active: boolean }>(
+  createBaseStyles(),
+  ({ active }) => ({
+    color: active ? 'blue' : 'black',
+  })
+)
 
-const applyStyles = (Component) => styled(Component)(activeStyles, hoverStyles, transitionStyles)
-
-export const Link = (props) => {
-  const LinkComponent = applyStyles(LinkBase)
-  return <LinkComponent {...props} />
-}
+export const Link = (props) => <BaseLink {...props} />
 
 export const NextLink = (props) => {
-  const NextLinkComponent = applyStyles(NextLinkBase)
-  return <NextLinkComponent {...props} />
+  const NextLinkRenderer = createNextLink(BaseLink)
+  return <NextLinkRenderer {...props} />
 }
 
 export const NextNavLink = (props) => {
-  const NextNavLinkComponent = applyStyles(NextNavLinkBase)
-  return <NextNavLinkComponent {...props} />
+  const NextNavLinkRenderer = createNextNavLink(BaseLink)
+  return <NextNavLinkRenderer {...props} />
 }
 
 Link.args = {
@@ -39,6 +35,7 @@ Link.args = {
   fontSize: 16,
   color: 'black',
   href: 'http://atls.team',
+  path: '/',
 }
 
 Link.argTypes = {
