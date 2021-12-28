@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/link",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -17,7 +17,7 @@
     "react": "^17.0.2"
   },
   "dependencies": {
-    "@atls-ui-parts/link": "workspace:0.0.4",
+    "@atls-ui-parts/link": "workspace:0.0.5",
     "@atls-ui-proto/text": "workspace:0.0.6"
   },
   "publishConfig": {
