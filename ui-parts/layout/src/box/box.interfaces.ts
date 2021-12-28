@@ -7,6 +7,8 @@ import { LayoutProps }     from 'styled-system'
 import { PositionProps }   from 'styled-system'
 import { SpaceProps }      from 'styled-system'
 
+import { FillProps }       from '../styles'
+
 export interface BoxSystemProps {
   boxSizing?: string
 }
@@ -19,4 +21,5 @@ export type BoxProps = FlexboxProps &
   ColorProps &
   BorderProps &
   BoxShadowProps &
-  BackgroundProps
+  BackgroundProps &
+  FillProps
