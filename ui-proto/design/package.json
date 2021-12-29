@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@atls-ui-proto/button": "workspace:0.0.5",
-    "@atls-ui-proto/input": "workspace:0.0.6",
+    "@atls-ui-proto/input": "workspace:0.0.7",
     "@atls-ui-proto/theme": "workspace:0.0.1",
     "@babel/core": "^7.13.16",
     "@emotion/babel-plugin": "^11.3.0",

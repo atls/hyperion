@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/placeholder",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
@@ -12,7 +12,7 @@
     "prepack": "yarn run build"
   },
   "dependencies": {
-    "@atls-ui-proto/layout": "workspace:0.0.2",
+    "@atls-ui-proto/layout": "workspace:0.0.3",
     "@atls-ui-proto/text": "workspace:0.0.6"
   },
   "devDependencies": {

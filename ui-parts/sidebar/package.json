@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/sidebar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
@@ -17,7 +17,7 @@
     "react": "17.0.2"
   },
   "devDependencies": {
-    "@atls-ui-parts/layout": "workspace:0.0.2",
+    "@atls-ui-parts/layout": "workspace:0.0.3",
     "@atls-ui-parts/switch": "workspace:0.0.3",
     "@emotion/css": "^11.1.3",
     "@fortawesome/fontawesome-svg-core": "1.2.28",
