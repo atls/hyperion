@@ -10,6 +10,7 @@ import { position }   from 'styled-system'
 import { space }      from 'styled-system'
 
 import { BoxProps }   from './box.interfaces'
+import { fillStyles } from '../styles'
 
 const Box = styled.div<BoxProps>(
   system({
@@ -23,7 +24,8 @@ const Box = styled.div<BoxProps>(
   position,
   boxShadow,
   border,
-  background
+  background,
+  fillStyles
 )
 
 Box.defaultProps = {
