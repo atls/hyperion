@@ -1,0 +1,14 @@
+releases:
+  "@atls-ui-parts/autocomplete": patch
+  "@atls-ui-parts/card": patch
+  "@atls-ui-parts/datepicker": patch
+  "@atls-ui-parts/input": patch
+  "@atls-ui-parts/layout": patch
+  "@atls-ui-parts/progress": patch
+  "@atls-ui-parts/sidebar": patch
+  "@atls-ui-parts/tooltip": patch
+  "@atls-ui-proto/divider": patch
+  "@atls-ui-proto/input": patch
+  "@atls-ui-proto/layout": patch
+  "@atls-ui-proto/placeholder": patch
+  "@atls-ui-proto/popover": patch
