@@ -982,7 +982,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./ui-parts/card/",
           "packageDependencies": [
             ["@atls-ui-parts/card", "workspace:ui-parts/card"],
-            ["@atls-ui-parts/dom", "virtual:69f9af1a5a90acf00d2d5e3c01e9272ca21333afb358e5927bc00fbef45b6cbc1d485088c79d240a9945c1caa7a5562af51fdd8af1fc5e2ce4fbb2f098b67105#workspace:ui-parts/dom"],
+            ["@atls-ui-parts/dom", "virtual:d2e9b8c89331cba871435e89c6ed85c244e588c6bca385175f9c34e97c58e91991ab557e82e1273410f5048215cdae48b73cb6629383fe4f0d3e5812c6387488#workspace:ui-parts/dom"],
             ["@atls-ui-parts/layout", "virtual:937fb0364248873ae59b9853300486d03005abda92eaabc1af692cdbfe45a10bb44400f85b426164577e95380d1eb384e54a3525e8f98eff7f80d492dbab08a5#workspace:ui-parts/layout"],
             ["@emotion/react", "virtual:8eb691db84fd68975b95c7b7751e750446f82576951f5264566adefecbbef8688299b9be5a741e618cd4e5792a084b105995a5c92b7bd7f7d69bde2692db614b#npm:11.4.1"],
             ["@emotion/styled", "virtual:8eb691db84fd68975b95c7b7751e750446f82576951f5264566adefecbbef8688299b9be5a741e618cd4e5792a084b105995a5c92b7bd7f7d69bde2692db614b#npm:11.3.0"],
