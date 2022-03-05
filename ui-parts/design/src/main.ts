@@ -23,6 +23,8 @@ module.exports = {
   webpackFinal: async (config) => {
     // eslint-disable-next-line no-param-reassign
     config.resolve.fallback.assert = false
+    // eslint-disable-next-line no-param-reassign
+    config.resolve.fallback.url = false
 
     return updateEmotionAliases(config)
   },

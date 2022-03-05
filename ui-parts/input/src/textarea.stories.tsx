@@ -8,7 +8,7 @@ import { fontNames, useGoogleFonts }          from '@atls/storybook-google-fonts
 import { ConditionalRender }                  from '@atls-ui-parts/conditional-render'
 import { ForwardEventsState }                 from '@atls-ui-parts/events-state'
 import { Box }                                from '@atls-ui-parts/layout'
-import { Upload }                             from '@atls-ui-parts/upload'
+import { SimpleUpload }                             from '@atls-ui-parts/upload'
 
 import { createAttachmentAppearanceStyles }   from './attachment'
 import { createAttachmentBaseStyles }         from './attachment'
@@ -189,9 +189,9 @@ export const Textarea = ({
             />
             <TextareaAddon>
               {/* TODO move example to proto */}
-              <Upload multiple>
+              <SimpleUpload multiple>
                 {(files) => `Files: ${files.map((file) => file.name).join(',')}`}
-              </Upload>
+              </SimpleUpload>
             </TextareaAddon>
             <Attachment type='suffix'>{suffix}</Attachment>
           </StoryTextarea>
