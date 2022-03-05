@@ -50,7 +50,9 @@ export const SimpleUpload: FC<SimpleUploadProps> = ({
         })
       }
 
-      upload(file).then((data) => {
+      const confirmUpload = upload(file)
+
+      confirmUpload().then((data) => {
         if (preview) {
           onFile({ ...data, preview })
         } else {
