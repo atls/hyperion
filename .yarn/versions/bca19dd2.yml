@@ -1,0 +1,6 @@
+releases:
+  "@atls-ui-parts/autocomplete": patch
+  "@atls-ui-parts/datepicker": patch
+  "@atls-ui-parts/input": patch
+  "@atls-ui-parts/upload": patch
+  "@atls-ui-proto/input": patch
