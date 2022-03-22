@@ -756,7 +756,7 @@ __metadata:
   resolution: "@atls-ui-parts/upload@workspace:ui-parts/upload"
   dependencies:
     "@atls-ui-parts/avatar": "workspace:0.0.5"
-    "@atls/react-upload": ^0.0.1
+    "@atls/react-upload": ^0.0.3
     "@types/node": ^14.14.41
     "@types/react": ^17.0.3
     graphql: ^16.3.0
@@ -1548,16 +1548,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/react-upload@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@atls/react-upload@npm:0.0.1"
+"@atls/react-upload@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@atls/react-upload@npm:0.0.3"
   dependencies:
     "@atls/react-app-links": 0.0.2
     graphql-request: ^4.0.0
   peerDependencies:
     graphql: ^16.3.0
     react: ^17.0.1
-  checksum: 81bbe8507cd581f93d429a97c2e96e291ff7cb0495850100f851bf97bf0b361e684355a08fb50901821a09290eaf38c5f72a19271c6699628f9f04dfcf45f254
+  checksum: ff095610797cb715d0130a411e07f9bdce35b7ce1a0f3154c00847bc8a0cfb338b0ccdc4c3018308bd6280d6d3b3b9c13bbe990df72f0441d8680adea124e022
   languageName: node
   linkType: hard
 
