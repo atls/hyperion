@@ -5,14 +5,32 @@ import styled            from '@emotion/styled'
 import { Text }          from './text.component'
 import { CurrencyProps } from './currency.interface'
 
-const CurrencyChildren: FC<CurrencyProps> = ({ amount, currency, locale, options, ...props }) => (
-  <span {...props}>
-    {new Intl.NumberFormat(locale, { style: 'currency', currency, ...options })
-      .format(amount)
-      .replace(',00', '')}
-  </span>
-)
+const CurrencyChildren: FC<CurrencyProps> = ({
+  amount,
+  currency,
+  locale,
+  options,
+  keepZeros = false,
+  currencySignPlacement = 'suffix',
+  ...props
+}) => {
+  const baseValue = new Intl.NumberFormat(locale, {
+    style: 'currency',
+    currency,
+    ...options,
+  }).format(amount)
 
+  const valueWithKeepZeros = keepZeros ? baseValue : baseValue.replace(',00', '')
+  const valueWithSuffix = valueWithKeepZeros
+  const valueWithPrefix = `${valueWithKeepZeros.split('').pop()} ${amount}`
+
+  return (
+    <span {...props}>
+      {currencySignPlacement === 'suffix' && valueWithSuffix}
+      {currencySignPlacement === 'prefix' && valueWithPrefix}
+    </span>
+  )
+}
 const Currency = styled(Text.withComponent(CurrencyChildren))()
 
 Currency.defaultProps = {

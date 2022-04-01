@@ -3,4 +3,6 @@ export interface CurrencyProps {
   currency: string
   locale?: string
   options: Omit<Intl.NumberFormatOptions, 'style' | 'currency'>
+  keepZeros?: boolean
+  currencySignPlacement?: 'prefix' | 'suffix'
 }
