@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/placeholder",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@atls-ui-proto/layout": "workspace:0.0.3",
-    "@atls-ui-proto/text": "workspace:0.0.6"
+    "@atls-ui-proto/text": "workspace:0.0.7"
   },
   "devDependencies": {
     "@emotion/styled": "^11.3.0",

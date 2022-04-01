@@ -530,11 +530,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/link@workspace:0.0.5, @atls-ui-parts/link@workspace:ui-parts/link":
+"@atls-ui-parts/link@workspace:0.0.6, @atls-ui-parts/link@workspace:ui-parts/link":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/link@workspace:ui-parts/link"
   dependencies:
-    "@atls-ui-parts/text": "workspace:0.0.6"
+    "@atls-ui-parts/text": "workspace:0.0.7"
     "@emotion/css": ^11.7.1
     "@emotion/styled": ^11.3.0
     "@types/react": ^17.0.3
@@ -711,7 +711,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/text@workspace:0.0.6, @atls-ui-parts/text@workspace:ui-parts/text":
+"@atls-ui-parts/text@workspace:0.0.7, @atls-ui-parts/text@workspace:ui-parts/text":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/text@workspace:ui-parts/text"
   dependencies:
@@ -910,8 +910,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/link@workspace:ui-proto/link"
   dependencies:
-    "@atls-ui-parts/link": "workspace:0.0.5"
-    "@atls-ui-proto/text": "workspace:0.0.6"
+    "@atls-ui-parts/link": "workspace:0.0.6"
+    "@atls-ui-proto/text": "workspace:0.0.7"
     "@emotion/styled": ^11.3.0
     "@types/react": ^17.0.3
     react: ^17.0.2
@@ -944,7 +944,7 @@ __metadata:
   resolution: "@atls-ui-proto/placeholder@workspace:ui-proto/placeholder"
   dependencies:
     "@atls-ui-proto/layout": "workspace:0.0.3"
-    "@atls-ui-proto/text": "workspace:0.0.6"
+    "@atls-ui-proto/text": "workspace:0.0.7"
     "@emotion/styled": ^11.3.0
     "@types/react": ^17.0.3
     react: ^17.0.2
@@ -979,11 +979,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-proto/text@workspace:0.0.6, @atls-ui-proto/text@workspace:ui-proto/text":
+"@atls-ui-proto/text@workspace:0.0.7, @atls-ui-proto/text@workspace:ui-proto/text":
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/text@workspace:ui-proto/text"
   dependencies:
-    "@atls-ui-parts/text": "workspace:0.0.6"
+    "@atls-ui-parts/text": "workspace:0.0.7"
     "@types/react": ^17.0.3
     react: ^17.0.2
   languageName: unknown
