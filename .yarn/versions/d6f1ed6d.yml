@@ -1,0 +1,3 @@
+releases:
+  "@atls-ui-parts/sidebar": patch
+  "@atls-ui-parts/switch": patch
