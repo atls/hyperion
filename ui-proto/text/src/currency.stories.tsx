@@ -15,6 +15,8 @@ Currency.args = {
   currency: 'USD',
   amount: 100,
   locale: 'ru-RU',
+  keepZeros: false,
+  currencySignPlacement: 'suffix',
   options: {
     maximumFractionDigits: 2,
   },
@@ -64,6 +66,21 @@ Currency.argTypes = {
     description: 'Цвет текста',
     control: {
       type: 'color',
+    },
+  },
+  keepZeros: {
+    name: 'Оставить нули',
+    description: 'Показать/спрятать нули',
+    control: {
+      type: 'boolean',
+    },
+  },
+  currencySignPlacement: {
+    name: 'Положение символа валюты',
+    description: 'Положение символа валюты',
+    control: {
+      type: 'select',
+      options: ['prefix', 'suffix'],
     },
   },
 }
