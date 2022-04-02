@@ -1,18 +1,7 @@
-import { writeFileSync }            from 'fs'
+import { readFileSync }             from 'fs'
 
-import * as prettierPlugin          from '@atls/prettier-plugin'
-import prettierConfig               from '@atls/config-prettier'
-import parserBabel                  from 'prettier/parser-babel'
-import parserTypescript             from 'prettier/parser-typescript'
-import { format }                   from 'prettier/standalone'
-import { generateAppearanceStyles } from '../style-generators'
-
-const pretty = (string) =>
-  format(string, {
-    ...prettierConfig,
-    parser: 'babel',
-    plugins: [parserTypescript, parserBabel, prettierPlugin],
-  })
+import { AppearanceStyleGenerator } from '../style-generators'
+import { pretty }                   from '../utils'
 
 describe('button generator', () => {
   describe('appearance styles generator', () => {
@@ -67,21 +56,108 @@ describe('button generator', () => {
       },
     }
 
-    test('it should generate code for appearance styles', () => {
-      const generated = generateAppearanceStyles(theme.colors.button)
+    const expectedCode = `import { createAppearanceStyles } from '@atls-ui-parts/button'
+import { ifProp } from 'styled-tools'
+import { switchProp } from 'styled-tools'
+import { prop } from 'styled-tools'
 
-      const code = `
- import { switchProp } from 'styled-tools'
- import { ifProp } from 'styled-tools'
- import { prop } from 'styled-tools'
- import { createAppearanceStyles } from '@atls-ui-parts/button'
-      
-      ${generated.statefulStyles}
-      
+const appearancePrimaryDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.primary.default.font'),
+  backgroundColor: prop('theme.colors.button.primary.default.background'),
+  borderColor: prop('theme.colors.button.primary.default.border'),
+})
+
+const appearancePrimaryHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.primary.hover.font'),
+  backgroundColor: prop('theme.colors.button.primary.hover.background'),
+  borderColor: prop('theme.colors.button.primary.hover.border'),
+})
+
+const appearancePrimaryPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.primary.pressed.font'),
+  backgroundColor: prop('theme.colors.button.primary.pressed.background'),
+  borderColor: prop('theme.colors.button.primary.pressed.border'),
+})
+
+const appearancePrimaryDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.primary.disabled.font'),
+  backgroundColor: prop('theme.colors.button.primary.disabled.background'),
+  borderColor: prop('theme.colors.button.primary.disabled.border'),
+})
+
+const appearanceSecondaryDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.secondary.default.font'),
+  backgroundColor: prop('theme.colors.button.secondary.default.background'),
+  borderColor: prop('theme.colors.button.secondary.default.border'),
+})
+
+const appearanceSecondaryHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.secondary.hover.font'),
+  backgroundColor: prop('theme.colors.button.secondary.hover.background'),
+  borderColor: prop('theme.colors.button.secondary.hover.border'),
+})
+
+const appearanceSecondaryPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.secondary.pressed.font'),
+  backgroundColor: prop('theme.colors.button.secondary.pressed.background'),
+  borderColor: prop('theme.colors.button.secondary.pressed.border'),
+})
+
+const appearanceSecondaryDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.secondary.disabled.font'),
+  backgroundColor: prop('theme.colors.button.secondary.disabled.background'),
+  borderColor: prop('theme.colors.button.secondary.disabled.border'),
+})
+
+const appearanceStyles = switchProp(prop('variant', 'primary'), {
+  primary: ifProp(
+    prop('disabled', false),
+    appearancePrimaryDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearancePrimaryPressedStyles,
+      ifProp(prop('hover', false), appearancePrimaryHoverStyles, appearancePrimaryDefaultStyles)
+    )
+  ),
+  secondary: ifProp(
+    prop('disabled', false),
+    appearanceSecondaryDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceSecondaryPressedStyles,
+      ifProp(prop('hover', false), appearanceSecondaryHoverStyles, appearanceSecondaryDefaultStyles)
+    )
+  ),
+})
+`
+
+    it('should generate code for appearance styles', () => {
+      const generator = new AppearanceStyleGenerator(theme.colors.button)
+      const generated = generator.generateAppearanceStyles()
+
+      const code = pretty(`
+      ${generated.imports}     
+      ${generated.statefulStyles}      
       ${generated.appearanceStyles}
-      `
-      writeFileSync(`${__dirname}/code.ts`, pretty(code))
-      expect(code).toBe('')
+      `)
+
+      expect(code).toBe(expectedCode)
+    })
+
+    it('should fail if path ends with slash character', () => {
+      const generator = new AppearanceStyleGenerator(theme.colors.button)
+
+      expect(() => generator.generateFile(`${__dirname}/generated/`)).toThrowError()
+    })
+
+    it('should generate appearance styles file', () => {
+      const generator = new AppearanceStyleGenerator(theme.colors.button)
+
+      generator.generateFile(`${__dirname}/generated`)
+
+      const code = readFileSync(`${__dirname}/generated/button.appearance-styles.ts`)
+
+      expect(Buffer.from(code).toString()).toBe(expectedCode)
     })
   })
 })
