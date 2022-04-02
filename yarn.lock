@@ -232,7 +232,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-generators/button@workspace:generators/button"
   dependencies:
-    "@atls-ui-parts/button": "workspace:ui-parts/button"
+    "@atls-ui-parts/button": "workspace:0.0.4"
     "@atls/config-prettier": ^0.0.3
     "@atls/prettier-plugin": ^0.0.3
     "@types/prettier": ^2
