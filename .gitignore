@@ -47,3 +47,11 @@ ui-admin/icons/src/
 dist/
 
 *.iml
+
+# IDE
+
+.idea
+
+# Generated from tests
+
+**/unit/generated
