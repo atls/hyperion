@@ -1,0 +1,30 @@
+{
+  "name": "@atls-ui-generators/button",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn app library build",
+    "postpack": "rm -rf dist",
+    "prepack": "yarn run build"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  },
+  "dependencies": {
+    "camelcase": "^6.3.0"
+  },
+  "devDependencies": {
+    "@atls-ui-parts/button": "workspace:ui-parts/button",
+    "@atls/config-prettier": "^0.0.3",
+    "@atls/prettier-plugin": "^0.0.3",
+    "@types/prettier": "^2",
+    "prettier": "2.5.1",
+    "styled-tools": "^1.7.2"
+  }
+}
