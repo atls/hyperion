@@ -1,4 +1,6 @@
 import { readFileSync }             from 'fs'
+import { mkdirSync }                from 'fs'
+import { existsSync }               from 'fs'
 
 import { AppearanceStyleGenerator } from '../style-generators'
 import { pretty }                   from '../utils'
@@ -147,11 +149,15 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
     it('should fail if path ends with slash character', () => {
       const generator = new AppearanceStyleGenerator(theme.colors.button)
 
+      if (!existsSync(`${__dirname}/generated`)) mkdirSync(`${__dirname}/generated`)
+
       expect(() => generator.generateFile(`${__dirname}/generated/`)).toThrowError()
     })
 
     it('should generate appearance styles file', () => {
       const generator = new AppearanceStyleGenerator(theme.colors.button)
+
+      if (!existsSync(`${__dirname}/generated`)) mkdirSync(`${__dirname}/generated`)
 
       generator.generateFile(`${__dirname}/generated`)
 
