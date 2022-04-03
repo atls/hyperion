@@ -64,7 +64,9 @@ export class AppearanceStyleGenerator {
         .join('\n')
     )
 
-    return { statefulStyles, appearanceStyles, imports }
+    const exports = 'export { appearanceStyles }'
+
+    return { statefulStyles, appearanceStyles, imports, exports }
   }
 
   generateFile(path, filename = 'button.appearance-styles.ts') {
@@ -74,6 +76,7 @@ export class AppearanceStyleGenerator {
     ${generated.imports}
     ${generated.statefulStyles}
     ${generated.appearanceStyles}
+    ${generated.exports}
     `)
 
     if (path.split('').pop() === '/') {

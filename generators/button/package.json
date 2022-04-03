@@ -17,14 +17,14 @@
     "typings": "dist/index.d.ts"
   },
   "dependencies": {
-    "camelcase": "^6.3.0"
+    "@atls/config-prettier": "^0.0.3",
+    "@atls/prettier-plugin": "^0.0.3",
+    "camelcase": "^6.3.0",
+    "prettier": "2.5.1"
   },
   "devDependencies": {
     "@atls-ui-parts/button": "workspace:0.0.4",
-    "@atls/config-prettier": "^0.0.3",
-    "@atls/prettier-plugin": "^0.0.3",
     "@types/prettier": "^2",
-    "prettier": "2.5.1",
     "styled-tools": "^1.7.2"
   }
 }
