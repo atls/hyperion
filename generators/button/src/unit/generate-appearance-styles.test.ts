@@ -131,6 +131,8 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
     )
   ),
 })
+
+export { appearanceStyles }
 `
 
     it('should generate code for appearance styles', () => {
@@ -141,6 +143,7 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
       ${generated.imports}     
       ${generated.statefulStyles}      
       ${generated.appearanceStyles}
+      ${generated.exports}
       `)
 
       expect(code).toBe(expectedCode)
