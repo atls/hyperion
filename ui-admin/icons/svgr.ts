@@ -20,14 +20,8 @@ const svgrTemplate = ({ template }, opts, { componentName, jsx }) => {
 
   return typeScriptTpl.ast`
  import React from 'react'
- import { useTheme } from '@emotion/react'
- import { IconProps } from '../icons.interfaces'
 
-    export const ${componentName} = (props: IconProps) => {
-    const theme: any = useTheme()
-    
-    return ${jsx}
-}
+    export const ${componentName} = (props) => ${jsx}
   `
 }
 
