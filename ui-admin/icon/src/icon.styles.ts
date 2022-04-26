@@ -1,6 +1,8 @@
-import { CSSObject, keyframes } from '@emotion/css'
-import { styleFn }              from 'styled-system'
-import { ifProp }               from 'styled-tools'
+import { CSSObject } from '@emotion/css'
+import { keyframes } from '@emotion/css'
+
+import { styleFn }   from 'styled-system'
+import { ifProp }    from 'styled-tools'
 
 const loadingCircle = keyframes`
   100% {

@@ -1,6 +1,7 @@
-import { useCallback, useState } from 'react'
+import { useCallback }         from 'react'
+import { useState }            from 'react'
 
-import { UseHoverStateResult }   from './interfaces'
+import { UseHoverStateResult } from './interfaces'
 
 export const useHoverState = (): UseHoverStateResult => {
   const [hovered, setHovered] = useState<boolean>(false)

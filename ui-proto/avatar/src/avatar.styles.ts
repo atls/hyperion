@@ -1,4 +1,5 @@
-import { prop, switchProp }       from 'styled-tools'
+import { prop }                   from 'styled-tools'
+import { switchProp }             from 'styled-tools'
 
 import { createBaseStyles }       from '@atls-ui-parts/avatar'
 import { createShapeStyles }      from '@atls-ui-parts/avatar'

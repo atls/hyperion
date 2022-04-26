@@ -1,8 +1,9 @@
-import styled                                                from '@emotion/styled'
+import styled                         from '@emotion/styled'
 
-import { LinePercentElement }                                from './line-percent.element'
-import { LinePercentElementProps }                           from './line-percent.interfaces'
-import { baseLinePercentStyles, linePercentLinecapModifier } from './line-percent.styles'
+import { LinePercentElement }         from './line-percent.element'
+import { LinePercentElementProps }    from './line-percent.interfaces'
+import { baseLinePercentStyles }      from './line-percent.styles'
+import { linePercentLinecapModifier } from './line-percent.styles'
 
 const LinePercent = styled(LinePercentElement)<LinePercentElementProps>(
   baseLinePercentStyles,

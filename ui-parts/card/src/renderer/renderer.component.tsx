@@ -1,8 +1,8 @@
 import React               from 'react'
+import { AnimatePresence } from 'framer-motion'
 import { useEffect }       from 'react'
 import { useState }        from 'react'
 import { createPortal }    from 'react-dom'
-import { AnimatePresence } from 'framer-motion'
 
 import { Container }       from './container'
 

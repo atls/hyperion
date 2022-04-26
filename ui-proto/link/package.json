@@ -7,18 +7,18 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn app library build",
-    "postpack": "rm -rf dist",
-    "prepack": "yarn run build"
-  },
-  "devDependencies": {
-    "@emotion/styled": "^11.3.0",
-    "@types/react": "^17.0.3",
-    "react": "^17.0.2"
+    "build": "yarn library build",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
   },
   "dependencies": {
     "@atls-ui-parts/link": "workspace:0.0.6",
     "@atls-ui-proto/text": "workspace:0.0.7"
+  },
+  "devDependencies": {
+    "@emotion/styled": "^11.3.0",
+    "@types/react": "^18.0.7",
+    "react": "^17.0.2"
   },
   "publishConfig": {
     "access": "public",

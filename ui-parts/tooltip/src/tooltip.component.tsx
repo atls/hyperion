@@ -1,26 +1,33 @@
-import React, { Children, FunctionComponent, cloneElement, forwardRef } from 'react'
-import { AnimatePresence }                                              from 'framer-motion'
-import { Arrow, ToggleLayer, useHover }                                 from 'react-laag'
+import React                 from 'react'
+import { AnimatePresence }   from 'framer-motion'
+import { Children }          from 'react'
+import { FunctionComponent } from 'react'
+import { Arrow }             from 'react-laag'
+import { ToggleLayer }       from 'react-laag'
+import { cloneElement }      from 'react'
+import { forwardRef }        from 'react'
+import { useHover }          from 'react-laag'
 
-import { Container }                                                    from './container'
-import { TooltipProps }                                                 from './tooltip.interfaces'
+import { Container }         from './container'
+import { TooltipProps }      from './tooltip.interfaces'
 
-const DefaultContainer = forwardRef(
-  ({ text, showArrow, arrowStyle, layerSide, ...props }: any, ref) => (
-    <Container ref={ref} {...props}>
-      {text}
-      {showArrow && (
-        <Arrow
-          style={arrowStyle}
-          layerSide={layerSide}
-          backgroundColor='rgba(0, 0, 0, 0.75)'
-          angle={30}
-          size={8}
-        />
-      )}
-    </Container>
-  )
-)
+const DefaultContainer = forwardRef((
+  { text, showArrow, arrowStyle, layerSide, ...props }: any,
+  ref
+) => (
+  <Container ref={ref} {...props}>
+    {text}
+    {showArrow && (
+      <Arrow
+        style={arrowStyle}
+        layerSide={layerSide}
+        backgroundColor='rgba(0, 0, 0, 0.75)'
+        angle={30}
+        size={8}
+      />
+    )}
+  </Container>
+))
 
 export const Tooltip: FunctionComponent<TooltipProps> = ({
   text,

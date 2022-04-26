@@ -1,6 +1,8 @@
-import { CSSObject }        from '@emotion/react'
-import { styleFn }          from 'styled-system'
-import { prop, switchProp } from 'styled-tools'
+import { CSSObject }  from '@emotion/react'
+
+import { styleFn }    from 'styled-system'
+import { prop }       from 'styled-tools'
+import { switchProp } from 'styled-tools'
 
 export const baseLinePercentStyles: CSSObject = {
   display: 'flex',

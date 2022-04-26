@@ -7,23 +7,23 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn app library build",
-    "postpack": "rm -rf dist",
-    "prepack": "yarn run build"
+    "build": "yarn library build",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
   },
-  "publishConfig": {
-    "access": "public",
-    "main": "index.js",
-    "typings": "index.d.ts"
+  "devDependencies": {
+    "@types/react": "^18.0.7",
+    "@types/react-dom": "^18.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "devDependencies": {
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+  "publishConfig": {
+    "access": "public",
+    "main": "index.js",
+    "typings": "index.d.ts"
   }
 }

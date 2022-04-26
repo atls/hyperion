@@ -1,10 +1,13 @@
-import React, { useState }     from 'react'
+import React        from 'react'
+import { useState } from 'react'
 
-import { Button }              from '@atls-ui-proto/button'
-import { Column, Layout, Row } from '@atls-ui-parts/layout'
+import { Column }   from '@atls-ui-parts/layout'
+import { Layout }   from '@atls-ui-parts/layout'
+import { Row }      from '@atls-ui-parts/layout'
+import { Button }   from '@atls-ui-proto/button'
 
-import { Circle }              from './circle'
-import { Line }                from './line'
+import { Circle }   from './circle'
+import { Line }     from './line'
 
 export default {
   title: 'Компоненты/Прогресс/Примеры',

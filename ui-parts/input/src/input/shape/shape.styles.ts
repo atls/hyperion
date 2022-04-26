@@ -11,8 +11,7 @@ import { InputShapePaddingLeftProps }  from './shape.interfaces'
 import { InputShapePaddingRightProps } from './shape.interfaces'
 import { InputShapeStyles }            from './shape.interfaces'
 
-export const createBaseShapeStyles: styleFn =
-  (
+export const createBaseShapeStyles: styleFn = (
     size: number,
     borderWidth: number | string,
     fontSize: number | Function,

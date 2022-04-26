@@ -1,7 +1,7 @@
+import { MutableRefObject }   from 'react'
 import { useEffect }          from 'react'
 import { useState }           from 'react'
 import { useMemo }            from 'react'
-import { MutableRefObject }   from 'react'
 
 import { EventsState }        from './events-state.interfaces'
 import { fillOppositeEvents } from './events-state.utils'
@@ -20,8 +20,7 @@ export const useEventsState = (
         [event]: false,
       }),
       {}
-    )
-  )
+    ))
 
   useEffect(() => {
     const node = ref?.current

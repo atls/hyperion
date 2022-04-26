@@ -7,25 +7,25 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn app library build",
-    "postpack": "rm -rf dist",
-    "prepack": "yarn run build"
+    "build": "yarn library build",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
+  },
+  "dependencies": {
+    "@atls-ui-proto/input": "workspace:0.0.9",
+    "downshift": "^5.0.5",
+    "react-laag": "^1.7.3"
   },
   "devDependencies": {
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@testing-library/react": "10.4.7",
-    "@types/react": "^17.0.3",
+    "@types/react": "^18.0.7",
     "@types/styled-system": "^5.1.11",
     "framer-motion": "^4.1.17",
     "react": "^17.0.2",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
-  },
-  "publishConfig": {
-    "access": "public",
-    "main": "dist/index.js",
-    "typings": "dist/index.d.ts"
   },
   "peerDependencies": {
     "@emotion/react": "^11.4.0",
@@ -36,9 +36,9 @@
     "styled-system": "^5.1.0",
     "styled-tools": "^1.7.2"
   },
-  "dependencies": {
-    "@atls-ui-proto/input": "workspace:0.0.9",
-    "downshift": "^5.0.5",
-    "react-laag": "^1.7.3"
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
   }
 }

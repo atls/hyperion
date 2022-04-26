@@ -1,16 +1,18 @@
-import React                         from 'react'
-import styled                        from '@emotion/styled'
+import styled                     from '@emotion/styled'
 
-import { fontNames, useGoogleFonts } from '@atls/storybook-google-fonts'
+import React                      from 'react'
+
+import { fontNames }              from '@atls/storybook-google-fonts'
+import { useGoogleFonts }         from '@atls/storybook-google-fonts'
 
 // @ts-ignore
-import mdx                           from './button.docs.mdx'
-import { templates }                 from './button.templates'
-import { createBaseStyles }          from './base'
-import { createShapeStyles }         from './shape'
-import { createAppearanceStyles }    from './appearance'
-import { createContentStyles }       from './content'
-import { Content }                   from './content'
+import mdx                        from './button.docs.mdx'
+import { Content }                from './content'
+import { createAppearanceStyles } from './appearance'
+import { createBaseStyles }       from './base'
+import { templates }              from './button.templates'
+import { createContentStyles }    from './content'
+import { createShapeStyles }      from './shape'
 
 export default {
   title: 'Components/Button',

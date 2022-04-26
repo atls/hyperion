@@ -1,17 +1,22 @@
 /* eslint-disable no-shadow */
 
-import React, { useEffect, useState }                  from 'react'
-import { useCombobox }                                 from 'downshift'
+import React                       from 'react'
+import { useCombobox }             from 'downshift'
+import { useEffect }               from 'react'
+import { useState }                from 'react'
 
-import { Input }                                       from '@atls-ui-proto/input'
+import { Input }                   from '@atls-ui-proto/input'
 
-import { Arrow, Indicator }                            from './indicator'
-import { Layer }                                       from './layer'
-import { Menu }                                        from './menu'
-import { MenuItem }                                    from './menu-item'
-import { ToggleLayer }                                 from './toggle-layer'
-import { createMenuItemsRenderer, createMenuRenderer } from './factories'
-import { createInputRenderer, createLayerRenderer }    from './factories'
+import { Arrow }                   from './indicator'
+import { Indicator }               from './indicator'
+import { Layer }                   from './layer'
+import { Menu }                    from './menu'
+import { MenuItem }                from './menu-item'
+import { ToggleLayer }             from './toggle-layer'
+import { createMenuItemsRenderer } from './factories'
+import { createMenuRenderer }      from './factories'
+import { createInputRenderer }     from './factories'
+import { createLayerRenderer }     from './factories'
 
 const MenuItemsRenderer = createMenuItemsRenderer(MenuItem)
 const LayerRenderer = createLayerRenderer(Layer)
@@ -56,8 +61,7 @@ const Autocomplete = (
     if (inputValue && selectedItem && inputValue !== getOptionLabel(selectedItem)) {
       setItems(
         options.filter((item) =>
-          getOptionLabel(item).toLowerCase().startsWith(inputValue.toLowerCase())
-        )
+          getOptionLabel(item).toLowerCase().startsWith(inputValue.toLowerCase()))
       )
     } else {
       setItems(options)

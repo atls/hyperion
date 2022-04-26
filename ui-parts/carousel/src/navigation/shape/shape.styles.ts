@@ -8,8 +8,12 @@ import { combine }               from '@atls-ui-parts/styles'
 
 import { NavigationShapeStyles } from './shape.interfaces'
 
-const createBaseShapeStyles: styleFn =
-  (width: number | string, borderWidth: number | string, borderRadius: number | string) => () => ({
+const createBaseShapeStyles: styleFn = (
+    width: number | string,
+    borderWidth: number | string,
+    borderRadius: number | string
+  ) =>
+  () => ({
     width,
     borderWidth,
     borderRadius,

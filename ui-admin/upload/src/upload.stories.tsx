@@ -1,7 +1,9 @@
-import React                           from 'react'
-import { MockedProvider }              from '@apollo/client/testing'
+import { MockedProvider }      from '@apollo/client/testing'
 
-import { DropzonePlaceholder, Upload } from './index'
+import React                   from 'react'
+
+import { DropzonePlaceholder } from './index'
+import { Upload }              from './index'
 
 export default {
   title: 'Components/Upload',

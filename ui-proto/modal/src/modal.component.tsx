@@ -1,7 +1,7 @@
 import React                 from 'react'
+import { AnimatePresence }   from 'framer-motion'
 import { FunctionComponent } from 'react'
 import { ReactElement }      from 'react'
-import { AnimatePresence }   from 'framer-motion'
 
 import { Portal }            from '@atls-ui-parts/portal'
 

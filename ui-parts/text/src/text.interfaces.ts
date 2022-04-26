@@ -1,4 +1,7 @@
-import { ColorProps, LayoutProps, SpaceProps, TypographyProps } from 'styled-system'
+import { ColorProps }      from 'styled-system'
+import { LayoutProps }     from 'styled-system'
+import { SpaceProps }      from 'styled-system'
+import { TypographyProps } from 'styled-system'
 
 export interface BaseTextProps {
   wordBreak?: string

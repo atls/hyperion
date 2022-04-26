@@ -1,9 +1,10 @@
-import React, { FunctionComponent } from 'react'
+import React                 from 'react'
+import { FunctionComponent } from 'react'
 
-import { Tooltip }                  from '@atls-ui-parts/tooltip'
+import { Tooltip }           from '@atls-ui-parts/tooltip'
 
-import { Container }                from './container'
-import { TooltipProps }             from './popover.interfaces'
+import { Container }         from './container'
+import { TooltipProps }      from './popover.interfaces'
 
 const Popover: FunctionComponent<TooltipProps> = ({ title, content, children, ...props }) => (
   <Tooltip container={<Container content={content} title={title} />} {...props}>

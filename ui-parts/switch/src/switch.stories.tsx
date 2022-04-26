@@ -1,12 +1,17 @@
-import styled                                       from '@emotion/styled'
-import React, { useRef }                            from 'react'
-import { typography }                               from 'styled-system'
+import styled                      from '@emotion/styled'
 
-import { HandleElement, baseHandleStyles }          from './handle'
-import { SwitchProps }                              from './switch.interfaces'
-import { ThumbElement, thumbMotionVariants }        from './thumb'
-import { useSwitch }                                from './hooks'
-import { baseThumbStyles, ifDisabledThumbModifier } from './thumb'
+import React                       from 'react'
+import { useRef }                  from 'react'
+import { typography }              from 'styled-system'
+
+import { HandleElement }           from './handle'
+import { SwitchProps }             from './switch.interfaces'
+import { ThumbElement }            from './thumb'
+import { baseHandleStyles }        from './handle'
+import { useSwitch }               from './hooks'
+import { thumbMotionVariants }     from './thumb'
+import { baseThumbStyles }         from './thumb'
+import { ifDisabledThumbModifier } from './thumb'
 
 export default {
   title: 'Компоненты/Переключатель/Примеры',

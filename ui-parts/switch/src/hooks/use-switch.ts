@@ -1,8 +1,9 @@
-import { RefObject }                              from 'react'
+import { RefObject }            from 'react'
 
-import { OnChangeCallback, UseSwitchStateResult } from './interfaces'
-import { useKeyboard }                            from './use-keyboard'
-import { useSwitchState }                         from './use-switch-state'
+import { OnChangeCallback }     from './interfaces'
+import { UseSwitchStateResult } from './interfaces'
+import { useKeyboard }          from './use-keyboard'
+import { useSwitchState }       from './use-switch-state'
 
 export const useSwitch = (
   node: RefObject<HTMLButtonElement>,

@@ -6,8 +6,13 @@ import { combine }                    from '@atls-ui-parts/styles'
 
 import { PaginationAppearanceStyles } from './appearance.interfaces'
 
-const createColorStyles: styleFn =
-  (color: string, backgroundColor: string, borderColor: string, borderStyle: string) => () => ({
+const createColorStyles: styleFn = (
+    color: string,
+    backgroundColor: string,
+    borderColor: string,
+    borderStyle: string
+  ) =>
+  () => ({
     color,
     backgroundColor,
     borderColor,

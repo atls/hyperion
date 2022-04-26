@@ -1,7 +1,8 @@
-import React, { useMemo } from 'react'
+import React       from 'react'
+import { useMemo } from 'react'
 
-const createMenuRenderer =
-  (Menu) =>
+const createMenuRenderer = (Menu) =>
+  // eslint-disable-next-line
   ({ getMenuProps, children }) => {
     const props = useMemo(
       () => getMenuProps({ style: {} }, { suppressRefError: true }),

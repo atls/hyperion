@@ -8,12 +8,16 @@ import { getContentDimensions }   from '@atls-ui-parts/dom'
 
 import { UseCardControlsOptions } from './animation.interfaces'
 
+const doNothing = () => {
+  // do nothing
+}
+
 const useCardControls = ({
   topOffset = 0,
   duration = 0.5,
   isOpen = false,
   scrollThreshold = false,
-  onClose = () => {},
+  onClose = doNothing,
 }: UseCardControlsOptions) => {
   const [windowHeight, setWindowHeight] = useState<number>(0)
   const [cardHeight, setCardHeight] = useState<number>(0)
@@ -99,8 +103,8 @@ const useCardControls = ({
 
   const rendererProps = {
     opened,
-    onScroll: scrollThreshold ? onScrollToThreshold : () => {},
-    onWheel: scrollThreshold ? onCloseBeforeScroll : () => {},
+    onScroll: scrollThreshold ? onScrollToThreshold : doNothing,
+    onWheel: scrollThreshold ? onCloseBeforeScroll : doNothing,
   }
 
   const triggerProps = {

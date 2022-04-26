@@ -6,8 +6,7 @@ import { combine }               from '@atls-ui-parts/styles'
 
 import { PaginationShapeStyles } from './shape.interfaces'
 
-const createBaseShapeStyles: styleFn =
-  (
+const createBaseShapeStyles: styleFn = (
     size: number | string,
     margin: number | string,
     borderWidth: number | string,

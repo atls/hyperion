@@ -7,9 +7,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn app library build",
-    "postpack": "rm -rf dist",
-    "prepack": "yarn run build"
+    "build": "yarn library build",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
   },
   "dependencies": {
     "@atls-ui-proto/layout": "workspace:0.0.3",
@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@emotion/styled": "^11.3.0",
-    "@types/react": "^17.0.3",
+    "@types/react": "^18.0.7",
     "react": "^17.0.2"
   },
   "peerDependencies": {

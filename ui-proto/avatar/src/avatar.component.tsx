@@ -1,9 +1,10 @@
-import React             from 'react'
-import { FC }            from 'react'
 import styled            from '@emotion/styled'
 
-import { TextTransform } from '@atls-ui-parts/text-transform'
+import React             from 'react'
+import { FC }            from 'react'
+
 import { ImageBlock }    from '@atls-ui-parts/image'
+import { TextTransform } from '@atls-ui-parts/text-transform'
 
 import { AvatarProps }   from './avatar.interfaces'
 import { baseStyles }    from './avatar.styles'

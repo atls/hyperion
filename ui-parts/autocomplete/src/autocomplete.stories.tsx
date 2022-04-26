@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React            from 'react'
+import { useEffect }    from 'react'
+import { useState }     from 'react'
 
-import { Autocomplete }               from '.'
+import { Autocomplete } from '.'
 
 export default {
   title: 'Компоненты/Выпадающий список/Примеры',
@@ -43,8 +45,7 @@ export const WithInputChange = () => {
     } else {
       setInputOptions(
         options.filter((option) =>
-          option.value.toLowerCase().startsWith(inputValue.toLowerCase())
-        ) as any
+          option.value.toLowerCase().startsWith(inputValue.toLowerCase())) as any
       )
     }
   }, [inputValue])
