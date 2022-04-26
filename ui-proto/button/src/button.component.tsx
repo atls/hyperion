@@ -1,7 +1,8 @@
+import isPropValid       from '@emotion/is-prop-valid'
+import styled            from '@emotion/styled'
+
 import React             from 'react'
 import { FC }            from 'react'
-import styled            from '@emotion/styled'
-import isPropValid       from '@emotion/is-prop-valid'
 
 import { Content }       from '@atls-ui-parts/button'
 

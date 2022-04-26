@@ -1,8 +1,8 @@
 import React                               from 'react'
+import { AnimatePresence }                 from 'framer-motion'
+import { useSelect as useDownshiftSelect } from 'downshift'
 import { useEffect }                       from 'react'
 import { useLayer }                        from 'react-laag'
-import { useSelect as useDownshiftSelect } from 'downshift'
-import { AnimatePresence }                 from 'framer-motion'
 
 import { UseSelectProps }                  from './select.interfaces'
 

@@ -1,8 +1,8 @@
 import { writeFileSync }      from 'fs'
 
+import { ButtonColorSchemes } from '../button-generator.interfaces'
 import { pretty }             from '../utils'
 import { getStylesName }      from '../utils'
-import { ButtonColorSchemes } from '../button-generator.interfaces'
 
 const getAppearanceStylesName = (variant, state) => getStylesName('appearance', variant, state)
 
@@ -20,7 +20,6 @@ export class AppearanceStyleGenerator {
     const states = Object.keys(this.colorSchemes[variant])
     const lines: Array<string> = []
 
-    // eslint-disable-next-line
     for (const state of states) {
       lines.push(`const ${getAppearanceStylesName(variant, state)} = createAppearanceStyles({
         fontColor: prop('theme.colors.button.${variant}.${state}.font'),

@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import { load }      from 'google-fonts-loader'
+import { useEffect } from 'react'
 
 import { fonts }     from './fonts'
 

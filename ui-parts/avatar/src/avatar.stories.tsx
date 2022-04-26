@@ -1,18 +1,19 @@
-import React                         from 'react'
-import styled                        from '@emotion/styled'
-import stringToColor                 from 'string-to-color'
+import styled                     from '@emotion/styled'
 
-import { fontNames, useGoogleFonts } from '@atls/storybook-google-fonts'
+import React                      from 'react'
+import stringToColor              from 'string-to-color'
 
-import { ImageBlock }                from '@atls-ui-parts/image'
-import { ScalableContent }           from '@atls-ui-parts/scalable-content'
-import { TextTransform }             from '@atls-ui-parts/text-transform'
+import { ImageBlock }             from '@atls-ui-parts/image'
+import { ScalableContent }        from '@atls-ui-parts/scalable-content'
+import { TextTransform }          from '@atls-ui-parts/text-transform'
+import { fontNames }              from '@atls/storybook-google-fonts'
+import { useGoogleFonts }         from '@atls/storybook-google-fonts'
 
+import { createAppearanceStyles } from './appearance'
 // @ts-ignore
-import { templates }                 from './avatar.templates'
-import { createBaseStyles }          from './base'
-import { createShapeStyles }         from './shape'
-import { createAppearanceStyles }    from './appearance'
+import { templates }              from './avatar.templates'
+import { createBaseStyles }       from './base'
+import { createShapeStyles }      from './shape'
 
 export default {
   title: 'Components/Avatar',

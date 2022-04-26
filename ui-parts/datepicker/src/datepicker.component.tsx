@@ -1,12 +1,12 @@
 import React                               from 'react'
+import DatepickerComponent                 from 'react-datepicker'
 import { FC }                              from 'react'
 import { useEffect }                       from 'react'
-import DatepickerComponent                 from 'react-datepicker'
 import { setDefaultLocale }                from 'react-datepicker'
 
+import { DatepickerProps }                 from './datepicker.interface'
 import { registerLocales }                 from './locales'
 import { createAndInjectDatepickerStyles } from './styles'
-import { DatepickerProps }                 from './datepicker.interface'
 
 const Datepicker: FC<DatepickerProps> = (props) => {
   useEffect(() => {

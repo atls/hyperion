@@ -1,9 +1,13 @@
-import styled                  from '@emotion/styled'
-import React, { useState }     from 'react'
+import styled       from '@emotion/styled'
 
-import { Column, Layout, Row } from '@atls-ui-parts/layout'
+import React        from 'react'
+import { useState } from 'react'
 
-import { Tooltip }             from './tooltip.component'
+import { Column }   from '@atls-ui-parts/layout'
+import { Layout }   from '@atls-ui-parts/layout'
+import { Row }      from '@atls-ui-parts/layout'
+
+import { Tooltip }  from './tooltip.component'
 
 export default {
   title: 'Components/Tooltip',

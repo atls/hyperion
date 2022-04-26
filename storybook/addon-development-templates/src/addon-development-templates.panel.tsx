@@ -1,8 +1,9 @@
-import React                 from 'react'
 import { SyntaxHighlighter } from '@storybook/components'
 import { ScrollArea }        from '@storybook/components'
 import { useParameter }      from '@storybook/api'
 import { useArgs }           from '@storybook/api'
+
+import React                 from 'react'
 
 import { PARAM_KEY }         from './addon-development-templates.contants'
 

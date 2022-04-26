@@ -1,14 +1,17 @@
-import React, { FunctionComponent, useRef } from 'react'
+import React                 from 'react'
+import { FunctionComponent } from 'react'
+import { useRef }            from 'react'
 
-import { Switch }                           from '@atls-ui-parts/switch'
+import { Switch }            from '@atls-ui-parts/switch'
 
-import { Container }                        from './container'
-import { Expander }                         from './expander'
-import { Items }                            from './items'
-import { Pinner }                           from './pinner'
-import { SidebarProps }                     from './sidebar.interfaces'
-import { Wrapper }                          from './wrapper'
-import { useHover, usePinnedState }         from './hooks'
+import { Container }         from './container'
+import { Expander }          from './expander'
+import { Items }             from './items'
+import { Pinner }            from './pinner'
+import { SidebarProps }      from './sidebar.interfaces'
+import { Wrapper }           from './wrapper'
+import { useHover }          from './hooks'
+import { usePinnedState }    from './hooks'
 
 const Sidebar: FunctionComponent<SidebarProps> = ({ children }) => {
   const node = useRef<HTMLDivElement>(null)

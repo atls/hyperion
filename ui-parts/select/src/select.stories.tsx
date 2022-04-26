@@ -1,11 +1,12 @@
-import React              from 'react'
-import { useState }       from 'react'
-import { motion }         from 'framer-motion'
 import styled             from '@emotion/styled'
-import { nanoid }         from 'nanoid'
 
-import { baseMenuStyles } from './menu'
+import React              from 'react'
+import { motion }         from 'framer-motion'
+import { nanoid }         from 'nanoid'
+import { useState }       from 'react'
+
 import { baseItemStyles } from './item'
+import { baseMenuStyles } from './menu'
 import { useSelect }      from './use-select.hook'
 
 export default { title: 'Components/Select' }

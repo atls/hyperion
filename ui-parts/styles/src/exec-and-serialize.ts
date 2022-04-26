@@ -1,7 +1,6 @@
 import { styleFn } from 'styled-system'
 
-export const execAndSerialize =
-  (target: styleFn): styleFn =>
+export const execAndSerialize = (target: styleFn): styleFn =>
   (props) => {
     const current = target(props) || {}
     const result = {}

@@ -18,7 +18,6 @@ const svgrTemplate = ({ template }, opts, { componentName, jsx }) => {
   return typeScriptTpl.ast`
 import React from 'react'
 import { Icon, IconProps } from '@atls-ui-admin/icon'
-
 export const ${componentName.name} = (props: IconProps) => ${jsx}
 ${componentName.name}.displayName = '${componentName.name}'
 `
@@ -58,10 +57,10 @@ const save = async (sources) =>
       fs.writeFileAsync(
         path.join(TARGET_DIR, `${source.filename}.tsx`),
         // @ts-ignore
-        `/* eslint-disable */\n${prettier.format(replaceElement(source.code), {
+        prettier.format(replaceElement(source.code), {
           parser: 'babel',
           ...prettierConfig,
-        })}`
+        }).replaceAll('{\'', '').replaceAll('\'}', '')
       )
     )
   )
@@ -69,9 +68,9 @@ const save = async (sources) =>
 const createIndex = (sources) =>
   fs.writeFileAsync(
     path.join(TARGET_DIR, 'index.ts'),
-    `/* eslint-disable */\n${sources
+    sources
       .map((source) => `export * from './${source.filename}'`)
-      .join('\n')}`
+      .join('\n')
   )
 
 const build = async () => {

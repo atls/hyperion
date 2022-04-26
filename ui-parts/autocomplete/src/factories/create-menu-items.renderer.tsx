@@ -1,7 +1,6 @@
 import React from 'react'
 
-const createMenuItemsRenderer =
-  (MenuItem) =>
+const createMenuItemsRenderer = (MenuItem) =>
   ({ getItemProps, highlightedIndex, selectedItem, items, getOptionLabel }) =>
     items.map((item, index) => (
       <MenuItem

@@ -1,10 +1,8 @@
-import React                  from 'react'
-import { FC }                 from 'react'
 import { ReactElement }       from 'react'
 
 import { TextTransformProps } from './text-transform.interfaces'
 
-export const TextTransform: FC<TextTransformProps> = ({ children, ...props }) => {
+export const TextTransform = ({ children, ...props }: TextTransformProps): ReactElement<any, any> => {
   try {
     const transformed = Object.keys(props).reduce((result, key) => {
       const args = props[key]
@@ -27,12 +25,12 @@ export const TextTransform: FC<TextTransformProps> = ({ children, ...props }) =>
       }
     }, children)
 
-    return <>{transformed}</>
+    return transformed as any
   } catch (error) {
     if (process.env.NODE_ENV !== 'production') {
       throw error
     }
 
-    return children as ReactElement
+    return children as any
   }
 }

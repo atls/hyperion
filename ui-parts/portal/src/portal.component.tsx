@@ -22,6 +22,7 @@ const Portal: FunctionComponent = ({ children }) => {
     }
   }, [portal])
 
+  // @ts-ignore
   return createPortal(children, portal.current)
 }
 

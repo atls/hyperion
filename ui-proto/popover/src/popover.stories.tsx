@@ -1,9 +1,12 @@
-import styled              from '@emotion/styled'
-import React, { useState } from 'react'
+import styled       from '@emotion/styled'
 
-import { Column, Layout }  from '@atls-ui-parts/layout'
+import React        from 'react'
+import { useState } from 'react'
 
-import { Popover }         from './popover.component'
+import { Column }   from '@atls-ui-parts/layout'
+import { Layout }   from '@atls-ui-parts/layout'
+
+import { Popover }  from './popover.component'
 
 export default {
   title: 'Components/Popover',
