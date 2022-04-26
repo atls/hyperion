@@ -471,6 +471,45 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@atlantis-lab/prettier-config", [\
+        ["npm:0.1.12", {\
+          "packageLocation": "./.yarn/cache/@atlantis-lab-prettier-config-npm-0.1.12-8b53e2b0e4-15b4311ae2.zip/node_modules/@atlantis-lab/prettier-config/",\
+          "packageDependencies": [\
+            ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
+            ["@atlantis-lab/prettier-plugin-import-sort", "virtual:8b53e2b0e4cef7e7387fad8660224788223feebd97be4dff952dfb4b0cb329169436b70b71c97479dec2caccc7539a0f8d70e827d9cc764427fc470f90ee0ccb#npm:0.1.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@atlantis-lab/prettier-plugin-import-sort", [\
+        ["npm:0.1.12", {\
+          "packageLocation": "./.yarn/cache/@atlantis-lab-prettier-plugin-import-sort-npm-0.1.12-9e4c22beb5-ce0b726361.zip/node_modules/@atlantis-lab/prettier-plugin-import-sort/",\
+          "packageDependencies": [\
+            ["@atlantis-lab/prettier-plugin-import-sort", "npm:0.1.12"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:8b53e2b0e4cef7e7387fad8660224788223feebd97be4dff952dfb4b0cb329169436b70b71c97479dec2caccc7539a0f8d70e827d9cc764427fc470f90ee0ccb#npm:0.1.12", {\
+          "packageLocation": "./.yarn/__virtual__/@atlantis-lab-prettier-plugin-import-sort-virtual-1e9db2816d/0/cache/@atlantis-lab-prettier-plugin-import-sort-npm-0.1.12-9e4c22beb5-ce0b726361.zip/node_modules/@atlantis-lab/prettier-plugin-import-sort/",\
+          "packageDependencies": [\
+            ["@atlantis-lab/prettier-plugin-import-sort", "virtual:8b53e2b0e4cef7e7387fad8660224788223feebd97be4dff952dfb4b0cb329169436b70b71c97479dec2caccc7539a0f8d70e827d9cc764427fc470f90ee0ccb#npm:0.1.12"],\
+            ["@types/globby", null],\
+            ["@types/prettier", null],\
+            ["globby", null],\
+            ["import-sort", "npm:6.0.0"],\
+            ["import-sort-parser-typescript", "npm:6.0.0"],\
+            ["import-sort-style", "npm:6.0.0"],\
+            ["prettier", null]\
+          ],\
+          "packagePeers": [\
+            "@types/globby",\
+            "@types/prettier",\
+            "globby",\
+            "prettier"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@atlantis-lab/tsconfig", [\
         ["npm:0.1.12", {\
           "packageLocation": "./.yarn/cache/@atlantis-lab-tsconfig-npm-0.1.12-19f68cd86e-9f27b5e167.zip/node_modules/@atlantis-lab/tsconfig/",\
@@ -637,11 +676,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@atls-ui-admin-icons-virtual-ef8f991c6c/1/ui-admin/icons/",\
           "packageDependencies": [\
             ["@atls-ui-admin/icons", "virtual:ecc6b1bbaecda01b4876fa1e192199007fc275ac98b826098f5b047b9f5e5078bc2e874010bd031f331dc7f74a04d19db38a9dc54b7d146b32d9430495098e39#workspace:ui-admin/icons"],\
-            ["@atlantis-lab/prettier-config", null],\
+            ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
             ["@atlantis-lab/tsconfig", "npm:0.1.12"],\
             ["@atls-ui-admin/icon", "virtual:ecc6b1bbaecda01b4876fa1e192199007fc275ac98b826098f5b047b9f5e5078bc2e874010bd031f331dc7f74a04d19db38a9dc54b7d146b32d9430495098e39#workspace:ui-admin/icon"],\
-            ["@atls/config-prettier", "npm:0.0.3"],\
-            ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/styled", "virtual:ecc6b1bbaecda01b4876fa1e192199007fc275ac98b826098f5b047b9f5e5078bc2e874010bd031f331dc7f74a04d19db38a9dc54b7d146b32d9430495098e39#npm:11.3.0"],\
             ["@svgr/core", "npm:5.4.0"],\
             ["@testing-library/react", "virtual:ecc6b1bbaecda01b4876fa1e192199007fc275ac98b826098f5b047b9f5e5078bc2e874010bd031f331dc7f74a04d19db38a9dc54b7d146b32d9430495098e39#npm:10.4.9"],\
@@ -664,7 +701,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"]\
           ],\
           "packagePeers": [\
-            "@atlantis-lab/prettier-config",\
             "@atls-ui-admin/icon",\
             "@emotion/styled",\
             "@types/atlantis-lab__prettier-config",\
@@ -684,10 +720,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./ui-admin/icons/",\
           "packageDependencies": [\
             ["@atls-ui-admin/icons", "workspace:ui-admin/icons"],\
+            ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
             ["@atlantis-lab/tsconfig", "npm:0.1.12"],\
             ["@atls-ui-admin/icon", "virtual:8abd482360ef540236bb22f7f640d838feaf62f3c0611c27cb08b87169f5fba58928d4fb96fbf3710d32e2d87fd7503456789a58c4b25b6508d2255b10341dd0#workspace:ui-admin/icon"],\
-            ["@atls/config-prettier", "npm:0.0.3"],\
-            ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@svgr/core", "npm:5.4.0"],\
             ["@testing-library/react", "virtual:8eb691db84fd68975b95c7b7751e750446f82576951f5264566adefecbbef8688299b9be5a741e618cd4e5792a084b105995a5c92b7bd7f7d69bde2692db614b#npm:10.4.9"],\
             ["@types/prettier", "npm:2.3.2"],\

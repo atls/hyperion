@@ -103,6 +103,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atlantis-lab/prettier-config@npm:^0.1.12":
+  version: 0.1.12
+  resolution: "@atlantis-lab/prettier-config@npm:0.1.12"
+  dependencies:
+    "@atlantis-lab/prettier-plugin-import-sort": 0.1.12
+  checksum: 15b4311ae243c27f71a48bf0dbe5319ac41c407ce88405865beb7a77af1557d9f1111a14af701234fe9c4552142cc10cf0bfde657f58ed2793e14575e67a6a9b
+  languageName: node
+  linkType: hard
+
+"@atlantis-lab/prettier-plugin-import-sort@npm:0.1.12":
+  version: 0.1.12
+  resolution: "@atlantis-lab/prettier-plugin-import-sort@npm:0.1.12"
+  dependencies:
+    import-sort: ^6.0.0
+    import-sort-parser-typescript: ^6.0.0
+    import-sort-style: ^6.0.0
+  peerDependencies:
+    globby: "*"
+    prettier: "*"
+  checksum: ce0b726361b4f0027793505b866aac02b968df3bd76623ecc1c3a663cf377869cbc8eb15d894f9d0e280131086208f49bfcd1dc819dbe10736becf9142c3ac37
+  languageName: node
+  linkType: hard
+
 "@atlantis-lab/tsconfig@npm:^0.1.12":
   version: 0.1.12
   resolution: "@atlantis-lab/tsconfig@npm:0.1.12"
@@ -186,10 +209,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/icons@workspace:ui-admin/icons"
   dependencies:
+    "@atlantis-lab/prettier-config": ^0.1.12
     "@atlantis-lab/tsconfig": ^0.1.12
     "@atls-ui-admin/icon": "workspace:0.0.3"
-    "@atls/config-prettier": ^0.0.3
-    "@atls/prettier-plugin": ^0.0.3
     "@svgr/core": 5.4.0
     "@testing-library/react": 9.5.0
     "@types/prettier": ^2

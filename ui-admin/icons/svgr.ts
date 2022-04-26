@@ -1,28 +1,26 @@
-import * as prettierPlugin from '@atls/prettier-plugin'
+import prettierConfig   from '@atlantis-lab/prettier-config'
+import svgr             from '@svgr/core'
+import camelcase        from 'camelcase'
+import fs               from 'fs-extra-promise'
+import glob             from 'glob-promise'
+import path             from 'path'
+import prettier         from 'prettier'
 
-import prettierConfig      from '@atls/config-prettier'
-import svgr                from '@svgr/core'
-
-import camelcase           from 'camelcase'
-import fs                  from 'fs-extra-promise'
-import glob                from 'glob-promise'
-import path                from 'path'
-import parserBabel         from 'prettier/parser-babel'
-import parserTypescript    from 'prettier/parser-typescript'
-import { format }          from 'prettier/standalone'
-
-import { replacements }    from './replacements'
+import { replacements } from './replacements'
 
 const TARGET_DIR = path.join(__dirname, 'src')
+
+const replaceElement = (code: string) => code.replace('<svg', '<Icon').replace('</svg', '</Icon')
 
 const svgrTemplate = ({ template }, opts, { componentName, jsx }) => {
   const typeScriptTpl = template.smart({ plugins: ['typescript', 'prettier'] })
 
   return typeScriptTpl.ast`
- import React from 'react'
-
-    export const ${componentName} = (props) => ${jsx}
-  `
+import React from 'react'
+import { Icon, IconProps } from '@atls-ui-admin/icon'
+export const ${componentName.name} = (props: IconProps) => ${jsx}
+${componentName.name}.displayName = '${componentName.name}'
+`
 }
 
 const read = (files) =>
@@ -30,7 +28,8 @@ const read = (files) =>
     files.map(async (iconPath) => ({
       name: `${camelcase(path.basename(iconPath, path.extname(iconPath)), {
         pascalCase: true,
-      }).replace('50+', 'FiftyPlus')}Icon`,
+      })}Icon`,
+      filename: `${path.basename(iconPath, path.extname(iconPath))}.icon`,
       source: (await fs.readFileAsync(iconPath)).toString(),
     }))
   )
@@ -38,6 +37,7 @@ const read = (files) =>
 const compile = (icons) =>
   Promise.all(
     icons.map(async (icon) => ({
+      filename: icon.filename,
       name: icon.name,
       code: await svgr(
         icon.source.replace(/mask0/g, icon.name),
@@ -46,7 +46,7 @@ const compile = (icons) =>
           template: svgrTemplate,
           replaceAttrValues: replacements[icon.name] || {},
         },
-        { componentName: icon.name.replace('50+', 'FiftyPlus') }
+        { componentName: icon.name }
       ),
     }))
   )
@@ -55,20 +55,22 @@ const save = async (sources) =>
   Promise.all(
     sources.map((source) =>
       fs.writeFileAsync(
-        path.join(TARGET_DIR, `${source.name}.tsx`),
+        path.join(TARGET_DIR, `${source.filename}.tsx`),
         // @ts-ignore
-        format(`/* eslint-disable */\n${source.code}`, {
+        prettier.format(replaceElement(source.code), {
+          parser: 'babel',
           ...prettierConfig,
-          filepath: path.join(TARGET_DIR, `${source.name}.tsx`),
-          plugins: [parserTypescript, parserBabel, prettierPlugin],
-        })
-      ))
+        }).replaceAll('{\'', '').replaceAll('\'}', '')
+      )
+    )
   )
 
 const createIndex = (sources) =>
   fs.writeFileAsync(
     path.join(TARGET_DIR, 'index.ts'),
-    `${sources.map((source) => `export * from './${source.name}'`).join('\n')}\n`
+    sources
+      .map((source) => `export * from './${source.filename}'`)
+      .join('\n')
   )
 
 const build = async () => {
