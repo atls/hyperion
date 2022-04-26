@@ -8222,17 +8222,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/webpack-env@npm:*":
+"@types/webpack-env@npm:1.16.4":
   version: 1.16.4
   resolution: "@types/webpack-env@npm:1.16.4"
   checksum: 97554238364dae6b7369f9e6d409c7eab4b0235f99b16c69e7458afbb9c29cde128b3fd3a79a14b9bbb8b09d9f0ba377b51cc040f0a2bd2c8eddaf22657136be
-  languageName: node
-  linkType: hard
-
-"@types/webpack-env@npm:^1.16.0":
-  version: 1.16.0
-  resolution: "@types/webpack-env@npm:1.16.0"
-  checksum: 9d23191e48a6de17931685140aea701c8cf04f518ce20fc095085a2552bd2a7a4fd566060658e6c51306a5d0ceb0cb430057872a432707c61159340413d1f8b1
   languageName: node
   linkType: hard
 
