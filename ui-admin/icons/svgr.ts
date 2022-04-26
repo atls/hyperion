@@ -1,5 +1,6 @@
 import prettierConfig   from '@atlantis-lab/prettier-config'
 import svgr             from '@svgr/core'
+
 import camelcase        from 'camelcase'
 import fs               from 'fs-extra-promise'
 import glob             from 'glob-promise'
@@ -57,20 +58,21 @@ const save = async (sources) =>
       fs.writeFileAsync(
         path.join(TARGET_DIR, `${source.filename}.tsx`),
         // @ts-ignore
-        prettier.format(replaceElement(source.code), {
-          parser: 'babel',
-          ...prettierConfig,
-        }).replaceAll('{\'', '').replaceAll('\'}', '')
-      )
-    )
+        prettier
+          // @ts-ignore
+          .format(replaceElement(source.code), {
+            parser: 'babel',
+            ...prettierConfig,
+          })
+          .replaceAll("{'", '')
+          .replaceAll("'}", '')
+      ))
   )
 
 const createIndex = (sources) =>
   fs.writeFileAsync(
     path.join(TARGET_DIR, 'index.ts'),
-    sources
-      .map((source) => `export * from './${source.filename}'`)
-      .join('\n')
+    sources.map((source) => `export * from './${source.filename}'`).join('\n')
   )
 
 const build = async () => {

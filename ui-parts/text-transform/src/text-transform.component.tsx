@@ -2,7 +2,10 @@ import { ReactElement }       from 'react'
 
 import { TextTransformProps } from './text-transform.interfaces'
 
-export const TextTransform = ({ children, ...props }: TextTransformProps): ReactElement<any, any> => {
+export const TextTransform = ({
+  children,
+  ...props
+}: TextTransformProps): ReactElement<any, any> => {
   try {
     const transformed = Object.keys(props).reduce((result, key) => {
       const args = props[key]

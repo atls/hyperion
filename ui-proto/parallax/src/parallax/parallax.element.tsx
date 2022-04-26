@@ -1,5 +1,4 @@
 import styled                from '@emotion/styled'
-import { useWindowSize }     from '@atls-ui-parts/dom'
 
 import React                 from 'react'
 import { useViewportScroll } from 'framer-motion'
@@ -7,6 +6,8 @@ import { useElementScroll }  from 'framer-motion'
 import { useMemo }           from 'react'
 import { useRef }            from 'react'
 import { useEffect }         from 'react'
+
+import { useWindowSize }     from '@atls-ui-parts/dom'
 
 import { ParallaxStore }     from '../context'
 import { Provider }          from '../context'
