@@ -1,5 +1,6 @@
-import React                                      from 'react'
-import { ToggleLayer as BaseToggleLayer, anchor } from 'react-laag'
+import React                              from 'react'
+import { ToggleLayer as BaseToggleLayer } from 'react-laag'
+import { anchor }                         from 'react-laag'
 
 const ToggleLayer = (props) => <BaseToggleLayer {...props} />
 

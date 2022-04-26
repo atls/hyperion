@@ -1,4 +1,5 @@
-import { ADDON_ID, PANEL_ID } from './addon-development-templates.contants'
+import { ADDON_ID } from './addon-development-templates.contants'
+import { PANEL_ID } from './addon-development-templates.contants'
 
 export { ADDON_ID, PANEL_ID }
 

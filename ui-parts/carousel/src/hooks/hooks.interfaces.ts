@@ -1,5 +1,7 @@
-import { ReactNode, RefObject, ReactElement } from 'react'
-import { MotionProps }                        from 'framer-motion'
+import { MotionProps }  from 'framer-motion'
+import { ReactElement } from 'react'
+import { ReactNode }    from 'react'
+import { RefObject }    from 'react'
 
 export type CarouselDirectionType = 'horizontal' | 'vertical'
 export type SlydeToTwoIndexesArrayType = {

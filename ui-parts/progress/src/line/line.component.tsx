@@ -1,7 +1,8 @@
+import { useTheme }          from '@emotion/react'
+
 import React                 from 'react'
 import { FunctionComponent } from 'react'
 import { useState }          from 'react'
-import { useTheme }          from '@emotion/react'
 
 import { LineContainer }     from '../line-container'
 import { LinePercent }       from '../line-percent'

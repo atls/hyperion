@@ -1,9 +1,9 @@
 import { injectGlobal }               from '@emotion/css'
 
-import { createInjectableBaseStyles } from './base'
-import { createAppearanceStyles }     from './appearance'
-import { createShapeStyles }          from './shape'
 import { DatepickerStyles }           from './datepicker-styles.interfaces'
+import { createAppearanceStyles }     from './appearance'
+import { createInjectableBaseStyles } from './base'
+import { createShapeStyles }          from './shape'
 
 export const injectBaseStyles = createInjectableBaseStyles()
 

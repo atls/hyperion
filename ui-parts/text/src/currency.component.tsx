@@ -1,9 +1,10 @@
-import React             from 'react'
-import { FC }            from 'react'
 import styled            from '@emotion/styled'
 
-import { Text }          from './text.component'
+import React             from 'react'
+import { FC }            from 'react'
+
 import { CurrencyProps } from './currency.interface'
+import { Text }          from './text.component'
 
 const CurrencyChildren: FC<CurrencyProps> = ({
   amount,

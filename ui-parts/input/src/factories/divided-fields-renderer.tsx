@@ -1,7 +1,12 @@
 import React from 'react'
 
-const createDividedFieldsRenderer =
-  ({ FieldAddon, FieldAddonsContainer, DividerContainer, divider }) =>
+const createDividedFieldsRenderer = ({
+    FieldAddon,
+    FieldAddonsContainer,
+    DividerContainer,
+    divider,
+  }) =>
+  // eslint-disable-next-line
   ({ children }) =>
     (
       <FieldAddonsContainer>

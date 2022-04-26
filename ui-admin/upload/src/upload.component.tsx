@@ -1,9 +1,13 @@
-import React, { Children, cloneElement, useEffect } from 'react'
-import { useUpload }                                from '@monstrs/react-upload'
-import { useDropzone }                              from 'react-dropzone'
+import { useUpload }    from '@monstrs/react-upload'
 
-import { Container }                                from './container.component'
-import { Placeholder }                              from './placeholder.component'
+import React            from 'react'
+import { Children }     from 'react'
+import { cloneElement } from 'react'
+import { useEffect }    from 'react'
+import { useDropzone }  from 'react-dropzone'
+
+import { Container }    from './container.component'
+import { Placeholder }  from './placeholder.component'
 
 const Upload: any = ({
   children,
@@ -48,6 +52,7 @@ const Upload: any = ({
   const content = [
     children.props && children.props.children ? children.props.children : null,
     placeholder ? <Placeholder key='placeholder'>{placeholder}</Placeholder> : null,
+    // @ts-ignore
     <input key='input' {...getInputProps()} />,
   ]
 

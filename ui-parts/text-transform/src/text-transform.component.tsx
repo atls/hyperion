@@ -1,4 +1,3 @@
-import React                  from 'react'
 import { FC }                 from 'react'
 import { ReactElement }       from 'react'
 
@@ -27,7 +26,7 @@ export const TextTransform: FC<TextTransformProps> = ({ children, ...props }) =>
       }
     }, children)
 
-    return <>{transformed}</>
+    return transformed
   } catch (error) {
     if (process.env.NODE_ENV !== 'production') {
       throw error

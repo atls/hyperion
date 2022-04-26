@@ -1,26 +1,7 @@
 {
   "name": "ui",
-  "license": "BSD 3-Clause",
   "private": true,
-  "scripts": {
-    "postinstall": "yarn workspace @atls-ui-admin/icons build-icons"
-  },
-  "devDependencies": {
-    "@atls/code-service": "^0.0.12",
-    "@atls/config-jest": "^0.0.4",
-    "@atls/schematics": "^0.0.10",
-    "@jest/core": "^27.4.5",
-    "@types/eslint": "^8.2.1",
-    "@types/glob": "^7",
-    "@types/node": "^17.0.0",
-    "@types/react": "^17.0.37",
-    "eslint": "^8.4.1",
-    "husky": "^7.0.2",
-    "typescript": "^4.5.4"
-  },
-  "resolutions": {
-    "typescript": "^4.4.4"
-  },
+  "license": "BSD 3-Clause",
   "workspaces": [
     "generators/*",
     "storybook/*",
@@ -29,7 +10,28 @@
     "ui-proto/*",
     "ui/*"
   ],
+  "scripts": {
+    "postinstall": "yarn workspace @atls-ui-admin/icons build-icons"
+  },
+  "resolutions": {
+    "@types/react": "17",
+    "typescript": "^4.4.4"
+  },
   "dependencies": {
     "glob": "^7.2.0"
+  },
+  "devDependencies": {
+    "@atls/code-service": "0.0.10",
+    "@atls/config-jest": "^0.0.2",
+    "@atls/schematics": "^0.0.10",
+    "@jest/core": "^27.4.5",
+    "@types/eslint": "^8",
+    "@types/glob": "^7",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.10",
+    "@types/react": "^17.0.37",
+    "eslint": "^8.4.1",
+    "husky": "7.0.2",
+    "typescript": "^4.4.4"
   }
 }

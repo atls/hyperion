@@ -8,8 +8,8 @@
   ],
   "scripts": {
     "build": "yarn app library build",
-    "postpack": "rm -rf dist",
-    "prepack": "yarn run build"
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
   },
   "dependencies": {
     "@atls-ui-parts/layout": "workspace:0.0.3"

@@ -1,8 +1,10 @@
-import React                                     from 'react'
-import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
-
 import * as dark                                 from './dark'
 import * as light                                from './light'
+
+import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
+
+import React                                     from 'react'
+
 import { ThemeModeProvider }                     from './mode'
 import { ThemeModeStore }                        from './mode'
 import { useThemeMode }                          from './mode'

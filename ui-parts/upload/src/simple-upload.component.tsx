@@ -1,11 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
-import React            from 'react'
-import { cloneElement } from 'react'
-import { ReactElement } from 'react'
-import { useEffect }    from 'react'
-import { FC }           from 'react'
 import { useUpload }    from '@atls/react-upload'
+
+import React            from 'react'
+import { ReactElement } from 'react'
+import { FC }           from 'react'
+import { cloneElement } from 'react'
+import { useEffect }    from 'react'
 import { useDropzone }  from 'react-dropzone'
 
 export interface UploadResult {

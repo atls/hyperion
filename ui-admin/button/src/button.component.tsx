@@ -1,6 +1,7 @@
+import styled            from '@emotion/styled'
+
 import React             from 'react'
 import { FC }            from 'react'
-import styled            from '@emotion/styled'
 
 import { Content }       from '@atls-ui-parts/button'
 import { ButtonProps }   from '@atls-ui-parts/button'

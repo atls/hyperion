@@ -1,8 +1,8 @@
 import React               from 'react'
 import { AnimatePresence } from 'framer-motion'
 
-const createLayerRenderer =
-  (Layer) =>
+const createLayerRenderer = (Layer) =>
+  // eslint-disable-next-line
   ({ isOpen, layerProps, triggerRect, children }) =>
     (
       <AnimatePresence>

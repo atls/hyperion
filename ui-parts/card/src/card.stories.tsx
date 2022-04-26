@@ -1,13 +1,14 @@
-import React                          from 'react'
 import styled                         from '@emotion/styled'
+
+import React                          from 'react'
 
 import { Box }                        from '@atls-ui-parts/layout'
 import { Column }                     from '@atls-ui-parts/layout'
 
-import { useCardControls }            from './animation'
 import { Backdrop }                   from './backdrop'
 import { Container as BaseContainer } from './container'
 import { Renderer }                   from './renderer'
+import { useCardControls }            from './animation'
 
 export default {
   title: 'Components/Card',

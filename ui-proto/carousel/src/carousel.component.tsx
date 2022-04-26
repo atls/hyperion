@@ -8,11 +8,11 @@ import { useAddonNavigation }    from '@atls-ui-parts/carousel'
 import { useAddonPagination }    from '@atls-ui-parts/carousel'
 import { useCarousel }           from '@atls-ui-parts/carousel'
 
+import { Container }             from './container.component'
 import { Navigation }            from './navigation.component'
 import { Pagination }            from './pagination.component'
-import { Container }             from './container.component'
-import { Wrapper }               from './wrapper.component'
 import { Slide }                 from './slide.component'
+import { Wrapper }               from './wrapper.component'
 
 export const Carousel = ({
   children,

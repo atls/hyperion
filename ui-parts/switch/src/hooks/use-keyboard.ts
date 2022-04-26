@@ -1,4 +1,5 @@
-import { RefObject, useEffect } from 'react'
+import { RefObject } from 'react'
+import { useEffect } from 'react'
 
 export const useKeyboard = (node: RefObject<HTMLButtonElement>, setChecked) => {
   useEffect(() => {

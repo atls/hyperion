@@ -1,9 +1,11 @@
-import React, { FunctionComponent, useRef } from 'react'
+import React                 from 'react'
+import { FunctionComponent } from 'react'
+import { useRef }            from 'react'
 
-import { Handle }                           from './handle'
-import { SwitchProps }                      from './switch.interfaces'
-import { Thumb }                            from './thumb'
-import { useSwitch }                        from './hooks'
+import { Handle }            from './handle'
+import { SwitchProps }       from './switch.interfaces'
+import { Thumb }             from './thumb'
+import { useSwitch }         from './hooks'
 
 const Switch: FunctionComponent<SwitchProps> = ({ disabled, checked: defaultValue, onChange }) => {
   const node = useRef<HTMLButtonElement>(null)

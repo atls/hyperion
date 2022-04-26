@@ -1,10 +1,15 @@
 /* eslint-disable no-param-reassign */
 
-import React, { FunctionComponent, useState }    from 'react'
-import { useTheme }                              from '@emotion/react'
+import { useTheme }          from '@emotion/react'
 
-import { CircleProps }                           from './circle.interfaces'
-import { getGradientId, getPathStyles, toArray } from './utils'
+import React                 from 'react'
+import { FunctionComponent } from 'react'
+import { useState }          from 'react'
+
+import { CircleProps }       from './circle.interfaces'
+import { getGradientId }     from './utils'
+import { getPathStyles }     from './utils'
+import { toArray }           from './utils'
 
 const Circle: FunctionComponent<CircleProps> = ({
   strokeWeight = 6,

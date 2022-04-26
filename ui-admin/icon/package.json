@@ -8,8 +8,8 @@
   ],
   "scripts": {
     "build": "yarn app library build",
-    "postpack": "rm -rf dist",
-    "prepack": "yarn run build"
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
   },
   "devDependencies": {
     "@admui/theme": "0.4.14",
@@ -23,11 +23,6 @@
     "styled-tools": "^1.7.2",
     "typescript": "3.9.7"
   },
-  "publishConfig": {
-    "access": "public",
-    "main": "dist/index.js",
-    "typings": "dist/index.d.ts"
-  },
   "peerDependencies": {
     "@emotion/css": "*",
     "@emotion/react": "*",
@@ -35,5 +30,10 @@
     "react": "*",
     "styled-system": "*",
     "styled-tools": "*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
   }
 }

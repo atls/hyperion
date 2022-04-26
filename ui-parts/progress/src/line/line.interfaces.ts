@@ -1,4 +1,5 @@
-import { ProgressGradient, ProgressLinecap } from '../progress.interfaces'
+import { ProgressGradient } from '../progress.interfaces'
+import { ProgressLinecap }  from '../progress.interfaces'
 
 export interface LineProps {
   percent: number | Array<number>

@@ -5,8 +5,8 @@ import { combine }                    from '@atls-ui-parts/styles'
 
 import { NavigationAppearanceStyles } from './appearance.interfaces'
 
-const createColorStyles: styleFn =
-  (color: string, backgroundColor: string, borderColor: string) => () => ({
+const createColorStyles: styleFn = (color: string, backgroundColor: string, borderColor: string) =>
+  () => ({
     backgroundColor,
     borderColor,
     color,
