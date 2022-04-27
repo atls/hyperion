@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/divider",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/layout": "workspace:0.0.3"
+    "@atls-ui-parts/layout": "workspace:0.0.4"
   },
   "devDependencies": {
     "@emotion/styled": "^11.3.0",

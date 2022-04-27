@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/progress",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,8 +12,8 @@
     "postpack": "rm -rf dist"
   },
   "devDependencies": {
-    "@atls-ui-parts/layout": "workspace:0.0.3",
-    "@atls-ui-proto/button": "workspace:0.0.5",
+    "@atls-ui-parts/layout": "workspace:0.0.4",
+    "@atls-ui-proto/button": "workspace:0.0.6",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@testing-library/react": "10.4.7",

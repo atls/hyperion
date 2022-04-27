@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/carousel",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "BSD 3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/carousel": "workspace:0.0.2",
+    "@atls-ui-parts/carousel": "workspace:0.0.3",
     "framer-motion": "^4.1.7"
   },
   "devDependencies": {

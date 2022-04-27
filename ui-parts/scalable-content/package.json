@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/scalable-content",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/dom": "workspace:0.0.1"
+    "@atls-ui-parts/dom": "workspace:0.0.2"
   },
   "devDependencies": {
     "@emotion/styled": "^11.3.0",
