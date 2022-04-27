@@ -1086,6 +1086,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/theme@workspace:ui-proto/theme"
   dependencies:
+    "@emotion/css": ^11.9.0
     "@emotion/react": ^11.1.5
     "@types/node": ^14.14.41
     "@types/react": ^18.0.7
@@ -4198,6 +4199,24 @@ __metadata:
     "@babel/core":
       optional: true
   checksum: ac1f56656f33bdb6539cb4ca941532d8a155167296acdc7d0f820e1a4c679cee59f4b3456e79e1c1f6a493a1f7c6c62fb6ae29a56a51a0bf531374f9b2838967
+  languageName: node
+  linkType: hard
+
+"@emotion/css@npm:^11.9.0":
+  version: 11.9.0
+  resolution: "@emotion/css@npm:11.9.0"
+  dependencies:
+    "@emotion/babel-plugin": ^11.7.1
+    "@emotion/cache": ^11.7.1
+    "@emotion/serialize": ^1.0.3
+    "@emotion/sheet": ^1.0.3
+    "@emotion/utils": ^1.0.0
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+  checksum: bd83d9af5cf87b82992dea030b5c7db9cc26f8fee508fc8c20257bc040d35b0cc595143c5c8e3f5d6719351f3ae1c53b152899c22b60a2a5ff37d3439304401e
   languageName: node
   linkType: hard
 
