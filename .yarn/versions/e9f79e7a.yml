@@ -1,0 +1,18 @@
+releases:
+  "@atls-ui-admin/icon": patch
+  "@atls-ui-admin/icons": patch
+  "@atls-ui-admin/upload": patch
+  "@atls-ui-parts/autocomplete": patch
+  "@atls-ui-parts/avatar": patch
+  "@atls-ui-parts/datepicker": patch
+  "@atls-ui-parts/input": patch
+  "@atls-ui-parts/link": patch
+  "@atls-ui-parts/text": patch
+  "@atls-ui-parts/text-transform": patch
+  "@atls-ui-parts/upload": patch
+  "@atls-ui-proto/avatar": patch
+  "@atls-ui-proto/input": patch
+  "@atls-ui-proto/link": patch
+  "@atls-ui-proto/parallax": patch
+  "@atls-ui-proto/placeholder": patch
+  "@atls-ui-proto/text": patch
