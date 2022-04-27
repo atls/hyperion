@@ -505,7 +505,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/dom@workspace:0.0.1, @atls-ui-parts/dom@workspace:ui-parts/dom":
+"@atls-ui-parts/dom@0.0.1, @atls-ui-parts/dom@workspace:0.0.1, @atls-ui-parts/dom@workspace:ui-parts/dom":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/dom@workspace:ui-parts/dom"
   dependencies:
@@ -781,7 +781,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/text@workspace:0.0.7, @atls-ui-parts/text@workspace:ui-parts/text":
+"@atls-ui-parts/text@0.0.7, @atls-ui-parts/text@workspace:0.0.7, @atls-ui-parts/text@workspace:ui-parts/text":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/text@workspace:ui-parts/text"
   dependencies:
@@ -1010,6 +1010,25 @@ __metadata:
     framer-motion: ^4.1.17
     react: ^17.0.2
     react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
+"@atls-ui-proto/parallax@workspace:ui-proto/parallax":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-proto/parallax@workspace:ui-proto/parallax"
+  dependencies:
+    "@atls-ui-parts/dom": 0.0.1
+    "@atls-ui-parts/text": 0.0.7
+    "@emotion/styled": ^11.8.1
+    events: 3.3.0
+    framer-motion: ^4.1.17
+    react: ^17.0.2
+    react-intersection-observer: 8.33.1
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.4
   languageName: unknown
   linkType: soft
 
@@ -4207,6 +4226,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/is-prop-valid@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@emotion/is-prop-valid@npm:1.1.2"
+  dependencies:
+    "@emotion/memoize": ^0.7.4
+  checksum: 58b1f2d429a589f8f5bc2c33a8732cbb7bbcb17131a103511ef9a94ac754d7eeb53d627f947da480cd977f9d419fd92e244991680292f3287204159652745707
+  languageName: node
+  linkType: hard
+
 "@emotion/jest@npm:^11.3.0":
   version: 11.3.0
   resolution: "@emotion/jest@npm:11.3.0"
@@ -4453,6 +4481,28 @@ __metadata:
     "@emotion/core": ^10.0.27
     react: ">=16.3.0"
   checksum: 09e86fe47adbca1eabb34f36cee17289fbe1f2332c40051d4d5a6077eed1682612685663efb7fd68a8f290d20f9f5cb6ad1c9ca18dcdfc05ee51784d707d279c
+  languageName: node
+  linkType: hard
+
+"@emotion/styled@npm:^11.8.1":
+  version: 11.8.1
+  resolution: "@emotion/styled@npm:11.8.1"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@emotion/babel-plugin": ^11.7.1
+    "@emotion/is-prop-valid": ^1.1.2
+    "@emotion/serialize": ^1.0.2
+    "@emotion/utils": ^1.1.0
+  peerDependencies:
+    "@babel/core": ^7.0.0
+    "@emotion/react": ^11.0.0-rc.0
+    react: ">=16.8.0"
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    "@types/react":
+      optional: true
+  checksum: 67150fa788785c34e285b90acecc91fe7a63babceaefbeffd053bed0fa31f72a05bfeeb9d15620766e543e007b9ccac2e836812eec2e791f962ec4e52731ae4c
   languageName: node
   linkType: hard
 
@@ -13892,7 +13942,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"events@npm:^3.0.0, events@npm:^3.2.0, events@npm:^3.3.0":
+"events@npm:3.3.0, events@npm:^3.0.0, events@npm:^3.2.0, events@npm:^3.3.0":
   version: 3.3.0
   resolution: "events@npm:3.3.0"
   checksum: f6f487ad2198aa41d878fa31452f1a3c00958f46e9019286ff4787c84aac329332ab45c9cdc8c445928fc6d7ded294b9e005a7fce9426488518017831b272780
@@ -21850,6 +21900,15 @@ __metadata:
   peerDependencies:
     react: ^16.8.4 || ^17.0.0
   checksum: ca9e4c1fedb94e4e956dd3142838c5a25a9d61375aee5e8a74dd623bae09a263098a93f220e8d84c7fd39e569e1fa4297d363ddbc91b15bca91baeb7281d7f4f
+  languageName: node
+  linkType: hard
+
+"react-intersection-observer@npm:8.33.1":
+  version: 8.33.1
+  resolution: "react-intersection-observer@npm:8.33.1"
+  peerDependencies:
+    react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
+  checksum: 5feb0df01dd64f1fa0b8300fb4fc12db95350c1ae2514f66f0652371f65e5501758a662746000dc2584d24dcce07139590e5375d6c9920a60b282af83468d0c4
   languageName: node
   linkType: hard
 
