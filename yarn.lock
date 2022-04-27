@@ -907,7 +907,7 @@ __metadata:
   dependencies:
     "@atls-ui-proto/button": "workspace:0.0.6"
     "@atls-ui-proto/input": "workspace:0.0.10"
-    "@atls-ui-proto/theme": "workspace:0.0.2"
+    "@atls-ui-proto/theme": "workspace:0.0.3"
     "@babel/core": ^7.13.16
     "@emotion/babel-plugin": ^11.3.0
     "@emotion/react": ^11.1.5
@@ -1082,7 +1082,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-proto/theme@workspace:0.0.2, @atls-ui-proto/theme@workspace:ui-proto/theme":
+"@atls-ui-proto/theme@workspace:0.0.3, @atls-ui-proto/theme@workspace:ui-proto/theme":
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/theme@workspace:ui-proto/theme"
   dependencies:
