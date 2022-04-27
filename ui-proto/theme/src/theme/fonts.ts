@@ -1,3 +1,3 @@
 export const fonts = {
-  primary: '"Noto Sans"',
+  primary: 'WaterBrush',
 }

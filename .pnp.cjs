@@ -2496,6 +2496,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@atls-ui-proto-theme-virtual-de6720ff33/1/ui-proto/theme/",\
           "packageDependencies": [\
             ["@atls-ui-proto/theme", "virtual:8ab0d223413e4a5b27571f1c73894c535886604495082c387b7a0550543032cc9edb2f3bacbd8a158ce759eb80f55bdc97c04ada24d35b3a9f99344dd6001802#workspace:ui-proto/theme"],\
+            ["@emotion/css", "virtual:de6720ff33e1e2e9ad9a6f6436acbfd793b47e6459d59f286df03b373dc68ce9a6ba37afa832f5d1d6c24bb81f35d24f1a1337915dcbe451692156546b3fe200#npm:11.9.0"],\
             ["@emotion/react", "virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#npm:11.4.0"],\
             ["@types/emotion__react", null],\
             ["@types/node", "npm:14.14.41"],\
@@ -2514,6 +2515,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./ui-proto/theme/",\
           "packageDependencies": [\
             ["@atls-ui-proto/theme", "workspace:ui-proto/theme"],\
+            ["@emotion/css", "virtual:de6720ff33e1e2e9ad9a6f6436acbfd793b47e6459d59f286df03b373dc68ce9a6ba37afa832f5d1d6c24bb81f35d24f1a1337915dcbe451692156546b3fe200#npm:11.9.0"],\
             ["@emotion/react", "virtual:72c331b17fb0576d77b770423bdd2164b43cabf73bc3a7c9fdf98503a6a661ca4a1aa01448401f3bf39a97b4e34cbc32af207798868ef8462528a9c6b1265967#npm:11.4.0"],\
             ["@types/node", "npm:14.14.41"],\
             ["@types/react", "npm:17.0.44"],\
@@ -7409,6 +7411,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
+        ["npm:11.9.0", {\
+          "packageLocation": "./.yarn/cache/@emotion-css-npm-11.9.0-e415e285ad-bd83d9af5c.zip/node_modules/@emotion/css/",\
+          "packageDependencies": [\
+            ["@emotion/css", "npm:11.9.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
         ["virtual:8eb691db84fd68975b95c7b7751e750446f82576951f5264566adefecbbef8688299b9be5a741e618cd4e5792a084b105995a5c92b7bd7f7d69bde2692db614b#npm:11.1.3", {\
           "packageLocation": "./.yarn/__virtual__/@emotion-css-virtual-721974a651/0/cache/@emotion-css-npm-11.1.3-72aa05c30f-dc50283f65.zip/node_modules/@emotion/css/",\
           "packageDependencies": [\
@@ -7453,6 +7462,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/babel-plugin", "virtual:95ecf0147e8ef2b91d602688e7633f155198de7aa02bb75863c3c264e3f7fb00754841d0d5a53ed19543730deb6e6fd43101c59fddf6dc2300262a7093ef8e48#npm:11.7.2"],\
             ["@emotion/cache", "npm:11.7.1"],\
             ["@emotion/serialize", "npm:1.0.2"],\
+            ["@emotion/sheet", "npm:1.1.0"],\
+            ["@emotion/utils", "npm:1.0.0"],\
+            ["@types/babel__core", null]\
+          ],\
+          "packagePeers": [\
+            "@babel/core",\
+            "@types/babel__core"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:de6720ff33e1e2e9ad9a6f6436acbfd793b47e6459d59f286df03b373dc68ce9a6ba37afa832f5d1d6c24bb81f35d24f1a1337915dcbe451692156546b3fe200#npm:11.9.0", {\
+          "packageLocation": "./.yarn/__virtual__/@emotion-css-virtual-8990745b76/0/cache/@emotion-css-npm-11.9.0-e415e285ad-bd83d9af5c.zip/node_modules/@emotion/css/",\
+          "packageDependencies": [\
+            ["@emotion/css", "virtual:de6720ff33e1e2e9ad9a6f6436acbfd793b47e6459d59f286df03b373dc68ce9a6ba37afa832f5d1d6c24bb81f35d24f1a1337915dcbe451692156546b3fe200#npm:11.9.0"],\
+            ["@babel/core", null],\
+            ["@emotion/babel-plugin", "virtual:95ecf0147e8ef2b91d602688e7633f155198de7aa02bb75863c3c264e3f7fb00754841d0d5a53ed19543730deb6e6fd43101c59fddf6dc2300262a7093ef8e48#npm:11.7.2"],\
+            ["@emotion/cache", "npm:11.7.1"],\
+            ["@emotion/serialize", "npm:1.0.3"],\
             ["@emotion/sheet", "npm:1.1.0"],\
             ["@emotion/utils", "npm:1.0.0"],\
             ["@types/babel__core", null]\
