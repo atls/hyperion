@@ -26,9 +26,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular-devkit/core@npm:13.3.3, @angular-devkit/core@npm:^13.2.5":
-  version: 13.3.3
-  resolution: "@angular-devkit/core@npm:13.3.3"
+"@angular-devkit/core@npm:13.3.4, @angular-devkit/core@npm:^13.3.0":
+  version: 13.3.4
+  resolution: "@angular-devkit/core@npm:13.3.4"
   dependencies:
     ajv: 8.9.0
     ajv-formats: 2.1.1
@@ -41,20 +41,20 @@ __metadata:
   peerDependenciesMeta:
     chokidar:
       optional: true
-  checksum: e7b9db3e1f233416c573df0096f1313065d4293a3ca3c5e27d3d064b10db37a5cbfffc825f436b22c1160ed19df56e918fea940ddeb695b90f598bc008ac68f9
+  checksum: 5144f5759b8dc147d9cd61cabe74181add1c1cabf0f245068d73ee065041953215b2a5e780e2fc745f521b0b535770a92724e06a0093c6a20d2ee9448debd377
   languageName: node
   linkType: hard
 
-"@angular-devkit/schematics@npm:^13.2.5":
-  version: 13.3.3
-  resolution: "@angular-devkit/schematics@npm:13.3.3"
+"@angular-devkit/schematics@npm:^13.3.0":
+  version: 13.3.4
+  resolution: "@angular-devkit/schematics@npm:13.3.4"
   dependencies:
-    "@angular-devkit/core": 13.3.3
+    "@angular-devkit/core": 13.3.4
     jsonc-parser: 3.0.0
     magic-string: 0.25.7
     ora: 5.4.1
     rxjs: 6.6.7
-  checksum: c7857fbeeff837f5bbf87d51996084855278fb6717905b9ea339170cd4d95a3788049d694e682a800330bb195112ce2bd89ffc12f9488df7a529d05de55e6ebc
+  checksum: 5ba086bb3fff18ac5199149dc8a29db5a26995e5413845827fda1a2bf5bff683891ea9cf11fbc8e4e7fe3504078f0f14ca272cfa3cc28eb08cfd13f7522bffbc
   languageName: node
   linkType: hard
 
@@ -1372,25 +1372,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/code-service@npm:0.0.10":
-  version: 0.0.10
-  resolution: "@atls/code-service@npm:0.0.10"
-  dependencies:
-    "@atls/config-typescript": 0.0.1
-    "@atls/webpack-proto-imports-loader": 0.0.6
-    "@atls/webpack-start-server-plugin": 0.0.4
-    "@yarnpkg/cli": ^3.2.0-rc.8
-    "@yarnpkg/core": ^3.2.0-rc.8
-    fast-glob: ^3.2.7
-    string-replace-loader: ^3.0.3
-    ts-loader: ^9.2.6
-    typescript: ^4.5.4
-    webpack: ^5.65.0
-    webpack-chain: ^6.5.1
-  checksum: 5baa10082842f4c08391e63a728e6034619b10e58d4e1ad9a64ce41e3400dbd2c5e89aa9418ba6de624d383383ebb12e44943614d15976e23c438ca1f392c075
-  languageName: node
-  linkType: hard
-
 "@atls/code-service@npm:0.0.5":
   version: 0.0.5
   resolution: "@atls/code-service@npm:0.0.5"
@@ -1406,6 +1387,26 @@ __metadata:
     webpack: ^5.37.1
     webpack-chain: ^6.5.1
   checksum: 1c7bb77071c41c6b9bf2c29a7886ec37346a1cae459fb7418145faaa2bc17039e88bcbd1958068595c32f5ff02c38261d81fe5fe7bc7cc8150b917d3c958d7a5
+  languageName: node
+  linkType: hard
+
+"@atls/code-service@npm:^0.0.15":
+  version: 0.0.15
+  resolution: "@atls/code-service@npm:0.0.15"
+  dependencies:
+    "@atls/config-typescript": 0.0.1
+    "@atls/webpack-proto-imports-loader": 0.0.8
+    "@atls/webpack-start-server-plugin": 0.0.5
+    "@yarnpkg/cli": ^3.2.0
+    "@yarnpkg/core": ^3.2.0
+    fast-glob: ^3.2.11
+    find-up: ^5.0.0
+    string-replace-loader: ^3.1.0
+    ts-loader: ^9.2.8
+    typescript: ^4.6.2
+    webpack: ^5.70.0
+    webpack-chain: ^6.5.1
+  checksum: 9f352a50129aa04d952971fc4b43db55fa33a9353efaf55bba90c64a90b2f689c992edb230b501c2d4509870397b44d71f0fe566926c9ca4856c26560e02ac52
   languageName: node
   linkType: hard
 
@@ -1539,28 +1540,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/schematics-utils@npm:0.0.5":
-  version: 0.0.5
-  resolution: "@atls/schematics-utils@npm:0.0.5"
+"@atls/schematics-utils@npm:0.0.6":
+  version: 0.0.6
+  resolution: "@atls/schematics-utils@npm:0.0.6"
   dependencies:
-    "@angular-devkit/core": ^13.2.5
-    "@angular-devkit/schematics": ^13.2.5
+    "@angular-devkit/core": ^13.3.0
+    "@angular-devkit/schematics": ^13.3.0
     js-yaml: ^4.1.0
     semver: 6.3.0
     strip-json-comments: 3.1.1
-  checksum: a7609cb6f5081336f40a837c1c2ae517e1e4535663d702842463bc9b60d88c0a433ac38652b080596c150cbdd2e8946da067dfa3a9de5e4a0a36ad4230404413
+  checksum: 8420436440874f668f7dd466619ac1b4d599c3455e798143d875efe9134c5e28471636bcec3cf9557791d5af64bb58a61221dca8ef335c9d71319880954dcb09
   languageName: node
   linkType: hard
 
-"@atls/schematics@npm:^0.0.10":
-  version: 0.0.10
-  resolution: "@atls/schematics@npm:0.0.10"
+"@atls/schematics@npm:^0.0.12":
+  version: 0.0.12
+  resolution: "@atls/schematics@npm:0.0.12"
   dependencies:
-    "@angular-devkit/core": ^13.2.5
-    "@angular-devkit/schematics": ^13.2.5
+    "@angular-devkit/core": ^13.3.0
+    "@angular-devkit/schematics": ^13.3.0
     "@atls/config-typescript": 0.0.1
-    "@atls/schematics-utils": 0.0.5
-  checksum: e841557642d483e2303ad7503dffab0e0ec37cae24540dcdabc5212b196232a16a4d43886d049a3fc01c5d62e84b5e83e8b1e8466f8a935374746bdcf05d5064
+    "@atls/schematics-utils": 0.0.6
+  checksum: 3b9e7a3a94a524b9f4c09c8416aab778988a3f9b16395ab7786467359b0fa048dda8c90fe6614b66cda07414723fcface9f7cf56bb32a8244c0c2b02874b19b8
   languageName: node
   linkType: hard
 
@@ -1619,13 +1620,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/webpack-proto-imports-loader@npm:0.0.6":
-  version: 0.0.6
-  resolution: "@atls/webpack-proto-imports-loader@npm:0.0.6"
+"@atls/webpack-proto-imports-loader@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@atls/webpack-proto-imports-loader@npm:0.0.8"
   dependencies:
     file-loader: ^6.2.0
     protocol-buffers-schema: ^3.6.0
-  checksum: 0d2fad6ac8c8b5a0b7af4666ddc3f46c9a9d80465f7c6cdead065b5c5e94446991e13de6d83b04cc2e680e2025838d40d5730f60cb138ca10a7a8e94fcf1273a
+  checksum: 9333d6156425c42d62d4d9f2bdfdea4137dca99375de2820af10957b518f3906c4910e9721b2798a5804a41c5a75fc9bfc0a21e2280f5e07ba31ceab6635488c
   languageName: node
   linkType: hard
 
@@ -1645,12 +1646,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/webpack-start-server-plugin@npm:0.0.4":
-  version: 0.0.4
-  resolution: "@atls/webpack-start-server-plugin@npm:0.0.4"
+"@atls/webpack-start-server-plugin@npm:0.0.5":
+  version: 0.0.5
+  resolution: "@atls/webpack-start-server-plugin@npm:0.0.5"
   dependencies:
-    webpack: ^5.65.0
-  checksum: ea7e37465d2583110c971dfc61a2d10189ce996df6dc9e053383e74bdf4fe5a57a086465569ee130e1422a656128ee4094516f45a93f3e8ee174ecb88ce5c632
+    webpack: ^5.70.0
+  checksum: 8ba7da73a5ee3059a9da999ca2de9a56be2d4e5b168dda3526cdad4b478b847e43bc6747e6faae5d1b29704416433ae0a10bccf8e82ed023034bad3253965c58
   languageName: node
   linkType: hard
 
@@ -8678,7 +8679,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/cli@npm:^3.2.0-rc.8":
+"@yarnpkg/cli@npm:^3.2.0":
   version: 3.2.0
   resolution: "@yarnpkg/cli@npm:3.2.0"
   dependencies:
@@ -8755,7 +8756,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/core@npm:^3.2.0, @yarnpkg/core@npm:^3.2.0-rc.8":
+"@yarnpkg/core@npm:^3.2.0":
   version: 3.2.0
   resolution: "@yarnpkg/core@npm:3.2.0"
   dependencies:
@@ -13827,7 +13828,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.0.3, fast-glob@npm:^3.2.7, fast-glob@npm:^3.2.9":
+"fast-glob@npm:^3.0.3, fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.9":
   version: 3.2.11
   resolution: "fast-glob@npm:3.2.11"
   dependencies:
@@ -22928,7 +22929,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"string-replace-loader@npm:^3.0.3":
+"string-replace-loader@npm:^3.1.0":
   version: 3.1.0
   resolution: "string-replace-loader@npm:3.1.0"
   dependencies:
@@ -24061,9 +24062,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"ts-loader@npm:^9.2.6":
-  version: 9.2.8
-  resolution: "ts-loader@npm:9.2.8"
+"ts-loader@npm:^9.2.8":
+  version: 9.2.9
+  resolution: "ts-loader@npm:9.2.9"
   dependencies:
     chalk: ^4.1.0
     enhanced-resolve: ^5.0.0
@@ -24072,7 +24073,7 @@ resolve@^2.0.0-next.3:
   peerDependencies:
     typescript: "*"
     webpack: ^5.0.0
-  checksum: 3afd9a4cc1d46738ac3f2decc7dfa655e0183d4d2d48c7a113ea9f3ac313304f54be59252cde2ef04757c791e28cfcfc63323d3dd1f2f949485242c1ea4835e5
+  checksum: de817d4b7073bb029ca3e0742b5ef9432fdebb9f80707249b2121c09bb6ae6332ec755ab8e572f475ebfe5525a380a78b4e78a32b4d1c207a8fb1a2a0a490bac
   languageName: node
   linkType: hard
 
@@ -24306,9 +24307,9 @@ resolve@^2.0.0-next.3:
   version: 0.0.0-use.local
   resolution: "ui@workspace:."
   dependencies:
-    "@atls/code-service": 0.0.10
+    "@atls/code-service": ^0.0.15
     "@atls/config-jest": ^0.0.2
-    "@atls/schematics": ^0.0.10
+    "@atls/schematics": ^0.0.12
     "@jest/core": ^27.4.5
     "@types/eslint": ^8
     "@types/glob": ^7
