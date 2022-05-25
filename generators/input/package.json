@@ -1,0 +1,31 @@
+{
+  "name": "@atls-ui-generators/input",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn library build",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
+  },
+  "dependencies": {
+    "@atls-ui-generators/utils": "workspace:0.0.1",
+    "@atls/config-prettier": "^0.0.3",
+    "@atls/prettier-plugin": "^0.0.3",
+    "camelcase": "^6.3.0",
+    "prettier": "2.5.1"
+  },
+  "devDependencies": {
+    "@atls-ui-parts/input": "workspace:0.0.10",
+    "@types/prettier": "^2",
+    "styled-tools": "^1.7.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  }
+}
