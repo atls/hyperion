@@ -2,8 +2,9 @@ import { readFileSync }             from 'fs'
 import { mkdirSync }                from 'fs'
 import { existsSync }               from 'fs'
 
+import { pretty }                   from '@atls-ui-generators/utils'
+
 import { AppearanceStyleGenerator } from '../style-generators'
-import { pretty }                   from '../utils'
 
 describe('button generator', () => {
   describe('appearance styles generator', () => {

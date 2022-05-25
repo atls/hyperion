@@ -1,21 +1,21 @@
-import { writeFileSync }      from 'fs'
+import { writeFileSync }     from 'fs'
 
-import { pretty }             from '@atls-ui-generators/utils'
-import { getStylesName }      from '@atls-ui-generators/utils'
+import { pretty }            from '@atls-ui-generators/utils'
+import { getStylesName }     from '@atls-ui-generators/utils'
 
-import { ButtonColorSchemes } from '../button-generator.interfaces'
+import { InputColorSchemes } from '../input-generator.interfaces'
 
 const getAppearanceStylesName = (variant, state) => getStylesName('appearance', variant, state)
 
 export class AppearanceStyleGenerator {
-  readonly requiredImports = [
-    { import: '{ createAppearanceStyles }', from: '@atls-ui-parts/button' },
+  public readonly requiredImports = [
+    { import: '{ createAppearanceStyles }', from: '@atls-ui-parts/input' },
     { import: '{ ifProp }', from: 'styled-tools' },
     { import: '{ switchProp }', from: 'styled-tools' },
     { import: '{ prop }', from: 'styled-tools' },
   ]
 
-  constructor(private readonly colorSchemes: ButtonColorSchemes) {}
+  constructor(private readonly colorSchemes: InputColorSchemes) {}
 
   private generateVariantStatefulStyles(variant) {
     const states = Object.keys(this.colorSchemes[variant])
@@ -23,9 +23,9 @@ export class AppearanceStyleGenerator {
 
     for (const state of states) {
       lines.push(`const ${getAppearanceStylesName(variant, state)} = createAppearanceStyles({
-        fontColor: prop('theme.colors.button.${variant}.${state}.font'),
-        backgroundColor: prop('theme.colors.button.${variant}.${state}.background'),
-        borderColor: prop('theme.colors.button.${variant}.${state}.border'),
+        fontColor: prop('theme.colors.input.${variant}.${state}.font'),
+        backgroundColor: prop('theme.colors.input.${variant}.${state}.background'),
+        borderColor: prop('theme.colors.input.${variant}.${state}.border'),
       })`)
     }
 
@@ -33,7 +33,7 @@ export class AppearanceStyleGenerator {
   }
 
   private generateVariantAppearanceStyles(variant) {
-    const statePriorities = ['disabled', 'pressed', 'hover']
+    const statePriorities = ['disabled', 'error', 'pressed', 'focus', 'hover']
 
     return `${variant}: ${statePriorities
       .map(
@@ -69,7 +69,7 @@ export class AppearanceStyleGenerator {
     return { statefulStyles, appearanceStyles, imports, exports }
   }
 
-  generateFile(path, filename = 'button.appearance-styles.ts') {
+  generateFile(path, filename = 'input.appearance-styles.ts') {
     const generated = this.generateAppearanceStyles()
 
     const code = pretty(`

@@ -1,2 +1,2 @@
-export * from './pretty.util'
 export * from './get-styles-name.util'
+export * from './pretty.util'
