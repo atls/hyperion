@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@monstrs/react-upload": "^0.1.6",
+    "@atls/react-upload": "^0.0.3",
     "react-dropzone": "^10.2.1"
   },
   "devDependencies": {

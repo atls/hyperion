@@ -1,4 +1,4 @@
-import { useUpload }    from '@monstrs/react-upload'
+import { useUpload }    from '@atls/react-upload'
 
 import React            from 'react'
 import { Children }     from 'react'
