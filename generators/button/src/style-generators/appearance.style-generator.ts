@@ -1,8 +1,9 @@
 import { writeFileSync }      from 'fs'
 
+import { pretty }             from '@atls-ui-generators/utils'
+import { getStylesName }      from '@atls-ui-generators/utils'
+
 import { ButtonColorSchemes } from '../button-generator.interfaces'
-import { pretty }             from '../utils'
-import { getStylesName }      from '../utils'
 
 const getAppearanceStylesName = (variant, state) => getStylesName('appearance', variant, state)
 
