@@ -23,7 +23,7 @@
     "@types/react": "^18.0.7",
     "@types/styled-system": "^5.1.15",
     "framer-motion": "^4.1.17",
-    "react": "^17.0.2",
+    "react": "^18.1.0",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   },

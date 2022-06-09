@@ -132,7 +132,7 @@ __metadata:
     "@emotion/styled": ^11.3.0
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -169,8 +169,8 @@ __metadata:
     babel-loader: ^8.2.2
     core-js: ^3.11.0
     events: ^3.3.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    react: ^18.1.0
+    react-dom: ^18.1.0
     react-is: ^17.0.2
     typescript: ^4.7.3
   languageName: unknown
@@ -186,7 +186,7 @@ __metadata:
     "@emotion/styled": ^11.3.0
     "@testing-library/react": 9.5.0
     "@types/styled-system": ^5.1.15
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
     typescript: 4.7.3
@@ -214,7 +214,7 @@ __metadata:
     fs-extra-promise: 1.0.1
     glob-promise: 3.4.0
     prettier: ^2.4.1
-    react: ^17.0.2
+    react: ^18.1.0
     ts-node: 8.10.2
     typescript: 4.7.3
   peerDependencies:
@@ -236,7 +236,7 @@ __metadata:
     "@emotion/react": ^11.1.5
     "@types/node": ^14.14.41
     "@types/react": ^18.0.7
-    react: ^17.0.2
+    react: ^18.1.0
   peerDependencies:
     "@emotion/react": ^11.1.5
     react: ^17.0.1
@@ -258,7 +258,7 @@ __metadata:
     "@types/react": 18.0.7
     graphql: ^15.6.0
     graphql-tag: ^2.12.5
-    react: ^17.0.2
+    react: ^18.1.0
     react-dropzone: ^10.2.1
     styled-tools: ^1.7.2
     typescript: 4.7.3
@@ -327,7 +327,7 @@ __metadata:
     "@types/styled-system": ^5.1.15
     downshift: ^5.0.5
     framer-motion: ^4.1.17
-    react: ^17.0.2
+    react: ^18.1.0
     react-laag: ^1.7.3
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -356,7 +356,7 @@ __metadata:
     "@types/node": ^14.14.41
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
-    react: ^17.0.2
+    react: ^18.1.0
     string-to-color: ^2.2.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -382,7 +382,7 @@ __metadata:
     "@types/mdx-js__react": ^1.5.3
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -403,8 +403,8 @@ __metadata:
     "@emotion/styled": ^11.3.0
     "@types/react-dom": ^18.0.0
     framer-motion: 4.1.17
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    react: ^18.1.0
+    react-dom: ^18.1.0
     react-scrolllock: ^5.0.1
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -427,7 +427,7 @@ __metadata:
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
     framer-motion: 4.1.7
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -450,7 +450,7 @@ __metadata:
     "@types/jest": ^26.0.24
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -466,7 +466,7 @@ __metadata:
   resolution: "@atls-ui-parts/conditional-render@workspace:ui-parts/conditional-render"
   dependencies:
     "@types/react": ^18.0.7
-    react: ^17.0.2
+    react: ^18.1.0
   peerDependencies:
     react: ^17.0.1
   languageName: unknown
@@ -483,7 +483,7 @@ __metadata:
     "@types/react-datepicker": ^3.1.8
     "@types/styled-system": ^5.1.15
     date-fns: ^2.22.1
-    react: ^17.0.2
+    react: ^18.1.0
     react-datepicker: ^4.1.1
     styled-system: ^5.1.5
   languageName: unknown
@@ -515,8 +515,8 @@ __metadata:
     "@types/react-dom": ^18.0.0
     babel-loader: ^8.2.2
     core-js: ^3.11.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    react: ^18.1.0
+    react-dom: ^18.1.0
     react-is: ^17.0.2
     string-replace-loader: ^3.0.1
     typescript: ^4.7.3
@@ -528,7 +528,7 @@ __metadata:
   resolution: "@atls-ui-parts/dom@workspace:ui-parts/dom"
   dependencies:
     "@types/react": ^18.0.7
-    react: ^17.0.2
+    react: ^18.1.0
   peerDependencies:
     react: ^17.0.1
   languageName: unknown
@@ -539,7 +539,7 @@ __metadata:
   resolution: "@atls-ui-parts/events-state@workspace:ui-parts/events-state"
   dependencies:
     "@types/react": ^18.0.7
-    react: ^17.0.2
+    react: ^18.1.0
   peerDependencies:
     react: ^17.0.1
   languageName: unknown
@@ -553,7 +553,7 @@ __metadata:
     "@testing-library/react": ^11.2.6
     "@types/jest": ^26.0.24
     "@types/react": ^18.0.7
-    react: ^17.0.2
+    react: ^18.1.0
   peerDependencies:
     "@emotion/styled": ^11.1.5
     react: ^17.0.1
@@ -568,7 +568,7 @@ __metadata:
     "@types/jest": ^26.0.24
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
   peerDependencies:
     "@emotion/styled": ^11.1.5
@@ -591,7 +591,7 @@ __metadata:
     "@types/jest": ^26.0.24
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -609,7 +609,7 @@ __metadata:
     "@emotion/styled": ^11.3.0
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
   peerDependencies:
     "@emotion/styled": ^11.1.5
@@ -628,7 +628,7 @@ __metadata:
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
     next: ^12.1.5
-    react: ^17.0.2
+    react: ^18.1.0
   peerDependencies:
     "@emotion/styled": ^11.1.5
     next: "*"
@@ -643,8 +643,8 @@ __metadata:
   dependencies:
     "@types/react": ^18.0.7
     "@types/react-dom": ^18.0.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    react: ^18.1.0
+    react-dom: ^18.1.0
   peerDependencies:
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -663,8 +663,8 @@ __metadata:
     "@types/react": ^18.0.7
     "@types/react-dom": ^18.0.0
     "@types/styled-system": ^5.1.15
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    react: ^18.1.0
+    react-dom: ^18.1.0
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -686,7 +686,7 @@ __metadata:
     "@types/jest": ^26.0.24
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
   peerDependencies:
     "@emotion/styled": ^11.1.5
@@ -709,8 +709,8 @@ __metadata:
     downshift: ^6.1.7
     framer-motion: ^5.5.1
     nanoid: ^3.1.30
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    react: ^18.1.0
+    react-dom: ^18.1.0
     react-laag: ^2.0.3
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -739,7 +739,7 @@ __metadata:
     "@fortawesome/react-fontawesome": 0.1.10
     "@types/styled-system": ^5.1.15
     framer-motion: 4.1.17
-    react: 17.0.2
+    react: 18.1.0
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -772,7 +772,7 @@ __metadata:
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
     framer-motion: ^4.1.17
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -793,7 +793,7 @@ __metadata:
     "@types/jest": ^26.0.24
     "@types/node": ^14.14.41
     "@types/react": ^18.0.7
-    react: ^17.0.2
+    react: ^18.1.0
   peerDependencies:
     react: ^17.0.1
   languageName: unknown
@@ -806,7 +806,7 @@ __metadata:
     "@emotion/styled": ^11.3.0
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
   peerDependencies:
     "@emotion/styled": ^11.1.5
@@ -825,8 +825,8 @@ __metadata:
     "@types/react-dom": ^18.0.0
     "@types/styled-system": ^5.1.15
     framer-motion: ^4.1.17
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    react: ^18.1.0
+    react-dom: ^18.1.0
     react-laag: 1.7.3
     styled-system: ^5.1.5
   peerDependencies:
@@ -848,7 +848,7 @@ __metadata:
     "@types/node": ^14.14.41
     "@types/react": ^18.0.7
     graphql: ^16.3.0
-    react: ^17.0.2
+    react: ^18.1.0
     react-dropzone: ^12.0.4
   peerDependencies:
     graphql: ^16.3.0
@@ -867,7 +867,7 @@ __metadata:
     "@types/node": ^14.14.41
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -887,7 +887,7 @@ __metadata:
     "@emotion/styled": ^11.3.0
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -908,7 +908,7 @@ __metadata:
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
     framer-motion: ^4.1.7
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -944,8 +944,8 @@ __metadata:
     "@types/react-dom": ^18.0.0
     babel-loader: ^8.2.2
     core-js: ^3.11.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    react: ^18.1.0
+    react-dom: ^18.1.0
     react-is: ^17.0.2
     typescript: ^4.7.3
   languageName: unknown
@@ -959,7 +959,7 @@ __metadata:
     "@emotion/styled": ^11.3.0
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -979,7 +979,7 @@ __metadata:
     "@emotion/styled": ^11.3.0
     "@types/react": ^18.0.7
     "@types/styled-system": ^5.1.15
-    react: ^17.0.2
+    react: ^18.1.0
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -1006,7 +1006,7 @@ __metadata:
     "@atls-ui-proto/text": "workspace:0.0.8"
     "@emotion/styled": ^11.3.0
     "@types/react": ^18.0.7
-    react: ^17.0.2
+    react: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -1020,8 +1020,8 @@ __metadata:
     "@types/react": ^18.0.7
     "@types/react-dom": ^18.0.0
     framer-motion: ^4.1.17
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    react: ^18.1.0
+    react-dom: ^18.1.0
   peerDependencies:
     "@emotion/css": ^11.1.3
     "@emotion/styled": ^11.1.5
@@ -1040,7 +1040,7 @@ __metadata:
     "@emotion/styled": ^11.8.1
     events: 3.3.0
     framer-motion: ^4.1.17
-    react: ^17.0.2
+    react: ^18.1.0
     react-intersection-observer: 8.33.1
     styled-system: ^5.1.5
   peerDependencies:
@@ -1058,7 +1058,7 @@ __metadata:
     "@atls-ui-proto/text": "workspace:0.0.8"
     "@emotion/styled": ^11.3.0
     "@types/react": ^18.0.7
-    react: ^17.0.2
+    react: ^18.1.0
   peerDependencies:
     "@emotion/styled": ^11.1.5
     react: ^17.0.1
@@ -1077,8 +1077,8 @@ __metadata:
     "@types/react-dom": ^18.0.0
     "@types/styled-system": ^5.1.15
     framer-motion: ^4.1.17
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    react: ^18.1.0
+    react-dom: ^18.1.0
     react-laag: 1.7.3
     styled-system: ^5.1.5
   peerDependencies:
@@ -1096,7 +1096,7 @@ __metadata:
   dependencies:
     "@atls-ui-parts/text": "workspace:0.0.8"
     "@types/react": ^18.0.7
-    react: ^17.0.2
+    react: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -1108,7 +1108,7 @@ __metadata:
     "@emotion/react": ^11.1.5
     "@types/node": ^14.14.41
     "@types/react": ^18.0.7
-    react: ^17.0.2
+    react: ^18.1.0
   peerDependencies:
     "@emotion/react": ^11.1.5
     react: ^17.0.1
@@ -1140,8 +1140,8 @@ __metadata:
     "@types/react-dom": ^18.0.0
     babel-loader: ^8.2.2
     core-js: ^3.11.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    react: ^18.1.0
+    react-dom: ^18.1.0
     react-is: ^17.0.2
     string-replace-loader: ^3.0.1
     typescript: ^4.7.3
@@ -1267,7 +1267,7 @@ __metadata:
   dependencies:
     google-fonts-complete: ^2.1.1
     google-fonts-loader: ^1.0.0
-    react: ^17.0.2
+    react: ^18.1.0
   peerDependencies:
     react: ^17.0.1
   languageName: unknown
@@ -18013,13 +18013,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:17.0.2, react@npm:^17.0.2":
-  version: 17.0.2
-  resolution: "react@npm:17.0.2"
+"react@npm:18.1.0, react@npm:^18.1.0":
+  version: 18.1.0
+  resolution: "react@npm:18.1.0"
   dependencies:
     loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-  checksum: b254cc17ce3011788330f7bbf383ab653c6848902d7936a87b09d835d091e3f295f7e9dd1597c6daac5dc80f90e778c8230218ba8ad599f74adcc11e33b9d61b
+  checksum: 5bb296b561b43ef2220395da4faac86c14a087c8c80e1a7598a5740f01ee605c11eaf249985c1e2000971c4cd32ccb46d40f00479bbd9fb6b1c7cf857393b7d4
   languageName: node
   linkType: hard
 
