@@ -6,7 +6,7 @@
   "main": "src/index.ts",
   "devDependencies": {
     "google-fonts-complete": "^2.1.1",
-    "google-fonts-loader": "^1.0.0",
+    "google-fonts-loader": "^1.0.1",
     "react": "^18.1.0"
   },
   "peerDependencies": {
