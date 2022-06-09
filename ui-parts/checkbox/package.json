@@ -19,9 +19,9 @@
     "@atls-ui-parts/hidden-input": "workspace:0.0.4",
     "@atls/storybook-google-fonts": "workspace:0.0.0",
     "@emotion/styled": "^11.3.0",
-    "@types/jest": "^26.0.22",
+    "@types/jest": "^26.0.24",
     "@types/react": "^18.0.7",
-    "@types/styled-system": "^5.1.11",
+    "@types/styled-system": "^5.1.15",
     "react": "^17.0.2",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
