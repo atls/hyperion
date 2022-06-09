@@ -1,11 +1,16 @@
 {
   "name": "@atls-ui-proto/design",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "license": "BSD-3-Clause",
   "scripts": {
     "build": "mkdir -p ../../.git && build-storybook --config-dir ./src -o dist --quiet && npx sb extract dist ./dist/stories.json",
-    "dev": "start-storybook --config-dir ./src -p 3000"
+    "dev": "start-storybook --config-dir ./src -p 3000",
+    "prepack": "run build",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
   },
   "devDependencies": {
     "@atls-ui-proto/button": "workspace:0.0.6",
