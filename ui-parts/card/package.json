@@ -14,7 +14,7 @@
   "dependencies": {
     "@atls-ui-parts/dom": "workspace:0.0.2",
     "@atls-ui-parts/layout": "workspace:0.0.4",
-    "framer-motion": "4.1.17",
+    "framer-motion": "6.3.11",
     "react-scrolllock": "^5.0.1",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"

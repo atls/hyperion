@@ -96,7 +96,7 @@ export const Carousel = ({
           width: '100%',
         }}
       >
-        {withPagination(Pagination)}
+        {withPagination(<Pagination />)}
       </div>
     </Container>
   )
