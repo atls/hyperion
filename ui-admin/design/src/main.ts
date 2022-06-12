@@ -27,7 +27,6 @@ module.exports = {
     // eslint-disable-next-line no-param-reassign
     config.resolve.fallback.url = false
 
-
     return updateEmotionAliases(config)
   },
 }

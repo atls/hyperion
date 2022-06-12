@@ -10,6 +10,9 @@
     "ui-proto/*",
     "ui/*"
   ],
+  "scripts": {
+    "postinstall": "yarn workspace @atls-ui-admin/icons build-icons"
+  },
   "resolutions": {
     "@testing-library/react": "10",
     "@types/webpack-env": "1.16.4",
