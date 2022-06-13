@@ -28,7 +28,7 @@ export const TextTransform = ({
       }
     }, children)
 
-    return transformed as any
+    return transformed as any as ReactElement
   } catch (error) {
     if (process.env.NODE_ENV !== 'production') {
       throw error

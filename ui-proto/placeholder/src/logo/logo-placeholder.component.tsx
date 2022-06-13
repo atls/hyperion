@@ -1,5 +1,6 @@
 import React                    from 'react'
 import { FC }                   from 'react'
+import { PropsWithChildren }    from 'react'
 
 import { Layout }               from '@atls-ui-proto/layout'
 import { Text }                 from '@atls-ui-proto/text'
@@ -7,7 +8,7 @@ import { Text }                 from '@atls-ui-proto/text'
 import { ImagePlaceholder }     from '../image'
 import { LogoPlaceholderProps } from './logo-placeholder.interfaces'
 
-export const LogoPlaceholder: FC<LogoPlaceholderProps> = ({
+export const LogoPlaceholder: FC<PropsWithChildren<LogoPlaceholderProps>> = ({
   type = 'horizontal',
   children = 'Логотип',
   color = 'black',

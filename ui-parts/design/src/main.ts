@@ -6,6 +6,8 @@ const updateEmotionAliases = (config) => ({
     alias: {
       ...config.resolve.alias,
       '@emotion/core': require.resolve('@emotion/react'),
+      '@emotion/styled': require.resolve('@emotion/styled'),
+      '@emotion/styled-base': require.resolve('@emotion/styled'),
       'emotion-theming': require.resolve('@emotion/react'),
     },
   },
@@ -16,10 +18,7 @@ module.exports = {
     builder: 'webpack5',
   },
   stories: ['../../**/*.stories.@(ts|tsx|mdx)'],
-  addons: [
-    require.resolve('@atls/storybook-addon-development-templates'),
-    '@storybook/addon-essentials',
-  ],
+  addons: ['@storybook/addon-essentials'],
   webpackFinal: async (config) => {
     // eslint-disable-next-line no-param-reassign
     config.resolve.fallback.assert = false

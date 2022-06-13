@@ -12,11 +12,11 @@
     "postpack": "rm -rf dist"
   },
   "devDependencies": {
-    "@emotion/styled": "^11.3.0",
+    "@emotion/styled": "^11.8.1",
     "@testing-library/react": "^11.2.6",
-    "@types/jest": "^26.0.22",
-    "@types/react": "^18.0.7",
-    "react": "^17.0.2"
+    "@types/jest": "^28.1.1",
+    "@types/react": "^18.0.12",
+    "react": "^18.1.0"
   },
   "peerDependencies": {
     "@emotion/styled": "^11.1.5",
