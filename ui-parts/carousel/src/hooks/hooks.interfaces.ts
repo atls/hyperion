@@ -61,4 +61,4 @@ export interface UseAddonNavigationResult {
   }
 }
 
-export type UseAddonPaginationResult = (dot: ReactNode) => ReactNode[] | null
+export type UseAddonPaginationResult = (dot: any) => ReactNode[] | null

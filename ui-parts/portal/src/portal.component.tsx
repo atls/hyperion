@@ -1,9 +1,10 @@
 import { FunctionComponent } from 'react'
+import { PropsWithChildren } from 'react'
 import { useEffect }         from 'react'
 import { useRef }            from 'react'
 import { createPortal }      from 'react-dom'
 
-const Portal: FunctionComponent = ({ children }) => {
+const Portal: FunctionComponent<PropsWithChildren> = ({ children }) => {
   if (typeof window === 'undefined') {
     return null
   }

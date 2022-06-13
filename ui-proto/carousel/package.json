@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@atls-ui-parts/carousel": "workspace:0.0.3",
-    "framer-motion": "^4.1.17"
+    "framer-motion": "^6.3.11"
   },
   "devDependencies": {
     "@emotion/styled": "^11.8.1",

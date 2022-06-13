@@ -7,6 +7,7 @@ import parserTypescript    from 'prettier/parser-typescript'
 import { format }          from 'prettier/standalone'
 
 const pretty = (string) =>
+  // @ts-ignore
   format(string, {
     ...prettierConfig,
     parser: 'babel',

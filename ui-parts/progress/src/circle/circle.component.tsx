@@ -4,6 +4,7 @@ import { useTheme }          from '@emotion/react'
 
 import React                 from 'react'
 import { FunctionComponent } from 'react'
+import { PropsWithChildren } from 'react'
 import { useState }          from 'react'
 
 import { CircleProps }       from './circle.interfaces'
@@ -11,7 +12,7 @@ import { getGradientId }     from './utils'
 import { getPathStyles }     from './utils'
 import { toArray }           from './utils'
 
-const Circle: FunctionComponent<CircleProps> = ({
+const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
   strokeWeight = 6,
   trailWidth,
   gapDegree,

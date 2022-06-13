@@ -24,6 +24,8 @@ module.exports = {
     config.resolve.fallback.assert = false
     // eslint-disable-next-line no-param-reassign
     config.resolve.fallback.events = require.resolve('events/')
+    // eslint-disable-next-line no-param-reassign
+    config.resolve.fallback.url = false
 
     return updateEmotionAliases(config)
   },

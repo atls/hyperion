@@ -1,6 +1,7 @@
 import React                 from 'react'
 import { AnimatePresence }   from 'framer-motion'
 import { Children }          from 'react'
+import { PropsWithChildren } from 'react'
 import { FunctionComponent } from 'react'
 import { Arrow }             from 'react-laag'
 import { ToggleLayer }       from 'react-laag'
@@ -29,7 +30,7 @@ const DefaultContainer = forwardRef((
   </Container>
 ))
 
-export const Tooltip: FunctionComponent<TooltipProps> = ({
+export const Tooltip: FunctionComponent<PropsWithChildren<TooltipProps>> = ({
   text,
   trigger,
   showArrow,
