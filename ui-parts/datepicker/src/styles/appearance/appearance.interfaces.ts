@@ -16,4 +16,6 @@ export interface AppearanceStyles {
   inputBackgroundColor?: string
   inputBorderColor?: string
   inputActiveBorderColor?: string
+  dayNameFontColor?: string
+  currentMonthFontColor?: string
 }

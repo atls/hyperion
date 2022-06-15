@@ -16,6 +16,7 @@ export interface ShapeStyles {
   dayNameFontFamily?: string
   dayNameFontStyle?: string
   dayNameFontWeight?: string
+  dayNameFontSize?: number | string
   currentMonthPadding?: number | string
   currentMonthFontFamily?: string
   currentMonthFontWeight?: string

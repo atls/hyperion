@@ -28,7 +28,8 @@ export const createCellShapeStyles = (
   fontWeight?: string,
   dayNameFontFamily?: string,
   dayNameFontStyle?: string,
-  dayNameFontWeight?: string
+  dayNameFontWeight?: string,
+  dayNameFontSize?: number | string
 ) => ({
   '.react-datepicker__day-name': {
     margin,
@@ -36,7 +37,7 @@ export const createCellShapeStyles = (
     fontFamily: dayNameFontFamily,
     fontStyle: dayNameFontStyle,
     fontWeight: dayNameFontWeight,
-    fontSize,
+    fontSize: dayNameFontSize || fontSize,
   },
   '.react-datepicker__day, .react-datepicker__time-name': {
     margin,
@@ -117,6 +118,7 @@ export const createShapeStyles = ({
   dayNameFontFamily,
   dayNameFontStyle,
   dayNameFontWeight,
+  dayNameFontSize,
   currentMonthFontFamily,
   currentMonthFontStyle,
   currentMonthFontWeight,
@@ -134,7 +136,8 @@ export const createShapeStyles = ({
     fontWeight,
     dayNameFontFamily,
     dayNameFontStyle,
-    dayNameFontWeight
+    dayNameFontWeight,
+    dayNameFontSize
   ),
   ...createDividerShapeStyles(dividerPosition, dividerWidth),
   ...createInputShapeStyles(

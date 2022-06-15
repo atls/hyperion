@@ -87,9 +87,11 @@ Datepicker.args = {
   currentMonthFontStyle: 'normal',
   currentMonthFontWeight: 400,
   currentMonthFontSize: 20,
+  currentMonthFontColor: '#000000',
   dayNameFontFamily: 'Gordita, sans-serif',
   dayNameFontStyle: 'normal',
   dayNameFontWeight: 400,
+  dayNameFontColor: '#000000',
 }
 
 Datepicker.argTypes = {
@@ -241,6 +243,17 @@ Datepicker.argTypes = {
       type: 'text',
     },
   },
+  currentMonthFontColor: {
+    name: 'Цвет шрифта текущего месяца',
+    description: 'Цвет шрифта текущего месяца',
+    table: {
+      category: 'Представление',
+      subcategory: 'Цвет',
+    },
+    control: {
+      type: 'color',
+    },
+  },
   dayNameFontFamily: {
     name: 'Форма шрифта дня недели',
     description: 'Форма шрифта дня недели',
@@ -259,6 +272,17 @@ Datepicker.argTypes = {
     },
     control: {
       type: 'text',
+    },
+  },
+  dayNameFontColor: {
+    name: 'Цвет шрифта дня недели',
+    description: 'Цвет шрифта дня недели',
+    table: {
+      category: 'Представление',
+      subcategory: 'Цвет',
+    },
+    control: {
+      type: 'color',
     },
   },
   dayNameFontWeight: {
