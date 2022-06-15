@@ -1,5 +1,22 @@
 import { ShapeStyles } from './shape.interfaces'
 
+export const createHeaderShapeStyles = (
+  padding?: number | string,
+  fontFamily?: string,
+  fontWeight?: string,
+  fontStyle?: string,
+  fontSize?: number | string
+) => ({
+  '.react-datepicker__current-month': {
+    paddingTop: padding,
+    paddingBottom: padding,
+    fontFamily,
+    fontWeight,
+    fontSize,
+    fontStyle,
+  },
+})
+
 export const createCellShapeStyles = (
   margin?: number | string,
   padding?: number | string,
@@ -8,9 +25,20 @@ export const createCellShapeStyles = (
   fontSize?: number | string,
   fontFamily?: string,
   fontStyle?: string,
-  fontWeight?: string
+  fontWeight?: string,
+  dayNameFontFamily?: string,
+  dayNameFontStyle?: string,
+  dayNameFontWeight?: string
 ) => ({
-  '.react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name': {
+  '.react-datepicker__day-name': {
+    margin,
+    padding,
+    fontFamily: dayNameFontFamily,
+    fontStyle: dayNameFontStyle,
+    fontWeight: dayNameFontWeight,
+    fontSize,
+  },
+  '.react-datepicker__day, .react-datepicker__time-name': {
     margin,
     padding,
     borderRadius,
@@ -86,6 +114,14 @@ export const createShapeStyles = ({
   fontFamily,
   fontStyle,
   fontWeight,
+  dayNameFontFamily,
+  dayNameFontStyle,
+  dayNameFontWeight,
+  currentMonthFontFamily,
+  currentMonthFontStyle,
+  currentMonthFontWeight,
+  currentMonthFontSize,
+  currentMonthPadding,
 }: ShapeStyles) => ({
   ...createCellShapeStyles(
     cellMargin,
@@ -95,7 +131,10 @@ export const createShapeStyles = ({
     fontSize,
     fontFamily,
     fontStyle,
-    fontWeight
+    fontWeight,
+    dayNameFontFamily,
+    dayNameFontStyle,
+    dayNameFontWeight
   ),
   ...createDividerShapeStyles(dividerPosition, dividerWidth),
   ...createInputShapeStyles(
@@ -106,5 +145,12 @@ export const createShapeStyles = ({
     fontWeight,
     fontFamily,
     inputBorderRadius
+  ),
+  ...createHeaderShapeStyles(
+    currentMonthPadding,
+    currentMonthFontFamily,
+    currentMonthFontWeight,
+    currentMonthFontStyle,
+    currentMonthFontSize
   ),
 })

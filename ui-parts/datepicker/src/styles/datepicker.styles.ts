@@ -39,6 +39,14 @@ export const createAndInjectDatepickerStyles = ({
   inputSize,
   inputBorderWidth,
   inputPadding,
+  currentMonthPadding,
+  currentMonthFontFamily,
+  currentMonthFontSize,
+  currentMonthFontStyle,
+  currentMonthFontWeight,
+  dayNameFontFamily,
+  dayNameFontWeight,
+  dayNameFontStyle,
 }: DatepickerStyles) => {
   injectBaseStyles()
   injectGlobal(
@@ -79,6 +87,14 @@ export const createAndInjectDatepickerStyles = ({
       inputBorderWidth,
       inputBorderRadius,
       inputPadding,
+      currentMonthPadding,
+      currentMonthFontFamily,
+      currentMonthFontSize,
+      currentMonthFontStyle,
+      currentMonthFontWeight,
+      dayNameFontFamily,
+      dayNameFontWeight,
+      dayNameFontStyle,
     })
   )
 }
