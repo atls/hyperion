@@ -13,9 +13,9 @@
     "express": "^4.18.1"
   },
   "devDependencies": {
-    "@atls-ui-parts/avatar": "workspace:0.0.6",
-    "@atls-ui-parts/button": "workspace:0.0.5",
-    "@atls-ui-parts/input": "workspace:0.0.10",
+    "@atls-ui-parts/avatar": "workspace:0.0.7",
+    "@atls-ui-parts/button": "workspace:0.0.6",
+    "@atls-ui-parts/input": "workspace:0.0.11",
     "@babel/core": "^7.13.16",
     "@emotion/babel-plugin": "^11.9.2",
     "@emotion/react": "^11.9.0",

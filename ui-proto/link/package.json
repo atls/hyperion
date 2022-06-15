@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/link",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,8 +12,8 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/link": "workspace:0.0.8",
-    "@atls-ui-proto/text": "workspace:0.0.8"
+    "@atls-ui-parts/link": "workspace:0.0.9",
+    "@atls-ui-proto/text": "workspace:0.0.9"
   },
   "devDependencies": {
     "@emotion/styled": "^11.8.1",

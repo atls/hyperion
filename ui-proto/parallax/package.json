@@ -1,11 +1,11 @@
 {
   "name": "@atls-ui-proto/parallax",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "BSD 3-Clause",
   "main": "src/index.ts",
   "devDependencies": {
-    "@atls-ui-parts/dom": "0.0.2",
-    "@atls-ui-parts/text": "0.0.8",
+    "@atls-ui-parts/dom": "0.0.3",
+    "@atls-ui-parts/text": "0.0.9",
     "@emotion/styled": "^11.8.1",
     "events": "3.3.0",
     "framer-motion": "^6.3.11",
