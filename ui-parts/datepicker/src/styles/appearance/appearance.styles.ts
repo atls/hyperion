@@ -10,8 +10,12 @@ export const createCellColorStyles = (
   inRangeColor?: string,
   inRangeFontColor?: string,
   inRangeHoverColor?: string,
-  inRangeHoverFontColor?: string
+  inRangeHoverFontColor?: string,
+  dayNameFontColor?: string
 ) => ({
+  '.react-datepicker__day-name': {
+    color: dayNameFontColor,
+  },
   '.react-datepicker__day': {
     backgroundColor,
     color,
@@ -48,10 +52,17 @@ export const createArrowColorStyles = (borderColor?: string, borderHoverColor?: 
   },
 })
 
-export const createHeaderColorStyles = (backgroundColor?: string, borderColor?: string) => ({
+export const createHeaderColorStyles = (
+  backgroundColor?: string,
+  borderColor?: string,
+  fontColor?: string
+) => ({
   '.react-datepicker__header ': {
     backgroundColor,
     borderColor,
+  },
+  '.react-datepicker__current-month': {
+    color: fontColor,
   },
 })
 
@@ -93,6 +104,8 @@ export const createAppearanceStyles = ({
   inputBackgroundColor,
   inputBorderColor,
   inputActiveBorderColor,
+  dayNameFontColor,
+  currentMonthFontColor,
 }: AppearanceStyles) => ({
   ...createCellColorStyles(
     cellColor,
@@ -104,10 +117,11 @@ export const createAppearanceStyles = ({
     cellInRangeColor,
     cellInRangeFontColor,
     cellInRangeHoverColor,
-    cellInRangeHoverFontColor
+    cellInRangeHoverFontColor,
+    dayNameFontColor
   ),
   ...createArrowColorStyles(arrowColor, arrowHoverColor),
-  ...createHeaderColorStyles(headerBackgroundColor, dividerColor),
+  ...createHeaderColorStyles(headerBackgroundColor, dividerColor, currentMonthFontColor),
   ...createDividerColorStyles(dividerColor),
   ...createInputColorStyles(inputBackgroundColor, inputBorderColor, inputActiveBorderColor),
 })

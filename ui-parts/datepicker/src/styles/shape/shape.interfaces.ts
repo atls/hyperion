@@ -13,4 +13,13 @@ export interface ShapeStyles {
   inputBorderWidth?: number | string
   inputBorderRadius?: number | string
   inputPadding?: number | string
+  dayNameFontFamily?: string
+  dayNameFontStyle?: string
+  dayNameFontWeight?: string
+  dayNameFontSize?: number | string
+  currentMonthPadding?: number | string
+  currentMonthFontFamily?: string
+  currentMonthFontWeight?: string
+  currentMonthFontStyle?: string
+  currentMonthFontSize?: number | string
 }

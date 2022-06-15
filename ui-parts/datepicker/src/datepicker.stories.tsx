@@ -55,6 +55,7 @@ export const Datepicker = (props) => {
 Datepicker.args = {
   arrowColor: '#376EFF',
   arrowHoverColor: '#376EFF',
+  showPopperArrow: true,
   cellColor: null,
   cellFontColor: '#262C34',
   cellActiveColor: '#376EFF',
@@ -81,6 +82,16 @@ Datepicker.args = {
   inputBorderWidth: 1,
   inputBorderRadius: 6,
   inputPadding: '12px 14px',
+  currentMonthPadding: 10,
+  currentMonthFontFamily: 'Gordita, sans-serif',
+  currentMonthFontStyle: 'normal',
+  currentMonthFontWeight: 400,
+  currentMonthFontSize: 20,
+  currentMonthFontColor: '#000000',
+  dayNameFontFamily: 'Gordita, sans-serif',
+  dayNameFontStyle: 'normal',
+  dayNameFontWeight: 400,
+  dayNameFontColor: '#000000',
 }
 
 Datepicker.argTypes = {
@@ -104,6 +115,16 @@ Datepicker.argTypes = {
     },
     control: {
       type: 'color',
+    },
+  },
+  showPopperArrow: {
+    name: 'Показывать стрелку',
+    description: 'Показывать стрелку',
+    table: {
+      category: 'Форма',
+    },
+    control: {
+      type: 'boolean',
     },
   },
   cellColor: {
@@ -170,6 +191,108 @@ Datepicker.argTypes = {
     },
     control: {
       type: 'color',
+    },
+  },
+  currentMonthPadding: {
+    name: 'Внешний отступ текущего месяца',
+    description: 'Внешний отступ текущего месяца',
+    table: {
+      category: 'Форма',
+    },
+    control: {
+      type: 'number',
+    },
+  },
+  currentMonthFontFamily: {
+    name: 'Форма шрифта текущего месяца',
+    description: 'Форма шрифта текущего месяца',
+    table: {
+      category: 'Форма',
+    },
+    control: {
+      type: 'text',
+    },
+  },
+  currentMonthFontStyle: {
+    name: 'Стиль шрифта текущего месяца',
+    description: 'Стиль шрифта текущего месяца',
+    table: {
+      category: 'Форма',
+    },
+    control: {
+      type: 'text',
+    },
+  },
+  currentMonthFontWeight: {
+    name: 'Толщина шрифта текущего месяца',
+    description: 'Толщина шрифта текущего месяца',
+    table: {
+      category: 'Форма',
+    },
+    control: {
+      type: 'number',
+    },
+  },
+  currentMonthFontSize: {
+    name: 'Размер шрифта текущего месяца',
+    description: 'Размер шрифта текущего месяца',
+    table: {
+      category: 'Форма',
+    },
+    control: {
+      type: 'text',
+    },
+  },
+  currentMonthFontColor: {
+    name: 'Цвет шрифта текущего месяца',
+    description: 'Цвет шрифта текущего месяца',
+    table: {
+      category: 'Представление',
+      subcategory: 'Цвет',
+    },
+    control: {
+      type: 'color',
+    },
+  },
+  dayNameFontFamily: {
+    name: 'Форма шрифта дня недели',
+    description: 'Форма шрифта дня недели',
+    table: {
+      category: 'Форма',
+    },
+    control: {
+      type: 'text',
+    },
+  },
+  dayNameFontStyle: {
+    name: 'Стиль шрифта дня недели',
+    description: 'Стиль шрифта дня недели',
+    table: {
+      category: 'Форма',
+    },
+    control: {
+      type: 'text',
+    },
+  },
+  dayNameFontColor: {
+    name: 'Цвет шрифта дня недели',
+    description: 'Цвет шрифта дня недели',
+    table: {
+      category: 'Представление',
+      subcategory: 'Цвет',
+    },
+    control: {
+      type: 'color',
+    },
+  },
+  dayNameFontWeight: {
+    name: 'Толщина шрифта дня недели',
+    description: 'Толщина шрифта дня недели',
+    table: {
+      category: 'Форма',
+    },
+    control: {
+      type: 'number',
     },
   },
   cellMargin: {
