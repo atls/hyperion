@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/upload": "workspace:0.0.5"
+    "@atls-ui-parts/upload": "workspace:0.0.6"
   },
   "devDependencies": {
     "@emotion/styled": "^11.8.1",

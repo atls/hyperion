@@ -12,10 +12,10 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/checkbox": "workspace:0.0.4",
-    "@atls-ui-parts/conditional-render": "workspace:0.0.2",
-    "@atls-ui-parts/hidden-input": "workspace:0.0.4",
-    "@atls-ui-proto/layout": "workspace:0.0.4",
+    "@atls-ui-parts/checkbox": "workspace:0.0.5",
+    "@atls-ui-parts/conditional-render": "workspace:0.0.3",
+    "@atls-ui-parts/hidden-input": "workspace:0.0.5",
+    "@atls-ui-proto/layout": "workspace:0.0.5",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   },

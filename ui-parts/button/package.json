@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/button",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/styles": "workspace:0.0.2"
+    "@atls-ui-parts/styles": "workspace:0.0.3"
   },
   "devDependencies": {
     "@atls/storybook-google-fonts": "workspace:0.0.0",

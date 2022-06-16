@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/select",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/styles": "workspace:0.0.2",
+    "@atls-ui-parts/styles": "workspace:0.0.3",
     "downshift": "^6.1.7"
   },
   "devDependencies": {
