@@ -995,6 +995,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui-proto/image@workspace:ui-proto/image":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-proto/image@workspace:ui-proto/image"
+  dependencies:
+    "@atls-ui-parts/image": "workspace:0.0.2"
+    "@emotion/styled": ^11.8.1
+    "@types/react": ^18.0.12
+    "@types/styled-system": ^5.1.15
+    react: ^18.1.0
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-proto/input@workspace:0.0.10, @atls-ui-proto/input@workspace:ui-proto/input":
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/input@workspace:ui-proto/input"
