@@ -225,6 +225,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:ui-proto/popover"\
       },\
       {\
+        "name": "@atls-ui-proto/progress",\
+        "reference": "workspace:ui-proto/progress"\
+      },\
+      {\
         "name": "@atls-ui-proto/text",\
         "reference": "workspace:ui-proto/text"\
       },\
@@ -266,7 +270,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-parts/layout", ["virtual:05661ed084282549d2e8c0be1bd6ecb8f024bad5e0c094b66edb1977b4494bc4013d21d7a79374c70845f540c8b4016534937277bba9260d1676f2955ea22484#workspace:ui-parts/layout", "virtual:0fb63da0303c928b853ee6ca0e891ea755d97edab1a9215b8a99dc96704d0fbdf57052c58d77c55fed64df8b96cc32123f70d0e306086db709a9c8efd881b8d9#workspace:ui-parts/layout", "virtual:6a5629294184c770a371d25f5e0534207a536d83e7ffdebc09c3c39f5b82cf0ef952511afed2e493ef31c6035b47fb285a149768102c37c0608137c571cf4955#workspace:ui-parts/layout", "virtual:6cb7b8e9f1c69fb854d324ecb7311c8b53f1d3dd2ae546e548e3ba83a721f1b562e9885fa940c326b4b72f39b3ee42ee67c0bbe88a999acb887b2b3ee59e262c#workspace:ui-parts/layout", "virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#workspace:ui-parts/layout", "virtual:937fb0364248873ae59b9853300486d03005abda92eaabc1af692cdbfe45a10bb44400f85b426164577e95380d1eb384e54a3525e8f98eff7f80d492dbab08a5#workspace:ui-parts/layout", "workspace:ui-parts/layout"]],\
       ["@atls-ui-parts/link", ["virtual:9df4b6121afbf3178186530d8221f13c6edd37dae07cfff1c8d82eab5c7ad2c6a836d4984d5ca98b1ff48958789f0963eb1ab0f81bceb13866053f0d4c336b43#workspace:ui-parts/link", "workspace:ui-parts/link"]],\
       ["@atls-ui-parts/portal", ["virtual:454e6a2a20b3f7b949146f713f5c901cee89fcdc636e159ba8c98602205f8f06f88bd249b88a8d811497de630cbb5732fc9450fd16f97b60ff489807d975d67b#workspace:ui-parts/portal", "workspace:ui-parts/portal"]],\
-      ["@atls-ui-parts/progress", ["workspace:ui-parts/progress"]],\
+      ["@atls-ui-parts/progress", ["virtual:1dbda4ab9af3c048167930de7be0439e27b0a8fdd9302e8c774e437c76a2e10e88042f8425b5d8a4fa4d221a4a484c92ee18d193b4abf8e31c354b841f7e43c7#workspace:ui-parts/progress", "workspace:ui-parts/progress"]],\
       ["@atls-ui-parts/scalable-content", ["virtual:0b5baded8ac224bd0ff38cc06a25fac3affcc4755076c022e4a8c5742fa22501180115d9de4962c879c4883c33012d6404926bb156270710571357dedb4448dc#workspace:ui-parts/scalable-content", "virtual:8ff8419dbee00cc0c83b7b6d32fbeb50dc75d0dd309715c87475ebf86235e9494fdb5049b2a89f489c647e2e7af97eee19274b3f214d0b70b64e9b5272baf61f#workspace:ui-parts/scalable-content", "workspace:ui-parts/scalable-content"]],\
       ["@atls-ui-parts/select", ["workspace:ui-parts/select"]],\
       ["@atls-ui-parts/sidebar", ["workspace:ui-parts/sidebar"]],\
@@ -277,7 +281,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-parts/tooltip", ["virtual:715735a4a2e8d54905169134c454af6bc069cd38753b21c330a59c9416baae469297a98652616fe195b447efe73a93ec5d519bc00280e9faea2d12c5bf015e0a#workspace:ui-parts/tooltip", "workspace:ui-parts/tooltip"]],\
       ["@atls-ui-parts/upload", ["virtual:0fb63da0303c928b853ee6ca0e891ea755d97edab1a9215b8a99dc96704d0fbdf57052c58d77c55fed64df8b96cc32123f70d0e306086db709a9c8efd881b8d9#workspace:ui-parts/upload", "workspace:ui-parts/upload"]],\
       ["@atls-ui-proto/avatar", ["workspace:ui-proto/avatar"]],\
-      ["@atls-ui-proto/button", ["virtual:8ab0d223413e4a5b27571f1c73894c535886604495082c387b7a0550543032cc9edb2f3bacbd8a158ce759eb80f55bdc97c04ada24d35b3a9f99344dd6001802#workspace:ui-proto/button", "virtual:c7650fe93d93d6badbf40c247530f86eaec9d8a36e117d7f3b39338dbb28c3785f1a2bbe765bd4495ac8e44c34ce280fcb986eba497de7f2dccdfac3d3df5836#workspace:ui-proto/button", "workspace:ui-proto/button"]],\
+      ["@atls-ui-proto/button", ["virtual:0cc041a9bc6e3780c29cb544a012cc2381437b22bd6f062cd6517fa281a779e423013ba81f8b8dfc43f6d48307aed5e68eea7abdc512aa210ea06d55bf2a5b88#workspace:ui-proto/button", "virtual:8ab0d223413e4a5b27571f1c73894c535886604495082c387b7a0550543032cc9edb2f3bacbd8a158ce759eb80f55bdc97c04ada24d35b3a9f99344dd6001802#workspace:ui-proto/button", "virtual:c7650fe93d93d6badbf40c247530f86eaec9d8a36e117d7f3b39338dbb28c3785f1a2bbe765bd4495ac8e44c34ce280fcb986eba497de7f2dccdfac3d3df5836#workspace:ui-proto/button", "workspace:ui-proto/button"]],\
       ["@atls-ui-proto/carousel", ["workspace:ui-proto/carousel"]],\
       ["@atls-ui-proto/core", ["virtual:bb06bdcdae3b061e76e9ad7fea09e7dc650398f0b3fd10f822a91664c29abc29be01a17bbe6c1c5f8b1f919d1c43b293e06c20c18f35413e993b27fdd1b28dfa#workspace:ui-proto/core", "workspace:ui-proto/core"]],\
       ["@atls-ui-proto/design", ["workspace:ui-proto/design"]],\
@@ -290,6 +294,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-proto/parallax", ["workspace:ui-proto/parallax"]],\
       ["@atls-ui-proto/placeholder", ["workspace:ui-proto/placeholder"]],\
       ["@atls-ui-proto/popover", ["workspace:ui-proto/popover"]],\
+      ["@atls-ui-proto/progress", ["workspace:ui-proto/progress"]],\
       ["@atls-ui-proto/text", ["workspace:ui-proto/text"]],\
       ["@atls-ui-proto/theme", ["virtual:8ab0d223413e4a5b27571f1c73894c535886604495082c387b7a0550543032cc9edb2f3bacbd8a158ce759eb80f55bdc97c04ada24d35b3a9f99344dd6001802#workspace:ui-proto/theme", "workspace:ui-proto/theme"]],\
       ["@atls-ui/design", ["workspace:ui/design"]],\
@@ -1763,6 +1768,39 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@atls-ui-parts/progress", [\
+        ["virtual:1dbda4ab9af3c048167930de7be0439e27b0a8fdd9302e8c774e437c76a2e10e88042f8425b5d8a4fa4d221a4a484c92ee18d193b4abf8e31c354b841f7e43c7#workspace:ui-parts/progress", {\
+          "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-progress-virtual-0cc041a9bc/1/ui-parts/progress/",\
+          "packageDependencies": [\
+            ["@atls-ui-parts/progress", "virtual:1dbda4ab9af3c048167930de7be0439e27b0a8fdd9302e8c774e437c76a2e10e88042f8425b5d8a4fa4d221a4a484c92ee18d193b4abf8e31c354b841f7e43c7#workspace:ui-parts/progress"],\
+            ["@atls-ui-parts/layout", "virtual:0fb63da0303c928b853ee6ca0e891ea755d97edab1a9215b8a99dc96704d0fbdf57052c58d77c55fed64df8b96cc32123f70d0e306086db709a9c8efd881b8d9#workspace:ui-parts/layout"],\
+            ["@atls-ui-proto/button", "virtual:0cc041a9bc6e3780c29cb544a012cc2381437b22bd6f062cd6517fa281a779e423013ba81f8b8dfc43f6d48307aed5e68eea7abdc512aa210ea06d55bf2a5b88#workspace:ui-proto/button"],\
+            ["@emotion/react", "virtual:f82126c62b7b0d0900b6ba99ce1854779dcacc0684d87910375fe54da64aa4d830109285c7ffb92edf8d294cbeced1703d22d1e32a0c5b02a241297909681b45#npm:11.9.0"],\
+            ["@emotion/styled", "virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#npm:11.9.3"],\
+            ["@testing-library/react", "virtual:c7650fe93d93d6badbf40c247530f86eaec9d8a36e117d7f3b39338dbb28c3785f1a2bbe765bd4495ac8e44c34ce280fcb986eba497de7f2dccdfac3d3df5836#npm:10.4.9"],\
+            ["@types/emotion__react", null],\
+            ["@types/emotion__styled", null],\
+            ["@types/react", "npm:18.0.12"],\
+            ["@types/react-dom", "npm:18.0.5"],\
+            ["@types/styled-system", "npm:5.1.15"],\
+            ["@types/styled-tools", null],\
+            ["react", "npm:18.1.0"],\
+            ["react-dom", "virtual:7424fd0f7efcd3c996ebdbca622985b9e1722ee481295615809e1bf5c337db772fa2c4734738628f842b91b27a33977d4c7920a9d185b19fb16e27b37bfeabdc#npm:18.1.0"],\
+            ["styled-system", "npm:5.1.5"],\
+            ["styled-tools", "npm:1.7.2"]\
+          ],\
+          "packagePeers": [\
+            "@emotion/styled",\
+            "@types/emotion__react",\
+            "@types/emotion__styled",\
+            "@types/react",\
+            "@types/styled-system",\
+            "@types/styled-tools",\
+            "react",\
+            "styled-system",\
+            "styled-tools"\
+          ],\
+          "linkType": "SOFT"\
+        }],\
         ["workspace:ui-parts/progress", {\
           "packageLocation": "./ui-parts/progress/",\
           "packageDependencies": [\
@@ -2174,6 +2212,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@atls-ui-proto/button", [\
+        ["virtual:0cc041a9bc6e3780c29cb544a012cc2381437b22bd6f062cd6517fa281a779e423013ba81f8b8dfc43f6d48307aed5e68eea7abdc512aa210ea06d55bf2a5b88#workspace:ui-proto/button", {\
+          "packageLocation": "./.yarn/__virtual__/@atls-ui-proto-button-virtual-b7a9cafcb4/1/ui-proto/button/",\
+          "packageDependencies": [\
+            ["@atls-ui-proto/button", "virtual:0cc041a9bc6e3780c29cb544a012cc2381437b22bd6f062cd6517fa281a779e423013ba81f8b8dfc43f6d48307aed5e68eea7abdc512aa210ea06d55bf2a5b88#workspace:ui-proto/button"],\
+            ["@atls-ui-parts/button", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#workspace:ui-parts/button"],\
+            ["@emotion/is-prop-valid", "npm:1.1.0"],\
+            ["@emotion/styled", "virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#npm:11.9.3"],\
+            ["@types/emotion__styled", null],\
+            ["@types/react", "npm:18.0.12"],\
+            ["@types/styled-system", "npm:5.1.15"],\
+            ["@types/styled-tools", null],\
+            ["react", "npm:18.1.0"],\
+            ["styled-system", "npm:5.1.5"],\
+            ["styled-tools", "npm:1.7.2"]\
+          ],\
+          "packagePeers": [\
+            "@emotion/styled",\
+            "@types/emotion__styled",\
+            "@types/react",\
+            "@types/styled-system",\
+            "@types/styled-tools",\
+            "react",\
+            "styled-system",\
+            "styled-tools"\
+          ],\
+          "linkType": "SOFT"\
+        }],\
         ["virtual:8ab0d223413e4a5b27571f1c73894c535886604495082c387b7a0550543032cc9edb2f3bacbd8a158ce759eb80f55bdc97c04ada24d35b3a9f99344dd6001802#workspace:ui-proto/button", {\
           "packageLocation": "./.yarn/__virtual__/@atls-ui-proto-button-virtual-284345f444/1/ui-proto/button/",\
           "packageDependencies": [\
@@ -2535,6 +2600,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:7424fd0f7efcd3c996ebdbca622985b9e1722ee481295615809e1bf5c337db772fa2c4734738628f842b91b27a33977d4c7920a9d185b19fb16e27b37bfeabdc#npm:18.1.0"],\
             ["react-laag", "virtual:a15e8e386f0848c0efd1eadd9a418d80b9207ea53e0c7f932b55172b55bab6135bd431fc36ca11d76fcc0ab5326a613011578020d3e8cc4305b9b1c2946b74b4#npm:1.7.3"],\
             ["styled-system", "npm:5.1.5"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@atls-ui-proto/progress", [\
+        ["workspace:ui-proto/progress", {\
+          "packageLocation": "./ui-proto/progress/",\
+          "packageDependencies": [\
+            ["@atls-ui-proto/progress", "workspace:ui-proto/progress"],\
+            ["@atls-ui-parts/progress", "virtual:1dbda4ab9af3c048167930de7be0439e27b0a8fdd9302e8c774e437c76a2e10e88042f8425b5d8a4fa4d221a4a484c92ee18d193b4abf8e31c354b841f7e43c7#workspace:ui-parts/progress"],\
+            ["@emotion/styled", "virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#npm:11.9.3"],\
+            ["@types/react", "npm:18.0.12"],\
+            ["@types/styled-system", "npm:5.1.15"],\
+            ["react", "npm:18.1.0"],\
+            ["styled-system", "npm:5.1.5"],\
+            ["styled-tools", "npm:1.7.2"]\
           ],\
           "linkType": "SOFT"\
         }]\
