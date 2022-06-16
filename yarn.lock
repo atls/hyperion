@@ -444,7 +444,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/checkbox@workspace:ui-parts/checkbox":
+"@atls-ui-parts/checkbox@workspace:0.0.4, @atls-ui-parts/checkbox@workspace:ui-parts/checkbox":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/checkbox@workspace:ui-parts/checkbox"
   dependencies:
@@ -931,6 +931,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui-proto/checkbox@workspace:ui-proto/checkbox":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-proto/checkbox@workspace:ui-proto/checkbox"
+  dependencies:
+    "@atls-ui-parts/checkbox": "workspace:0.0.4"
+    "@atls-ui-parts/conditional-render": "workspace:0.0.2"
+    "@atls-ui-parts/hidden-input": "workspace:0.0.4"
+    "@atls-ui-proto/layout": "workspace:0.0.4"
+    "@emotion/react": ^11.4.1
+    "@emotion/styled": ^11.3.0
+    react: ^17.0.2
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/react": ^11.4.1
+    "@emotion/styled": ^11.3.0
+    react: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-proto/core@workspace:0.1.0, @atls-ui-proto/core@workspace:ui-proto/core":
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/core@workspace:ui-proto/core"
@@ -1134,9 +1154,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-proto/progress@workspace:ui-proto/upload":
+"@atls-ui-proto/progress@workspace:ui-proto/progress":
   version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/progress@workspace:ui-proto/upload"
+  resolution: "@atls-ui-proto/progress@workspace:ui-proto/progress"
   dependencies:
     "@atls-ui-parts/progress": "workspace:0.0.9"
     "@emotion/styled": ^11.8.1
@@ -1178,9 +1198,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-proto/upload@workspace:ui-proto/progress":
+"@atls-ui-proto/upload@workspace:ui-proto/upload":
   version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/upload@workspace:ui-proto/progress"
+  resolution: "@atls-ui-proto/upload@workspace:ui-proto/upload"
   dependencies:
     "@atls-ui-parts/upload": "workspace:0.0.5"
     "@emotion/styled": ^11.8.1
@@ -3861,6 +3881,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/cache@npm:^11.9.3":
+  version: 11.9.3
+  resolution: "@emotion/cache@npm:11.9.3"
+  dependencies:
+    "@emotion/memoize": ^0.7.4
+    "@emotion/sheet": ^1.1.1
+    "@emotion/utils": ^1.0.0
+    "@emotion/weak-memoize": ^0.2.5
+    stylis: 4.0.13
+  checksum: 6e0aab2fa5b9b6b0b9bf66b5328ed44265c23ced16b46c13d2602c3497fabd95299f6cf2c87cbc02b630452aa3cff599c194c538125d744aa135824129698ccc
+  languageName: node
+  linkType: hard
+
 "@emotion/core@npm:^10.1.1":
   version: 10.3.1
   resolution: "@emotion/core@npm:10.3.1"
@@ -4008,6 +4041,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/react@npm:^11.4.1":
+  version: 11.9.3
+  resolution: "@emotion/react@npm:11.9.3"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@emotion/babel-plugin": ^11.7.1
+    "@emotion/cache": ^11.9.3
+    "@emotion/serialize": ^1.0.4
+    "@emotion/utils": ^1.1.0
+    "@emotion/weak-memoize": ^0.2.5
+    hoist-non-react-statics: ^3.3.1
+  peerDependencies:
+    "@babel/core": ^7.0.0
+    react: ">=16.8.0"
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    "@types/react":
+      optional: true
+  checksum: 19bc7205e85e87cadebbe5a926d45103b836af70ab6972ea4c333c8dd01b463fc9646d4e4097a36f145a05dd4bc388739667437b990f8cf7f7f925f9610d1aa8
+  languageName: node
+  linkType: hard
+
 "@emotion/serialize@npm:*, @emotion/serialize@npm:^1.0.3":
   version: 1.0.3
   resolution: "@emotion/serialize@npm:1.0.3"
@@ -4074,6 +4130,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/sheet@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@emotion/sheet@npm:1.1.1"
+  checksum: b916ac665735ef6dfda26b09f2d3493789d432d649733db9da18c4db0115e7fdadeb8d45f6490320248916bb13d978bba74c914b711ac96f659b76a5e52d5cd2
+  languageName: node
+  linkType: hard
+
 "@emotion/styled-base@npm:*":
   version: 11.0.0
   resolution: "@emotion/styled-base@npm:11.0.0"
@@ -4131,7 +4194,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:^11.8.1":
+"@emotion/styled@npm:^11.3.0, @emotion/styled@npm:^11.8.1":
   version: 11.9.3
   resolution: "@emotion/styled@npm:11.9.3"
   dependencies:
@@ -18434,6 +18497,16 @@ __metadata:
   dependencies:
     loose-envify: ^1.1.0
   checksum: 5bb296b561b43ef2220395da4faac86c14a087c8c80e1a7598a5740f01ee605c11eaf249985c1e2000971c4cd32ccb46d40f00479bbd9fb6b1c7cf857393b7d4
+  languageName: node
+  linkType: hard
+
+"react@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "react@npm:17.0.2"
+  dependencies:
+    loose-envify: ^1.1.0
+    object-assign: ^4.1.1
+  checksum: b254cc17ce3011788330f7bbf383ab653c6848902d7936a87b09d835d091e3f295f7e9dd1597c6daac5dc80f90e778c8230218ba8ad599f74adcc11e33b9d61b
   languageName: node
   linkType: hard
 

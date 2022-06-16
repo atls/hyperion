@@ -1,0 +1,37 @@
+{
+  "name": "@atls-ui-proto/checkbox",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn library build",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
+  },
+  "dependencies": {
+    "@atls-ui-parts/checkbox": "workspace:0.0.4",
+    "@atls-ui-parts/conditional-render": "workspace:0.0.2",
+    "@atls-ui-parts/hidden-input": "workspace:0.0.4",
+    "@atls-ui-proto/layout": "workspace:0.0.4",
+    "styled-system": "^5.1.5",
+    "styled-tools": "^1.7.2"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "react": "^17.0.2"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "react": "^17.0.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  }
+}
