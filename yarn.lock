@@ -1134,9 +1134,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-proto/progress@workspace:ui-proto/progress":
+"@atls-ui-proto/progress@workspace:ui-proto/upload":
   version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/progress@workspace:ui-proto/progress"
+  resolution: "@atls-ui-proto/progress@workspace:ui-proto/upload"
   dependencies:
     "@atls-ui-parts/progress": "workspace:0.0.9"
     "@emotion/styled": ^11.8.1
@@ -1175,6 +1175,25 @@ __metadata:
   peerDependencies:
     "@emotion/react": ^11.1.5
     react: ^17.0.1
+  languageName: unknown
+  linkType: soft
+
+"@atls-ui-proto/upload@workspace:ui-proto/progress":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-proto/upload@workspace:ui-proto/progress"
+  dependencies:
+    "@atls-ui-parts/upload": "workspace:0.0.5"
+    "@emotion/styled": ^11.8.1
+    "@types/react": ^18.0.12
+    "@types/styled-system": ^5.1.15
+    react: ^18.1.0
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
   languageName: unknown
   linkType: soft
 
