@@ -15,7 +15,7 @@
     "@atls/config-prettier": "^0.0.5",
     "@atls/prettier-plugin": "^0.0.5",
     "camelcase": "^6.3.0",
-    "prettier": "2.5.1"
+    "prettier": "^2.5.1"
   },
   "devDependencies": {
     "@types/prettier": "^2"

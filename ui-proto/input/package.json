@@ -16,10 +16,10 @@
     "@atls-ui-parts/input": "workspace:0.0.11"
   },
   "devDependencies": {
-    "@emotion/styled": "^11.8.1",
-    "@types/react": "^18.0.12",
+    "@emotion/styled": "^11.9.3",
+    "@types/react": "^18.0.14",
     "@types/styled-system": "^5.1.15",
-    "react": "^18.1.0",
+    "react": "^18.2.0",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   },
