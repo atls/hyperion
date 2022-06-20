@@ -4,29 +4,24 @@ import { Children }          from 'react'
 import { PropsWithChildren } from 'react'
 import { FunctionComponent } from 'react'
 import { Arrow }             from 'react-laag'
-import { ToggleLayer }       from 'react-laag'
 import { cloneElement }      from 'react'
 import { forwardRef }        from 'react'
-import { useHover }          from 'react-laag'
+import { useLayer }          from 'react-laag'
 
 import { Container }         from './container'
 import { TooltipProps }      from './tooltip.interfaces'
+import { useClick }          from './hooks'
+import { useContextMenu }    from './hooks'
+import { useHover }          from './hooks'
 
-const DefaultContainer = forwardRef((
-  { text, showArrow, arrowStyle, layerSide, ...props }: any,
-  ref
-) => (
+const doNothing = () => {
+  // do nothing
+}
+
+const DefaultContainer = forwardRef(({ text, arrow, ...props }: any, ref) => (
   <Container ref={ref} {...props}>
     {text}
-    {showArrow && (
-      <Arrow
-        style={arrowStyle}
-        layerSide={layerSide}
-        backgroundColor='rgba(0, 0, 0, 0.75)'
-        angle={30}
-        size={8}
-      />
-    )}
+    {arrow}
   </Container>
 ))
 
@@ -37,116 +32,127 @@ export const Tooltip: FunctionComponent<PropsWithChildren<TooltipProps>> = ({
   mouseEnterDelay,
   mouseLeaveDelay,
   anchor,
-  possibleAnchors,
-  triggerOffset,
-  autoAdjust,
-  fixed,
-  scrollOffset,
-  snapToAnchor,
-  container,
-  layerDimensions,
   closeOnOutsideClick,
-  closeOnDisappear,
   isOpen,
-  animate,
   children,
+  container,
+  animate,
+  arrowOptions,
+  ...props
 }) => {
-  const [open, hoverProps] = useHover({
+  const [isOver, hoverProps] = useHover({
     delayEnter: mouseEnterDelay,
     delayLeave: mouseLeaveDelay,
   })
+  const [isContextMenu, closeContextMenu, contextMenuProps] = useContextMenu()
+  const [isClicked, closeClicked, clickedProps] = useClick()
 
-  const getTriggerProps = (toggle) => {
+  const getClose = (): (() => void) => {
+    if (trigger === 'click') return closeClicked
+    if (trigger === 'menu') return closeContextMenu
+
+    return doNothing
+  }
+
+  const getTrigger = (): boolean => {
     if (typeof isOpen === 'boolean') {
-      return {}
+      return isOpen
     }
-    return (
-      (trigger === 'hover' && hoverProps) ||
-      (trigger === 'click' && { onClick: toggle }) ||
-      (trigger === 'menu' && {
-        onContextMenu: (event) => {
-          event.preventDefault()
-          toggle()
-        },
+    if (trigger === 'hover') return isOver
+    if (trigger === 'click') return isClicked
+    if (trigger === 'menu') return isContextMenu
+
+    return false
+  }
+
+  const { triggerProps, layerProps, layerSide, arrowProps, renderLayer } = useLayer({
+    isOpen: getTrigger(),
+    onOutsideClick: closeOnOutsideClick ? getClose() : doNothing,
+    placement: anchor,
+    ...props,
+  })
+
+  const getTriggerProps = () => {
+    if (trigger === 'hover') return { ...triggerProps, ...hoverProps }
+    if (trigger === 'click') return { ...triggerProps, ...clickedProps }
+    if (trigger === 'menu') return { ...triggerProps, ...contextMenuProps }
+
+    return triggerProps
+  }
+
+  const getChildrenControls = (): [boolean, () => void] => {
+    if (trigger === 'click' || trigger === 'menu') return [getTrigger(), getClose()]
+
+    return [getTrigger(), doNothing]
+  }
+
+  const getContainerControls = (): [() => void] => {
+    if (trigger === 'click' || trigger === 'menu') return [getClose()]
+
+    return [doNothing]
+  }
+
+  const renderChildren = () => {
+    if (typeof children === 'function') return children(...getChildrenControls())
+
+    return Children.only(
+      cloneElement(children as any, {
+        ...getTriggerProps(),
       })
+    )
+  }
+  const renderContainerWithoutArrow = () => {
+    if (typeof container === 'function') return container(...getContainerControls())
+
+    return cloneElement(container!, {
+      ...layerProps,
+      text,
+    })
+  }
+  const renderContainerWithArrow = () => {
+    const renderedContainer = renderContainerWithoutArrow()
+
+    const arrow = <Arrow {...layerSide} {...arrowProps} {...arrowOptions} />
+
+    return cloneElement(renderedContainer, { arrow })
+  }
+  const renderContainer = () => {
+    if (showArrow) return renderContainerWithArrow()
+
+    return renderContainerWithoutArrow()
+  }
+
+  if (animate) {
+    return (
+      <>
+        {renderChildren()}
+        {renderLayer(<AnimatePresence>{getTrigger() && renderContainer()}</AnimatePresence>)}
+      </>
     )
   }
 
   return (
-    <ToggleLayer
-      renderLayer={({ layerProps, isOpen: isOpenLayer, arrowStyle, layerSide, close }) => {
-        if (animate) {
-          return (
-            <AnimatePresence>
-              {isOpenLayer &&
-                // @ts-ignore
-                cloneElement(container, {
-                  ref: layerProps.ref,
-                  style: layerProps.style,
-                  close,
-                  text,
-                  showArrow,
-                  arrowStyle,
-                  layerSide,
-                  animate,
-                })}
-            </AnimatePresence>
-          )
-        }
-        return (
-          isOpenLayer &&
-          // @ts-ignore
-          cloneElement(container, {
-            ref: layerProps.ref,
-            style: layerProps.style,
-            close,
-            text,
-            showArrow,
-            arrowStyle,
-            layerSide,
-            animate,
-          })
-        )
-      }}
-      placement={{
-        anchor,
-        possibleAnchors,
-        triggerOffset,
-        scrollOffset,
-        snapToAnchor,
-        autoAdjust,
-        layerDimensions,
-      }}
-      closeOnOutsideClick={closeOnOutsideClick}
-      closeOnDisappear={closeOnDisappear}
-      fixed={fixed}
-      isOpen={(typeof isOpen === 'boolean' && isOpen) || (trigger === 'hover' && open) || undefined}
-    >
-      {({ triggerRef, toggle }) =>
-        Children.only(
-          cloneElement(children, {
-            ref: triggerRef,
-            ...getTriggerProps(toggle),
-          })
-        )
-      }
-    </ToggleLayer>
+    <>
+      {renderChildren()}
+      {renderLayer(getTrigger() && renderContainer())}
+    </>
   )
 }
 
 Tooltip.defaultProps = {
-  trigger: 'hover',
-  showArrow: false,
+  trigger: 'click',
+  showArrow: true,
+  arrowOptions: {
+    angle: 30,
+    size: 8,
+    backgroundColor: 'rgba(0, 0, 0, 0.75)',
+  },
   mouseEnterDelay: 100,
   mouseLeaveDelay: 100,
-  anchor: 'TOP_CENTER',
+  anchor: 'top-center',
   triggerOffset: 8,
-  autoAdjust: true,
-  fixed: false,
-  scrollOffset: 8,
-  snapToAnchor: false,
   animate: false,
   closeOnOutsideClick: true,
-  closeOnDisappear: 'full',
   container: <DefaultContainer />,
+  text: 'Text',
 }

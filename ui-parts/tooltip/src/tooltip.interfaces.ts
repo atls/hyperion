@@ -1,42 +1,41 @@
-export type TooltipAnchor =
-  | 'BOTTOM_LEFT'
-  | 'BOTTOM_RIGHT'
-  | 'BOTTOM_CENTER'
-  | 'TOP_LEFT'
-  | 'TOP_RIGHT'
-  | 'TOP_CENTER'
-  | 'LEFT_BOTTOM'
-  | 'LEFT_TOP'
-  | 'LEFT_CENTER'
-  | 'RIGHT_BOTTOM'
-  | 'RIGHT_TOP'
-  | 'RIGHT_CENTER'
-  | 'CENTER'
+import { UseLayerOptions } from 'react-laag'
+import { Placement }       from 'react-laag'
+
 export type TooltipTrigger = 'click' | 'hover' | 'menu'
-export type TooltipCloseOnDisappear = 'partial' | 'full'
+
 export type LayerDimensions = (layerSide: string) => {
   width: number
   height: number
 }
 
-export interface TooltipProps {
+export type ContainerFunction = (close: () => void) => React.ReactElement
+
+export type ChildrenFunction = (trigger: boolean, close: () => void) => React.ReactElement
+
+export interface ArrowOptions {
+  angle?: number | undefined
+  size?: number | undefined
+  roundness?: number | undefined
+  borderWidth?: number | undefined
+  borderColor?: string | undefined
+  backgroundColor?: string | undefined
+}
+
+export interface TooltipProps
+  extends Omit<
+    UseLayerOptions,
+    'placement' | 'onOutsideClick' | 'isOpen' | 'container' | 'trigger'
+  > {
   text?: string | number
   trigger?: TooltipTrigger
   showArrow?: boolean
   mouseEnterDelay?: number
   mouseLeaveDelay?: number
-  anchor?: TooltipAnchor
-  possibleAnchors?: TooltipAnchor[]
+  anchor?: Placement
   closeOnOutsideClick?: boolean
-  closeOnDisappear?: TooltipCloseOnDisappear
-  triggerOffset?: number
-  autoAdjust?: boolean
-  fixed?: boolean
-  scrollOffset?: number
-  snapToAnchor?: boolean
-  layerDimensions?: LayerDimensions
   animate?: boolean
   isOpen?: boolean
-  container?: React.ReactElement
-  children: React.ReactElement
+  container?: React.ReactElement | ContainerFunction
+  children: React.ReactElement | ChildrenFunction
+  arrowOptions?: ArrowOptions
 }
