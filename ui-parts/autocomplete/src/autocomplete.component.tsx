@@ -2,6 +2,7 @@
 
 import React                       from 'react'
 import { AnimatePresence }         from 'framer-motion'
+import { Placement }               from 'react-laag'
 import { useCombobox }             from 'downshift'
 import { useEffect }               from 'react'
 import { useState }                from 'react'
@@ -16,11 +17,9 @@ import { Menu }                    from './menu'
 import { MenuItem }                from './menu-item'
 import { createMenuItemsRenderer } from './factories'
 import { createMenuRenderer }      from './factories'
-import { createInputRenderer }     from './factories'
 
 const MenuItemsRenderer = createMenuItemsRenderer(MenuItem)
 const MenuRenderer = createMenuRenderer(Menu)
-const inputRenderer = createInputRenderer(Input)
 
 const defaultGetOptionLabel = (option) => (option ? option.value : '')
 
@@ -58,6 +57,10 @@ const Autocomplete = (
 
   const { layerProps, renderLayer, triggerProps, triggerBounds } = useLayer({
     isOpen,
+    placement: 'bottom-start',
+    auto: true,
+    triggerOffset: 0,
+    possiblePlacements: ['bottom-start', 'top-start'] as Array<Placement>,
   })
 
   useEffect(() => {
@@ -83,16 +86,18 @@ const Autocomplete = (
     </Indicator>
   )
 
-  const Input = inputRenderer(getInputProps, { onFocus: openMenu, suffix })
+  const { onChange: downshiftOnChange, ...restProps } = getInputProps(triggerProps)
+  const inputProps = { ...restProps, onChangeNative: downshiftOnChange }
+  const menuProps = getMenuProps({ style: {} })
 
   return (
     <>
-      <Input triggerRef={triggerProps.ref} />
+      <Input onFocus={openMenu} suffix={suffix} {...inputProps} />
       {renderLayer(
         <AnimatePresence>
           {isOpen && (
-            <Layer ref={layerProps.ref} style={layerProps.style} width={triggerBounds?.width || 0}>
-              <MenuRenderer getMenuProps={getMenuProps}>
+            <Layer ref={layerProps.ref} style={layerProps.style} width={triggerBounds?.width}>
+              <MenuRenderer {...menuProps}>
                 <MenuItemsRenderer
                   items={items}
                   getItemProps={getItemProps}
