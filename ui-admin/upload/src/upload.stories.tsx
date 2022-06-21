@@ -13,7 +13,9 @@ export const Base = () => (
   <MockedProvider mocks={[]} addTypename={false}>
     <Upload
       placeholder={
-        <DropzonePlaceholder accept='.SVG .PNG .JPG'>Нажмите, чтобы загрузить</DropzonePlaceholder>
+        <DropzonePlaceholder accept={{ '.SVG': [], '.PNG': [], '.JPG': [] }}>
+          Нажмите, чтобы загрузить
+        </DropzonePlaceholder>
       }
     >
       <div style={{ height: 200, width: '100%' }} />

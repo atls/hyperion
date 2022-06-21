@@ -11,7 +11,7 @@ import { Placeholder }  from './placeholder.component'
 
 const Upload: any = ({
   children,
-  accept = '',
+  accept = {},
   multiple = false,
   placeholder,
   onPreview,

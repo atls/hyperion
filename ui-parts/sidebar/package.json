@@ -12,9 +12,9 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@emotion/styled": "11.8.1",
+    "@emotion/styled": "^11.9.3",
     "framer-motion": "6.3.11",
-    "react": "18.1.0"
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@atls-ui-parts/layout": "workspace:0.0.5",
@@ -30,7 +30,7 @@
   "peerDependencies": {
     "@emotion/styled": "11.3.0",
     "framer-motion": "4.1.17",
-    "react": "17.0.2",
+    "react": "^17.0.2",
     "styled-system": "*",
     "styled-tools": "*"
   },

@@ -1,9 +1,12 @@
 /* eslint-disable no-shadow */
 
 import React                       from 'react'
+import { AnimatePresence }         from 'framer-motion'
+import { Placement }               from 'react-laag'
 import { useCombobox }             from 'downshift'
 import { useEffect }               from 'react'
 import { useState }                from 'react'
+import { useLayer }                from 'react-laag'
 
 import { Input }                   from '@atls-ui-proto/input'
 
@@ -12,16 +15,11 @@ import { Indicator }               from './indicator'
 import { Layer }                   from './layer'
 import { Menu }                    from './menu'
 import { MenuItem }                from './menu-item'
-import { ToggleLayer }             from './toggle-layer'
 import { createMenuItemsRenderer } from './factories'
 import { createMenuRenderer }      from './factories'
-import { createInputRenderer }     from './factories'
-import { createLayerRenderer }     from './factories'
 
 const MenuItemsRenderer = createMenuItemsRenderer(MenuItem)
-const LayerRenderer = createLayerRenderer(Layer)
 const MenuRenderer = createMenuRenderer(Menu)
-const inputRenderer = createInputRenderer(Input)
 
 const defaultGetOptionLabel = (option) => (option ? option.value : '')
 
@@ -57,6 +55,14 @@ const Autocomplete = (
     },
   })
 
+  const { layerProps, renderLayer, triggerProps, triggerBounds } = useLayer({
+    isOpen,
+    placement: 'bottom-start',
+    auto: true,
+    triggerOffset: 0,
+    possiblePlacements: ['bottom-start', 'top-start'] as Array<Placement>,
+  })
+
   useEffect(() => {
     if (inputValue && selectedItem && inputValue !== getOptionLabel(selectedItem)) {
       setItems(
@@ -74,30 +80,37 @@ const Autocomplete = (
     }
   }, [inputValue, onInputChange])
 
-  const renderLayer = ({ isOpen, layerProps, triggerRect }) => (
-    <LayerRenderer isOpen={isOpen} layerProps={layerProps} triggerRect={triggerRect}>
-      <MenuRenderer getMenuProps={getMenuProps}>
-        <MenuItemsRenderer
-          items={items}
-          getItemProps={getItemProps}
-          highlightedIndex={highlightedIndex}
-          selectedItem={selectedItem}
-          getOptionLabel={getOptionLabel}
-        />
-      </MenuRenderer>
-    </LayerRenderer>
-  )
-
   const suffix = (
     <Indicator {...getToggleButtonProps()} isOpen={isOpen}>
       <Arrow />
     </Indicator>
   )
 
+  const { onChange: downshiftOnChange, ...restProps } = getInputProps(triggerProps)
+  const inputProps = { ...restProps, onChangeNative: downshiftOnChange }
+  const menuProps = getMenuProps({ style: {} })
+
   return (
-    <ToggleLayer isOpen={isOpen} renderLayer={renderLayer}>
-      {inputRenderer(getInputProps, { onFocus: openMenu, suffix })}
-    </ToggleLayer>
+    <>
+      <Input onFocus={openMenu} suffix={suffix} {...inputProps} />
+      {renderLayer(
+        <AnimatePresence>
+          {isOpen && (
+            <Layer ref={layerProps.ref} style={layerProps.style} width={triggerBounds?.width}>
+              <MenuRenderer {...menuProps}>
+                <MenuItemsRenderer
+                  items={items}
+                  getItemProps={getItemProps}
+                  highlightedIndex={highlightedIndex}
+                  selectedItem={selectedItem}
+                  getOptionLabel={getOptionLabel}
+                />
+              </MenuRenderer>
+            </Layer>
+          )}
+        </AnimatePresence>
+      )}
+    </>
   )
 }
 

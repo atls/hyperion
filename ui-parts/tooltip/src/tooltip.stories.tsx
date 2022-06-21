@@ -54,69 +54,49 @@ export const Anchor = () => (
   <Column m={50}>
     <Row mb={50}>
       <Layout mr={24}>
-        <Tooltip text='test' anchor='TOP_LEFT'>
-          <TestButton>TOP_LEFT</TestButton>
+        <Tooltip text='test' anchor='top-start'>
+          <TestButton>top-start</TestButton>
         </Tooltip>
       </Layout>
       <Layout mr={24}>
-        <Tooltip text='test' anchor='TOP_CENTER'>
-          <TestButton>TOP_CENTER</TestButton>
+        <Tooltip text='test' anchor='top-center'>
+          <TestButton>top-center</TestButton>
         </Tooltip>
       </Layout>
       <Layout>
-        <Tooltip text='test' anchor='TOP_RIGHT' possibleAnchors={['TOP_RIGHT']}>
-          <TestButton>TOP_RIGHT</TestButton>
+        <Tooltip text='test' anchor='top-end'>
+          <TestButton>top-right</TestButton>
         </Tooltip>
       </Layout>
     </Row>
     <Row mb={50}>
       <Layout mr={24}>
-        <Tooltip text='test' anchor='BOTTOM_LEFT'>
-          <TestButton>BOTTOM_LEFT</TestButton>
+        <Tooltip text='test' anchor='bottom-start'>
+          <TestButton>bottom-start</TestButton>
         </Tooltip>
       </Layout>
       <Layout mr={24}>
-        <Tooltip text='test' anchor='BOTTOM_CENTER'>
-          <TestButton>BOTTOM_CENTER</TestButton>
+        <Tooltip text='test' anchor='bottom-center'>
+          <TestButton>bottom-center</TestButton>
         </Tooltip>
       </Layout>
       <Layout>
-        <Tooltip text='test' anchor='BOTTOM_RIGHT' possibleAnchors={['BOTTOM_RIGHT']}>
-          <TestButton>BOTTOM_RIGHT</TestButton>
+        <Tooltip text='test' anchor='bottom-end'>
+          <TestButton>bottom-end</TestButton>
         </Tooltip>
       </Layout>
     </Row>
     <Row mb={50}>
       <Layout mr={24}>
-        <Tooltip text='test' anchor='LEFT_TOP'>
-          <TestButton>LEFT_TOP</TestButton>
-        </Tooltip>
-      </Layout>
-      <Layout mr={24}>
-        <Tooltip text='test' anchor='LEFT_CENTER'>
-          <TestButton>LEFT_CENTER</TestButton>
-        </Tooltip>
-      </Layout>
-      <Layout>
-        <Tooltip text='test' anchor='LEFT_BOTTOM' possibleAnchors={['LEFT_BOTTOM']}>
-          <TestButton>LEFT_BOTTOM</TestButton>
+        <Tooltip text='test' anchor='left-center'>
+          <TestButton>left-center</TestButton>
         </Tooltip>
       </Layout>
     </Row>
     <Row>
       <Layout mr={24}>
-        <Tooltip text='test' anchor='RIGHT_TOP'>
-          <TestButton>RIGHT_TOP</TestButton>
-        </Tooltip>
-      </Layout>
-      <Layout mr={24}>
-        <Tooltip text='test' anchor='RIGHT_CENTER'>
-          <TestButton>RIGHT_CENTER</TestButton>
-        </Tooltip>
-      </Layout>
-      <Layout>
-        <Tooltip text='test' anchor='RIGHT_BOTTOM' possibleAnchors={['TOP_RIGHT']}>
-          <TestButton>RIGHT_BOTTOM</TestButton>
+        <Tooltip text='test' anchor='right-center'>
+          <TestButton>right-center</TestButton>
         </Tooltip>
       </Layout>
     </Row>

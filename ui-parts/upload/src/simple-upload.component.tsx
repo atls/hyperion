@@ -5,6 +5,7 @@ import { useUpload }    from '@atls/react-upload'
 import React            from 'react'
 import { ReactElement } from 'react'
 import { FC }           from 'react'
+import { Accept }       from 'react-dropzone'
 import { cloneElement } from 'react'
 import { useEffect }    from 'react'
 import { useDropzone }  from 'react-dropzone'
@@ -18,7 +19,7 @@ export interface UploadResult {
 export interface SimpleUploadProps {
   children: ReactElement<any, any>
   bucket: string
-  accept?: string
+  accept?: Accept
   multiple?: boolean
   onFile: (result: UploadResult) => void
   onPreview?: (result: UploadResult) => void
@@ -27,7 +28,7 @@ export interface SimpleUploadProps {
 export const SimpleUpload: FC<SimpleUploadProps> = ({
   children,
   bucket,
-  accept = '',
+  accept,
   multiple = false,
   onPreview,
   onFile,
@@ -51,9 +52,7 @@ export const SimpleUpload: FC<SimpleUploadProps> = ({
         })
       }
 
-      const confirmUpload = upload(file)
-
-      confirmUpload().then((data) => {
+      upload(file).then((data) => {
         if (preview) {
           onFile({ ...data, preview })
         } else {

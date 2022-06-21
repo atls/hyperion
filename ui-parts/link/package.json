@@ -16,11 +16,11 @@
   },
   "devDependencies": {
     "@emotion/css": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@types/react": "^18.0.12",
+    "@emotion/styled": "^11.9.3",
+    "@types/react": "^18.0.14",
     "@types/styled-system": "^5.1.15",
     "next": "^12.1.5",
-    "react": "^18.1.0"
+    "react": "^18.2.0"
   },
   "peerDependencies": {
     "@emotion/styled": "^11.1.5",

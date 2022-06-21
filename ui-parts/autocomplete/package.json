@@ -14,16 +14,16 @@
   "dependencies": {
     "@atls-ui-proto/input": "workspace:0.0.11",
     "downshift": "^5.0.5",
-    "react-laag": "^1.7.3"
+    "react-laag": "^2.0.4"
   },
   "devDependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@testing-library/react": "10.4.7",
-    "@types/react": "^18.0.12",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@testing-library/react": "^13.3.0",
+    "@types/react": "^18.0.14",
     "@types/styled-system": "^5.1.15",
     "framer-motion": "^6.3.11",
-    "react": "^18.1.0",
+    "react": "^18.2.0",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   },

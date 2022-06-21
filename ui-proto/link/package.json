@@ -16,9 +16,9 @@
     "@atls-ui-proto/text": "workspace:0.0.9"
   },
   "devDependencies": {
-    "@emotion/styled": "^11.8.1",
-    "@types/react": "^18.0.12",
-    "react": "^18.1.0"
+    "@emotion/styled": "^11.9.3",
+    "@types/react": "^18.0.14",
+    "react": "^18.2.0"
   },
   "publishConfig": {
     "access": "public",

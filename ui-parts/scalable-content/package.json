@@ -15,11 +15,11 @@
     "@atls-ui-parts/dom": "workspace:0.0.3"
   },
   "devDependencies": {
-    "@emotion/styled": "^11.8.1",
-    "@types/jest": "^28.1.1",
-    "@types/react": "^18.0.12",
+    "@emotion/styled": "^11.9.3",
+    "@types/jest": "^28.1.2",
+    "@types/react": "^18.0.14",
     "@types/styled-system": "^5.1.15",
-    "react": "^18.1.0",
+    "react": "^18.2.0",
     "styled-system": "^5.1.5"
   },
   "peerDependencies": {

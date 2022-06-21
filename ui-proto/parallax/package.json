@@ -6,11 +6,11 @@
   "devDependencies": {
     "@atls-ui-parts/dom": "0.0.3",
     "@atls-ui-parts/text": "0.0.9",
-    "@emotion/styled": "^11.8.1",
+    "@emotion/styled": "^11.9.3",
     "events": "3.3.0",
     "framer-motion": "^6.3.11",
-    "react": "^18.1.0",
-    "react-intersection-observer": "9.2.2",
+    "react": "^18.2.0",
+    "react-intersection-observer": "9.3.3",
     "styled-system": "^5.1.5"
   },
   "peerDependencies": {
