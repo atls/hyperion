@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/layout",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/layout": "workspace:0.0.5"
+    "@atls-ui-parts/layout": "workspace:0.0.6"
   },
   "publishConfig": {
     "access": "public",
