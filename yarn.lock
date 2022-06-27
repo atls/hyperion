@@ -478,6 +478,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui-parts/core@workspace:ui-parts/core":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-parts/core@workspace:ui-parts/core"
+  dependencies:
+    "@stitches/react": ^1.2.8
+    "@types/react": ^18.0.14
+    react: ^18.2.0
+  peerDependencies:
+    react: ^18.1.0
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-parts/datepicker@workspace:ui-parts/datepicker":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/datepicker@workspace:ui-parts/datepicker"

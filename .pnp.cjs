@@ -89,6 +89,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:ui-parts/conditional-render"\
       },\
       {\
+        "name": "@atls-ui-parts/core",\
+        "reference": "workspace:ui-parts/core"\
+      },\
+      {\
         "name": "@atls-ui-parts/datepicker",\
         "reference": "workspace:ui-parts/datepicker"\
       },\
@@ -268,6 +272,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-parts/carousel", ["virtual:f561de693929ff638f31ae8c1092e5769470b1ec49c6df5e63927513a1c9d7e061e9e1e57b201cc9d192613fb86733a189e1addbd41b33049481defc3f3313a4#workspace:ui-parts/carousel", "workspace:ui-parts/carousel"]],\
       ["@atls-ui-parts/checkbox", ["virtual:73f06d631f493cae648f7d00ddcf2b179ef5ac0daebca77c177de120c9fe25f11a6e92d86450fe08bcb1dceb2d2f707ee0b707ffd60612007b743eab29f0f8c1#workspace:ui-parts/checkbox", "workspace:ui-parts/checkbox"]],\
       ["@atls-ui-parts/conditional-render", ["virtual:0fb63da0303c928b853ee6ca0e891ea755d97edab1a9215b8a99dc96704d0fbdf57052c58d77c55fed64df8b96cc32123f70d0e306086db709a9c8efd881b8d9#workspace:ui-parts/conditional-render", "virtual:73f06d631f493cae648f7d00ddcf2b179ef5ac0daebca77c177de120c9fe25f11a6e92d86450fe08bcb1dceb2d2f707ee0b707ffd60612007b743eab29f0f8c1#workspace:ui-parts/conditional-render", "workspace:ui-parts/conditional-render"]],\
+      ["@atls-ui-parts/core", ["workspace:ui-parts/core"]],\
       ["@atls-ui-parts/datepicker", ["workspace:ui-parts/datepicker"]],\
       ["@atls-ui-parts/design", ["workspace:ui-parts/design"]],\
       ["@atls-ui-parts/dom", ["virtual:a70582f519baae3bb81366941a12a0f4a356e68e888b62b3ea65b70731e81979ea0efd61b12081a3f7f1e4d9011aca77f14f73c8cdf79f974caf149a137aba52#workspace:ui-parts/dom", "workspace:ui-parts/dom"]],\
@@ -1270,6 +1275,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./ui-parts/conditional-render/",\
           "packageDependencies": [\
             ["@atls-ui-parts/conditional-render", "workspace:ui-parts/conditional-render"],\
+            ["@types/react", "npm:17.0.39"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@atls-ui-parts/core", [\
+        ["workspace:ui-parts/core", {\
+          "packageLocation": "./ui-parts/core/",\
+          "packageDependencies": [\
+            ["@atls-ui-parts/core", "workspace:ui-parts/core"],\
+            ["@stitches/react", "virtual:8ad00f2b54a3286bf4af8edf1f2f34addfb848c8527afff139d2fc06f6ca0e74a0209bc33df0d0c018a0177e2733d91d796610827d5dd7e42d6aab38e3035649#npm:1.2.8"],\
             ["@types/react", "npm:17.0.39"],\
             ["react", "npm:18.2.0"]\
           ],\
@@ -2415,7 +2432,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@atls-ui-proto-core-virtual-8c04988238/1/ui-proto/core/",\
           "packageDependencies": [\
             ["@atls-ui-proto/core", "virtual:bb06bdcdae3b061e76e9ad7fea09e7dc650398f0b3fd10f822a91664c29abc29be01a17bbe6c1c5f8b1f919d1c43b293e06c20c18f35413e993b27fdd1b28dfa#workspace:ui-proto/core"],\
-            ["@stitches/react", "virtual:8c04988238d834fa964270d50eb86faa7d3751936dd7b3ef683064f1dc749a01d6563d667d7ca88476d974a88aba2d37af451a6b0b347349d69330dc77ad5eba#npm:1.2.8"],\
+            ["@stitches/react", "virtual:8ad00f2b54a3286bf4af8edf1f2f34addfb848c8527afff139d2fc06f6ca0e74a0209bc33df0d0c018a0177e2733d91d796610827d5dd7e42d6aab38e3035649#npm:1.2.8"],\
             ["@types/react", "npm:17.0.39"],\
             ["react", "npm:18.2.0"]\
           ],\
@@ -2429,7 +2446,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./ui-proto/core/",\
           "packageDependencies": [\
             ["@atls-ui-proto/core", "workspace:ui-proto/core"],\
-            ["@stitches/react", "virtual:8c04988238d834fa964270d50eb86faa7d3751936dd7b3ef683064f1dc749a01d6563d667d7ca88476d974a88aba2d37af451a6b0b347349d69330dc77ad5eba#npm:1.2.8"],\
+            ["@stitches/react", "virtual:8ad00f2b54a3286bf4af8edf1f2f34addfb848c8527afff139d2fc06f6ca0e74a0209bc33df0d0c018a0177e2733d91d796610827d5dd7e42d6aab38e3035649#npm:1.2.8"],\
             ["@types/react", "npm:17.0.39"],\
             ["react", "npm:18.2.0"]\
           ],\
@@ -10938,10 +10955,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:8c04988238d834fa964270d50eb86faa7d3751936dd7b3ef683064f1dc749a01d6563d667d7ca88476d974a88aba2d37af451a6b0b347349d69330dc77ad5eba#npm:1.2.8", {\
-          "packageLocation": "./.yarn/__virtual__/@stitches-react-virtual-493be8bfeb/0/cache/@stitches-react-npm-1.2.8-445a1042b8-029795323c.zip/node_modules/@stitches/react/",\
+        ["virtual:8ad00f2b54a3286bf4af8edf1f2f34addfb848c8527afff139d2fc06f6ca0e74a0209bc33df0d0c018a0177e2733d91d796610827d5dd7e42d6aab38e3035649#npm:1.2.8", {\
+          "packageLocation": "./.yarn/__virtual__/@stitches-react-virtual-93ddffd4c9/0/cache/@stitches-react-npm-1.2.8-445a1042b8-029795323c.zip/node_modules/@stitches/react/",\
           "packageDependencies": [\
-            ["@stitches/react", "virtual:8c04988238d834fa964270d50eb86faa7d3751936dd7b3ef683064f1dc749a01d6563d667d7ca88476d974a88aba2d37af451a6b0b347349d69330dc77ad5eba#npm:1.2.8"],\
+            ["@stitches/react", "virtual:8ad00f2b54a3286bf4af8edf1f2f34addfb848c8527afff139d2fc06f6ca0e74a0209bc33df0d0c018a0177e2733d91d796610827d5dd7e42d6aab38e3035649#npm:1.2.8"],\
             ["@types/react", "npm:17.0.39"],\
             ["react", "npm:18.2.0"]\
           ],\
