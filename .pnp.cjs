@@ -153,6 +153,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:ui-parts/styles"\
       },\
       {\
+        "name": "@atls-ui-parts/swiper",\
+        "reference": "workspace:ui-parts/swiper"\
+      },\
+      {\
         "name": "@atls-ui-parts/switch",\
         "reference": "workspace:ui-parts/switch"\
       },\
@@ -288,6 +292,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-parts/select", ["workspace:ui-parts/select"]],\
       ["@atls-ui-parts/sidebar", ["workspace:ui-parts/sidebar"]],\
       ["@atls-ui-parts/styles", ["virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#workspace:ui-parts/styles", "workspace:ui-parts/styles"]],\
+      ["@atls-ui-parts/swiper", ["workspace:ui-parts/swiper"]],\
       ["@atls-ui-parts/switch", ["virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#workspace:ui-parts/switch", "workspace:ui-parts/switch"]],\
       ["@atls-ui-parts/text", ["virtual:5bef123a8b55951d9942856e0b20f7f3daed787a7e7e81faa3336d2cbe257a35e48eb1f127ad2a38f543296bb0a4234ae21df4cdeac538365d6fc150e0526b06#workspace:ui-parts/text", "virtual:724857ebd92f731dbe22ca19638a1eefd7cdf062f09334ebb849eaae933e2a98886dee3b8808a6fa055d81319d6fa63acb3fb3ef6b1f160b59a6c75b1cb0555c#workspace:ui-parts/text", "virtual:b2254c2d82af19fb4b66316f70568d9bb842b90577af32d06ce4041b067382e4019e46921576ca16c5e94d26ef67d71a84d5e6edc1d9dc8c1caf4ef71a29968c#workspace:ui-parts/text", "workspace:ui-parts/text"]],\
       ["@atls-ui-parts/text-transform", ["virtual:0b5baded8ac224bd0ff38cc06a25fac3affcc4755076c022e4a8c5742fa22501180115d9de4962c879c4883c33012d6404926bb156270710571357dedb4448dc#workspace:ui-parts/text-transform", "workspace:ui-parts/text-transform"]],\
@@ -2033,6 +2038,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls-ui-parts/styles", "workspace:ui-parts/styles"],\
             ["@types/styled-system", "npm:5.1.15"],\
             ["styled-system", "npm:5.1.5"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@atls-ui-parts/swiper", [\
+        ["workspace:ui-parts/swiper", {\
+          "packageLocation": "./ui-parts/swiper/",\
+          "packageDependencies": [\
+            ["@atls-ui-parts/swiper", "workspace:ui-parts/swiper"],\
+            ["@emotion/css", "virtual:8eb691db84fd68975b95c7b7751e750446f82576951f5264566adefecbbef8688299b9be5a741e618cd4e5792a084b105995a5c92b7bd7f7d69bde2692db614b#npm:11.9.0"],\
+            ["@types/jest", "npm:28.1.2"],\
+            ["@types/react", "npm:17.0.39"],\
+            ["react", "npm:18.2.0"],\
+            ["swiper", "npm:8.3.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -18871,6 +18890,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["dom7", [\
+        ["npm:4.0.4", {\
+          "packageLocation": "./.yarn/cache/dom7-npm-4.0.4-637bc4420a-b38604f74e.zip/node_modules/dom7/",\
+          "packageDependencies": [\
+            ["dom7", "npm:4.0.4"],\
+            ["ssr-window", "npm:4.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["domelementtype", [\
         ["npm:2.2.0", {\
           "packageLocation": "./.yarn/cache/domelementtype-npm-2.2.0-c37b3b15bf-24cb386198.zip/node_modules/domelementtype/",\
@@ -28338,6 +28367,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["ssr-window", [\
+        ["npm:4.0.2", {\
+          "packageLocation": "./.yarn/cache/ssr-window-npm-4.0.2-01f9c0151e-df18260092.zip/node_modules/ssr-window/",\
+          "packageDependencies": [\
+            ["ssr-window", "npm:4.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["ssri", [\
         ["npm:6.0.2", {\
           "packageLocation": "./.yarn/cache/ssri-npm-6.0.2-4b770f07fd-7c2e5d442f.zip/node_modules/ssri/",\
@@ -28990,6 +29028,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/svg-parser-npm-2.0.4-1b0b6afbe9-b3de665304.zip/node_modules/svg-parser/",\
           "packageDependencies": [\
             ["svg-parser", "npm:2.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["swiper", [\
+        ["npm:8.3.1", {\
+          "packageLocation": "./.yarn/unplugged/swiper-npm-8.3.1-7575c41fae/node_modules/swiper/",\
+          "packageDependencies": [\
+            ["swiper", "npm:8.3.1"],\
+            ["dom7", "npm:4.0.4"],\
+            ["ssr-window", "npm:4.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
