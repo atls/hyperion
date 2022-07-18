@@ -786,7 +786,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/swiper@workspace:ui-parts/swiper":
+"@atls-ui-parts/swiper@workspace:0.0.0, @atls-ui-parts/swiper@workspace:ui-parts/swiper":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/swiper@workspace:ui-parts/swiper"
   dependencies:
@@ -1197,6 +1197,18 @@ __metadata:
     react: ^17.0.1
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
+  languageName: unknown
+  linkType: soft
+
+"@atls-ui-proto/swiper@workspace:ui-proto/swiper":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-proto/swiper@workspace:ui-proto/swiper"
+  dependencies:
+    "@atls-ui-parts/swiper": "workspace:0.0.0"
+    "@types/react": ^18.0.14
+    react: ^18.2.0
+  peerDependencies:
+    react: ^18.2.0
   languageName: unknown
   linkType: soft
 

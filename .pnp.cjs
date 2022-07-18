@@ -241,6 +241,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:ui-proto/progress"\
       },\
       {\
+        "name": "@atls-ui-proto/swiper",\
+        "reference": "workspace:ui-proto/swiper"\
+      },\
+      {\
         "name": "@atls-ui-proto/text",\
         "reference": "workspace:ui-proto/text"\
       },\
@@ -292,7 +296,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-parts/select", ["workspace:ui-parts/select"]],\
       ["@atls-ui-parts/sidebar", ["workspace:ui-parts/sidebar"]],\
       ["@atls-ui-parts/styles", ["virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#workspace:ui-parts/styles", "workspace:ui-parts/styles"]],\
-      ["@atls-ui-parts/swiper", ["workspace:ui-parts/swiper"]],\
+      ["@atls-ui-parts/swiper", ["virtual:c388a6902e6d9f635fb478a2f70d3bf886866c023961fe75043e4e9a3ff3d7a2c8a91788bbcb21098aaf634bb5dd8822d4a4546b34462a2f480db7817ed02a47#workspace:ui-parts/swiper", "workspace:ui-parts/swiper"]],\
       ["@atls-ui-parts/switch", ["virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#workspace:ui-parts/switch", "workspace:ui-parts/switch"]],\
       ["@atls-ui-parts/text", ["virtual:5bef123a8b55951d9942856e0b20f7f3daed787a7e7e81faa3336d2cbe257a35e48eb1f127ad2a38f543296bb0a4234ae21df4cdeac538365d6fc150e0526b06#workspace:ui-parts/text", "virtual:724857ebd92f731dbe22ca19638a1eefd7cdf062f09334ebb849eaae933e2a98886dee3b8808a6fa055d81319d6fa63acb3fb3ef6b1f160b59a6c75b1cb0555c#workspace:ui-parts/text", "virtual:b2254c2d82af19fb4b66316f70568d9bb842b90577af32d06ce4041b067382e4019e46921576ca16c5e94d26ef67d71a84d5e6edc1d9dc8c1caf4ef71a29968c#workspace:ui-parts/text", "workspace:ui-parts/text"]],\
       ["@atls-ui-parts/text-transform", ["virtual:0b5baded8ac224bd0ff38cc06a25fac3affcc4755076c022e4a8c5742fa22501180115d9de4962c879c4883c33012d6404926bb156270710571357dedb4448dc#workspace:ui-parts/text-transform", "workspace:ui-parts/text-transform"]],\
@@ -314,6 +318,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-proto/placeholder", ["workspace:ui-proto/placeholder"]],\
       ["@atls-ui-proto/popover", ["workspace:ui-proto/popover"]],\
       ["@atls-ui-proto/progress", ["workspace:ui-proto/progress"]],\
+      ["@atls-ui-proto/swiper", ["workspace:ui-proto/swiper"]],\
       ["@atls-ui-proto/text", ["workspace:ui-proto/text"]],\
       ["@atls-ui-proto/theme", ["virtual:8ab0d223413e4a5b27571f1c73894c535886604495082c387b7a0550543032cc9edb2f3bacbd8a158ce759eb80f55bdc97c04ada24d35b3a9f99344dd6001802#workspace:ui-proto/theme", "workspace:ui-proto/theme"]],\
       ["@atls-ui-proto/upload", ["workspace:ui-proto/upload"]],\
@@ -2043,6 +2048,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@atls-ui-parts/swiper", [\
+        ["virtual:c388a6902e6d9f635fb478a2f70d3bf886866c023961fe75043e4e9a3ff3d7a2c8a91788bbcb21098aaf634bb5dd8822d4a4546b34462a2f480db7817ed02a47#workspace:ui-parts/swiper", {\
+          "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-swiper-virtual-ae70b563a0/1/ui-parts/swiper/",\
+          "packageDependencies": [\
+            ["@atls-ui-parts/swiper", "virtual:c388a6902e6d9f635fb478a2f70d3bf886866c023961fe75043e4e9a3ff3d7a2c8a91788bbcb21098aaf634bb5dd8822d4a4546b34462a2f480db7817ed02a47#workspace:ui-parts/swiper"],\
+            ["@emotion/css", "virtual:8eb691db84fd68975b95c7b7751e750446f82576951f5264566adefecbbef8688299b9be5a741e618cd4e5792a084b105995a5c92b7bd7f7d69bde2692db614b#npm:11.9.0"],\
+            ["@types/emotion__css", null],\
+            ["@types/jest", "npm:28.1.2"],\
+            ["@types/react", "npm:17.0.39"],\
+            ["react", "npm:18.2.0"],\
+            ["swiper", "npm:8.3.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/emotion__css",\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "SOFT"\
+        }],\
         ["workspace:ui-parts/swiper", {\
           "packageLocation": "./ui-parts/swiper/",\
           "packageDependencies": [\
@@ -2738,6 +2761,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["styled-system", "npm:5.1.5"],\
             ["styled-tools", "npm:1.7.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@atls-ui-proto/swiper", [\
+        ["workspace:ui-proto/swiper", {\
+          "packageLocation": "./ui-proto/swiper/",\
+          "packageDependencies": [\
+            ["@atls-ui-proto/swiper", "workspace:ui-proto/swiper"],\
+            ["@atls-ui-parts/swiper", "virtual:c388a6902e6d9f635fb478a2f70d3bf886866c023961fe75043e4e9a3ff3d7a2c8a91788bbcb21098aaf634bb5dd8822d4a4546b34462a2f480db7817ed02a47#workspace:ui-parts/swiper"],\
+            ["@types/react", "npm:17.0.39"],\
+            ["react", "npm:18.2.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
