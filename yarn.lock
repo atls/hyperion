@@ -786,6 +786,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui-parts/swiper@workspace:0.0.0, @atls-ui-parts/swiper@workspace:ui-parts/swiper":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-parts/swiper@workspace:ui-parts/swiper"
+  dependencies:
+    "@emotion/css": ^11.9.0
+    "@types/jest": ^28.1.2
+    "@types/react": ^18.0.14
+    react: ^18.2.0
+    swiper: ^8.3.1
+  peerDependencies:
+    "@emotion/css": "*"
+    react: ^17.0.1
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-parts/switch@workspace:0.0.7, @atls-ui-parts/switch@workspace:ui-parts/switch":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/switch@workspace:ui-parts/switch"
@@ -1182,6 +1197,18 @@ __metadata:
     react: ^17.0.1
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
+  languageName: unknown
+  linkType: soft
+
+"@atls-ui-proto/swiper@workspace:ui-proto/swiper":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-proto/swiper@workspace:ui-proto/swiper"
+  dependencies:
+    "@atls-ui-parts/swiper": "workspace:0.0.0"
+    "@types/react": ^18.0.14
+    react: ^18.2.0
+  peerDependencies:
+    react: ^18.2.0
   languageName: unknown
   linkType: soft
 
@@ -11011,6 +11038,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dom7@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "dom7@npm:4.0.4"
+  dependencies:
+    ssr-window: ^4.0.0
+  checksum: b38604f74e915b4d05b6634f9ff239a708c468180f498a28ff67f2a61233697d9bd7192703b788a24541c3591e7f1a6e83a2cbf70bc871a85e033f82e19abc31
+  languageName: node
+  linkType: hard
+
 "domelementtype@npm:^2.0.1, domelementtype@npm:^2.2.0":
   version: 2.2.0
   resolution: "domelementtype@npm:2.2.0"
@@ -19326,6 +19362,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ssr-window@npm:^4.0.0, ssr-window@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "ssr-window@npm:4.0.2"
+  checksum: df182600927f4f3225224cf8c02338ea637c9750519505bbfb9a9236741a2a7ec088386fb948bca7b447b8303d9109e7dc7672e3de041c79ac2a0e03665af7d2
+  languageName: node
+  linkType: hard
+
 "ssri@npm:^6.0.1":
   version: 6.0.2
   resolution: "ssri@npm:6.0.2"
@@ -19881,6 +19924,16 @@ __metadata:
   version: 2.0.4
   resolution: "svg-parser@npm:2.0.4"
   checksum: b3de6653048212f2ae7afe4a423e04a76ec6d2d06e1bf7eacc618a7c5f7df7faa5105561c57b94579ec831fbbdbf5f190ba56a9205ff39ed13eabdf8ab086ddf
+  languageName: node
+  linkType: hard
+
+"swiper@npm:^8.3.1":
+  version: 8.3.1
+  resolution: "swiper@npm:8.3.1"
+  dependencies:
+    dom7: ^4.0.4
+    ssr-window: ^4.0.2
+  checksum: 3bf9fe039ff356ba9c8849953dfc9677aca0e7e69e0da3d6a64636e83562e33fa7a2bae9885c163e66760014ea8c0416492e59a69671787e4543f5dc6c7bcdd1
   languageName: node
   linkType: hard
 
