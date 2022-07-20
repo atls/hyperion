@@ -12,6 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
+    "nanoid": "^4.0.0",
     "swiper": "^8.3.1"
   },
   "devDependencies": {
