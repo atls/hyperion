@@ -2056,6 +2056,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/emotion__css", null],\
             ["@types/jest", "npm:28.1.2"],\
             ["@types/react", "npm:17.0.39"],\
+            ["nanoid", "npm:4.0.0"],\
             ["react", "npm:18.2.0"],\
             ["swiper", "npm:8.3.1"]\
           ],\
@@ -2073,6 +2074,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/css", "virtual:8eb691db84fd68975b95c7b7751e750446f82576951f5264566adefecbbef8688299b9be5a741e618cd4e5792a084b105995a5c92b7bd7f7d69bde2692db614b#npm:11.9.0"],\
             ["@types/jest", "npm:28.1.2"],\
             ["@types/react", "npm:17.0.39"],\
+            ["nanoid", "npm:4.0.0"],\
             ["react", "npm:18.2.0"],\
             ["swiper", "npm:8.3.1"]\
           ],\
@@ -24669,6 +24671,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/nanoid-npm-3.3.3-25d865be84-ada019402a.zip/node_modules/nanoid/",\
           "packageDependencies": [\
             ["nanoid", "npm:3.3.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:4.0.0", {\
+          "packageLocation": "./.yarn/cache/nanoid-npm-4.0.0-924f5c6312-7d5946df5c.zip/node_modules/nanoid/",\
+          "packageDependencies": [\
+            ["nanoid", "npm:4.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
