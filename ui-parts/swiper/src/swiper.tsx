@@ -1,6 +1,7 @@
 import { injectGlobal }         from '@emotion/css'
 
 import React                    from 'react'
+import { FC }                   from 'react'
 import { Swiper as BaseSwiper } from 'swiper/react'
 import { SwiperProps }          from 'swiper/react'
 import { nanoid }               from 'nanoid'
@@ -11,7 +12,7 @@ import { STYLES }               from './swiper.styles'
 let wasGloballyInjected = false
 const injectedClasses: Array<string> = []
 
-const Swiper = ({ width, className, ...props }: SwiperProps) => {
+const Swiper: FC<SwiperProps> = ({ width, className, ...props }) => {
   // eslint-disable-next-line
   const cn = useMemo(() => className || `swiper-${nanoid()}`, [])
 
