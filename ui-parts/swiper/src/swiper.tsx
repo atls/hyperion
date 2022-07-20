@@ -6,12 +6,13 @@ import { SwiperProps }          from 'swiper/react'
 
 import { STYLES }               from './swiper.styles'
 
+let wasInjected = false
+
 const Swiper = (props: SwiperProps) => {
-  injectGlobal(STYLES)
-  injectGlobal(`.swiper {
-    max-width: 100vw;
-    display: flex;
-  }`)
+  if (!wasInjected) {
+    injectGlobal(STYLES)
+    wasInjected = true
+  }
 
   return <BaseSwiper {...props} />
 }
