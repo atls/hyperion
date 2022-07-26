@@ -20,15 +20,15 @@ module.exports = {
   refs: {
     parts: {
       title: 'Parts',
-      url: 'https://ui-parts.ui.atls.tech',
+      url: 'https://ui-parts.ui.atls.design',
     },
     proto: {
       title: 'Proto',
-      url: 'https://ui-proto.ui.atls.tech',
+      url: 'https://ui-proto.ui.atls.design',
     },
     admin: {
       title: 'Admin',
-      url: 'https://ui-admin.ui.atls.tech',
+      url: 'https://ui-admin.ui.atls.design',
     },
   },
   stories: ['./*.stories.@(ts|tsx|mdx)'],
