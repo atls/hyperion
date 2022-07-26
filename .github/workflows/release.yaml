@@ -28,7 +28,7 @@ jobs:
       - name: Install Buildpack Cli
         run: |
           (curl -sSL "https://github.com/buildpacks/pack/releases/download/v0.23.0/pack-v0.23.0-linux.tgz" | sudo tar -C /usr/local/bin/ --no-same-owner -xzv pack)
-      
+
       - name: Login to Yandex Container Registry
         run: echo -e $YCR_KEYFILE | docker login -u json_key --password-stdin cr.yandex
         env:
