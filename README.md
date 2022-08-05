@@ -1,3 +1,6 @@
+![R md_cover_white](https://user-images.githubusercontent.com/3940885/183108904-33a053b0-68e8-4067-8e8d-302bc910fd1d.jpg)
+
+
 ## Краткий экскурс в экосистему
 
 ## Принцип разделения
