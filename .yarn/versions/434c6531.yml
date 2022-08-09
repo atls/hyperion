@@ -1,0 +1,5 @@
+releases:
+  "@atls-ui-parts/portal": patch
+  "@atls-ui-parts/sidebar": patch
+  "@atls-ui-proto/modal": patch
+  "@atls-ui-proto/popover": patch
