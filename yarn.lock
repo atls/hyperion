@@ -663,7 +663,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/portal@workspace:0.0.4, @atls-ui-parts/portal@workspace:ui-parts/portal":
+"@atls-ui-parts/portal@workspace:0.0.5, @atls-ui-parts/portal@workspace:ui-parts/portal":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/portal@workspace:ui-parts/portal"
   dependencies:
@@ -1109,7 +1109,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/modal@workspace:ui-proto/modal"
   dependencies:
-    "@atls-ui-parts/portal": "workspace:0.0.4"
+    "@atls-ui-parts/portal": "workspace:0.0.5"
     "@emotion/css": ^11.9.0
     "@emotion/styled": ^11.9.3
     "@types/react": ^18.0.14
