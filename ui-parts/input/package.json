@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/input",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@atls-ui-parts/conditional-render": "workspace:0.0.4",
-    "@atls-ui-parts/layout": "workspace:0.0.6",
+    "@atls-ui-parts/layout": "workspace:0.0.7",
     "@atls-ui-parts/upload": "workspace:0.0.7",
     "@atls/storybook-google-fonts": "workspace:0.0.0",
     "@emotion/styled": "^11.9.3",

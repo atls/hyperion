@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/checkbox",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -15,7 +15,7 @@
     "@atls-ui-parts/checkbox": "workspace:0.0.6",
     "@atls-ui-parts/conditional-render": "workspace:0.0.4",
     "@atls-ui-parts/hidden-input": "workspace:0.0.6",
-    "@atls-ui-proto/layout": "workspace:0.0.6",
+    "@atls-ui-proto/layout": "workspace:0.0.7",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   },

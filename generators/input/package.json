@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-generators/input",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -19,7 +19,7 @@
     "prettier": "^2.5.1"
   },
   "devDependencies": {
-    "@atls-ui-parts/input": "workspace:0.0.12",
+    "@atls-ui-parts/input": "workspace:0.0.13",
     "@types/prettier": "^2",
     "styled-tools": "^1.7.2"
   },

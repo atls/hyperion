@@ -16,7 +16,7 @@
   "devDependencies": {
     "@atls-ui-parts/avatar": "workspace:0.0.8",
     "@atls-ui-parts/button": "workspace:0.0.7",
-    "@atls-ui-parts/input": "workspace:0.0.12",
+    "@atls-ui-parts/input": "workspace:0.0.13",
     "@babel/core": "^7.18.5",
     "@emotion/babel-plugin": "^11.9.2",
     "@emotion/react": "^11.9.3",

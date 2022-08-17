@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/datepicker",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -16,7 +16,7 @@
     "react-datepicker": "4.8.0"
   },
   "devDependencies": {
-    "@atls-ui-proto/input": "workspace:0.0.12",
+    "@atls-ui-proto/input": "workspace:0.0.13",
     "@emotion/css": "^11.9.0",
     "@emotion/styled": "^11.9.3",
     "@types/react": "^18.0.14",

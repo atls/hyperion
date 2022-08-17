@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/card",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@atls-ui-parts/dom": "workspace:0.0.4",
-    "@atls-ui-parts/layout": "workspace:0.0.6",
+    "@atls-ui-parts/layout": "workspace:0.0.7",
     "framer-motion": "6.3.11",
     "react-scrolllock": "^5.0.1",
     "styled-system": "^5.1.5",
