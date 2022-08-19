@@ -129,6 +129,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:ui-parts/link"\
       },\
       {\
+        "name": "@atls-ui-parts/mapbox",\
+        "reference": "workspace:ui-parts/mapbox"\
+      },\
+      {\
         "name": "@atls-ui-parts/portal",\
         "reference": "workspace:ui-parts/portal"\
       },\
@@ -290,6 +294,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-parts/input", ["virtual:06d683907c14911994e2a02867c1b5b4197c4512082058768cfb8fe82016a26ecc574a47a037646830ae1b791fc69c394f911f46edc22afbdd2382987e463280#workspace:ui-parts/input", "virtual:269db25ff15e150519c32b592d49982dffad5b740f8cce135d98226664559a13ebece62873ae2592752c22f1382bc5dc1bd84e7aac7abaacacd8dc810761fc25#workspace:ui-parts/input", "virtual:4aa9f5892575a5c16396d801b2d59c7edfd926ba8f74fb205170320c655bc11c244f12c5a0bccd639a783fa372093fcaf8ac84883dc5f3d42f8e9f85bfe7ced4#workspace:ui-parts/input", "virtual:cae64fb933c0975acb144e23e27619b6e5cc8bdd79a4d89e4f852c7a9f1430d8f1fbc43309d1bc8c8b5fa9a815f03142cd1da135f407fd26e0620ba55527fd8c#workspace:ui-parts/input", "workspace:ui-parts/input"]],\
       ["@atls-ui-parts/layout", ["virtual:05661ed084282549d2e8c0be1bd6ecb8f024bad5e0c094b66edb1977b4494bc4013d21d7a79374c70845f540c8b4016534937277bba9260d1676f2955ea22484#workspace:ui-parts/layout", "virtual:0fb63da0303c928b853ee6ca0e891ea755d97edab1a9215b8a99dc96704d0fbdf57052c58d77c55fed64df8b96cc32123f70d0e306086db709a9c8efd881b8d9#workspace:ui-parts/layout", "virtual:6a5629294184c770a371d25f5e0534207a536d83e7ffdebc09c3c39f5b82cf0ef952511afed2e493ef31c6035b47fb285a149768102c37c0608137c571cf4955#workspace:ui-parts/layout", "virtual:6cb7b8e9f1c69fb854d324ecb7311c8b53f1d3dd2ae546e548e3ba83a721f1b562e9885fa940c326b4b72f39b3ee42ee67c0bbe88a999acb887b2b3ee59e262c#workspace:ui-parts/layout", "virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#workspace:ui-parts/layout", "virtual:937fb0364248873ae59b9853300486d03005abda92eaabc1af692cdbfe45a10bb44400f85b426164577e95380d1eb384e54a3525e8f98eff7f80d492dbab08a5#workspace:ui-parts/layout", "workspace:ui-parts/layout"]],\
       ["@atls-ui-parts/link", ["virtual:9df4b6121afbf3178186530d8221f13c6edd37dae07cfff1c8d82eab5c7ad2c6a836d4984d5ca98b1ff48958789f0963eb1ab0f81bceb13866053f0d4c336b43#workspace:ui-parts/link", "workspace:ui-parts/link"]],\
+      ["@atls-ui-parts/mapbox", ["workspace:ui-parts/mapbox"]],\
       ["@atls-ui-parts/portal", ["virtual:454e6a2a20b3f7b949146f713f5c901cee89fcdc636e159ba8c98602205f8f06f88bd249b88a8d811497de630cbb5732fc9450fd16f97b60ff489807d975d67b#workspace:ui-parts/portal", "workspace:ui-parts/portal"]],\
       ["@atls-ui-parts/progress", ["virtual:1dbda4ab9af3c048167930de7be0439e27b0a8fdd9302e8c774e437c76a2e10e88042f8425b5d8a4fa4d221a4a484c92ee18d193b4abf8e31c354b841f7e43c7#workspace:ui-parts/progress", "workspace:ui-parts/progress"]],\
       ["@atls-ui-parts/scalable-content", ["virtual:0b5baded8ac224bd0ff38cc06a25fac3affcc4755076c022e4a8c5742fa22501180115d9de4962c879c4883c33012d6404926bb156270710571357dedb4448dc#workspace:ui-parts/scalable-content", "virtual:8ff8419dbee00cc0c83b7b6d32fbeb50dc75d0dd309715c87475ebf86235e9494fdb5049b2a89f489c647e2e7af97eee19274b3f214d0b70b64e9b5272baf61f#workspace:ui-parts/scalable-content", "workspace:ui-parts/scalable-content"]],\
@@ -1837,6 +1842,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/styled-system", "npm:5.1.15"],\
             ["next", "virtual:b2254c2d82af19fb4b66316f70568d9bb842b90577af32d06ce4041b067382e4019e46921576ca16c5e94d26ef67d71a84d5e6edc1d9dc8c1caf4ef71a29968c#npm:12.1.6"],\
             ["react", "npm:18.2.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@atls-ui-parts/mapbox", [\
+        ["workspace:ui-parts/mapbox", {\
+          "packageLocation": "./ui-parts/mapbox/",\
+          "packageDependencies": [\
+            ["@atls-ui-parts/mapbox", "workspace:ui-parts/mapbox"],\
+            ["mapbox-gl", "npm:2.6.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -10504,6 +10519,90 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@mapbox/geojson-rewind", [\
+        ["npm:0.5.2", {\
+          "packageLocation": "./.yarn/cache/@mapbox-geojson-rewind-npm-0.5.2-716dd1ae97-721470ab5e.zip/node_modules/@mapbox/geojson-rewind/",\
+          "packageDependencies": [\
+            ["@mapbox/geojson-rewind", "npm:0.5.2"],\
+            ["get-stream", "npm:6.0.1"],\
+            ["minimist", "npm:1.2.6"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@mapbox/geojson-types", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/@mapbox-geojson-types-npm-1.0.2-062b8a47d3-ab1fa0afce.zip/node_modules/@mapbox/geojson-types/",\
+          "packageDependencies": [\
+            ["@mapbox/geojson-types", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@mapbox/jsonlint-lines-primitives", [\
+        ["npm:2.0.2", {\
+          "packageLocation": "./.yarn/cache/@mapbox-jsonlint-lines-primitives-npm-2.0.2-f48e04c479-4eb31edd3c.zip/node_modules/@mapbox/jsonlint-lines-primitives/",\
+          "packageDependencies": [\
+            ["@mapbox/jsonlint-lines-primitives", "npm:2.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@mapbox/mapbox-gl-supported", [\
+        ["npm:2.0.1", {\
+          "packageLocation": "./.yarn/cache/@mapbox-mapbox-gl-supported-npm-2.0.1-bce8242990-1dffc96baa.zip/node_modules/@mapbox/mapbox-gl-supported/",\
+          "packageDependencies": [\
+            ["@mapbox/mapbox-gl-supported", "npm:2.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@mapbox/point-geometry", [\
+        ["npm:0.1.0", {\
+          "packageLocation": "./.yarn/cache/@mapbox-point-geometry-npm-0.1.0-d0fd1852be-ed41c1ce01.zip/node_modules/@mapbox/point-geometry/",\
+          "packageDependencies": [\
+            ["@mapbox/point-geometry", "npm:0.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@mapbox/tiny-sdf", [\
+        ["npm:2.0.5", {\
+          "packageLocation": "./.yarn/cache/@mapbox-tiny-sdf-npm-2.0.5-4aa42164a0-23fd158ea7.zip/node_modules/@mapbox/tiny-sdf/",\
+          "packageDependencies": [\
+            ["@mapbox/tiny-sdf", "npm:2.0.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@mapbox/unitbezier", [\
+        ["npm:0.0.0", {\
+          "packageLocation": "./.yarn/cache/@mapbox-unitbezier-npm-0.0.0-159cc70ee6-22ae6d56f7.zip/node_modules/@mapbox/unitbezier/",\
+          "packageDependencies": [\
+            ["@mapbox/unitbezier", "npm:0.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@mapbox/vector-tile", [\
+        ["npm:1.3.1", {\
+          "packageLocation": "./.yarn/cache/@mapbox-vector-tile-npm-1.3.1-c7cbcaf846-7093d4fa7d.zip/node_modules/@mapbox/vector-tile/",\
+          "packageDependencies": [\
+            ["@mapbox/vector-tile", "npm:1.3.1"],\
+            ["@mapbox/point-geometry", "npm:0.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@mapbox/whoots-js", [\
+        ["npm:3.1.0", {\
+          "packageLocation": "./.yarn/cache/@mapbox-whoots-js-npm-3.1.0-25c0fa7510-c1837c04ef.zip/node_modules/@mapbox/whoots-js/",\
+          "packageDependencies": [\
+            ["@mapbox/whoots-js", "npm:3.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@mdx-js/mdx", [\
         ["npm:1.6.22", {\
           "packageLocation": "./.yarn/cache/@mdx-js-mdx-npm-1.6.22-ba5aaf406b-0839b4a389.zip/node_modules/@mdx-js/mdx/",\
@@ -18434,6 +18533,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["csscolorparser", [\
+        ["npm:1.0.3", {\
+          "packageLocation": "./.yarn/cache/csscolorparser-npm-1.0.3-cd8e162bc9-e40f3045ea.zip/node_modules/csscolorparser/",\
+          "packageDependencies": [\
+            ["csscolorparser", "npm:1.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["cssesc", [\
         ["npm:3.0.0", {\
           "packageLocation": "./.yarn/cache/cssesc-npm-3.0.0-15ec56f86f-f8c4ababff.zip/node_modules/cssesc/",\
@@ -19090,6 +19198,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/react",\
             "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["earcut", [\
+        ["npm:2.2.4", {\
+          "packageLocation": "./.yarn/cache/earcut-npm-2.2.4-e823546b2f-aea0466cb2.zip/node_modules/earcut/",\
+          "packageDependencies": [\
+            ["earcut", "npm:2.2.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -20813,6 +20930,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["geojson-vt", [\
+        ["npm:3.2.1", {\
+          "packageLocation": "./.yarn/cache/geojson-vt-npm-3.2.1-80c8f60496-7c7973cfaf.zip/node_modules/geojson-vt/",\
+          "packageDependencies": [\
+            ["geojson-vt", "npm:3.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["get-caller-file", [\
         ["npm:2.0.5", {\
           "packageLocation": "./.yarn/cache/get-caller-file-npm-2.0.5-80e8a86305-b9769a836d.zip/node_modules/get-caller-file/",\
@@ -20943,6 +21069,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["github-slugger", "npm:1.3.0"],\
             ["emoji-regex", "npm:6.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["gl-matrix", [\
+        ["npm:3.4.3", {\
+          "packageLocation": "./.yarn/cache/gl-matrix-npm-3.4.3-f2e6349faa-c47830ba72.zip/node_modules/gl-matrix/",\
+          "packageDependencies": [\
+            ["gl-matrix", "npm:3.4.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -21302,6 +21437,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/graphql",\
             "graphql"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["grid-index", [\
+        ["npm:1.1.0", {\
+          "packageLocation": "./.yarn/cache/grid-index-npm-1.1.0-fe69e26b3f-0e9d427b60.zip/node_modules/grid-index/",\
+          "packageDependencies": [\
+            ["grid-index", "npm:1.1.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -23766,6 +23910,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["kdbush", [\
+        ["npm:3.0.0", {\
+          "packageLocation": "./.yarn/cache/kdbush-npm-3.0.0-3f45162b37-bc5fa43395.zip/node_modules/kdbush/",\
+          "packageDependencies": [\
+            ["kdbush", "npm:3.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["keyv", [\
         ["npm:4.0.3", {\
           "packageLocation": "./.yarn/cache/keyv-npm-4.0.3-4018fb536e-770134225c.zip/node_modules/keyv/",\
@@ -24231,6 +24384,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["mapbox-gl", [\
+        ["npm:2.6.1", {\
+          "packageLocation": "./.yarn/cache/mapbox-gl-npm-2.6.1-b93b3bfc2a-a873081629.zip/node_modules/mapbox-gl/",\
+          "packageDependencies": [\
+            ["mapbox-gl", "npm:2.6.1"],\
+            ["@mapbox/geojson-rewind", "npm:0.5.2"],\
+            ["@mapbox/geojson-types", "npm:1.0.2"],\
+            ["@mapbox/jsonlint-lines-primitives", "npm:2.0.2"],\
+            ["@mapbox/mapbox-gl-supported", "npm:2.0.1"],\
+            ["@mapbox/point-geometry", "npm:0.1.0"],\
+            ["@mapbox/tiny-sdf", "npm:2.0.5"],\
+            ["@mapbox/unitbezier", "npm:0.0.0"],\
+            ["@mapbox/vector-tile", "npm:1.3.1"],\
+            ["@mapbox/whoots-js", "npm:3.1.0"],\
+            ["csscolorparser", "npm:1.0.3"],\
+            ["earcut", "npm:2.2.4"],\
+            ["geojson-vt", "npm:3.2.1"],\
+            ["gl-matrix", "npm:3.4.3"],\
+            ["grid-index", "npm:1.1.0"],\
+            ["minimist", "npm:1.2.5"],\
+            ["murmurhash-js", "npm:1.0.0"],\
+            ["pbf", "npm:3.2.1"],\
+            ["potpack", "npm:1.0.2"],\
+            ["quickselect", "npm:2.0.0"],\
+            ["rw", "npm:1.3.3"],\
+            ["supercluster", "npm:7.1.5"],\
+            ["tinyqueue", "npm:2.0.3"],\
+            ["vt-pbf", "npm:3.1.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["markdown-escapes", [\
         ["npm:1.0.4", {\
           "packageLocation": "./.yarn/cache/markdown-escapes-npm-1.0.4-6f56c61420-6833a93d72.zip/node_modules/markdown-escapes/",\
@@ -24682,6 +24867,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ms-npm-2.1.3-81ff3cfac1-aa92de6080.zip/node_modules/ms/",\
           "packageDependencies": [\
             ["ms", "npm:2.1.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["murmurhash-js", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/murmurhash-js-npm-1.0.0-b1fa804bc0-083cea92a1.zip/node_modules/murmurhash-js/",\
+          "packageDependencies": [\
+            ["murmurhash-js", "npm:1.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -25760,6 +25954,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["pbf", [\
+        ["npm:3.2.1", {\
+          "packageLocation": "./.yarn/cache/pbf-npm-3.2.1-d33be8e429-8033f5e21f.zip/node_modules/pbf/",\
+          "packageDependencies": [\
+            ["pbf", "npm:3.2.1"],\
+            ["ieee754", "npm:1.2.1"],\
+            ["resolve-protobuf-schema", "npm:2.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["performance-now", [\
         ["npm:2.1.0", {\
           "packageLocation": "./.yarn/cache/performance-now-npm-2.1.0-45e3ce7e49-534e641aa8.zip/node_modules/performance-now/",\
@@ -26165,6 +26370,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["potpack", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/potpack-npm-1.0.2-5f717e5a63-9dfdbbce01.zip/node_modules/potpack/",\
+          "packageDependencies": [\
+            ["potpack", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["prelude-ls", [\
         ["npm:1.1.2", {\
           "packageLocation": "./.yarn/cache/prelude-ls-npm-1.1.2-a0daac0886-c4867c8748.zip/node_modules/prelude-ls/",\
@@ -26551,6 +26765,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/quick-lru-npm-5.1.1-e38e0edce3-a516faa255.zip/node_modules/quick-lru/",\
           "packageDependencies": [\
             ["quick-lru", "npm:5.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["quickselect", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/quickselect-npm-2.0.0-620eb59fdc-ed2e784310.zip/node_modules/quickselect/",\
+          "packageDependencies": [\
+            ["quickselect", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -27655,6 +27878,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["resolve-protobuf-schema", [\
+        ["npm:2.1.0", {\
+          "packageLocation": "./.yarn/cache/resolve-protobuf-schema-npm-2.1.0-56c0d37a08-88fffab2a3.zip/node_modules/resolve-protobuf-schema/",\
+          "packageDependencies": [\
+            ["resolve-protobuf-schema", "npm:2.1.0"],\
+            ["protocol-buffers-schema", "npm:3.6.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["resolve-url", [\
         ["npm:0.2.1", {\
           "packageLocation": "./.yarn/cache/resolve-url-npm-0.2.1-39edb8f908-7b7035b9ed.zip/node_modules/resolve-url/",\
@@ -27754,6 +27987,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["run-parallel", "npm:1.2.0"],\
             ["queue-microtask", "npm:1.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["rw", [\
+        ["npm:1.3.3", {\
+          "packageLocation": "./.yarn/cache/rw-npm-1.3.3-2197930a8d-c20d82421f.zip/node_modules/rw/",\
+          "packageDependencies": [\
+            ["rw", "npm:1.3.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -29058,6 +29300,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["supercluster", [\
+        ["npm:7.1.5", {\
+          "packageLocation": "./.yarn/cache/supercluster-npm-7.1.5-369b0b6fb2-6986323887.zip/node_modules/supercluster/",\
+          "packageDependencies": [\
+            ["supercluster", "npm:7.1.5"],\
+            ["kdbush", "npm:3.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["supports-color", [\
         ["npm:5.5.0", {\
           "packageLocation": "./.yarn/cache/supports-color-npm-5.5.0-183ac537bc-95f6f4ba5a.zip/node_modules/supports-color/",\
@@ -29409,6 +29661,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["tinylogic", "npm:1.0.3"],\
             ["chevrotain", "npm:9.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["tinyqueue", [\
+        ["npm:2.0.3", {\
+          "packageLocation": "./.yarn/cache/tinyqueue-npm-2.0.3-ceed389145-0b6bda46b6.zip/node_modules/tinyqueue/",\
+          "packageDependencies": [\
+            ["tinyqueue", "npm:2.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -30389,6 +30650,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["vfile-message", "npm:2.0.4"],\
             ["@types/unist", "npm:2.0.3"],\
             ["unist-util-stringify-position", "npm:2.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["vt-pbf", [\
+        ["npm:3.1.3", {\
+          "packageLocation": "./.yarn/cache/vt-pbf-npm-3.1.3-6b659628e6-83375b7ffe.zip/node_modules/vt-pbf/",\
+          "packageDependencies": [\
+            ["vt-pbf", "npm:3.1.3"],\
+            ["@mapbox/point-geometry", "npm:0.1.0"],\
+            ["@mapbox/vector-tile", "npm:1.3.1"],\
+            ["pbf", "npm:3.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
