@@ -6,7 +6,7 @@ import { useLayer }                        from 'react-laag'
 
 import { UseSelectProps }                  from './select.interfaces'
 
-const useSelect = ({ items, onChange, ...props }: UseSelectProps) => {
+const useSelect = ({ items, onChange, placement = 'bottom-center', ...props }: UseSelectProps) => {
   const {
     isOpen,
     highlightedIndex,
@@ -19,7 +19,7 @@ const useSelect = ({ items, onChange, ...props }: UseSelectProps) => {
 
   const { renderLayer, layerProps, triggerProps, triggerBounds } = useLayer({
     isOpen,
-    placement: 'bottom-center',
+    placement,
   })
 
   useEffect(() => {
