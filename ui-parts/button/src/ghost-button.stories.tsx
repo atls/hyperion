@@ -12,7 +12,7 @@ import { templates }              from './button.templates'
 import { createShapeStyles }      from './shape'
 
 export default {
-  title: 'Components/Ghost-button',
+  title: 'Components/Button',
   parameters: {
     docs: {
       page: mdx,
