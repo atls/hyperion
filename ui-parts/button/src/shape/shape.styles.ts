@@ -65,7 +65,10 @@ export const createShapeStyles = ({
   execAndSerialize(
     combine(
       createBaseShapeStyles(size, fontSize, fontWeight, fontFamily),
-      createPaddingStyles(paddingLeft || size * paddingRatio, paddingRight || size * paddingRatio),
+      createPaddingStyles(
+        paddingLeft || Number(size) * paddingRatio,
+        paddingRight || Number(size) * paddingRatio
+      ),
       createRoundingStyles(rounding),
       createFillStyles(),
       createPatternStyles(size)
