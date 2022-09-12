@@ -2,11 +2,11 @@ import { styleFn }           from 'styled-system'
 
 import { createShapeStyles } from './shape.styles'
 
-const getGhostStyles = (): styleFn =>
+const createGhostStyles = (): styleFn =>
   createShapeStyles({
     size: 'auto',
     paddingRight: 0,
     paddingLeft: 0,
   })
 
-export { getGhostStyles }
+export { createGhostStyles }
