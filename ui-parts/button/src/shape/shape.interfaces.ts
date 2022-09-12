@@ -10,7 +10,7 @@ export interface ButtonShapeProps extends ButtonShapeRoundingProps {
 }
 
 export interface ButtonShapeStyles {
-  size: number
+  size: number | string
   fontFamily?: string | Function
   fontSize?: number | Function
   fontWeight?: string | number | Function
