@@ -10,8 +10,9 @@ export const shapeGhostStyles = createShapeStyles({
   paddingLeft: 0,
 })
 
-export const appearanceGhostStyles: styleFn = () => ({
+export const nulledGhostStyles: styleFn = () => ({
   background: 'none',
+  border: 'none',
 })
 
 export const baseStyles = createBaseStyles()
