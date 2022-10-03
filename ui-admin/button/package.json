@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-admin/button",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "license": "BSD-3-Clause",
   "files": [
     "dist"
@@ -11,7 +11,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/button": "workspace:0.0.9"
+    "@atls-ui-parts/button": "workspace:0.0.10"
   },
   "devDependencies": {
     "@emotion/styled": "^11.9.3",

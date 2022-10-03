@@ -14,7 +14,7 @@
     "express": "^4.18.1"
   },
   "devDependencies": {
-    "@atls-ui-admin/button": "workspace:0.0.9",
+    "@atls-ui-admin/button": "workspace:0.0.10",
     "@atls-ui-admin/theme": "workspace:0.0.7",
     "@babel/core": "^7.18.5",
     "@emotion/babel-plugin": "^11.9.2",
