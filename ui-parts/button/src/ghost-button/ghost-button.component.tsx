@@ -1,15 +1,21 @@
-import styled                  from '@emotion/styled'
+import styled                    from '@emotion/styled'
 
-import React                   from 'react'
-import { FC }                  from 'react'
-import { PropsWithChildren }   from 'react'
+import React                     from 'react'
+import { FC }                    from 'react'
+import { PropsWithChildren }     from 'react'
 
-import { ButtonProps }         from '../button.interfaces'
-import { createBaseStyles }    from '../base'
-import { createContentStyles } from '../content'
-import { createGhostStyles }   from '../shape'
+import { ButtonProps }           from '../button.interfaces'
+import { baseStyles }            from './ghost-button.styles'
+import { appearanceGhostStyles } from './ghost-button.styles'
+import { shapeGhostStyles }      from './ghost-button.styles'
+import { contentStyles }         from './ghost-button.styles'
 
-const ButtonElement = styled.button(createGhostStyles(), createBaseStyles(), createContentStyles())
+const ButtonElement = styled.button(
+  baseStyles,
+  appearanceGhostStyles,
+  shapeGhostStyles,
+  contentStyles
+)
 
 const GhostButton: FC<PropsWithChildren<ButtonProps>> = ({ children, ...props }) => (
   <ButtonElement {...props}>{children}</ButtonElement>

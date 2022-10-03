@@ -48,7 +48,7 @@ export const GhostButton = ({
   return (
     <div style={{ width: containerWith, display: 'flex', justifyContent: 'center' }}>
       <StoryGhostButton>
-        <div>{children}</div>
+        <div style={{ backgroundColor: 'rgba(232,50,154,0.1)' }}>{children}</div>
       </StoryGhostButton>
     </div>
   )
