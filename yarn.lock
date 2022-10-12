@@ -288,10 +288,15 @@ __metadata:
     "@atls-ui-parts/button": "workspace:0.0.10"
     "@atls/config-prettier": ^0.0.5
     "@atls/prettier-plugin": ^0.0.5
+    "@babel/standalone": ^7.19.5
+    "@types/babel__standalone": ^7
     "@types/prettier": ^2
     camelcase: ^6.3.0
+    commander: ^9.4.1
     prettier: ^2.5.1
     styled-tools: ^1.7.2
+  bin:
+    generate-styles: dist/generator.js
   languageName: unknown
   linkType: soft
 
@@ -3652,6 +3657,13 @@ __metadata:
   dependencies:
     regenerator-runtime: ^0.13.4
   checksum: db8526226aa02cfa35a5a7ac1a34b5f303c62a1f000c7db48cb06c6290e616483e5036ab3c4e7a84d0f3be6d4e2148d5fe5cec9564bf955f505c3e764b83d7f1
+  languageName: node
+  linkType: hard
+
+"@babel/standalone@npm:^7.19.5":
+  version: 7.19.5
+  resolution: "@babel/standalone@npm:7.19.5"
+  checksum: ad254382c25ce8fab80b37b29fb8b097c09b78748795630ef28920f1696d92a81879eb70abd96925397c72879bb8cb0e38f86fdf2da2d9ba3a97787b09c22ed1
   languageName: node
   linkType: hard
 
@@ -7260,6 +7272,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/babel__standalone@npm:^7":
+  version: 7.1.4
+  resolution: "@types/babel__standalone@npm:7.1.4"
+  dependencies:
+    "@babel/core": ^7.1.0
+  checksum: d6092c85899c9306ff205ec0f839405f14d4b76fd99855952a41043b5327e6fea91d3b0d8bdf8615eb641ee81f3dccc68c7cec19da7c5a0e594b60a020ac41fc
+  languageName: node
+  linkType: hard
+
 "@types/babel__template@npm:*":
   version: 7.4.0
   resolution: "@types/babel__template@npm:7.4.0"
@@ -10373,6 +10394,13 @@ __metadata:
   version: 8.3.0
   resolution: "commander@npm:8.3.0"
   checksum: 0f82321821fc27b83bd409510bb9deeebcfa799ff0bf5d102128b500b7af22872c0c92cb6a0ebc5a4cf19c6b550fba9cedfa7329d18c6442a625f851377bacf0
+  languageName: node
+  linkType: hard
+
+"commander@npm:^9.4.1":
+  version: 9.4.1
+  resolution: "commander@npm:9.4.1"
+  checksum: bfb18e325a5bdf772763c2213d5c7d9e77144d944124e988bcd8e5e65fb6d45d5d4e86b09155d0f2556c9a59c31e428720e57968bcd050b2306e910a0bf3cf13
   languageName: node
   linkType: hard
 

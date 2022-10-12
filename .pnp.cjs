@@ -858,8 +858,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls-ui-parts/button", "virtual:ea1d8dd8954a5bee6d7eb4a2da7184c7f6c079197b11ab6680412a6bca40e4ca6a14201bdf93d927c1598fc57fb11886bbbca8f92d4f011973a7d76425a89c40#workspace:ui-parts/button"],\
             ["@atls/config-prettier", "npm:0.0.5"],\
             ["@atls/prettier-plugin", "npm:0.0.5"],\
+            ["@babel/standalone", "npm:7.19.5"],\
+            ["@types/babel__standalone", "npm:7.1.4"],\
             ["@types/prettier", "npm:2.3.2"],\
             ["camelcase", "npm:6.3.0"],\
+            ["commander", "npm:9.4.1"],\
             ["prettier", "npm:2.7.1"],\
             ["styled-tools", "npm:1.7.2"]\
           ],\
@@ -8971,6 +8974,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@babel/standalone", [\
+        ["npm:7.19.5", {\
+          "packageLocation": "./.yarn/cache/@babel-standalone-npm-7.19.5-57e885dfb0-ad254382c2.zip/node_modules/@babel/standalone/",\
+          "packageDependencies": [\
+            ["@babel/standalone", "npm:7.19.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@babel/template", [\
         ["npm:7.12.13", {\
           "packageLocation": "./.yarn/cache/@babel-template-npm-7.12.13-069e9c8875-e037731631.zip/node_modules/@babel/template/",\
@@ -14184,6 +14196,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/babel__standalone", [\
+        ["npm:7.1.4", {\
+          "packageLocation": "./.yarn/cache/@types-babel__standalone-npm-7.1.4-5ee72165b9-d6092c8589.zip/node_modules/@types/babel__standalone/",\
+          "packageDependencies": [\
+            ["@types/babel__standalone", "npm:7.1.4"],\
+            ["@babel/core", "npm:7.12.16"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/babel__template", [\
         ["npm:7.4.0", {\
           "packageLocation": "./.yarn/cache/@types-babel__template-npm-7.4.0-e906ff43dc-5262dc75e6.zip/node_modules/@types/babel__template/",\
@@ -18153,6 +18175,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/commander-npm-8.3.0-c0d18c66d5-0f82321821.zip/node_modules/commander/",\
           "packageDependencies": [\
             ["commander", "npm:8.3.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:9.4.1", {\
+          "packageLocation": "./.yarn/cache/commander-npm-9.4.1-9deffb2749-bfb18e325a.zip/node_modules/commander/",\
+          "packageDependencies": [\
+            ["commander", "npm:9.4.1"]\
           ],\
           "linkType": "HARD"\
         }]\
