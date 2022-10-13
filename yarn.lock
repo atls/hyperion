@@ -817,6 +817,7 @@ __metadata:
   peerDependencies:
     "@emotion/css": "*"
     react: ^17.0.1
+    swiper: ^8.3.1
   languageName: unknown
   linkType: soft
 

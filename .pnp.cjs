@@ -2083,6 +2083,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/emotion__css", null],\
             ["@types/jest", "npm:28.1.2"],\
             ["@types/react", "npm:17.0.39"],\
+            ["@types/swiper", null],\
             ["nanoid", "npm:4.0.0"],\
             ["react", "npm:18.2.0"],\
             ["swiper", "npm:8.3.1"]\
@@ -2090,6 +2091,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/emotion__css",\
             "@types/react",\
+            "@types/swiper",\
             "react"\
           ],\
           "linkType": "SOFT"\
