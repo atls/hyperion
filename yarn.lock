@@ -308,10 +308,15 @@ __metadata:
     "@atls-ui-parts/input": "workspace:0.0.13"
     "@atls/config-prettier": ^0.0.5
     "@atls/prettier-plugin": ^0.0.5
+    "@babel/standalone": ^7.19.5
+    "@types/babel__standalone": ^7
     "@types/prettier": ^2
     camelcase: ^6.3.0
+    commander: ^9.4.1
     prettier: ^2.5.1
     styled-tools: ^1.7.2
+  bin:
+    generate-styles: dist/generator.js
   languageName: unknown
   linkType: soft
 

@@ -878,8 +878,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls-ui-parts/input", "virtual:4aa9f5892575a5c16396d801b2d59c7edfd926ba8f74fb205170320c655bc11c244f12c5a0bccd639a783fa372093fcaf8ac84883dc5f3d42f8e9f85bfe7ced4#workspace:ui-parts/input"],\
             ["@atls/config-prettier", "npm:0.0.5"],\
             ["@atls/prettier-plugin", "npm:0.0.5"],\
+            ["@babel/standalone", "npm:7.19.5"],\
+            ["@types/babel__standalone", "npm:7.1.4"],\
             ["@types/prettier", "npm:2.3.2"],\
             ["camelcase", "npm:6.3.0"],\
+            ["commander", "npm:9.4.1"],\
             ["prettier", "npm:2.7.1"],\
             ["styled-tools", "npm:1.7.2"]\
           ],\
