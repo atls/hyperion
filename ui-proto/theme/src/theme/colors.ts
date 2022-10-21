@@ -49,4 +49,70 @@ export const colors = {
       },
     },
   },
+  input: {
+    primary: {
+      default: {
+        background: 'black',
+        font: 'white',
+        border: 'black',
+      },
+      hover: {
+        background: 'white',
+        font: 'black',
+        border: 'white',
+      },
+      pressed: {
+        background: 'white',
+        font: 'black',
+        border: 'white',
+      },
+      focus: {
+        background: 'white',
+        font: 'black',
+        border: 'white',
+      },
+      error: {
+        background: 'white',
+        font: 'black',
+        border: 'white',
+      },
+      disabled: {
+        background: 'gray',
+        font: 'white',
+        border: 'gray',
+      },
+    },
+    secondary: {
+      default: {
+        background: 'white',
+        font: 'black',
+        border: 'white',
+      },
+      hover: {
+        background: 'black',
+        font: 'white',
+        border: 'black',
+      },
+      pressed: {
+        background: 'black',
+        font: 'white',
+        border: 'black',
+      },
+      focus: {
+        background: 'black',
+        font: 'white',
+        border: 'black',
+      },
+      error: {
+        background: 'black',
+        font: 'white',
+        border: 'black',
+      },
+      disabled: {
+        background: 'gray',
+        font: 'white',
+        border: 'gray',
+      },
+    },
+  },
 }
