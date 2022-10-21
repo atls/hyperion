@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/stale@v6
         with:
-          repo-token: ${{ secrets.GH_TOKEN }}
+          repo-token: ${{ secrets.ISSUE_STALE }}
           stale-issue-message: 'Статус?'
           stale-pr-message: 'Статус?'
           close-issue-message: 'Таске месяц. Закрыта за утратой актуальности.'
