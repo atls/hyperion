@@ -30,7 +30,7 @@ const command = new Command()
 
     let replacements = {}
 
-    if (options.replace) {
+    if (options.replacements) {
       const replacementsFile = readFileSync(join(process.cwd(), options.replacements)).toString(
         'utf-8'
       )
