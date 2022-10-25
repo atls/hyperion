@@ -1,0 +1,41 @@
+{
+  "name": "@atls-ui-generators/icons",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "bin": {
+    "generate-icons": "dist/generator.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn library build",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
+  },
+  "dependencies": {
+    "@atls-ui-generators/utils": "workspace:0.0.4",
+    "@atls/config-prettier": "^0.0.5",
+    "@atls/prettier-plugin": "^0.0.5",
+    "@babel/standalone": "^7.19.5",
+    "@svgr/core": "5.5.0",
+    "camelcase": "^6.3.0",
+    "commander": "^9.4.1",
+    "fs-extra-promise": "^1.0.1",
+    "glob-promise": "^5.0.0",
+    "prettier": "^2.5.1"
+  },
+  "devDependencies": {
+    "@atls-ui-parts/button": "workspace:0.0.10",
+    "@types/babel__standalone": "^7",
+    "@types/fs-extra-promise": "^1",
+    "@types/prettier": "^2",
+    "styled-tools": "^1.7.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  }
+}

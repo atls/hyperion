@@ -2,7 +2,7 @@ name: 'Check for stale issues and PRs'
 on:
   schedule:
     # every day at 6:00 UTC (9:00 MSK)
-    - cron:  '0 6 * * *'
+    - cron: '0 6 * * *'
   workflow_dispatch:
 
 jobs:

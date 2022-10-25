@@ -25,6 +25,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:generators/button"\
       },\
       {\
+        "name": "@atls-ui-generators/icons",\
+        "reference": "workspace:generators/icons"\
+      },\
+      {\
         "name": "@atls-ui-generators/input",\
         "reference": "workspace:generators/input"\
       },\
@@ -275,6 +279,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@atls-ui-admin/theme", ["virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#workspace:ui-admin/theme", "workspace:ui-admin/theme"]],\
       ["@atls-ui-admin/upload", ["workspace:ui-admin/upload"]],\
       ["@atls-ui-generators/button", ["workspace:generators/button"]],\
+      ["@atls-ui-generators/icons", ["workspace:generators/icons"]],\
       ["@atls-ui-generators/input", ["workspace:generators/input"]],\
       ["@atls-ui-generators/utils", ["workspace:generators/utils"]],\
       ["@atls-ui-parts/autocomplete", ["workspace:ui-parts/autocomplete"]],\
@@ -863,6 +868,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/prettier", "npm:2.3.2"],\
             ["camelcase", "npm:6.3.0"],\
             ["commander", "npm:9.4.1"],\
+            ["prettier", "npm:2.7.1"],\
+            ["styled-tools", "npm:1.7.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@atls-ui-generators/icons", [\
+        ["workspace:generators/icons", {\
+          "packageLocation": "./generators/icons/",\
+          "packageDependencies": [\
+            ["@atls-ui-generators/icons", "workspace:generators/icons"],\
+            ["@atls-ui-generators/utils", "workspace:generators/utils"],\
+            ["@atls-ui-parts/button", "virtual:ea1d8dd8954a5bee6d7eb4a2da7184c7f6c079197b11ab6680412a6bca40e4ca6a14201bdf93d927c1598fc57fb11886bbbca8f92d4f011973a7d76425a89c40#workspace:ui-parts/button"],\
+            ["@atls/config-prettier", "npm:0.0.5"],\
+            ["@atls/prettier-plugin", "npm:0.0.5"],\
+            ["@babel/standalone", "npm:7.19.5"],\
+            ["@svgr/core", "npm:5.5.0"],\
+            ["@types/babel__standalone", "npm:7.1.4"],\
+            ["@types/fs-extra-promise", "npm:1.0.10"],\
+            ["@types/prettier", "npm:2.3.2"],\
+            ["camelcase", "npm:6.3.0"],\
+            ["commander", "npm:9.4.1"],\
+            ["fs-extra-promise", "npm:1.0.1"],\
+            ["glob-promise", "virtual:d0c77e885bef42d9872329dbb67e8e620c133c2e36ca32403a2fbabbcf79159a0ff0fdbfcdea70626b974fc5682fbba9965253f1859d6b45c7222e36551358c2#npm:5.0.0"],\
             ["prettier", "npm:2.7.1"],\
             ["styled-tools", "npm:1.7.2"]\
           ],\
@@ -14024,6 +14053,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cosmiconfig", "npm:6.0.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:5.5.0", {\
+          "packageLocation": "./.yarn/cache/@svgr-core-npm-5.5.0-7d395fbcff-39b230151e.zip/node_modules/@svgr/core/",\
+          "packageDependencies": [\
+            ["@svgr/core", "npm:5.5.0"],\
+            ["@svgr/plugin-jsx", "npm:5.5.0"],\
+            ["camelcase", "npm:6.3.0"],\
+            ["cosmiconfig", "npm:7.0.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@svgr/hast-util-to-babel-ast", [\
@@ -14232,6 +14271,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/bluebird", [\
+        ["npm:3.5.37", {\
+          "packageLocation": "./.yarn/cache/@types-bluebird-npm-3.5.37-eef4da5e7b-851a2eca0a.zip/node_modules/@types/bluebird/",\
+          "packageDependencies": [\
+            ["@types/bluebird", "npm:3.5.37"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/body-parser", [\
         ["npm:1.19.0", {\
           "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.0-3ca4d08a60-15043566f1.zip/node_modules/@types/body-parser/",\
@@ -14361,6 +14409,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.14.28"],\
             ["@types/qs", "npm:6.9.6"],\
             ["@types/range-parser", "npm:1.2.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/fs-extra", [\
+        ["npm:4.0.12", {\
+          "packageLocation": "./.yarn/cache/@types-fs-extra-npm-4.0.12-ef65781a9b-6a14044be3.zip/node_modules/@types/fs-extra/",\
+          "packageDependencies": [\
+            ["@types/fs-extra", "npm:4.0.12"],\
+            ["@types/node", "npm:14.14.28"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/fs-extra-promise", [\
+        ["npm:1.0.10", {\
+          "packageLocation": "./.yarn/cache/@types-fs-extra-promise-npm-1.0.10-2abfa71f8d-a65d59cb93.zip/node_modules/@types/fs-extra-promise/",\
+          "packageDependencies": [\
+            ["@types/fs-extra-promise", "npm:1.0.10"],\
+            ["@types/bluebird", "npm:3.5.37"],\
+            ["@types/fs-extra", "npm:4.0.12"],\
+            ["@types/node", "npm:14.14.28"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -21199,11 +21269,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
+        ["npm:5.0.0", {\
+          "packageLocation": "./.yarn/cache/glob-promise-npm-5.0.0-91cf9ab35f-2c48c52fda.zip/node_modules/glob-promise/",\
+          "packageDependencies": [\
+            ["glob-promise", "npm:5.0.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
         ["virtual:8abd482360ef540236bb22f7f640d838feaf62f3c0611c27cb08b87169f5fba58928d4fb96fbf3710d32e2d87fd7503456789a58c4b25b6508d2255b10341dd0#npm:3.4.0", {\
           "packageLocation": "./.yarn/__virtual__/glob-promise-virtual-bd485c9d20/0/cache/glob-promise-npm-3.4.0-39b66535be-84a2c076e7.zip/node_modules/glob-promise/",\
           "packageDependencies": [\
             ["glob-promise", "virtual:8abd482360ef540236bb22f7f640d838feaf62f3c0611c27cb08b87169f5fba58928d4fb96fbf3710d32e2d87fd7503456789a58c4b25b6508d2255b10341dd0#npm:3.4.0"],\
             ["@types/glob", "npm:7.1.3"],\
+            ["glob", "npm:8.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:d0c77e885bef42d9872329dbb67e8e620c133c2e36ca32403a2fbabbcf79159a0ff0fdbfcdea70626b974fc5682fbba9965253f1859d6b45c7222e36551358c2#npm:5.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/glob-promise-virtual-d3061c55b5/0/cache/glob-promise-npm-5.0.0-91cf9ab35f-2c48c52fda.zip/node_modules/glob-promise/",\
+          "packageDependencies": [\
+            ["glob-promise", "virtual:d0c77e885bef42d9872329dbb67e8e620c133c2e36ca32403a2fbabbcf79159a0ff0fdbfcdea70626b974fc5682fbba9965253f1859d6b45c7222e36551358c2#npm:5.0.0"],\
+            ["@types/glob", "npm:7.2.0"],\
             ["glob", "npm:8.0.3"]\
           ],\
           "linkType": "HARD"\
