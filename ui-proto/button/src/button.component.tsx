@@ -3,6 +3,7 @@ import styled            from '@emotion/styled'
 
 import React             from 'react'
 import { FC }            from 'react'
+import { forwardRef }    from 'react'
 
 import { Content }       from '@atls-ui-parts/button'
 
@@ -21,8 +22,8 @@ export const ButtonElement = styled('button', { shouldForwardProp })(
   variantStyles
 )
 
-export const Button: FC<ButtonProps> = ({ children, ...props }) => (
-  <ButtonElement {...props}>
+export const Button: FC<ButtonProps> = forwardRef(({ children, ...props }, ref) => (
+  <ButtonElement {...props} ref={ref}>
     <Content divider={12}>{children}</Content>
   </ButtonElement>
-)
+))
