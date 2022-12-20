@@ -722,12 +722,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/progress@workspace:0.0.15, @atls-ui-parts/progress@workspace:ui-parts/progress":
+"@atls-ui-parts/progress@workspace:0.0.16, @atls-ui-parts/progress@workspace:ui-parts/progress":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/progress@workspace:ui-parts/progress"
   dependencies:
     "@atls-ui-parts/layout": "workspace:0.0.7"
-    "@atls-ui-proto/button": "workspace:0.0.11"
+    "@atls-ui-proto/button": "workspace:0.0.12"
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@testing-library/react": ^13.3.0
@@ -989,7 +989,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-proto/button@workspace:0.0.11, @atls-ui-proto/button@workspace:ui-proto/button":
+"@atls-ui-proto/button@workspace:0.0.12, @atls-ui-proto/button@workspace:ui-proto/button":
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/button@workspace:ui-proto/button"
   dependencies:
@@ -1089,9 +1089,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/design@workspace:ui-proto/design"
   dependencies:
-    "@atls-ui-proto/button": "workspace:0.0.11"
+    "@atls-ui-proto/button": "workspace:0.0.12"
     "@atls-ui-proto/input": "workspace:0.0.13"
-    "@atls-ui-proto/theme": "workspace:0.0.7"
+    "@atls-ui-proto/theme": "workspace:0.0.8"
     "@babel/core": ^7.18.5
     "@emotion/babel-plugin": ^11.9.2
     "@emotion/react": ^11.9.3
@@ -1281,7 +1281,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/progress@workspace:ui-proto/progress"
   dependencies:
-    "@atls-ui-parts/progress": "workspace:0.0.15"
+    "@atls-ui-parts/progress": "workspace:0.0.16"
     "@emotion/styled": ^11.8.1
     "@types/react": ^18.0.12
     "@types/styled-system": ^5.1.15
@@ -1303,7 +1303,7 @@ __metadata:
     "@atls-ui-parts/layout": "workspace:0.0.7"
     "@atls-ui-parts/select": "workspace:0.0.13"
     "@atls-ui-parts/text": "workspace:0.0.10"
-    "@atls-ui-proto/button": "workspace:0.0.11"
+    "@atls-ui-proto/button": "workspace:0.0.12"
     "@emotion/css": ^11.7.1
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
@@ -1374,7 +1374,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-proto/theme@workspace:0.0.7, @atls-ui-proto/theme@workspace:ui-proto/theme":
+"@atls-ui-proto/theme@workspace:0.0.8, @atls-ui-proto/theme@workspace:ui-proto/theme":
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/theme@workspace:ui-proto/theme"
   dependencies:
