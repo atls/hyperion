@@ -1,4 +1,5 @@
-![R md_cover_white](https://user-images.githubusercontent.com/3940885/183108904-33a053b0-68e8-4067-8e8d-302bc910fd1d.jpg)
+![hyperion-github-cover](https://user-images.githubusercontent.com/102182195/233610398-ab0035a4-0982-40a2-bcef-7fb2a4bb9548.jpg)
+
 
 ## Краткий экскурс в экосистему
 
