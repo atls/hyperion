@@ -1,4 +1,4 @@
-![hyperion-github-cover](https://user-images.githubusercontent.com/102182195/233610398-ab0035a4-0982-40a2-bcef-7fb2a4bb9548.jpg)
+![hyperion-github-cover](https://user-images.githubusercontent.com/102182195/234979948-62106953-55d8-4d7f-8b2f-09fad882d8d2.png)
 
 
 # Hyperion UI-Kit
