@@ -9,6 +9,16 @@ interface FontFace {
 const fontFace = (family, type, weight, style = 'normal') => {
   const fsFamily = family
   const fsType = type
+  let module
+
+  try {
+    module = require(`./fonts/${fsFamily}/${fsType}/${family}-${type}.ttf`)
+  } catch (e) {
+    console.error(e) // eslint-disable-line
+    module = false
+  }
+
+  if (!module) return ''
 
   return {
     '@font-face': {
@@ -16,7 +26,7 @@ const fontFace = (family, type, weight, style = 'normal') => {
       fontWeight: weight,
       fontStyle: style,
       src: `local('${family}-${type}'),
-          url('${require(`./fonts/${fsFamily}/${fsType}/${family}-${type}.ttf`)}') format('ttf')`,
+          url('${module}') format('ttf')`,
     },
   }
 }

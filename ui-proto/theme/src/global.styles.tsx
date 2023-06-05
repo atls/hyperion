@@ -1,14 +1,9 @@
-import { Global }          from '@emotion/react'
-import { css }             from '@emotion/react'
+import { Global } from '@emotion/react'
+import { css }    from '@emotion/react'
 
-import React               from 'react'
+import React      from 'react'
 
-import { injectFontFaces } from './inject-fonts'
-
-export const GlobalStyles = () => {
-  injectFontFaces([{ family: 'WaterBrush', type: 'Regular', weight: 400 }])
-
-  return (
+export const GlobalStyles = () => (
     <Global
       styles={css`
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
@@ -28,4 +23,3 @@ export const GlobalStyles = () => {
     `}
     />
   )
-}
