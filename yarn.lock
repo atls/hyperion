@@ -180,7 +180,7 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-is: "npm:^18.2.0"
-    typescript: "npm:^4.7.3"
+    typescript: "npm:^4.6.2"
   languageName: unknown
   linkType: soft
 
@@ -421,7 +421,7 @@ __metadata:
     "@storybook/addon-docs": "npm:^6.5.9"
     "@storybook/components": "npm:^6.5.9"
     "@types/jest": "npm:^28.1.2"
-    "@types/mdx-js__react": "npm:^1.5.3"
+    "@types/mdx-js__react": "npm:^1.5.5"
     "@types/react": "npm:^18.0.14"
     "@types/styled-system": "npm:^5.1.15"
     react: "npm:^18.2.0"
@@ -596,7 +596,7 @@ __metadata:
     react-dom: "npm:^18.2.0"
     react-is: "npm:^18.2.0"
     string-replace-loader: "npm:^3.1.0"
-    typescript: "npm:^4.7.3"
+    typescript: "npm:^4.6.2"
   languageName: unknown
   linkType: soft
 
@@ -1133,7 +1133,7 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-is: "npm:^18.2.0"
-    typescript: "npm:^4.7.3"
+    typescript: "npm:^4.6.2"
   languageName: unknown
   linkType: soft
 
@@ -1469,7 +1469,7 @@ __metadata:
     "@storybook/react": "npm:^6.5.9"
     "@storybook/theming": "npm:^6.5.9"
     "@types/express": "npm:^4.17.13"
-    "@types/mdx-js__react": "npm:^1.5.3"
+    "@types/mdx-js__react": "npm:^1.5.5"
     "@types/react": "npm:^18.0.14"
     "@types/react-dom": "npm:^18.0.5"
     babel-loader: "npm:^8.2.5"
@@ -1479,7 +1479,7 @@ __metadata:
     react-dom: "npm:^18.2.0"
     react-is: "npm:^18.2.0"
     string-replace-loader: "npm:^3.1.0"
-    typescript: "npm:^4.7.3"
+    typescript: "npm:^4.6.2"
   languageName: unknown
   linkType: soft
 
@@ -8067,12 +8067,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mdx-js__react@npm:^1.5.3":
-  version: 1.5.3
-  resolution: "@types/mdx-js__react@npm:1.5.3"
+"@types/mdx-js__react@npm:^1.5.5":
+  version: 1.5.5
+  resolution: "@types/mdx-js__react@npm:1.5.5"
   dependencies:
     "@types/react": "npm:*"
-  checksum: d8029e6cf6cad9c4e075d3c73a249f536efa0d5acf9fa3cdf86d41feede991e04a4c21fdcacd314dead2149f388ec9a265e060c4ce307edcda42103df446c929
+  checksum: 795487d2b23db3d8c6d7d90a83aff887b785d5cbd2c80454d8213206a41b9ca662405b144ce9610606b58a82f0f3382cd648e9103ec9858c9dc338f373c51cc7
   languageName: node
   linkType: hard
 
@@ -12201,7 +12201,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.17.0":
+"eslint@npm:8.17.0":
   version: 8.17.0
   resolution: "eslint@npm:8.17.0"
   dependencies:

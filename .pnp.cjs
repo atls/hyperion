@@ -1111,7 +1111,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/components", "virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#npm:6.5.9"],\
           ["@types/emotion__styled", null],\
           ["@types/jest", "npm:28.1.2"],\
-          ["@types/mdx-js__react", "npm:1.5.3"],\
+          ["@types/mdx-js__react", "npm:1.5.5"],\
           ["@types/react", "npm:17.0.39"],\
           ["@types/styled-system", "npm:5.1.15"],\
           ["@types/styled-tools", null],\
@@ -1143,7 +1143,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/components", "virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#npm:6.5.9"],\
           ["@types/emotion__styled", null],\
           ["@types/jest", "npm:28.1.2"],\
-          ["@types/mdx-js__react", "npm:1.5.3"],\
+          ["@types/mdx-js__react", "npm:1.5.5"],\
           ["@types/react", "npm:17.0.39"],\
           ["@types/styled-system", "npm:5.1.15"],\
           ["@types/styled-tools", null],\
@@ -1175,7 +1175,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/components", "virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#npm:6.5.9"],\
           ["@types/emotion__styled", null],\
           ["@types/jest", "npm:28.1.2"],\
-          ["@types/mdx-js__react", "npm:1.5.3"],\
+          ["@types/mdx-js__react", "npm:1.5.5"],\
           ["@types/react", "npm:17.0.39"],\
           ["@types/styled-system", "npm:5.1.15"],\
           ["@types/styled-tools", null],\
@@ -1207,7 +1207,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/components", "virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#npm:6.5.9"],\
           ["@types/emotion__styled", null],\
           ["@types/jest", "npm:28.1.2"],\
-          ["@types/mdx-js__react", "npm:1.5.3"],\
+          ["@types/mdx-js__react", "npm:1.5.5"],\
           ["@types/react", "npm:17.0.39"],\
           ["@types/styled-system", "npm:5.1.15"],\
           ["@types/styled-tools", null],\
@@ -1233,7 +1233,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/addon-docs", "virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#npm:6.5.9"],\
           ["@storybook/components", "virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#npm:6.5.9"],\
           ["@types/jest", "npm:28.1.2"],\
-          ["@types/mdx-js__react", "npm:1.5.3"],\
+          ["@types/mdx-js__react", "npm:1.5.5"],\
           ["@types/react", "npm:17.0.39"],\
           ["@types/styled-system", "npm:5.1.15"],\
           ["react", "npm:18.2.0"],\
@@ -3264,7 +3264,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/react", "virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#npm:6.5.9"],\
           ["@storybook/theming", "virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#npm:6.5.9"],\
           ["@types/express", "npm:4.17.13"],\
-          ["@types/mdx-js__react", "npm:1.5.3"],\
+          ["@types/mdx-js__react", "npm:1.5.5"],\
           ["@types/react", "npm:17.0.39"],\
           ["@types/react-dom", "npm:17.0.11"],\
           ["babel-loader", "virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#npm:8.2.5"],\
@@ -15271,10 +15271,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/mdx-js__react", [\
-      ["npm:1.5.3", {\
-        "packageLocation": "../../../../.yarn/berry/cache/@types-mdx-js__react-npm-1.5.3-0e1be4607c-9.zip/node_modules/@types/mdx-js__react/",\
+      ["npm:1.5.5", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@types-mdx-js__react-npm-1.5.5-4006dcef70-9.zip/node_modules/@types/mdx-js__react/",\
         "packageDependencies": [\
-          ["@types/mdx-js__react", "npm:1.5.3"],\
+          ["@types/mdx-js__react", "npm:1.5.5"],\
           ["@types/react", "npm:17.0.39"]\
         ],\
         "linkType": "HARD"\
