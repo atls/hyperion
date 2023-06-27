@@ -17,7 +17,7 @@
   "devDependencies": {
     "@atls/storybook-google-fonts": "workspace:0.0.0",
     "@emotion/styled": "^11.9.3",
-    "@mdx-js/react": "^2.1.1",
+    "@mdx-js/react": "^2.3.0",
     "@storybook/addon-docs": "^6.5.9",
     "@storybook/components": "^6.5.9",
     "@types/jest": "^28.1.2",
