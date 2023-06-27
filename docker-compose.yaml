@@ -2,14 +2,14 @@ version: '3.8'
 
 services:
   yarn:
-    image: node:16.13
+    image: node:18.13
     working_dir: /workspace
     volumes:
       - ./:/workspace
     entrypoint: yarn
 
   parts-design:
-    image: node:16.13
+    image: node:18.13
     working_dir: /workspace
     volumes:
       - ./:/workspace
@@ -20,7 +20,7 @@ services:
       - 3000:3000
 
   proto-design:
-    image: node:16.13
+    image: node:18.13
     working_dir: /workspace
     volumes:
       - ./:/workspace
