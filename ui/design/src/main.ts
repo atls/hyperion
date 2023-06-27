@@ -13,7 +13,8 @@ const updateEmotionAliases = (config) => ({
   },
 })
 
-module.exports = {
+// @ts-ignore
+const storybookConfig = {
   core: {
     builder: 'webpack5',
   },
@@ -33,6 +34,13 @@ module.exports = {
   },
   stories: ['./*.stories.@(ts|tsx|mdx)'],
   addons: ['@storybook/addon-essentials'],
+  features: {
+    buildStoriesJson: true,
+  },
+}
+
+module.exports = {
+  ...storybookConfig,
   webpackFinal: async (config) => {
     // eslint-disable-next-line no-param-reassign
     config.resolve.fallback.assert = false
