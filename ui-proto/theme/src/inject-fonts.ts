@@ -1,41 +1,45 @@
 import { injectGlobal } from '@emotion/css'
 
+type Extension = 'ttf' | 'woff' | 'woff2' | 'otf' | 'eot'
+
+const CSSFormats = {
+  ttf: 'truetype',
+  woff: 'woff',
+  woff2: 'woff2',
+  otf: 'opentype',
+  eot: 'embedded-opentype',
+}
+
 interface FontFace {
-  family: string
-  type: string
+  fileName: string
+  fileExt: Extension
+  src: string | object
   weight: number
+  style?: string
 }
 
-const fontFace = (family, type, weight, style = 'normal') => {
-  const fsFamily = family
-  const fsType = type
-  let module
-
-  try {
-    module = require(`./fonts/${fsFamily}/${fsType}/${family}-${type}.ttf`)
-  } catch (e) {
-    console.error(e) // eslint-disable-line
-    module = false
-  }
-
-  if (!module) return ''
-
-  return {
-    '@font-face': {
-      fontFamily: family,
-      fontWeight: weight,
-      fontStyle: style,
-      src: `local('${family}-${type}'),
-          url('${module}') format('ttf')`,
-    },
+interface FontFaceFunction {
+  (font: FontFace): {
+    '@font-face': { fontFamily: string; fontWeight: number; fontStyle: string; src: string }
   }
 }
 
-export const injectFontFaces = (fontFaces: Array<FontFace> = []) =>
-  fontFaces.forEach(({ family, type, weight }) => {
+const fontFace: FontFaceFunction = ({ fileName, src, weight, fileExt, style = 'normal' }) => ({
+  '@font-face': {
+    fontFamily: fileName,
+    fontWeight: weight,
+    fontStyle: style,
+    src: `local('${fileName}'),
+          url('${src}') format('${CSSFormats[fileExt]}')`,
+  },
+})
+
+export const injectFontFaces = (fontFaces: FontFace[]) => {
+  fontFaces.forEach((font) => {
     try {
-      injectGlobal(fontFace(family, type, weight))
+      injectGlobal(fontFace({ ...font }))
     } catch (error) {
       console.log(error) // eslint-disable-line
     }
   })
+}

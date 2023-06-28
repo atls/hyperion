@@ -14,6 +14,9 @@
     "postinstall": "yarn workspace @atls-ui-admin/icons build-icons"
   },
   "resolutions": {
+    "@emotion/css": "11.9.0",
+    "@emotion/react": "11.9.3",
+    "@emotion/styled": "11.9.3",
     "@types/react": "17.0.39",
     "@types/react-dom": "17.0.11",
     "css-loader": "^5.0.0",
@@ -28,9 +31,9 @@
     "webpack-virtual-modules": "^0.4.2"
   },
   "devDependencies": {
-    "@atls/code-service": "0.0.16",
-    "@atls/config-jest": "^0.0.5",
-    "@atls/schematics": "^0.0.13",
+    "@atls/code-service": "0.0.21",
+    "@atls/config-jest": "^0.0.6",
+    "@atls/schematics": "^0.0.16",
     "@jest/core": "^28.1.1",
     "@types/eslint": "^8.4.3",
     "@types/glob": "^7",
