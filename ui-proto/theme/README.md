@@ -59,10 +59,12 @@ export const GlobalStyles = () => {
 
 ```typescript
 export const fonts = {
-  primary: 'Roboto-Regular'      // совпадает с fileName
+  primary: 'Roboto-Regular', // совпадает с fileName
 }
 ```
+
 Конфигурация NextJS:
+
 ```typescript
 /* eslint-disable */
 module.exports = {
@@ -76,7 +78,7 @@ module.exports = {
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(woff|woff2|eot|ttf|otf)$/i,
-      type: 'asset/resource'
+      type: 'asset/resource',
     })
 
     config.resolve.alias['@emotion/react'] = require.resolve('@emotion/react')
