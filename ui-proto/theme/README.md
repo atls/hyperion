@@ -2,7 +2,7 @@
 
 ## `ThemeProvider` - единая база стилей для всех проектов
 
-```
+```typescript jsx
 import { ThemeProvider as ProtoThemeProvider } from '@atls-ui-proto/theme
 import { GlobalStyles }  from './global.styles' // локальные стили под проект
 
@@ -31,7 +31,7 @@ export const ThemeProvider = ({ children }) => (
 
 Добавить в `GlobalStyles`:
 
-```
+```typescript jsx
 import { injectFontFaces } from '@atls-ui-proto/theme'
 import * as fonts from './fonts'     // импортированные шрифты
 
@@ -57,8 +57,33 @@ export const GlobalStyles = () => {
         └── index.ts
 ```
 
-```
+```typescript
 export const fonts = {
   primary: 'Roboto-Regular'      // совпадает с fileName
+}
+```
+Конфигурация NextJS:
+```typescript
+/* eslint-disable */
+module.exports = {
+  experimental: {
+    externalDir: true,
+    swcFileReading: false,
+    workerThreads: true,
+    esmExternals: 'loose',
+  },
+  output: 'standalone',
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      type: 'asset/resource'
+    })
+
+    config.resolve.alias['@emotion/react'] = require.resolve('@emotion/react')
+    config.resolve.alias['@emotion/styled'] = require.resolve('@emotion/styled')
+    config.resolve.alias['@emotion/css'] = require.resolve('@emotion/css')
+
+    return config
+  },
 }
 ```

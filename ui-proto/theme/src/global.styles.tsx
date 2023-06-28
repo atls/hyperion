@@ -11,9 +11,11 @@ export interface Props {
 
 export const GlobalStyles = ({ includeDefaultFonts }: Props) => {
   if (includeDefaultFonts) {
-    import('./fonts').then((res) => { injectFontFaces([
-      { src: res.RobotoRegular, fileExt: 'ttf', fileName: 'Roboto-Regular', weight: 400 }
-    ]) })
+    import('./fonts').then((res) => {
+      injectFontFaces([
+        { src: res.RobotoRegular, fileExt: 'ttf', fileName: 'Roboto-Regular', weight: 400 },
+      ])
+    })
 
     return (
       <Global
