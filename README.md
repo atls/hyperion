@@ -1,8 +1,8 @@
 ![hyperion-github-cover](https://user-images.githubusercontent.com/102182195/234979948-62106953-55d8-4d7f-8b2f-09fad882d8d2.png)
 
-[//]: # (VERSIONS)
+[//]: # 'VERSIONS'
 
-[<img src="https://img.shields.io/static/v1?style=for-the-badge&label=%40atls%2Fcode-service&message=0.0.21&labelColor=ECEEF5&color=D7DCEB">](https://npmjs.com/package/@atls/code-service)  [<img src="https://img.shields.io/static/v1?style=for-the-badge&label=%40atls%2Fschematics&message=0.0.16&labelColor=ECEEF5&color=D7DCEB">](https://npmjs.com/package/@atls/schematics)  [<img src="https://img.shields.io/static/v1?style=for-the-badge&label=%40atls-ui-generators%2Fbutton&message=0.0.11&labelColor=097CEB&color=0B6DCC">](https://npmjs.com/package/@atls-ui-generators/button)  [<img src="https://img.shields.io/static/v1?style=for-the-badge&label=%40atls-ui-generators%2Finput&message=0.0.6&labelColor=097CEB&color=0B6DCC">](https://npmjs.com/package/@atls-ui-generators/input)  [<img src="https://img.shields.io/static/v1?style=for-the-badge&label=%40atls-ui-generators%2Ficons&message=0.0.3&labelColor=097CEB&color=0B6DCC">](https://npmjs.com/package/@atls-ui-generators/icons)  
+[<img src="https://img.shields.io/static/v1?style=for-the-badge&label=%40atls%2Fcode-service&message=0.0.21&labelColor=ECEEF5&color=D7DCEB">](https://npmjs.com/package/@atls/code-service) [<img src="https://img.shields.io/static/v1?style=for-the-badge&label=%40atls%2Fschematics&message=0.0.16&labelColor=ECEEF5&color=D7DCEB">](https://npmjs.com/package/@atls/schematics) [<img src="https://img.shields.io/static/v1?style=for-the-badge&label=%40atls-ui-generators%2Fbutton&message=0.0.11&labelColor=097CEB&color=0B6DCC">](https://npmjs.com/package/@atls-ui-generators/button) [<img src="https://img.shields.io/static/v1?style=for-the-badge&label=%40atls-ui-generators%2Finput&message=0.0.6&labelColor=097CEB&color=0B6DCC">](https://npmjs.com/package/@atls-ui-generators/input) [<img src="https://img.shields.io/static/v1?style=for-the-badge&label=%40atls-ui-generators%2Ficons&message=0.0.3&labelColor=097CEB&color=0B6DCC">](https://npmjs.com/package/@atls-ui-generators/icons)
 
 # Hyperion UI-Kit
 
