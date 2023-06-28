@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/progress",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/progress": "workspace:0.0.17"
+    "@atls-ui-parts/progress": "workspace:0.0.18"
   },
   "devDependencies": {
     "@emotion/styled": "^11.8.1",

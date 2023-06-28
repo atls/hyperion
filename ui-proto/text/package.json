@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/text",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/text": "workspace:0.0.10"
+    "@atls-ui-parts/text": "workspace:0.0.11"
   },
   "devDependencies": {
     "@types/react": "^18.0.14",
