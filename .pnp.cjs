@@ -3330,6 +3330,7 @@ const RAW_RUNTIME_STATE =
           ["@atls-ui-proto/theme", "virtual:8ab0d223413e4a5b27571f1c73894c535886604495082c387b7a0550543032cc9edb2f3bacbd8a158ce759eb80f55bdc97c04ada24d35b3a9f99344dd6001802#workspace:ui-proto/theme"],\
           ["@emotion/css", "virtual:8eb691db84fd68975b95c7b7751e750446f82576951f5264566adefecbbef8688299b9be5a741e618cd4e5792a084b105995a5c92b7bd7f7d69bde2692db614b#npm:11.9.0"],\
           ["@emotion/react", "virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#npm:11.9.3"],\
+          ["@types/emotion__css", null],\
           ["@types/emotion__react", null],\
           ["@types/node", "npm:18.0.0"],\
           ["@types/react", "npm:17.0.39"],\
@@ -3337,6 +3338,7 @@ const RAW_RUNTIME_STATE =
         ],\
         "packagePeers": [\
           "@emotion/react",\
+          "@types/emotion__css",\
           "@types/emotion__react",\
           "@types/react",\
           "react"\
