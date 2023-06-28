@@ -10,7 +10,7 @@ export const ThemeProvider = ({ children }) => (
   <>
     <GlobalStyles />
     <EmotionThemeProvider theme={theme}>
-      <ProtoThemeProvider children={children} />
+      <ProtoThemeProvider includeDefaultFonts={true} children={children} />
     </EmotionThemeProvider>
   </>
 )
@@ -21,22 +21,44 @@ export const ThemeProvider = ({ children }) => (
 Кастомные шрифты складывать в такую структуру:
 
 ```
-| src
- L fonts
-  L Roboto /* наименование шрифта */
-   L Roboto-Regular.ttf /* файлы со стилями шрифтов */
+└── src
+    └── fonts
+        ├── index.ts
+        └── Roboto
+            ├── index.ts
+            └── Roboto-Regular.ttf
 ```
 
 Добавить в `GlobalStyles`:
 
 ```
 import { injectFontFaces } from '@atls-ui-proto/theme'
+import * as fonts from './fonts'     // импортированные шрифты
 
 export const GlobalStyles = () => {
   injectFontFaces([
     {
-      family: 'Roboto', /* название папки с шрифтами */
-      type: 'Regular',  /* тип шрифта, совпадает с наименованием файла после "-" */
-      weight: 400
-    }])
+       src: fonts.RobotoRegular,     // импортированный файл как модуль
+       fileExt: 'ttf',               // расширение файла
+       fileName: 'Roboto-Regular',   // наименование файла
+       weight: 400,                  // вес
+    }
+  ])
+
+  return (...)
+```
+
+Добавить `fonts.ts`
+
+```
+└── src
+    └── theme
+        ├── fonts.ts
+        └── index.ts
+```
+
+```
+export const fonts = {
+  primary: 'Roboto-Regular'      // совпадает с fileName
+}
 ```

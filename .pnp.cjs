@@ -3161,10 +3161,8 @@ const RAW_RUNTIME_STATE =
           ["@emotion/css", "virtual:8eb691db84fd68975b95c7b7751e750446f82576951f5264566adefecbbef8688299b9be5a741e618cd4e5792a084b105995a5c92b7bd7f7d69bde2692db614b#npm:11.9.0"],\
           ["@emotion/react", "virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#npm:11.9.3"],\
           ["@types/emotion__react", null],\
-          ["@types/fontkit", "npm:2.0.3"],\
           ["@types/node", "npm:18.0.0"],\
           ["@types/react", "npm:17.0.39"],\
-          ["fontkit", "npm:2.0.2"],\
           ["react", "npm:18.2.0"]\
         ],\
         "packagePeers": [\
@@ -3181,10 +3179,8 @@ const RAW_RUNTIME_STATE =
           ["@atls-ui-proto/theme", "workspace:ui-proto/theme"],\
           ["@emotion/css", "virtual:8eb691db84fd68975b95c7b7751e750446f82576951f5264566adefecbbef8688299b9be5a741e618cd4e5792a084b105995a5c92b7bd7f7d69bde2692db614b#npm:11.9.0"],\
           ["@emotion/react", "virtual:72c331b17fb0576d77b770423bdd2164b43cabf73bc3a7c9fdf98503a6a661ca4a1aa01448401f3bf39a97b4e34cbc32af207798868ef8462528a9c6b1265967#npm:11.9.3"],\
-          ["@types/fontkit", "npm:2.0.3"],\
           ["@types/node", "npm:18.0.0"],\
           ["@types/react", "npm:17.0.39"],\
-          ["fontkit", "npm:2.0.2"],\
           ["react", "npm:18.2.0"]\
         ],\
         "linkType": "SOFT"\
@@ -14635,16 +14631,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@swc/helpers", [\
-      ["npm:0.4.14", {\
-        "packageLocation": "../../../../.yarn/berry/cache/@swc-helpers-npm-0.4.14-f806c3fb16-9.zip/node_modules/@swc/helpers/",\
-        "packageDependencies": [\
-          ["@swc/helpers", "npm:0.4.14"],\
-          ["tslib", "npm:2.4.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["@szmarczak/http-timer", [\
       ["npm:4.0.5", {\
         "packageLocation": "../../../../.yarn/berry/cache/@szmarczak-http-timer-npm-4.0.5-03463d10ab-9.zip/node_modules/@szmarczak/http-timer/",\
@@ -14966,16 +14952,6 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:14.14.28"],\
           ["@types/qs", "npm:6.9.6"],\
           ["@types/range-parser", "npm:1.2.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@types/fontkit", [\
-      ["npm:2.0.3", {\
-        "packageLocation": "../../../../.yarn/berry/cache/@types-fontkit-npm-2.0.3-7a9fb6769c-9.zip/node_modules/@types/fontkit/",\
-        "packageDependencies": [\
-          ["@types/fontkit", "npm:2.0.3"],\
-          ["@types/node", "npm:14.14.28"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18059,16 +18035,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["brotli", [\
-      ["npm:1.3.3", {\
-        "packageLocation": "../../../../.yarn/berry/cache/brotli-npm-1.3.3-f0b047ff51-9.zip/node_modules/brotli/",\
-        "packageDependencies": [\
-          ["brotli", "npm:1.3.3"],\
-          ["base64-js", "npm:1.5.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["browser-assert", [\
       ["npm:1.2.1", {\
         "packageLocation": "../../../../.yarn/berry/cache/browser-assert-npm-1.2.1-f4eb571cbe-9.zip/node_modules/browser-assert/",\
@@ -18655,13 +18621,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../.yarn/berry/cache/clone-npm-1.0.4-a610fcbcf9-9.zip/node_modules/clone/",\
         "packageDependencies": [\
           ["clone", "npm:1.0.4"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:2.1.2", {\
-        "packageLocation": "../../../../.yarn/berry/cache/clone-npm-2.1.2-1d491c6629-9.zip/node_modules/clone/",\
-        "packageDependencies": [\
-          ["clone", "npm:2.1.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19669,15 +19628,6 @@ const RAW_RUNTIME_STATE =
           ["detect-port", "npm:1.3.0"],\
           ["address", "npm:1.1.2"],\
           ["debug", "virtual:2bcc47d217f870e3d52f0e55493dc34fd3da852877f7db32fa2940cc320151746026495daf6a34a974488cf5a949d93be1e2dc1ffba036faf081a9b15fcd2252#npm:2.6.9"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["dfa", [\
-      ["npm:1.2.0", {\
-        "packageLocation": "../../../../.yarn/berry/cache/dfa-npm-1.2.0-2b05ce5c5e-9.zip/node_modules/dfa/",\
-        "packageDependencies": [\
-          ["dfa", "npm:1.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21091,24 +21041,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../.yarn/berry/cache/flatted-npm-3.1.1-ffd80d62a2-9.zip/node_modules/flatted/",\
         "packageDependencies": [\
           ["flatted", "npm:3.1.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["fontkit", [\
-      ["npm:2.0.2", {\
-        "packageLocation": "../../../../.yarn/berry/cache/fontkit-npm-2.0.2-d65b0dc942-9.zip/node_modules/fontkit/",\
-        "packageDependencies": [\
-          ["fontkit", "npm:2.0.2"],\
-          ["@swc/helpers", "npm:0.4.14"],\
-          ["brotli", "npm:1.3.3"],\
-          ["clone", "npm:2.1.2"],\
-          ["dfa", "npm:1.2.0"],\
-          ["fast-deep-equal", "npm:3.1.3"],\
-          ["restructure", "npm:3.0.0"],\
-          ["tiny-inflate", "npm:1.0.3"],\
-          ["unicode-properties", "npm:1.4.1"],\
-          ["unicode-trie", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -26492,15 +26424,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["pako", [\
-      ["npm:0.2.9", {\
-        "packageLocation": "../../../../.yarn/berry/cache/pako-npm-0.2.9-c88ac0d326-9.zip/node_modules/pako/",\
-        "packageDependencies": [\
-          ["pako", "npm:0.2.9"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["param-case", [\
       ["npm:3.0.4", {\
         "packageLocation": "../../../../.yarn/berry/cache/param-case-npm-3.0.4-cfb242ad97-9.zip/node_modules/param-case/",\
@@ -28725,15 +28648,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["restructure", [\
-      ["npm:3.0.0", {\
-        "packageLocation": "../../../../.yarn/berry/cache/restructure-npm-3.0.0-97953cd564-9.zip/node_modules/restructure/",\
-        "packageDependencies": [\
-          ["restructure", "npm:3.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["ret", [\
       ["npm:0.1.15", {\
         "packageLocation": "../../../../.yarn/berry/cache/ret-npm-0.1.15-0d3c19de76-9.zip/node_modules/ret/",\
@@ -30469,15 +30383,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["tiny-inflate", [\
-      ["npm:1.0.3", {\
-        "packageLocation": "../../../../.yarn/berry/cache/tiny-inflate-npm-1.0.3-a7419a5c65-9.zip/node_modules/tiny-inflate/",\
-        "packageDependencies": [\
-          ["tiny-inflate", "npm:1.0.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["tiny-warning", [\
       ["npm:1.0.3", {\
         "packageLocation": "../../../../.yarn/berry/cache/tiny-warning-npm-1.0.3-750b7a07c4-9.zip/node_modules/tiny-warning/",\
@@ -31108,33 +31013,11 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["unicode-properties", [\
-      ["npm:1.4.1", {\
-        "packageLocation": "../../../../.yarn/berry/cache/unicode-properties-npm-1.4.1-122054452f-9.zip/node_modules/unicode-properties/",\
-        "packageDependencies": [\
-          ["unicode-properties", "npm:1.4.1"],\
-          ["base64-js", "npm:1.5.1"],\
-          ["unicode-trie", "npm:2.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["unicode-property-aliases-ecmascript", [\
       ["npm:1.1.0", {\
         "packageLocation": "../../../../.yarn/berry/cache/unicode-property-aliases-ecmascript-npm-1.1.0-2d3021f23b-9.zip/node_modules/unicode-property-aliases-ecmascript/",\
         "packageDependencies": [\
           ["unicode-property-aliases-ecmascript", "npm:1.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["unicode-trie", [\
-      ["npm:2.0.0", {\
-        "packageLocation": "../../../../.yarn/berry/cache/unicode-trie-npm-2.0.0-54e0a4dd52-9.zip/node_modules/unicode-trie/",\
-        "packageDependencies": [\
-          ["unicode-trie", "npm:2.0.0"],\
-          ["pako", "npm:0.2.9"],\
-          ["tiny-inflate", "npm:1.0.3"]\
         ],\
         "linkType": "HARD"\
       }]\
