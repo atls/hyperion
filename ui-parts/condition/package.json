@@ -1,6 +1,6 @@
 {
-  "name": "@atls-ui-proto/theme",
-  "version": "0.0.10",
+  "name": "@atls-ui-parts/condition",
+  "version": "0.0.2",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -11,16 +11,18 @@
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
   },
+  "dependencies": {
+    "framer-motion": "10.12.16"
+  },
   "devDependencies": {
-    "@emotion/css": "^11.9.0",
-    "@emotion/react": "^11.9.3",
-    "@types/node": "^18.0.0",
-    "@types/react": "^18.0.13",
-    "react": "^18.2.0"
+    "@emotion/react": "11.9.3",
+    "@emotion/styled": "11.9.3",
+    "react": "18.2.0"
   },
   "peerDependencies": {
-    "@emotion/react": "^11.9.3",
-    "react": "^18.2.0"
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*"
   },
   "publishConfig": {
     "access": "public",

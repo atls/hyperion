@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-generators/button",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "bin": {
@@ -24,7 +24,7 @@
     "prettier": "^2.5.1"
   },
   "devDependencies": {
-    "@atls-ui-parts/button": "workspace:0.0.10",
+    "@atls-ui-parts/button": "workspace:0.0.11",
     "@types/babel__standalone": "^7",
     "@types/prettier": "^2",
     "styled-tools": "^1.7.2"

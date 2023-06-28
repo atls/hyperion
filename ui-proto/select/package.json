@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/select",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -15,7 +15,7 @@
     "@atls-ui-parts/layout": "workspace:0.0.7",
     "@atls-ui-parts/select": "workspace:0.0.13",
     "@atls-ui-parts/text": "workspace:0.0.10",
-    "@atls-ui-proto/button": "workspace:0.0.12",
+    "@atls-ui-proto/button": "workspace:0.0.13",
     "@emotion/css": "^11.7.1",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
