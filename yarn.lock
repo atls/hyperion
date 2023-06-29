@@ -1620,7 +1620,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls/code-service@npm:0.0.21":
+"@atls/code-service@npm:^0.0.21":
   version: 0.0.21
   resolution: "@atls/code-service@npm:0.0.21"
   dependencies:
@@ -21530,7 +21530,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ui@workspace:."
   dependencies:
-    "@atls/code-service": "npm:0.0.21"
+    "@atls/code-service": "npm:^0.0.21"
     "@atls/config-jest": "npm:^0.0.6"
     "@atls/schematics": "npm:^0.0.16"
     "@jest/core": "npm:^28.1.1"

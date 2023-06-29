@@ -3,14 +3,14 @@
 ## `ThemeProvider` - единая база стилей для всех проектов
 
 ```typescript jsx
-import { ThemeProvider as ProtoThemeProvider } from '@atls-ui-proto/theme
-import { GlobalStyles }  from './global.styles' // локальные стили под проект
+import { ThemeProvider as ProtoThemeProvider } from '@atls-ui-proto/theme'
+import { GlobalStyles }                        from './global.styles' // локальные стили под проект
 
 export const ThemeProvider = ({ children }) => (
   <>
     <GlobalStyles />
     <EmotionThemeProvider theme={theme}>
-      <ProtoThemeProvider includeDefaultFonts={true} children={children} />
+      <ProtoThemeProvider children={children} />
     </EmotionThemeProvider>
   </>
 )
@@ -33,7 +33,7 @@ export const ThemeProvider = ({ children }) => (
 
 ```typescript jsx
 import { injectFontFaces } from '@atls-ui-proto/theme'
-import * as fonts from './fonts'     // импортированные шрифты
+import * as fonts          from './fonts'     // импортированные шрифты
 
 export const GlobalStyles = () => {
   injectFontFaces([
@@ -46,6 +46,7 @@ export const GlobalStyles = () => {
   ])
 
   return (...)
+}
 ```
 
 Добавить `fonts.ts`
