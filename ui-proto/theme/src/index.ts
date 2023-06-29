@@ -1,2 +1,5 @@
 export * from './theme.provider'
 export * from './inject-fonts'
+export type { colors } from './theme'
+export type { fontSizes } from './theme'
+export type { fontWeights } from './theme'
