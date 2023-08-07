@@ -1,17 +1,18 @@
-import React                 from 'react'
-import { AnimatePresence }   from 'framer-motion'
-import { PropsWithChildren } from 'react'
-import { motion }            from 'framer-motion'
+import React               from 'react'
+import { AnimatePresence } from 'framer-motion'
+import { FC }              from 'react'
+import { motion }          from 'framer-motion'
 
-import { ConditionProps }    from './condition.interface'
+import { ConditionProps }  from './condition.interface'
 
-export const Condition = ({
+export const Condition: FC<ConditionProps> = ({
   match,
   smooth = false,
   smoothDuration = 0.3,
   smoothPattern = 'in-and-out',
   children,
-}: PropsWithChildren<ConditionProps>) => {
+  /* eslint-disable consistent-return */
+}) => {
   if (smooth) {
     if (smoothPattern === 'in-and-out') {
       return (
@@ -67,6 +68,4 @@ export const Condition = ({
   }
 
   if (match) return children
-
-  return null
 }
