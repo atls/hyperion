@@ -4,7 +4,7 @@
 
 ```typescript jsx
 import { ThemeProvider as ProtoThemeProvider } from '@atls-ui-proto/theme'
-import { GlobalStyles }                        from './global.styles' // локальные стили под проект
+import { GlobalStyles }                        from './global.styles' / локальные стили под проект
 
 export const ThemeProvider = ({ children }) => (
   <>
