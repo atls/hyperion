@@ -8060,6 +8060,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^18.16.20":
+  version: 18.17.4
+  resolution: "@types/node@npm:18.17.4"
+  checksum: 916e676abfa146451709b5bce5c3ad90dd02b3dc524d81929ecaf2d1804e48a82d8819ba6cac75f2b373606b7172db5175b9fbbff5e96b52a229941f596302f1
+  languageName: node
+  linkType: hard
+
 "@types/normalize-package-data@npm:^2.4.0":
   version: 2.4.0
   resolution: "@types/normalize-package-data@npm:2.4.0"
@@ -14228,6 +14235,26 @@ __metadata:
   checksum: 1d6dd7e973e7fab4316f767f3f8d76591a9857b3ad4fea2b371834afe2122d6567965b6c5a027040b403363c328d35871113d7f64586d7149b4b417c90554237
   languageName: node
   linkType: hard
+
+"hyperion@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "hyperion@workspace:."
+  dependencies:
+    "@atls/code-service": "npm:^0.0.21"
+    "@atls/config-jest": "npm:^0.0.6"
+    "@atls/schematics": "npm:^0.0.16"
+    "@jest/core": "npm:^28.1.1"
+    "@types/eslint": "npm:^8.4.3"
+    "@types/glob": "npm:^7"
+    "@types/jest": "npm:^28.1.2"
+    "@types/node": "npm:^18.16.20"
+    "@types/react": "npm:^18.0.14"
+    eslint: "npm:^8.17.0"
+    husky: "npm:7.0.4"
+    jest-environment-jsdom: "npm:^28.1.1"
+    typescript: "npm:4.6.2"
+  languageName: unknown
+  linkType: soft
 
 "iconv-lite@npm:0.4.24":
   version: 0.4.24
@@ -21515,26 +21542,6 @@ __metadata:
   checksum: 743013b3dcfe1de62987a03f7b4c235ff57921fa9339e90343dc55375a95b0bd19176b58406dfc8a94e51756f8f42d9906548ea9f4e0db78163668352ddbb8df
   languageName: node
   linkType: hard
-
-"ui@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "ui@workspace:."
-  dependencies:
-    "@atls/code-service": "npm:^0.0.21"
-    "@atls/config-jest": "npm:^0.0.6"
-    "@atls/schematics": "npm:^0.0.16"
-    "@jest/core": "npm:^28.1.1"
-    "@types/eslint": "npm:^8.4.3"
-    "@types/glob": "npm:^7"
-    "@types/jest": "npm:^28.1.2"
-    "@types/node": "npm:^18.0.0"
-    "@types/react": "npm:^18.0.14"
-    eslint: "npm:^8.17.0"
-    husky: "npm:7.0.4"
-    jest-environment-jsdom: "npm:^28.1.1"
-    typescript: "npm:4.6.2"
-  languageName: unknown
-  linkType: soft
 
 "unbox-primitive@npm:^1.0.1":
   version: 1.0.1
