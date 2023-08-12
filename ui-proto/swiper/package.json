@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/swiper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/swiper": "workspace:0.0.3"
+    "@atls-ui-parts/swiper": "workspace:0.0.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.14",

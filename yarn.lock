@@ -317,7 +317,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-admin/icon@workspace:0.0.6, @atls-ui-admin/icon@workspace:ui-admin/icon":
+"@atls-ui-admin/icon@workspace:0.0.7, @atls-ui-admin/icon@workspace:ui-admin/icon":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/icon@workspace:ui-admin/icon"
   dependencies:
@@ -341,13 +341,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-admin/icons@workspace:0.0.6, @atls-ui-admin/icons@workspace:ui-admin/icons":
+"@atls-ui-admin/icons@workspace:0.0.7, @atls-ui-admin/icons@workspace:ui-admin/icons":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/icons@workspace:ui-admin/icons"
   dependencies:
     "@atlantis-lab/prettier-config": "npm:^0.1.12"
     "@atlantis-lab/tsconfig": "npm:^0.1.12"
-    "@atls-ui-admin/icon": "workspace:0.0.6"
+    "@atls-ui-admin/icon": "workspace:0.0.7"
     "@svgr/core": "npm:5.4.0"
     "@testing-library/react": "npm:^13.3.0"
     "@types/prettier": "npm:^2"
@@ -389,8 +389,8 @@ __metadata:
   resolution: "@atls-ui-admin/upload@workspace:ui-admin/upload"
   dependencies:
     "@apollo/client": "npm:3.6.6"
-    "@atls-ui-admin/icon": "workspace:0.0.6"
-    "@atls-ui-admin/icons": "workspace:0.0.6"
+    "@atls-ui-admin/icon": "workspace:0.0.7"
+    "@atls-ui-admin/icons": "workspace:0.0.7"
     "@atls/react-upload": "npm:^0.0.3"
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
@@ -984,7 +984,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/swiper@workspace:0.0.3, @atls-ui-parts/swiper@workspace:ui-parts/swiper":
+"@atls-ui-parts/swiper@workspace:0.0.4, @atls-ui-parts/swiper@workspace:ui-parts/swiper":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/swiper@workspace:ui-parts/swiper"
   dependencies:
@@ -1482,7 +1482,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/swiper@workspace:ui-proto/swiper"
   dependencies:
-    "@atls-ui-parts/swiper": "workspace:0.0.3"
+    "@atls-ui-parts/swiper": "workspace:0.0.4"
     "@types/react": "npm:^18.0.14"
     react: "npm:^18.2.0"
   peerDependencies:
