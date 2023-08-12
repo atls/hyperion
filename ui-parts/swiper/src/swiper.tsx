@@ -1,12 +1,13 @@
 import { injectGlobal }         from '@emotion/css'
-import { nanoid }               from 'nanoid'
+
 import React                    from 'react'
 import { FC }                   from 'react'
-import { useMemo }              from 'react'
 import { Swiper as BaseSwiper } from 'swiper/react'
 import { SwiperProps }          from 'swiper/react'
+import { nanoid }               from 'nanoid'
+import { useMemo }              from 'react'
 
-import { STYLES } from './swiper.styles'
+import { STYLES }               from './swiper.styles'
 
 let wasGloballyInjected = false
 const injectedClasses: string[] = []

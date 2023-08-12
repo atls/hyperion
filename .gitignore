@@ -42,7 +42,7 @@ node_modules
 
 # Icons
 
-ui-admin/icons/src/
+#ui-admin/icons/src/
 
 dist/
 
