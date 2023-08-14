@@ -6,8 +6,8 @@ import { ifProp }    from 'styled-tools'
 export const baseMenuItemStyles: styleFn = () => ({
   color: '#333',
   padding: '4px 16px',
-  fontSize: '14.8px',
   cursor: 'pointer',
+  fontSize: '14.8px',
 })
 
 export const selectedMenuItemStyles: CSSObject = {
