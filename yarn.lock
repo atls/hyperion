@@ -495,25 +495,25 @@ __metadata:
   resolution: "@atls-ui-parts/autocomplete@workspace:ui-parts/autocomplete"
   dependencies:
     "@atls-ui-proto/input": "workspace:0.0.13"
-    "@emotion/react": "npm:^11.9.3"
-    "@emotion/styled": "npm:^11.9.3"
+    "@emotion/react": "npm:11.9.3"
+    "@emotion/styled": "npm:11.9.3"
     "@testing-library/react": "npm:^13.3.0"
-    "@types/react": "npm:^18.0.14"
-    "@types/styled-system": "npm:^5.1.15"
-    downshift: "npm:^5.0.5"
-    framer-motion: "npm:^6.3.11"
-    react: "npm:^18.2.0"
-    react-laag: "npm:^2.0.4"
-    styled-system: "npm:^5.1.5"
-    styled-tools: "npm:^1.7.2"
+    "@types/react": "npm:18.2.20"
+    "@types/styled-system": "npm:5.1.15"
+    downshift: "npm:5.4.7"
+    framer-motion: "npm:10.15.2"
+    react: "npm:18.2.0"
+    react-laag: "npm:2.0.5"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
   peerDependencies:
-    "@emotion/react": ^11.4.0
-    "@emotion/styled": ^11.3.0
-    framer-motion: ^4.1.17
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    styled-system: ^5.1.0
-    styled-tools: ^1.7.2
+    "@emotion/react": 11.9.3
+    "@emotion/styled": 11.9.3
+    framer-motion: 10.15.2
+    react: 18.2.0
+    react-dom: 18.2.0
+    styled-system: 5.1.5
+    styled-tools: 1.7.2
   languageName: unknown
   linkType: soft
 
@@ -574,20 +574,20 @@ __metadata:
   dependencies:
     "@atls-ui-parts/dom": "workspace:0.0.4"
     "@atls-ui-parts/layout": "workspace:0.0.7"
-    "@emotion/react": "npm:^11.9.3"
-    "@emotion/styled": "npm:^11.9.3"
-    "@types/react-dom": "npm:^18.0.5"
-    framer-motion: "npm:6.3.11"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    react-scrolllock: "npm:^5.0.1"
-    styled-system: "npm:^5.1.5"
-    styled-tools: "npm:^1.7.2"
+    "@emotion/react": "npm:11.9.3"
+    "@emotion/styled": "npm:11.9.3"
+    "@types/react-dom": "npm:18.2.7"
+    framer-motion: "npm:10.15.2"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    react-scrolllock: "npm:5.0.1"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
   peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    react: "*"
-    react-dom: "*"
+    "@emotion/react": 11.9.3
+    "@emotion/styled": 11.9.3
+    react: 18.2.0
+    react-dom: 18.2.0
   languageName: unknown
   linkType: soft
 
@@ -597,19 +597,19 @@ __metadata:
   dependencies:
     "@atls-ui-parts/dom": "workspace:0.0.4"
     "@atls-ui-parts/styles": "workspace:0.0.4"
-    "@emotion/styled": "npm:^11.9.3"
-    "@types/jest": "npm:^28.1.2"
-    "@types/react": "npm:^18.0.14"
-    "@types/styled-system": "npm:^5.1.15"
-    framer-motion: "npm:6.3.11"
-    react: "npm:^18.2.0"
-    styled-system: "npm:^5.1.5"
-    styled-tools: "npm:^1.7.2"
+    "@emotion/styled": "npm:11.9.3"
+    "@types/jest": "npm:28.1.2"
+    "@types/react": "npm:18.2.20"
+    "@types/styled-system": "npm:5.1.16"
+    framer-motion: "npm:10.15.2"
+    react: "npm:18.2.0"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
   peerDependencies:
-    "@emotion/styled": ^11.1.5
-    react: ^17.0.1
-    styled-system: ^5.1.5
-    styled-tools: ^1.7.2
+    "@emotion/styled": 11.9.3
+    react: 18.2.0
+    styled-system: 5.1.5
+    styled-tools: 1.7.2
   languageName: unknown
   linkType: soft
 
@@ -642,12 +642,13 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
-    framer-motion: "npm:10.12.16"
+    framer-motion: "npm:10.15.2"
     react: "npm:18.2.0"
   peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    react: "*"
+    "@emotion/react": 11.9.3
+    "@emotion/styled": 11.9.3
+    framer-motion: 10.15.2
+    react: 18.2.0
   languageName: unknown
   linkType: soft
 
@@ -1058,23 +1059,23 @@ __metadata:
   resolution: "@atls-ui-parts/tooltip@workspace:ui-parts/tooltip"
   dependencies:
     "@atls-ui-parts/layout": "workspace:0.0.7"
-    "@emotion/styled": "npm:^11.9.3"
-    "@testing-library/react": "npm:^13.3.0"
-    "@types/react": "npm:^18.0.14"
-    "@types/react-dom": "npm:^18.0.5"
-    "@types/styled-system": "npm:^5.1.15"
-    framer-motion: "npm:^6.3.11"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    react-laag: "npm:^2.0.4"
-    styled-system: "npm:^5.1.5"
+    "@emotion/styled": "npm:11.9.3"
+    "@testing-library/react": "npm:13.3.0"
+    "@types/react": "npm:18.2.20"
+    "@types/react-dom": "npm:18.2.7"
+    "@types/styled-system": "npm:5.1.16"
+    framer-motion: "npm:10.15.2"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    react-laag: "npm:2.0.5"
+    styled-system: "npm:5.1.5"
   peerDependencies:
-    "@emotion/styled": ^11.1.5
-    framer-motion: ^4.1.7
-    react: ^17.0.1
-    react-dom: ^17.0.2
-    react-laag: ^1.7.3
-    styled-system: ^5.1.0
+    "@emotion/styled": 11.9.3
+    framer-motion: 10.15.2
+    react: 18.2.0
+    react-dom: 18.2.0
+    react-laag: 2.0.5
+    styled-system: 5.1.5
   languageName: unknown
   linkType: soft
 
@@ -1165,19 +1166,19 @@ __metadata:
   resolution: "@atls-ui-proto/carousel@workspace:ui-proto/carousel"
   dependencies:
     "@atls-ui-parts/carousel": "workspace:0.0.5"
-    "@emotion/styled": "npm:^11.9.3"
-    "@types/node": "npm:^18.0.0"
-    "@types/react": "npm:^18.0.14"
-    "@types/styled-system": "npm:^5.1.15"
-    framer-motion: "npm:^6.3.11"
-    react: "npm:^18.2.0"
-    styled-system: "npm:^5.1.5"
-    styled-tools: "npm:^1.7.2"
+    "@emotion/styled": "npm:11.9.3"
+    "@types/node": "npm:18.15.3"
+    "@types/react": "npm:18.2.20"
+    "@types/styled-system": "npm:5.1.15"
+    framer-motion: "npm:10.15.2"
+    react: "npm:18.2.0"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
   peerDependencies:
-    "@emotion/styled": ^11.1.5
-    react: ^17.0.1
-    styled-system: ^5.1.5
-    styled-tools: ^1.7.2
+    "@emotion/styled": 11.9.3
+    react: 18.2.0
+    styled-system: 5.1.5
+    styled-tools: 1.7.2
   languageName: unknown
   linkType: soft
 
@@ -1377,16 +1378,16 @@ __metadata:
   dependencies:
     "@atls-ui-parts/dom": "npm:0.0.4"
     "@atls-ui-parts/text": "npm:0.0.11"
-    "@emotion/styled": "npm:^11.9.3"
+    "@emotion/styled": "npm:11.9.3"
     events: "npm:3.3.0"
-    framer-motion: "npm:^6.3.11"
-    react: "npm:^18.2.0"
-    react-intersection-observer: "npm:9.3.3"
-    styled-system: "npm:^5.1.5"
+    framer-motion: "npm:10.15.2"
+    react: "npm:18.2.0"
+    react-intersection-observer: "npm:9.5.2"
+    styled-system: "npm:5.1.5"
   peerDependencies:
-    "@emotion/styled": ^11.1.5
-    react: ^17.0.1
-    styled-system: ^5.1.4
+    "@emotion/styled": 11.9.3
+    react: 18.2.0
+    styled-system: 5.1.5
   languageName: unknown
   linkType: soft
 
@@ -1411,22 +1412,22 @@ __metadata:
   dependencies:
     "@atls-ui-parts/layout": "workspace:0.0.7"
     "@atls-ui-parts/tooltip": "workspace:0.0.7"
-    "@emotion/react": "npm:^11.9.3"
-    "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^18.0.14"
-    "@types/react-dom": "npm:^18.0.5"
-    "@types/styled-system": "npm:^5.1.15"
-    framer-motion: "npm:^6.3.11"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    react-laag: "npm:^2.0.4"
-    styled-system: "npm:^5.1.5"
+    "@emotion/react": "npm:11.9.3"
+    "@emotion/styled": "npm:11.9.3"
+    "@types/react": "npm:18.2.20"
+    "@types/react-dom": "npm:18.2.7"
+    "@types/styled-system": "npm:5.1.15"
+    framer-motion: "npm:6.3.11"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    react-laag: "npm:2.0.4"
+    styled-system: "npm:5.1.5"
   peerDependencies:
-    "@emotion/styled": ^11.1.5
-    framer-motion: ^4.1.7
-    react: ^17.0.1
-    react-dom: ^17.0.2
-    styled-system: ^5.1.0
+    "@emotion/styled": 11.9.3
+    framer-motion: 10.15.2
+    react: 18.2.0
+    react-dom: 18.2.0
+    styled-system: 5.1.5
   languageName: unknown
   linkType: soft
 
@@ -1495,25 +1496,25 @@ __metadata:
   resolution: "@atls-ui-proto/switch@workspace:ui-proto/switch"
   dependencies:
     "@atls-ui-parts/switch": "workspace:0.0.7"
-    "@emotion/css": "npm:^11.7.1"
-    "@emotion/react": "npm:^11.9.3"
-    "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^18.0.14"
-    "@types/react-dom": "npm:^18.0.5"
-    "@types/styled-system": "npm:^5.1.15"
-    framer-motion: "npm:^7.4.0"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    react-laag: "npm:^2.0.4"
-    styled-system: "npm:^5.1.5"
-    styled-tools: "npm:^1.7.2"
+    "@emotion/css": "npm:11.9.0"
+    "@emotion/react": "npm:11.9.3"
+    "@emotion/styled": "npm:11.9.3"
+    "@types/react": "npm:18.2.20"
+    "@types/react-dom": "npm:18.2.7"
+    "@types/styled-system": "npm:5.1.16"
+    framer-motion: "npm:10.15.2"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    react-laag: "npm:2.0.5"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
   peerDependencies:
-    "@emotion/css": ^11.7.1
-    "@emotion/styled": ^11.1.5
-    framer-motion: ^7.4.0
-    react: ^17.0.1
-    react-dom: ^17.0.2
-    styled-system: ^5.1.0
+    "@emotion/css": 11.9.3
+    "@emotion/styled": 11.9.3
+    framer-motion: 10.15.2
+    react: 18.2.0
+    react-dom: 18.2.0
+    styled-system: 5.1.5
   languageName: unknown
   linkType: soft
 
@@ -1531,15 +1532,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/theme@workspace:ui-proto/theme"
   dependencies:
-    "@emotion/css": "npm:^11.9.0"
-    "@emotion/react": "npm:^11.9.3"
-    "@types/node": "npm:^18.0.0"
-    "@types/react": "npm:^18.0.13"
-    react: "npm:^18.2.0"
+    "@emotion/css": "npm:11.9.0"
+    "@emotion/react": "npm:11.9.3"
+    "@types/node": "npm:18.0.0"
+    "@types/react": "npm:18.0.13"
+    react: "npm:18.2.0"
   peerDependencies:
-    "@emotion/css": ^11.9.0
-    "@emotion/react": ^11.9.3
-    react: ^18.2.0
+    "@emotion/css": 11.9.0
+    "@emotion/react": 11.9.3
+    react: 18.2.0
   languageName: unknown
   linkType: soft
 
@@ -1549,19 +1550,19 @@ __metadata:
   dependencies:
     "@atls-ui-parts/layout": "workspace:0.0.7"
     "@atls-ui-parts/tooltip": "workspace:0.0.7"
-    "@emotion/react": "npm:^11.9.3"
-    "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^18.0.14"
-    "@types/react-dom": "npm:^18.0.5"
-    "@types/styled-system": "npm:^5.1.15"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    styled-system: "npm:^5.1.5"
+    "@emotion/react": "npm:11.9.3"
+    "@emotion/styled": "npm:11.9.3"
+    "@types/react": "npm:18.2.20"
+    "@types/react-dom": "npm:18.2.7"
+    "@types/styled-system": "npm:5.1.15"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    styled-system: "npm:5.1.5"
   peerDependencies:
-    "@emotion/styled": ^11.1.5
-    react: ^17.0.1
-    react-dom: ^17.0.2
-    styled-system: ^5.1.0
+    "@emotion/styled": 11.9.3
+    react: 18.2.0
+    react-dom: 18.2.0
+    styled-system: 5.1.5
   languageName: unknown
   linkType: soft
 
@@ -7601,7 +7602,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:^13.3.0":
+"@testing-library/react@npm:13.3.0, @testing-library/react@npm:^13.3.0":
   version: 13.3.0
   resolution: "@testing-library/react@npm:13.3.0"
   dependencies:
@@ -8032,6 +8033,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:18.0.0, @types/node@npm:^18.0.0":
+  version: 18.0.0
+  resolution: "@types/node@npm:18.0.0"
+  checksum: 5d902615a9732fe86ff71edc04b6d35599b447a6fe3b572b12ea002a3460572f8e4d8990bf3983c2890e2335ea8625b78bc51ab542df492ef12e6dcd0da0865a
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:18.15.3":
+  version: 18.15.3
+  resolution: "@types/node@npm:18.15.3"
+  checksum: 658d687cb6d88ccbb7d073fc583a0c88eb75936b64a6d43a6f06e320bf39384e35e3f5f4c88aa65c833a25cbe76080414bbfde54207050399b350e08aea70ada
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^14.0.10":
   version: 14.17.3
   resolution: "@types/node@npm:14.17.3"
@@ -8043,13 +8058,6 @@ __metadata:
   version: 16.11.39
   resolution: "@types/node@npm:16.11.39"
   checksum: 88e741e13a168024547bb0e90d53667793f35e7e13ab0f5f3dfca45eaa4722b7c51c8eb963255f7a415bcbd1d6369f2ba0765dab0a573d9859e169850bf9f9a8
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^18.0.0":
-  version: 18.0.0
-  resolution: "@types/node@npm:18.0.0"
-  checksum: 5d902615a9732fe86ff71edc04b6d35599b447a6fe3b572b12ea002a3460572f8e4d8990bf3983c2890e2335ea8625b78bc51ab542df492ef12e6dcd0da0865a
   languageName: node
   linkType: hard
 
@@ -8238,12 +8246,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/styled-system@npm:^5.1.15":
+"@types/styled-system@npm:5.1.15, @types/styled-system@npm:^5.1.15":
   version: 5.1.15
   resolution: "@types/styled-system@npm:5.1.15"
   dependencies:
     csstype: "npm:^3.0.2"
   checksum: e69d1abe249919f8d21d9378a7f7c652a2d4a09da41805e566db99f59c446a363a169fe39847373acba26c7b1ae38c4d2ecc3eaba1a838add23296a275b81f0f
+  languageName: node
+  linkType: hard
+
+"@types/styled-system@npm:5.1.16":
+  version: 5.1.16
+  resolution: "@types/styled-system@npm:5.1.16"
+  dependencies:
+    csstype: "npm:^3.0.2"
+  checksum: f3321df9e0aae12e40687f98d3d3402f6ffc4ca6d8dda57392a2a16f9c7e5bade568468b39f85643f14960731776f82a2276dfe048292889c7389a4b2da40e9f
   languageName: node
   linkType: hard
 
@@ -10969,7 +10986,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"compute-scroll-into-view@npm:^1.0.14, compute-scroll-into-view@npm:^1.0.17":
+"compute-scroll-into-view@npm:^1.0.14":
+  version: 1.0.20
+  resolution: "compute-scroll-into-view@npm:1.0.20"
+  checksum: 99fd234d5a941afdce3ea6409f2e39babd652a1e8ba73d28d62ba493a68cd2e8e442a2539501bf26450bf888b894523860d5c97a0a9612bc1de22be8fbd1ac03
+  languageName: node
+  linkType: hard
+
+"compute-scroll-into-view@npm:^1.0.17":
   version: 1.0.17
   resolution: "compute-scroll-into-view@npm:1.0.17"
   checksum: e2b5a4bef079c52ed7d26a09044252a48f234b2f395c65a57178031698906322566d1e1de20c4baa770f905374a079b8daa0a8f1c8aa40cb4bf7d106e835f34c
@@ -11778,7 +11802,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"downshift@npm:^5.0.5":
+"downshift@npm:5.4.7":
   version: 5.4.7
   resolution: "downshift@npm:5.4.7"
   dependencies:
@@ -12999,9 +13023,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:10.12.16":
-  version: 10.12.16
-  resolution: "framer-motion@npm:10.12.16"
+"framer-motion@npm:10.15.2":
+  version: 10.15.2
+  resolution: "framer-motion@npm:10.15.2"
   dependencies:
     "@emotion/is-prop-valid": "npm:^0.8.2"
     tslib: "npm:^2.4.0"
@@ -13016,7 +13040,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 938b0267a1be021ab6fa5d4727f66d87f99d3fe1d8d23ee9d782101aad8c939e6c9cb83c9a937b8ad4a5d796ad32341aaf55ce9285aac3f4a54afe6a52f853a9
+  checksum: 630b575886b06e2977aeb07f9f8cd9724930cdef564a40bbe90a106dcdfcf26a67a11fcf60dd333f615d58a115ca108fe91c777db125910ce7dc92d7bceb056e
   languageName: node
   linkType: hard
 
@@ -18680,7 +18704,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.2.0":
+"react-dom@npm:18.2.0, react-dom@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
   dependencies:
@@ -18765,12 +18789,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intersection-observer@npm:9.3.3":
-  version: 9.3.3
-  resolution: "react-intersection-observer@npm:9.3.3"
+"react-intersection-observer@npm:9.5.2":
+  version: 9.5.2
+  resolution: "react-intersection-observer@npm:9.5.2"
   peerDependencies:
-    react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
-  checksum: 32b96b637cd4e8bee464f8f4fc2caf82586a04ee9b7bb92f9cb8b93f7be98fdc8c4968f27e6e857686e1351c11287afb8da6e79f3084f400179ca53f359885d7
+    react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 4de4c45ea142c02d77ec6bc1a41892f50b7988e4821b4b23e27f925b231abff4f937f161637006ed796dde212ea0459194554ae1d753aa6cff164bf9cd0e2dbd
   languageName: node
   linkType: hard
 
@@ -18809,7 +18833,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-laag@npm:^2.0.4":
+"react-laag@npm:2.0.4, react-laag@npm:^2.0.4":
   version: 2.0.4
   resolution: "react-laag@npm:2.0.4"
   dependencies:
@@ -18818,6 +18842,18 @@ __metadata:
     react: ^16.0.0 || ^17.0.0
     react-dom: ^16.0.0 || ^17.0.0
   checksum: d018f375265010bd652a79dcc76a01155185d40c2140b321fca9e7f49d8801b51dbd05d48d64a54b87d05ac04d935a5390e7aa2792c72bc190624e3712fa5d97
+  languageName: node
+  linkType: hard
+
+"react-laag@npm:2.0.5":
+  version: 2.0.5
+  resolution: "react-laag@npm:2.0.5"
+  dependencies:
+    tiny-warning: "npm:^1.0.3"
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 32de5cb560153a0d53d120bb9893e243cd90f4cee5d05ce037562c9c8f5e8d8bc766ac3706f3264d1363fc79c9ae0610e2cb06a22835381f61094d4bb550a5ed
   languageName: node
   linkType: hard
 
@@ -18916,7 +18952,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-scrolllock@npm:^5.0.1":
+"react-scrolllock@npm:5.0.1":
   version: 5.0.1
   resolution: "react-scrolllock@npm:5.0.1"
   dependencies:
@@ -20721,7 +20757,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-system@npm:^5.1.5":
+"styled-system@npm:5.1.5, styled-system@npm:^5.1.5":
   version: 5.1.5
   resolution: "styled-system@npm:5.1.5"
   dependencies:
@@ -20742,7 +20778,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-tools@npm:^1.7.2":
+"styled-tools@npm:1.7.2, styled-tools@npm:^1.7.2":
   version: 1.7.2
   resolution: "styled-tools@npm:1.7.2"
   checksum: 726ba9b48df8bab6c091dc1508c9913e0b793a63a65099bfc28b1b807577fa5914644ba9f07ff49c8b1479d8b857a8877cb942ef5a2033385a87756fd3b3d596
