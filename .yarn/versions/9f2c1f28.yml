@@ -1,0 +1,16 @@
+releases:
+  "@atls-ui-admin/icon": patch
+  "@atls-ui-admin/icons": patch
+  "@atls-ui-admin/upload": patch
+  "@atls-ui-parts/autocomplete": patch
+  "@atls-ui-parts/card": patch
+  "@atls-ui-parts/carousel": patch
+  "@atls-ui-parts/condition": patch
+  "@atls-ui-parts/tooltip": patch
+  "@atls-ui-proto/autocomplete": patch
+  "@atls-ui-proto/carousel": patch
+  "@atls-ui-proto/parallax": patch
+  "@atls-ui-proto/popover": patch
+  "@atls-ui-proto/switch": patch
+  "@atls-ui-proto/theme": patch
+  "@atls-ui-proto/tooltip": patch
