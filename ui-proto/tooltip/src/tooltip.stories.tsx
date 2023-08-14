@@ -30,7 +30,7 @@ const Button = styled.div({
 })
 
 export const Base = () => (
-  <Tooltip trigger='hover' text='text'>
-    <Button>hover</Button>
+  <Tooltip trigger='click' text='text'>
+    <Button>click</Button>
   </Tooltip>
 )
