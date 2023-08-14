@@ -7,12 +7,12 @@ export const GlobalStyles = () => (
   <Global
     styles={css`
       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-        
+
       html,
       body {
         margin: 0;
-        height: 100%;
         overflow: hidden;
+        height: 100%;
         -webkit-font-smoothing: antialiased;
         -webkit-overflow-scrolling: touch;
       }
