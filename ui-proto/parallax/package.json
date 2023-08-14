@@ -6,16 +6,16 @@
   "devDependencies": {
     "@atls-ui-parts/dom": "0.0.4",
     "@atls-ui-parts/text": "0.0.11",
-    "@emotion/styled": "^11.9.3",
+    "@emotion/styled": "11.9.3",
     "events": "3.3.0",
-    "framer-motion": "^6.3.11",
-    "react": "^18.2.0",
-    "react-intersection-observer": "9.3.3",
-    "styled-system": "^5.1.5"
+    "framer-motion": "10.15.2",
+    "react": "18.2.0",
+    "react-intersection-observer": "9.5.2",
+    "styled-system": "5.1.5"
   },
   "peerDependencies": {
-    "@emotion/styled": "^11.1.5",
-    "react": "^17.0.1",
-    "styled-system": "^5.1.4"
+    "@emotion/styled": "11.9.3",
+    "react": "18.2.0",
+    "styled-system": "5.1.5"
   }
 }
