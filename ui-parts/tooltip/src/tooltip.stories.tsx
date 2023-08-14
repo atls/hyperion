@@ -115,7 +115,7 @@ export const Trigger = () => (
       </Tooltip>
     </Layout>
     <Layout mt={50} mr={24}>
-      <Tooltip text='test'>
+      <Tooltip text='test' trigger='hover'>
         <TestButton>Hover</TestButton>
       </Tooltip>
     </Layout>

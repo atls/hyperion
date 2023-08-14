@@ -1,4 +1,4 @@
-import React                             from 'react'
+import React from 'react'
 
 import { Carousel as CarouselComponent } from './carousel.component'
 
@@ -7,7 +7,7 @@ export default {
 }
 
 export const Carousel = (props) => (
-  <div style={{ width: 400, height: 300 }}>
+  <div style={{ width: 500, height: 400 }}>
     <CarouselComponent {...props} />
   </div>
 )

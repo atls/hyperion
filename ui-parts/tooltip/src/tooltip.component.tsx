@@ -2,7 +2,7 @@ import React                 from 'react'
 import { AnimatePresence }   from 'framer-motion'
 import { Children }          from 'react'
 import { PropsWithChildren } from 'react'
-import { FunctionComponent } from 'react'
+import { FC }                from 'react'
 import { Arrow }             from 'react-laag'
 import { cloneElement }      from 'react'
 import { forwardRef }        from 'react'
@@ -25,9 +25,9 @@ const DefaultContainer = forwardRef(({ text, arrow, ...props }: any, ref) => (
   </Container>
 ))
 
-export const Tooltip: FunctionComponent<PropsWithChildren<TooltipProps>> = ({
+export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({
   text,
-  trigger,
+  trigger = 'hover',
   showArrow,
   mouseEnterDelay,
   mouseLeaveDelay,

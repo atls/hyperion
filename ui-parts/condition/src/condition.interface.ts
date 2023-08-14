@@ -4,6 +4,6 @@ export interface ConditionProps {
   match: boolean
   smooth?: boolean
   smoothDuration?: number
-  smoothPattern?: 'in' | 'out' | 'in-and-out'
+  smoothPattern?: 'in-and-out' | 'in' | 'out'
   children: ReactNode | ReactNode[]
 }

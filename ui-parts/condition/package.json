@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "framer-motion": "10.12.16"
+    "framer-motion": "10.15.2"
   },
   "devDependencies": {
     "@emotion/react": "11.9.3",
@@ -20,9 +20,10 @@
     "react": "18.2.0"
   },
   "peerDependencies": {
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
-    "react": "*"
+    "@emotion/react": "11.9.3",
+    "@emotion/styled": "11.9.3",
+    "framer-motion": "10.15.2",
+    "react": "18.2.0"
   },
   "publishConfig": {
     "access": "public",
