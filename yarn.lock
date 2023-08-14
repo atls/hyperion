@@ -317,7 +317,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-admin/icon@workspace:0.0.7, @atls-ui-admin/icon@workspace:ui-admin/icon":
+"@atls-ui-admin/icon@workspace:0.0.8, @atls-ui-admin/icon@workspace:ui-admin/icon":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/icon@workspace:ui-admin/icon"
   dependencies:
@@ -341,13 +341,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-admin/icons@workspace:0.0.7, @atls-ui-admin/icons@workspace:ui-admin/icons":
+"@atls-ui-admin/icons@workspace:0.0.8, @atls-ui-admin/icons@workspace:ui-admin/icons":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/icons@workspace:ui-admin/icons"
   dependencies:
     "@atlantis-lab/prettier-config": "npm:^0.1.12"
     "@atlantis-lab/tsconfig": "npm:^0.1.12"
-    "@atls-ui-admin/icon": "workspace:0.0.7"
+    "@atls-ui-admin/icon": "workspace:0.0.8"
     "@svgr/core": "npm:5.4.0"
     "@testing-library/react": "npm:^13.3.0"
     "@types/prettier": "npm:^2"
@@ -389,8 +389,8 @@ __metadata:
   resolution: "@atls-ui-admin/upload@workspace:ui-admin/upload"
   dependencies:
     "@apollo/client": "npm:3.6.6"
-    "@atls-ui-admin/icon": "workspace:0.0.7"
-    "@atls-ui-admin/icons": "workspace:0.0.7"
+    "@atls-ui-admin/icon": "workspace:0.0.8"
+    "@atls-ui-admin/icons": "workspace:0.0.8"
     "@atls/react-upload": "npm:^0.0.3"
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
@@ -490,7 +490,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/autocomplete@workspace:0.0.14, @atls-ui-parts/autocomplete@workspace:ui-parts/autocomplete":
+"@atls-ui-parts/autocomplete@workspace:0.0.15, @atls-ui-parts/autocomplete@workspace:ui-parts/autocomplete":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/autocomplete@workspace:ui-parts/autocomplete"
   dependencies:
@@ -591,7 +591,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/carousel@workspace:0.0.5, @atls-ui-parts/carousel@workspace:ui-parts/carousel":
+"@atls-ui-parts/carousel@workspace:0.0.6, @atls-ui-parts/carousel@workspace:ui-parts/carousel":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/carousel@workspace:ui-parts/carousel"
   dependencies:
@@ -1054,7 +1054,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/tooltip@workspace:0.0.7, @atls-ui-parts/tooltip@workspace:ui-parts/tooltip":
+"@atls-ui-parts/tooltip@workspace:0.0.8, @atls-ui-parts/tooltip@workspace:ui-parts/tooltip":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/tooltip@workspace:ui-parts/tooltip"
   dependencies:
@@ -1100,7 +1100,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/autocomplete@workspace:ui-proto/autocomplete"
   dependencies:
-    "@atls-ui-parts/autocomplete": "workspace:0.0.14"
+    "@atls-ui-parts/autocomplete": "workspace:0.0.15"
     "@emotion/css": "npm:^11.7.1"
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
@@ -1165,7 +1165,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/carousel@workspace:ui-proto/carousel"
   dependencies:
-    "@atls-ui-parts/carousel": "workspace:0.0.5"
+    "@atls-ui-parts/carousel": "workspace:0.0.6"
     "@emotion/styled": "npm:11.9.3"
     "@types/node": "npm:18.15.3"
     "@types/react": "npm:18.2.20"
@@ -1243,7 +1243,7 @@ __metadata:
   dependencies:
     "@atls-ui-proto/button": "workspace:0.0.14"
     "@atls-ui-proto/input": "workspace:0.0.13"
-    "@atls-ui-proto/theme": "workspace:0.0.12"
+    "@atls-ui-proto/theme": "workspace:0.0.13"
     "@babel/core": "npm:^7.18.5"
     "@emotion/babel-plugin": "npm:^11.9.2"
     "@emotion/css": "npm:11.9.0"
@@ -1411,7 +1411,7 @@ __metadata:
   resolution: "@atls-ui-proto/popover@workspace:ui-proto/popover"
   dependencies:
     "@atls-ui-parts/layout": "workspace:0.0.7"
-    "@atls-ui-parts/tooltip": "workspace:0.0.7"
+    "@atls-ui-parts/tooltip": "workspace:0.0.8"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@types/react": "npm:18.2.20"
@@ -1528,7 +1528,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-proto/theme@workspace:0.0.12, @atls-ui-proto/theme@workspace:ui-proto/theme":
+"@atls-ui-proto/theme@workspace:0.0.13, @atls-ui-proto/theme@workspace:ui-proto/theme":
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/theme@workspace:ui-proto/theme"
   dependencies:
@@ -1549,7 +1549,7 @@ __metadata:
   resolution: "@atls-ui-proto/tooltip@workspace:ui-proto/tooltip"
   dependencies:
     "@atls-ui-parts/layout": "workspace:0.0.7"
-    "@atls-ui-parts/tooltip": "workspace:0.0.7"
+    "@atls-ui-parts/tooltip": "workspace:0.0.8"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@types/react": "npm:18.2.20"

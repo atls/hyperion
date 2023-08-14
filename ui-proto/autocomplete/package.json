@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/autocomplete",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "devDependencies": {
-    "@atls-ui-parts/autocomplete": "workspace:0.0.14",
+    "@atls-ui-parts/autocomplete": "workspace:0.0.15",
     "@emotion/css": "^11.7.1",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
