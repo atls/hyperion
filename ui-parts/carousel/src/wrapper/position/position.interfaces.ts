@@ -1,4 +1,4 @@
-export type WrapperPositionDirectionType = 'horizontal' | 'vertical'
+export type WrapperPositionDirectionType = 'vertical' | 'horizontal'
 
 export interface WrapperPositionProps {
   direction: WrapperPositionDirectionType
