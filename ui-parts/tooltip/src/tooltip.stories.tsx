@@ -1,13 +1,14 @@
-import styled       from '@emotion/styled'
+import styled         from '@emotion/styled'
 
-import React        from 'react'
-import { useState } from 'react'
+import React          from 'react'
+import { useState }   from 'react'
 
-import { Column }   from '@atls-ui-parts/layout'
-import { Layout }   from '@atls-ui-parts/layout'
-import { Row }      from '@atls-ui-parts/layout'
+import { Column }     from '@atls-ui-parts/layout'
+import { Layout }     from '@atls-ui-parts/layout'
+import { Row }        from '@atls-ui-parts/layout'
 
-import { Tooltip }  from './tooltip.component'
+import { Tooltip }    from './tooltip.component'
+import { useTooltip } from './use-tooltip.hook'
 
 export default {
   title: 'Components/Tooltip',
@@ -48,6 +49,23 @@ export const Base = () => (
 
 Base.story = {
   name: 'Базовый',
+}
+
+export const Hook = () => {
+  const { triggerProps, render } = useTooltip({ animate: true })
+
+  return (
+    <Row>
+      <Layout mt={50}>
+        {render('Hook')}
+        <TestButton {...triggerProps}>Hook</TestButton>
+      </Layout>
+    </Row>
+  )
+}
+
+Hook.story = {
+  name: 'Хук',
 }
 
 export const Anchor = () => (

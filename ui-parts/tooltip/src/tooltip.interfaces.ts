@@ -1,9 +1,9 @@
 import { UseLayerOptions }       from 'react-laag'
 import { Placement }             from 'react-laag'
 
-import { ContainerElementProps } from './container'
-
 export type TooltipTrigger = 'click' | 'hover' | 'menu'
+
+export type TooltipText = string | number
 
 export type LayerDimensions = (layerSide: string) => {
   width: number
@@ -17,11 +17,6 @@ export type ContainerFunction = (close: () => void) => React.ReactElement
 
 export type ChildrenFunction = (trigger: boolean, close: () => void) => React.ReactElement
 
-export interface DefaultContainerProps extends ContainerElementProps {
-  text?: string | number
-  arrow?: JSX.Element
-} 
-
 export interface ArrowOptions {
   angle?: number | undefined
   size?: number | undefined
@@ -31,12 +26,9 @@ export interface ArrowOptions {
   backgroundColor?: string | undefined
 }
 
-export interface TooltipProps
-  extends Omit<
-    UseLayerOptions,
-    'placement' | 'onOutsideClick' | 'isOpen' | 'container' | 'trigger'
-  > {
-  text?: string | number
+type OmitOptions = 'placement' | 'onOutsideClick' | 'isOpen' | 'container' | 'trigger'
+
+export interface UseTooltipOptions extends Omit<UseLayerOptions, OmitOptions> {
   trigger?: TooltipTrigger
   showArrow?: boolean
   mouseEnterDelay?: number
@@ -46,6 +38,10 @@ export interface TooltipProps
   animate?: boolean
   isOpen?: boolean
   container?: React.ReactElement | ContainerFunction
-  children: React.ReactElement | ChildrenFunction
   arrowOptions?: ArrowOptions
+}
+
+export interface TooltipProps extends UseTooltipOptions {
+  text?: string | number
+  children: React.ReactElement | ChildrenFunction
 }
