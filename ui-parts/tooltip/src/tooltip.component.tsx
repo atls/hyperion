@@ -1,13 +1,13 @@
 import React                     from 'react'
 import { AnimatePresence }       from 'framer-motion'
-import { Arrow }                 from 'react-laag'
 import { Children }              from 'react'
-import { cloneElement }          from 'react'
 import { FC }                    from 'react'
-import { forwardRef }            from 'react'
 import { PropsWithChildren }     from 'react'
-import { useLayer }              from 'react-laag'
+import { Arrow }                 from 'react-laag'
+import { cloneElement }          from 'react'
+import { forwardRef }            from 'react'
 import { useMemo }               from 'react'
+import { useLayer }              from 'react-laag'
 
 import { Container }             from './container'
 import { DefaultContainerProps } from './tooltip.interfaces'
@@ -16,16 +16,19 @@ import { useClick }              from './hooks'
 import { useContextMenu }        from './hooks'
 import { useHover }              from './hooks'
 
-const doNothing = () => {}
+const doNothing = () => {
+  /** do nothing */
+}
 
-const DefaultContainer = forwardRef<HTMLDivElement, DefaultContainerProps>(
-  ({ text, arrow, ...props }, ref) => (
-    <Container ref={ref} {...props}>
-      {text}
-      {arrow}
-    </Container>
-  )
-)
+const DefaultContainer = forwardRef<HTMLDivElement, DefaultContainerProps>((
+  { text, arrow, ...props },
+  ref
+) => (
+  <Container ref={ref} {...props}>
+    {text}
+    {arrow}
+  </Container>
+))
 
 export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({
   anchor,
@@ -67,6 +70,8 @@ export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({
     }
 
     return triggerValues
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [trigger, isOpen, isContextMenu, isClicked, isOver])
 
   const { arrowProps, triggerProps, layerProps, layerSide, renderLayer } = useLayer({
@@ -77,7 +82,7 @@ export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({
   })
 
   const renderChildren = () => {
-    if (typeof children === 'function')  return children(isTriggered, close)
+    if (typeof children === 'function') return children(isTriggered, close)
 
     return Children.only(cloneElement(children as any, { ...triggerProps, ...customTriggerProps }))
   }

@@ -20,7 +20,7 @@ export type ChildrenFunction = (trigger: boolean, close: () => void) => React.Re
 export interface DefaultContainerProps extends ContainerElementProps {
   text?: string | number
   arrow?: JSX.Element
-} 
+}
 
 export interface ArrowOptions {
   angle?: number | undefined
