@@ -1,12 +1,13 @@
-import styled       from '@emotion/styled'
+import styled         from '@emotion/styled'
 
-import React        from 'react'
-import { useState } from 'react'
+import React          from 'react'
 
-import { Column }   from '@atls-ui-parts/layout'
-import { Layout }   from '@atls-ui-parts/layout'
+import { Column }     from '@atls-ui-parts/layout'
+import { Layout }     from '@atls-ui-parts/layout'
+import { Row }        from '@atls-ui-parts/layout'
 
-import { Popover }  from './popover.component'
+import { Popover }    from './popover.component'
+import { usePopover } from './use-popover.hook'
 
 export default {
   title: 'Components/Popover',
@@ -38,7 +39,7 @@ const CloseButton = styled.div({
   color: '#1890ff',
 })
 
-const TestContent = ({ onClick }) => (
+const TestContent = ({ onClick = () => {} }) => (
   <div>
     <div>Content</div>
     <CloseButton onClick={onClick}>Close</CloseButton>
@@ -46,19 +47,17 @@ const TestContent = ({ onClick }) => (
 )
 
 export const Base = () => {
-  const [open, setOpen] = useState(false)
-
   return (
     <Column height={200}>
       <Layout minHeight={400} width={1000} pt={100} pl={150}>
         <Popover
           title='Title'
           trigger='click'
-          isOpen={open}
+          showArrow={false}
           closeOnOutsideClick={false}
-          content={<TestContent onClick={() => setOpen(false)} />}
+          content={<div>Content</div>}
         >
-          <TestButton onClick={() => setOpen(!open)}>Base</TestButton>
+          <TestButton>Base</TestButton>
         </Popover>
       </Layout>
     </Column>
@@ -67,4 +66,21 @@ export const Base = () => {
 
 Base.story = {
   name: 'Базовый',
+}
+
+export const Hook = () => {
+  const { triggerProps, render, close } = usePopover({ animate: true })
+
+  return (
+    <Row>
+      <Layout mt={50}>
+        {render({ title: 'Title', content: <TestContent onClick={close} /> })}
+        <TestButton {...triggerProps}>Hook</TestButton>
+      </Layout>
+    </Row>
+  )
+}
+
+Hook.story = {
+  name: 'Хук',
 }
