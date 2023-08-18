@@ -16,7 +16,7 @@ export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({
   const { isOpen, triggerProps, render } = useTooltip({ ...props })
 
   const renderChildren = () => {
-    if (typeof children === 'function')  return children(isOpen, close)
+    if (typeof children === 'function') return children(isOpen, close)
 
     return Children.only(cloneElement(children as any, triggerProps))
   }
@@ -24,7 +24,7 @@ export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({
   return (
     <>
       {renderChildren()}
-      {render(text)}
+      {render({ text })}
     </>
   )
 }

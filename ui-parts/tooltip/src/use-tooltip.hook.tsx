@@ -1,12 +1,11 @@
 import React                 from 'react'
 import { AnimatePresence }   from 'framer-motion'
-import { Arrow }             from 'react-laag'
 import { cloneElement }      from 'react'
+import { ReactElement }      from 'react'
 import { useLayer }          from 'react-laag'
 import { useMemo }           from 'react'
 
 import { DefaultContainer }  from './container'
-import { TooltipText }       from './tooltip.interfaces'
 import { useClick }          from './hooks'
 import { useContextMenu }    from './hooks'
 import { useHover }          from './hooks'
@@ -14,7 +13,7 @@ import { UseTooltipOptions } from './tooltip.interfaces'
 
 const doNothing = () => {}
 
-const useTooltip = ({
+export const useTooltip = ({
   anchor = 'top-center',
   animate = false,
   arrowOptions = {
@@ -67,21 +66,23 @@ const useTooltip = ({
     ...props,
   })
 
-  const renderContainer = (text: TooltipText) => {
+  const renderContainer = (containerProps: Object) => {
     if (!isTriggered) return null
 
-    let renderedContainer: React.ReactElement
+    let renderedContainer: ReactElement
 
     if (typeof container === 'function') {
       renderedContainer = container(close)
     } else {
-      renderedContainer = cloneElement(container!, { ...layerProps, text, animate })
-    }
-
-    if (showArrow) {
-      const arrow = <Arrow {...layerSide} {...arrowProps} {...arrowOptions} />
-
-      renderedContainer = cloneElement(renderedContainer, { arrow })
+      renderedContainer = cloneElement(container!, {
+        ...layerProps,
+        ...containerProps,
+        animate,
+        showArrow,
+        arrowProps,
+        arrowOptions,
+        layerSide,
+      })
     }
 
     if (animate) return <AnimatePresence>{renderedContainer}</AnimatePresence>
@@ -89,7 +90,7 @@ const useTooltip = ({
     return renderedContainer
   }
 
-  const render = (text: TooltipText) => renderLayer(renderContainer(text))
+  const render = (containerProps: Object) => renderLayer(renderContainer(containerProps))
 
   return {
     isOpen: isTriggered,
@@ -100,5 +101,3 @@ const useTooltip = ({
     render,
   }
 }
-
-export { useTooltip }

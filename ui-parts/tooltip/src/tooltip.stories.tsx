@@ -57,7 +57,7 @@ export const Hook = () => {
   return (
     <Row>
       <Layout mt={50}>
-        {render('Hook')}
+        {render({ text: 'Hook' })}
         <TestButton {...triggerProps}>Hook</TestButton>
       </Layout>
     </Row>

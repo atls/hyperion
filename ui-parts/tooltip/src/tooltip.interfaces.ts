@@ -1,5 +1,7 @@
-import { UseLayerOptions }       from 'react-laag'
-import { Placement }             from 'react-laag'
+import { UseLayerOptions } from 'react-laag'
+import { Placement }       from 'react-laag'
+
+import { ArrowOptions }    from './container'
 
 export type TooltipTrigger = 'click' | 'hover' | 'menu'
 
@@ -16,15 +18,6 @@ export type LayerDimensions = (layerSide: string) => {
 export type ContainerFunction = (close: () => void) => React.ReactElement
 
 export type ChildrenFunction = (trigger: boolean, close: () => void) => React.ReactElement
-
-export interface ArrowOptions {
-  angle?: number | undefined
-  size?: number | undefined
-  roundness?: number | undefined
-  borderWidth?: number | undefined
-  borderColor?: string | undefined
-  backgroundColor?: string | undefined
-}
 
 type OmitOptions = 'placement' | 'onOutsideClick' | 'isOpen' | 'container' | 'trigger'
 

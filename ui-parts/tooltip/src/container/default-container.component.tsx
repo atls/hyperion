@@ -1,14 +1,15 @@
 import React                     from 'react'
 import { forwardRef }            from 'react'
+import { Arrow }                 from 'react-laag'
 
 import { Container }             from './container.component'
 import { DefaultContainerProps } from './container.interfaces'
 
 export const DefaultContainer = forwardRef<HTMLDivElement, DefaultContainerProps>(
-  ({ text, arrow, ...props }, ref) => (
+  ({ text, showArrow, arrowOptions, arrowProps, layerSide, ...props }, ref) => (
     <Container ref={ref} {...props}>
       {text}
-      {arrow}
+      {showArrow && <Arrow {...layerSide} {...arrowOptions} {...arrowProps} />}
     </Container>
   )
 )
