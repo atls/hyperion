@@ -1,7 +1,7 @@
 import React                 from 'react'
 
-import { useTooltip }        from '@atls-ui-parts/tooltip'
 import { UseTooltipOptions } from '@atls-ui-parts/tooltip'
+import { useTooltip }        from '@atls-ui-parts/tooltip'
 
 import { Container }         from './container'
 

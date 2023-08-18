@@ -1,17 +1,19 @@
 import React                 from 'react'
 import { AnimatePresence }   from 'framer-motion'
-import { cloneElement }      from 'react'
 import { ReactElement }      from 'react'
-import { useLayer }          from 'react-laag'
+import { cloneElement }      from 'react'
 import { useMemo }           from 'react'
+import { useLayer }          from 'react-laag'
 
 import { DefaultContainer }  from './container'
+import { UseTooltipOptions } from './tooltip.interfaces'
 import { useClick }          from './hooks'
 import { useContextMenu }    from './hooks'
 import { useHover }          from './hooks'
-import { UseTooltipOptions } from './tooltip.interfaces'
 
-const doNothing = () => {}
+const doNothing = () => {
+  /** do nothing */
+}
 
 export const useTooltip = ({
   anchor = 'top-center',
@@ -56,6 +58,8 @@ export const useTooltip = ({
     }
 
     return triggerValues
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [trigger, isOpen, isContextMenu, isClicked, isOver])
 
   const { arrowProps, triggerProps, layerProps, layerSide, renderLayer } = useLayer({

@@ -1,4 +1,5 @@
-import { LayerSide, UseLayerArrowProps } from "react-laag"
+import { LayerSide }          from 'react-laag'
+import { UseLayerArrowProps } from 'react-laag'
 
 export interface ArrowOptions {
   angle?: number | undefined
