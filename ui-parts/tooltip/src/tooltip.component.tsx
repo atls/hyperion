@@ -1,140 +1,113 @@
-import React                 from 'react'
-import { AnimatePresence }   from 'framer-motion'
-import { Children }          from 'react'
-import { PropsWithChildren } from 'react'
-import { FC }                from 'react'
-import { Arrow }             from 'react-laag'
-import { cloneElement }      from 'react'
-import { forwardRef }        from 'react'
-import { useLayer }          from 'react-laag'
+import React                     from 'react'
+import { AnimatePresence }       from 'framer-motion'
+import { Arrow }                 from 'react-laag'
+import { Children }              from 'react'
+import { cloneElement }          from 'react'
+import { FC }                    from 'react'
+import { forwardRef }            from 'react'
+import { PropsWithChildren }     from 'react'
+import { useLayer }              from 'react-laag'
+import { useMemo }               from 'react'
 
-import { Container }         from './container'
-import { TooltipProps }      from './tooltip.interfaces'
-import { useClick }          from './hooks'
-import { useContextMenu }    from './hooks'
-import { useHover }          from './hooks'
+import { Container }             from './container'
+import { DefaultContainerProps } from './tooltip.interfaces'
+import { TooltipProps }          from './tooltip.interfaces'
+import { useClick }              from './hooks'
+import { useContextMenu }        from './hooks'
+import { useHover }              from './hooks'
 
-const doNothing = () => {
-  // do nothing
-}
+const doNothing = () => {}
 
-const DefaultContainer = forwardRef(({ text, arrow, ...props }: any, ref) => (
-  <Container ref={ref} {...props}>
-    {text}
-    {arrow}
-  </Container>
-))
+const DefaultContainer = forwardRef<HTMLDivElement, DefaultContainerProps>(
+  ({ text, arrow, ...props }, ref) => (
+    <Container ref={ref} {...props}>
+      {text}
+      {arrow}
+    </Container>
+  )
+)
 
 export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({
-  text,
-  trigger = 'hover',
-  showArrow,
-  mouseEnterDelay,
-  mouseLeaveDelay,
   anchor,
-  closeOnOutsideClick,
-  isOpen,
-  children,
-  container,
   animate,
   arrowOptions,
+  children,
+  closeOnOutsideClick,
+  container,
+  isOpen,
+  mouseEnterDelay,
+  mouseLeaveDelay,
+  showArrow,
+  text,
+  trigger = 'click',
   ...props
 }) => {
+  const [isContextMenu, closeContextMenu, contextMenuProps] = useContextMenu()
+  const [isClicked, closeClicked, clickedProps] = useClick()
   const [isOver, hoverProps] = useHover({
     delayEnter: mouseEnterDelay,
     delayLeave: mouseLeaveDelay,
   })
-  const [isContextMenu, closeContextMenu, contextMenuProps] = useContextMenu()
-  const [isClicked, closeClicked, clickedProps] = useClick()
 
-  const getClose = (): (() => void) => {
-    if (trigger === 'click') return closeClicked
-    if (trigger === 'menu') return closeContextMenu
+  const [isTriggered, close, customTriggerProps] = useMemo(() => {
+    let triggerValues: [boolean, () => void, Object] = [false, doNothing, {}]
 
-    return doNothing
-  }
-
-  const getTrigger = (): boolean => {
-    if (typeof isOpen === 'boolean') {
-      return isOpen
+    if (trigger === 'menu') {
+      triggerValues = [isContextMenu, closeContextMenu, contextMenuProps]
+    } //
+    else if (trigger === 'click') {
+      triggerValues = [isClicked, closeClicked, clickedProps]
+    } //
+    else if (trigger === 'hover') {
+      triggerValues = [isOver, doNothing, hoverProps]
     }
-    if (trigger === 'hover') return isOver
-    if (trigger === 'click') return isClicked
-    if (trigger === 'menu') return isContextMenu
 
-    return false
-  }
+    if (typeof isOpen === 'boolean') {
+      triggerValues[0] = isOpen
+    }
 
-  const { triggerProps, layerProps, layerSide, arrowProps, renderLayer } = useLayer({
-    isOpen: getTrigger(),
-    onOutsideClick: closeOnOutsideClick ? getClose() : doNothing,
+    return triggerValues
+  }, [trigger, isOpen, isContextMenu, isClicked, isOver])
+
+  const { arrowProps, triggerProps, layerProps, layerSide, renderLayer } = useLayer({
+    isOpen: isTriggered,
+    onOutsideClick: closeOnOutsideClick ? close : doNothing,
     placement: anchor,
     ...props,
   })
 
-  const getTriggerProps = () => {
-    if (trigger === 'hover') return { ...triggerProps, ...hoverProps }
-    if (trigger === 'click') return { ...triggerProps, ...clickedProps }
-    if (trigger === 'menu') return { ...triggerProps, ...contextMenuProps }
-
-    return triggerProps
-  }
-
-  const getChildrenControls = (): [boolean, () => void] => {
-    if (trigger === 'click' || trigger === 'menu') return [getTrigger(), getClose()]
-
-    return [getTrigger(), doNothing]
-  }
-
-  const getContainerControls = (): [() => void] => {
-    if (trigger === 'click' || trigger === 'menu') return [getClose()]
-
-    return [doNothing]
-  }
-
   const renderChildren = () => {
-    if (typeof children === 'function') return children(...getChildrenControls())
+    if (typeof children === 'function')  return children(isTriggered, close)
 
-    return Children.only(
-      cloneElement(children as any, {
-        ...getTriggerProps(),
-      })
-    )
+    return Children.only(cloneElement(children as any, { ...triggerProps, ...customTriggerProps }))
   }
-  const renderContainerWithoutArrow = () => {
-    if (typeof container === 'function') return container(...getContainerControls())
 
-    return cloneElement(container!, {
-      ...layerProps,
-      text,
-    })
-  }
-  const renderContainerWithArrow = () => {
-    const renderedContainer = renderContainerWithoutArrow()
-
-    const arrow = <Arrow {...layerSide} {...arrowProps} {...arrowOptions} />
-
-    return cloneElement(renderedContainer, { arrow })
-  }
   const renderContainer = () => {
-    if (showArrow) return renderContainerWithArrow()
+    if (!isTriggered) return null
 
-    return renderContainerWithoutArrow()
-  }
+    let renderedContainer: React.ReactElement
 
-  if (animate) {
-    return (
-      <>
-        {renderChildren()}
-        {renderLayer(<AnimatePresence>{getTrigger() && renderContainer()}</AnimatePresence>)}
-      </>
-    )
+    if (typeof container === 'function') {
+      renderedContainer = container(close)
+    } else {
+      renderedContainer = cloneElement(container!, { ...layerProps, text, animate })
+    }
+
+    if (showArrow) {
+      const arrow = <Arrow {...layerSide} {...arrowProps} {...arrowOptions} />
+
+      renderedContainer = cloneElement(renderedContainer, { arrow })
+    }
+
+    if (animate) return <AnimatePresence>{renderedContainer}</AnimatePresence>
+
+    return renderedContainer
   }
 
   return (
     <>
       {renderChildren()}
-      {renderLayer(getTrigger() && renderContainer())}
+      {renderLayer(renderContainer())}
     </>
   )
 }
