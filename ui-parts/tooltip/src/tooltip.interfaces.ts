@@ -3,14 +3,9 @@ import { Placement }       from 'react-laag'
 
 import { ArrowOptions }    from './container'
 
+export { ArrowOptions }
+
 export type TooltipTrigger = 'click' | 'hover' | 'menu'
-
-export type TooltipText = string | number
-
-export type LayerDimensions = (layerSide: string) => {
-  width: number
-  height: number
-}
 
 /**
  * @todo Understand how to use them (￣﹏￣；)

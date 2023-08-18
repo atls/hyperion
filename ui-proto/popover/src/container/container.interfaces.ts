@@ -1,14 +1,7 @@
 import { LayerSide }          from 'react-laag'
 import { UseLayerArrowProps } from 'react-laag'
 
-export interface ArrowOptions {
-  angle?: number | undefined
-  size?: number | undefined
-  roundness?: number | undefined
-  borderWidth?: number | undefined
-  borderColor?: string | undefined
-  backgroundColor?: string | undefined
-}
+import { ArrowOptions }       from '@atls-ui-parts/tooltip'
 
 export interface ContainerComponentProps {
   title?: string
