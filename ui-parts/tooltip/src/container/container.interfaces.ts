@@ -15,7 +15,7 @@ export interface ContainerElementProps {
   style?: any
 }
 
-export interface DefaultContainerProps extends ContainerElementProps {
+export interface ContainerComponentProps extends ContainerElementProps {
   text?: string | number
   showArrow?: boolean
   layerSide?: LayerSide

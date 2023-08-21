@@ -4,7 +4,7 @@ import { FC }                from 'react'
 import { PropsWithChildren } from 'react'
 import { cloneElement }      from 'react'
 
-import { DefaultContainer }  from './container'
+import { Container }         from './container'
 import { TooltipProps }      from './tooltip.interfaces'
 import { useTooltip }        from './use-tooltip.hook'
 
@@ -43,6 +43,6 @@ Tooltip.defaultProps = {
   triggerOffset: 8,
   animate: false,
   closeOnOutsideClick: true,
-  container: <DefaultContainer />,
+  container: <Container />,
   text: 'Text',
 }

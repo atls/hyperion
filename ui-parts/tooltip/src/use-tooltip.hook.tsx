@@ -5,7 +5,7 @@ import { cloneElement }      from 'react'
 import { useMemo }           from 'react'
 import { useLayer }          from 'react-laag'
 
-import { DefaultContainer }  from './container'
+import { Container }         from './container'
 import { UseTooltipOptions } from './tooltip.interfaces'
 import { useClick }          from './hooks'
 import { useContextMenu }    from './hooks'
@@ -24,7 +24,7 @@ export const useTooltip = ({
     backgroundColor: 'rgba(0, 0, 0, 0.75)',
   },
   closeOnOutsideClick = true,
-  container = <DefaultContainer />,
+  container = <Container />,
   isOpen,
   mouseEnterDelay = 100,
   mouseLeaveDelay = 100,
