@@ -50,11 +50,12 @@ export const Base = () => (
   <Column height={200}>
     <Layout minHeight={400} width={1000} pt={100} pl={150}>
       <Popover
-        title="Title"
-        trigger="click"
+        title='Title'
+        trigger='click'
         showArrow={false}
         closeOnOutsideClick={false}
-        content={<div>Content</div>}>
+        content={<div>Content</div>}
+      >
         <TestButton>Base</TestButton>
       </Popover>
     </Layout>

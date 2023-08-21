@@ -3,6 +3,7 @@ import styled                      from '@emotion/styled'
 import React                       from 'react'
 import { forwardRef }              from 'react'
 
+import { Condition }               from '@atls-ui-parts/condition'
 import { Arrow }                   from '@atls-ui-parts/tooltip'
 
 import { ContainerInner }          from '../container-inner'
@@ -18,8 +19,14 @@ export const Container = forwardRef<HTMLDivElement, ContainerComponentProps>((
   ref
 ) => (
   <StyledContainer ref={ref} {...props}>
-    {title && <ContainerTitle>{title}</ContainerTitle>}
-    {content && <ContainerInner>{content}</ContainerInner>}
-    {showArrow && <Arrow {...layerSide} {...arrowOptions} {...arrowProps} />}
+    <Condition match={Boolean(title)}>
+      <ContainerTitle>{title}</ContainerTitle>
+    </Condition>
+    <Condition match={Boolean(content)}>
+      <ContainerInner>{content}</ContainerInner>
+    </Condition>
+    <Condition match={Boolean(showArrow)}>
+      <Arrow {...layerSide} {...arrowOptions} {...arrowProps} />
+    </Condition>
   </StyledContainer>
 ))

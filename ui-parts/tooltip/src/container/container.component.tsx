@@ -1,12 +1,14 @@
-import styled                    from '@emotion/styled'
+import styled                      from '@emotion/styled'
 
-import React                     from 'react'
-import { Arrow }                 from 'react-laag'
-import { forwardRef }            from 'react'
+import React                       from 'react'
+import { Arrow }                   from 'react-laag'
+import { forwardRef }              from 'react'
 
-import { ContainerElement }      from './container.element'
+import { Condition }               from '@atls-ui-parts/condition'
+
+import { ContainerElement }        from './container.element'
 import { ContainerComponentProps } from './container.interfaces'
-import { baseContainerStyles }   from './container.styles'
+import { baseContainerStyles }     from './container.styles'
 
 const StyledContainer = styled(ContainerElement)(baseContainerStyles)
 
@@ -16,6 +18,8 @@ export const Container = forwardRef<HTMLDivElement, ContainerComponentProps>((
 ) => (
   <StyledContainer ref={ref} {...props}>
     {text}
-    {showArrow && <Arrow {...layerSide} {...arrowOptions} {...arrowProps} />}
+    <Condition match={Boolean(showArrow)}>
+      <Arrow {...layerSide} {...arrowOptions} {...arrowProps} />
+    </Condition>
   </StyledContainer>
 ))
