@@ -62,5 +62,6 @@ export const Condition: FC<ConditionProps> = ({
     }
   }
 
+  // eslint-disable-next-line react/jsx-no-useless-fragment
   return <>{children}</>
 }
