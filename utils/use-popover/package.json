@@ -1,0 +1,25 @@
+{
+  "name": "@atls-utils/use-popover",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn library build",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
+  },
+  "dependencies": {
+    "react-laag": "2.0.5"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.20",
+    "react": "18.2.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  }
+}

@@ -284,6 +284,14 @@ const RAW_RUNTIME_STATE =
     {\
       "name": "@atls-ui/design",\
       "reference": "workspace:ui/design"\
+    },\
+    {\
+      "name": "@atls-utils/use-hover",\
+      "reference": "workspace:utils/use-hover"\
+    },\
+    {\
+      "name": "@atls-utils/use-popover",\
+      "reference": "workspace:utils/use-popover"\
     }\
   ],\
   "enableTopLevelFallback": true,\
@@ -356,6 +364,8 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-proto/tooltip", ["workspace:ui-proto/tooltip"]],\
     ["@atls-ui-proto/upload", ["workspace:ui-proto/upload"]],\
     ["@atls-ui/design", ["workspace:ui/design"]],\
+    ["@atls-utils/use-hover", ["workspace:utils/use-hover"]],\
+    ["@atls-utils/use-popover", ["workspace:utils/use-popover"]],\
     ["@atls/storybook-google-fonts", ["virtual:084ea6e6eb61d61d529e38a9d5e6a4e67d34c25f7d28e26d3c2fb9c78ae89b3cf1a01301495971f34e3cae3a99bbdecdf3a6d670b1a9f6ad7b2fe5c66bb38e22#workspace:storybook/google-fonts", "virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#workspace:storybook/google-fonts", "workspace:storybook/google-fonts"]],\
     ["hyperion", ["workspace:."]]\
   ],\
@@ -3466,6 +3476,28 @@ const RAW_RUNTIME_STATE =
           ["react-is", "npm:18.2.0"],\
           ["string-replace-loader", "virtual:269db25ff15e150519c32b592d49982dffad5b740f8cce135d98226664559a13ebece62873ae2592752c22f1382bc5dc1bd84e7aac7abaacacd8dc810761fc25#npm:3.1.0"],\
           ["typescript", "patch:typescript@npm%3A4.6.2#optional!builtin<compat/typescript>::version=4.6.2&hash=5d3a66"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@atls-utils/use-hover", [\
+      ["workspace:utils/use-hover", {\
+        "packageLocation": "./utils/use-hover/",\
+        "packageDependencies": [\
+          ["@atls-utils/use-hover", "workspace:utils/use-hover"],\
+          ["react-laag", "virtual:464f07f3aeb7539a804fd5547ef9f22c6345c5e48a7e13531016fd05a5483cf6876bf2dd95f71e77d3b3e43b21f1779c414e2afddc027b4dfb663b681a0c9a7a#npm:2.0.5"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@atls-utils/use-popover", [\
+      ["workspace:utils/use-popover", {\
+        "packageLocation": "./utils/use-popover/",\
+        "packageDependencies": [\
+          ["@atls-utils/use-popover", "workspace:utils/use-popover"],\
+          ["@types/react", "npm:17.0.39"],\
+          ["react", "npm:18.2.0"],\
+          ["react-laag", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#npm:2.0.5"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -28303,6 +28335,24 @@ const RAW_RUNTIME_STATE =
           ["react-laag", "npm:2.0.5"]\
         ],\
         "linkType": "SOFT"\
+      }],\
+      ["virtual:464f07f3aeb7539a804fd5547ef9f22c6345c5e48a7e13531016fd05a5483cf6876bf2dd95f71e77d3b3e43b21f1779c414e2afddc027b4dfb663b681a0c9a7a#npm:2.0.5", {\
+        "packageLocation": "./.yarn/__virtual__/react-laag-virtual-88a71ef29e/0/cache/react-laag-npm-2.0.5-ee934b6029-32de5cb560.zip/node_modules/react-laag/",\
+        "packageDependencies": [\
+          ["react-laag", "virtual:464f07f3aeb7539a804fd5547ef9f22c6345c5e48a7e13531016fd05a5483cf6876bf2dd95f71e77d3b3e43b21f1779c414e2afddc027b4dfb663b681a0c9a7a#npm:2.0.5"],\
+          ["@types/react", null],\
+          ["@types/react-dom", null],\
+          ["react", null],\
+          ["react-dom", null],\
+          ["tiny-warning", "npm:1.0.3"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
       }],\
       ["virtual:9c076913ffd643939b8ac6e8c374fd1470f44689001261d35898fb07091ea0aa596a24d8bcdfb508f949d0c68789b448702cfb68072c423229496303e9a11342#npm:2.0.4", {\
         "packageLocation": "./.yarn/__virtual__/react-laag-virtual-b1aa8c7d2a/0/cache/react-laag-npm-2.0.4-6112c8d85c-d018f37526.zip/node_modules/react-laag/",\

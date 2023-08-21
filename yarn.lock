@@ -1621,6 +1621,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-utils/use-hover@workspace:utils/use-hover":
+  version: 0.0.0-use.local
+  resolution: "@atls-utils/use-hover@workspace:utils/use-hover"
+  dependencies:
+    react-laag: "npm:2.0.5"
+  languageName: unknown
+  linkType: soft
+
+"@atls-utils/use-popover@workspace:utils/use-popover":
+  version: 0.0.0-use.local
+  resolution: "@atls-utils/use-popover@workspace:utils/use-popover"
+  dependencies:
+    "@types/react": "npm:18.2.20"
+    react: "npm:18.2.0"
+    react-laag: "npm:2.0.5"
+  languageName: unknown
+  linkType: soft
+
 "@atls/code-service@npm:^0.0.21":
   version: 0.0.21
   resolution: "@atls/code-service@npm:0.0.21"
