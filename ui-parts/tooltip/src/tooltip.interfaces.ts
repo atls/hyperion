@@ -3,13 +3,8 @@ import { Placement }       from 'react-laag'
 
 import { ArrowOptions }    from './container'
 
-export { ArrowOptions }
-
 export type TooltipTrigger = 'click' | 'hover' | 'menu'
 
-/**
- * @todo Understand how to use them (￣﹏￣；)
- */
 export type ContainerFunction = (close: () => void) => React.ReactElement
 
 export type ChildrenFunction = (trigger: boolean, close: () => void) => React.ReactElement
