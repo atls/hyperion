@@ -1,140 +1,30 @@
 import React                 from 'react'
-import { AnimatePresence }   from 'framer-motion'
 import { Children }          from 'react'
-import { PropsWithChildren } from 'react'
 import { FC }                from 'react'
-import { Arrow }             from 'react-laag'
+import { PropsWithChildren } from 'react'
 import { cloneElement }      from 'react'
-import { forwardRef }        from 'react'
-import { useLayer }          from 'react-laag'
 
 import { Container }         from './container'
 import { TooltipProps }      from './tooltip.interfaces'
-import { useClick }          from './hooks'
-import { useContextMenu }    from './hooks'
-import { useHover }          from './hooks'
-
-const doNothing = () => {
-  // do nothing
-}
-
-const DefaultContainer = forwardRef(({ text, arrow, ...props }: any, ref) => (
-  <Container ref={ref} {...props}>
-    {text}
-    {arrow}
-  </Container>
-))
+import { useTooltip }        from './use-tooltip.hook'
 
 export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({
-  text,
-  trigger = 'hover',
-  showArrow,
-  mouseEnterDelay,
-  mouseLeaveDelay,
-  anchor,
-  closeOnOutsideClick,
-  isOpen,
+  text = 'Text',
   children,
-  container,
-  animate,
-  arrowOptions,
   ...props
 }) => {
-  const [isOver, hoverProps] = useHover({
-    delayEnter: mouseEnterDelay,
-    delayLeave: mouseLeaveDelay,
-  })
-  const [isContextMenu, closeContextMenu, contextMenuProps] = useContextMenu()
-  const [isClicked, closeClicked, clickedProps] = useClick()
-
-  const getClose = (): (() => void) => {
-    if (trigger === 'click') return closeClicked
-    if (trigger === 'menu') return closeContextMenu
-
-    return doNothing
-  }
-
-  const getTrigger = (): boolean => {
-    if (typeof isOpen === 'boolean') {
-      return isOpen
-    }
-    if (trigger === 'hover') return isOver
-    if (trigger === 'click') return isClicked
-    if (trigger === 'menu') return isContextMenu
-
-    return false
-  }
-
-  const { triggerProps, layerProps, layerSide, arrowProps, renderLayer } = useLayer({
-    isOpen: getTrigger(),
-    onOutsideClick: closeOnOutsideClick ? getClose() : doNothing,
-    placement: anchor,
-    ...props,
-  })
-
-  const getTriggerProps = () => {
-    if (trigger === 'hover') return { ...triggerProps, ...hoverProps }
-    if (trigger === 'click') return { ...triggerProps, ...clickedProps }
-    if (trigger === 'menu') return { ...triggerProps, ...contextMenuProps }
-
-    return triggerProps
-  }
-
-  const getChildrenControls = (): [boolean, () => void] => {
-    if (trigger === 'click' || trigger === 'menu') return [getTrigger(), getClose()]
-
-    return [getTrigger(), doNothing]
-  }
-
-  const getContainerControls = (): [() => void] => {
-    if (trigger === 'click' || trigger === 'menu') return [getClose()]
-
-    return [doNothing]
-  }
+  const { isOpen, close, triggerProps, render } = useTooltip({ ...props })
 
   const renderChildren = () => {
-    if (typeof children === 'function') return children(...getChildrenControls())
+    if (typeof children === 'function') return children(isOpen, close)
 
-    return Children.only(
-      cloneElement(children as any, {
-        ...getTriggerProps(),
-      })
-    )
-  }
-  const renderContainerWithoutArrow = () => {
-    if (typeof container === 'function') return container(...getContainerControls())
-
-    return cloneElement(container!, {
-      ...layerProps,
-      text,
-    })
-  }
-  const renderContainerWithArrow = () => {
-    const renderedContainer = renderContainerWithoutArrow()
-
-    const arrow = <Arrow {...layerSide} {...arrowProps} {...arrowOptions} />
-
-    return cloneElement(renderedContainer, { arrow })
-  }
-  const renderContainer = () => {
-    if (showArrow) return renderContainerWithArrow()
-
-    return renderContainerWithoutArrow()
-  }
-
-  if (animate) {
-    return (
-      <>
-        {renderChildren()}
-        {renderLayer(<AnimatePresence>{getTrigger() && renderContainer()}</AnimatePresence>)}
-      </>
-    )
+    return Children.only(cloneElement(children as any, triggerProps))
   }
 
   return (
     <>
       {renderChildren()}
-      {renderLayer(getTrigger() && renderContainer())}
+      {render({ text })}
     </>
   )
 }
@@ -153,6 +43,6 @@ Tooltip.defaultProps = {
   triggerOffset: 8,
   animate: false,
   closeOnOutsideClick: true,
-  container: <DefaultContainer />,
+  container: <Container />,
   text: 'Text',
 }

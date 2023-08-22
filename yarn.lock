@@ -636,12 +636,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/condition@workspace:ui-parts/condition":
+"@atls-ui-parts/condition@workspace:0.0.5, @atls-ui-parts/condition@workspace:ui-parts/condition":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/condition@workspace:ui-parts/condition"
   dependencies:
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
+    "@types/react": "npm:18.2.20"
     framer-motion: "npm:10.15.2"
     react: "npm:18.2.0"
   peerDependencies:
@@ -1058,6 +1059,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/tooltip@workspace:ui-parts/tooltip"
   dependencies:
+    "@atls-ui-parts/condition": "workspace:0.0.5"
     "@atls-ui-parts/layout": "workspace:0.0.7"
     "@emotion/styled": "npm:11.9.3"
     "@testing-library/react": "npm:13.3.0"
@@ -1410,6 +1412,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/popover@workspace:ui-proto/popover"
   dependencies:
+    "@atls-ui-parts/condition": "workspace:0.0.5"
     "@atls-ui-parts/layout": "workspace:0.0.7"
     "@atls-ui-parts/tooltip": "workspace:0.0.8"
     "@emotion/react": "npm:11.9.3"

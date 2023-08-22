@@ -1,11 +1,10 @@
 import React                     from 'react'
-import { FunctionComponent }     from 'react'
 import { motion }                from 'framer-motion'
 import { forwardRef }            from 'react'
 
 import { ContainerElementProps } from './container.interfaces'
 
-export const ContainerElement: FunctionComponent<ContainerElementProps> = forwardRef((
+export const ContainerElement = forwardRef<HTMLDivElement, ContainerElementProps>((
   { animate, ...props },
   ref
 ) => (
