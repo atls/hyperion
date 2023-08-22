@@ -1,0 +1,5 @@
+releases:
+  "@atls-ui-parts/condition": patch
+  "@atls-ui-parts/tooltip": patch
+  "@atls-ui-proto/popover": patch
+  "@atls-ui-proto/tooltip": patch
