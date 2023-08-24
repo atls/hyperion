@@ -561,10 +561,10 @@ __metadata:
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
-    "@emotion/styled": ^11.1.5
-    react: ^17.0.1
-    styled-system: ^5.1.5
-    styled-tools: ^1.7.2
+    "@emotion/styled": 11.9.3
+    react: 18.2.0
+    styled-system: 5.1.5
+    styled-tools: 1.7.2
   languageName: unknown
   linkType: soft
 
@@ -1156,10 +1156,10 @@ __metadata:
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
-    "@emotion/styled": ^11.1.5
-    react: ^17.0.1
-    styled-system: ^5.1.5
-    styled-tools: ^1.7.2
+    "@emotion/styled": 11.9.3
+    react: 18.2.0
+    styled-system: 5.1.5
+    styled-tools: 1.7.2
   languageName: unknown
   linkType: soft
 
