@@ -13,32 +13,32 @@
   },
   "dependencies": {
     "@atls-ui-parts/styles": "workspace:0.0.4",
-    "downshift": "^6.1.7"
+    "downshift": "7.6.2"
   },
   "devDependencies": {
-    "@emotion/css": "^11.9.0",
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@types/react": "^18.0.14",
-    "@types/react-dom": "^18.0.5",
-    "@types/styled-system": "^5.1.15",
-    "framer-motion": "^6.3.11",
-    "nanoid": "^3.1.30",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-laag": "^2.0.4",
-    "styled-system": "^5.1.5",
-    "styled-tools": "^1.7.2"
+    "@emotion/css": "11.9.0",
+    "@emotion/react": "11.9.3",
+    "@emotion/styled": "11.9.3",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "@types/styled-system": "5.1.17",
+    "framer-motion": "10.16.1",
+    "nanoid": "4.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-laag": "2.0.5",
+    "styled-system": "5.1.5",
+    "styled-tools": "1.7.2"
   },
   "peerDependencies": {
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
-    "framer-motion": "*",
-    "react": "*",
-    "react-dom": "*",
-    "react-laag": "*",
-    "styled-system": "*",
-    "styled-tools": "*"
+    "@emotion/react": "11.9.3",
+    "@emotion/styled": "11.9.3",
+    "framer-motion": "10.16.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-laag": "2.0.5",
+    "styled-system": "5.1.5",
+    "styled-tools": "1.7.2"
   },
   "publishConfig": {
     "access": "public",
