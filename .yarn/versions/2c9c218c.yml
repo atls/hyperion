@@ -1,0 +1,3 @@
+releases:
+  "@atls-utils/use-hover": patch
+  "@atls-utils/use-popover": patch
