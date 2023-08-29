@@ -3,9 +3,9 @@ import { useState }      from 'react'
 import { useLayer }      from 'react-laag'
 
 export const usePopover = (placement: PlacementType, offset = 9, trigger = 'click') => {
-  const [isOpen, setOpen] = useState<boolean>(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
-  const close = () => setOpen(false)
+  const close = () => setIsOpen(false)
 
   const { layerProps, triggerProps, renderLayer } = useLayer({
     isOpen,
@@ -18,13 +18,13 @@ export const usePopover = (placement: PlacementType, offset = 9, trigger = 'clic
 
   const setTrigger = (value) => {
     if (value === 'click') {
-      return { ...triggerProps, onClick: () => setOpen(!isOpen) }
+      return { ...triggerProps, onClick: () => setIsOpen(!isOpen) }
     }
     if (value === 'hover') {
       return {
         ...triggerProps,
-        onMouseEnter: () => setOpen(true),
-        onMouseLeave: () => setOpen(false),
+        onMouseEnter: () => setIsOpen(true),
+        onMouseLeave: () => false,
       }
     }
 
@@ -43,6 +43,6 @@ export const usePopover = (placement: PlacementType, offset = 9, trigger = 'clic
     },
     render,
     isOpen,
-    setOpen,
+    setIsOpen,
   }
 }

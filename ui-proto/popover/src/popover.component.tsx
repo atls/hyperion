@@ -1,16 +1,28 @@
-import React            from 'react'
-import { FC }           from 'react'
+import React                 from 'react'
+import { Children }          from 'react'
+import { PropsWithChildren } from 'react'
+import { FC }                from 'react'
+import { cloneElement }      from 'react'
 
-import { Tooltip }      from '@atls-ui-parts/tooltip'
+import { PopoverProps }      from './popover.interfaces'
+import { usePopover }        from './use-popover.hook'
 
-import { Container }    from './container'
-import { PopoverProps } from './popover.interfaces'
+const Popover: FC<PropsWithChildren<PopoverProps>> = ({ title, content, children, ...props }) => {
+  const { isOpen, close, triggerProps, render } = usePopover({ ...props })
 
-const Popover: FC<PopoverProps> = ({ title, content, children, ...props }) => (
-  <Tooltip trigger='click' container={<Container content={content} title={title} />} {...props}>
-    {children}
-  </Tooltip>
-)
+  const renderChildren = () => {
+    if (typeof children === 'function') return children(isOpen, close)
+
+    return Children.only(cloneElement(children as any, triggerProps))
+  }
+
+  return (
+    <>
+      {renderChildren()}
+      {render({ title, content })}
+    </>
+  )
+}
 
 Popover.defaultProps = {
   triggerOffset: 15,
