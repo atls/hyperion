@@ -1,1 +1,1 @@
-export { useHover } from 'react-laag'
+export * from './use-hover.hook'
