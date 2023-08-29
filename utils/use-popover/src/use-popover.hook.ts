@@ -17,9 +17,7 @@ export const usePopover = (placement: PlacementType, offset = 9, trigger = 'clic
   })
 
   const setTrigger = (value) => {
-    if (value === 'click') {
-      return { ...triggerProps, onClick: () => setIsOpen(!isOpen) }
-    }
+    if (value === 'click') return { ...triggerProps, onClick: () => setIsOpen(!isOpen) }
     if (value === 'hover') {
       return {
         ...triggerProps,
