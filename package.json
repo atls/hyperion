@@ -8,7 +8,8 @@
     "ui-admin/*",
     "ui-parts/*",
     "ui-proto/*",
-    "ui/*"
+    "ui/*",
+    "utils/*"
   ],
   "scripts": {
     "postinstall": "yarn workspace @atls-ui-admin/icons build-icons"
