@@ -3709,7 +3709,7 @@ const RAW_RUNTIME_STATE =
           ["@atls-ui-parts/upload", "virtual:0fb63da0303c928b853ee6ca0e891ea755d97edab1a9215b8a99dc96704d0fbdf57052c58d77c55fed64df8b96cc32123f70d0e306086db709a9c8efd881b8d9#workspace:ui-parts/upload"],\
           ["@emotion/styled", "virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#npm:11.9.3"],\
           ["@types/react", "npm:17.0.39"],\
-          ["@types/styled-system", "npm:5.1.15"],\
+          ["@types/styled-system", "npm:5.1.17"],\
           ["react", "npm:18.2.0"],\
           ["styled-system", "npm:5.1.5"],\
           ["styled-tools", "npm:1.7.2"]\
