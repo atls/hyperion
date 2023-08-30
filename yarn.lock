@@ -1030,13 +1030,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/text-transform@workspace:ui-parts/text-transform"
   dependencies:
-    "@testing-library/react": "npm:^13.3.0"
-    "@types/jest": "npm:^28.1.2"
-    "@types/node": "npm:^18.0.0"
-    "@types/react": "npm:^18.0.14"
+    "@testing-library/react": "npm:^14.0.0"
+    "@types/jest": "npm:^29.5.4"
+    "@types/node": "npm:^20.5.7"
+    "@types/react": "npm:^18.2.21"
     react: "npm:^18.2.0"
   peerDependencies:
-    react: ^17.0.1
+    react: "*"
   languageName: unknown
   linkType: soft
 
@@ -7628,7 +7628,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:14.0.0":
+"@testing-library/react@npm:14.0.0, @testing-library/react@npm:^14.0.0":
   version: 14.0.0
   resolution: "@testing-library/react@npm:14.0.0"
   dependencies:
@@ -7969,7 +7969,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:29.5.4":
+"@types/jest@npm:29.5.4, @types/jest@npm:^29.5.4":
   version: 29.5.4
   resolution: "@types/jest@npm:29.5.4"
   dependencies:
@@ -8115,6 +8115,13 @@ __metadata:
   version: 18.17.4
   resolution: "@types/node@npm:18.17.4"
   checksum: 916e676abfa146451709b5bce5c3ad90dd02b3dc524d81929ecaf2d1804e48a82d8819ba6cac75f2b373606b7172db5175b9fbbff5e96b52a229941f596302f1
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^20.5.7":
+  version: 20.5.7
+  resolution: "@types/node@npm:20.5.7"
+  checksum: aa572b72e81850d221ee554d5e448baa2f573b84bedb9aab756f289e706785b1e087866c2b6fc9832d7eec67ac0e6b7ae7e284695508aec6214b1f3240720702
   languageName: node
   linkType: hard
 
