@@ -668,11 +668,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/core@workspace:ui-parts/core"
   dependencies:
-    "@stitches/react": "npm:^1.2.8"
-    "@types/react": "npm:^18.0.14"
-    react: "npm:^18.2.0"
+    "@stitches/react": "npm:1.2.8"
+    "@types/react": "npm:18.2.21"
+    react: "npm:18.2.0"
   peerDependencies:
-    react: ^18.1.0
+    react: 18.2.0
   languageName: unknown
   linkType: soft
 
@@ -1208,11 +1208,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/core@workspace:ui-proto/core"
   dependencies:
-    "@stitches/react": "npm:^1.2.8"
-    "@types/react": "npm:^18.0.14"
-    react: "npm:^18.2.0"
+    "@stitches/react": "npm:1.2.8"
+    "@types/react": "npm:18.2.21"
+    react: "npm:18.2.0"
   peerDependencies:
-    react: ^18.1.0
+    react: 18.2.0
   languageName: unknown
   linkType: soft
 
@@ -1280,17 +1280,17 @@ __metadata:
   resolution: "@atls-ui-proto/divider@workspace:ui-proto/divider"
   dependencies:
     "@atls-ui-parts/layout": "workspace:0.0.7"
-    "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^18.0.14"
-    "@types/styled-system": "npm:^5.1.15"
-    react: "npm:^18.2.0"
-    styled-system: "npm:^5.1.5"
-    styled-tools: "npm:^1.7.2"
+    "@emotion/styled": "npm:11.9.3"
+    "@types/react": "npm:18.2.21"
+    "@types/styled-system": "npm:5.1.17"
+    react: "npm:18.2.0"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
   peerDependencies:
-    "@emotion/styled": ^11.1.5
-    react: ^17.0.1
-    styled-system: ^5.1.5
-    styled-tools: ^1.7.2
+    "@emotion/styled": 11.9.3
+    react: 18.2.0
+    styled-system: 5.1.5
+    styled-tools: 1.7.2
   languageName: unknown
   linkType: soft
 
@@ -5492,7 +5492,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stitches/react@npm:^1.2.8":
+"@stitches/react@npm:1.2.8":
   version: 1.2.8
   resolution: "@stitches/react@npm:1.2.8"
   peerDependencies:
