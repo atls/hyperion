@@ -12,13 +12,13 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@emotion/styled": "^11.9.3",
-    "framer-motion": "6.3.11",
-    "react": "^18.2.0"
+    "@emotion/styled": "11.9.3",
+    "framer-motion": "10.16.1",
+    "react": "18.2.0"
   },
   "devDependencies": {
-    "@atls-ui-parts/layout": "workspace:^",
-    "@atls-ui-parts/switch": "workspace:^",
+    "@atls-ui-parts/layout": "workspace:0.0.7",
+    "@atls-ui-parts/switch": "workspace:0.0.7",
     "@emotion/css": "11.9.0",
     "@fortawesome/fontawesome-svg-core": "6.4.2",
     "@fortawesome/free-solid-svg-icons": "6.4.2",
@@ -28,11 +28,11 @@
     "styled-tools": "1.7.2"
   },
   "peerDependencies": {
-    "@emotion/styled": "11.3.0",
-    "framer-motion": "4.1.17",
-    "react": "^17.0.2",
-    "styled-system": "*",
-    "styled-tools": "*"
+    "@emotion/styled": "11.9.3",
+    "framer-motion": "10.16.1",
+    "react": "18.2.0",
+    "styled-system": "5.1.5",
+    "styled-tools": "1.7.2"
   },
   "publishConfig": {
     "access": "public",
