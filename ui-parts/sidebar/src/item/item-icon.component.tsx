@@ -1,7 +1,7 @@
 import styled                 from '@emotion/styled'
 
-import { ItemIconElement }    from './item-icon.element'
 import { baseItemIconStyles } from './item-icon.styles'
+import { ItemIconElement }    from './item-icon.element'
 
 const Icon = styled(ItemIconElement)(baseItemIconStyles)
 

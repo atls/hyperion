@@ -10,8 +10,8 @@ import { Items }             from './items'
 import { Pinner }            from './pinner'
 import { SidebarProps }      from './sidebar.interfaces'
 import { Wrapper }           from './wrapper'
-import { useHover }          from './hooks'
 import { usePinnedState }    from './hooks'
+import { useHover }          from './hooks'
 
 const Sidebar: FunctionComponent<SidebarProps> = ({ children }) => {
   const node = useRef<HTMLDivElement>(null)

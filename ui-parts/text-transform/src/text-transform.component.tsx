@@ -1,6 +1,6 @@
-import { ReactElement }       from 'react'
-
 import { TextTransformProps } from './text-transform.interfaces'
+
+import { ReactElement }       from 'react'
 
 export const TextTransform = ({
   children,

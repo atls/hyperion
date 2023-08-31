@@ -1,3 +1,3 @@
 export * from './items.component'
-export * from './items.element'
 export * from './items.styles'
+export * from './items.element'

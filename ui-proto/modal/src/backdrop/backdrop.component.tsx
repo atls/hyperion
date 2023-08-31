@@ -1,8 +1,8 @@
 import styled                     from '@emotion/styled'
 
 import { BackdropElement }        from './backdrop.element'
-import { backdropMotionVariants } from './backdrop.motion'
 import { baseBackdropStyles }     from './backdrop.styles'
+import { backdropMotionVariants } from './backdrop.motion'
 
 const Backdrop = styled(BackdropElement)(baseBackdropStyles)
 
