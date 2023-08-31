@@ -1,6 +1,6 @@
-import { TextTransformProps } from './text-transform.interfaces'
-
 import { ReactElement }       from 'react'
+
+import { TextTransformProps } from './text-transform.interfaces'
 
 export const TextTransform = ({
   children,
@@ -11,10 +11,10 @@ export const TextTransform = ({
       const args = props[key]
 
       switch (key) {
-        case 'upperCase':
-          return result.toUpperCase()
         case 'lowerCase':
           return result.toLowerCase()
+        case 'upperCase':
+          return result.toUpperCase()
         case 'firstLetter':
           return result.substr(0, 1)
         case 'lastLetter':

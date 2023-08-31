@@ -1,7 +1,7 @@
 import styled                  from '@emotion/styled'
 
-import { baseContainerStyles } from './container.styles'
 import { ContainerElement }    from './container.element'
+import { baseContainerStyles } from './container.styles'
 
 const Container = styled(ContainerElement)(baseContainerStyles)
 

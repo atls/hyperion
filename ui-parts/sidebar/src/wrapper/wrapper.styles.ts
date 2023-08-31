@@ -1,7 +1,7 @@
 import { CSSObject } from '@emotion/css'
 
-import { ifProp }    from 'styled-tools'
 import { styleFn }   from 'styled-system'
+import { ifProp }    from 'styled-tools'
 
 export const baseWrapperStyles: CSSObject = {
   position: 'relative',

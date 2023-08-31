@@ -7,8 +7,8 @@ import { ReactElement }      from 'react'
 import { Portal }            from '@atls-ui-parts/portal'
 
 import { Backdrop }          from './backdrop'
-import { ModalProps }        from './modal.interfaces'
 import { Container }         from './container'
+import { ModalProps }        from './modal.interfaces'
 
 const Modal: FunctionComponent<PropsWithChildren<ModalProps>> = ({ children, open, onClose }) => {
   let content: ReactElement | null = null

@@ -1,7 +1,7 @@
 import styled               from '@emotion/styled'
 
-import { basePinnerStyles } from './pinner.styles'
 import { PinnerElement }    from './pinner.element'
+import { basePinnerStyles } from './pinner.styles'
 
 const Pinner = styled(PinnerElement)(basePinnerStyles)
 

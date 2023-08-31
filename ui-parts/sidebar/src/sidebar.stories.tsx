@@ -9,8 +9,8 @@ import { Column }                  from '@atls-ui-parts/layout'
 import { Layout }                  from '@atls-ui-parts/layout'
 import { Switch }                  from '@atls-ui-parts/switch'
 
-import { ExpanderElement }         from './expander'
 import { ContainerElement }        from './container'
+import { ExpanderElement }         from './expander'
 import { ItemElement }             from './item'
 import { ItemIconElement }         from './item'
 import { ItemLabelElement }        from './item'
@@ -42,9 +42,9 @@ export const Base = () => {
     background: '#ffffff',
   })
 
-  const Expander = styled(ExpanderElement)(baseExpanderStyles)
-
   const Item = styled(ItemElement)(baseItemStyles, ifActiveItemModifier())
+
+  const Expander = styled(ExpanderElement)(baseExpanderStyles)
 
   const ItemIcon = styled(ItemIconElement)(baseItemIconStyles)
 
