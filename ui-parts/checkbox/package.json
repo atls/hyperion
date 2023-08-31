@@ -18,19 +18,19 @@
     "@atls-ui-parts/conditional-render": "workspace:0.0.4",
     "@atls-ui-parts/hidden-input": "workspace:0.0.6",
     "@atls/storybook-google-fonts": "workspace:0.0.0",
-    "@emotion/styled": "^11.9.3",
-    "@types/jest": "^28.1.2",
-    "@types/react": "^18.0.14",
-    "@types/styled-system": "^5.1.15",
-    "react": "^18.2.0",
-    "styled-system": "^5.1.5",
-    "styled-tools": "^1.7.2"
+    "@emotion/styled": "11.9.3",
+    "@types/jest": "29.5.4",
+    "@types/react": "18.2.21",
+    "@types/styled-system": "5.1.17",
+    "react": "18.2.0",
+    "styled-system": "5.1.5",
+    "styled-tools": "1.7.2"
   },
   "peerDependencies": {
-    "@emotion/styled": "^11.1.5",
-    "react": "^17.0.1",
-    "styled-system": "^5.1.5",
-    "styled-tools": "^1.7.2"
+    "@emotion/styled": "11.9.3",
+    "react": "18.2.0",
+    "styled-system": "5.1.5",
+    "styled-tools": "1.7.2"
   },
   "publishConfig": {
     "access": "public",
