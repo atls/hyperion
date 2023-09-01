@@ -19,21 +19,21 @@
     "@atls-ui-parts/scalable-content": "workspace:0.0.4",
     "@atls-ui-parts/text-transform": "workspace:0.0.3",
     "@atls/storybook-google-fonts": "workspace:0.0.0",
-    "@emotion/styled": "^11.9.3",
-    "@types/jest": "^28.1.2",
-    "@types/node": "^18.0.0",
-    "@types/react": "^18.0.14",
-    "@types/styled-system": "^5.1.15",
-    "react": "^18.2.0",
-    "string-to-color": "^2.2.2",
-    "styled-system": "^5.1.5",
-    "styled-tools": "^1.7.2"
+    "@emotion/styled": "11.9.3",
+    "@types/jest": "29.5.4",
+    "@types/node": "20.5.7",
+    "@types/react": "18.2.21",
+    "@types/styled-system": "5.1.17",
+    "react": "18.2.0",
+    "string-to-color": "2.2.2",
+    "styled-system": "5.1.5",
+    "styled-tools": "1.7.2"
   },
   "peerDependencies": {
-    "@emotion/styled": "^11.1.5",
-    "react": "^17.0.1",
-    "styled-system": "^5.1.5",
-    "styled-tools": "^1.7.2"
+    "@emotion/styled": "11.9.3",
+    "react": "*",
+    "styled-system": "5.1.5",
+    "styled-tools": "1.7.2"
   },
   "publishConfig": {
     "access": "public",
