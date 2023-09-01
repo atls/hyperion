@@ -10,10 +10,10 @@ export default {
 
 const Button = styled.div({
   boxSizing: 'border-box',
-  display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center',
+  display: 'flex',
   height: 32,
+  justifyContent: 'center',
   padding: '0px 16px',
   color: 'rgba(0, 0, 0, 0.65)',
   backgroundColor: '#fff',
@@ -24,8 +24,8 @@ const Button = styled.div({
     borderColor: '#40a9ff',
   },
   '&:active': {
-    color: '#096dd9',
     borderColor: '#096dd9',
+    color: '#096dd9',
   },
 })
 

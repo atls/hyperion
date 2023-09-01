@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/input",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,8 +12,8 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/conditional-render": "workspace:0.0.4",
-    "@atls-ui-parts/input": "workspace:0.0.13"
+    "@atls-ui-parts/conditional-render": "workspace:*",
+    "@atls-ui-parts/input": "workspace:*"
   },
   "devDependencies": {
     "@emotion/styled": "^11.9.3",

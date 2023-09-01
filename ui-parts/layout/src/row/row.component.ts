@@ -6,9 +6,9 @@ import { Layout }      from '../layout'
 const Row = styled(Layout)<LayoutProps>()
 
 Row.defaultProps = {
-  boxSizing: 'border-box',
-  flexDirection: 'row',
   display: 'flex',
+  flexDirection: 'row',
+  boxSizing: 'border-box',
   width: '100%',
 }
 

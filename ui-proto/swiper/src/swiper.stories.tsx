@@ -13,8 +13,8 @@ const Slide = ({ children }) => (
   <div
     style={{
       width: 300,
-      height: 300,
       display: 'flex',
+      height: 300,
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: 'orange',
@@ -27,8 +27,8 @@ const Slide = ({ children }) => (
 export const Swiper = () => (
   <BaseSwiper
     slidesPerView={3}
-    spaceBetween={60}
     loop
+    spaceBetween={60}
     width={1920}
     grabCursor
     touchEventsTarget='container'

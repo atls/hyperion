@@ -57,9 +57,9 @@ const Autocomplete = (
 
   const { layerProps, renderLayer, triggerProps, triggerBounds } = useLayer({
     isOpen,
-    placement: 'bottom-start',
     auto: true,
     triggerOffset: 0,
+    placement: 'bottom-start',
     possiblePlacements: ['bottom-start', 'top-start'] as Array<Placement>,
   })
 
@@ -87,8 +87,8 @@ const Autocomplete = (
   )
 
   const { onChange: downshiftOnChange, ...restProps } = getInputProps(triggerProps)
-  const inputProps = { ...restProps, onChangeNative: downshiftOnChange }
   const menuProps = getMenuProps({ style: {} })
+  const inputProps = { ...restProps, onChangeNative: downshiftOnChange }
 
   return (
     <>

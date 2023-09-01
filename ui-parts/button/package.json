@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/button",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,21 +12,21 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/styles": "workspace:0.0.4"
+    "@atls-ui-parts/styles": "workspace:*"
   },
   "devDependencies": {
-    "@atls/storybook-google-fonts": "workspace:0.0.0",
-    "@emotion/styled": "^11.9.3",
-    "@mdx-js/react": "^2.3.0",
-    "@storybook/addon-docs": "^6.5.9",
-    "@storybook/components": "^6.5.9",
-    "@types/jest": "^28.1.2",
-    "@types/mdx-js__react": "^1.5.5",
-    "@types/react": "^18.0.14",
-    "@types/styled-system": "^5.1.15",
-    "react": "^18.2.0",
-    "styled-system": "^5.1.5",
-    "styled-tools": "^1.7.2"
+    "@atls/storybook-google-fonts": "workspace:*",
+    "@emotion/styled": "11.9.3",
+    "@mdx-js/react": "2.3.0",
+    "@storybook/addon-docs": "6.5.9",
+    "@storybook/components": "6.5.9",
+    "@types/jest": "28.1.2",
+    "@types/mdx-js__react": "1.5.5",
+    "@types/react": "18.0.14",
+    "@types/styled-system": "5.1.15",
+    "react": "18.2.0",
+    "styled-system": "5.1.5",
+    "styled-tools": "1.7.2"
   },
   "peerDependencies": {
     "@emotion/styled": "11.9.3",

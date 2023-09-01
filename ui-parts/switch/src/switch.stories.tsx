@@ -20,8 +20,8 @@ export default {
 const Preview = styled.div({
   position: 'relative',
   minHeight: 24,
-  minWidth: 24,
   paddingBottom: 8,
+  minWidth: 24,
   paddingRight: 16,
 })
 

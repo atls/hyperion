@@ -8,8 +8,8 @@ const Backdrop = styled(BackdropElement)(baseBackdropStyles)
 
 Backdrop.defaultProps = {
   variants: backdropMotionVariants,
-  initial: 'enter',
   animate: 'target',
+  initial: 'enter',
   exit: 'exit',
 }
 

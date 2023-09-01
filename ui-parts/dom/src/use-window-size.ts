@@ -38,9 +38,7 @@ export function useWindowSize(): WindowDimensions {
 
   useEffect(() => {
     window.addEventListener('resize', fetchWindowDimensionsAndSave)
-    return () => {
-      window.removeEventListener('resize', fetchWindowDimensionsAndSave)
-    }
+    return () => window.removeEventListener('resize', fetchWindowDimensionsAndSave)
   }, [fetchWindowDimensionsAndSave])
 
   return windowSize

@@ -30,10 +30,10 @@ export const NextNavLink = (props) => {
 }
 
 Link.args = {
-  children: 'Clickable',
   fontWeight: 400,
-  fontSize: 16,
+  children: 'Clickable',
   color: 'black',
+  fontSize: 16,
   href: 'http://atls.team',
   path: '/',
 }
@@ -47,8 +47,8 @@ Link.argTypes = {
     name: 'Насыщенность шрифта',
     description: 'Насыщенность шрифта текста',
     control: {
-      type: 'select',
       options: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      type: 'select',
     },
   },
   fontSize: {

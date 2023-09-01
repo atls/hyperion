@@ -12,8 +12,8 @@ export const Base = () => (
       <div
         style={{
           position: 'absolute',
-          background: '#ffffff',
           padding: 40,
+          background: '#ffffff',
           top: '50%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
