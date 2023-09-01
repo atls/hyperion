@@ -1,7 +1,5 @@
-import React               from 'react'
-
-import { Icon }            from '@atls-ui-admin/icon'
-import { IconProps } from '@atls-ui-admin/icon'
+import React from 'react'
+import { Icon, IconProps } from '@atls-ui-admin/icon'
 export const PencilIcon = (props: IconProps) => (
   <Icon
     viewBox='0 0 24 24'
