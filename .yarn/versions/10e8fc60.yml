@@ -1,0 +1,7 @@
+releases:
+  "@atls-ui-admin/button": patch
+  "@atls-ui-admin/icon": patch
+  "@atls-ui-admin/icons": patch
+  "@atls-ui-admin/upload": patch
+  "@atls-utils/use-hover": patch
+  "@atls-utils/use-popover": patch
