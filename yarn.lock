@@ -1630,6 +1630,8 @@ __metadata:
   resolution: "@atls-utils/use-hover@workspace:utils/use-hover"
   dependencies:
     react-laag: "npm:2.0.5"
+  peerDependencies:
+    react: 18.2.0
   languageName: unknown
   linkType: soft
 
@@ -1640,6 +1642,8 @@ __metadata:
     "@types/react": "npm:18.2.20"
     react: "npm:18.2.0"
     react-laag: "npm:2.0.5"
+  peerDependencies:
+    react: 18.2.0
   languageName: unknown
   linkType: soft
 

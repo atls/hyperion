@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-admin/upload",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
