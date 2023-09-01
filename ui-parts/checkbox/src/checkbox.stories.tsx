@@ -27,8 +27,8 @@ export default { title: 'Components/Checkbox' }
 export const Checkbox = ({
   type,
   fontColor,
-  fontSize,
   fontWeight,
+  fontSize,
   fontFamily,
   labelPosition,
   offset,
@@ -61,8 +61,8 @@ export const Checkbox = ({
   const Box = styled.div(
     createBoxBaseStyles(),
     createBoxShapeStyles({
-      size,
       borderWidth,
+      size,
       borderRadius,
     }),
     createBoxAppearanceStyles({
@@ -80,8 +80,8 @@ export const Checkbox = ({
 
   const Label = styled(ConditionalRender())(
     createLabelShapeStyles({
-      fontSize,
       fontWeight,
+      fontSize,
       fontFamily,
     }),
     createLabelAppearanceStyles({

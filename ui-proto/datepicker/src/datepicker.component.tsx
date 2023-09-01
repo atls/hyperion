@@ -22,9 +22,9 @@ const CustomInput = forwardRef(({
 }: CustomInputProps) => (
   <Input
     ref={ref}
-    placeholder={customPlaceholder}
     value={startDate !== null ? customValue : ''}
     onClick={onClick}
+    placeholder={customPlaceholder}
     style={{ height: 48 }}
   />
 ))
@@ -61,8 +61,8 @@ const Datepicker: FC<DatepickerProps> = ({
         strictParsing
         startDate={startDate}
         endDate={endDate}
-        selected={startDate}
         onChange={handleDateChange}
+        selected={startDate}
         customInput={
           // @ts-ignore
           <CustomInput

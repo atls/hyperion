@@ -9,8 +9,8 @@ import { TooltipProps }      from './tooltip.interfaces'
 import { useTooltip }        from './use-tooltip.hook'
 
 export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({
-  text = 'Text',
   children,
+  text = 'Text',
   ...props
 }) => {
   const { isOpen, close, triggerProps, render } = useTooltip({ ...props })
@@ -30,8 +30,8 @@ export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({
 }
 
 Tooltip.defaultProps = {
-  trigger: 'click',
   showArrow: true,
+  trigger: 'click',
   arrowOptions: {
     angle: 30,
     size: 8,

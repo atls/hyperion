@@ -14,9 +14,9 @@
     "express": "^4.18.1"
   },
   "devDependencies": {
-    "@atls-ui-proto/button": "workspace:0.0.14",
-    "@atls-ui-proto/input": "workspace:0.0.13",
-    "@atls-ui-proto/theme": "workspace:0.0.13",
+    "@atls-ui-proto/button": "workspace:*",
+    "@atls-ui-proto/input": "workspace:*",
+    "@atls-ui-proto/theme": "workspace:*",
     "@babel/core": "^7.18.5",
     "@emotion/babel-plugin": "^11.9.2",
     "@emotion/css": "11.9.0",

@@ -14,8 +14,8 @@ export const Pagination = styled.div(
     borderRadius: 8,
   }),
   createPaginationAppearanceStyles({
-    backgroundColor: 'gray',
     borderColor: 'gray',
+    backgroundColor: 'gray',
     activeBackgroundColor: 'blue',
     activeBorderColor: 'blue',
   })

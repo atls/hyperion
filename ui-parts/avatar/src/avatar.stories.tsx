@@ -26,8 +26,8 @@ export default {
 
 export const Avatar = ({
   backgroundColor,
-  borderColor,
   borderWidth,
+  borderColor,
   size,
   borderRadius,
   padding,

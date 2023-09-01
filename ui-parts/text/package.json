@@ -12,18 +12,18 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "styled-system": "^5.1.5"
+    "styled-system": "5.1.5"
   },
   "devDependencies": {
-    "@emotion/styled": "^11.9.3",
-    "@types/react": "^18.0.14",
-    "@types/styled-system": "^5.1.15",
-    "react": "^18.2.0",
-    "styled-system": "^5.1.5"
+    "@emotion/styled": "11.9.3",
+    "@types/react": "18.0.14",
+    "@types/styled-system": "5.1.15",
+    "react": "18.2.0",
+    "styled-system": "5.1.5"
   },
   "peerDependencies": {
-    "@emotion/styled": "^11.9.3",
-    "react": "^18.2.0"
+    "@emotion/styled": "11.9.3",
+    "react": "18.2.0"
   },
   "publishConfig": {
     "access": "public",

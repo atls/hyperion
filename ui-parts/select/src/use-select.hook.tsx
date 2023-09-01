@@ -9,8 +9,8 @@ import { UseSelectProps }                  from './select.interfaces'
 const useSelect = ({ items, onChange, placement = 'bottom-center', ...props }: UseSelectProps) => {
   const {
     isOpen,
-    highlightedIndex,
     selectedItem,
+    highlightedIndex,
     getToggleButtonProps,
     getLabelProps,
     getMenuProps,

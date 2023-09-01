@@ -3,8 +3,8 @@ import { styleFn } from 'styled-system'
 export const createContainerBaseStyles: styleFn = () => () => ({
   display: 'flex',
   position: 'relative',
-  cursor: 'pointer',
   userSelect: 'none',
+  cursor: 'pointer',
   alignItems: 'center',
   outline: 'none',
 })

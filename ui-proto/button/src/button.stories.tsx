@@ -24,8 +24,8 @@ Button.args = {
   size: 'normal',
   fill: false,
   rounding: 0,
-  shape: 'rectangle',
   variant: 'primary',
+  shape: 'rectangle',
   inverted: false,
 }
 

@@ -6,8 +6,8 @@ import { switchProp } from 'styled-tools'
 
 export const baseLinePercentStyles: CSSObject = {
   display: 'flex',
-  position: 'absolute',
   height: '100%',
+  position: 'absolute',
   transition: 'all 0.3s linear',
 }
 

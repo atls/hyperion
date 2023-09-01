@@ -12,14 +12,14 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/swiper": "workspace:0.0.4"
+    "@atls-ui-parts/swiper": "workspace:*"
   },
   "devDependencies": {
-    "@types/react": "^18.0.14",
-    "react": "^18.2.0"
+    "@types/react": "18.0.14",
+    "react": "18.2.0"
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": "18.2.0"
   },
   "publishConfig": {
     "access": "public",

@@ -24,7 +24,7 @@ export const WithValue = () => {
   const [value, setValue] = useState({ value: 'Neptunium' })
 
   return (
-    <div style={{ width: '100%', minHeight: 400, paddingTop: 40 }}>
+    <div style={{ minHeight: 400, width: '100%', paddingTop: 40 }}>
       <Autocomplete value={value} options={options} onChange={setValue} />
     </div>
   )

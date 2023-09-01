@@ -36,8 +36,8 @@ const appearancePrimaryStyles = createAppearanceStyles({
   invertedBorderWidth: 2,
 })
 
-export const baseStyles = createBaseStyles()
 export const contentStyles = createContentStyles()
+export const baseStyles = createBaseStyles()
 
 export const shapeStyles = switchProp(prop('size', 'normal'), {
   small: smallNormalSizeStyles,
