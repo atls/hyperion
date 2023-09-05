@@ -1279,13 +1279,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/divider@workspace:ui-proto/divider"
   dependencies:
-    "@atls-ui-parts/layout": "workspace:*"
-    "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^18.0.14"
-    "@types/styled-system": "npm:^5.1.15"
-    react: "npm:^18.2.0"
-    styled-system: "npm:^5.1.5"
-    styled-tools: "npm:^1.7.2"
+    "@atls-ui-parts/layout": "workspace:0.0.7"
+    "@emotion/styled": "npm:11.9.3"
+    "@types/react": "npm:18.2.21"
+    "@types/styled-system": "npm:5.1.17"
+    react: "npm:18.2.0"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
   peerDependencies:
     "@emotion/styled": ^11.1.5
     react: ^17.0.1
