@@ -34,13 +34,13 @@ export const appearanceCheckedDisabledHandleStyles: styleFn = ({ theme }) => ({
 })
 
 export const shapeNormalSizeHandleStyles: styleFn = () => ({
-  height: 20,
   width: 32,
+  height: 20,
 })
 
 export const shapeNormalSizeThumbStyles: styleFn = () => ({
-  height: 16,
   width: 16,
+  height: 16,
 })
 
 export const appearanceHandleStyles = ifProp(

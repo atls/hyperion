@@ -73,8 +73,8 @@ export const checkShapeStyles = switchProp(prop('size', 'normal'), {
   large: checkLargeShapeStyles,
 })
 
-export const containerBaseStyles = createContainerBaseStyles()
 export const containerPositionStyles = createContainerPositionStyles()
+export const containerBaseStyles = createContainerBaseStyles()
 
 export const labelPositionStyles = createLabelPositionStyles({
   margin: '7px',

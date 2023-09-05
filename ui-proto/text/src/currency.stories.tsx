@@ -10,10 +10,10 @@ export const Currency = (props) => <CurrencyComponent {...props} />
 
 Currency.args = {
   fontWeight: 400,
-  fontSize: 16,
   color: 'black',
-  currency: 'USD',
+  fontSize: 16,
   amount: 100,
+  currency: 'USD',
   locale: 'ru-RU',
   keepZeros: false,
   currencySignPlacement: 'suffix',

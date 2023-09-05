@@ -6,8 +6,8 @@ import { motion }          from 'framer-motion'
 import { ConditionProps }  from './condition.interface'
 
 export const Condition: FC<ConditionProps> = ({
-  match,
   smooth = false,
+  match,
   smoothDuration = 0.3,
   smoothPattern = 'in-and-out',
   children,
@@ -20,8 +20,8 @@ export const Condition: FC<ConditionProps> = ({
         <AnimatePresence>
           <motion.div
             style={{ display: 'flex', width: '100%', height: '100%' }}
-            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: smoothDuration }}
           >
@@ -35,8 +35,8 @@ export const Condition: FC<ConditionProps> = ({
       return (
         <motion.div
           style={{ display: 'flex', width: '100%', height: '100%' }}
-          initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: smoothDuration }}
         >

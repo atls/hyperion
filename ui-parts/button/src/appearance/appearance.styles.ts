@@ -7,8 +7,8 @@ import { combine }                from '@atls-ui-parts/styles'
 import { ButtonAppearanceStyles } from './appearance.interfaces'
 
 export const createColorStyles: styleFn = (
-    color: string,
     backgroundColor: string,
+    color: string,
     borderColor: string
   ) =>
   () => ({

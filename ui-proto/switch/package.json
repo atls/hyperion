@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/switch",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "devDependencies": {
-    "@atls-ui-parts/switch": "workspace:0.0.7",
+    "@atls-ui-parts/switch": "workspace:*",
     "@emotion/css": "11.9.0",
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",

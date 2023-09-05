@@ -28,8 +28,8 @@ export const GhostButton = ({
   children,
   fontFamily,
   fontSize,
-  fontWeight,
   fontColor,
+  fontWeight,
   backgroundColor,
 }) => {
   useGoogleFonts(fontFamily, fontWeight)
@@ -59,7 +59,7 @@ GhostButton.args = {
   containerWith: 200,
   fontFamily: 'Roboto',
   fontWeight: 400,
-  fontSize: 12,
   fontColor: 'black',
+  fontSize: 12,
   backgroundColor: 'transparent',
 }

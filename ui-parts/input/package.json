@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/input",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,14 +12,14 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/events-state": "workspace:0.0.4",
-    "@atls-ui-parts/styles": "workspace:0.0.4"
+    "@atls-ui-parts/events-state": "workspace:*",
+    "@atls-ui-parts/styles": "workspace:*"
   },
   "devDependencies": {
-    "@atls-ui-parts/conditional-render": "workspace:0.0.4",
-    "@atls-ui-parts/layout": "workspace:0.0.7",
-    "@atls-ui-parts/upload": "workspace:0.0.7",
-    "@atls/storybook-google-fonts": "workspace:0.0.0",
+    "@atls-ui-parts/conditional-render": "workspace:*",
+    "@atls-ui-parts/layout": "workspace:*",
+    "@atls-ui-parts/upload": "workspace:*",
+    "@atls/storybook-google-fonts": "workspace:*",
     "@emotion/styled": "^11.9.3",
     "@types/jest": "^28.1.2",
     "@types/react": "^18.0.14",

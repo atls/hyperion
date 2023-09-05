@@ -7,6 +7,6 @@ import { OnChangeCallback }    from './value'
 export interface InputProps
   extends Omit<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>, 'onChange'>,
     InputShapeProps {
-  onChangeNative?: FormEventHandler<HTMLInputElement>
   onChange?: OnChangeCallback
+  onChangeNative?: FormEventHandler<HTMLInputElement>
 }

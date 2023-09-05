@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/tooltip",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,8 +12,8 @@
     "postpack": "rm -rf dist"
   },
   "devDependencies": {
-    "@atls-ui-parts/layout": "workspace:0.0.7",
-    "@atls-ui-parts/tooltip": "workspace:0.0.9",
+    "@atls-ui-parts/layout": "workspace:*",
+    "@atls-ui-parts/tooltip": "workspace:*",
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
     "@types/react": "18.2.20",
