@@ -1,8 +1,7 @@
-import React         from 'react'
+import React               from 'react'
 
-import { Icon }      from '@atls-ui-admin/icon'
+import { Icon }            from '@atls-ui-admin/icon'
 import { IconProps } from '@atls-ui-admin/icon'
-
 export const LogoIcon = (props: IconProps) => (
   <Icon
     width='1em'
