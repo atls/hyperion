@@ -7,8 +7,8 @@ import { createAppearanceStyles } from '@atls-ui-parts/input'
 
 const smallNormalSizeStyles = createShapeStyles({
   fontFamily: prop('theme.fonts.primary'),
-  fontWeight: 400,
   size: 32,
+  fontWeight: 400,
   fontSize: 11,
   rounding: 6,
   paddingLeft: 12,
@@ -17,8 +17,8 @@ const smallNormalSizeStyles = createShapeStyles({
 
 const shapeNormalSizeStyles = createShapeStyles({
   fontFamily: prop('theme.fonts.primary'),
-  fontWeight: 400,
   size: 40,
+  fontWeight: 400,
   fontSize: 12,
   rounding: 6,
   paddingLeft: 16,
@@ -27,8 +27,8 @@ const shapeNormalSizeStyles = createShapeStyles({
 
 const largeNormalSizeStyles = createShapeStyles({
   fontFamily: prop('theme.fonts.primary'),
-  fontWeight: 400,
   size: 48,
+  fontWeight: 400,
   fontSize: 14,
   rounding: 6,
   paddingLeft: 16,

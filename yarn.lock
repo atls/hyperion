@@ -261,11 +261,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-admin/button@workspace:0.0.12, @atls-ui-admin/button@workspace:ui-admin/button":
+"@atls-ui-admin/button@workspace:*, @atls-ui-admin/button@workspace:ui-admin/button":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/button@workspace:ui-admin/button"
   dependencies:
-    "@atls-ui-parts/button": "workspace:0.0.12"
+    "@atls-ui-parts/button": "workspace:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:^18.0.14"
     "@types/styled-system": "npm:^5.1.15"
@@ -284,8 +284,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/design@workspace:ui-admin/design"
   dependencies:
-    "@atls-ui-admin/button": "workspace:0.0.12"
-    "@atls-ui-admin/theme": "workspace:0.0.7"
+    "@atls-ui-admin/button": "workspace:*"
+    "@atls-ui-admin/theme": "workspace:*"
     "@babel/core": "npm:^7.18.5"
     "@emotion/babel-plugin": "npm:^11.9.2"
     "@emotion/css": "npm:^11.9.0"
@@ -317,7 +317,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-admin/icon@workspace:0.0.8, @atls-ui-admin/icon@workspace:ui-admin/icon":
+"@atls-ui-admin/icon@workspace:*, @atls-ui-admin/icon@workspace:ui-admin/icon":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/icon@workspace:ui-admin/icon"
   dependencies:
@@ -341,13 +341,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-admin/icons@workspace:0.0.8, @atls-ui-admin/icons@workspace:ui-admin/icons":
+"@atls-ui-admin/icons@workspace:*, @atls-ui-admin/icons@workspace:ui-admin/icons":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/icons@workspace:ui-admin/icons"
   dependencies:
     "@atlantis-lab/prettier-config": "npm:^0.1.12"
     "@atlantis-lab/tsconfig": "npm:^0.1.12"
-    "@atls-ui-admin/icon": "workspace:0.0.8"
+    "@atls-ui-admin/icon": "workspace:*"
     "@svgr/core": "npm:5.4.0"
     "@testing-library/react": "npm:^13.3.0"
     "@types/prettier": "npm:^2"
@@ -370,7 +370,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-admin/theme@workspace:0.0.7, @atls-ui-admin/theme@workspace:ui-admin/theme":
+"@atls-ui-admin/theme@workspace:*, @atls-ui-admin/theme@workspace:ui-admin/theme":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/theme@workspace:ui-admin/theme"
   dependencies:
@@ -389,8 +389,8 @@ __metadata:
   resolution: "@atls-ui-admin/upload@workspace:ui-admin/upload"
   dependencies:
     "@apollo/client": "npm:3.6.6"
-    "@atls-ui-admin/icon": "workspace:0.0.8"
-    "@atls-ui-admin/icons": "workspace:0.0.8"
+    "@atls-ui-admin/icon": "workspace:*"
+    "@atls-ui-admin/icons": "workspace:*"
     "@atls/react-upload": "npm:^0.0.3"
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
@@ -418,8 +418,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-generators/button@workspace:generators/button"
   dependencies:
-    "@atls-ui-generators/utils": "workspace:0.0.5"
-    "@atls-ui-parts/button": "workspace:0.0.12"
+    "@atls-ui-generators/utils": "workspace:*"
+    "@atls-ui-parts/button": "workspace:*"
     "@atls/config-prettier": "npm:^0.0.5"
     "@atls/prettier-plugin": "npm:^0.0.7"
     "@babel/standalone": "npm:^7.19.5"
@@ -438,8 +438,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-generators/icons@workspace:generators/icons"
   dependencies:
-    "@atls-ui-generators/utils": "workspace:0.0.5"
-    "@atls-ui-parts/button": "workspace:0.0.12"
+    "@atls-ui-generators/utils": "workspace:*"
+    "@atls-ui-parts/button": "workspace:*"
     "@atls/config-prettier": "npm:^0.0.5"
     "@atls/prettier-plugin": "npm:^0.0.7"
     "@babel/standalone": "npm:^7.19.5"
@@ -462,8 +462,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-generators/input@workspace:generators/input"
   dependencies:
-    "@atls-ui-generators/utils": "workspace:0.0.5"
-    "@atls-ui-parts/input": "workspace:0.0.13"
+    "@atls-ui-generators/utils": "workspace:*"
+    "@atls-ui-parts/input": "workspace:*"
     "@atls/config-prettier": "npm:^0.0.5"
     "@atls/prettier-plugin": "npm:^0.0.7"
     "@babel/standalone": "npm:^7.19.5"
@@ -478,7 +478,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-generators/utils@workspace:0.0.5, @atls-ui-generators/utils@workspace:generators/utils":
+"@atls-ui-generators/utils@workspace:*, @atls-ui-generators/utils@workspace:generators/utils":
   version: 0.0.0-use.local
   resolution: "@atls-ui-generators/utils@workspace:generators/utils"
   dependencies:
@@ -490,11 +490,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/autocomplete@workspace:0.0.15, @atls-ui-parts/autocomplete@workspace:ui-parts/autocomplete":
+"@atls-ui-parts/autocomplete@workspace:*, @atls-ui-parts/autocomplete@workspace:ui-parts/autocomplete":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/autocomplete@workspace:ui-parts/autocomplete"
   dependencies:
-    "@atls-ui-proto/input": "workspace:0.0.13"
+    "@atls-ui-proto/input": "workspace:*"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@testing-library/react": "npm:14.0.0"
@@ -517,15 +517,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/avatar@workspace:0.0.8, @atls-ui-parts/avatar@workspace:ui-parts/avatar":
+"@atls-ui-parts/avatar@workspace:*, @atls-ui-parts/avatar@workspace:ui-parts/avatar":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/avatar@workspace:ui-parts/avatar"
   dependencies:
-    "@atls-ui-parts/image": "workspace:0.0.4"
-    "@atls-ui-parts/scalable-content": "workspace:0.0.4"
-    "@atls-ui-parts/styles": "workspace:0.0.4"
-    "@atls-ui-parts/text-transform": "workspace:0.0.3"
-    "@atls/storybook-google-fonts": "workspace:0.0.0"
+    "@atls-ui-parts/image": "workspace:*"
+    "@atls-ui-parts/scalable-content": "workspace:*"
+    "@atls-ui-parts/styles": "workspace:*"
+    "@atls-ui-parts/text-transform": "workspace:*"
+    "@atls/storybook-google-fonts": "workspace:*"
     "@emotion/styled": "npm:11.9.3"
     "@types/jest": "npm:29.5.4"
     "@types/node": "npm:20.5.7"
@@ -537,29 +537,29 @@ __metadata:
     styled-tools: "npm:1.7.2"
   peerDependencies:
     "@emotion/styled": 11.9.3
-    react: "*"
+    react: 18.2.0
     styled-system: 5.1.5
     styled-tools: 1.7.2
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/button@workspace:0.0.12, @atls-ui-parts/button@workspace:ui-parts/button":
+"@atls-ui-parts/button@workspace:*, @atls-ui-parts/button@workspace:ui-parts/button":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/button@workspace:ui-parts/button"
   dependencies:
-    "@atls-ui-parts/styles": "workspace:0.0.4"
-    "@atls/storybook-google-fonts": "workspace:0.0.0"
-    "@emotion/styled": "npm:^11.9.3"
-    "@mdx-js/react": "npm:^2.3.0"
-    "@storybook/addon-docs": "npm:^6.5.9"
-    "@storybook/components": "npm:^6.5.9"
-    "@types/jest": "npm:^28.1.2"
-    "@types/mdx-js__react": "npm:^1.5.5"
-    "@types/react": "npm:^18.0.14"
-    "@types/styled-system": "npm:^5.1.15"
-    react: "npm:^18.2.0"
-    styled-system: "npm:^5.1.5"
-    styled-tools: "npm:^1.7.2"
+    "@atls-ui-parts/styles": "workspace:*"
+    "@atls/storybook-google-fonts": "workspace:*"
+    "@emotion/styled": "npm:11.9.3"
+    "@mdx-js/react": "npm:2.3.0"
+    "@storybook/addon-docs": "npm:6.5.9"
+    "@storybook/components": "npm:6.5.9"
+    "@types/jest": "npm:28.1.2"
+    "@types/mdx-js__react": "npm:1.5.5"
+    "@types/react": "npm:18.0.14"
+    "@types/styled-system": "npm:5.1.15"
+    react: "npm:18.2.0"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
   peerDependencies:
     "@emotion/styled": 11.9.3
     react: 18.2.0
@@ -572,8 +572,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/card@workspace:ui-parts/card"
   dependencies:
-    "@atls-ui-parts/dom": "workspace:0.0.4"
-    "@atls-ui-parts/layout": "workspace:0.0.7"
+    "@atls-ui-parts/dom": "workspace:*"
+    "@atls-ui-parts/layout": "workspace:*"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@types/react-dom": "npm:18.2.7"
@@ -591,12 +591,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/carousel@workspace:0.0.6, @atls-ui-parts/carousel@workspace:ui-parts/carousel":
+"@atls-ui-parts/carousel@workspace:*, @atls-ui-parts/carousel@workspace:ui-parts/carousel":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/carousel@workspace:ui-parts/carousel"
   dependencies:
-    "@atls-ui-parts/dom": "workspace:0.0.4"
-    "@atls-ui-parts/styles": "workspace:0.0.4"
+    "@atls-ui-parts/dom": "workspace:*"
+    "@atls-ui-parts/styles": "workspace:*"
     "@emotion/styled": "npm:11.9.3"
     "@types/jest": "npm:28.1.2"
     "@types/react": "npm:18.2.20"
@@ -613,14 +613,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/checkbox@workspace:0.0.6, @atls-ui-parts/checkbox@workspace:ui-parts/checkbox":
+"@atls-ui-parts/checkbox@workspace:*, @atls-ui-parts/checkbox@workspace:ui-parts/checkbox":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/checkbox@workspace:ui-parts/checkbox"
   dependencies:
-    "@atls-ui-parts/conditional-render": "workspace:0.0.4"
-    "@atls-ui-parts/hidden-input": "workspace:0.0.6"
-    "@atls-ui-parts/styles": "workspace:0.0.4"
-    "@atls/storybook-google-fonts": "workspace:0.0.0"
+    "@atls-ui-parts/conditional-render": "workspace:*"
+    "@atls-ui-parts/hidden-input": "workspace:*"
+    "@atls-ui-parts/styles": "workspace:*"
+    "@atls/storybook-google-fonts": "workspace:*"
     "@emotion/styled": "npm:11.9.3"
     "@types/jest": "npm:29.5.4"
     "@types/react": "npm:18.2.21"
@@ -636,7 +636,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/condition@workspace:0.0.6, @atls-ui-parts/condition@workspace:ui-parts/condition":
+"@atls-ui-parts/condition@workspace:*, @atls-ui-parts/condition@workspace:ui-parts/condition":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/condition@workspace:ui-parts/condition"
   dependencies:
@@ -653,7 +653,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/conditional-render@workspace:0.0.4, @atls-ui-parts/conditional-render@workspace:ui-parts/conditional-render":
+"@atls-ui-parts/conditional-render@workspace:*, @atls-ui-parts/conditional-render@workspace:ui-parts/conditional-render":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/conditional-render@workspace:ui-parts/conditional-render"
   dependencies:
@@ -676,11 +676,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/datepicker@workspace:0.0.14, @atls-ui-parts/datepicker@workspace:ui-parts/datepicker":
+"@atls-ui-parts/datepicker@workspace:*, @atls-ui-parts/datepicker@workspace:ui-parts/datepicker":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/datepicker@workspace:ui-parts/datepicker"
   dependencies:
-    "@atls-ui-proto/input": "workspace:0.0.13"
+    "@atls-ui-proto/input": "workspace:*"
     "@emotion/css": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@types/react": "npm:18.2.21"
@@ -702,9 +702,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/design@workspace:ui-parts/design"
   dependencies:
-    "@atls-ui-parts/avatar": "workspace:0.0.8"
-    "@atls-ui-parts/button": "workspace:0.0.12"
-    "@atls-ui-parts/input": "workspace:0.0.13"
+    "@atls-ui-parts/avatar": "workspace:*"
+    "@atls-ui-parts/button": "workspace:*"
+    "@atls-ui-parts/input": "workspace:*"
     "@babel/core": "npm:^7.18.5"
     "@emotion/babel-plugin": "npm:^11.9.2"
     "@emotion/css": "npm:11.9.0"
@@ -736,7 +736,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/dom@npm:0.0.4, @atls-ui-parts/dom@workspace:0.0.4, @atls-ui-parts/dom@workspace:ui-parts/dom":
+"@atls-ui-parts/dom@npm:0.0.4, @atls-ui-parts/dom@workspace:*, @atls-ui-parts/dom@workspace:ui-parts/dom":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/dom@workspace:ui-parts/dom"
   dependencies:
@@ -747,7 +747,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/events-state@workspace:0.0.4, @atls-ui-parts/events-state@workspace:ui-parts/events-state":
+"@atls-ui-parts/events-state@workspace:*, @atls-ui-parts/events-state@workspace:ui-parts/events-state":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/events-state@workspace:ui-parts/events-state"
   dependencies:
@@ -758,7 +758,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/hidden-input@workspace:0.0.6, @atls-ui-parts/hidden-input@workspace:ui-parts/hidden-input":
+"@atls-ui-parts/hidden-input@workspace:*, @atls-ui-parts/hidden-input@workspace:ui-parts/hidden-input":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/hidden-input@workspace:ui-parts/hidden-input"
   dependencies:
@@ -773,7 +773,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/image@workspace:0.0.4, @atls-ui-parts/image@workspace:ui-parts/image":
+"@atls-ui-parts/image@workspace:*, @atls-ui-parts/image@workspace:ui-parts/image":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/image@workspace:ui-parts/image"
   dependencies:
@@ -790,16 +790,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/input@workspace:0.0.13, @atls-ui-parts/input@workspace:ui-parts/input":
+"@atls-ui-parts/input@workspace:*, @atls-ui-parts/input@workspace:ui-parts/input":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/input@workspace:ui-parts/input"
   dependencies:
-    "@atls-ui-parts/conditional-render": "workspace:0.0.4"
-    "@atls-ui-parts/events-state": "workspace:0.0.4"
-    "@atls-ui-parts/layout": "workspace:0.0.7"
-    "@atls-ui-parts/styles": "workspace:0.0.4"
-    "@atls-ui-parts/upload": "workspace:0.0.7"
-    "@atls/storybook-google-fonts": "workspace:0.0.0"
+    "@atls-ui-parts/conditional-render": "workspace:*"
+    "@atls-ui-parts/events-state": "workspace:*"
+    "@atls-ui-parts/layout": "workspace:*"
+    "@atls-ui-parts/styles": "workspace:*"
+    "@atls-ui-parts/upload": "workspace:*"
+    "@atls/storybook-google-fonts": "workspace:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/jest": "npm:^28.1.2"
     "@types/react": "npm:^18.0.14"
@@ -815,7 +815,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/layout@workspace:0.0.7, @atls-ui-parts/layout@workspace:ui-parts/layout":
+"@atls-ui-parts/layout@workspace:*, @atls-ui-parts/layout@workspace:ui-parts/layout":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/layout@workspace:ui-parts/layout"
   dependencies:
@@ -832,11 +832,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/link@workspace:0.0.11, @atls-ui-parts/link@workspace:ui-parts/link":
+"@atls-ui-parts/link@workspace:*, @atls-ui-parts/link@workspace:ui-parts/link":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/link@workspace:ui-parts/link"
   dependencies:
-    "@atls-ui-parts/text": "workspace:0.0.11"
+    "@atls-ui-parts/text": "workspace:*"
     "@emotion/css": "npm:^11.9.0"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:^18.0.14"
@@ -861,7 +861,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/portal@workspace:0.0.5, @atls-ui-parts/portal@workspace:ui-parts/portal":
+"@atls-ui-parts/portal@workspace:*, @atls-ui-parts/portal@workspace:ui-parts/portal":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/portal@workspace:ui-parts/portal"
   dependencies:
@@ -875,12 +875,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/progress@workspace:0.0.18, @atls-ui-parts/progress@workspace:ui-parts/progress":
+"@atls-ui-parts/progress@workspace:*, @atls-ui-parts/progress@workspace:ui-parts/progress":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/progress@workspace:ui-parts/progress"
   dependencies:
-    "@atls-ui-parts/layout": "workspace:0.0.7"
-    "@atls-ui-proto/button": "workspace:0.0.14"
+    "@atls-ui-parts/layout": "workspace:*"
+    "@atls-ui-proto/button": "workspace:*"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@testing-library/react": "npm:14.0.0"
@@ -901,11 +901,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/scalable-content@workspace:0.0.4, @atls-ui-parts/scalable-content@workspace:ui-parts/scalable-content":
+"@atls-ui-parts/scalable-content@workspace:*, @atls-ui-parts/scalable-content@workspace:ui-parts/scalable-content":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/scalable-content@workspace:ui-parts/scalable-content"
   dependencies:
-    "@atls-ui-parts/dom": "workspace:0.0.4"
+    "@atls-ui-parts/dom": "workspace:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/jest": "npm:^28.1.2"
     "@types/react": "npm:^18.0.14"
@@ -919,11 +919,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/select@workspace:0.0.13, @atls-ui-parts/select@workspace:ui-parts/select":
+"@atls-ui-parts/select@workspace:*, @atls-ui-parts/select@workspace:ui-parts/select":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/select@workspace:ui-parts/select"
   dependencies:
-    "@atls-ui-parts/styles": "workspace:0.0.4"
+    "@atls-ui-parts/styles": "workspace:*"
     "@emotion/css": "npm:11.9.0"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
@@ -954,8 +954,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/sidebar@workspace:ui-parts/sidebar"
   dependencies:
-    "@atls-ui-parts/layout": "workspace:0.0.7"
-    "@atls-ui-parts/switch": "workspace:0.0.7"
+    "@atls-ui-parts/layout": "workspace:*"
+    "@atls-ui-parts/switch": "workspace:*"
     "@emotion/css": "npm:^11.9.0"
     "@emotion/styled": "npm:^11.9.3"
     "@fortawesome/fontawesome-svg-core": "npm:1.2.28"
@@ -975,7 +975,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/styles@workspace:0.0.4, @atls-ui-parts/styles@workspace:ui-parts/styles":
+"@atls-ui-parts/styles@workspace:*, @atls-ui-parts/styles@workspace:ui-parts/styles":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/styles@workspace:ui-parts/styles"
   dependencies:
@@ -986,7 +986,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/swiper@workspace:0.0.4, @atls-ui-parts/swiper@workspace:ui-parts/swiper":
+"@atls-ui-parts/swiper@workspace:*, @atls-ui-parts/swiper@workspace:ui-parts/swiper":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/swiper@workspace:ui-parts/swiper"
   dependencies:
@@ -997,13 +997,13 @@ __metadata:
     react: "npm:18.2.0"
     swiper: "npm:9.4.1"
   peerDependencies:
-    "@emotion/css": "*"
+    "@emotion/css": 11.9.0
     react: 18.2.0
     swiper: 9.4.1
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/switch@workspace:0.0.7, @atls-ui-parts/switch@workspace:ui-parts/switch":
+"@atls-ui-parts/switch@workspace:*, @atls-ui-parts/switch@workspace:ui-parts/switch":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/switch@workspace:ui-parts/switch"
   dependencies:
@@ -1026,7 +1026,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/text-transform@workspace:0.0.3, @atls-ui-parts/text-transform@workspace:ui-parts/text-transform":
+"@atls-ui-parts/text-transform@workspace:*, @atls-ui-parts/text-transform@workspace:ui-parts/text-transform":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/text-transform@workspace:ui-parts/text-transform"
   dependencies:
@@ -1040,27 +1040,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/text@npm:0.0.11, @atls-ui-parts/text@workspace:0.0.11, @atls-ui-parts/text@workspace:ui-parts/text":
+"@atls-ui-parts/text@npm:0.0.11, @atls-ui-parts/text@workspace:*, @atls-ui-parts/text@workspace:ui-parts/text":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/text@workspace:ui-parts/text"
   dependencies:
-    "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^18.0.14"
-    "@types/styled-system": "npm:^5.1.15"
-    react: "npm:^18.2.0"
-    styled-system: "npm:^5.1.5"
+    "@emotion/styled": "npm:11.9.3"
+    "@types/react": "npm:18.0.14"
+    "@types/styled-system": "npm:5.1.15"
+    react: "npm:18.2.0"
+    styled-system: "npm:5.1.5"
   peerDependencies:
-    "@emotion/styled": ^11.9.3
-    react: ^18.2.0
+    "@emotion/styled": 11.9.3
+    react: 18.2.0
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/tooltip@workspace:0.0.9, @atls-ui-parts/tooltip@workspace:ui-parts/tooltip":
+"@atls-ui-parts/tooltip@workspace:*, @atls-ui-parts/tooltip@workspace:ui-parts/tooltip":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/tooltip@workspace:ui-parts/tooltip"
   dependencies:
-    "@atls-ui-parts/condition": "workspace:0.0.6"
-    "@atls-ui-parts/layout": "workspace:0.0.7"
+    "@atls-ui-parts/condition": "workspace:*"
+    "@atls-ui-parts/layout": "workspace:*"
     "@emotion/styled": "npm:11.9.3"
     "@testing-library/react": "npm:13.3.0"
     "@types/react": "npm:18.2.20"
@@ -1081,11 +1081,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/upload@workspace:0.0.7, @atls-ui-parts/upload@workspace:ui-parts/upload":
+"@atls-ui-parts/upload@workspace:*, @atls-ui-parts/upload@workspace:ui-parts/upload":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/upload@workspace:ui-parts/upload"
   dependencies:
-    "@atls-ui-parts/avatar": "workspace:0.0.8"
+    "@atls-ui-parts/avatar": "workspace:*"
     "@atls/react-upload": "npm:^0.0.3"
     "@types/node": "npm:^18.0.0"
     "@types/react": "npm:^18.0.14"
@@ -1102,7 +1102,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/autocomplete@workspace:ui-proto/autocomplete"
   dependencies:
-    "@atls-ui-parts/autocomplete": "workspace:0.0.15"
+    "@atls-ui-parts/autocomplete": "workspace:*"
     "@emotion/css": "npm:11.9.0"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
@@ -1125,8 +1125,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/avatar@workspace:ui-proto/avatar"
   dependencies:
-    "@atls-ui-parts/text-transform": "workspace:0.0.3"
-    "@atls-ui-proto/core": "workspace:0.1.2"
+    "@atls-ui-parts/text-transform": "workspace:*"
+    "@atls-ui-proto/core": "workspace:*"
     "@emotion/styled": "npm:11.9.3"
     "@radix-ui/react-avatar": "npm:1.0.3"
     "@types/node": "npm:20.5.7"
@@ -1143,11 +1143,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-proto/button@workspace:0.0.14, @atls-ui-proto/button@workspace:ui-proto/button":
+"@atls-ui-proto/button@workspace:*, @atls-ui-proto/button@workspace:ui-proto/button":
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/button@workspace:ui-proto/button"
   dependencies:
-    "@atls-ui-parts/button": "workspace:0.0.12"
+    "@atls-ui-parts/button": "workspace:*"
     "@emotion/is-prop-valid": "npm:^1.1.3"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:^18.0.14"
@@ -1167,7 +1167,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/carousel@workspace:ui-proto/carousel"
   dependencies:
-    "@atls-ui-parts/carousel": "workspace:0.0.6"
+    "@atls-ui-parts/carousel": "workspace:*"
     "@emotion/styled": "npm:11.9.3"
     "@types/node": "npm:18.15.3"
     "@types/react": "npm:18.2.20"
@@ -1188,10 +1188,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/checkbox@workspace:ui-proto/checkbox"
   dependencies:
-    "@atls-ui-parts/checkbox": "workspace:0.0.6"
-    "@atls-ui-parts/conditional-render": "workspace:0.0.4"
-    "@atls-ui-parts/hidden-input": "workspace:0.0.6"
-    "@atls-ui-proto/layout": "workspace:0.0.7"
+    "@atls-ui-parts/checkbox": "workspace:*"
+    "@atls-ui-parts/conditional-render": "workspace:*"
+    "@atls-ui-parts/hidden-input": "workspace:*"
+    "@atls-ui-proto/layout": "workspace:*"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     react: "npm:18.2.0"
@@ -1204,7 +1204,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-proto/core@workspace:0.1.2, @atls-ui-proto/core@workspace:ui-proto/core":
+"@atls-ui-proto/core@workspace:*, @atls-ui-proto/core@workspace:ui-proto/core":
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/core@workspace:ui-proto/core"
   dependencies:
@@ -1220,9 +1220,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/datepicker@workspace:ui-proto/datepicker"
   dependencies:
-    "@atls-ui-parts/datepicker": "workspace:0.0.14"
-    "@atls-ui-parts/layout": "workspace:0.0.7"
-    "@atls-ui-proto/input": "workspace:0.0.13"
+    "@atls-ui-parts/datepicker": "workspace:*"
+    "@atls-ui-parts/layout": "workspace:*"
+    "@atls-ui-proto/input": "workspace:*"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@types/react": "npm:18.2.21"
@@ -1243,9 +1243,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/design@workspace:ui-proto/design"
   dependencies:
-    "@atls-ui-proto/button": "workspace:0.0.14"
-    "@atls-ui-proto/input": "workspace:0.0.13"
-    "@atls-ui-proto/theme": "workspace:0.0.13"
+    "@atls-ui-proto/button": "workspace:*"
+    "@atls-ui-proto/input": "workspace:*"
+    "@atls-ui-proto/theme": "workspace:*"
     "@babel/core": "npm:^7.18.5"
     "@emotion/babel-plugin": "npm:^11.9.2"
     "@emotion/css": "npm:11.9.0"
@@ -1286,6 +1286,7 @@ __metadata:
     react: "npm:18.2.0"
     styled-system: "npm:5.1.5"
     styled-tools: "npm:1.7.2"
+
   peerDependencies:
     "@emotion/styled": 11.9.3
     react: 18.2.0
@@ -1298,7 +1299,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/image@workspace:ui-proto/image"
   dependencies:
-    "@atls-ui-parts/image": "workspace:0.0.4"
+    "@atls-ui-parts/image": "workspace:*"
     "@emotion/styled": "npm:11.9.3"
     "@types/react": "npm:18.2.21"
     "@types/styled-system": "npm:5.1.17"
@@ -1313,12 +1314,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-proto/input@workspace:0.0.13, @atls-ui-proto/input@workspace:ui-proto/input":
+"@atls-ui-proto/input@workspace:*, @atls-ui-proto/input@workspace:ui-proto/input":
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/input@workspace:ui-proto/input"
   dependencies:
-    "@atls-ui-parts/conditional-render": "workspace:0.0.4"
-    "@atls-ui-parts/input": "workspace:0.0.13"
+    "@atls-ui-parts/conditional-render": "workspace:*"
+    "@atls-ui-parts/input": "workspace:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:^18.0.14"
     "@types/styled-system": "npm:^5.1.15"
@@ -1333,11 +1334,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-proto/layout@workspace:0.0.7, @atls-ui-proto/layout@workspace:ui-proto/layout":
+"@atls-ui-proto/layout@workspace:*, @atls-ui-proto/layout@workspace:ui-proto/layout":
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/layout@workspace:ui-proto/layout"
   dependencies:
-    "@atls-ui-parts/layout": "workspace:0.0.7"
+    "@atls-ui-parts/layout": "workspace:*"
   languageName: unknown
   linkType: soft
 
@@ -1345,8 +1346,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/link@workspace:ui-proto/link"
   dependencies:
-    "@atls-ui-parts/link": "workspace:0.0.11"
-    "@atls-ui-proto/text": "workspace:0.0.11"
+    "@atls-ui-parts/link": "workspace:*"
+    "@atls-ui-proto/text": "workspace:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:^18.0.14"
     react: "npm:^18.2.0"
@@ -1357,7 +1358,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/modal@workspace:ui-proto/modal"
   dependencies:
-    "@atls-ui-parts/portal": "workspace:0.0.5"
+    "@atls-ui-parts/portal": "workspace:*"
     "@emotion/css": "npm:^11.9.0"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:^18.0.14"
@@ -1397,8 +1398,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/placeholder@workspace:ui-proto/placeholder"
   dependencies:
-    "@atls-ui-proto/layout": "workspace:0.0.7"
-    "@atls-ui-proto/text": "workspace:0.0.11"
+    "@atls-ui-proto/layout": "workspace:*"
+    "@atls-ui-proto/text": "workspace:*"
     "@emotion/styled": "npm:^11.9.3"
     "@types/react": "npm:^18.0.14"
     react: "npm:^18.2.0"
@@ -1412,9 +1413,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/popover@workspace:ui-proto/popover"
   dependencies:
-    "@atls-ui-parts/condition": "workspace:0.0.6"
-    "@atls-ui-parts/layout": "workspace:0.0.7"
-    "@atls-ui-parts/tooltip": "workspace:0.0.9"
+    "@atls-ui-parts/condition": "workspace:*"
+    "@atls-ui-parts/layout": "workspace:*"
+    "@atls-ui-parts/tooltip": "workspace:*"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@types/react": "npm:18.2.20"
@@ -1438,7 +1439,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/progress@workspace:ui-proto/progress"
   dependencies:
-    "@atls-ui-parts/progress": "workspace:0.0.18"
+    "@atls-ui-parts/progress": "workspace:*"
     "@emotion/styled": "npm:11.9.3"
     "@types/react": "npm:18.2.21"
     "@types/styled-system": "npm:5.1.17"
@@ -1457,10 +1458,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/select@workspace:ui-proto/select"
   dependencies:
-    "@atls-ui-parts/layout": "workspace:0.0.7"
-    "@atls-ui-parts/select": "workspace:0.0.13"
-    "@atls-ui-parts/text": "workspace:0.0.11"
-    "@atls-ui-proto/button": "workspace:0.0.14"
+    "@atls-ui-parts/layout": "workspace:*"
+    "@atls-ui-parts/select": "workspace:*"
+    "@atls-ui-parts/text": "workspace:*"
+    "@atls-ui-proto/button": "workspace:*"
     "@emotion/css": "npm:11.9.0"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
@@ -1486,11 +1487,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/swiper@workspace:ui-proto/swiper"
   dependencies:
-    "@atls-ui-parts/swiper": "workspace:0.0.4"
-    "@types/react": "npm:^18.0.14"
-    react: "npm:^18.2.0"
+    "@atls-ui-parts/swiper": "workspace:*"
+    "@types/react": "npm:18.0.14"
+    react: "npm:18.2.0"
   peerDependencies:
-    react: ^18.2.0
+    react: 18.2.0
   languageName: unknown
   linkType: soft
 
@@ -1498,7 +1499,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/switch@workspace:ui-proto/switch"
   dependencies:
-    "@atls-ui-parts/switch": "workspace:0.0.7"
+    "@atls-ui-parts/switch": "workspace:*"
     "@emotion/css": "npm:11.9.0"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
@@ -1522,17 +1523,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-proto/text@workspace:0.0.11, @atls-ui-proto/text@workspace:ui-proto/text":
+"@atls-ui-proto/text@workspace:*, @atls-ui-proto/text@workspace:ui-proto/text":
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/text@workspace:ui-proto/text"
   dependencies:
-    "@atls-ui-parts/text": "workspace:0.0.11"
-    "@types/react": "npm:^18.0.14"
-    react: "npm:^18.2.0"
+    "@atls-ui-parts/text": "workspace:*"
+    "@types/react": "npm:18.0.14"
+    react: "npm:18.2.0"
   languageName: unknown
   linkType: soft
 
-"@atls-ui-proto/theme@workspace:0.0.13, @atls-ui-proto/theme@workspace:ui-proto/theme":
+"@atls-ui-proto/theme@workspace:*, @atls-ui-proto/theme@workspace:ui-proto/theme":
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/theme@workspace:ui-proto/theme"
   dependencies:
@@ -1552,8 +1553,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/tooltip@workspace:ui-proto/tooltip"
   dependencies:
-    "@atls-ui-parts/layout": "workspace:0.0.7"
-    "@atls-ui-parts/tooltip": "workspace:0.0.9"
+    "@atls-ui-parts/layout": "workspace:*"
+    "@atls-ui-parts/tooltip": "workspace:*"
     "@emotion/react": "npm:11.9.3"
     "@emotion/styled": "npm:11.9.3"
     "@types/react": "npm:18.2.20"
@@ -1574,7 +1575,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/upload@workspace:ui-proto/upload"
   dependencies:
-    "@atls-ui-parts/upload": "workspace:0.0.7"
+    "@atls-ui-parts/upload": "workspace:*"
     "@emotion/styled": "npm:^11.8.1"
     "@types/react": "npm:^18.0.12"
     "@types/styled-system": "npm:^5.1.15"
@@ -1593,7 +1594,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui/design@workspace:ui/design"
   dependencies:
-    "@atls-ui-parts/button": "workspace:0.0.12"
+    "@atls-ui-parts/button": "workspace:*"
     "@babel/core": "npm:^7.18.5"
     "@emotion/babel-plugin": "npm:^11.9.2"
     "@emotion/css": "npm:11.9.0"
@@ -1630,6 +1631,8 @@ __metadata:
   resolution: "@atls-utils/use-hover@workspace:utils/use-hover"
   dependencies:
     react-laag: "npm:2.0.5"
+  peerDependencies:
+    react: 18.2.0
   languageName: unknown
   linkType: soft
 
@@ -1640,6 +1643,8 @@ __metadata:
     "@types/react": "npm:18.2.20"
     react: "npm:18.2.0"
     react-laag: "npm:2.0.5"
+  peerDependencies:
+    react: 18.2.0
   languageName: unknown
   linkType: soft
 
@@ -1757,7 +1762,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/storybook-google-fonts@workspace:0.0.0, @atls/storybook-google-fonts@workspace:storybook/google-fonts":
+"@atls/storybook-google-fonts@workspace:*, @atls/storybook-google-fonts@workspace:storybook/google-fonts":
   version: 0.0.0-use.local
   resolution: "@atls/storybook-google-fonts@workspace:storybook/google-fonts"
   dependencies:
@@ -5156,16 +5161,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/react@npm:^1.6.22":
-  version: 1.6.22
-  resolution: "@mdx-js/react@npm:1.6.22"
-  peerDependencies:
-    react: ^16.13.1 || ^17.0.0
-  checksum: 97aba18d5a0a95630520ae5a0f8b09f0b37503889f8992234f14014d695c5496ca4615df7f2ed14a5b6ed973305e860efd290352ad75095c33c96a104ed94a64
-  languageName: node
-  linkType: hard
-
-"@mdx-js/react@npm:^2.3.0":
+"@mdx-js/react@npm:2.3.0, @mdx-js/react@npm:^2.3.0":
   version: 2.3.0
   resolution: "@mdx-js/react@npm:2.3.0"
   dependencies:
@@ -5174,6 +5170,15 @@ __metadata:
   peerDependencies:
     react: ">=16"
   checksum: c72aef2fbddf66a8e627dee8bf90cb1475cedb060db28519978d6bb847b8a9c35fb3e5ef86e64d0df25762798ab5d96173ab63caf1731045829ed9e9e6800dc2
+  languageName: node
+  linkType: hard
+
+"@mdx-js/react@npm:^1.6.22":
+  version: 1.6.22
+  resolution: "@mdx-js/react@npm:1.6.22"
+  peerDependencies:
+    react: ^16.13.1 || ^17.0.0
+  checksum: 97aba18d5a0a95630520ae5a0f8b09f0b37503889f8992234f14014d695c5496ca4615df7f2ed14a5b6ed973305e860efd290352ad75095c33c96a104ed94a64
   languageName: node
   linkType: hard
 
@@ -6359,7 +6364,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/components@npm:6.5.9, @storybook/components@npm:^6.5.9":
+"@storybook/components@npm:6.5.9":
   version: 6.5.9
   resolution: "@storybook/components@npm:6.5.9"
   dependencies:
@@ -8081,7 +8086,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mdx-js__react@npm:^1.5.5":
+"@types/mdx-js__react@npm:1.5.5, @types/mdx-js__react@npm:^1.5.5":
   version: 1.5.5
   resolution: "@types/mdx-js__react@npm:1.5.5"
   dependencies:

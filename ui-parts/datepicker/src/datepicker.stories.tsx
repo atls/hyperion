@@ -16,8 +16,8 @@ const CustomInput = forwardRef(({ value, onClick, customValue }, ref) => (
 ))
 
 export const Datepicker = (props) => {
-  const [startDate, setStartDate] = useState(new Date('2021/06/07'))
   const [endDate, setEndDate] = useState(new Date('2021/06/17'))
+  const [startDate, setStartDate] = useState(new Date('2021/06/07'))
 
   const handleDateChange = (date) => {
     if (date.getTime() > endDate.getTime()) {
@@ -35,8 +35,8 @@ export const Datepicker = (props) => {
   return (
     <DatepickerComponent
       isClearable
-      strictParsing
       dateFormat='dd.MM.yy'
+      strictParsing
       startDate={startDate}
       endDate={endDate}
       selected={startDate}

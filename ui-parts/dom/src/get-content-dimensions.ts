@@ -21,7 +21,7 @@ export const getContentDimensions = (element: HTMLElement): ContentDimensions =>
     convertPixelToValue(style.borderBottomWidth)
 
   return {
-    width: element.offsetWidth - offsetWidth,
     height: element.offsetHeight - offsetHeight,
+    width: element.offsetWidth - offsetWidth,
   }
 }

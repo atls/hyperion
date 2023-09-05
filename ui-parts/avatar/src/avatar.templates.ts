@@ -40,8 +40,8 @@ ${buildProps({
 
 const appearancePrimaryStyles = createAppearanceStyles({
 ${buildProps({
-  backgroundColor,
   borderColor,
+  backgroundColor,
 })}
 })
 

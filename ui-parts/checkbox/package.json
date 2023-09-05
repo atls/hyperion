@@ -12,12 +12,12 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/styles": "workspace:0.0.4"
+    "@atls-ui-parts/styles": "workspace:*"
   },
   "devDependencies": {
-    "@atls-ui-parts/conditional-render": "workspace:0.0.4",
-    "@atls-ui-parts/hidden-input": "workspace:0.0.6",
-    "@atls/storybook-google-fonts": "workspace:0.0.0",
+    "@atls-ui-parts/conditional-render": "workspace:*",
+    "@atls-ui-parts/hidden-input": "workspace:*",
+    "@atls/storybook-google-fonts": "workspace:*",
     "@emotion/styled": "11.9.3",
     "@types/jest": "29.5.4",
     "@types/react": "18.2.21",

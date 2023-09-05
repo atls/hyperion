@@ -11,8 +11,8 @@ import { TextProps }  from './text.interfaces'
 const Text = styled.span<TextProps>(
   system({
     wordBreak: true,
-    whiteSpace: true,
     textTransform: true,
+    whiteSpace: true,
     textOverflow: true,
     cursor: true,
   }),
@@ -23,8 +23,8 @@ const Text = styled.span<TextProps>(
 )
 
 Text.defaultProps = {
-  fontFamily: 'primary',
   fontWeight: 'normal',
+  fontFamily: 'primary',
   fontSize: 'normal',
   color: 'text.primary',
   lineHeight: 'normal',

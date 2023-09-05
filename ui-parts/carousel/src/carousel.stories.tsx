@@ -25,9 +25,9 @@ export default { title: 'Components/Carousel', parameters: { layout: 'fullscreen
 export const Carousel = ({
   slidesPerView,
   loop,
+  pagination,
   direction,
   navigation,
-  pagination,
   centered,
   spaceBetween,
   size,
@@ -39,13 +39,13 @@ export const Carousel = ({
   borderWidth,
   activeBorderWidth,
   borderRadius,
-  backgroundColor,
   borderColor,
+  backgroundColor,
   activeBackgroundColor,
   activeBorderColor,
 }) => {
-  const containerRef = useRef(null)
   const wrapperRef = useRef(null)
+  const containerRef = useRef(null)
 
   const Slide = useMemo(() => styled.div(createSlideBaseStyles()), [])
 

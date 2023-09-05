@@ -57,8 +57,8 @@ const CheckboxWithoutRef = (
   return (
     <Container labelPosition={labelPosition} onClick={() => onCheck(!active)} {...props}>
       <HiddenInput
-        type='checkbox'
         checked={active}
+        type='checkbox'
         onChange={(event) => onCheck(event.currentTarget.checked)}
       />
       <Box checked={active} {...props}>

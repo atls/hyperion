@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-generators/button",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "bin": {
@@ -15,7 +15,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-generators/utils": "workspace:0.0.5",
+    "@atls-ui-generators/utils": "workspace:*",
     "@atls/config-prettier": "^0.0.5",
     "@atls/prettier-plugin": "^0.0.7",
     "@babel/standalone": "^7.19.5",
@@ -24,7 +24,7 @@
     "prettier": "^2.5.1"
   },
   "devDependencies": {
-    "@atls-ui-parts/button": "workspace:0.0.12",
+    "@atls-ui-parts/button": "workspace:*",
     "@types/babel__standalone": "^7",
     "@types/prettier": "^2",
     "styled-tools": "^1.7.2"

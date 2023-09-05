@@ -25,8 +25,8 @@ const Popover: FC<PropsWithChildren<PopoverProps>> = ({ title, content, children
 }
 
 Popover.defaultProps = {
-  triggerOffset: 15,
   animate: true,
+  triggerOffset: 15,
   showArrow: true,
 }
 
