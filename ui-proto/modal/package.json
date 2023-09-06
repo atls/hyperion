@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/portal": "workspace:0.0.5"
+    "@atls-ui-parts/portal": "workspace:*"
   },
   "devDependencies": {
     "@emotion/css": "11.9.0",

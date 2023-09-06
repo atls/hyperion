@@ -9,9 +9,7 @@ import { useParallax }  from '../context'
 const ParallaxScreenContent = ({ children }: any) => {
   const [, height] = useParallax()
 
-  if (!height) {
-    return null
-  }
+  if (!height) return null
 
   return Children.map(children, (child) => cloneElement(child, { height }))
 }

@@ -12,8 +12,8 @@ export const Checkbox = (props) => {
 }
 
 Checkbox.args = {
-  variant: 'primary',
   size: 'normal',
+  variant: 'primary',
   children: 'Label',
 }
 

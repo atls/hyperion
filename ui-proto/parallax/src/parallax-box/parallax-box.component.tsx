@@ -26,8 +26,8 @@ const GetTransformDisplay = (display) =>
 export const ParallaxBox: FC<ParallaxBoxProps> = ({
   children,
   inputRange,
-  animations = {},
   pageNumber = 0,
+  animations = {},
   ease = 'easeInOut',
   heightMultiplier = 1,
   ...props

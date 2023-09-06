@@ -22,8 +22,8 @@ const CardComponent = ({ children, container, backdrop = false, ghost = false })
   })
 
   const Container = styled(BaseContainer)({
-    backgroundColor: !ghost ? 'red' : 'transparent',
     borderRadius: !ghost ? 10 : 0,
+    backgroundColor: !ghost ? 'red' : 'transparent',
     height: 'min-content',
   })
 

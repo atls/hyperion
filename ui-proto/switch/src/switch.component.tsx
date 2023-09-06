@@ -30,14 +30,14 @@ const Element = styled(HandleElement)(baseHandleStyles, appearanceHandleStyles, 
 
 const Switch = ({ disabled, checked: defaultValue, onChange, size }: ToggleProps) => {
   const node = useRef<HTMLButtonElement>(null)
-  const [checked, setChecked] = useSwitch(node, defaultValue, disabled, onChange)
   const [hover, hoverProps] = useHover()
+  const [checked, setChecked] = useSwitch(node, defaultValue, disabled, onChange)
 
   return (
     <Element
       ref={node}
-      onClick={setChecked}
       checked={checked}
+      onClick={setChecked}
       size={size}
       hover={hover}
       {...hoverProps}

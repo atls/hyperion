@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/upload",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -16,7 +16,7 @@
     "react-dropzone": "14.2.3"
   },
   "devDependencies": {
-    "@atls-ui-parts/avatar": "workspace:0.0.8",
+    "@atls-ui-parts/avatar": "workspace:*",
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
     "graphql": "16.8.0",

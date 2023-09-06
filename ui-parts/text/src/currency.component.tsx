@@ -7,8 +7,8 @@ import { CurrencyProps } from './currency.interface'
 import { Text }          from './text.component'
 
 const CurrencyChildren: FC<CurrencyProps> = ({
-  amount,
   currency,
+  amount,
   locale,
   options,
   keepZeros = false,

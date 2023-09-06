@@ -12,8 +12,8 @@ const CSSFormats = {
 
 interface FontFace {
   fileName: string
-  fileExt: Extension
   src: string | object
+  fileExt: Extension
   weight: number
   style?: string
 }
@@ -26,8 +26,8 @@ interface FontFaceFunction {
 
 const fontFace: FontFaceFunction = ({ fileName, src, weight, fileExt, style = 'normal' }) => ({
   '@font-face': {
-    fontFamily: fileName,
     fontWeight: weight,
+    fontFamily: fileName,
     fontStyle: style,
     src: `local('${fileName}'),
           url('${src}') format('${CSSFormats[fileExt]}')`,

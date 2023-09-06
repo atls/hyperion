@@ -17,8 +17,8 @@ import { Wrapper }               from './wrapper.component'
 export const Carousel = ({
   children,
   direction = 'horizontal' as CarouselDirectionType,
-  slidesPerView = 1,
   spaceBetween = 30,
+  slidesPerView = 1,
   dragElastic = 0.5,
   transitionDuration = 0.5,
   swipeThreshold = 10000,
@@ -89,9 +89,9 @@ export const Carousel = ({
       </Wrapper>
       <div
         style={{
+          display: 'flex',
           position: 'absolute',
           bottom: 0,
-          display: 'flex',
           justifyContent: 'center',
           width: '100%',
         }}

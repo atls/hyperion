@@ -9,8 +9,8 @@ export default {
 export const Text = (props) => <TextComponent {...props} />
 
 Text.args = {
-  children: 'Almost before we knew it, we had left the ground.',
   fontWeight: 400,
+  children: 'Almost before we knew it, we had left the ground.',
   fontSize: 16,
   color: 'black',
 }

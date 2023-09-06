@@ -12,11 +12,11 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-proto/core": "workspace:0.1.2",
+    "@atls-ui-proto/core": "workspace:*",
     "@radix-ui/react-avatar": "1.0.3"
   },
   "devDependencies": {
-    "@atls-ui-parts/text-transform": "workspace:0.0.3",
+    "@atls-ui-parts/text-transform": "workspace:*",
     "@emotion/styled": "11.9.3",
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
