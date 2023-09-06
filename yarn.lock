@@ -865,13 +865,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/portal@workspace:ui-parts/portal"
   dependencies:
-    "@types/react": "npm:^18.0.14"
-    "@types/react-dom": "npm:^18.0.5"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
+    "@types/react": "npm:18.2.21"
+    "@types/react-dom": "npm:18.2.7"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
   peerDependencies:
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    react: 18.2.0
+    react-dom: 18.2.0
   languageName: unknown
   linkType: soft
 
@@ -956,22 +956,22 @@ __metadata:
   dependencies:
     "@atls-ui-parts/layout": "workspace:*"
     "@atls-ui-parts/switch": "workspace:*"
-    "@emotion/css": "npm:^11.9.0"
-    "@emotion/styled": "npm:^11.9.3"
-    "@fortawesome/fontawesome-svg-core": "npm:1.2.28"
-    "@fortawesome/free-solid-svg-icons": "npm:5.13.0"
-    "@fortawesome/react-fontawesome": "npm:0.1.10"
-    "@types/styled-system": "npm:^5.1.15"
-    framer-motion: "npm:6.3.11"
-    react: "npm:^18.2.0"
-    styled-system: "npm:^5.1.5"
-    styled-tools: "npm:^1.7.2"
+    "@emotion/css": "npm:11.9.0"
+    "@emotion/styled": "npm:11.9.3"
+    "@fortawesome/fontawesome-svg-core": "npm:6.4.2"
+    "@fortawesome/free-solid-svg-icons": "npm:6.4.2"
+    "@fortawesome/react-fontawesome": "npm:0.2.0"
+    "@types/styled-system": "npm:5.1.17"
+    framer-motion: "npm:10.16.1"
+    react: "npm:18.2.0"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
   peerDependencies:
-    "@emotion/styled": 11.3.0
-    framer-motion: 4.1.17
-    react: ^17.0.2
-    styled-system: "*"
-    styled-tools: "*"
+    "@emotion/styled": 11.9.3
+    framer-motion: 10.16.1
+    react: 18.2.0
+    styled-system: 5.1.5
+    styled-tools: 1.7.2
   languageName: unknown
   linkType: soft
 
@@ -1030,13 +1030,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/text-transform@workspace:ui-parts/text-transform"
   dependencies:
-    "@testing-library/react": "npm:^13.3.0"
-    "@types/jest": "npm:^28.1.2"
-    "@types/node": "npm:^18.0.0"
-    "@types/react": "npm:^18.0.14"
-    react: "npm:^18.2.0"
+    "@testing-library/react": "npm:14.0.0"
+    "@types/jest": "npm:29.5.4"
+    "@types/node": "npm:20.5.7"
+    "@types/react": "npm:18.2.21"
+    react: "npm:18.2.0"
   peerDependencies:
-    react: ^17.0.1
+    react: 18.2.0
   languageName: unknown
   linkType: soft
 
@@ -1086,15 +1086,15 @@ __metadata:
   resolution: "@atls-ui-parts/upload@workspace:ui-parts/upload"
   dependencies:
     "@atls-ui-parts/avatar": "workspace:*"
-    "@atls/react-upload": "npm:^0.0.3"
-    "@types/node": "npm:^18.0.0"
-    "@types/react": "npm:^18.0.14"
-    graphql: "npm:^16.5.0"
-    react: "npm:^18.2.0"
-    react-dropzone: "npm:^14.2.1"
+    "@atls/react-upload": "npm:0.0.3"
+    "@types/node": "npm:20.5.7"
+    "@types/react": "npm:18.2.21"
+    graphql: "npm:16.8.0"
+    react: "npm:18.2.0"
+    react-dropzone: "npm:14.2.3"
   peerDependencies:
-    graphql: ^16.3.0
-    react: ^17.0.1
+    graphql: 16.8.0
+    react: 18.2.0
   languageName: unknown
   linkType: soft
 
@@ -1358,19 +1358,19 @@ __metadata:
   resolution: "@atls-ui-proto/modal@workspace:ui-proto/modal"
   dependencies:
     "@atls-ui-parts/portal": "workspace:*"
-    "@emotion/css": "npm:^11.9.0"
-    "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^18.0.14"
-    "@types/react-dom": "npm:^18.0.5"
-    framer-motion: "npm:^6.3.11"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
+    "@emotion/css": "npm:11.9.0"
+    "@emotion/styled": "npm:11.9.3"
+    "@types/react": "npm:18.2.21"
+    "@types/react-dom": "npm:18.2.7"
+    framer-motion: "npm:10.16.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
   peerDependencies:
-    "@emotion/css": ^11.1.3
-    "@emotion/styled": ^11.1.5
-    framer-motion: ^4.1.17
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    "@emotion/css": 11.9.0
+    "@emotion/styled": 11.9.3
+    framer-motion: 10.16.1
+    react: 18.2.0
+    react-dom: 18.2.0
   languageName: unknown
   linkType: soft
 
@@ -1575,17 +1575,18 @@ __metadata:
   resolution: "@atls-ui-proto/upload@workspace:ui-proto/upload"
   dependencies:
     "@atls-ui-parts/upload": "workspace:*"
-    "@emotion/styled": "npm:^11.8.1"
-    "@types/react": "npm:^18.0.12"
-    "@types/styled-system": "npm:^5.1.15"
-    react: "npm:^18.1.0"
-    styled-system: "npm:^5.1.5"
-    styled-tools: "npm:^1.7.2"
+    "@emotion/styled": "npm:11.9.3"
+    "@types/react": "npm:18.2.21"
+    "@types/styled-system": "npm:5.1.17"
+    react: "npm:18.2.0"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
   peerDependencies:
-    "@emotion/styled": ^11.1.5
-    react: ^17.0.1
-    styled-system: ^5.1.5
-    styled-tools: ^1.7.2
+    "@emotion/styled": 11.9.3
+    "@types/react": 18.2.21
+    react: 18.2.0
+    styled-system: 5.1.5
+    styled-tools: 1.7.2
   languageName: unknown
   linkType: soft
 
@@ -1723,7 +1724,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/react-upload@npm:^0.0.3":
+"@atls/react-upload@npm:0.0.3, @atls/react-upload@npm:^0.0.3":
   version: 0.0.3
   resolution: "@atls/react-upload@npm:0.0.3"
   dependencies:
@@ -4619,40 +4620,40 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-common-types@npm:^0.2.28":
-  version: 0.2.36
-  resolution: "@fortawesome/fontawesome-common-types@npm:0.2.36"
-  checksum: 322c540e39a48a6613ea8c34b1ec801f7ffe44be23e26f7bb96c86b0ebff6f7769175e663d3de188921a8904aa3f16ccbdb0e3f08264f262f63748bf7660f7ce
+"@fortawesome/fontawesome-common-types@npm:6.4.2":
+  version: 6.4.2
+  resolution: "@fortawesome/fontawesome-common-types@npm:6.4.2"
+  checksum: cc472b90a9ca57b0d3e61efe62742c2489dde09770cb7a05141022b9c07ff4e0def723861bd6988f618198c7163855330e214adcbea272ce269702cfed09505c
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-svg-core@npm:1.2.28":
-  version: 1.2.28
-  resolution: "@fortawesome/fontawesome-svg-core@npm:1.2.28"
+"@fortawesome/fontawesome-svg-core@npm:6.4.2":
+  version: 6.4.2
+  resolution: "@fortawesome/fontawesome-svg-core@npm:6.4.2"
   dependencies:
-    "@fortawesome/fontawesome-common-types": "npm:^0.2.28"
-  checksum: 464f7f546d4ae1a623f5420626429ae7da3285700471994f89cb35375bda0f1108535b043c8d6e8d04f4403fd8d4c4d3544a92da0f1789810bcdf4baf6d72201
+    "@fortawesome/fontawesome-common-types": "npm:6.4.2"
+  checksum: 3e91fc5fb34720514c80a6ba8b143d2ee24b5feef6fb4ce0d87c9883c47f1cb43dde7b4e872ee5450b82f7e4c271ae611d84a7b3c219e7f76cd57d16704bc450
   languageName: node
   linkType: hard
 
-"@fortawesome/free-solid-svg-icons@npm:5.13.0":
-  version: 5.13.0
-  resolution: "@fortawesome/free-solid-svg-icons@npm:5.13.0"
+"@fortawesome/free-solid-svg-icons@npm:6.4.2":
+  version: 6.4.2
+  resolution: "@fortawesome/free-solid-svg-icons@npm:6.4.2"
   dependencies:
-    "@fortawesome/fontawesome-common-types": "npm:^0.2.28"
-  checksum: 3dfe67be1613e9525fa0656255efd4f5212be2d170d5e8c761d38a7c49361a782db9ac2caa49110728f1f23803e8ea9f40f5cfffb3ad643e498183254c241e4f
+    "@fortawesome/fontawesome-common-types": "npm:6.4.2"
+  checksum: 58593dec66255cfa8d3739f8e3e3a1821be312e2e85026b17bffd380a99ee19d7ff99fe6044c3078c7b3d1d6503ad427522b048f8be3f28067bdefafba5750e3
   languageName: node
   linkType: hard
 
-"@fortawesome/react-fontawesome@npm:0.1.10":
-  version: 0.1.10
-  resolution: "@fortawesome/react-fontawesome@npm:0.1.10"
+"@fortawesome/react-fontawesome@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@fortawesome/react-fontawesome@npm:0.2.0"
   dependencies:
-    prop-types: "npm:^15.7.2"
+    prop-types: "npm:^15.8.1"
   peerDependencies:
-    "@fortawesome/fontawesome-svg-core": ^1.2.20
-    react: 16.x
-  checksum: 21e8de9d6dd7c9c99d7e0ec1cdca5096dc8852ab6326b7e19c16fa25798dfa5512e7d7597e2fe9ded9b163a394e673f8e91b9d4fd798785a3cf58531cc4b1536
+    "@fortawesome/fontawesome-svg-core": ~1 || ~6
+    react: ">=16.3"
+  checksum: 6a07da5ce3f8d70dda73025bb792e2db81b2ab8330f8c11deeff584c4788be6583ba7f87d27ae61e15d9464a134ec5541a847db160d7fc9ebf909cdff85fbc0b
   languageName: node
   linkType: hard
 
@@ -13261,7 +13262,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:6.3.11, framer-motion@npm:^6.3.11":
+"framer-motion@npm:6.3.11":
   version: 6.3.11
   resolution: "framer-motion@npm:6.3.11"
   dependencies:
@@ -13963,6 +13964,13 @@ __metadata:
   peerDependencies:
     graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
   checksum: 35c9fbdc43bb9eddfa4223c19ce9a34370ee89c77e00e1b797d864e5eebac2551a52c42850d68a3be5fe7540d99cfa009e1f43cb79d2170f96bcce8eb7fc86cf
+  languageName: node
+  linkType: hard
+
+"graphql@npm:16.8.0":
+  version: 16.8.0
+  resolution: "graphql@npm:16.8.0"
+  checksum: 93a2e9e0ff33f05bb64c4f46595814549155e88d27e79a266e9493ded10e66afac0d15fdb44804321b2d54bf1ab25530f0817cb61f33cfb2fabd68ad4c627356
   languageName: node
   linkType: hard
 
@@ -19090,6 +19098,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-dropzone@npm:14.2.3":
+  version: 14.2.3
+  resolution: "react-dropzone@npm:14.2.3"
+  dependencies:
+    attr-accept: "npm:^2.2.2"
+    file-selector: "npm:^0.6.0"
+    prop-types: "npm:^15.8.1"
+  peerDependencies:
+    react: ">= 16.8 || 18.0.0"
+  checksum: 621cf18663c6bd9f8257083e5300b007090ac464c1e225e672e87d727e6b4ea84140bf0d81da362fa3a73ef5907210edc549b4d41d935d8e3f3d09fc877af6a9
+  languageName: node
+  linkType: hard
+
 "react-dropzone@npm:^14.2.1":
   version: 14.2.1
   resolution: "react-dropzone@npm:14.2.1"
@@ -19385,7 +19406,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:18.2.0, react@npm:^18.1.0, react@npm:^18.2.0":
+"react@npm:18.2.0, react@npm:^18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:

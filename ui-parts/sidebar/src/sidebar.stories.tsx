@@ -42,9 +42,9 @@ export const Base = () => {
     background: '#ffffff',
   })
 
-  const Expander = styled(ExpanderElement)(baseExpanderStyles)
-
   const Item = styled(ItemElement)(baseItemStyles, ifActiveItemModifier())
+
+  const Expander = styled(ExpanderElement)(baseExpanderStyles)
 
   const ItemIcon = styled(ItemIconElement)(baseItemIconStyles)
 

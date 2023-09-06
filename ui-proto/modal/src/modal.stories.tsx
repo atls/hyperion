@@ -13,10 +13,10 @@ export const Base = () => (
         style={{
           position: 'absolute',
           padding: 40,
-          background: '#ffffff',
-          top: '50%',
           left: '50%',
+          top: '50%',
           transform: 'translate(-50%, -50%)',
+          background: '#ffffff',
         }}
       >
         Content in a modal

@@ -10,12 +10,6 @@ import { cloneElement } from 'react'
 import { useEffect }    from 'react'
 import { useDropzone }  from 'react-dropzone'
 
-export interface UploadResult {
-  id: string | null
-  url: string
-  preview?: string
-}
-
 export interface SimpleUploadProps {
   children: ReactElement<any, any>
   bucket: string
@@ -23,6 +17,12 @@ export interface SimpleUploadProps {
   multiple?: boolean
   onFile: (result: UploadResult) => void
   onPreview?: (result: UploadResult) => void
+}
+
+export interface UploadResult {
+  id: string | null
+  url: string
+  preview?: string
 }
 
 export const SimpleUpload: FC<SimpleUploadProps> = ({

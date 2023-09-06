@@ -1,5 +1,8 @@
-import React from 'react'
-import { Icon, IconProps } from '@atls-ui-admin/icon'
+import React         from 'react'
+
+import { Icon }      from '@atls-ui-admin/icon'
+import { IconProps } from '@atls-ui-admin/icon'
+
 export const BagIcon = (props: IconProps) => (
   <Icon
     width='1em'
