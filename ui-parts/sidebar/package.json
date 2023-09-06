@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/sidebar",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
