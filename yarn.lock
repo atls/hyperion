@@ -736,7 +736,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/dom@npm:0.0.4, @atls-ui-parts/dom@workspace:*, @atls-ui-parts/dom@workspace:ui-parts/dom":
+"@atls-ui-parts/dom@workspace:*, @atls-ui-parts/dom@workspace:ui-parts/dom":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/dom@workspace:ui-parts/dom"
   dependencies:
@@ -1040,7 +1040,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/text@npm:0.0.11, @atls-ui-parts/text@workspace:*, @atls-ui-parts/text@workspace:ui-parts/text":
+"@atls-ui-parts/text@workspace:*, @atls-ui-parts/text@workspace:ui-parts/text":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/text@workspace:ui-parts/text"
   dependencies:
@@ -1378,8 +1378,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-proto/parallax@workspace:ui-proto/parallax"
   dependencies:
-    "@atls-ui-parts/dom": "npm:0.0.4"
-    "@atls-ui-parts/text": "npm:0.0.11"
+    "@atls-ui-parts/dom": "workspace:*"
+    "@atls-ui-parts/text": "workspace:*"
     "@emotion/styled": "npm:11.9.3"
     events: "npm:3.3.0"
     framer-motion: "npm:10.15.2"
