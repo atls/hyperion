@@ -1786,26 +1786,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@atls-ui-parts/dom", [\
-      ["npm:0.0.4", {\
-        "packageLocation": "./.yarn/cache/@atls-ui-parts-dom-npm-0.0.4-abc6da9695-692cda65a8.zip/node_modules/@atls-ui-parts/dom/",\
-        "packageDependencies": [\
-          ["@atls-ui-parts/dom", "npm:0.0.4"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:5bef123a8b55951d9942856e0b20f7f3daed787a7e7e81faa3336d2cbe257a35e48eb1f127ad2a38f543296bb0a4234ae21df4cdeac538365d6fc150e0526b06#npm:0.0.4", {\
-        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-dom-virtual-192c448873/0/cache/@atls-ui-parts-dom-npm-0.0.4-abc6da9695-692cda65a8.zip/node_modules/@atls-ui-parts/dom/",\
-        "packageDependencies": [\
-          ["@atls-ui-parts/dom", "virtual:5bef123a8b55951d9942856e0b20f7f3daed787a7e7e81faa3336d2cbe257a35e48eb1f127ad2a38f543296bb0a4234ae21df4cdeac538365d6fc150e0526b06#npm:0.0.4"],\
-          ["@types/react", null],\
-          ["react", "npm:18.2.0"]\
-        ],\
-        "packagePeers": [\
-          "@types/react",\
-          "react"\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["virtual:a70582f519baae3bb81366941a12a0f4a356e68e888b62b3ea65b70731e81979ea0efd61b12081a3f7f1e4d9011aca77f14f73c8cdf79f974caf149a137aba52#workspace:ui-parts/dom", {\
         "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-dom-virtual-f7a2cda9c1/1/ui-parts/dom/",\
         "packageDependencies": [\
@@ -3468,7 +3448,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./ui-proto/parallax/",\
         "packageDependencies": [\
           ["@atls-ui-proto/parallax", "workspace:ui-proto/parallax"],\
-          ["@atls-ui-parts/dom", "virtual:5bef123a8b55951d9942856e0b20f7f3daed787a7e7e81faa3336d2cbe257a35e48eb1f127ad2a38f543296bb0a4234ae21df4cdeac538365d6fc150e0526b06#npm:0.0.4"],\
+          ["@atls-ui-parts/dom", "virtual:a70582f519baae3bb81366941a12a0f4a356e68e888b62b3ea65b70731e81979ea0efd61b12081a3f7f1e4d9011aca77f14f73c8cdf79f974caf149a137aba52#workspace:ui-parts/dom"],\
           ["@atls-ui-parts/text", "virtual:5bef123a8b55951d9942856e0b20f7f3daed787a7e7e81faa3336d2cbe257a35e48eb1f127ad2a38f543296bb0a4234ae21df4cdeac538365d6fc150e0526b06#workspace:ui-parts/text"],\
           ["@emotion/styled", "virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#npm:11.9.3"],\
           ["events", "npm:3.3.0"],\
