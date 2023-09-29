@@ -32,7 +32,7 @@
     "webpack-virtual-modules": "^0.4.2"
   },
   "devDependencies": {
-    "@atls/code-service": "^0.0.21",
+    "@atls/code-service": "^0.0.23",
     "@atls/config-jest": "^0.0.6",
     "@atls/schematics": "^0.0.16",
     "@jest/core": "^28.1.1",

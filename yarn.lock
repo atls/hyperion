@@ -1648,9 +1648,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls/code-service@npm:^0.0.21":
-  version: 0.0.21
-  resolution: "@atls/code-service@npm:0.0.21"
+"@atls/code-service@npm:^0.0.23":
+  version: 0.0.23
+  resolution: "@atls/code-service@npm:0.0.23"
   dependencies:
     "@atls/config-typescript": "npm:0.0.2"
     "@atls/webpack-proto-imports-loader": "npm:0.0.10"
@@ -1665,7 +1665,7 @@ __metadata:
     typescript: "npm:^4.6.2"
     webpack: "npm:^5.73.0"
     webpack-chain: "npm:^6.5.1"
-  checksum: c7d0397b4255a72347d38ade6319d87afb7f1924e5686ca7a1d09e234549b1bc6504ac399a0c17bd0f349cdd10e5c5e97af84e69abb795e0b1c940889a307d2d
+  checksum: 9cae27e3c0d5345ef83a484f714b29acc7a38b3fd79bbc3d59b6f1e25b9d97d492869791677cd34037ef15a8f0124a9df98c7a99ed393ddd6f89ab51581d7a9a
   languageName: node
   linkType: hard
 
@@ -14494,7 +14494,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hyperion@workspace:."
   dependencies:
-    "@atls/code-service": "npm:^0.0.21"
+    "@atls/code-service": "npm:^0.0.23"
     "@atls/config-jest": "npm:^0.0.6"
     "@atls/schematics": "npm:^0.0.16"
     "@jest/core": "npm:^28.1.1"
