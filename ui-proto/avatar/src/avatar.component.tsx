@@ -1,16 +1,15 @@
-import { Root }   from '@radix-ui/react-avatar'
-
 import { styled } from '@atls-ui-proto/core'
 import { theme }  from '@atls-ui-proto/core'
+import { Root }   from '@radix-ui/react-avatar'
 
 export const Avatar = styled(Root, {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  overflow: 'hidden',
   verticalAlign: 'middle',
-  userSelect: 'none',
+  overflow: 'hidden',
   boxSizing: 'border-box',
+  userSelect: 'none',
   backgroundColor: theme.colors.black,
 
   variants: {
