@@ -35,6 +35,9 @@ const command = new Command()
         'utf-8'
       )
       const { code } = transform(replacementsFile, { presets: ['env'] })
+
+      if (!code) throw Error('Could not read the file')
+
       // eslint-disable-next-line no-eval
       replacements = eval(code)
     }

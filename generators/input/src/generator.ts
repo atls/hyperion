@@ -17,6 +17,8 @@ const command = new Command()
     const colorsFile = readFileSync(join(process.cwd(), options.theme)).toString('utf-8')
     const { code } = transform(colorsFile, { presets: ['env'] })
 
+    if (!code) throw Error('Could not read the file')
+
     // eslint-disable-next-line no-eval
     const colors = eval(code)
 
