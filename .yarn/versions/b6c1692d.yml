@@ -1,0 +1,5 @@
+releases:
+  "@atls-ui-generators/button": patch
+  "@atls-ui-generators/icons": patch
+  "@atls-ui-generators/input": patch
+  "@atls-ui-generators/utils": patch
