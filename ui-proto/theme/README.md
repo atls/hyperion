@@ -2,23 +2,24 @@
 
 ## `ThemeProvider` - единая база стилей для всех проектов
 
-```typescript jsx
-import { ThemeProvider as ProtoThemeProvider } from '@atls-ui-proto/theme'
-import { GlobalStyles }                        from './global.styles' // локальные cтили под проект
+```tsx
+import { ThemeProvider as ProtoThemeProvider }   from '@atls-ui-proto/theme'
+import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
+import { GlobalStyles }                          from './global.styles' // локальные cтили подпроект
 
 export const ThemeProvider = ({ children }) => (
   <>
     <GlobalStyles/>
-    <EmotionThemeProvider theme={theme}>
-      <ProtoThemeProvider children={children}/>
-    </EmotionThemeProvider>
+    <ProtoThemeProvider theme={theme}>
+      <EmotionThemeProvider children={children}/>
+    </ProtoThemeProvider>
   </>
 )
 ```
 
 ## Self-host шрифты
 
-В theme проекта добавить файл fonts.d.ts
+В _theme_ проекта и во всех _энтрипоинтах_ добавить файл fonts.d.ts
 
 ```ts
 declare module '*.ttf'
