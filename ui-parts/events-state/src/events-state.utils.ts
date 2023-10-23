@@ -4,8 +4,8 @@ export const mergeState = (prev: EventsState, event: string): EventsState => {
   if (event === 'focus') {
     return {
       ...prev,
-      focus: true,
       blur: false,
+      focus: true,
     }
   }
 

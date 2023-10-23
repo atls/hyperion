@@ -66,7 +66,7 @@ s = () => (
           font-family: 'Roboto-Regular';
           src: local('Roboto-Regular') url(${robotoRegular}) format('truetype');
         }
-        
+
         @font-face {
           font-family: 'Roboto-Bold';
           src: local('Roboto-Bold') url(${robotoBold}) format('truetype');
