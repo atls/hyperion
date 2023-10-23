@@ -1,6 +1,7 @@
+import { Root }   from '@radix-ui/react-avatar'
+
 import { styled } from '@atls-ui-proto/core'
 import { theme }  from '@atls-ui-proto/core'
-import { Root }   from '@radix-ui/react-avatar'
 
 export const Avatar = styled(Root, {
   display: 'flex',

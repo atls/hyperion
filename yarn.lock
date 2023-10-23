@@ -751,8 +751,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/events-state@workspace:ui-parts/events-state"
   dependencies:
-    "@types/react": "npm:^18.0.14"
-    react: "npm:^18.2.0"
+    "@types/react": "npm:18.2.31"
+    react: "npm:18.2.0"
   peerDependencies:
     react: ^17.0.1
   languageName: unknown
@@ -762,11 +762,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/hidden-input@workspace:ui-parts/hidden-input"
   dependencies:
-    "@emotion/styled": "npm:^11.9.3"
-    "@testing-library/react": "npm:^13.3.0"
-    "@types/jest": "npm:^28.1.2"
-    "@types/react": "npm:^18.0.14"
-    react: "npm:^18.2.0"
+    "@emotion/styled": "npm:11.9.3"
+    "@testing-library/react": "npm:14.0.0"
+    "@types/jest": "npm:29.5.6"
+    "@types/react": "npm:18.2.31"
+    react: "npm:18.2.0"
   peerDependencies:
     "@emotion/styled": ^11.1.5
     react: ^17.0.1
@@ -8080,6 +8080,16 @@ __metadata:
     expect: "npm:^29.0.0"
     pretty-format: "npm:^29.0.0"
   checksum: 851bee2d7523ba7bed3f82f391cde16aaab391eb468ec97c644d05e92ddee5ad59a1b8cc127b6430f78aad78088cd77b97da473a9c77bf87617e190a8ccd9719
+  languageName: node
+  linkType: hard
+
+"@types/jest@npm:29.5.6":
+  version: 29.5.6
+  resolution: "@types/jest@npm:29.5.6"
+  dependencies:
+    expect: "npm:^29.0.0"
+    pretty-format: "npm:^29.0.0"
+  checksum: 49f2ea07639d8be3f047b738b68c56452eb6d6d71109cbba4fb12c7c5c8db731fc42340c1e70dffbd666236581e35b6b4423fbd9956759700824d0465aa980ae
   languageName: node
   linkType: hard
 

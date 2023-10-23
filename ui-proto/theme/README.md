@@ -3,15 +3,14 @@
 ## `ThemeProvider` - единая база стилей для всех проектов
 
 ```tsx
-import { ThemeProvider as ProtoThemeProvider }   from '@atls-ui-proto/theme'
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
-import { GlobalStyles }                          from './global.styles' // локальные cтили подпроект
-
+import { ThemeProvider as ProtoThemeProvider }   from '@atls-ui-proto/theme'
+import { GlobalStyles }                          from './global.styles'  локальные cтили подпроект
 export const ThemeProvider = ({ children }) => (
   <>
-    <GlobalStyles/>
+    <GlobalStyles />
     <ProtoThemeProvider theme={theme}>
-      <EmotionThemeProvider children={children}/>
+      <EmotionThemeProvider children={children} />
     </ProtoThemeProvider>
   </>
 )
@@ -46,8 +45,8 @@ declare module '*.otf'
 ```tsx
 fonts / index.ts
 
-import robotoRegular from './Roboto/Roboto-Regular.ttf'
 import robotoBold    from './Roboto/Roboto-Bold.ttf'
+import robotoRegular from './Roboto/Roboto-Regular.ttf'
 
 export { robotoRegular, robotoBold }
 ```
@@ -55,11 +54,14 @@ export { robotoRegular, robotoBold }
 Добавить в `GlobalStyles`:
 
 ```typescript jsx
-import { robotoRegular } from './fonts'     // импортированные шрифты
-import { robotoBold }    from './fonts'     // импортированные шрифты
+import { robotoRegular } from './fonts' // импортированные шрифты
+import { robotoBold }
+import { robotoBold }    from './fonts'
 
-export const GlobalStyles = () => (
-  <Global styles={css`
+export const GlobalStyle
+s = () => (
+  <Global
+    styles={css`
         @font-face {
           font-family: 'Roboto-Regular';
           src: local('Roboto-Regular') url(${robotoRegular}) format('truetype');
@@ -110,8 +112,8 @@ module.exports = {
       test: /\.(woff|woff2|eot|ttf|otf)$/i,
       type: 'asset/resource',
       generator: {
-        filename: 'static/media/fonts/[name][ext]'
-      }
+        filename: 'static/media/fonts/[name][ext]',
+      },
     })
 
     return config

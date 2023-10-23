@@ -1,6 +1,7 @@
-import { Autocomplete } from '@atls-ui-parts/autocomplete'
 import React            from 'react'
 import { useState }     from 'react'
+
+import { Autocomplete } from '@atls-ui-parts/autocomplete'
 
 export default {
   title: 'Components/Autocomplete',
@@ -13,7 +14,7 @@ export const Base = () => {
 
   return (
     <div>
-      <Autocomplete options={options} value={value} onChange={setValue}/>
+      <Autocomplete options={options} value={value} onChange={setValue} />
     </div>
   )
 }
