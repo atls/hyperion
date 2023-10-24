@@ -12,11 +12,11 @@
     "postpack": "rm -rf dist"
   },
   "devDependencies": {
-    "@types/react": "^18.0.14",
-    "react": "^18.2.0"
+    "@types/react": "18.2.31",
+    "react": "18.2.0"
   },
   "peerDependencies": {
-    "react": "^17.0.1"
+    "react": "18.2.0"
   },
   "publishConfig": {
     "access": "public",
