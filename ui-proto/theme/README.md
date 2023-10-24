@@ -5,7 +5,7 @@
 ```tsx
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
 import { ThemeProvider as ProtoThemeProvider }   from '@atls-ui-proto/theme'
-import { GlobalStyles }                          from './global.styles' // локальные cтили подпроект
+import { GlobalStyles }                          from './global.styles'
 export const ThemeProvider = ({ children }) => (
   <>
     <GlobalStyles />
