@@ -5,7 +5,7 @@
 ```tsx
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
 import { ThemeProvider as ProtoThemeProvider }   from '@atls-ui-proto/theme'
-import { GlobalStyles }                          from './global.styles'  локальные cтили подпроект
+import { GlobalStyles }                          from './global.styles' // локальные cтили подпроект
 export const ThemeProvider = ({ children }) => (
   <>
     <GlobalStyles />
@@ -54,7 +54,7 @@ export { robotoRegular, robotoBold }
 Добавить в `GlobalStyles`:
 
 ```typescript jsx
-import { robotoRegular } from './fonts' // импортированные шрифты
+import { robotoRegular } from './fonts'
 import { robotoBold }
 import { robotoBold }    from './fonts'
 
