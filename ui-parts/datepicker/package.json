@@ -13,22 +13,25 @@
   },
   "dependencies": {
     "date-fns": "2.22.1",
-    "react-datepicker": "4.16.0"
+    "react-datepicker": "4.21.0"
   },
   "devDependencies": {
     "@atls-ui-proto/input": "workspace:*",
-    "@emotion/css": "11.9.3",
+    "@emotion/css": "11.9.0",
     "@emotion/styled": "11.9.3",
-    "@types/react": "18.2.21",
-    "@types/react-datepicker": "4.15.0",
+    "@types/react": "18.2.31",
+    "@types/react-datepicker": "4.19.1",
+    "@types/react-dom": "18.2.14",
     "@types/styled-system": "5.1.17",
     "react": "18.2.0",
+    "react-dom": "18.2.0",
     "styled-system": "5.1.5"
   },
   "peerDependencies": {
     "@emotion/css": "11.9.3",
     "@emotion/styled": "11.9.3",
     "react": "18.2.0",
+    "react-dom": "18.2.0",
     "styled-system": "5.1.5"
   },
   "publishConfig": {
