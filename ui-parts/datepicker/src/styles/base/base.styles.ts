@@ -1,7 +1,7 @@
 import { injectGlobal } from '@emotion/css'
 
 export const createInjectableBaseStyles = () => () =>
-    injectGlobal`
+  injectGlobal`
       .react-datepicker__navigation-icon::before, .react-datepicker__year-read-view--down-arrow,
       .react-datepicker__month-read-view--down-arrow,
       .react-datepicker__month-year-read-view--down-arrow {

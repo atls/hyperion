@@ -1,5 +1,4 @@
 export interface AppearanceStyles {
-  withBaseStyle?: boolean
   arrowColor?: string
   arrowHoverColor?: string
   cellColor?: string
@@ -19,4 +18,5 @@ export interface AppearanceStyles {
   inputActiveBorderColor?: string
   dayNameFontColor?: string
   currentMonthFontColor?: string
+  withBaseStyle?: boolean
 }

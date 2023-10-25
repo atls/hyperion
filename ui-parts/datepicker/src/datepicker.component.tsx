@@ -9,7 +9,7 @@ import { registerLocales }                 from './locales'
 import { createAndInjectDatepickerStyles } from './styles'
 
 const Datepicker: FC<DatepickerProps> = (props) => {
-  const { withBaseStyle = true } = props
+  const { withBaseStyle = true, ...restProps } = props
 
   useEffect(() => {
     registerLocales()
@@ -17,10 +17,12 @@ const Datepicker: FC<DatepickerProps> = (props) => {
   }, [])
 
   useEffect(() => {
-    withBaseStyle && createAndInjectDatepickerStyles(props)
-  }, [props])
+    if (withBaseStyle) {
+      createAndInjectDatepickerStyles(props)
+    }
+  }, [withBaseStyle, props])
 
-  return <DatepickerComponent {...props} />
+  return <DatepickerComponent {...restProps} />
 }
 
 export { Datepicker }
