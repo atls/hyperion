@@ -1,0 +1,6 @@
+releases:
+  "@atls-ui-admin/icon": patch
+  "@atls-ui-admin/icons": patch
+  "@atls-ui-admin/upload": patch
+  "@atls-ui-parts/datepicker": patch
+  "@atls-ui-proto/datepicker": patch
