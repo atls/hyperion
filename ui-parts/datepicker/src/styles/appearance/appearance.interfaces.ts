@@ -1,4 +1,5 @@
 export interface AppearanceStyles {
+  withBaseStyle?: boolean
   arrowColor?: string
   arrowHoverColor?: string
   cellColor?: string

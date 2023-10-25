@@ -9,13 +9,15 @@ import { registerLocales }                 from './locales'
 import { createAndInjectDatepickerStyles } from './styles'
 
 const Datepicker: FC<DatepickerProps> = (props) => {
+  const { withBaseStyle = true } = props
+
   useEffect(() => {
     registerLocales()
     setDefaultLocale('ru')
   }, [])
 
   useEffect(() => {
-    createAndInjectDatepickerStyles(props)
+    withBaseStyle && createAndInjectDatepickerStyles(props)
   }, [props])
 
   return <DatepickerComponent {...props} />
