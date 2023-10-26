@@ -674,7 +674,7 @@ export const createInjectableBaseStyles = () => () =>
       .react-datepicker__quarter-text:hover {
         background-color: #f0f0f0;
       }
-      //
+      
       .react-datepicker__input-container {
         position: relative;
         display: inline-block;
@@ -861,9 +861,29 @@ export const createInjectableBaseStyles = () => () =>
         width: 3rem;
         line-height: 3rem;
       }
-      .react-datepicker__current-month,
-      .react-datepicker-time__header {
+      .react-datepicker__portal .react-datepicker__current-month,
+      .react-datepicker__portal .react-datepicker-time__header {
         font-size: 1.44rem;
+      }
+
+      .react-datepicker__children-container {
+        width: 13.8rem;
+        margin: 0.4rem;
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
+        height: auto;
+      }
+
+      .react-datepicker__aria-live {
+        position: absolute;
+        clip-path: circle(0);
+        border: 0;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        width: 1px;
+        white-space: nowrap;
       }
 
       .react-datepicker__calendar-icon {
@@ -871,11 +891,11 @@ export const createInjectableBaseStyles = () => () =>
         height: 1em;
         vertical-align: -0.125em;
       }
-
+      
       @media (max-width: 400px), (max-height: 550px) {
-        .react-datepicker__day-name,
-        .react-datepicker__day,
-        .react-datepicker__time-name {
+        .react-datepicker__portal .react-datepicker__day-name,
+        .react-datepicker__portal .react-datepicker__day,
+        .react-datepicker__portal .react-datepicker__time-name {
           width: 2rem;
           line-height: 2rem;
         }
