@@ -18,4 +18,5 @@ export interface AppearanceStyles {
   inputActiveBorderColor?: string
   dayNameFontColor?: string
   currentMonthFontColor?: string
+  withBaseStyle?: boolean
 }
