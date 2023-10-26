@@ -1,0 +1,3 @@
+releases:
+  "@atls-ui-parts/datepicker": patch
+  "@atls-ui-proto/datepicker": patch
