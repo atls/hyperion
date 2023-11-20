@@ -6,5 +6,5 @@ export interface ButtonAppearanceStyles {
 }
 
 export interface ButtonAppearanceProps {
-  inverted?: boolean
+  $inverted?: boolean
 }

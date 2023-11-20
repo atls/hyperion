@@ -44,9 +44,9 @@ export const Button = ({
   borderColor,
   invertedBorderWidth,
   shape,
-  fill,
+  $fill,
   rounding,
-  inverted,
+  $inverted,
   contentAlign,
 }) => {
   useGoogleFonts(fontFamily, fontWeight)
@@ -74,10 +74,10 @@ export const Button = ({
   return (
     <div style={{ width: containerWith, display: 'flex', justifyContent: 'center' }}>
       <StoryButton
-        fill={fill}
+        $fill={$fill}
         shape={shape}
         rounding={rounding}
-        inverted={inverted}
+        $inverted={$inverted}
         contentAlign={contentAlign}
       >
         <Content divider={contentDivider}>
@@ -107,9 +107,9 @@ Button.args = {
   backgroundColor: 'blue',
   borderColor: 'blue',
   invertedBorderWidth: 1,
-  fill: false,
+  $fill: false,
   rounding: 0,
-  inverted: false,
+  $inverted: false,
   shape: 'rectangle',
   contentAlign: 'center',
 }
@@ -289,7 +289,7 @@ Button.argTypes = {
       type: 'number',
     },
   },
-  fill: {
+  $fill: {
     name: 'Во всю ширину',
     description: 'Делает кнопку во всю ширину контейнера',
     table: {
@@ -305,7 +305,7 @@ Button.argTypes = {
       subcategory: 'Форма',
     },
   },
-  inverted: {
+  $inverted: {
     name: 'Инвертированная',
     description: 'Прозрачная заливка, с обводкой и текстом одного цвета',
     table: {

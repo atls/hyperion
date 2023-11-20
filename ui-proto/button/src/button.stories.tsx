@@ -22,11 +22,11 @@ Button.args = {
   childrenPrefix: '',
   childrenSuffix: '',
   size: 'normal',
-  fill: false,
+  $fill: false,
   rounding: 0,
   variant: 'primary',
   shape: 'rectangle',
-  inverted: false,
+  $inverted: false,
 }
 
 Button.argTypes = {
@@ -81,7 +81,7 @@ Button.argTypes = {
       category: 'Форма',
     },
   },
-  fill: {
+  $fill: {
     name: 'Во всю ширину',
     description: 'Делает кнопку во всю ширину контейнера',
     table: {
@@ -117,7 +117,7 @@ Button.argTypes = {
       options: ['primary'],
     },
   },
-  inverted: {
+  $inverted: {
     name: 'Инвертированная',
     description: 'Прозрачная заливка, с обводкой и текстом одного цвета',
     table: {
