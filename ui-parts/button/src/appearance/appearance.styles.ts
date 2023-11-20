@@ -18,7 +18,7 @@ export const createColorStyles: styleFn = (
   })
 
 export const createInvertedStyles: styleFn = (color: string, borderWidth = 1) =>
-  ifProp('inverted', {
+  ifProp('$inverted', {
     backgroundColor: 'transparent',
     borderWidth,
     color,

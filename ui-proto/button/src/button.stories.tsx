@@ -26,7 +26,7 @@ Button.args = {
   rounding: 0,
   variant: 'primary',
   shape: 'rectangle',
-  inverted: false,
+  $inverted: false,
 }
 
 Button.argTypes = {
@@ -117,7 +117,7 @@ Button.argTypes = {
       options: ['primary'],
     },
   },
-  inverted: {
+  $inverted: {
     name: 'Инвертированная',
     description: 'Прозрачная заливка, с обводкой и текстом одного цвета',
     table: {

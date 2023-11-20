@@ -46,7 +46,7 @@ export const Button = ({
   shape,
   $fill,
   rounding,
-  inverted,
+  $inverted,
   contentAlign,
 }) => {
   useGoogleFonts(fontFamily, fontWeight)
@@ -77,7 +77,7 @@ export const Button = ({
         $fill={$fill}
         shape={shape}
         rounding={rounding}
-        inverted={inverted}
+        $inverted={$inverted}
         contentAlign={contentAlign}
       >
         <Content divider={contentDivider}>
@@ -109,7 +109,7 @@ Button.args = {
   invertedBorderWidth: 1,
   $fill: false,
   rounding: 0,
-  inverted: false,
+  $inverted: false,
   shape: 'rectangle',
   contentAlign: 'center',
 }
@@ -305,7 +305,7 @@ Button.argTypes = {
       subcategory: 'Форма',
     },
   },
-  inverted: {
+  $inverted: {
     name: 'Инвертированная',
     description: 'Прозрачная заливка, с обводкой и текстом одного цвета',
     table: {
