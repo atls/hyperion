@@ -44,7 +44,7 @@ export const Button = ({
   borderColor,
   invertedBorderWidth,
   shape,
-  fill,
+  $fill,
   rounding,
   inverted,
   contentAlign,
@@ -74,7 +74,7 @@ export const Button = ({
   return (
     <div style={{ width: containerWith, display: 'flex', justifyContent: 'center' }}>
       <StoryButton
-        fill={fill}
+        $fill={$fill}
         shape={shape}
         rounding={rounding}
         inverted={inverted}
@@ -107,7 +107,7 @@ Button.args = {
   backgroundColor: 'blue',
   borderColor: 'blue',
   invertedBorderWidth: 1,
-  fill: false,
+  $fill: false,
   rounding: 0,
   inverted: false,
   shape: 'rectangle',
@@ -289,7 +289,7 @@ Button.argTypes = {
       type: 'number',
     },
   },
-  fill: {
+  $fill: {
     name: 'Во всю ширину',
     description: 'Делает кнопку во всю ширину контейнера',
     table: {

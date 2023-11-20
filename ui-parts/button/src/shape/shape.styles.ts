@@ -22,7 +22,7 @@ export const createPaddingStyles: styleFn = (paddingLeft, paddingRight) => () =>
   paddingRight,
 })
 
-export const createFillStyles: styleFn = () => ifProp('fill', { width: '100%' })
+export const createFillStyles: styleFn = () => ifProp('$fill', { width: '100%' })
 
 export const createRoundingStyles: styleFn = (defaultRounding: number) =>
   ifProp(

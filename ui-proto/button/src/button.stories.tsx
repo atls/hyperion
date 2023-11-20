@@ -22,7 +22,7 @@ Button.args = {
   childrenPrefix: '',
   childrenSuffix: '',
   size: 'normal',
-  fill: false,
+  $fill: false,
   rounding: 0,
   variant: 'primary',
   shape: 'rectangle',
@@ -81,7 +81,7 @@ Button.argTypes = {
       category: 'Форма',
     },
   },
-  fill: {
+  $fill: {
     name: 'Во всю ширину',
     description: 'Делает кнопку во всю ширину контейнера',
     table: {
