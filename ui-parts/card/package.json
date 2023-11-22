@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/card",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
