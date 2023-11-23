@@ -19,11 +19,11 @@ const svgrTemplate = ({ template }, opts, { componentName, jsx }) => {
  import { useTheme } from '@emotion/react'
  import { IconProps } from '../icons.interfaces'
 
-    export const ${componentName} = (props: IconProps) => {
+    export const ${componentName} = React.memo((props: IconProps) => {
     const theme: any = useTheme()
     
     return ${jsx}
-}
+})
   `
 }
 
