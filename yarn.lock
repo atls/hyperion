@@ -450,6 +450,7 @@ __metadata:
     camelcase: "npm:6.3.0"
     commander: "npm:9.5.0"
     fs-extra-promise: "npm:1.0.1"
+    glob: "npm:8.0.3"
     glob-promise: "npm:5.0.0"
     prettier: "npm:2.8.8"
     styled-tools: "npm:1.7.2"
@@ -13775,7 +13776,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:*":
+"glob@npm:*, glob@npm:8.0.3":
   version: 8.0.3
   resolution: "glob@npm:8.0.3"
   dependencies:

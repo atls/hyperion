@@ -1075,6 +1075,7 @@ const RAW_RUNTIME_STATE =
           ["camelcase", "npm:6.3.0"],\
           ["commander", "npm:9.5.0"],\
           ["fs-extra-promise", "npm:1.0.1"],\
+          ["glob", "npm:8.0.3"],\
           ["glob-promise", "virtual:d0c77e885bef42d9872329dbb67e8e620c133c2e36ca32403a2fbabbcf79159a0ff0fdbfcdea70626b974fc5682fbba9965253f1859d6b45c7222e36551358c2#npm:5.0.0"],\
           ["prettier", "npm:2.8.8"],\
           ["styled-tools", "npm:1.7.2"]\
@@ -22622,6 +22623,9 @@ const RAW_RUNTIME_STATE =
           ["glob-promise", "virtual:d0c77e885bef42d9872329dbb67e8e620c133c2e36ca32403a2fbabbcf79159a0ff0fdbfcdea70626b974fc5682fbba9965253f1859d6b45c7222e36551358c2#npm:5.0.0"],\
           ["@types/glob", "npm:7.2.0"],\
           ["glob", "npm:8.0.3"]\
+        ],\
+        "packagePeers": [\
+          "glob"\
         ],\
         "linkType": "HARD"\
       }],\
