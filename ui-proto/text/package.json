@@ -22,5 +22,8 @@
     "access": "public",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts"
+  },
+  "peerDependencies": {
+    "react": "18.2.0"
   }
 }

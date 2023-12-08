@@ -11,8 +11,8 @@ export const Text = (props) => <TextComponent {...props} />
 Text.args = {
   fontWeight: 400,
   children: 'Almost before we knew it, we had left the ground.',
-  fontSize: 16,
   color: 'black',
+  fontSize: 16,
 }
 
 Text.argTypes = {

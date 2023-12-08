@@ -13,21 +13,25 @@
   },
   "dependencies": {
     "@atls-ui-proto/core": "workspace:*",
-    "@radix-ui/react-avatar": "1.0.3"
+    "@radix-ui/react-avatar": "1.0.3",
+    "@stitches/react": "1.2.8"
   },
   "devDependencies": {
     "@atls-ui-parts/text-transform": "workspace:*",
     "@emotion/styled": "11.9.3",
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
     "@types/styled-system": "5.1.17",
     "react": "18.2.0",
+    "react-dom": "18.2.0",
     "styled-system": "5.1.5",
     "styled-tools": "1.7.2"
   },
   "peerDependencies": {
     "@emotion/styled": "11.9.3",
     "react": "18.2.0",
+    "react-dom": "18.2.0",
     "styled-system": "5.1.5",
     "styled-tools": "1.7.2"
   },

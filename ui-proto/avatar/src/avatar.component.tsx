@@ -32,8 +32,8 @@ export const Avatar = styled(Root, {
         height: 48,
       },
       large: {
-        width: 56,
         height: 56,
+        width: 56,
       },
     },
   },
