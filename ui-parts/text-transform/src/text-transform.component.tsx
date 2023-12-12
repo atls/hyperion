@@ -23,6 +23,8 @@ export const TextTransform = ({
           return Array.isArray(args) ? result.substr(args[0], args[1]) : result.substr(args)
         case 'replace':
           return result.replace(args[0], args[1])
+        case 'hideAfter':
+          return `${result.slice(0, args)}...`
         default:
           return result
       }
