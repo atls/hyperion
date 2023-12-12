@@ -10,6 +10,6 @@ export interface BoxSizingProps {
 
 export type LayoutProps = FlexboxProps &
   StyledSystemLayoutProps &
-  SpaceProps &
   BoxSizingProps &
+  SpaceProps &
   FillProps

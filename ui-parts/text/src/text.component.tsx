@@ -17,8 +17,8 @@ const Text = styled.span<TextProps>(
     cursor: true,
   }),
   color,
-  space,
   typography,
+  space,
   layout
 )
 

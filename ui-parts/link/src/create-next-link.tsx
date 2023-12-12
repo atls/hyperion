@@ -1,7 +1,7 @@
 import React          from 'react'
 import { withRouter } from 'next/router'
 
-const createNextLink = (Link, pathProp = 'path') =>
+export const createNextLink = (Link, pathProp = 'path') =>
   withRouter(({ router, ...props }) => (
     <Link
       {...{ [pathProp]: props[pathProp] }}
@@ -15,5 +15,3 @@ const createNextLink = (Link, pathProp = 'path') =>
       {...props}
     />
   ))
-
-export { createNextLink }

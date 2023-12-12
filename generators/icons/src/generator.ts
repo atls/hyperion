@@ -25,8 +25,8 @@ const command = new Command()
       mkdirSync(genPath)
     }
 
-    assert.ok(lstatSync(genPath).isDirectory(), 'Path to save icons should point to a directory')
-    assert.ok(lstatSync(iconsPath).isDirectory(), 'Icons path should point to a directory')
+    assert.ok(lstatSync(genPath).isDirectory(), 'Path to save icons should point to a directory.')
+    assert.ok(lstatSync(iconsPath).isDirectory(), 'Icons path should point to a directory.')
 
     let replacements = {}
 

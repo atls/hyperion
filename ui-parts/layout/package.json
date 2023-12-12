@@ -12,12 +12,13 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@emotion/is-prop-valid": "1.2.1"
+    "@emotion/is-prop-valid": "1.2.1",
+    "csstype": "3.1.3"
   },
   "devDependencies": {
     "@emotion/styled": "11.9.3",
     "@types/react": "18.2.21",
-    "@types/styled-system": "5.1.17",
+    "@types/styled-system": "5.1.22",
     "react": "18.2.0",
     "styled-system": "5.1.5"
   },

@@ -4,7 +4,6 @@ import { useLayer }      from 'react-laag'
 
 export const usePopover = (placement: PlacementType, offset = 9, trigger = 'click') => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
-
   const close = () => setIsOpen(false)
 
   const { layerProps, triggerProps, renderLayer } = useLayer({
