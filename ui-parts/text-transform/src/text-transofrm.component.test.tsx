@@ -44,4 +44,10 @@ describe('TextTransform', () => {
 
     expect(getByText('w')).toBeDefined()
   })
+
+  it('hideAfter', () => {
+    const { getByText } = render(<TextTransform hideAfter={10}>long message</TextTransform>)
+
+    expect(getByText('long messa...')).toBeDefined()
+  })
 })

@@ -6,4 +6,5 @@ export interface TextTransformProps {
   lastLetter?: boolean
   replace?: [string, string]
   substr?: number | [number, number]
+  hideAfter?:number
 }
