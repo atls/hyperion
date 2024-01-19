@@ -1,4 +1,4 @@
-import { styleFn }       from 'styled-system'
+import { styleFn }        from 'styled-system'
 
 import { FillWidthProps } from './styles.interfaces'
 
