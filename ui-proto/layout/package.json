@@ -14,11 +14,6 @@
   "dependencies": {
     "@atls-ui-parts/layout": "workspace:*"
   },
-  "publishConfig": {
-    "access": "public",
-    "main": "dist/index.js",
-    "typings": "dist/index.d.ts"
-  },
   "devDependencies": {
     "@types/react": "18.0.14",
     "react": "18.2.0"
@@ -26,5 +21,10 @@
   "peerDependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
   }
 }

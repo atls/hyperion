@@ -6,5 +6,5 @@ export {
   Column,
   Layout,
   LayoutProps,
-  Row
+  Row,
 } from '@atls-ui-parts/layout'

@@ -170,7 +170,7 @@ export const Input = ({
   const attach = getAddonPosition(addonBefore, addonAfter)
 
   return (
-    <Box width={containerWidth} justifyContent='center'>
+    <Box fillHeight fillWidth justifyContent='center'>
       <AddonsContainer>
         <Addon>{addonBefore}</Addon>
         <ForwardEventsState ref={ref} events={['focus', 'blur']}>
