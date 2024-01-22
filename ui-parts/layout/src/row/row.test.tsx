@@ -6,27 +6,29 @@ import { render } from '@testing-library/react'
 
 import React      from 'react'
 
-import { Layout } from './layout.component'
+import { Row }    from './row.component'
 
-describe('Layout component', () => {
+describe('Row component', () => {
   describe('snapshots', () => {
     it('should match latest render snapshot', () => {
-      const { asFragment } = render(<Layout />)
+      const { asFragment } = render(<Row />)
       expect(asFragment()).toMatchSnapshot()
     })
   })
 
   it('applies default styles', () => {
-    const { container } = render(<Layout />)
-    const layoutElement = container.firstChild as HTMLElement
+    const { container } = render(<Row />)
+    const rowElement = container.firstChild as HTMLElement
 
-    const computedStyles = window.getComputedStyle(layoutElement)
+    const computedStyles = window.getComputedStyle(rowElement)
     expect(computedStyles.getPropertyValue('display')).toBe('flex')
+    expect(computedStyles.getPropertyValue('flex-direction')).toBe('row')
     expect(computedStyles.getPropertyValue('box-sizing')).toBe('border-box')
+    expect(computedStyles.getPropertyValue('width')).toBe('100%')
   })
 
   it('applies fill styles when fill prop is true', () => {
-    const { container } = render(<Layout fill />)
+    const { container } = render(<Row fill />)
     const boxElement = container.firstChild as HTMLElement
 
     const computedStyles = window.getComputedStyle(boxElement)
@@ -35,7 +37,7 @@ describe('Layout component', () => {
   })
 
   it('applies fullViewportHeight styles when fullViewportHeight prop is true', () => {
-    const { container } = render(<Layout fullViewportHeight />)
+    const { container } = render(<Row fullViewportHeight />)
     const boxElement = container.firstChild as HTMLElement
 
     const computedStyles = window.getComputedStyle(boxElement)
@@ -43,7 +45,7 @@ describe('Layout component', () => {
   })
 
   it('applies fullViewportWidth styles when fullViewportWidth prop is true', () => {
-    const { container } = render(<Layout fullViewportWidth />)
+    const { container } = render(<Row fullViewportWidth />)
     const boxElement = container.firstChild as HTMLElement
 
     const computedStyles = window.getComputedStyle(boxElement)
