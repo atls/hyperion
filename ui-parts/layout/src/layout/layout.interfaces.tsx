@@ -2,9 +2,9 @@ import { FlexboxProps }                           from 'styled-system'
 import { LayoutProps as StyledSystemLayoutProps } from 'styled-system'
 import { SpaceProps }                             from 'styled-system'
 
-import { FillHeightProps }                        from '../styles'
 import { FillProps }                              from '../styles'
-import { FillWidthProps }                         from '../styles'
+import { FullViewportHeightProps }                from '../styles'
+import { FullViewportWidthProps }                 from '../styles'
 
 export interface BoxSizingProps {
   boxSizing?: string
@@ -15,5 +15,5 @@ export type LayoutProps = FlexboxProps &
   BoxSizingProps &
   SpaceProps &
   FillProps &
-  FillHeightProps &
-  FillWidthProps
+  FullViewportHeightProps &
+  FullViewportWidthProps

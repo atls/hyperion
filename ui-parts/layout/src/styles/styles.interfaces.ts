@@ -2,10 +2,10 @@ export interface FillProps {
   fill?: boolean
 }
 
-export interface FillHeightProps {
-  fillHeight?: boolean
+export interface FullViewportHeightProps {
+  fullViewportHeight?: boolean
 }
 
-export interface FillWidthProps {
-  fillWidth?: boolean
+export interface FullViewportWidthProps {
+  fullViewportWidth?: boolean
 }
