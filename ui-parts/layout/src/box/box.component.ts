@@ -1,5 +1,5 @@
-import isPropValid from '@emotion/is-prop-valid'
-import styled      from '@emotion/styled'
+import isPropValid    from '@emotion/is-prop-valid'
+import styled         from '@emotion/styled'
 
 import { background } from 'styled-system'
 import { border }     from 'styled-system'
@@ -14,7 +14,9 @@ import { space }      from 'styled-system'
 import { BoxProps }   from './box.interfaces'
 import { fillStyles } from '../styles'
 
-const Box = styled('div', { shouldForwardProp: (prop) => isPropValid(prop) && !['fill'].includes(prop) })<BoxProps>(
+const Box = styled('div', {
+  shouldForwardProp: (prop) => isPropValid(prop) && !['fill'].includes(prop),
+})<BoxProps>(
   system({
     boxSizing: true,
     cursor: true,
