@@ -1,7 +1,10 @@
-import styled                       from '@emotion/styled'
+import Image                from 'next/image'
+import React                from 'react'
 
-import Image                        from 'next/image'
+import { NextImageWrapper } from './next-image.styles'
 
-import { createBaseNextImageStyles } from './next-image.styles'
-
-export const NextImage = styled(Image)(createBaseNextImageStyles())
+export const NextImage = ({ src, alt, ...props }) => (
+  <NextImageWrapper>
+    <Image src={src} alt={alt} {...props} />
+  </NextImageWrapper>
+)
