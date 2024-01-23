@@ -1,7 +1,5 @@
-import React               from 'react'
-
-import { Icon }            from '@atls-ui-admin/icon'
-import { IconProps } from '@atls-ui-admin/icon'
+import React from 'react'
+import { Icon, IconProps } from '@atls-ui-admin/icon'
 export const LoadingIcon = (props: IconProps) => (
   <Icon
     xmlns='http://www.w3.org/2000/svg'
