@@ -17,6 +17,8 @@
   },
   "devDependencies": {
     "@emotion/styled": "11.9.3",
+    "@testing-library/react": "14.0.0",
+    "@types/jest": "29.5.4",
     "@types/react": "18.2.21",
     "@types/styled-system": "5.1.22",
     "react": "18.2.0",
