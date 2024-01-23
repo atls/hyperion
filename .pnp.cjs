@@ -134,6 +134,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:ui-parts/mapbox"\
     },\
     {\
+      "name": "@atls-ui-parts/next-image",\
+      "reference": "workspace:ui-parts/next-image"\
+    },\
+    {\
       "name": "@atls-ui-parts/portal",\
       "reference": "workspace:ui-parts/portal"\
     },\
@@ -326,6 +330,7 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-parts/layout", ["virtual:0fb63da0303c928b853ee6ca0e891ea755d97edab1a9215b8a99dc96704d0fbdf57052c58d77c55fed64df8b96cc32123f70d0e306086db709a9c8efd881b8d9#workspace:ui-parts/layout", "virtual:43d6e06c0c27a021d4c15d7eafd33a855ff1785e6333f6689dd48ce11bba4ca522b8c66f8695987ad0edeac39bde87ffb47012b888094a7a47c901d4c0dba05b#workspace:ui-parts/layout", "virtual:6a5629294184c770a371d25f5e0534207a536d83e7ffdebc09c3c39f5b82cf0ef952511afed2e493ef31c6035b47fb285a149768102c37c0608137c571cf4955#workspace:ui-parts/layout", "virtual:6cb7b8e9f1c69fb854d324ecb7311c8b53f1d3dd2ae546e548e3ba83a721f1b562e9885fa940c326b4b72f39b3ee42ee67c0bbe88a999acb887b2b3ee59e262c#workspace:ui-parts/layout", "virtual:715735a4a2e8d54905169134c454af6bc069cd38753b21c330a59c9416baae469297a98652616fe195b447efe73a93ec5d519bc00280e9faea2d12c5bf015e0a#workspace:ui-parts/layout", "virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#workspace:ui-parts/layout", "virtual:937fb0364248873ae59b9853300486d03005abda92eaabc1af692cdbfe45a10bb44400f85b426164577e95380d1eb384e54a3525e8f98eff7f80d492dbab08a5#workspace:ui-parts/layout", "virtual:a15e8e386f0848c0efd1eadd9a418d80b9207ea53e0c7f932b55172b55bab6135bd431fc36ca11d76fcc0ab5326a613011578020d3e8cc4305b9b1c2946b74b4#workspace:ui-parts/layout", "virtual:c41f04c7b1d8978dfd33f7d201dd1b1edb277b80b1730156769dd92dcaed5bbc2bd7dfade7a3f0edded300933dafd8d8e5011978d5b1a462aea208c65f08401a#workspace:ui-parts/layout", "workspace:ui-parts/layout"]],\
     ["@atls-ui-parts/link", ["virtual:9df4b6121afbf3178186530d8221f13c6edd37dae07cfff1c8d82eab5c7ad2c6a836d4984d5ca98b1ff48958789f0963eb1ab0f81bceb13866053f0d4c336b43#workspace:ui-parts/link", "workspace:ui-parts/link"]],\
     ["@atls-ui-parts/mapbox", ["workspace:ui-parts/mapbox"]],\
+    ["@atls-ui-parts/next-image", ["workspace:ui-parts/next-image"]],\
     ["@atls-ui-parts/portal", ["virtual:454e6a2a20b3f7b949146f713f5c901cee89fcdc636e159ba8c98602205f8f06f88bd249b88a8d811497de630cbb5732fc9450fd16f97b60ff489807d975d67b#workspace:ui-parts/portal", "workspace:ui-parts/portal"]],\
     ["@atls-ui-parts/progress", ["virtual:1dbda4ab9af3c048167930de7be0439e27b0a8fdd9302e8c774e437c76a2e10e88042f8425b5d8a4fa4d221a4a484c92ee18d193b4abf8e31c354b841f7e43c7#workspace:ui-parts/progress", "workspace:ui-parts/progress"]],\
     ["@atls-ui-parts/scalable-content", ["virtual:0b5baded8ac224bd0ff38cc06a25fac3affcc4755076c022e4a8c5742fa22501180115d9de4962c879c4883c33012d6404926bb156270710571357dedb4448dc#workspace:ui-parts/scalable-content", "virtual:8ff8419dbee00cc0c83b7b6d32fbeb50dc75d0dd309715c87475ebf86235e9494fdb5049b2a89f489c647e2e7af97eee19274b3f214d0b70b64e9b5272baf61f#workspace:ui-parts/scalable-content", "workspace:ui-parts/scalable-content"]],\
@@ -2418,6 +2423,22 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@atls-ui-parts/mapbox", "workspace:ui-parts/mapbox"],\
           ["mapbox-gl", "npm:2.6.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/next-image", [\
+      ["workspace:ui-parts/next-image", {\
+        "packageLocation": "./ui-parts/next-image/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/next-image", "workspace:ui-parts/next-image"],\
+          ["@emotion/styled", "virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#npm:11.9.3"],\
+          ["@types/jest", "npm:29.5.4"],\
+          ["@types/react", "npm:17.0.39"],\
+          ["@types/styled-system", "npm:5.1.17"],\
+          ["next", "virtual:b2254c2d82af19fb4b66316f70568d9bb842b90577af32d06ce4041b067382e4019e46921576ca16c5e94d26ef67d71a84d5e6edc1d9dc8c1caf4ef71a29968c#npm:12.3.4"],\
+          ["react", "npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -26829,7 +26850,8 @@ const RAW_RUNTIME_STATE =
           ["react-dom", null],\
           ["sass", null],\
           ["styled-jsx", "virtual:a3f736ff19bfca705808cd3d1df81580aa741b5b002299c5576f06750b10e4bd32baeef4f10369121ab730d7532a6bb1f4cc523ee8f0ca47561b10ea795b640c#npm:5.0.7"],\
-          ["use-sync-external-store", "virtual:a3f736ff19bfca705808cd3d1df81580aa741b5b002299c5576f06750b10e4bd32baeef4f10369121ab730d7532a6bb1f4cc523ee8f0ca47561b10ea795b640c#npm:1.2.0"]\
+          ["use-sync-external-store", "virtual:a3f736ff19bfca705808cd3d1df81580aa741b5b002299c5576f06750b10e4bd32baeef4f10369121ab730d7532a6bb1f4cc523ee8f0ca47561b10ea795b640c#npm:1.2.0"],\
+          ["util", "npm:0.12.4"]\
         ],\
         "packagePeers": [\
           "@types/fibers",\
