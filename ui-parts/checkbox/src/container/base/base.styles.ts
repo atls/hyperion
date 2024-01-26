@@ -4,7 +4,7 @@ export const createContainerBaseStyles: styleFn = () => () => ({
   display: 'flex',
   position: 'relative',
   cursor: 'pointer',
-  userSelect: 'none',
   alignItems: 'center',
+  userSelect: 'none',
   outline: 'none',
 })

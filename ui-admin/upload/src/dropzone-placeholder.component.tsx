@@ -9,8 +9,8 @@ import { PlaceholderIcon }   from './placeholder-icon'
 import { PlaceholderLink }   from './placeholder-link'
 
 const Container = styled.div({
-  display: 'flex',
   flexDirection: 'column',
+  display: 'flex',
   alignItems: 'center',
 })
 

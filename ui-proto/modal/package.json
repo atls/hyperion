@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/modal",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -15,17 +15,17 @@
     "@atls-ui-parts/portal": "workspace:*"
   },
   "devDependencies": {
-    "@emotion/css": "11.9.0",
-    "@emotion/styled": "11.9.3",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.7",
+    "@emotion/css": "11.11.2",
+    "@emotion/styled": "11.11.0",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
     "framer-motion": "10.16.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "peerDependencies": {
-    "@emotion/css": "11.9.0",
-    "@emotion/styled": "11.9.3",
+    "@emotion/css": "11.11.2",
+    "@emotion/styled": "11.11.0",
     "framer-motion": "10.16.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"

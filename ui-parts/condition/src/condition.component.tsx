@@ -31,20 +31,6 @@ export const Condition: FC<ConditionProps> = ({
       )
     }
 
-    if (smoothPattern === 'in') {
-      return (
-        <motion.div
-          style={{ display: 'flex', width: '100%', height: '100%' }}
-          animate={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: smoothDuration }}
-        >
-          {children}
-        </motion.div>
-      )
-    }
-
     if (smoothPattern === 'out') {
       return (
         <AnimatePresence>
@@ -52,6 +38,22 @@ export const Condition: FC<ConditionProps> = ({
             style={{ display: 'flex', width: '100%', height: '100%' }}
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: smoothDuration }}
+          >
+            {children}
+          </motion.div>
+        </AnimatePresence>
+      )
+    }
+
+    if (smoothPattern === 'in') {
+      return (
+        <AnimatePresence>
+          <motion.div
+            style={{ display: 'flex', width: '100%', height: '100%' }}
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: smoothDuration }}
           >

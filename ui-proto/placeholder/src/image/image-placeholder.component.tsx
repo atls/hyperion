@@ -3,8 +3,8 @@ import React                     from 'react'
 import { ImagePlaceholderProps } from './image-placeholder.interfaces'
 
 export const ImagePlaceholder = ({
-  size = 80,
   color = '#A0A4B3',
+  size = 80,
   ...props
 }: ImagePlaceholderProps) => (
   <svg viewBox='0 0 80 80' fill='none' {...props} width={size} height={size}>

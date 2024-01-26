@@ -143,8 +143,8 @@ export const Checkbox = ({
 Checkbox.args = {
   children: 'Переключатель',
   type: 'checkbox',
-  labelPosition: 'end',
   shape: 'square',
+  labelPosition: 'end',
   fontColor: 'black',
   backgroundColor: 'white',
   checkedBackgroundColor: 'white',

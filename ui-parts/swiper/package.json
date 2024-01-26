@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/swiper",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "license": "BSD 3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -15,14 +15,14 @@
     "nanoid": "4.0.2"
   },
   "devDependencies": {
-    "@emotion/css": "11.9.0",
+    "@emotion/css": "11.11.2",
     "@types/jest": "28.1.2",
-    "@types/react": "18.2.18",
+    "@types/react": "18.2.48",
     "react": "18.2.0",
     "swiper": "9.4.1"
   },
   "peerDependencies": {
-    "@emotion/css": "11.9.0",
+    "@emotion/css": "11.11.2",
     "react": "18.2.0",
     "swiper": "9.4.1"
   },

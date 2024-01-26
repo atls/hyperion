@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/scalable-content",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -15,17 +15,17 @@
     "@atls-ui-parts/dom": "workspace:*"
   },
   "devDependencies": {
-    "@emotion/styled": "^11.9.3",
-    "@types/jest": "^28.1.2",
-    "@types/react": "^18.0.14",
-    "@types/styled-system": "^5.1.15",
-    "react": "^18.2.0",
-    "styled-system": "^5.1.5"
+    "@emotion/styled": "11.11.0",
+    "@types/jest": "28.1.2",
+    "@types/react": "18.2.48",
+    "@types/styled-system": "5.1.22",
+    "react": "18.2.0",
+    "styled-system": "5.1.5"
   },
   "peerDependencies": {
-    "@emotion/styled": "^11.1.5",
-    "react": "^17.0.1",
-    "styled-system": "^5.1.5"
+    "@emotion/styled": "11.11.0",
+    "react": "18.2.0",
+    "styled-system": "5.1.5"
   },
   "publishConfig": {
     "access": "public",

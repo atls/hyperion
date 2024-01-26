@@ -9,7 +9,6 @@ export default {
 
 export const Input = ({ containerWith, ...props }) => {
   const [value, setValue] = useState('Контент')
-
   return (
     <div style={{ width: containerWith, display: 'flex', justifyContent: 'center' }}>
       <InputComponent {...props} value={value} onChange={setValue} />

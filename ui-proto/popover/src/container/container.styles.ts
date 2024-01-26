@@ -3,8 +3,8 @@ import { styleFn } from 'styled-system'
 export const baseContainerStyles: styleFn = () => ({
   display: 'flex',
   flexDirection: 'column',
-  minWidth: 180,
   margin: 0,
+  minWidth: 180,
   backgroundColor: '#fff',
   borderRadius: '2px',
   boxShadow:

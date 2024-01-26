@@ -12,8 +12,8 @@ export default { title: 'Components/Swiper', parameters: { layout: 'fullscreen' 
 const Slide = ({ children }) => (
   <div
     style={{
-      height: 300,
       width: 300,
+      height: 300,
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',

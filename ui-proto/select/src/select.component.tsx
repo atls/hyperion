@@ -16,7 +16,6 @@ export const Select: FC<SelectProps> = ({ items, value, onChange, placeholder, d
       items,
       onChange,
     })
-
   return (
     <>
       <Button isSelected={!!selectedItem} disabled={disabled} {...buttonProps}>

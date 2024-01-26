@@ -4,8 +4,8 @@ import { styled } from '@atls-ui-proto/core'
 import { theme }  from '@atls-ui-proto/core'
 
 export const Avatar = styled(Root, {
-  display: 'flex',
   alignItems: 'center',
+  display: 'flex',
   justifyContent: 'center',
   verticalAlign: 'middle',
   overflow: 'hidden',

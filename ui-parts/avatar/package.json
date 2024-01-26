@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/avatar",
-  "version": "0.0.15",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -19,12 +19,12 @@
     "@atls-ui-parts/scalable-content": "workspace:*",
     "@atls-ui-parts/text-transform": "workspace:*",
     "@atls/storybook-google-fonts": "workspace:*",
-    "@emotion/styled": "11.9.3",
+    "@emotion/styled": "11.11.0",
     "@types/jest": "29.5.4",
     "@types/node": "20.5.7",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.7",
-    "@types/styled-system": "5.1.17",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "@types/styled-system": "5.1.22",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "string-to-color": "2.2.2",
@@ -32,7 +32,7 @@
     "styled-tools": "1.7.2"
   },
   "peerDependencies": {
-    "@emotion/styled": "11.9.3",
+    "@emotion/styled": "11.11.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-system": "5.1.5",

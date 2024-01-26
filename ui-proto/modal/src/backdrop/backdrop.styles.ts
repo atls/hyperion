@@ -1,8 +1,8 @@
 import { CSSObject } from '@emotion/css'
 
 export const baseBackdropStyles: CSSObject = {
-  zIndex: -1,
   position: 'fixed',
+  zIndex: -1,
   bottom: 0,
   top: 0,
   left: 0,

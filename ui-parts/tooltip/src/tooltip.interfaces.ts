@@ -14,8 +14,8 @@ type OmitOptions = 'placement' | 'onOutsideClick' | 'isOpen' | 'container' | 'tr
 export interface UseTooltipOptions extends Omit<UseLayerOptions, OmitOptions> {
   trigger?: TooltipTrigger
   mouseEnterDelay?: number
-  showArrow?: boolean
   anchor?: Placement
+  showArrow?: boolean
   mouseLeaveDelay?: number
   closeOnOutsideClick?: boolean
   animate?: boolean

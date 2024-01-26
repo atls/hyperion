@@ -13,8 +13,8 @@ import { getPathStyles }     from './utils'
 import { toArray }           from './utils'
 
 const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
-  strokeWeight = 6,
   trailWidth,
+  strokeWeight = 6,
   gapDegree,
   gapPosition = 'top',
   trailColor = '#D9D9D9',

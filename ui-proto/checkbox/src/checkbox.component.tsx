@@ -51,7 +51,6 @@ const CheckboxWithoutRef = (
     () => styled(ConditionalRender())(labelPositionStyles, labelShapeStyles, labelAppearanceStyles),
     []
   )
-
   const Container = useMemo(() => styled.div(containerBaseStyles, containerPositionStyles), [])
 
   return (

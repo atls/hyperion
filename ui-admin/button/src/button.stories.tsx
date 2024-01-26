@@ -17,8 +17,8 @@ export const Button = ({ containerWith, childrenPrefix, childrenSuffix, children
 )
 
 Button.args = {
-  containerWith: 200,
   children: 'Кнопка',
+  containerWith: 200,
   childrenPrefix: '',
   childrenSuffix: '',
   size: 'normal',

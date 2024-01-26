@@ -61,10 +61,10 @@ export const appearanceThumbStyles: styleFn = ({ theme }) => ({
   backgroundColor: theme.colors.switch.thumb,
 })
 
-export const shapeHandleStyles = switchProp(prop('size', 'normal'), {
-  normal: shapeNormalSizeHandleStyles,
-})
-
 export const shapeThumbStyles = switchProp(prop('size', 'normal'), {
   normal: shapeNormalSizeThumbStyles,
+})
+
+export const shapeHandleStyles = switchProp(prop('size', 'normal'), {
+  normal: shapeNormalSizeHandleStyles,
 })

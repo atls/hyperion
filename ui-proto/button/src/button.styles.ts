@@ -37,6 +37,7 @@ const appearancePrimaryStyles = createAppearanceStyles({
 })
 
 export const contentStyles = createContentStyles()
+
 export const baseStyles = createBaseStyles()
 
 export const shapeStyles = switchProp(prop('size', 'normal'), {
