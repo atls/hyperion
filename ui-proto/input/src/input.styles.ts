@@ -37,8 +37,8 @@ const largeNormalSizeStyles = createShapeStyles({
 
 export const baseStyles = createBaseStyles()
 export const appearanceStyles = createAppearanceStyles({
-  fontColor: 'black',
   backgroundColor: 'white',
+  fontColor: 'black',
   borderColor: '#DADEED',
 })
 

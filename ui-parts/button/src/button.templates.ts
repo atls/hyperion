@@ -34,8 +34,11 @@ export const stylesTemplate = ({
 import { prop, switchProp } from 'styled-tools'
 
 import { createBaseStyles } from '@atls-ui-parts/button'
+
 import { createShapeStyles } from '@atls-ui-parts/button'
+
 import { createContentStyles } from '@atls-ui-parts/button'
+
 import { createAppearanceStyles } from '@atls-ui-parts/button'
 
 const shapeNormalSizeStyles = createShapeStyles({

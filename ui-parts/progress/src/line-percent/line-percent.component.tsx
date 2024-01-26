@@ -5,6 +5,7 @@ import { LinePercentElementProps }    from './line-percent.interfaces'
 import { baseLinePercentStyles }      from './line-percent.styles'
 import { linePercentLinecapModifier } from './line-percent.styles'
 
+// @ts-ignore
 const LinePercent = styled(LinePercentElement)<LinePercentElementProps>(
   baseLinePercentStyles,
   linePercentLinecapModifier()

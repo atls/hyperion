@@ -5,8 +5,8 @@ export interface ButtonShapeRoundingProps {
 }
 
 export interface ButtonShapeProps extends ButtonShapeRoundingProps {
-  shape?: ButtonShapeType
   $fill?: boolean
+  shape?: ButtonShapeType
 }
 
 export interface ButtonShapeStyles {

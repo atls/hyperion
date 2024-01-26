@@ -10,8 +10,8 @@ import { TextProps }  from './text.interfaces'
 
 const Text = styled.span<TextProps>(
   system({
-    wordBreak: true,
     textTransform: true,
+    wordBreak: true,
     whiteSpace: true,
     textOverflow: true,
     cursor: true,

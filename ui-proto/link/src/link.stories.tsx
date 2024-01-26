@@ -18,12 +18,10 @@ const BaseLink = styled(Text.withComponent('a'))<{ active: boolean }>(createBase
 }))
 
 export const Link = (props) => <BaseLink {...props} />
-
 export const NextLink = (props) => {
   const NextLinkRenderer: any = createNextLink(BaseLink)
   return <NextLinkRenderer {...props} />
 }
-
 export const NextNavLink = (props) => {
   const NextNavLinkRenderer: any = createNextNavLink(BaseLink)
   return <NextNavLinkRenderer {...props} />

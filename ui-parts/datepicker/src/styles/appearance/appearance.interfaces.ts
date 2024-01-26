@@ -11,12 +11,12 @@ export interface AppearanceStyles {
   cellInRangeFontColor?: string
   cellInRangeHoverColor?: string
   cellInRangeHoverFontColor?: string
+  currentMonthFontColor?: string
   dividerColor?: string
   headerBackgroundColor?: string
   inputBackgroundColor?: string
   inputBorderColor?: string
   inputActiveBorderColor?: string
   dayNameFontColor?: string
-  currentMonthFontColor?: string
   withBaseStyle?: boolean
 }

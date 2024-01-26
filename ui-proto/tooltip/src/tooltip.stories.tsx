@@ -9,8 +9,8 @@ export default {
 }
 
 const Button = styled.div({
-  boxSizing: 'border-box',
   alignItems: 'center',
+  boxSizing: 'border-box',
   display: 'flex',
   height: 32,
   justifyContent: 'center',

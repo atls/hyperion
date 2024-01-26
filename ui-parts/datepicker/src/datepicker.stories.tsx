@@ -17,6 +17,7 @@ const CustomInput = forwardRef(({ value, onClick, customValue }, ref) => (
 
 export const Datepicker = (props) => {
   const [endDate, setEndDate] = useState(new Date('2021/06/17'))
+
   const [startDate, setStartDate] = useState(new Date('2021/06/07'))
 
   const handleDateChange = (date) => {

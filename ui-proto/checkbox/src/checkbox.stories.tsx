@@ -7,7 +7,6 @@ export default { title: 'Components/Checkbox' }
 
 export const Checkbox = (props) => {
   const [active, setActive] = useState<boolean>(false)
-
   return <CheckboxComponent active={active} onCheck={setActive} {...props} />
 }
 

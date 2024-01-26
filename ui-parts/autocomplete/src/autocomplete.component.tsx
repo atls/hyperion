@@ -19,6 +19,7 @@ import { createMenuItemsRenderer } from './factories'
 import { createMenuRenderer }      from './factories'
 
 const MenuItemsRenderer = createMenuItemsRenderer(MenuItem)
+
 const MenuRenderer = createMenuRenderer(Menu)
 
 const defaultGetOptionLabel = (option) => (option ? option.value : '')

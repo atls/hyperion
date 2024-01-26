@@ -8,8 +8,8 @@ const Row = styled(Layout)<LayoutProps>()
 Row.defaultProps = {
   display: 'flex',
   flexDirection: 'row',
-  boxSizing: 'border-box',
   width: '100%',
+  boxSizing: 'border-box',
 }
 
 export { Row }

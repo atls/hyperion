@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-proto/link",
-  "version": "0.0.16",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -16,9 +16,9 @@
     "@atls-ui-proto/text": "workspace:*"
   },
   "devDependencies": {
-    "@emotion/styled": "^11.9.3",
-    "@types/react": "^18.0.14",
-    "react": "^18.2.0"
+    "@emotion/styled": "11.11.0",
+    "@types/react": "18.2.48",
+    "react": "18.2.0"
   },
   "publishConfig": {
     "access": "public",

@@ -45,6 +45,7 @@ export const Carousel = ({
   activeBorderColor,
 }) => {
   const wrapperRef = useRef(null)
+
   const containerRef = useRef(null)
 
   const Slide = useMemo(() => styled.div(createSlideBaseStyles()), [])

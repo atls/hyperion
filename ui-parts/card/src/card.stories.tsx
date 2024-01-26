@@ -42,7 +42,7 @@ const CardComponent = ({ children, container, backdrop = false, ghost = false })
 
 const LargeContent = () => {
   const Block = ({ idx }) => (
-    <Box backgroundColor={`#${idx.toString().repeat(6)}`} width='100%' height={100}>
+    <Box width='100%' backgroundColor={`#${idx.toString().repeat(6)}`} height={100}>
       Item no{idx}
     </Box>
   )

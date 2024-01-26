@@ -9,6 +9,7 @@ import { useSwitch }         from './hooks'
 
 const Switch: FunctionComponent<SwitchProps> = ({ disabled, checked: defaultValue, onChange }) => {
   const node = useRef<HTMLButtonElement>(null)
+
   const [checked, setChecked] = useSwitch(node, defaultValue, disabled, onChange)
 
   return (

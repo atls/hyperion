@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/styles",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "files": [
@@ -12,11 +12,11 @@
     "postpack": "rm -rf dist"
   },
   "devDependencies": {
-    "@types/styled-system": "^5.1.15",
-    "styled-system": "^5.1.5"
+    "@types/styled-system": "5.1.22",
+    "styled-system": "5.1.5"
   },
   "peerDependencies": {
-    "styled-system": "^5.1.5"
+    "styled-system": "5.1.5"
   },
   "publishConfig": {
     "access": "public",

@@ -11,7 +11,6 @@ import { useThemeMode }                          from './mode'
 
 export const BaseThemeProvider = (props) => {
   const [mode] = useThemeMode()
-
   return <EmotionThemeProvider {...props} theme={() => (mode === 'dark' ? dark : light)} />
 }
 

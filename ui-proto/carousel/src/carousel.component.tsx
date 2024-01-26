@@ -27,6 +27,7 @@ export const Carousel = ({
   timeout = 3000,
 }) => {
   const containerRef = useRef(null)
+
   const wrapperRef = useRef(null)
 
   const items = Children.map(children, (child) => <Slide>{child}</Slide>)

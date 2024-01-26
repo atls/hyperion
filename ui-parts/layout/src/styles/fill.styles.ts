@@ -4,8 +4,8 @@ import { FillProps } from './styles.interfaces'
 
 const fillStyles: styleFn = ({ fill }: FillProps) =>
   fill && {
-    width: '100%',
     height: '100%',
+    width: '100%',
   }
 
 export { fillStyles }

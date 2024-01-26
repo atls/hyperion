@@ -14,8 +14,8 @@ export default {
 }
 
 const TestButton = styled.div({
-  boxSizing: 'border-box',
   display: 'flex',
+  boxSizing: 'border-box',
   alignItems: 'center',
   justifyContent: 'center',
   height: 32,

@@ -18,6 +18,7 @@ const svgrTemplate = ({ template }, opts, { componentName, jsx }) => {
 
   return typeScriptTpl.ast`
 import React from 'react'
+
 import { Icon, IconProps } from '@atls-ui-admin/icon'
 export const ${componentName.name} = (props: IconProps) => ${jsx}
 ${componentName.name}.displayName = '${componentName.name}'

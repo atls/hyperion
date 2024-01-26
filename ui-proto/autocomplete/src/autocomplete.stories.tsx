@@ -9,7 +9,6 @@ export default {
 
 export const Base = () => {
   const options = [{ value: 'Louis' }, { value: 'Markus' }, { value: 'Armstrong' }]
-
   const [value, setValue] = useState({ value: '' })
 
   return (
