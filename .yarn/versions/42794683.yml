@@ -1,0 +1,5 @@
+releases:
+  "@atls-ui-proto/theme": patch
+
+undecided:
+  - "@atls-ui-admin/icons"
