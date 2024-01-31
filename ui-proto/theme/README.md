@@ -9,8 +9,8 @@ import { GlobalStyles }                          from './global.styles'
 export const ThemeProvider = ({ children }) => (
   <>
     <GlobalStyles />
-    <ProtoThemeProvider theme={theme}>
-      <EmotionThemeProvider children={children} />
+    <ProtoThemeProvider>
+      <EmotionThemeProvider theme={theme}>{children}</EmotionThemeProvider>
     </ProtoThemeProvider>
   </>
 )
@@ -55,11 +55,9 @@ export { robotoRegular, robotoBold }
 
 ```typescript jsx
 import { robotoRegular } from './fonts'
-import { robotoBold }
 import { robotoBold }    from './fonts'
 
-export const GlobalStyle
-s = () => (
+export const GlobalStyles = () => (
   <Global
     styles={css`
         @font-face {
@@ -76,8 +74,9 @@ s = () => (
 )
 ```
 
-Тип
-для `format` [смотреть тут.](https://css-tricks.com/snippets/css/using-font-face-in-css/#aa-deepest-possible-browser-support)
+Если шрифт не применился - попробуйте убрать функцию `local()` из `@font-face` в css стилях, функция используется для проверки доступности шрифтов локально и является опциональной.
+
+Тип для `format` [смотреть тут.](https://css-tricks.com/snippets/css/using-font-face-in-css/#aa-deepest-possible-browser-support)
 
 Добавить `fonts.ts`
 
