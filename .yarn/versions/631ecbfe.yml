@@ -1,0 +1,4 @@
+releases:
+  "@atls-ui-admin/icon": patch
+  "@atls-ui-admin/icons": patch
+  "@atls-ui-admin/upload": patch
