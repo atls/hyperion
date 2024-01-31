@@ -481,6 +481,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui-generators/locales@workspace:generators/locales":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-generators/locales@workspace:generators/locales"
+  dependencies:
+    "@atls/config-prettier": "npm:0.0.5"
+    "@atls/prettier-plugin": "npm:0.0.7"
+    "@babel/standalone": "npm:7.22.20"
+    "@types/babel__standalone": "npm:7.1.6"
+    "@types/prettier": "npm:2.7.3"
+    camelcase: "npm:6.3.0"
+    commander: "npm:9.5.0"
+    prettier: "npm:2.8.8"
+  bin:
+    generate-locales: dist/generator.js
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-generators/utils@workspace:*, @atls-ui-generators/utils@workspace:generators/utils":
   version: 0.0.0-use.local
   resolution: "@atls-ui-generators/utils@workspace:generators/utils"
