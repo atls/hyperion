@@ -2749,7 +2749,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-text-virtual-d9b836c70c/1/ui-parts/text/",\
         "packageDependencies": [\
           ["@atls-ui-parts/text", "virtual:0c4b1ca99fcfa39e390d671b27db8ed34d9b69aa7f6851319fa60690964c22c7a52be58ef437342617ff2b08811d3192218e803fcc4f61de80ef4e13b0058979#workspace:ui-parts/text"],\
-          ["@emotion/styled", "virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#npm:11.11.0"],\
+          ["@emotion/react", "virtual:27f4b1e67e1b24b8d4864503dc6e300b360cefaa03bfeaeb5f92b7bdab66f96f90d7994f0bc404187dbc81cdef3bc7e5d55f638459362fa1e16558a46d5d4162#npm:11.11.3"],\
+          ["@emotion/styled", "virtual:ecc6b1bbaecda01b4876fa1e192199007fc275ac98b826098f5b047b9f5e5078bc2e874010bd031f331dc7f74a04d19db38a9dc54b7d146b32d9430495098e39#npm:11.11.0"],\
+          ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/styled-system", "npm:5.1.22"],\
@@ -2758,6 +2760,7 @@ const RAW_RUNTIME_STATE =
           ["styled-system", "npm:5.1.5"]\
         ],\
         "packagePeers": [\
+          "@types/emotion__react",\
           "@types/emotion__styled",\
           "@types/react",\
           "react"\
@@ -2768,7 +2771,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-text-virtual-6592308d35/1/ui-parts/text/",\
         "packageDependencies": [\
           ["@atls-ui-parts/text", "virtual:16ca16fbeb026f2c6936301827e5c94c7a552eb26b303dd77808853b997f7b4b4af60ee2f75e45edb4a76e99da59b22a6988d8841932561e0540b2a450b2a2c3#workspace:ui-parts/text"],\
+          ["@emotion/react", "virtual:27f4b1e67e1b24b8d4864503dc6e300b360cefaa03bfeaeb5f92b7bdab66f96f90d7994f0bc404187dbc81cdef3bc7e5d55f638459362fa1e16558a46d5d4162#npm:11.11.3"],\
           ["@emotion/styled", "virtual:ecc6b1bbaecda01b4876fa1e192199007fc275ac98b826098f5b047b9f5e5078bc2e874010bd031f331dc7f74a04d19db38a9dc54b7d146b32d9430495098e39#npm:11.11.0"],\
+          ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/styled-system", "npm:5.1.22"],\
@@ -2777,7 +2782,9 @@ const RAW_RUNTIME_STATE =
           ["styled-system", "npm:5.1.5"]\
         ],\
         "packagePeers": [\
+          "@emotion/react",\
           "@emotion/styled",\
+          "@types/emotion__react",\
           "@types/emotion__styled",\
           "@types/react",\
           "@types/styled-system",\
@@ -2790,7 +2797,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-text-virtual-ca74035adf/1/ui-parts/text/",\
         "packageDependencies": [\
           ["@atls-ui-parts/text", "virtual:5bef123a8b55951d9942856e0b20f7f3daed787a7e7e81faa3336d2cbe257a35e48eb1f127ad2a38f543296bb0a4234ae21df4cdeac538365d6fc150e0526b06#workspace:ui-parts/text"],\
+          ["@emotion/react", "virtual:27f4b1e67e1b24b8d4864503dc6e300b360cefaa03bfeaeb5f92b7bdab66f96f90d7994f0bc404187dbc81cdef3bc7e5d55f638459362fa1e16558a46d5d4162#npm:11.11.3"],\
           ["@emotion/styled", "virtual:84fec7902996807ffe9459860cec02b265a45b9530d4af930a181ff535e79e717246a38bb4611ad5edf869ca511300134198ba9fce541bdbb3e8479a17b38a87#npm:11.11.0"],\
+          ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/styled-system", "npm:5.1.22"],\
@@ -2800,6 +2809,7 @@ const RAW_RUNTIME_STATE =
         ],\
         "packagePeers": [\
           "@emotion/styled",\
+          "@types/emotion__react",\
           "@types/emotion__styled",\
           "react",\
           "styled-system"\
@@ -2810,7 +2820,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-text-virtual-0cace6354a/1/ui-parts/text/",\
         "packageDependencies": [\
           ["@atls-ui-parts/text", "virtual:b2254c2d82af19fb4b66316f70568d9bb842b90577af32d06ce4041b067382e4019e46921576ca16c5e94d26ef67d71a84d5e6edc1d9dc8c1caf4ef71a29968c#workspace:ui-parts/text"],\
+          ["@emotion/react", "virtual:27f4b1e67e1b24b8d4864503dc6e300b360cefaa03bfeaeb5f92b7bdab66f96f90d7994f0bc404187dbc81cdef3bc7e5d55f638459362fa1e16558a46d5d4162#npm:11.11.3"],\
           ["@emotion/styled", "virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#npm:11.11.0"],\
+          ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/styled-system", "npm:5.1.22"],\
@@ -2820,6 +2832,7 @@ const RAW_RUNTIME_STATE =
         ],\
         "packagePeers": [\
           "@emotion/styled",\
+          "@types/emotion__react",\
           "@types/emotion__styled",\
           "@types/react",\
           "@types/styled-system",\
@@ -2831,7 +2844,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./ui-parts/text/",\
         "packageDependencies": [\
           ["@atls-ui-parts/text", "workspace:ui-parts/text"],\
-          ["@emotion/styled", "virtual:8d719a0b3ab41aef985519ac74fa0a513aa7bee36213eb39b7cd82f90a48b0f06f4b7809e23f2bff1b0cae657f847fd7a9119b9df2f65d72dbef009384006482#npm:11.11.0"],\
+          ["@emotion/react", "virtual:27f4b1e67e1b24b8d4864503dc6e300b360cefaa03bfeaeb5f92b7bdab66f96f90d7994f0bc404187dbc81cdef3bc7e5d55f638459362fa1e16558a46d5d4162#npm:11.11.3"],\
+          ["@emotion/styled", "virtual:ecc6b1bbaecda01b4876fa1e192199007fc275ac98b826098f5b047b9f5e5078bc2e874010bd031f331dc7f74a04d19db38a9dc54b7d146b32d9430495098e39#npm:11.11.0"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/styled-system", "npm:5.1.22"],\
           ["csstype", "npm:3.1.3"],\
