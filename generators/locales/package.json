@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-generators/locales",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "typings": "dist/index.d.ts",
@@ -28,6 +28,8 @@
     "@types/prettier": "2.7.3"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
   }
 }
