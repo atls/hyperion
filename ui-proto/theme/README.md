@@ -9,8 +9,8 @@ import { GlobalStyles }                          from './global.styles'
 export const ThemeProvider = ({ children }) => (
   <>
     <GlobalStyles />
-    <ProtoThemeProvider theme={theme}>
-      <EmotionThemeProvider children={children} />
+    <ProtoThemeProvider>
+      <EmotionThemeProvider theme={theme}>{children}</EmotionThemeProvider>
     </ProtoThemeProvider>
   </>
 )
@@ -55,7 +55,6 @@ export { robotoRegular, robotoBold }
 
 ```typescript jsx
 import { robotoRegular } from './fonts'
-import { robotoBold }
 import { robotoBold }    from './fonts'
 
 export const GlobalStyle
