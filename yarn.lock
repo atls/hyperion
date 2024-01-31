@@ -1066,6 +1066,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/text@workspace:ui-parts/text"
   dependencies:
+    "@emotion/react": "npm:11.11.3"
     "@emotion/styled": "npm:11.11.0"
     "@types/react": "npm:18.2.48"
     "@types/styled-system": "npm:5.1.22"
@@ -1073,6 +1074,7 @@ __metadata:
     react: "npm:18.2.0"
     styled-system: "npm:5.1.5"
   peerDependencies:
+    "@emotion/react": 11.11.3
     "@emotion/styled": 11.11.0
     react: 18.2.0
     styled-system: 5.1.5
