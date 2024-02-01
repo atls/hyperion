@@ -11,8 +11,8 @@ import { TextProps }  from './text.interfaces'
 const Text = styled.span<TextProps>(
   system({
     textTransform: true,
-    wordBreak: true,
     whiteSpace: true,
+    wordBreak: true,
     textOverflow: true,
     cursor: true,
   }),
