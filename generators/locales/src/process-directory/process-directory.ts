@@ -15,7 +15,7 @@ export const processDirectory: ProcessDirectoryType = (
   outputLocale
 ) => {
   if (!existsSync(startPath)) {
-    console.log('No directory ', startPath)
+    console.error(new Error(`No directory ${startPath}`))
     return
   }
 
