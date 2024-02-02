@@ -26,6 +26,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:generators/input"\
     },\
     {\
+      "name": "@atls-ui-generators/locales",\
+      "reference": "workspace:generators/locales"\
+    },\
+    {\
       "name": "@atls-ui-generators/utils",\
       "reference": "workspace:generators/utils"\
     },\
@@ -306,6 +310,7 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-generators/button", ["workspace:generators/button"]],\
     ["@atls-ui-generators/icons", ["workspace:generators/icons"]],\
     ["@atls-ui-generators/input", ["workspace:generators/input"]],\
+    ["@atls-ui-generators/locales", ["workspace:generators/locales"]],\
     ["@atls-ui-generators/utils", ["workspace:generators/utils"]],\
     ["@atls-ui-parts/autocomplete", ["virtual:8381890b8511aa50e898a623e8465ca96dd655e72313751f9b1a345f18667b4568ac277502099f1ca2312635f21b6b32a24edcdf15c982ed301584a66d8eb4c6#workspace:ui-parts/autocomplete", "workspace:ui-parts/autocomplete"]],\
     ["@atls-ui-parts/avatar", ["virtual:1196f39950bf2b0a316261deeb4310a00ba305e04a5bf622f4e9e1d8df591de5ee1b8d8816cd30ff7b60de58948220af28d2cc7d3c7d56ab050903d1e8a62ce0#workspace:ui-parts/avatar", "virtual:269db25ff15e150519c32b592d49982dffad5b740f8cce135d98226664559a13ebece62873ae2592752c22f1382bc5dc1bd84e7aac7abaacacd8dc810761fc25#workspace:ui-parts/avatar", "workspace:ui-parts/avatar"]],\
@@ -1099,6 +1104,23 @@ const RAW_RUNTIME_STATE =
           ["commander", "npm:9.5.0"],\
           ["prettier", "npm:2.8.8"],\
           ["styled-tools", "npm:1.7.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@atls-ui-generators/locales", [\
+      ["workspace:generators/locales", {\
+        "packageLocation": "./generators/locales/",\
+        "packageDependencies": [\
+          ["@atls-ui-generators/locales", "workspace:generators/locales"],\
+          ["@atls/config-prettier", "npm:0.0.5"],\
+          ["@atls/prettier-plugin", "npm:0.0.7"],\
+          ["@babel/standalone", "npm:7.22.20"],\
+          ["@types/babel__standalone", "npm:7.1.6"],\
+          ["@types/prettier", "npm:2.7.3"],\
+          ["camelcase", "npm:6.3.0"],\
+          ["commander", "npm:9.5.0"],\
+          ["prettier", "npm:2.8.8"]\
         ],\
         "linkType": "SOFT"\
       }]\
