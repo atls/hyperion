@@ -1,0 +1,5 @@
+releases:
+  "@atls-ui-parts/next-image": patch
+
+undecided:
+  - "@atls-ui-admin/icons"
