@@ -1,1 +1,1 @@
-export * from './ghost-button.component'
+export * from './ghost-button.component.js'
