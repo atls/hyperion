@@ -55,3 +55,7 @@ dist/
 # Generated from tests
 
 **/unit/generated
+
+# Visual Studio Code Files
+.vscode
+.yarn/sdks
