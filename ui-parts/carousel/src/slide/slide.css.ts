@@ -1,6 +1,6 @@
-import { styleFn } from 'styled-system'
+import { style } from '@vanilla-extract/css'
 
-export const createSlideBaseStyles: styleFn = () => () => ({
+export const slideStyles = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
