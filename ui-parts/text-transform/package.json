@@ -2,7 +2,10 @@
   "name": "@atls-ui-parts/text-transform",
   "version": "0.0.8",
   "license": "BSD-3-Clause",
-  "main": "src/index.ts",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "files": [
     "dist"
   ],
@@ -12,18 +15,25 @@
     "postpack": "rm -rf dist"
   },
   "devDependencies": {
-    "@testing-library/react": "14.0.0",
-    "@types/jest": "29.5.4",
-    "@types/node": "20.5.7",
+    "@testing-library/react": "14.2.1",
     "@types/react": "18.2.48",
-    "react": "18.2.0"
+    "@types/react-dom": "18.2.18"
   },
   "peerDependencies": {
-    "react": "18.2.0"
+    "react": "*",
+    "react-dom": "*"
   },
   "publishConfig": {
     "access": "public",
+    "exports": {
+      "./package.json": "./package.json",
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
     "main": "dist/index.js",
-    "typings": "dist/index.d.ts"
+    "types": "dist/index.d.ts"
   }
 }
