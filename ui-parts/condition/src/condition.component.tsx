@@ -3,7 +3,7 @@ import { AnimatePresence } from 'framer-motion'
 import { FC }              from 'react'
 import { motion }          from 'framer-motion'
 
-import { ConditionProps }  from './condition.interface'
+import { ConditionProps }  from './condition.interface.js'
 
 export const Condition: FC<ConditionProps> = ({
   smooth = false,
@@ -64,6 +64,5 @@ export const Condition: FC<ConditionProps> = ({
     }
   }
 
-  // eslint-disable-next-line react/jsx-no-useless-fragment
-  return <>{children}</>
+  return children
 }
