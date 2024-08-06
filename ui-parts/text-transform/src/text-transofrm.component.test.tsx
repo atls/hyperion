@@ -6,7 +6,7 @@ import { render }        from '@testing-library/react'
 
 import React             from 'react'
 
-import { TextTransform } from './text-transform.component'
+import { TextTransform } from './text-transform.component.js'
 
 describe('TextTransform', () => {
   it('uppercase', () => {
