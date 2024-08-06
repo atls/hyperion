@@ -1,4 +1,4 @@
-import { convertPixelToValue } from './convert-pixel-to-value'
+import { convertPixelToValue } from '../convert-pixel-to-value/index.js'
 
 interface ContentDimensions {
   width: number
