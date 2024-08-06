@@ -1,2 +1,1 @@
-export * from './layer.component'
-export * from './layer.element'
+export * from './layer.component.js'
