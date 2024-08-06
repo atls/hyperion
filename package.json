@@ -3,13 +3,13 @@
   "private": true,
   "license": "BSD 3-Clause",
   "workspaces": [
-    "generators/*",
-    "storybook/*",
-    "ui-admin/*",
-    "ui-parts/*",
-    "ui-proto/*",
-    "ui/*",
-    "utils/*"
+    "generators/**/*",
+    "storybook/**/*",
+    "ui-admin/**/*",
+    "ui-parts/**/*",
+    "ui-proto/**/*",
+    "ui/**/*",
+    "utils/**/*"
   ],
   "scripts": {
     "postinstall": "yarn workspace @atls-ui-admin/icons build-icons"
@@ -17,7 +17,7 @@
   "resolutions": {
     "css-loader": "^5.0.0",
     "dotenv-webpack": "^6.0.0",
-    "eslint": "8.17.0",
+    "eslint": "8.48.0",
     "html-webpack-plugin": "^5.0.0",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.0.0",
@@ -28,17 +28,17 @@
   },
   "devDependencies": {
     "@atls/code-service": "0.1.9",
-    "@atls/config-jest": "0.0.6",
+    "@atls/config-eslint": "0.0.12",
+    "@atls/config-jest": "0.0.17",
     "@atls/schematics": "0.0.16",
-    "@jest/core": "^28.1.1",
-    "@types/eslint": "^8.4.3",
-    "@types/glob": "^7",
-    "@types/jest": "^28.1.2",
-    "@types/node": "^18.16.20",
-    "@types/react": "^18.2.48",
-    "eslint": "^8.17.0",
-    "husky": "7.0.4",
-    "jest-environment-jsdom": "^28.1.1",
+    "@jest/core": "29.7.0",
+    "@types/eslint": "8.56.2",
+    "@types/glob": "8.1.0",
+    "@types/jest": "29.5.11",
+    "@types/node": "20.11.5",
+    "eslint": "8.48.0",
+    "husky": "8.0.3",
+    "jest-environment-jsdom": "29.7.0",
     "typescript": "5.2.2"
   },
   "packageManager": "yarn@4.0.2",
