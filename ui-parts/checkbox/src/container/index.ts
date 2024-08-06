@@ -1,2 +1,2 @@
-export * from './base'
-export * from './position'
+export * from './base/index.js'
+export * from './position/index.js'
