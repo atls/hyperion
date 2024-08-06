@@ -1,6 +1,6 @@
-import { styleFn } from 'styled-system'
+import { style } from '@vanilla-extract/css'
 
-export const createBaseStyles: styleFn = () => () => ({
+export const baseStyles = style({
   boxSizing: 'border-box',
   display: 'flex',
   alignItems: 'center',

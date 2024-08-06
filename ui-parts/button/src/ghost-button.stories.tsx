@@ -1,65 +1,91 @@
-import styled                     from '@emotion/styled'
+import { Meta }     from '@storybook/react'
+import { StoryObj } from '@storybook/react'
 
-import React                      from 'react'
+import React        from 'react'
 
-import { useGoogleFonts }         from '@atls/storybook-google-fonts'
+import { Box }      from '@atls-ui-parts/layout'
+import { Column }   from '@atls-ui-parts/layout'
+import { Layout }   from '@atls-ui-parts/layout'
+import { vars }     from '@atls-ui-parts/theme'
 
-// @ts-ignore
-import mdx                        from './button.docs.mdx'
-import { GhostButton as Button }  from './ghost-button'
-import { createAppearanceStyles } from './appearance'
-import { templates }              from './button.templates'
-import { createShapeStyles }      from './shape'
-
-export default {
+const meta: Meta = {
   title: 'Components/Button',
-  parameters: {
-    docs: {
-      page: mdx,
+  render: ({
+    containerWidth,
+    children,
+    fontFamily,
+    fontSize,
+    fontColor,
+    fontWeight,
+    backgroundColor,
+  }) => (
+    <Column width='100%' maxWidth={`${containerWidth}px`} alignItems='center' margin='auto'>
+      <Layout flexBasis='50px' />
+      <Box
+        cursor='pointer'
+        style={{ color: fontColor, fontSize, fontWeight, backgroundColor, fontFamily }}
+      >
+        <Box backgroundColor='$button.lightBlue.pressed.background'>{children}</Box>
+      </Box>
+      <Layout flexBasis='50px' />
+    </Column>
+  ),
+  tags: ['autodocs'],
+  argTypes: {
+    containerWidth: {
+      name: 'Контейнер',
+      description: 'Ширина контейнера',
+      control: {
+        type: 'range',
+        min: 200,
+        max: 600,
+        step: 25,
+      },
     },
-    development: {
-      templates,
+    fontFamily: {
+      name: 'Шрифт',
+      description: 'Шрифт',
+      control: { type: 'select' },
+      options: [vars.fonts.primary],
+    },
+    fontWeight: {
+      name: 'Насыщенность шрифта',
+      description: 'Насыщенность шрифта текста',
+      control: {
+        type: 'range',
+        min: 400,
+        max: 600,
+        step: 100,
+      },
+    },
+    fontSize: {
+      name: 'Размер шрифта',
+      description: 'Размер шрифта текста',
+      control: { type: 'number' },
+    },
+    fontColor: {
+      name: 'Цвет текста',
+      description: 'Цвет текста',
+      control: { type: 'color' },
+    },
+    backgroundColor: {
+      name: 'Цвет заливки',
+      description: 'Цвет заднего фона',
+      control: { type: 'color' },
     },
   },
 }
 
-export const GhostButton = ({
-  containerWith,
-  children,
-  fontFamily,
-  fontSize,
-  fontColor,
-  fontWeight,
-  backgroundColor,
-}) => {
-  useGoogleFonts(fontFamily, fontWeight)
+export default meta
 
-  const StoryGhostButton = styled(Button)(
-    createAppearanceStyles({
-      fontColor,
-      backgroundColor,
-    }),
-    createShapeStyles({
-      size: 'auto',
-      fontSize,
-    })
-  )
-
-  return (
-    <div style={{ width: containerWith, display: 'flex', justifyContent: 'center' }}>
-      <StoryGhostButton>
-        <div style={{ backgroundColor: 'rgba(232,50,154,0.1)' }}>{children}</div>
-      </StoryGhostButton>
-    </div>
-  )
-}
-
-GhostButton.args = {
-  children: 'Кнопка',
-  containerWith: 200,
-  fontFamily: 'Roboto',
-  fontWeight: 400,
-  fontColor: 'black',
-  fontSize: 12,
-  backgroundColor: 'transparent',
+export const GhostButton: StoryObj = {
+  args: {
+    children: 'Кнопка',
+    containerWidth: 200,
+    fontFamily: vars.fonts.primary,
+    fontWeight: 400,
+    fontColor: 'black',
+    fontSize: 12,
+    backgroundColor: 'transparent',
+  },
 }
