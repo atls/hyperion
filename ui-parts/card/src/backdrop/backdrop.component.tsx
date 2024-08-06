@@ -1,18 +1,16 @@
-import styled                 from '@emotion/styled'
+import React               from 'react'
+import { HTMLMotionProps } from 'framer-motion'
+import { clsx }            from 'clsx'
+import { motion }          from 'framer-motion'
+import { forwardRef }      from 'react'
 
-import React                  from 'react'
-import { motion }             from 'framer-motion'
+import { backdropStyles }  from './backdrop.css.js'
 
-import { baseBackdropStyles } from './backdrop.styles'
-
-const BackdropBase = styled(motion.div)(baseBackdropStyles)
-
-const doNothing = () => {
-  // do nothing
-}
-
-const Backdrop = ({ onClick = doNothing, ...props }) => (
-  <BackdropBase onClick={onClick} {...props} />
-)
-
-export { Backdrop }
+export const Backdrop = forwardRef<HTMLDivElement, HTMLMotionProps<'div'>>((
+  { children, className, ...props },
+  ref
+) => (
+  <motion.div ref={ref} className={clsx(className, backdropStyles)} {...props}>
+    {children}
+  </motion.div>
+))

@@ -1,34 +1,34 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect }            from 'react'
+import { useState }             from 'react'
+import { useRef }               from 'react'
 
-import { useEffect }              from 'react'
-import { useState }               from 'react'
-import { useRef }                 from 'react'
+import { getContentDimensions } from '@atls-ui-parts/dom'
 
-import { getContentDimensions }   from '@atls-ui-parts/dom'
-
-import { UseCardControlsOptions } from './animation.interfaces'
+import { UseCardControlsProps } from './use-card-controls.interfaces.js'
 
 const doNothing = () => {
   // do nothing
 }
 
-const useCardControls = ({
+export const useCardControls = ({
   topOffset = 0,
   duration = 0.5,
   isOpen = false,
   scrollThreshold = false,
-  onClose = doNothing,
-}: UseCardControlsOptions) => {
+  onClose = () => {
+    // do nothing
+  },
+}: UseCardControlsProps) => {
   const [windowHeight, setWindowHeight] = useState<number>(0)
   const [cardHeight, setCardHeight] = useState<number>(0)
   const [opened, setOpened] = useState<boolean>(isOpen)
   const cardNode = useRef(null)
 
-  let isScrolled = false
+  const isScrolled = useRef<boolean>(false)
 
   const show = () => setOpened(true)
   const hide = () => {
-    isScrolled = false
+    isScrolled.current = false
     setOpened(false)
     onClose()
   }
@@ -44,7 +44,7 @@ const useCardControls = ({
   const onScrollToThreshold = () => {
     const scrollPosition = (cardNode.current as any).getBoundingClientRect().y
 
-    if (!isScrolled) isScrolled = true
+    isScrolled.current = true
 
     if (scrollPosition >= slideInPosition) {
       hide()
@@ -52,10 +52,8 @@ const useCardControls = ({
   }
 
   const onCloseBeforeScroll = ({ deltaY }) => {
-    if (!isScrolled) {
-      if (deltaY < 0) {
-        hide()
-      }
+    if (!isScrolled && deltaY < 0) {
+      hide()
     }
   }
 
@@ -68,35 +66,24 @@ const useCardControls = ({
   }, [])
 
   useEffect(() => {
-    if (cardNode?.current) setCardHeight(getContentDimensions(cardNode.current).height)
+    if (cardNode?.current) {
+      setCardHeight(getContentDimensions(cardNode.current).height)
+    }
   })
 
-  const slideIn = {
-    y: slideInPosition,
-  }
-  const slideOut = {
-    y: windowHeight,
-  }
-  const appear = {
-    opacity: 1,
-  }
-  const disappear = {
-    opacity: 0,
-  }
-
   const cardProps = {
-    animate: slideIn,
-    exit: slideOut,
-    initial: slideOut,
+    animate: { y: slideInPosition },
+    exit: { y: windowHeight },
+    initial: { y: windowHeight },
     transition: { duration },
     ref: cardNode,
     key: 'card-container',
   }
 
   const backdropProps = {
-    animate: appear,
-    exit: disappear,
-    initial: disappear,
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+    initial: { opacity: 0 },
     transition: { duration },
     key: 'card-backdrop',
   }
@@ -113,5 +100,3 @@ const useCardControls = ({
 
   return { cardProps, backdropProps, rendererProps, triggerProps, show, hide, toggle, opened }
 }
-
-export { useCardControls }
