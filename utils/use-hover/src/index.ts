@@ -1,1 +1,1 @@
-export { useHover } from './use-hover.hook'
+export { useHover } from './use-hover.hook.js'
