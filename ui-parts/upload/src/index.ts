@@ -1,1 +1,1 @@
-export * from './simple-upload.component'
+export * from './simple-upload.component.js'
