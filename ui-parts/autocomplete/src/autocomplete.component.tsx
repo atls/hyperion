@@ -1,33 +1,30 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 
-import React                       from 'react'
-import { AnimatePresence }         from 'framer-motion'
-import { Placement }               from 'react-laag'
-import { useCombobox }             from 'downshift'
-import { useEffect }               from 'react'
-import { useState }                from 'react'
-import { useLayer }                from 'react-laag'
+import React                 from 'react'
+import { AnimatePresence }   from 'framer-motion'
+import { FC }                from 'react'
+import { useCombobox }       from 'downshift'
+import { useEffect }         from 'react'
+import { useState }          from 'react'
+import { useLayer }          from 'react-laag'
 
-import { Input }                   from '@atls-ui-proto/input'
+import { Input }             from '@atls-ui-parts/input'
 
-import { Arrow }                   from './indicator'
-import { Indicator }               from './indicator'
-import { Layer }                   from './layer'
-import { Menu }                    from './menu'
-import { MenuItem }                from './menu-item'
-import { createMenuItemsRenderer } from './factories'
-import { createMenuRenderer }      from './factories'
+import { Arrow }             from './arrow/index.js'
+import { AutocompleteProps } from './autocomplete.interfaces.js'
+import { ValueType }         from './autocomplete.interfaces.js'
+import { Indicator }         from './indicator/index.js'
+import { Layer }             from './layer/index.js'
+import { MenuItem }          from './menu-item/index.js'
+import { Menu }              from './menu/index.js'
 
-const MenuItemsRenderer = createMenuItemsRenderer(MenuItem)
-
-const MenuRenderer = createMenuRenderer(Menu)
-
-const defaultGetOptionLabel = (option) => (option ? option.value : '')
-
-const Autocomplete = (
-  { options = [], value, getOptionLabel = defaultGetOptionLabel, onChange, onInputChange }: any,
-  ref
-) => {
+export const Autocomplete: FC<AutocompleteProps> = ({
+  options = [],
+  value,
+  getOptionLabel = (option: ValueType | null) => (option ? option.value : ''),
+  onChange,
+  onInputChange,
+}) => {
   const [items, setItems] = useState(options)
 
   const {
@@ -45,13 +42,13 @@ const Autocomplete = (
     itemToString: getOptionLabel,
     defaultSelectedItem: value,
     onSelectedItemChange: ({ selectedItem }) => {
-      if (selectedItem && onChange) {
-        onChange(selectedItem)
+      if (selectedItem) {
+        onChange?.(selectedItem)
       }
     },
     onIsOpenChange: ({ selectedItem, inputValue }) => {
-      if (onChange && selectedItem && !inputValue) {
-        onChange(null)
+      if (selectedItem && !inputValue) {
+        onChange?.({ value: '' })
       }
     },
   })
@@ -61,7 +58,7 @@ const Autocomplete = (
     auto: true,
     triggerOffset: 0,
     placement: 'bottom-start',
-    possiblePlacements: ['bottom-start', 'top-start'] as Array<Placement>,
+    possiblePlacements: ['bottom-start', 'top-start'],
   })
 
   useEffect(() => {
@@ -76,37 +73,42 @@ const Autocomplete = (
   }, [options, inputValue, selectedItem, getOptionLabel])
 
   useEffect(() => {
-    if (onInputChange) {
-      onInputChange(inputValue)
-    }
+    onInputChange?.(inputValue)
   }, [inputValue, onInputChange])
 
   const suffix = (
-    <Indicator {...getToggleButtonProps()} isOpen={isOpen}>
-      <Arrow />
+    <Indicator {...getToggleButtonProps()}>
+      <Arrow isOpen={isOpen} />
     </Indicator>
   )
 
-  const { onChange: downshiftOnChange, ...restProps } = getInputProps(triggerProps)
-  const menuProps = getMenuProps({ style: {} })
-  const inputProps = { ...restProps, onChangeNative: downshiftOnChange }
-
   return (
     <>
-      <Input onFocus={openMenu} suffix={suffix} {...inputProps} />
+      <Input
+        size='normal'
+        variant='blue'
+        onFocus={openMenu}
+        suffix={suffix}
+        {...getInputProps(triggerProps)}
+      />
       {renderLayer(
         <AnimatePresence>
           {isOpen && (
-            <Layer ref={layerProps.ref} style={layerProps.style} width={triggerBounds?.width}>
-              <MenuRenderer {...menuProps}>
-                <MenuItemsRenderer
-                  items={items}
-                  getItemProps={getItemProps}
-                  highlightedIndex={highlightedIndex}
-                  selectedItem={selectedItem}
-                  getOptionLabel={getOptionLabel}
-                />
-              </MenuRenderer>
+            <Layer
+              ref={layerProps.ref}
+              style={{ ...layerProps.style, width: triggerBounds?.width }}
+            >
+              <Menu {...getMenuProps({ style: {} })}>
+                {items.map((item, index) => (
+                  <MenuItem
+                    {...getItemProps({ key: item.value, index, item })}
+                    selected={selectedItem === item}
+                    hover={highlightedIndex === index}
+                  >
+                    {getOptionLabel(item)}
+                  </MenuItem>
+                ))}
+              </Menu>
             </Layer>
           )}
         </AnimatePresence>
@@ -114,5 +116,3 @@ const Autocomplete = (
     </>
   )
 }
-
-export { Autocomplete }
