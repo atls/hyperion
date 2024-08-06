@@ -3,8 +3,8 @@ import { cloneElement }            from 'react'
 import { forwardRef }              from 'react'
 import { isValidElement }          from 'react'
 
-import { ForwardEventsStateProps } from './events-state.interfaces'
-import { useEventsState }          from './use-events-state.hook'
+import { ForwardEventsStateProps } from './events-state.interfaces.js'
+import { useEventsState }          from './use-events-state.hook.js'
 
 export const ForwardEventsState = forwardRef<HTMLElement, ForwardEventsStateProps>((
   { events, children },
