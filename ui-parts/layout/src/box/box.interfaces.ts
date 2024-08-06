@@ -1,29 +1,9 @@
-import { BackgroundProps }         from 'styled-system'
-import { BoxShadowProps }          from 'styled-system'
-import { BorderProps }             from 'styled-system'
-import { ColorProps }              from 'styled-system'
-import { FlexboxProps }            from 'styled-system'
-import { LayoutProps }             from 'styled-system'
-import { PositionProps }           from 'styled-system'
-import { SpaceProps }              from 'styled-system'
+import { HTMLAttributes } from 'react'
 
-import { FillProps }               from '../styles'
-import { FullViewportHeightProps } from '../styles'
-import { FullViewportWidthProps }  from '../styles'
+import { BoxSprinkles }   from './box.css.js'
 
-export interface BoxSystemProps {
-  boxSizing?: string
+export interface BoxProps extends Omit<HTMLAttributes<HTMLDivElement>, 'color'>, BoxSprinkles {
+  fill?: boolean
+  fullViewportWidth?: boolean
+  fullViewportHeight?: boolean
 }
-
-export type BoxProps = FlexboxProps &
-  LayoutProps &
-  SpaceProps &
-  BoxSystemProps &
-  PositionProps &
-  ColorProps &
-  BorderProps &
-  BoxShadowProps &
-  BackgroundProps &
-  FillProps &
-  FullViewportHeightProps &
-  FullViewportWidthProps

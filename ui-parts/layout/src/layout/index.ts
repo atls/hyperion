@@ -1,2 +1,2 @@
-export * from './layout.interfaces'
-export * from './layout.component'
+export * from './layout.component.js'
+export * from './layout.interfaces.js'
