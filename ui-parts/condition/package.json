@@ -2,7 +2,10 @@
   "name": "@atls-ui-parts/condition",
   "version": "0.1.1",
   "license": "BSD-3-Clause",
-  "main": "src/index.ts",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "files": [
     "dist"
   ],
@@ -12,23 +15,26 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "framer-motion": "10.15.2"
+    "framer-motion": "11.2.11"
   },
   "devDependencies": {
-    "@emotion/react": "11.11.3",
-    "@emotion/styled": "11.11.0",
-    "@types/react": "18.2.48",
-    "react": "18.2.0"
+    "@types/react": "18.2.48"
   },
   "peerDependencies": {
-    "@emotion/react": "11.11.3",
-    "@emotion/styled": "11.11.0",
-    "framer-motion": "10.15.2",
-    "react": "18.2.0"
+    "react": "*",
+    "react-dom": "*"
   },
   "publishConfig": {
     "access": "public",
+    "exports": {
+      "./package.json": "./package.json",
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
     "main": "dist/index.js",
-    "typings": "dist/index.d.ts"
+    "types": "dist/index.d.ts"
   }
 }
