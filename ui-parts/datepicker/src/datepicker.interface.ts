@@ -1,5 +1,6 @@
-import { ReactDatePickerProps } from 'react-datepicker'
+import { DatePickerProps }  from 'react-datepicker'
 
-import { DatepickerStyles }     from './styles'
+import { AppearanceStyles } from './utils/index.js'
+import { ShapeStyles }      from './utils/index.js'
 
-export interface DatepickerProps extends ReactDatePickerProps, DatepickerStyles {}
+export type DatepickerProps = DatePickerProps & AppearanceStyles & ShapeStyles
