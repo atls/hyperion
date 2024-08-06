@@ -1,4 +1,4 @@
-import { ShapeStyles } from './shape.interfaces'
+import { ShapeStyles } from './create-shape-styles.interfaces.js'
 
 export const createHeaderShapeStyles = (
   padding?: number | string,
@@ -58,9 +58,6 @@ export const createCellShapeStyles = (
   '.react-datepicker__current-month': {
     paddingTop: padding,
     paddingBottom: padding,
-  },
-  '.react-datepicker__navigation': {
-    marginTop: padding,
   },
 })
 
