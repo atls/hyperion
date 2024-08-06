@@ -1,26 +1,26 @@
-import { DraggableProps }                from 'framer-motion'
-import { PanInfo }                       from 'framer-motion'
-import { Children }                      from 'react'
-import { useAnimation }                  from 'framer-motion'
-import { cloneElement }                  from 'react'
-import { useState }                      from 'react'
-import { useEffect }                     from 'react'
-import { useCallback }                   from 'react'
+import { DraggableProps }            from 'framer-motion'
+import { PanInfo }                   from 'framer-motion'
+import { Children }                  from 'react'
+import { useAnimation }              from 'framer-motion'
+import { cloneElement }              from 'react'
+import { useState }                  from 'react'
+import { useEffect }                 from 'react'
+import { useCallback }               from 'react'
 
-import { getContentDimensions }          from '@atls-ui-parts/dom'
-import { useWindowSize }                 from '@atls-ui-parts/dom'
+import { getContentDimensions }      from '@atls-ui-parts/dom'
+import { useWindowSize }             from '@atls-ui-parts/dom'
 
-import { UseCarouselProp }               from './hooks.interfaces'
-import { UseCarouselResult }             from './hooks.interfaces'
-import { CarouselSlydeToIndexType }      from './hooks.interfaces'
-import { CarouselSlydeToTwoIndexesType } from './hooks.interfaces'
+import { UseCarouselProps }          from './use-carousel.interfaces.js'
+import { UseCarouselResult }         from './use-carousel.interfaces.js'
+import { CarouselSlideToIndex }      from './use-carousel.interfaces.js'
+import { CarouselSlideToTwoIndexes } from './use-carousel.interfaces.js'
 
 const swipePower = (offset: number, velocity: number): number => Math.abs(offset) * velocity
 
-export const useCarousel: UseCarouselProp = (
+export const useCarousel = ({
   ref,
   items,
-  {
+  options: {
     direction = 'horizontal',
     slidesPerView = 1,
     spaceBetween = 0,
@@ -29,16 +29,16 @@ export const useCarousel: UseCarouselProp = (
     swipeThreshold = 10000,
     centered,
     loop,
-  }
-): UseCarouselResult => {
+  },
+}: UseCarouselProps): UseCarouselResult => {
   const { innerWidth } = useWindowSize()
   const controls = useAnimation()
-  const [wrapperSize, setWrapperSize] = useState(0)
-  const [activeSlide, setActiveSlide] = useState(0)
-  const [slidesLength, setSlidesLength] = useState(0)
-  const [slideSize, setSlideSize] = useState(0)
-  const [centeredOffset, setCenteredOffset] = useState(0)
-  const [isReady, setIsReady] = useState(false)
+  const [wrapperSize, setWrapperSize] = useState<number>(0)
+  const [activeSlide, setActiveSlide] = useState<number>(0)
+  const [slidesLength, setSlidesLength] = useState<number>(0)
+  const [slideSize, setSlideSize] = useState<number>(0)
+  const [centeredOffset, setCenteredOffset] = useState<number>(0)
+  const [isReady, setIsReady] = useState<boolean>(false)
 
   useEffect(() => {
     const loopOffset = -slideSize - spaceBetween
@@ -79,20 +79,15 @@ export const useCarousel: UseCarouselProp = (
 
   useEffect(() => {
     if (ref?.current) {
-      const wrapperDimensions = getContentDimensions(ref.current)
-      const defaultWrapperSize =
-        direction === 'horizontal' ? wrapperDimensions.width : wrapperDimensions.height
+      const { width, height } = getContentDimensions(ref.current)
+      const defaultWrapperSize = direction === 'horizontal' ? width : height
       const defaultSlideSize =
         (defaultWrapperSize - spaceBetween * (slidesPerView - 1)) / slidesPerView
 
       setWrapperSize(defaultWrapperSize)
       setSlideSize(defaultSlideSize)
 
-      if (centered) {
-        setCenteredOffset(defaultWrapperSize / 2 - defaultSlideSize / 2)
-      } else {
-        setCenteredOffset(0)
-      }
+      setCenteredOffset(centered ? defaultWrapperSize / 2 - defaultSlideSize / 2 : 0)
     }
   }, [ref, innerWidth, direction, slidesPerView, centered, spaceBetween])
 
@@ -165,7 +160,7 @@ export const useCarousel: UseCarouselProp = (
       }))
   }, [items, direction, slideSize, slidesPerView, spaceBetween])
 
-  const slideToIndex: CarouselSlydeToIndexType = (index, duration = transitionDuration) => {
+  const slideToIndex: CarouselSlideToIndex = (index, duration = transitionDuration) => {
     const valueAnimateTo =
       (index * -wrapperSize) / slidesPerView -
       (spaceBetween / slidesPerView) * index +
@@ -180,7 +175,7 @@ export const useCarousel: UseCarouselProp = (
     setActiveSlide(index)
   }
 
-  const slideToTwoIndexes: CarouselSlydeToTwoIndexesType = async (indexes) => {
+  const slideToTwoIndexes: CarouselSlideToTwoIndexes = async (indexes) => {
     const valueAnimateToFirst =
       (indexes[0].index * -wrapperSize) / slidesPerView -
       (spaceBetween / slidesPerView) * indexes[0].index +

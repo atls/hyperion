@@ -1,7 +1,7 @@
 import { useMemo }                  from 'react'
 
-import { AddonInputProps }          from './hooks.interfaces'
-import { UseAddonNavigationResult } from './hooks.interfaces'
+import { AddonInputOptions }        from '../use-carousel/index.js'
+import { UseAddonNavigationResult } from './use-addon-navigation.interfaces.js'
 
 export const useAddonNavigation = ({
   slidesLength,
@@ -11,7 +11,7 @@ export const useAddonNavigation = ({
   slideToTwo,
   centered,
   loop,
-}: AddonInputProps): UseAddonNavigationResult =>
+}: AddonInputOptions): UseAddonNavigationResult =>
   useMemo(() => {
     if (centered && slidesLength <= 1) return {}
     if (!centered && !loop && slidesLength < slidesPerView + 1) return {}
