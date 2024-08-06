@@ -1,9 +1,13 @@
-import { themes } from '@storybook/theming'
-
-export const parameters = {
-  controls: { expanded: true },
-  layout: 'centered',
-  docs: {
-    theme: themes.light,
+/** @type { import('@storybook/react').Preview } */
+const preview = {
+  parameters: {
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/i,
+      },
+    },
   },
 }
+
+export default preview
