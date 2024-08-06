@@ -1,3 +1,3 @@
-export * from './get-content-dimensions'
-export * from './convert-pixel-to-value'
-export * from './use-window-size'
+export * from './get-content-dimensions/index.js'
+export * from './convert-pixel-to-value/index.js'
+export * from './use-window-size/index.js'

@@ -1,23 +1,12 @@
-import { useEffect }   from 'react'
-import { useState }    from 'react'
-import { useCallback } from 'react'
+import { useEffect }         from 'react'
+import { useState }          from 'react'
+import { useCallback }       from 'react'
 
-interface WindowDimensions {
-  innerWidth: number
-  innerHeight: number
-  outerWidth: number
-  outerHeight: number
-}
-
-const initialValue: WindowDimensions = {
-  innerWidth: 0,
-  innerHeight: 0,
-  outerWidth: 0,
-  outerHeight: 0,
-}
+import { WindowDimensions }  from './use-window-size.interfaces.js'
+import { defaultWindowSize } from './use-window-size.constants.js'
 
 export function useWindowSize(): WindowDimensions {
-  const [windowSize, setWindowSize] = useState<WindowDimensions>(initialValue)
+  const [windowSize, setWindowSize] = useState<WindowDimensions>(defaultWindowSize)
 
   const isClient = typeof window !== 'undefined'
 
