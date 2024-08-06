@@ -1,2 +1,3 @@
-export * from './textarea.props'
-export * from './addon'
+export * from './textarea-container.component.js'
+export * from './textarea-container.css.js'
+export * from './textarea-container.interfaces.js'

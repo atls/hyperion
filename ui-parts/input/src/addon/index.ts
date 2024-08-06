@@ -1,3 +1,3 @@
-export * from './addons-container.interfaces'
-export * from './addons-container.styles'
-export * from './addon.styles'
+export * from './addon.component.js'
+export * from './addon.css.js'
+export * from './addon.interfaces.js'

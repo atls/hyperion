@@ -1,4 +1,3 @@
-export * from './appearance'
-export * from './position'
-export * from './shape'
-export * from './base'
+export * from './attachment.component.js'
+export * from './attachment.css.js'
+export * from './attachment.interfaces.js'
