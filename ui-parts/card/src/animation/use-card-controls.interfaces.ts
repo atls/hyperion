@@ -1,4 +1,4 @@
-export interface UseCardControlsOptions {
+export interface UseCardControlsProps {
   topOffset?: number
   duration?: number
   isOpen?: boolean

@@ -1,10 +1,10 @@
-import { styleFn } from 'styled-system'
+import { style } from '@vanilla-extract/css'
 
-export const baseContainerStyles: styleFn = () => () => ({
+export const rendererContainerStyles = style({
   position: 'fixed',
   width: '100%',
-  top: 0,
   height: '100%',
+  top: 0,
   left: 0,
   zIndex: 1000,
   overflowY: 'scroll',
