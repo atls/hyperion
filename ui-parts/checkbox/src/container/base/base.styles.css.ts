@@ -1,6 +1,6 @@
-import { styleFn } from 'styled-system'
+import { style } from '@vanilla-extract/css'
 
-export const createContainerBaseStyles: styleFn = () => () => ({
+export const containerBaseStyles = style({
   display: 'flex',
   position: 'relative',
   cursor: 'pointer',
