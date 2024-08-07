@@ -1,3 +1,2 @@
-export * from './next-image.component'
-export * from './next-image.styles'
-export * from './next-image.interfaces'
+export * from './next-image.component.js'
+export * from './next-image.interfaces.js'

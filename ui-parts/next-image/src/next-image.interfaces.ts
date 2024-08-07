@@ -1,6 +1,5 @@
-export interface NextImageProps {
-  src: string
-  alt: string
-  width: number
-  height: number
+import { ImageProps } from 'next/image.js'
+
+export interface NextImageProps extends ImageProps {
+  wrapperClassName?: string
 }
