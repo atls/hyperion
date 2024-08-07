@@ -1,7 +1,7 @@
 import { Marker }               from 'mapbox-gl'
 import { Map }                  from 'mapbox-gl'
 
-import { MarkerClusterOptions } from './marker-cluster.options'
+import { MarkerClusterOptions } from './marker-cluster.options.js'
 
 export class MarkerCluster {
   private markerElement: HTMLDivElement

@@ -2,7 +2,10 @@
   "name": "@atls-ui-parts/mapbox",
   "version": "0.0.2",
   "license": "BSD-3-Clause",
-  "main": "src/index.ts",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "files": [
     "dist"
   ],
@@ -12,6 +15,7 @@
     "postpack": "rm -rf dist"
   },
   "devDependencies": {
+    "@types/mapbox-gl": "2.6.1",
     "mapbox-gl": "2.6.1"
   },
   "peerDependencies": {
@@ -19,7 +23,15 @@
   },
   "publishConfig": {
     "access": "public",
+    "exports": {
+      "./package.json": "./package.json",
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
     "main": "dist/index.js",
-    "typings": "dist/index.d.ts"
+    "types": "dist/index.d.ts"
   }
 }

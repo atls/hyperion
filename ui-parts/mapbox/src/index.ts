@@ -1,1 +1,1 @@
-export * from './mapbox-cluster'
+export * from './mapbox-cluster/index.js'
