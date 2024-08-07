@@ -1,12 +1,12 @@
-import { useTheme }          from '@emotion/react'
-
 import React                 from 'react'
 import { FunctionComponent } from 'react'
 import { useState }          from 'react'
 
-import { LineContainer }     from '../line-container'
-import { LinePercent }       from '../line-percent'
-import { LineProps }         from './line.interfaces'
+import { vars }              from '@atls-ui-parts/theme'
+
+import { LineContainer }     from '../line-container/index.js'
+import { LinePercent }       from '../line-percent/index.js'
+import { LineProps }         from './line.interfaces.js'
 
 export const sortGradient = (gradients) => {
   let tempArr: any[] = []
@@ -32,16 +32,15 @@ export const handleGradient = (strokeColor) => {
   return { backgroundImage: `linear-gradient(${direction}, ${from}, ${to})` }
 }
 
-const Line: FunctionComponent<LineProps> = ({
+export const Line: FunctionComponent<LineProps> = ({
   percent,
-  strokeColor = '#1890ff',
+  strokeColor = '$blueProtective',
   strokeLinecap,
   trailLinecap,
   trailColor,
   strokeWeight = 8,
 }) => {
-  const theme: any = useTheme() || {}
-  const getThemeColor = (color) => (theme.colors && theme.colors[color]) || color
+  const getThemeColor = (color) => (vars.colors && vars.colors[color]) || color
 
   const percentList = Array.isArray(percent) ? percent : [percent]
   const strokeColorList = Array.isArray(strokeColor)
@@ -61,7 +60,11 @@ const Line: FunctionComponent<LineProps> = ({
   }
 
   return (
-    <LineContainer trailLinecap={trailLinecap} height={strokeWeight} backgroundColor={trailColor}>
+    <LineContainer
+      trailLinecap={trailLinecap}
+      height={`${strokeWeight}px`}
+      backgroundColor={trailColor}
+    >
       {percentList
         .map((item, index) => {
           let backgroundProps = {}
@@ -78,6 +81,7 @@ const Line: FunctionComponent<LineProps> = ({
               background: strokeColorList[index] || strokeColorList[strokeColorList.length - 1],
             }
           }
+
           return (
             <LinePercent
               key={getKey(index)}
@@ -91,5 +95,3 @@ const Line: FunctionComponent<LineProps> = ({
     </LineContainer>
   )
 }
-
-export { Line }
