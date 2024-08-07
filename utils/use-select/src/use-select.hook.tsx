@@ -4,7 +4,7 @@ import { useSelect as useDownshiftSelect } from 'downshift'
 import { useEffect }                       from 'react'
 import { useLayer }                        from 'react-laag'
 
-import { UseSelectProps }                  from './select.interfaces'
+import { UseSelectProps }                  from './select.interfaces.js'
 
 const useSelect = ({ items, onChange, placement = 'bottom-center', ...props }: UseSelectProps) => {
   const {
