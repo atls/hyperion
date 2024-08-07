@@ -1,8 +1,10 @@
-export interface CurrencyProps {
+import { TextProps } from '../text/index.js'
+
+export interface CurrencyProps extends TextProps {
   amount: number
   currency: string
-  locale?: string
   options: Omit<Intl.NumberFormatOptions, 'style' | 'currency'>
+  locale?: string
   keepZeros?: boolean
   currencySignPlacement?: 'prefix' | 'suffix'
 }
