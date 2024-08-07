@@ -1,7 +1,7 @@
-import { UseSelectProps as UseDownshiftSelectProps } from 'downshift'
-import { PlacementType }                             from 'react-laag/dist/PlacementType'
-
-export interface UseSelectProps extends UseDownshiftSelectProps<string> {
-  onChange?: (nextValue: string) => void | any
-  placement?: PlacementType
+export interface SelectProps {
+  label: string
+  value: string
+  onChangeValue: (nextValue: string) => void
+  placeholder: string
+  items: string[]
 }
