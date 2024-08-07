@@ -1,201 +1,198 @@
+import { Meta }     from '@storybook/react'
+import { StoryObj } from '@storybook/react'
+
 import React        from 'react'
 import { useState } from 'react'
 
+import { Button }   from '@atls-ui-parts/button'
 import { Column }   from '@atls-ui-parts/layout'
 import { Layout }   from '@atls-ui-parts/layout'
 import { Row }      from '@atls-ui-parts/layout'
-import { Button }   from '@atls-ui-proto/button'
 
-import { Circle }   from './circle'
-import { Line }     from './line'
+import { Circle }   from './circle/index.js'
+import { Line }     from './line/index.js'
 
-export default {
-  title: 'Компоненты/Прогресс/Примеры',
+const meta: Meta = {
+  title: 'Components/Progress',
+  tags: ['autodocs'],
 }
 
-export const Base = () => (
-  <Column width={300}>
-    <Layout>
-      <Line percent={50} />
-    </Layout>
-    <Layout flexBasis={16} />
-    <Layout width='100%'>
-      <Circle percent={50} width={200} height={200} />
-    </Layout>
-  </Column>
-)
+export default meta
 
-Base.story = {
+export const Base: StoryObj = {
   name: 'Базовый',
-}
-
-export const Size = () => (
-  <Column width={400}>
-    <Layout>
-      <Line percent={50} />
-    </Layout>
-    <Layout flexBasis={16} />
-    <Layout>
-      <Line percent={50} strokeWeight={15} />
-    </Layout>
-    <Layout flexBasis={16} />
-    <Layout width='100%'>
-      <Row alignItems='center' flexWrap='wrap'>
-        <Layout>
-          <Circle percent={30} width={50} height={50} />
-        </Layout>
-        <Layout flexBasis={16} />
-        <Layout>
-          <Circle percent={50} trailWidth={2} strokeWeight={12} width={100} height={100} />
-        </Layout>
-        <Layout flexBasis={16} />
-        <Layout>
-          <Circle percent={80} trailWidth={8} strokeWeight={15} width={150} height={150} />
-        </Layout>
-      </Row>
-    </Layout>
-  </Column>
-)
-
-Size.story = {
-  name: 'Размеры',
-}
-
-export const Dinamic = () => {
-  const [percent, setPercent] = useState(40)
-
-  const increase = () => {
-    let newPercent = percent + 10
-    if (newPercent > 100) {
-      newPercent = 100
-    }
-    setPercent(newPercent)
-  }
-
-  const decline = () => {
-    let newPercent = percent - 10
-    if (newPercent < 0) {
-      newPercent = 0
-    }
-    setPercent(newPercent)
-  }
-
-  return (
-    <Column width={400}>
-      <Layout>
-        <Line percent={percent} />
+  render: () => (
+    <Column width='300px'>
+      <Layout fill>
+        <Line percent={50} />
       </Layout>
-      <Layout flexBasis={16} />
-      <Layout>
-        <Button onClick={() => decline()}>Отнять</Button>
-        <Button onClick={() => increase()}>Прибавить</Button>
-      </Layout>
-      <Layout flexBasis={16} />
+      <Layout flexBasis='16px' />
       <Layout width='100%'>
-        <Circle percent={percent} width={200} height={200} />
+        <Circle percent={50} width='200px' height='200px' />
       </Layout>
     </Column>
-  )
+  ),
 }
 
-Dinamic.story = {
+export const Size: StoryObj = {
+  name: 'Размеры',
+  render: () => (
+    <Column width='400px'>
+      <Layout width='300px'>
+        <Line percent={50} />
+      </Layout>
+      <Layout flexBasis='16px' />
+      <Layout>
+        <Line percent={50} strokeWeight={15} />
+      </Layout>
+      <Layout flexBasis='16px' />
+      <Layout width='100%'>
+        <Row alignItems='center' flexWrap='wrap'>
+          <Layout>
+            <Circle percent={30} width='50px' height='50px' />
+          </Layout>
+          <Layout flexBasis='16px' />
+          <Layout>
+            <Circle percent={50} trailWidth={2} strokeWeight={12} width='100px' height='100px' />
+          </Layout>
+          <Layout flexBasis='16px' />
+          <Layout>
+            <Circle percent={80} trailWidth={8} strokeWeight={15} width='150px' height='150px' />
+          </Layout>
+        </Row>
+      </Layout>
+    </Column>
+  ),
+}
+
+export const Dinamic: StoryObj = {
   name: 'Изменить значение',
+  render: () => {
+    const [percent, setPercent] = useState(40)
+
+    const increase = () => {
+      const newPercent = percent + 10
+      setPercent(newPercent < 100 ? newPercent : 100)
+    }
+
+    const decline = () => {
+      const newPercent = percent - 10
+      setPercent(newPercent > 0 ? newPercent : 0)
+    }
+
+    return (
+      <Column width='400px'>
+        <Layout>
+          <Line percent={percent} />
+        </Layout>
+        <Layout flexBasis='16px' />
+        <Layout>
+          <Button size='small' onClick={decline}>
+            Отнять
+          </Button>
+          <Button size='small' onClick={increase}>
+            Прибавить
+          </Button>
+        </Layout>
+        <Layout flexBasis='16px' />
+        <Layout width='100%'>
+          <Circle percent={percent} width='200px' height='200px' />
+        </Layout>
+      </Column>
+    )
+  },
 }
 
-export const LineCap = () => (
-  <Column width={400}>
-    <Layout>
-      <Line percent={40} strokeLinecap='round' trailLinecap='round' />
-    </Layout>
-    <Layout flexBasis={16} />
-    <Layout>
-      <Line percent={40} />
-    </Layout>
-    <Layout flexBasis={16} />
-    <Layout width='100%'>
-      <Row>
-        <Layout>
-          <Circle percent={40} strokeLinecap='round' width={150} height={150} />
-        </Layout>
-        <Layout flexBasis={16} />
-        <Layout>
-          <Circle percent={40} width={150} height={150} />
-        </Layout>
-      </Row>
-    </Layout>
-  </Column>
-)
-
-LineCap.story = {
+export const LineCap: StoryObj = {
   name: 'Форма на концах',
+  render: () => (
+    <Column width='400px'>
+      <Layout>
+        <Line percent={40} strokeLinecap='round' trailLinecap='round' />
+      </Layout>
+      <Layout flexBasis='16px' />
+      <Layout>
+        <Line percent={40} />
+      </Layout>
+      <Layout flexBasis='16px' />
+      <Layout width='100%'>
+        <Row>
+          <Layout>
+            <Circle percent={40} strokeLinecap='round' width='150px' height='150px' />
+          </Layout>
+          <Layout flexBasis='16px' />
+          <Layout>
+            <Circle percent={40} width='150px' height='150px' />
+          </Layout>
+        </Row>
+      </Layout>
+    </Column>
+  ),
 }
 
-export const MultyLines = () => (
-  <Column width={400}>
-    <Layout>
-      <Line percent={[20, 50, 100]} strokeColor={['#1890ff', '#52c41a', '#ff4d4f']} />
-    </Layout>
-    <Layout flexBasis={16} />
-    <Layout width='100%'>
-      <Circle
-        percent={[33, 33, 34]}
-        strokeLinecap='square'
-        strokeColor={['#1890ff', '#52c41a', '#ff4d4f']}
-        width={200}
-        height={200}
-      />
-    </Layout>
-  </Column>
-)
-
-MultyLines.story = {
+export const MultyLines: StoryObj = {
   name: 'Несколько сегментов',
+  render: () => (
+    <Column width='400px'>
+      <Layout>
+        <Line percent={[20, 50, 100]} strokeColor={['$red', '$blueProtective', '$green']} />
+      </Layout>
+      <Layout flexBasis='16px' />
+      <Layout width='100%'>
+        <Circle
+          percent={[33, 33, 34]}
+          strokeLinecap='square'
+          strokeColor={['#1890ff', '#52c41a', '#ff4d4f']}
+          width='200px'
+          height='200px'
+        />
+      </Layout>
+    </Column>
+  ),
 }
 
-export const Gradient = () => (
-  <Column width={400}>
-    <Layout>
-      <Line
-        percent={[20, 50, 100]}
-        strokeColor={[
-          { direction: 'to left', from: 'purple', to: 'pink' },
-          { '100%': '#108ee9', '0%': '#87d068' },
-          { '0%': 'red', '100%': 'yellow' },
-        ]}
-      />
-    </Layout>
-    <Layout flexBasis={16} />
-    <Layout width='100%'>
-      <Circle
-        percent={[33, 33, 34]}
-        strokeColor={[
-          { '0%': 'purple', '100%': 'pink' },
-          { '0%': 'red', '100%': 'yellow' },
-          { '100%': '#108ee9', '0%': '#87d068' },
-        ]}
-        width={200}
-        height={200}
-      />
-    </Layout>
-  </Column>
-)
-
-Gradient.story = {
+export const Gradient: StoryObj = {
   name: 'Градиенты',
+  render: () => (
+    <Column width='400px'>
+      <Layout>
+        <Line
+          percent={[20, 50, 100]}
+          strokeColor={[
+            { direction: 'to left', from: 'purple', to: 'pink' },
+            { '100%': '#108ee9', '0%': '#87d068' },
+            { '0%': 'red', '100%': 'yellow' },
+          ]}
+        />
+      </Layout>
+      <Layout flexBasis='16px' />
+      <Layout width='100%'>
+        <Circle
+          percent={[33, 33, 34]}
+          strokeColor={[
+            { '0%': 'purple', '100%': 'pink' },
+            { '0%': 'red', '100%': 'yellow' },
+            { '100%': '#108ee9', '0%': '#87d068' },
+          ]}
+          width='200px'
+          height='200px'
+        />
+      </Layout>
+    </Column>
+  ),
 }
 
-export const CircleGap = () => (
-  <Column width={400}>
-    <Layout>
-      <Circle percent={40} gapDegree={70} width={200} height={200} />
-    </Layout>
-    <Layout flexBasis={16} />
-    <Layout width='100%'>
-      <Circle percent={40} gapDegree={70} gapPosition='bottom' width={200} height={200} />
-    </Layout>
-  </Column>
-)
-
-CircleGap.story = {
+export const CircleGap: StoryObj = {
   name: 'Разрыв круга',
+  render: () => (
+    <Column width='400px'>
+      <Layout>
+        <Circle percent={40} gapDegree={70} width='200px' height='200px' />
+      </Layout>
+      <Layout flexBasis='16px' />
+      <Layout width='100%'>
+        <Circle percent={40} gapDegree={70} gapPosition='bottom' width='200px' height='200px' />
+      </Layout>
+    </Column>
+  ),
 }

@@ -1,16 +1,14 @@
-/* eslint-disable no-param-reassign */
-
-import { useTheme }          from '@emotion/react'
-
 import React                 from 'react'
 import { FunctionComponent } from 'react'
 import { PropsWithChildren } from 'react'
 import { useState }          from 'react'
 
-import { CircleProps }       from './circle.interfaces'
-import { getGradientId }     from './utils'
-import { getPathStyles }     from './utils'
-import { toArray }           from './utils'
+import { vars }              from '@atls-ui-parts/theme'
+
+import { CircleProps }       from './circle.interfaces.js'
+import { getGradientId }     from './circle.utils.js'
+import { getPathStyles }     from './circle.utils.js'
+import { toArray }           from './circle.utils.js'
 
 const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
   trailWidth,
@@ -26,7 +24,6 @@ const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
   children,
   ...props
 }) => {
-  const theme: any = useTheme() || {}
   const gradientId = getGradientId(strokeColor)
   const { pathString, pathStyle } = getPathStyles(
     0,
@@ -49,7 +46,7 @@ const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
     return newKey
   }
 
-  const getThemeColor = (color) => (theme.colors && theme.colors[color]) || color
+  const getThemeColor = (color) => (vars.colors && vars.colors[color]) || color
 
   trailColor = getThemeColor(trailColor)
   strokeColor = getThemeColor(strokeColor)

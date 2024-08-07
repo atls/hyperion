@@ -1,5 +1,5 @@
-import { ProgressLinecap }         from '../progress.interfaces'
-import { ProgressStringGradients } from '../progress.interfaces'
+import { ProgressLinecap }         from '../progress.interfaces.js'
+import { ProgressStringGradients } from '../progress.interfaces.js'
 
 export type GapPositionType = 'top' | 'left' | 'right' | 'bottom'
 

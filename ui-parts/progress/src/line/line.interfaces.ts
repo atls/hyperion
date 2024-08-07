@@ -1,5 +1,6 @@
-import { ProgressGradient } from '../progress.interfaces'
-import { ProgressLinecap }  from '../progress.interfaces'
+import { LineContainerSprinkles } from '../line-container/line-container.css.js'
+import { ProgressGradient }       from '../progress.interfaces.js'
+import { ProgressLinecap }        from '../progress.interfaces.js'
 
 export interface LineProps {
   percent: number | Array<number>
@@ -7,5 +8,5 @@ export interface LineProps {
   strokeWeight?: number
   strokeLinecap?: ProgressLinecap
   trailLinecap?: ProgressLinecap
-  trailColor?: string
+  trailColor?: LineContainerSprinkles['color']
 }

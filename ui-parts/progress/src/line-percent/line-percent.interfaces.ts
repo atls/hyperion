@@ -1,7 +1,10 @@
-import { ProgressLinecap } from '../progress.interfaces'
+import { HTMLAttributes }       from 'react'
 
-export interface LinePercentElementProps {
-  backgroundImage?: string
-  backgroundColor?: string
+import { ProgressLinecap }      from '../progress.interfaces.js'
+import { LinePercentSprinkles } from './line-percent.css.js'
+
+export interface LinePercentProps
+  extends Omit<HTMLAttributes<HTMLDivElement>, 'color'>,
+    LinePercentSprinkles {
   strokeLinecap?: ProgressLinecap
 }
