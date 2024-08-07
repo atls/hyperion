@@ -4,8 +4,8 @@ import { useCallback }          from 'react'
 import { useEffect }            from 'react'
 import { useState }             from 'react'
 
-import { OnChangeCallback }     from './interfaces'
-import { UseSwitchStateResult } from './interfaces'
+import { OnChangeCallback }     from './interfaces.js'
+import { UseSwitchStateResult } from './interfaces.js'
 
 export const useSwitchState = (
   defaultValue: boolean = false,

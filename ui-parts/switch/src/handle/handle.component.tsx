@@ -1,8 +1,19 @@
-import styled               from '@emotion/styled'
+import React                from 'react'
+import { clsx }             from 'clsx'
 
-import { HandleElement }    from './handle.element'
-import { baseHandleStyles } from './handle.styles'
+import { baseHandleStyles } from './handle.styles.css.js'
+import { handleSprinkles }  from './handle.styles.css.js'
 
-const Handle = styled(HandleElement)(baseHandleStyles)
+export const Handle = ({ children, ...props }) => {
+  const { className, style, otherProps } = handleSprinkles(props)
 
-export { Handle }
+  return (
+    <button
+      {...otherProps}
+      className={clsx(baseHandleStyles, otherProps?.className, className)}
+      style={{ ...style, ...otherProps?.style }}
+    >
+      {children}
+    </button>
+  )
+}
