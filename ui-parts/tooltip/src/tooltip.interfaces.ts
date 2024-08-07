@@ -1,13 +1,15 @@
+import { ReactElement }    from 'react'
+import { ReactNode }       from 'react'
 import { UseLayerOptions } from 'react-laag'
 import { Placement }       from 'react-laag'
 
-import { ArrowOptions }    from './container'
+import { ArrowOptions }    from './container/index.js'
 
 export type TooltipTrigger = 'click' | 'hover' | 'menu'
 
-export type ContainerFunction = (close: () => void) => React.ReactElement
+export type ContainerFunction = (close: VoidFunction) => ReactElement
 
-export type ChildrenFunction = (trigger: boolean, close: () => void) => React.ReactElement
+export type ChildrenFunction = (trigger: boolean, close: VoidFunction) => ReactElement
 
 type OmitOptions = 'placement' | 'onOutsideClick' | 'isOpen' | 'container' | 'trigger'
 
@@ -20,11 +22,11 @@ export interface UseTooltipOptions extends Omit<UseLayerOptions, OmitOptions> {
   closeOnOutsideClick?: boolean
   animate?: boolean
   isOpen?: boolean
-  container?: React.ReactElement | ContainerFunction
+  container?: ReactElement | ContainerFunction
   arrowOptions?: ArrowOptions
 }
 
 export interface TooltipProps extends UseTooltipOptions {
-  text?: string | number
-  children: React.ReactElement | ChildrenFunction
+  text?: ReactNode
+  children: ReactElement | ChildrenFunction
 }

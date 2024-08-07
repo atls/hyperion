@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const useContextMenu = (): [boolean, () => void, { onContextMenu: (event: any) => void }] => {
+export const useContextMenu = () => {
   const [isOpened, setOpened] = useState(false)
 
   const close = () => setOpened(false)
@@ -12,7 +12,5 @@ const useContextMenu = (): [boolean, () => void, { onContextMenu: (event: any) =
     },
   }
 
-  return [isOpened, close, contextMenuProps]
+  return [isOpened, close, contextMenuProps] as const
 }
-
-export { useContextMenu }
