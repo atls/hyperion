@@ -4,7 +4,7 @@ import { useState }             from 'react'
 
 import { getContentDimensions } from '@atls-ui-parts/dom'
 
-import { UseScaleResult }       from './scalable-content.interfaces'
+import { UseScaleResult }       from './use-scale.interfaces.js'
 
 export const useScale = (): UseScaleResult => {
   const ref = useRef<HTMLDivElement>(null)
