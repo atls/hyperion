@@ -1,8 +1,8 @@
-import { CSSObject } from '@emotion/css'
+import { style } from '@vanilla-extract/css'
 
-export const baseItemLabelStyles: CSSObject = {
+export const itemLabelStyles = style({
   textOverflow: 'ellipsis',
   overflow: 'hidden',
   padding: '0 8px',
   whiteSpace: 'nowrap',
-}
+})

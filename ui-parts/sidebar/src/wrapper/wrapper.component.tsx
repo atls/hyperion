@@ -1,10 +1,13 @@
-import styled                      from '@emotion/styled'
+import React                   from 'react'
+import { FC }                  from 'react'
+import { clsx }                from 'clsx'
 
-import { WrapperElement }          from './wrapper.element'
-import { ifPinnedWrapperModifier } from './wrapper.styles'
-import { baseWrapperStyles }       from './wrapper.styles'
+import { WrapperProps }        from './wrapper.interfaces.js'
+import { pinnedWrapperStyles } from './wrapper.css.js'
+import { baseWrapperStyles }   from './wrapper.css.js'
 
-// @ts-ignore
-const Wrapper = styled(WrapperElement)(baseWrapperStyles, ifPinnedWrapperModifier())
-
-export { Wrapper }
+export const Wrapper: FC<WrapperProps> = ({ children, pinned, className, ...props }) => (
+  <div className={clsx(className, baseWrapperStyles, pinned && pinnedWrapperStyles)} {...props}>
+    {children}
+  </div>
+)

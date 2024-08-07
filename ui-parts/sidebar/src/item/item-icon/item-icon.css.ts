@@ -1,10 +1,10 @@
-import { CSSObject } from '@emotion/css'
+import { style } from '@vanilla-extract/css'
 
-export const baseItemIconStyles: CSSObject = {
+export const itemIconStyles = style({
   height: '100%',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   flexBasis: 80,
   flexShrink: 0,
-}
+})
