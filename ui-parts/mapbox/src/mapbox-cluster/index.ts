@@ -1,2 +1,2 @@
-export * from './marker-cluster.options'
-export * from './marker-cluster'
+export * from './marker-cluster.options.js'
+export * from './marker-cluster.js'
