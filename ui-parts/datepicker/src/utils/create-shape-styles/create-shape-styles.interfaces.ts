@@ -1,3 +1,5 @@
+import { CSSProperties } from 'react'
+
 export interface ShapeStyles {
   dividerPosition?: 'middle' | 'bottom' | 'none'
   dividerWidth?: number | string
@@ -8,18 +10,18 @@ export interface ShapeStyles {
   fontSize?: number | string
   fontFamily?: string
   fontStyle?: string
-  fontWeight?: string
+  fontWeight?: CSSProperties['fontWeight']
   inputSize?: number
   inputBorderWidth?: number | string
   inputBorderRadius?: number | string
   inputPadding?: number | string
   dayNameFontFamily?: string
   dayNameFontStyle?: string
-  dayNameFontWeight?: string
+  dayNameFontWeight?: CSSProperties['fontWeight']
   dayNameFontSize?: number | string
   currentMonthPadding?: number | string
   currentMonthFontFamily?: string
-  currentMonthFontWeight?: string
+  currentMonthFontWeight?: CSSProperties['fontWeight']
   currentMonthFontStyle?: string
   currentMonthFontSize?: number | string
 }

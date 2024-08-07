@@ -1,9 +1,11 @@
-import { ShapeStyles } from './create-shape-styles.interfaces.js'
+import { CSSProperties } from 'react'
+
+import { ShapeStyles }   from './create-shape-styles.interfaces.js'
 
 export const createHeaderShapeStyles = (
   padding?: number | string,
   fontFamily?: string,
-  fontWeight?: string,
+  fontWeight?: CSSProperties['fontWeight'],
   fontStyle?: string,
   fontSize?: number | string
 ) => ({
@@ -25,10 +27,10 @@ export const createCellShapeStyles = (
   fontSize?: number | string,
   fontFamily?: string,
   fontStyle?: string,
-  fontWeight?: string,
+  fontWeight?: CSSProperties['fontWeight'],
   dayNameFontFamily?: string,
   dayNameFontStyle?: string,
-  dayNameFontWeight?: string,
+  dayNameFontWeight?: CSSProperties['fontWeight'],
   dayNameFontSize?: number | string
 ) => ({
   '.react-datepicker__day-name': {
@@ -82,7 +84,7 @@ export const createInputShapeStyles = (
   borderWidth?: number | string,
   padding?: number | string,
   fontSize?: number | string,
-  fontWeight?: string,
+  fontWeight?: CSSProperties['fontWeight'],
   fontFamily?: string,
   borderRadius?: number | string
 ) => ({

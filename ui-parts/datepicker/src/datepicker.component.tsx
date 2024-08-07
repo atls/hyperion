@@ -28,5 +28,5 @@ export const Datepicker: FC<DatepickerProps> = ({ withBaseStyle = true, ...props
     }
   }, [withBaseStyle, props])
 
-  return <DatepickerComponent {...props} />
+  return <DatepickerComponent.default {...props} />
 }
