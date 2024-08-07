@@ -2,7 +2,10 @@
   "name": "@atls-ui-parts/next-image",
   "version": "0.1.2",
   "license": "BSD-3-Clause",
-  "main": "src/index.ts",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "files": [
     "dist"
   ],
@@ -11,24 +14,31 @@
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
   },
+  "dependencies": {
+    "clsx": "2.1.1"
+  },
   "devDependencies": {
-    "@emotion/styled": "11.11.0",
-    "@types/jest": "29.5.4",
     "@types/react": "18.2.48",
-    "@types/styled-system": "5.1.22",
-    "next": "12.3.4",
-    "react": "18.2.0",
-    "styled-system": "5.1.5"
+    "@vanilla-extract/css": "1.15.3",
+    "next": "14.1.0"
   },
   "peerDependencies": {
-    "@emotion/styled": "11.11.0",
-    "next": "^14.1.0",
-    "react": "18.2.0",
-    "styled-system": "5.1.5"
+    "@vanilla-extract/css": "*",
+    "@vanilla-extract/dynamic": "*",
+    "react": "*",
+    "react-dom": "*"
   },
   "publishConfig": {
     "access": "public",
+    "exports": {
+      "./package.json": "./package.json",
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
     "main": "dist/index.js",
-    "typings": "dist/index.d.ts"
+    "types": "dist/index.d.ts"
   }
 }
