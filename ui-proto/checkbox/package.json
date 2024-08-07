@@ -14,7 +14,7 @@
   "dependencies": {
     "@atls-ui-parts/checkbox": "workspace:*",
     "@atls-ui-parts/conditional-render": "workspace:*",
-    "@atls-ui-parts/hidden-input": "workspace:*",
+    "@atls-ui-parts/input": "workspace:*",
     "@atls-ui-proto/layout": "workspace:*",
     "styled-system": "5.1.5",
     "styled-tools": "1.7.2"
