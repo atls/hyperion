@@ -26,8 +26,8 @@ Text.defaultProps = {
   fontWeight: 'normal',
   fontFamily: 'primary',
   fontSize: 'normal',
-  color: 'text.primary',
   lineHeight: 'normal',
+  color: 'text.primary',
   display: 'inline-flex',
 }
 

@@ -1,1 +1,1 @@
-export * from './portal.component'
+export * from './portal.component.js'
