@@ -1,15 +1,15 @@
-import { FunctionComponent } from 'react'
+import { FC }                from 'react'
 import { PropsWithChildren } from 'react'
 import { useEffect }         from 'react'
 import { useRef }            from 'react'
 import { createPortal }      from 'react-dom'
 
-const Portal: FunctionComponent<PropsWithChildren<any>> = ({ children }) => {
+export const Portal: FC<PropsWithChildren> = ({ children }) => {
   if (typeof window === 'undefined') {
     return null
   }
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const portal = useRef(document.createElement('div'))
+  const portal = useRef<HTMLDivElement>(document.createElement('div'))
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
@@ -22,8 +22,5 @@ const Portal: FunctionComponent<PropsWithChildren<any>> = ({ children }) => {
     }
   }, [portal])
 
-  // @ts-ignore
   return createPortal(children, portal.current)
 }
-
-export { Portal }
