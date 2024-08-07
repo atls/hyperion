@@ -1,5 +1,5 @@
-import { OnChangeCallback }  from './hooks'
-import { ThumbElementProps } from './thumb'
+import { OnChangeCallback }  from './hooks/index.js'
+import { ThumbElementProps } from './thumb/index.js'
 
 export interface SwitchCallbackProps {
   onChange?: OnChangeCallback
