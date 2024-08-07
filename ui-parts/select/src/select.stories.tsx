@@ -1,53 +1,33 @@
-import styled             from '@emotion/styled'
+import { Meta }     from '@storybook/react'
+import { StoryObj } from '@storybook/react'
 
-import React              from 'react'
-import { motion }         from 'framer-motion'
-import { nanoid }         from 'nanoid'
-import { useState }       from 'react'
+import React        from 'react'
+import { useState } from 'react'
 
-import { baseItemStyles } from './item'
-import { baseMenuStyles } from './menu'
-import { useSelect }      from './use-select.hook'
+import { Select }   from './select.component.js'
 
-export default { title: 'Components/Select' }
+const meta: Meta = {
+  title: 'Components/Select',
+  tags: ['autodocs'],
+}
 
-// TODO throw an error if they were created inside component where useSelect was called
-const Button = styled.button({ width: 200 })
-const Label = styled.label()
-const Menu = styled(motion.ul)(baseMenuStyles)
-const MenuItem = styled.li<{ highlighted: boolean }>(baseItemStyles, ({ highlighted }) => ({
-  backgroundColor: highlighted ? 'aqua' : 'transparent',
-  height: 40,
-}))
+export default meta
 
-export const Select = () => {
-  const items = ['Item1', 'Item2', 'Item3']
+export const Base: StoryObj = {
+  name: 'Базовый',
+  render: () => {
+    const items = ['Item1', 'Item2', 'Item3']
 
-  const [value, setValue] = useState('Placeholder')
+    const [value, setValue] = useState('Item1')
 
-  const { getMenuItemProps, labelProps, buttonProps, menuProps, renderMenu, highlightedIndex } =
-    useSelect({
-      items,
-      onChange: setValue,
-    })
-
-  return (
-    <>
-      <Label {...labelProps}>Label</Label>
-      <Button {...buttonProps}>{value}</Button>
-      {renderMenu(
-        <Menu {...menuProps}>
-          {items.map((item, index) => (
-            <MenuItem
-              key={nanoid()}
-              highlighted={index === highlightedIndex}
-              {...getMenuItemProps(item, index)}
-            >
-              {item}
-            </MenuItem>
-          ))}
-        </Menu>
-      )}
-    </>
-  )
+    return (
+      <Select
+        label='Label'
+        placeholder='value'
+        value={value}
+        items={items}
+        onChangeValue={setValue}
+      />
+    )
+  },
 }

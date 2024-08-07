@@ -1,2 +1,5 @@
-export * from './select.interfaces'
-export * from './use-select.hook'
+export * from './button/index.js'
+export * from './item/index.js'
+export * from './menu/index.js'
+export * from './select.component.js'
+export * from './select.interfaces.js'
