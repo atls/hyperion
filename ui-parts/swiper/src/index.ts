@@ -1,2 +1,2 @@
-export * from './swiper'
-export * from './swiper-instance-exporter.component'
+export * from './swiper.component.js'
+export * from 'swiper/react'
