@@ -5,11 +5,11 @@ import { cloneElement }      from 'react'
 import { useMemo }           from 'react'
 import { useLayer }          from 'react-laag'
 
-import { Container }         from './container'
-import { UseTooltipOptions } from './tooltip.interfaces'
-import { useClick }          from './hooks'
-import { useContextMenu }    from './hooks'
-import { useHover }          from './hooks'
+import { Container }         from './container/index.js'
+import { UseTooltipOptions } from './tooltip.interfaces.js'
+import { useClick }          from './hooks/index.js'
+import { useContextMenu }    from './hooks/index.js'
+import { useHover }          from './hooks/index.js'
 
 const doNothing = () => {
   /** do nothing */

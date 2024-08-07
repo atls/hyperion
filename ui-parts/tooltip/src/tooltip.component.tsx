@@ -4,15 +4,11 @@ import { FC }                from 'react'
 import { PropsWithChildren } from 'react'
 import { cloneElement }      from 'react'
 
-import { Container }         from './container'
-import { TooltipProps }      from './tooltip.interfaces'
-import { useTooltip }        from './use-tooltip.hook'
+import { Container }         from './container/index.js'
+import { TooltipProps }      from './tooltip.interfaces.js'
+import { useTooltip }        from './use-tooltip.hook.js'
 
-export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({
-  children,
-  text = 'Text',
-  ...props
-}) => {
+export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({ children, text, ...props }) => {
   const { isOpen, close, triggerProps, render } = useTooltip({ ...props })
 
   const renderChildren = () => {
