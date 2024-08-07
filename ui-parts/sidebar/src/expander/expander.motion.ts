@@ -1,4 +1,6 @@
-export const expanderMotionVariants = {
+import { Variants } from 'framer-motion'
+
+export const expanderMotionVariants: Variants = {
   hidden: {
     width: 80,
     transition: {

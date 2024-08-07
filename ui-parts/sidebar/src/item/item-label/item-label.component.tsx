@@ -3,14 +3,14 @@ import { FC }              from 'react'
 import { HTMLAttributes }  from 'react'
 import { clsx }            from 'clsx'
 
-import { containerStyles } from './container.css.js'
+import { itemLabelStyles } from './item-label.css.js'
 
-export const Container: FC<HTMLAttributes<HTMLDivElement>> = ({
+export const ItemLabel: FC<HTMLAttributes<HTMLSpanElement>> = ({
   children,
   className,
   ...props
 }) => (
-  <div className={clsx(className, containerStyles)} {...props}>
+  <span className={clsx(className, itemLabelStyles)} {...props}>
     {children}
-  </div>
+  </span>
 )
