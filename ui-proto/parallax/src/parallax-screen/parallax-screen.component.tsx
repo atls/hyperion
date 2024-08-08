@@ -1,8 +1,27 @@
-import styled                       from '@emotion/styled'
+import React                        from 'react'
+import { Children }                 from 'react'
+import { HTMLAttributes }           from 'react'
+import { FC }                       from 'react'
+import { clsx }                     from 'clsx'
+import { cloneElement }             from 'react'
 
-import { ParallaxScreenElement }    from './parallax-screen.element'
-import { baseParallaxScreenStyles } from './parallax-screen.styles'
+import { useParallax }              from '../context/index.js'
+import { baseParallaxScreenStyles } from './parallax-screen.css.js'
 
-const ParallaxScreen = styled(ParallaxScreenElement)(baseParallaxScreenStyles)
+const ParallaxScreenContent = ({ children }: any) => {
+  const [, height] = useParallax()
 
-export { ParallaxScreen }
+  if (!height) return null
+
+  return Children.map(children, (child) => cloneElement(child, { height }))
+}
+
+export const ParallaxScreen: FC<HTMLAttributes<HTMLDivElement>> = ({
+  children,
+  className,
+  ...props
+}) => (
+  <div className={clsx(className, baseParallaxScreenStyles)} {...props}>
+    <ParallaxScreenContent>{children}</ParallaxScreenContent>
+  </div>
+)

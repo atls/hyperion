@@ -2,10 +2,10 @@ import { useContext }    from 'react'
 import { useEffect }     from 'react'
 import { useState }      from 'react'
 
-import { Context }       from './parallax.context'
-import { ParallaxStore } from './parallax.store'
+import { Context }       from './parallax.context.js'
+import { ParallaxStore } from './parallax.store.js'
 
-export const useParallax = (): any => {
+export const useParallax = () => {
   const store: ParallaxStore = useContext(Context)
 
   if (!store) {
@@ -22,5 +22,5 @@ export const useParallax = (): any => {
     }
   }, [store])
 
-  return [store.scrollY, store.windowHeight]
+  return [store.scrollY, store.windowHeight] as const
 }

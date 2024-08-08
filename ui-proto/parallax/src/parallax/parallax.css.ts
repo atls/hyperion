@@ -1,6 +1,6 @@
-import { styleFn } from 'styled-system'
+import { style } from '@vanilla-extract/css'
 
-export const baseParallaxStyles: styleFn = () => ({
+export const baseParallaxStyles = style({
   display: 'flex',
   alignItems: 'flex-start',
   boxSizing: 'border-box',
