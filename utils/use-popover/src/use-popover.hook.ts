@@ -1,4 +1,4 @@
-import { PlacementType } from 'react-laag/dist/PlacementType'
+import { PlacementType } from 'react-laag/dist/PlacementType.js'
 import { useState }      from 'react'
 import { useLayer }      from 'react-laag'
 
