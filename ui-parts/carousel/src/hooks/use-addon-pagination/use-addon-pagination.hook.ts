@@ -42,6 +42,7 @@ export const useAddonPagination = ({
 
       return dots
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [slidesLength, activeSlide, slideTo, centered, loop, slidesPerView]
   )
 

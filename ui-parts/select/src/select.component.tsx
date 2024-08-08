@@ -28,8 +28,9 @@ export const Select: React.FC<SelectProps> = ({
 
   return (
     <>
+      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
       <label {...labelProps}>{label}</label>
-      <button {...buttonProps} className={baseButtonStyles}>
+      <button type='button' {...buttonProps} className={baseButtonStyles}>
         {value}
       </button>
       {renderMenu(
@@ -41,6 +42,7 @@ export const Select: React.FC<SelectProps> = ({
         >
           {items.map((item, index) => (
             <MenuItem
+              /* eslint-disable-next-line react/no-array-index-key */
               key={`${item}-${index}`}
               highlighted={index === highlightedIndex}
               {...getMenuItemProps(item, index)}

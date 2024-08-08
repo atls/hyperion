@@ -21,5 +21,5 @@ export const Switch = ({ disabled, checked, onChange }) => (
 Switch.args = {
   disabled: false,
   checked: false,
-  onChange: () => {},
+  onChange: () => undefined,
 }
