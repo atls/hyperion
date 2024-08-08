@@ -1,3 +1,3 @@
-export * from './popover.component'
-export * from './popover.interfaces'
-export * from './use-popover.hook'
+export * from './popover.component.js'
+export * from './popover.interfaces.js'
+export * from './use-popover.hook.js'

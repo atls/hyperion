@@ -1,2 +1,1 @@
-export * from './container-inner.component'
-export * from './container-inner.element'
+export * from './container-inner.component.js'

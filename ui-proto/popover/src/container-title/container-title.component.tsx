@@ -1,6 +1,11 @@
-import styled                       from '@emotion/styled'
+import React                    from 'react'
+import { FC }                   from 'react'
+import { HTMLAttributes }       from 'react'
 
-import { ContainerTitleElement }    from './container-title.element'
-import { baseContainerTitleStyles } from './container-title.styles'
+import { containerTitleStyles } from './container-title.css.js'
 
-export const ContainerTitle = styled(ContainerTitleElement)(baseContainerTitleStyles)
+export const ContainerTitle: FC<HTMLAttributes<HTMLDivElement>> = ({ children, ...props }) => (
+  <div className={containerTitleStyles} {...props}>
+    {children}
+  </div>
+)

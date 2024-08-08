@@ -1,6 +1,11 @@
-import styled                       from '@emotion/styled'
+import React                    from 'react'
+import { FC }                   from 'react'
+import { HTMLAttributes }       from 'react'
 
-import { ContainerInnerElement }    from './container-inner.element'
-import { baseContainerInnerStyles } from './container-inner.styles'
+import { containerInnerStyles } from './container-inner.css.js'
 
-export const ContainerInner = styled(ContainerInnerElement)(baseContainerInnerStyles)
+export const ContainerInner: FC<HTMLAttributes<HTMLDivElement>> = ({ children, ...props }) => (
+  <div className={containerInnerStyles} {...props}>
+    {children}
+  </div>
+)
