@@ -1,1 +1,1 @@
-export * from './process-directory'
+export * from './process-directory.js'

@@ -1,1 +1,1 @@
-export * from './merge-locales'
+export * from './merge-locales.js'

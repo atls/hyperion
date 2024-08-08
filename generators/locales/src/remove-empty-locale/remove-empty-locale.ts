@@ -5,7 +5,7 @@ import { rmSync }                from 'fs'
 import { unlinkSync }            from 'fs'
 import { join }                  from 'path'
 
-import { RemoveEmptyLocaleType } from './remove-empty-locale.interfaces'
+import { RemoveEmptyLocaleType } from './remove-empty-locale.interfaces.js'
 
 export const removeEmptyLocale: RemoveEmptyLocaleType = (
   outputFilePath,

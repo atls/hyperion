@@ -4,7 +4,7 @@ import { mkdirSync }        from 'fs'
 import { writeFileSync }    from 'fs'
 import { dirname }          from 'path'
 
-import { MergeLocalesType } from './merge-locales.interfaces'
+import { MergeLocalesType } from './merge-locales.interfaces.js'
 
 export const mergeLocales: MergeLocalesType = (files, outputPath) => {
   if (!files.length) return
