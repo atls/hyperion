@@ -2,6 +2,7 @@ import { Meta }              from '@storybook/react'
 import { StoryObj }          from '@storybook/react'
 
 import React                 from 'react'
+import { FC }                from 'react'
 import { HTMLAttributes }    from 'react'
 import { forwardRef }        from 'react'
 
@@ -51,24 +52,26 @@ export const Base: StoryObj = {
 const TestContent = ({ onClick }) => (
   <div>
     <div>Content</div>
-    <div className={closeButtonStyles} onClick={onClick}>
+    <button type='button' className={closeButtonStyles} onClick={onClick}>
       Close
-    </div>
+    </button>
   </div>
 )
 
+const PopoverHook: FC = () => {
+  const { triggerProps, render, close, isOpen } = usePopover({ animate: true })
+
+  return (
+    <Column fill alignItems='center'>
+      <Layout flexBasis='100px' />
+      {isOpen && render({ title: 'Title', content: <TestContent onClick={close} /> })}
+      <TestButton {...triggerProps}>Hook</TestButton>
+      <Layout flexBasis='100px' />
+    </Column>
+  )
+}
+
 export const Hook: StoryObj = {
   name: 'Хук',
-  render: () => {
-    const { triggerProps, render, close, isOpen } = usePopover({ animate: true })
-
-    return (
-      <Column fill alignItems='center'>
-        <Layout flexBasis='100px' />
-        {isOpen && render({ title: 'Title', content: <TestContent onClick={close} /> })}
-        <TestButton {...triggerProps}>Hook</TestButton>
-        <Layout flexBasis='100px' />
-      </Column>
-    )
-  },
+  render: () => <PopoverHook />,
 }

@@ -11,6 +11,8 @@ import { LinkSprinkles }     from './link.styles.css.js'
 import { baseLinkStyles }    from './link.styles.css.js'
 import { linkSprinkles }     from './link.styles.css.js'
 
+const BaseLink = NextLink.default
+
 export const Link = forwardRef<HTMLAnchorElement, PropsWithChildren<LinkProps & LinkSprinkles>>((
   { children, path, ...props },
   ref
@@ -18,7 +20,7 @@ export const Link = forwardRef<HTMLAnchorElement, PropsWithChildren<LinkProps & 
   const { className, style, otherProps } = linkSprinkles(props)
 
   return (
-    <NextLink.default href={path}>
+    <BaseLink href={path}>
       <a
         ref={ref}
         {...otherProps}
@@ -27,6 +29,6 @@ export const Link = forwardRef<HTMLAnchorElement, PropsWithChildren<LinkProps & 
       >
         {children}
       </a>
-    </NextLink.default>
+    </BaseLink>
   )
 })

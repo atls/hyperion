@@ -6,11 +6,13 @@ import { forwardRef }             from 'react'
 import { NextImageProps }         from './next-image.interfaces.js'
 import { nextImageWrapperStyles } from './next-image.css.js'
 
+const BaseImage = Image.default
+
 export const NextImage = forwardRef<HTMLImageElement, NextImageProps>((
   { wrapperClassName, ...props },
   ref
 ) => (
   <div className={clsx(nextImageWrapperStyles, wrapperClassName)}>
-    <Image.default ref={ref} {...props} />
+    <BaseImage ref={ref} {...props} />
   </div>
 ))

@@ -29,10 +29,11 @@ const config = {
         plugins: [
           new VanillaExtractPlugin(),
           new MiniCssExtractPlugin(),
-          new NormalModuleReplacementPlugin(new RegExp(/\.js$/), function (
+          new NormalModuleReplacementPlugin(/\.js$/, (
             /** @type {{ request: string }} */
             resource: { request: string }
-          ) {
+          ) => {
+            // eslint-disable-next-line no-param-reassign
             resource.request = resource.request.replace('.js', '')
           }),
         ],
@@ -75,13 +76,13 @@ const config = {
   features: {
     buildStoriesJson: true,
   },
-  webpackFinal: async (config) => {
+  webpackFinal: async (webpackConfig) => {
     // eslint-disable-next-line no-param-reassign
-    config.resolve.fallback.assert = false
+    webpackConfig.resolve.fallback.assert = false
     // eslint-disable-next-line no-param-reassign
-    config.resolve.fallback.url = false
+    webpackConfig.resolve.fallback.url = false
 
-    return config
+    return webpackConfig
   },
 }
 export default config

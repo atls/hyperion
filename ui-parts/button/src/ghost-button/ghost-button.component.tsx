@@ -13,6 +13,7 @@ export const GhostButton = forwardRef<HTMLButtonElement, ButtonProps>((
 ) => (
   <button
     ref={ref}
+    type='button'
     className={clsx(className, baseStyles, nulledGhostStyles, shapeGhostStyles)}
     {...props}
   >

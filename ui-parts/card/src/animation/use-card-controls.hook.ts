@@ -69,7 +69,7 @@ export const useCardControls = ({
     if (cardNode?.current) {
       setCardHeight(getContentDimensions(cardNode.current).height)
     }
-  })
+  }, [])
 
   const cardProps = {
     animate: { y: slideInPosition },

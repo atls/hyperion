@@ -38,7 +38,7 @@ type Story = StoryObj<typeof CheckboxComponent>
 
 export const Checkbox: Story = {
   args: {
-    onCheck: () => {},
+    onCheck: () => undefined,
     active: false,
     labelPosition: 'end',
     size: 'medium',

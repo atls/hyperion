@@ -27,7 +27,6 @@
     "prettier": "2.8.8"
   },
   "devDependencies": {
-    "@atls-ui-parts/button": "workspace:*",
     "@types/babel__standalone": "7.1.7",
     "@types/prettier": "2.7.3",
     "@types/react": "18.2.48"

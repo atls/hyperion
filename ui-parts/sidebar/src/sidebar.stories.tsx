@@ -1,16 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Meta }            from '@storybook/react'
 import { StoryObj }        from '@storybook/react'
-import { Column }          from '@ui/layout'
-import { Layout }          from '@ui/layout'
 import { faCog }           from '@fortawesome/free-solid-svg-icons'
 
 import React               from 'react'
 
-import { Item }            from './item'
-import { ItemIcon }        from './item'
-import { ItemLabel }       from './item'
-import { Sidebar }         from './sidebar.component'
+import { Column }          from '@atls-ui-parts/layout'
+import { Layout }          from '@atls-ui-parts/layout'
+
+import { Item }            from './item/index.js'
+import { ItemIcon }        from './item/index.js'
+import { ItemLabel }       from './item/index.js'
+import { Sidebar }         from './sidebar.component.js'
 
 const meta: Meta = {
   title: 'Components/Sidebar',

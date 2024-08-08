@@ -9,7 +9,7 @@ export const Indicator = forwardRef<HTMLButtonElement, IndicatorProps>((
   { children, className, ...props },
   ref
 ) => (
-  <button ref={ref} className={clsx(className, baseIndicatorStyles)} {...props}>
+  <button ref={ref} className={clsx(className, baseIndicatorStyles)} type='button' {...props}>
     {children}
   </button>
 ))
