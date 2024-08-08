@@ -1,1 +1,1 @@
-export * from './appearance.style-generator'
+export * from './appearance.style-generator.js'
