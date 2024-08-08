@@ -4,10 +4,15 @@ import { PropsWithChildren } from 'react'
 import { FC }                from 'react'
 import { cloneElement }      from 'react'
 
-import { PopoverProps }      from './popover.interfaces'
-import { usePopover }        from './use-popover.hook'
+import { PopoverProps }      from './popover.interfaces.js'
+import { usePopover }        from './use-popover.hook.js'
 
-const Popover: FC<PropsWithChildren<PopoverProps>> = ({ title, content, children, ...props }) => {
+export const Popover: FC<PropsWithChildren<PopoverProps>> = ({
+  title,
+  content,
+  children,
+  ...props
+}) => {
   const { isOpen, close, triggerProps, render } = usePopover({ ...props })
 
   const renderChildren = () => {
@@ -29,5 +34,3 @@ Popover.defaultProps = {
   triggerOffset: 15,
   showArrow: true,
 }
-
-export { Popover }

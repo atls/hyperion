@@ -1,54 +1,39 @@
-import styled         from '@emotion/styled'
+import { Meta }              from '@storybook/react'
+import { StoryObj }          from '@storybook/react'
 
-import React          from 'react'
+import React                 from 'react'
+import { HTMLAttributes }    from 'react'
+import { forwardRef }        from 'react'
 
-import { Column }     from '@atls-ui-parts/layout'
-import { Layout }     from '@atls-ui-parts/layout'
-import { Row }        from '@atls-ui-parts/layout'
+import { Column }            from '@atls-ui-parts/layout'
+import { Layout }            from '@atls-ui-parts/layout'
 
-import { Popover }    from './popover.component'
-import { usePopover } from './use-popover.hook'
+import { Popover }           from './popover.component.js'
+import { closeButtonStyles } from './popover.css.js'
+import { testButtonStyles }  from './popover.css.js'
+import { usePopover }        from './use-popover.hook.js'
 
-export default {
+const meta: Meta = {
   title: 'Components/Popover',
+  tags: ['autodocs'],
 }
 
-const TestButton = styled.div({
-  display: 'flex',
-  boxSizing: 'border-box',
-  alignItems: 'center',
-  justifyContent: 'center',
-  height: 32,
-  padding: '0px 16px',
-  color: 'rgba(0, 0, 0, 0.65)',
-  backgroundColor: '#fff',
-  border: '1px solid #d9d9d9',
-  cursor: 'pointer',
-  '&:hover, :focus': {
-    color: '#40a9ff',
-    borderColor: '#40a9ff',
-  },
-  '&:active': {
-    color: '#096dd9',
-    borderColor: '#096dd9',
-  },
-})
+export default meta
 
-const CloseButton = styled.div({
-  cursor: 'pointer',
-  color: '#1890ff',
-})
-
-const TestContent = ({ onClick }) => (
-  <div>
-    <div>Content</div>
-    <CloseButton onClick={onClick}>Close</CloseButton>
+const TestButton = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>((
+  { children, ...props },
+  ref
+) => (
+  <div ref={ref} className={testButtonStyles} {...props}>
+    {children}
   </div>
-)
+))
 
-export const Base = () => (
-  <Column height={200}>
-    <Layout minHeight={400} width={1000} pt={100} pl={150}>
+export const Base: StoryObj = {
+  name: 'Базовый',
+  render: () => (
+    <Column fill alignItems='center'>
+      <Layout flexBasis='100px' />
       <Popover
         title='Title'
         trigger='click'
@@ -56,29 +41,34 @@ export const Base = () => (
         closeOnOutsideClick={false}
         content={<div>Content</div>}
       >
-        <TestButton>Base</TestButton>
+        <TestButton>Click</TestButton>
       </Popover>
-    </Layout>
-  </Column>
+      <Layout flexBasis='100px' />
+    </Column>
+  ),
+}
+
+const TestContent = ({ onClick }) => (
+  <div>
+    <div>Content</div>
+    <div className={closeButtonStyles} onClick={onClick}>
+      Close
+    </div>
+  </div>
 )
 
-Base.story = {
-  name: 'Базовый',
-}
-
-export const Hook = () => {
-  const { triggerProps, render, close } = usePopover({ animate: true })
-
-  return (
-    <Row>
-      <Layout mt={50}>
-        {render({ title: 'Title', content: <TestContent onClick={close} /> })}
-        <TestButton {...triggerProps}>Hook</TestButton>
-      </Layout>
-    </Row>
-  )
-}
-
-Hook.story = {
+export const Hook: StoryObj = {
   name: 'Хук',
+  render: () => {
+    const { triggerProps, render, close, isOpen } = usePopover({ animate: true })
+
+    return (
+      <Column fill alignItems='center'>
+        <Layout flexBasis='100px' />
+        {isOpen && render({ title: 'Title', content: <TestContent onClick={close} /> })}
+        <TestButton {...triggerProps}>Hook</TestButton>
+        <Layout flexBasis='100px' />
+      </Column>
+    )
+  },
 }
