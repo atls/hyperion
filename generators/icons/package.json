@@ -15,7 +15,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-generators/utils": "workspace:*",
+    "@atls-ui-generators/utils": "0.0.6",
     "@atls/config-prettier": "0.0.5",
     "@atls/prettier-plugin": "0.0.7",
     "@babel/standalone": "7.22.20",
@@ -28,14 +28,9 @@
     "prettier": "2.8.8"
   },
   "devDependencies": {
-    "@atls-ui-parts/button": "workspace:*",
-    "@types/babel__standalone": "7.1.6",
+    "@types/babel__standalone": "7.1.7",
     "@types/fs-extra-promise": "1.0.12",
-    "@types/prettier": "2.7.3",
-    "styled-tools": "1.7.2"
-  },
-  "peerDependencies": {
-    "glob": "8.0.3"
+    "@types/prettier": "2.7.3"
   },
   "publishConfig": {
     "access": "public",

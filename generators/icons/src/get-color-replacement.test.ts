@@ -8,7 +8,7 @@ describe('generators', () => {
 
         expect(replacement).toEqual(
           expect.objectContaining({
-            '#000000': '{(theme.colors[props.color || 0] || props.color) || "#000000"}',
+            '#000000': '{(vars.colors[props.color || 0] || props.color) || "#000000"}',
           })
         )
       })
@@ -18,7 +18,7 @@ describe('generators', () => {
 
         expect(replacement).toEqual(
           expect.objectContaining({
-            '#000000': '{(theme.colors.icons[props.color || 0] || props.color) || "#000000"}',
+            '#000000': '{(vars.colors.icons[props.color || 0] || props.color) || "#000000"}',
           })
         )
       })
@@ -32,7 +32,7 @@ describe('generators', () => {
         expect(replacement).toEqual(
           expect.objectContaining({
             '#000000':
-              '{(theme.colors.icons.primary.some[props.color || 0] || props.color) || "#000000"}',
+              '{(vars.colors.icons.primary.some[props.color || 0] || props.color) || "#000000"}',
           })
         )
       })
