@@ -1,8 +1,8 @@
 import { existsSync }        from 'fs'
 import { readFileSync }      from 'fs'
 
-import { mergeLocales }      from '../merge-locales'
-import { removeEmptyLocale } from '../remove-empty-locale'
+import { mergeLocales }      from '../merge-locales/index.js'
+import { removeEmptyLocale } from '../remove-empty-locale/index.js'
 
 describe('Locale processing script', () => {
   describe('mergeLocales', () => {

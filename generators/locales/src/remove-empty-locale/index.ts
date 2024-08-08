@@ -1,1 +1,1 @@
-export * from './remove-empty-locale'
+export * from './remove-empty-locale.js'
