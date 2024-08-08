@@ -1,6 +1,6 @@
 import React     from 'react'
 
-import { Modal } from '.'
+import { Modal } from './modal.component.js'
 
 export default {
   title: 'Components/Modal',
