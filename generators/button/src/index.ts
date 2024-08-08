@@ -1,2 +1,2 @@
-export * from './button-generator.interfaces'
-export * from './style-generators'
+export * from './button-generator.interfaces.js'
+export * from './style-generators/index.js'
