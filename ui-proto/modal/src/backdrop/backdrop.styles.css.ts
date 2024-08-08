@@ -1,6 +1,6 @@
-import { CSSObject } from '@emotion/css'
+import { style } from '@vanilla-extract/css'
 
-export const baseBackdropStyles: CSSObject = {
+export const baseBackdropStyles = style({
   position: 'fixed',
   zIndex: -1,
   bottom: 0,
@@ -9,4 +9,4 @@ export const baseBackdropStyles: CSSObject = {
   right: 0,
   backgroundColor: 'rgba(0, 0, 0, 0.5)',
   WebkitTapHighlightColor: 'transparent',
-}
+})

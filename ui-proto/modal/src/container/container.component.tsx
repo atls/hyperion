@@ -1,8 +1,17 @@
-import styled                  from '@emotion/styled'
+import React                   from 'react'
+import { PropsWithChildren }   from 'react'
 
-import { ContainerElement }    from './container.element'
-import { baseContainerStyles } from './container.styles'
+import { baseContainerStyles } from './container.styles.css.js'
 
-const Container = styled(ContainerElement)(baseContainerStyles)
+const Container: React.FC<PropsWithChildren<React.HTMLAttributes<HTMLDivElement>>> = ({
+  children,
+  ...props
+}) => {
+  return (
+    <div className={baseContainerStyles} {...props}>
+      {children}
+    </div>
+  )
+}
 
 export { Container }

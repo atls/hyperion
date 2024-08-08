@@ -1,16 +1,21 @@
-import styled                     from '@emotion/styled'
+import React                      from 'react'
 
-import { BackdropElement }        from './backdrop.element'
-import { backdropMotionVariants } from './backdrop.motion'
-import { baseBackdropStyles }     from './backdrop.styles'
+import { BackdropElement }        from './backdrop.element.js'
+import { BackdropProps }          from './backdrop.interfaces.js'
+import { backdropMotionVariants } from './backdrop.motion.js'
+import { baseBackdropStyles }     from './backdrop.styles.css.js'
 
-const Backdrop = styled(BackdropElement)(baseBackdropStyles)
-
-Backdrop.defaultProps = {
-  variants: backdropMotionVariants,
-  animate: 'target',
-  initial: 'enter',
-  exit: 'exit',
+const Backdrop: React.FC<BackdropProps> = (props) => {
+  return (
+    <BackdropElement
+      className={baseBackdropStyles}
+      variants={backdropMotionVariants}
+      animate='target'
+      initial='enter'
+      exit='exit'
+      {...props}
+    />
+  )
 }
 
 export { Backdrop }
