@@ -1,21 +1,23 @@
-import styled                  from '@emotion/styled'
-
 import React                   from 'react'
+import { HTMLAttributes }      from 'react'
+import { FC }                  from 'react'
+import { clsx }                from 'clsx'
 import { useInView }           from 'react-intersection-observer'
 
-import { InViewBoxElement }    from './in-view-box.element'
-import { baseInViewBoxStyles } from './in-view-box.styles'
+import { Condition }           from '@atls-ui-parts/condition'
 
-const BaseInViewBox = styled(InViewBoxElement)(baseInViewBoxStyles)
+import { baseInViewBoxStyles } from './in-view-box.css.js'
 
-export const InViewBox = ({ children, ...props }) => {
-  const [ref, inView] = useInView({
-    triggerOnce: false,
-  })
+export const InViewBox: FC<HTMLAttributes<HTMLDivElement>> = ({
+  children,
+  className,
+  ...props
+}) => {
+  const [ref, inView] = useInView({ triggerOnce: false })
 
   return (
-    <BaseInViewBox ref={ref} {...props}>
-      {inView && children}
-    </BaseInViewBox>
+    <div ref={ref} className={clsx(className, baseInViewBoxStyles)} {...props}>
+      <Condition match={inView}>{children}</Condition>
+    </div>
   )
 }

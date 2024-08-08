@@ -1,50 +1,47 @@
-import styled                      from '@emotion/styled'
+import React                   from 'react'
+import { MotionValue }         from 'framer-motion'
+import { clsx }                from 'clsx'
+import { motion }              from 'framer-motion'
+import { forwardRef }          from 'react'
+import { useMemo }             from 'react'
 
-import React                       from 'react'
-import { FC }                      from 'react'
-import { useTransform }            from 'framer-motion'
-import { useMemo }                 from 'react'
+import { ParallaxBoxProps }    from './parallax-box.interfaces.js'
+import { useParallax }         from '../context/index.js'
+import { parallaxSprinkles }   from './parallax-box.css.js'
+import { getTransform }        from './parallax-box.utils.js'
+import { getTransformDisplay } from './parallax-box.utils.js'
 
-import { ParallaxBoxElement }      from './parallax-box.element'
-import { ParallaxBoxProps }        from './parallax-box.interfaces'
-import { ParallaxBoxElementProps } from './parallax-box.interfaces'
-import { useParallax }             from '../context'
+export const ParallaxBox = forwardRef<HTMLDivElement, ParallaxBoxProps>((
+  {
+    children,
+    inputRange,
+    pageNumber = 0,
+    animations = {},
+    ease = 'easeInOut',
+    heightMultiplier = 1,
+    ...props
+  },
+  ref
+) => {
+  const { className, style, otherProps } = parallaxSprinkles(props)
 
-export const BaseParallaxBox = styled(ParallaxBoxElement)<ParallaxBoxElementProps>()
-
-const easingFunctions = {
-  easeInOut: (x: number): number => -(Math.cos(Math.PI * x) - 1) / 2,
-  linear: (x: number): number => x,
-}
-
-const GetTransform = (scrollY, range, outputRange, ease) =>
-  useTransform(scrollY, range, outputRange, { ease: easingFunctions[ease] })
-
-const GetTransformDisplay = (display) =>
-  useTransform(display, (value: number) => (value > 0 ? 'flex' : 'none'))
-
-export const ParallaxBox: FC<ParallaxBoxProps> = ({
-  children,
-  inputRange,
-  pageNumber = 0,
-  animations = {},
-  ease = 'easeInOut',
-  heightMultiplier = 1,
-  ...props
-}) => {
   const [scrollY, windowHeight] = useParallax()
+
   const range = useMemo(
     () =>
       inputRange.map(
-        (item: number) =>
-          item * heightMultiplier * Number(windowHeight) + Number(windowHeight) * pageNumber
+        (item) => item * heightMultiplier * Number(windowHeight) + Number(windowHeight) * pageNumber
       ),
     [windowHeight, inputRange, pageNumber, heightMultiplier]
   )
-  const animatedStyles: any = useMemo(() => {
-    const values = {}
+
+  const animatedStyles = useMemo<Record<string, MotionValue<string | number>>>(() => {
+    const values: Record<string, MotionValue<string | number>> = {}
+
+    if (!scrollY) return values
+
     Object.keys(animations).forEach((key: string) => {
-      values[key] = GetTransform(scrollY, range, animations[key], ease)
+      values[key] = getTransform(scrollY, range, animations[key], ease)
     })
 
     return values
@@ -54,16 +51,21 @@ export const ParallaxBox: FC<ParallaxBoxProps> = ({
     if (!animatedStyles?.display) return {}
 
     return {
-      display: GetTransformDisplay(animatedStyles.display),
+      display: getTransformDisplay(animatedStyles.display),
     }
   }, [animatedStyles])
 
   return (
-    <BaseParallaxBox style={{ ...animatedStyles, ...displayStyle }} {...props}>
+    <motion.div
+      ref={ref}
+      {...otherProps}
+      className={clsx(className, otherProps?.className)}
+      style={{ ...style, ...otherProps?.style, ...animatedStyles, ...displayStyle }}
+    >
       {children}
-    </BaseParallaxBox>
+    </motion.div>
   )
-}
+})
 
 ParallaxBox.defaultProps = {
   display: 'flex',

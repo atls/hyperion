@@ -1,22 +1,17 @@
-import { ReactNode }     from 'react'
-import { LayoutProps }   from 'styled-system'
-import { FlexboxProps }  from 'styled-system'
-import { PositionProps } from 'styled-system'
-import { SpaceProps }    from 'styled-system'
+import { HTMLMotionProps }   from 'framer-motion'
 
-export type ParallaxBoxElementProps = FlexboxProps & LayoutProps & PositionProps & SpaceProps
+import { ParallaxSprinkles } from './parallax-box.css.js'
 
 export type ParallaxEaseType = 'linear' | 'easeInOut'
+
 export type ParallaxAnimationsType = {
   [key: string]: Array<number | string>
 }
 
-export interface BaseParallaxBoxProps {
-  children: ReactNode
-  inputRange: Array<number>
+export interface ParallaxBoxProps extends HTMLMotionProps<'div'>, ParallaxSprinkles {
+  inputRange: number[]
   animations?: ParallaxAnimationsType
   pageNumber?: number
   ease?: ParallaxEaseType
+  heightMultiplier?: number
 }
-
-export type ParallaxBoxProps = BaseParallaxBoxProps & ParallaxBoxElementProps

@@ -1,3 +1,3 @@
-export * from './parallax-box.component'
-export * from './parallax-box.element'
-export * from './parallax-box.interfaces'
+export * from './parallax-box.component.js'
+export * from './parallax-box.interfaces.js'
+export * from './parallax-box.utils.js'

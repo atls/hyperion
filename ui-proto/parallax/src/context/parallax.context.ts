@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 
-import { ParallaxStore } from './parallax.store'
+import { ParallaxStore } from './parallax.store.js'
 
 export const Context = createContext(new ParallaxStore(null, 0))
 
