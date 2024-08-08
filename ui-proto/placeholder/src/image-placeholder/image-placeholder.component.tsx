@@ -1,6 +1,6 @@
 import React                     from 'react'
 
-import { ImagePlaceholderProps } from './image-placeholder.interfaces'
+import { ImagePlaceholderProps } from './image-placeholder.interfaces.js'
 
 export const ImagePlaceholder = ({
   color = '#A0A4B3',
