@@ -4,16 +4,11 @@
   "license": "BSD 3-Clause",
   "workspaces": [
     "generators/**/*",
-    "storybook/**/*",
     "ui-admin/**/*",
     "ui-parts/**/*",
-    "ui-proto/**/*",
     "ui/**/*",
     "utils/**/*"
   ],
-  "scripts": {
-    "postinstall": "yarn workspace @atls-ui-admin/icons build-icons"
-  },
   "resolutions": {
     "css-loader": "^5.0.0",
     "dotenv-webpack": "^6.0.0",
