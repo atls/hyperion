@@ -11,6 +11,7 @@ app.use(
   })
 )
 app.use(express.static('dist'))
+
 app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`Listening on port ${port}`)
