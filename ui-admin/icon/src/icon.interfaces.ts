@@ -1,7 +1,5 @@
 import { SVGProps } from 'react'
 
-export interface BaseIconProps {
+export interface IconProps extends SVGProps<SVGSVGElement> {
   spin?: boolean
 }
-
-export type IconProps = SVGProps<SVGSVGElement> & BaseIconProps
