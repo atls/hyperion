@@ -1,3 +1,4 @@
+import { StorybookConfig }               from '@storybook/react-webpack5'
 import { VanillaExtractPlugin }          from '@vanilla-extract/webpack-plugin'
 
 import MiniCssExtractPlugin              from 'mini-css-extract-plugin'
@@ -13,8 +14,7 @@ function getAbsolutePath(value) {
   return dirname(require.resolve(join(value, 'package.json')))
 }
 
-/** @type { import('@storybook/react-webpack5').StorybookConfig } */
-const config = {
+const config: StorybookConfig = {
   stories: ['../../**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
     getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
@@ -29,10 +29,7 @@ const config = {
         plugins: [
           new VanillaExtractPlugin(),
           new MiniCssExtractPlugin(),
-          new NormalModuleReplacementPlugin(/\.js$/, (
-            /** @type {{ request: string }} */
-            resource: { request: string }
-          ) => {
+          new NormalModuleReplacementPlugin(/\.js$/, (resource: { request: string }) => {
             // eslint-disable-next-line no-param-reassign
             resource.request = resource.request.replace('.js', '')
           }),
@@ -73,16 +70,18 @@ const config = {
     name: getAbsolutePath('@storybook/react-webpack5'),
     options: {},
   },
-  features: {
-    buildStoriesJson: true,
-  },
   webpackFinal: async (webpackConfig) => {
-    // eslint-disable-next-line no-param-reassign
-    webpackConfig.resolve.fallback.assert = false
-    // eslint-disable-next-line no-param-reassign
-    webpackConfig.resolve.fallback.url = false
+    if (webpackConfig?.resolve?.fallback) {
+      // eslint-disable-next-line no-param-reassign
+      webpackConfig.resolve.fallback = {
+        ...webpackConfig.resolve.fallback,
+        assert: false,
+        url: false,
+      }
+    }
 
     return webpackConfig
   },
 }
+
 export default config
