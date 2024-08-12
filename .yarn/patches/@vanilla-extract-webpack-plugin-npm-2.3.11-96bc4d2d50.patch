@@ -1,0 +1,12 @@
+diff --git a/package.json b/package.json
+index 21d9191e211063849fdf6de480939854948f7d13..158f05f407b2351ec9e50e1a1efe44943f0214bd 100644
+--- a/package.json
++++ b/package.json
+@@ -4,6 +4,7 @@
+   "description": "Zero-runtime Stylesheets-in-TypeScript",
+   "main": "dist/vanilla-extract-webpack-plugin.cjs.js",
+   "module": "dist/vanilla-extract-webpack-plugin.esm.js",
++  "type": "module",
+   "types": "dist/vanilla-extract-webpack-plugin.cjs.d.ts",
+   "exports": {
+     "./package.json": "./package.json",
