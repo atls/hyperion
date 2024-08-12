@@ -15,21 +15,21 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@emotion/css": "11.13.0",
+    "@emotion/css": "patch:@emotion/css@npm%3A11.13.0#~/.yarn/patches/@emotion-css-npm-11.13.0-7fe925d1e6.patch",
     "clsx": "2.1.1",
     "date-fns": "3.6.0",
     "rainbow-sprinkles": "0.17.2",
-    "react-datepicker": "7.3.0"
+    "react-datepicker": "patch:react-datepicker@npm%3A7.3.0#~/.yarn/patches/react-datepicker-npm-7.3.0-bde3927397.patch"
   },
   "devDependencies": {
     "@atls-ui-parts/condition": "workspace:*",
     "@atls-ui-parts/input": "workspace:*",
     "@atls-ui-parts/layout": "workspace:*",
-    "@storybook/react": "8.2.7",
+    "@storybook/react": "8.1.11",
     "@types/react": "18.2.48",
     "@vanilla-extract/css": "1.15.3",
     "@vanilla-extract/dynamic": "2.1.1",
-    "storybook": "8.2.7"
+    "storybook": "8.1.11"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "*",

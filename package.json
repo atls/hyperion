@@ -10,15 +10,7 @@
     "utils/**/*"
   ],
   "resolutions": {
-    "css-loader": "^5.0.0",
-    "dotenv-webpack": "^6.0.0",
-    "eslint": "8.48.0",
-    "html-webpack-plugin": "^5.0.0",
-    "style-loader": "^2.0.0",
-    "terser-webpack-plugin": "^5.0.0",
-    "webpack": "^5.0.0",
-    "webpack-dev-middleware": "^4.1.0",
-    "webpack-virtual-modules": "^0.4.2"
+    "@vanilla-extract/integration@npm:^7.1.7": "patch:@vanilla-extract/integration@npm%3A7.1.7#~/.yarn/patches/@vanilla-extract-integration-npm-7.1.7-cf020c7449.patch"
   },
   "devDependencies": {
     "@atls/code-service": "0.0.25",

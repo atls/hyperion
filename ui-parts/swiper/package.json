@@ -19,10 +19,10 @@
   },
   "devDependencies": {
     "@atls-ui-parts/layout": "workspace:*",
-    "@storybook/react": "8.2.7",
+    "@storybook/react": "8.1.11",
     "@types/react": "18.2.48",
     "@vanilla-extract/dynamic": "2.1.1",
-    "storybook": "8.2.7"
+    "storybook": "8.1.11"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "*",
