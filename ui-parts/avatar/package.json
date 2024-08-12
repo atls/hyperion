@@ -22,10 +22,10 @@
   },
   "devDependencies": {
     "@atls-ui-parts/text-transform": "workspace:*",
-    "@storybook/react": "8.2.7",
+    "@storybook/react": "8.1.11",
     "@types/react": "18.2.48",
     "@vanilla-extract/css": "1.15.3",
-    "storybook": "8.2.7"
+    "storybook": "8.1.11"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "*",

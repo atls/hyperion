@@ -1,4 +1,5 @@
 import { StorybookConfig }               from '@storybook/react-webpack5'
+import { CompatibleString }              from '@storybook/types'
 import { VanillaExtractPlugin }          from '@vanilla-extract/webpack-plugin'
 
 import MiniCssExtractPlugin              from 'mini-css-extract-plugin'
@@ -67,7 +68,9 @@ const config: StorybookConfig = {
     },
   ],
   framework: {
-    name: getAbsolutePath('@storybook/react-webpack5'),
+    name: getAbsolutePath(
+      '@storybook/react-webpack5'
+    ) as CompatibleString<'@storybook/react-webpack5'>,
     options: {},
   },
   webpackFinal: async (webpackConfig) => {
