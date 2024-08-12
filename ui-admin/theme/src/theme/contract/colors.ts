@@ -54,4 +54,6 @@ export const colorsContract = {
   'text.red': null,
   'text.softBlue': null,
   'text.green': null,
+
+  'icons.placeholder': null,
 }

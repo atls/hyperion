@@ -54,4 +54,6 @@ export const colors: ColorsTokens = {
   'text.red': 'rgba(255, 47, 47, 1)',
   'text.softBlue': 'rgba(65, 109, 223, 1)',
   'text.green': 'rgba(52, 197, 29, 1)',
+
+  'icons.placeholder': 'rgba(104, 110, 130, 1)',
 }
