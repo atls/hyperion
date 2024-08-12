@@ -1,10 +1,8 @@
-import styled from '@emotion/styled'
+import { style } from '@vanilla-extract/css'
 
-const Placeholder = styled.span({
+export const basePlaceholderStyles = style({
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
 })
-
-export { Placeholder }

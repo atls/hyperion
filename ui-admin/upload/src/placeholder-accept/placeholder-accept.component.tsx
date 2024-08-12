@@ -1,8 +1,16 @@
-import styled                          from '@emotion/styled'
+import React                           from 'react'
+import { FC }                          from 'react'
+import { HTMLAttributes }              from 'react'
+import { clsx }                        from 'clsx'
 
-import { PlaceholderAcceptElement }    from './placeholder-accept.element'
-import { basePlaceholderAcceptStyles } from './placeholder-accept.styles'
+import { basePlaceholderAcceptStyles } from './placeholder-accept.css.js'
 
-const PlaceholderAccept = styled(PlaceholderAcceptElement)(basePlaceholderAcceptStyles)
-
-export { PlaceholderAccept }
+export const PlaceholderAccept: FC<HTMLAttributes<HTMLSpanElement>> = ({
+  children,
+  className,
+  ...props
+}) => (
+  <span className={clsx(className, basePlaceholderAcceptStyles)} {...props}>
+    {children}
+  </span>
+)

@@ -1,8 +1,16 @@
-import styled                        from '@emotion/styled'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { AnchorHTMLAttributes }      from 'react'
+import { clsx }                      from 'clsx'
 
-import { PlaceholderLinkElement }    from './placeholder-link.element'
-import { basePlaceholderLinkStyles } from './placeholder-link.styles'
+import { basePlaceholderLinkStyles } from './placeholder-link.css.js'
 
-const PlaceholderLink = styled(PlaceholderLinkElement)(basePlaceholderLinkStyles)
-
-export { PlaceholderLink }
+export const PlaceholderLink: FC<AnchorHTMLAttributes<HTMLAnchorElement>> = ({
+  children,
+  className,
+  ...props
+}) => (
+  <a className={clsx(className, basePlaceholderLinkStyles)} {...props}>
+    {children}
+  </a>
+)

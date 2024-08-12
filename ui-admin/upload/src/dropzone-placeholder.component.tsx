@@ -1,27 +1,18 @@
-import styled                from '@emotion/styled'
+import React                       from 'react'
 
-import React                 from 'react'
+import { UploadIcon }              from '@atls-ui-admin/icons'
 
-import { UploadIcon }        from '@atls-ui-admin/icons'
+import { PlaceholderAccept }       from './placeholder-accept/index.js'
+import { PlaceholderIcon }         from './placeholder-icon/index.js'
+import { PlaceholderLink }         from './placeholder-link/index.js'
+import { dropzoneContainerStyles } from './container/container.css.js'
 
-import { PlaceholderAccept } from './placeholder-accept'
-import { PlaceholderIcon }   from './placeholder-icon'
-import { PlaceholderLink }   from './placeholder-link'
-
-const Container = styled.div({
-  flexDirection: 'column',
-  display: 'flex',
-  alignItems: 'center',
-})
-
-const DropzonePlaceholder = ({ accept, children }: any) => (
-  <Container>
+export const DropzonePlaceholder = ({ accept, children }: any) => (
+  <div className={dropzoneContainerStyles}>
     <PlaceholderIcon>
       <UploadIcon height={40} width={40} />
     </PlaceholderIcon>
     <PlaceholderAccept>{accept}</PlaceholderAccept>
     <PlaceholderLink>{children}</PlaceholderLink>
-  </Container>
+  </div>
 )
-
-export { DropzonePlaceholder }
