@@ -1,4 +1,3 @@
-import { MockedProvider }      from '@apollo/client/testing'
 import { Meta }                from '@storybook/react'
 import { StoryObj }            from '@storybook/react'
 
@@ -31,17 +30,15 @@ const meta: Meta = {
   render: (props) => (
     <ThemeProvider>
       <ToggleTheme {...props} />
-      <MockedProvider mocks={[]} addTypename={false}>
-        <Upload
-          placeholder={
-            <DropzonePlaceholder accept={['.SVG', '.PNG', '.JPG']}>
-              Нажмите, чтобы загрузить
-            </DropzonePlaceholder>
-          }
-        >
-          <div style={{ height: 200, width: '100%' }} />
-        </Upload>
-      </MockedProvider>
+      <Upload
+        placeholder={
+          <DropzonePlaceholder accept={['.SVG', '.PNG', '.JPG']}>
+            Нажмите, чтобы загрузить
+          </DropzonePlaceholder>
+        }
+      >
+        <div style={{ height: 200, width: '100%' }} />
+      </Upload>
     </ThemeProvider>
   ),
   tags: ['autodocs'],
