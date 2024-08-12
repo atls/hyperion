@@ -13,8 +13,6 @@ import { createAppearanceStyles } from './utils/index.js'
 import { createShapeStyles }      from './utils/index.js'
 import { registerLocales }        from './utils/index.js'
 
-const BaseDatepickerComponent = DatepickerComponent.default
-
 export const Datepicker: FC<DatepickerProps> = ({ withBaseStyle = true, ...props }) => {
   useEffect(() => {
     registerLocales()
@@ -30,5 +28,6 @@ export const Datepicker: FC<DatepickerProps> = ({ withBaseStyle = true, ...props
     }
   }, [withBaseStyle, props])
 
-  return <BaseDatepickerComponent {...props} />
+  // @ts-ignore correct default import
+  return <DatepickerComponent {...props} />
 }
