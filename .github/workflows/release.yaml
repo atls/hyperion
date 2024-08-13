@@ -1,42 +1,22 @@
 name: Release
 
 on:
-  workflow_run:
-    workflows:
-      - Publish
+  pull_request:
+    branches:
+      - master
     types:
-      - completed
+      - closed
+    paths-ignore:
+      - '.github/**'
 
 jobs:
-  run:
-    name: Release
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          ref: master
-
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.13'
-
-      - name: Install
-        run: yarn install
-
-      - name: Install Buildpack Cli
-        run: |
-          (curl -sSL "https://github.com/buildpacks/pack/releases/download/v0.23.0/pack-v0.23.0-linux.tgz" | sudo tar -C /usr/local/bin/ --no-same-owner -xzv pack)
-
-      - name: Login to Yandex Container Registry
-        run: echo -e $YCR_KEYFILE | docker login -u json_key --password-stdin cr.yandex
-        env:
-          YCR_KEYFILE: ${{ secrets.YCR_KEYFILE }}
-
-      - name: Release
-        env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-        run: |
-          yarn workspaces changed foreach image pack --publish --tag-policy hash-timestamp --registry 'cr.yandex/${{ secrets.YCR_PROJECT_ID }}/'
+  release:
+    uses: atls/shared/.github/workflows/pack-image.yaml@master
+    permissions: write-all
+    with:
+      registryURL: 'ghcr.io'
+      registryUser: ${{ github.repository_owner }}
+      project: ${{ github.repository_owner }}
+      nodeVersion: '20'
+    secrets:
+      registryKey: ${{ secrets.GITHUB_TOKEN }}
