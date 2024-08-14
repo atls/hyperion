@@ -21,15 +21,15 @@
     "html-webpack-plugin": "^5.0.0",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.0.0",
-    "typescript": "4.6.2",
+    "typescript": "5.2.2",
     "webpack": "^5.0.0",
     "webpack-dev-middleware": "^4.1.0",
     "webpack-virtual-modules": "^0.4.2"
   },
   "devDependencies": {
-    "@atls/code-service": "^0.0.23",
-    "@atls/config-jest": "^0.0.6",
-    "@atls/schematics": "^0.0.16",
+    "@atls/code-service": "0.1.9",
+    "@atls/config-jest": "0.0.6",
+    "@atls/schematics": "0.0.16",
     "@jest/core": "^28.1.1",
     "@types/eslint": "^8.4.3",
     "@types/glob": "^7",
@@ -39,7 +39,7 @@
     "eslint": "^8.17.0",
     "husky": "7.0.4",
     "jest-environment-jsdom": "^28.1.1",
-    "typescript": "4.6.2"
+    "typescript": "5.2.2"
   },
   "packageManager": "yarn@4.0.2",
   "tools": {
