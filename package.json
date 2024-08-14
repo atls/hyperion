@@ -10,6 +10,7 @@
     "utils/**/*"
   ],
   "resolutions": {
+    "@types/react": "18.2.48",
     "@vanilla-extract/integration@npm:^7.1.7": "patch:@vanilla-extract/integration@npm%3A7.1.7#~/.yarn/patches/@vanilla-extract-integration-npm-7.1.7-cf020c7449.patch"
   },
   "devDependencies": {
