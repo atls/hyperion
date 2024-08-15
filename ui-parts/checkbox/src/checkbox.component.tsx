@@ -2,6 +2,8 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 
 import React                       from 'react'
+import { clsx }                    from 'clsx'
+import { useEffect }               from 'react'
 import { forwardRef }              from 'react'
 import { useState }                from 'react'
 
@@ -18,7 +20,7 @@ import { labelAppearanceStyles }   from './label/index.js'
 import { labelPositionStyles }     from './label/index.js'
 import { labelShapeStyles }        from './label/index.js'
 
-const CheckboxWithoutRef: React.ForwardRefRenderFunction<HTMLDivElement, CheckboxProps> = (
+export const Checkbox = forwardRef<HTMLDivElement, CheckboxProps>((
   {
     onCheck,
     children,
@@ -31,18 +33,22 @@ const CheckboxWithoutRef: React.ForwardRefRenderFunction<HTMLDivElement, Checkbo
   },
   ref
 ) => {
-  const [isChecked, setIsChecked] = useState(active)
+  const [isChecked, setIsChecked] = useState<boolean>(active)
+
+  useEffect(() => {
+    setIsChecked(active)
+    onCheck(active)
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
+  }, [active])
 
   const handleCheck = () => {
     setIsChecked(!isChecked)
     onCheck(!isChecked)
   }
 
-  const checkStyle = isChecked ? checkCheckedStyles : ''
-
   return (
     <div
-      className={`${containerBaseStyles} ${containerPositionStyles[labelPosition]}`}
+      className={clsx(containerBaseStyles, containerPositionStyles[labelPosition])}
       onClick={handleCheck}
       ref={ref}
       {...props}
@@ -53,16 +59,18 @@ const CheckboxWithoutRef: React.ForwardRefRenderFunction<HTMLDivElement, Checkbo
         type='checkbox'
         onChange={() => handleCheck()}
       />
-      <div className={`${boxBaseStyles} ${boxShapeStyles[size]} ${boxColorStyles[color]}`}>
-        <div className={`${checkBaseStyles} ${checkStyle}`}>{icon}</div>
+      <div className={clsx(boxBaseStyles, boxShapeStyles[size], boxColorStyles[color])}>
+        <div className={clsx(checkBaseStyles, isChecked && checkCheckedStyles)}>{icon}</div>
       </div>
       <div
-        className={`${labelShapeStyles} ${labelAppearanceStyles} ${labelPositionStyles[labelPosition]}`}
+        className={clsx(
+          labelShapeStyles,
+          labelAppearanceStyles,
+          labelPositionStyles[labelPosition]
+        )}
       >
         {children}
       </div>
     </div>
   )
-}
-
-export const Checkbox = forwardRef(CheckboxWithoutRef)
+})

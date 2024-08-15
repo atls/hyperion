@@ -1,11 +1,23 @@
-import { Meta }                          from '@storybook/react'
-import { StoryObj }                      from '@storybook/react'
+import { Meta }          from '@storybook/react'
+import { StoryObj }      from '@storybook/react'
 
-import { Checkbox as CheckboxComponent } from './checkbox.component.js'
+import React             from 'react'
 
-export default {
+import { Column }        from '@atls-ui-parts/layout'
+import { Layout }        from '@atls-ui-parts/layout'
+
+import { Checkbox }      from './checkbox.component.js'
+import { CheckboxProps } from './checkbox.interfaces.js'
+
+const meta: Meta<CheckboxProps> = {
   title: 'Components/Checkbox',
-  component: CheckboxComponent,
+  render: (props) => (
+    <Column fill alignItems='center'>
+      <Layout flexBasis='40px' />
+      <Checkbox {...props} />
+      <Layout flexBasis='40px' />
+    </Column>
+  ),
   tags: ['autodocs'],
   argTypes: {
     active: {
@@ -32,15 +44,18 @@ export default {
       options: ['start', 'top', 'end', 'bottom'],
     },
   },
-} as Meta
+}
 
-type Story = StoryObj<typeof CheckboxComponent>
+export default meta
 
-export const Checkbox: Story = {
+type Story = StoryObj<CheckboxProps>
+
+export const Base: Story = {
+  name: 'Базовый',
   args: {
     onCheck: () => undefined,
     active: false,
-    labelPosition: 'end',
+    labelPosition: 'start',
     size: 'medium',
     color: 'blue',
     children: 'Checkbox Label',
