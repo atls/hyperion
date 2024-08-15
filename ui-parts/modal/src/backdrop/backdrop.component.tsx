@@ -1,12 +1,13 @@
 import React                      from 'react'
+import { FC }                     from 'react'
+import { motion }                 from 'framer-motion'
 
-import { BackdropElement }        from './backdrop.element.js'
 import { BackdropProps }          from './backdrop.interfaces.js'
+import { baseBackdropStyles }     from './backdrop.css.js'
 import { backdropMotionVariants } from './backdrop.motion.js'
-import { baseBackdropStyles }     from './backdrop.styles.css.js'
 
-export const Backdrop: React.FC<BackdropProps> = (props) => (
-  <BackdropElement
+export const Backdrop: FC<BackdropProps> = (props) => (
+  <motion.div
     className={baseBackdropStyles}
     variants={backdropMotionVariants}
     animate='target'
