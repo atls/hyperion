@@ -1,6 +1,6 @@
 import React               from 'react'
-import clsx                from 'clsx'
 import { FC }              from 'react'
+import { clsx }            from 'clsx'
 
 import { ArrowProps }      from './arrow.interfaces.js'
 import { baseArrowStyles } from './arrow.css.js'
