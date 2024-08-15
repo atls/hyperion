@@ -1,11 +1,12 @@
 import React                 from 'react'
+import { ReactElement }      from 'react'
 
 import { UseTooltipOptions } from '@atls-ui-parts/tooltip'
 import { useTooltip }        from '@atls-ui-parts/tooltip'
 
 import { Container }         from './container/index.js'
 
-type RenderOptions = { title?: string; content?: React.ReactElement }
+type RenderOptions = { title?: string; content?: ReactElement }
 
 export const usePopover = ({
   container = <Container />,
