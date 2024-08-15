@@ -1,25 +1,33 @@
-import { Meta }                      from '@storybook/react'
+import { Meta }        from '@storybook/react'
+import { StoryObj }    from '@storybook/react'
 
-import React                         from 'react'
+import React           from 'react'
 
-import { Layout }                    from '@atls-ui-parts/layout'
+import { Column }      from '@atls-ui-parts/layout'
+import { Layout }      from '@atls-ui-parts/layout'
 
-import { Switch as SwitchComponent } from './switch.component.js'
+import { Switch }      from './switch.component.js'
+import { SwitchProps } from './switch.interfaces.js'
 
-export default {
+const meta: Meta<SwitchProps> = {
   title: 'Components/Switch',
-  component: SwitchComponent,
+  render: (props) => (
+    <Column fill alignItems='center'>
+      <Layout flexBasis='40px' />
+      <Switch {...props} />
+      <Layout flexBasis='40px' />
+    </Column>
+  ),
   tags: ['autodocs'],
-} as Meta
+}
 
-export const Switch = ({ disabled, checked, onChange }) => (
-  <Layout justifyContent='center'>
-    <SwitchComponent disabled={disabled} checked={checked} onChange={onChange} />
-  </Layout>
-)
+export default meta
 
-Switch.args = {
-  disabled: false,
-  checked: false,
-  onChange: () => undefined,
+export const Base: StoryObj<SwitchProps> = {
+  name: 'Базовый',
+  args: {
+    disabled: false,
+    checked: false,
+    onChange: () => undefined,
+  },
 }

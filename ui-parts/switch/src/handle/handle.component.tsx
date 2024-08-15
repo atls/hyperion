@@ -1,8 +1,8 @@
 import React                from 'react'
 import { clsx }             from 'clsx'
 
-import { baseHandleStyles } from './handle.styles.css.js'
-import { handleSprinkles }  from './handle.styles.css.js'
+import { baseHandleStyles } from './handle.css.js'
+import { handleSprinkles }  from './handle.css.js'
 
 export const Handle = ({ children, ...props }) => {
   const { className, style, otherProps } = handleSprinkles(props)
