@@ -7,6 +7,7 @@ export const baseItemStyles = style({
   width: '100%',
   hyphens: 'auto',
   alignItems: 'center',
+  padding: '6px 12px',
 })
 
 export const highlightedMenuItemStyles = style({

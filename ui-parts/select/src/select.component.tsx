@@ -1,4 +1,5 @@
 import React                 from 'react'
+import { FC }                from 'react'
 import { clsx }              from 'clsx'
 import { motion }            from 'framer-motion'
 
@@ -10,7 +11,7 @@ import { baseButtonStyles }  from './button/index.js'
 import { baseMenuSprinkles } from './menu/index.js'
 import { baseMenuStyles }    from './menu/index.js'
 
-export const Select: React.FC<SelectProps> = ({
+export const Select: FC<SelectProps> = ({
   items,
   label,
   value,
@@ -18,11 +19,18 @@ export const Select: React.FC<SelectProps> = ({
   placeholder,
   ...props
 }) => {
-  const { getMenuItemProps, labelProps, buttonProps, menuProps, renderMenu, highlightedIndex } =
-    useSelect({
-      items,
-      onChange: onChangeValue,
-    })
+  const {
+    isOpen,
+    getMenuItemProps,
+    labelProps,
+    buttonProps,
+    menuProps,
+    renderMenu,
+    highlightedIndex,
+  } = useSelect({
+    items,
+    onChange: onChangeValue,
+  })
 
   const { className, style, otherProps } = baseMenuSprinkles(props)
 
@@ -33,25 +41,26 @@ export const Select: React.FC<SelectProps> = ({
       <button type='button' {...buttonProps} className={baseButtonStyles}>
         {value}
       </button>
-      {renderMenu(
-        <motion.ul
-          {...otherProps}
-          className={clsx(baseMenuStyles, otherProps?.className, className)}
-          style={{ ...style, ...otherProps?.style }}
-          {...menuProps}
-        >
-          {items.map((item, index) => (
-            <MenuItem
-              /* eslint-disable-next-line react/no-array-index-key */
-              key={`${item}-${index}`}
-              highlighted={index === highlightedIndex}
-              {...getMenuItemProps(item, index)}
-            >
-              {item}
-            </MenuItem>
-          ))}
-        </motion.ul>
-      )}
+      {isOpen &&
+        renderMenu(
+          <motion.ul
+            {...otherProps}
+            className={clsx(baseMenuStyles, otherProps?.className, className)}
+            style={{ ...style, ...otherProps?.style }}
+            {...menuProps}
+          >
+            {items.map((item, index) => (
+              <MenuItem
+                /* eslint-disable-next-line react/no-array-index-key */
+                key={`${item}-${index}`}
+                highlighted={index === highlightedIndex}
+                {...getMenuItemProps(item, index)}
+              >
+                {item}
+              </MenuItem>
+            ))}
+          </motion.ul>
+        )}
     </>
   )
 }

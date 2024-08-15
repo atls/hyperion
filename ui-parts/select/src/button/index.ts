@@ -1,1 +1,1 @@
-export * from './button.styles.css.js'
+export * from './button.css.js'
