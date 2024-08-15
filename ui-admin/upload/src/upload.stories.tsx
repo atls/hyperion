@@ -16,7 +16,7 @@ const ToggleTheme: FC = (props) => {
 
   return (
     <Button
-      style={{ width: 'fit-content' }}
+      style={{ width: 'fit-content', margin: '0 0 10px auto' }}
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       {...props}
     >

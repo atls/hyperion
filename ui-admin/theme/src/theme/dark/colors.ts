@@ -49,7 +49,7 @@ export const colors: ColorsTokens = {
   'text.deepGray': 'rgba(105, 105, 105, 1)',
   'text.lightGray': 'rgba(212, 212, 212, 1)',
   'text.shadylady': 'rgb(167, 167, 167)',
-  'text.blue': 'rgba(24, 77, 215, 1)',
+  'text.blue': 'rgba(65, 109, 223, 1)',
   'text.lightBlue': 'rgba(24, 77, 215, 0.8)',
   'text.red': 'rgba(255, 47, 47, 1)',
   'text.softBlue': 'rgba(65, 109, 223, 1)',

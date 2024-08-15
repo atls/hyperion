@@ -8,7 +8,8 @@ export const containerStyles = style({
   borderStyle: 'dashed',
   cursor: 'pointer',
   outline: 'none',
-  borderColor: 'rgba(255, 255, 255, 0.24)',
+  borderColor: vars.colors.black,
+  backgroundColor: vars.colors.white,
 })
 
 export const dropzoneContainerStyles = style({
