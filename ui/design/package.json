@@ -23,7 +23,6 @@
     "@storybook/addon-essentials": "8.1.11",
     "@storybook/addon-interactions": "8.1.11",
     "@storybook/addon-links": "8.1.11",
-    "@storybook/addon-onboarding": "8.1.11",
     "@storybook/addon-styling-webpack": "1.0.0",
     "@storybook/addon-webpack5-compiler-swc": "1.0.5",
     "@storybook/blocks": "8.1.11",
