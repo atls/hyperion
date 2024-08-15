@@ -6,10 +6,10 @@ import { PropsWithChildren } from 'react'
 import { clsx }              from 'clsx'
 import { forwardRef }        from 'react'
 
+import { LinkSprinkles }     from './link.css.js'
 import { LinkProps }         from './link.interfaces.js'
-import { LinkSprinkles }     from './link.styles.css.js'
-import { baseLinkStyles }    from './link.styles.css.js'
-import { linkSprinkles }     from './link.styles.css.js'
+import { baseLinkStyles }    from './link.css.js'
+import { linkSprinkles }     from './link.css.js'
 
 const BaseLink = NextLink.default
 
@@ -20,15 +20,14 @@ export const Link = forwardRef<HTMLAnchorElement, PropsWithChildren<LinkProps & 
   const { className, style, otherProps } = linkSprinkles(props)
 
   return (
-    <BaseLink href={path}>
-      <a
-        ref={ref}
-        {...otherProps}
-        className={clsx(baseLinkStyles, otherProps?.className, className)}
-        style={{ ...style, ...otherProps?.style }}
-      >
-        {children}
-      </a>
+    <BaseLink
+      ref={ref}
+      href={path}
+      {...otherProps}
+      className={clsx(baseLinkStyles, otherProps?.className, className)}
+      style={{ ...style, ...otherProps?.style }}
+    >
+      {children}
     </BaseLink>
   )
 })
