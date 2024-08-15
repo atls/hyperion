@@ -2,14 +2,14 @@ import { globalFontFace } from '@vanilla-extract/css'
 
 import { FontsTokens }    from '../index.js'
 
-const inter = 'Inter'
+const nunitoSans = 'Nunito Sans'
 
-globalFontFace(inter, {
-  src: "url(https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap) format('woff2')",
+globalFontFace(nunitoSans, {
+  src: "url(https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap) format('woff2')",
   fontStyle: 'normal',
   fontDisplay: 'swap',
 })
 
 export const fonts: FontsTokens = {
-  primary: inter,
+  primary: nunitoSans,
 }
