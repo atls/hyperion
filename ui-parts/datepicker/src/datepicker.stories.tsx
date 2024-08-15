@@ -480,8 +480,8 @@ const meta: Meta<DatepickerStoryProps> = {
 
 export default meta
 
-export const BaseDatepicker: StoryObj<DatepickerStoryProps> = {
-  name: 'Datepicker',
+export const Base: StoryObj<DatepickerStoryProps> = {
+  name: 'Базовый',
   args: {
     arrowColor: '#376EFF',
     arrowHoverColor: '#376EFF',

@@ -44,6 +44,7 @@ const meta: Meta<TextStoryProps> = {
 export default meta
 
 export const Text: StoryObj<TextStoryProps> = {
+  name: 'Базовый',
   render: ({ children, fontWeight, fontSize, color }) => (
     <Column fill alignItems='center' justifyContent='center'>
       <Layout flexBasis='50px' />

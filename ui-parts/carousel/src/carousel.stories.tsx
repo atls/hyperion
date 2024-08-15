@@ -354,6 +354,7 @@ const meta: Meta<CarouselStoryProps> = {
 export default meta
 
 export const Carousel: StoryObj<CarouselStoryProps> = {
+  name: 'Базовый',
   args: {
     slidesPerView: 2,
     loop: false,

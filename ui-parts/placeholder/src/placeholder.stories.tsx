@@ -65,5 +65,6 @@ const meta: Meta<StoryRenderProps> = {
 export default meta
 
 export const Placeholder: StoryObj<StoryRenderProps> = {
+  name: 'Базовый',
   args: { type: 'image' },
 }
