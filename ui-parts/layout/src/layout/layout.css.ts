@@ -5,7 +5,7 @@ import { flexboxProperties }      from '@atls-ui-parts/theme/properties'
 import { layoutProperties }       from '@atls-ui-parts/theme/properties'
 import { spaceProperties }        from '@atls-ui-parts/theme/properties'
 
-const layoutComponentProperties = defineProperties({
+export const layoutComponentProperties = defineProperties({
   dynamicProperties: {
     boxSizing: true,
     gap: true,

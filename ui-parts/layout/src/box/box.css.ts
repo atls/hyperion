@@ -9,7 +9,7 @@ import { positionProperties }     from '@atls-ui-parts/theme/properties'
 import { shadowProperties }       from '@atls-ui-parts/theme/properties'
 import { spaceProperties }        from '@atls-ui-parts/theme/properties'
 
-const boxProperties = defineProperties({
+export const boxProperties = defineProperties({
   dynamicProperties: {
     boxSizing: true,
     cursor: true,

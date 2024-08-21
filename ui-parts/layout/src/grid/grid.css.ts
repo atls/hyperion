@@ -6,7 +6,7 @@ import { gridProperties }         from '@atls-ui-parts/theme/properties'
 import { layoutProperties }       from '@atls-ui-parts/theme/properties'
 import { spaceProperties }        from '@atls-ui-parts/theme/properties'
 
-const gridComponentProperties = defineProperties({
+export const gridComponentProperties = defineProperties({
   dynamicProperties: {
     boxSizing: true,
     gap: true,
