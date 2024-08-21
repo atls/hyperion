@@ -12,7 +12,9 @@ import { radii }             from './theme/index.js'
 import { shadows }           from './theme/index.js'
 import { space }             from './theme/index.js'
 
-export const vars = createGlobalTheme(':root', {
+export const globalThemeId = 'atls-ui-parts-theme'
+
+export const vars = createGlobalTheme(`#${globalThemeId}`, {
   borders,
   colors,
   fonts,
