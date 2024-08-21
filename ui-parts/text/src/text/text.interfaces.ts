@@ -1,5 +1,12 @@
-import { HTMLAttributes } from 'react'
+import { HTMLAttributes }         from 'react'
+import { createRainbowSprinkles } from 'rainbow-sprinkles'
 
-import { TextSprinkles }  from './text.css.js'
+import { TextSprinkles }          from './text.css.js'
 
-export interface TextProps extends TextSprinkles, Omit<HTMLAttributes<HTMLSpanElement>, 'color'> {}
+export type BaseTextProps = Omit<HTMLAttributes<HTMLSpanElement>, 'color'>
+
+export interface TextElementProps extends BaseTextProps {
+  sprinkles: ReturnType<typeof createRainbowSprinkles>
+}
+
+export interface TextProps extends TextSprinkles, BaseTextProps {}

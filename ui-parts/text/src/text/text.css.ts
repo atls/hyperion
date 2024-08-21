@@ -6,7 +6,7 @@ import { layoutProperties }       from '@atls-ui-parts/theme/properties'
 import { spaceProperties }        from '@atls-ui-parts/theme/properties'
 import { typographyProperties }   from '@atls-ui-parts/theme/properties'
 
-const textProperties = defineProperties({
+export const textProperties = defineProperties({
   dynamicProperties: {
     cursor: true,
     textOverflow: true,
