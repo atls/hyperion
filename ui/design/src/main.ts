@@ -66,11 +66,11 @@ const config: StorybookConfig = {
   refs: {
     parts: {
       title: 'Parts',
-      url: 'http://localhost:3001/',
+      url: process.env.ATLS_DESIGN_PARTS_URL || 'http://localhost:3001/',
     },
     admin: {
       title: 'Admin',
-      url: 'http://localhost:3002/',
+      url: process.env.ATLS_DESIGN_ADMIN_URL || 'http://localhost:3002/',
     },
   },
   webpackFinal: async (webpackConfig) => {
