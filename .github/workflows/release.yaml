@@ -17,6 +17,5 @@ jobs:
       registryURL: 'ghcr.io'
       registryUser: ${{ github.repository_owner }}
       project: ${{ github.repository_owner }}
-      nodeVersion: '20'
     secrets:
       registryKey: ${{ secrets.GITHUB_TOKEN }}
