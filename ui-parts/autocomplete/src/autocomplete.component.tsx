@@ -8,7 +8,7 @@ import { useEffect }               from 'react'
 import { useState }                from 'react'
 import { useLayer }                from 'react-laag'
 
-import { Input }                   from '@atls-ui-proto/input'
+import { Input }                   from '@atls-ui-parts/input'
 
 import { Arrow }                   from './indicator'
 import { Indicator }               from './indicator'

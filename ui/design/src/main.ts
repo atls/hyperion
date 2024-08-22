@@ -23,10 +23,6 @@ const storybookConfig = {
       title: 'Parts',
       url: 'https://ui-parts.ui.atls.design',
     },
-    proto: {
-      title: 'Proto',
-      url: 'https://ui-proto.ui.atls.design',
-    },
     admin: {
       title: 'Admin',
       url: 'https://ui-admin.ui.atls.design',

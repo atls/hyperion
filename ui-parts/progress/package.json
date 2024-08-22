@@ -12,8 +12,8 @@
     "postpack": "rm -rf dist"
   },
   "devDependencies": {
+    "@atls-ui-parts/button": "workspace:*",
     "@atls-ui-parts/layout": "workspace:*",
-    "@atls-ui-proto/button": "workspace:*",
     "@emotion/react": "11.11.3",
     "@emotion/styled": "11.11.0",
     "@testing-library/react": "14.0.0",

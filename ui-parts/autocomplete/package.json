@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-proto/input": "workspace:*",
+    "@atls-ui-parts/input": "workspace:*",
     "downshift": "7.6.2",
     "react-laag": "2.0.5"
   },

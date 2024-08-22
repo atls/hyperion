@@ -16,7 +16,7 @@
     "react-datepicker": "4.21.0"
   },
   "devDependencies": {
-    "@atls-ui-proto/input": "workspace:*",
+    "@atls-ui-parts/input": "workspace:*",
     "@emotion/css": "11.11.2",
     "@emotion/styled": "11.11.0",
     "@types/react": "18.2.48",

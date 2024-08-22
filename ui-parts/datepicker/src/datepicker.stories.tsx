@@ -2,7 +2,7 @@ import React                                 from 'react'
 import { forwardRef }                        from 'react'
 import { useState }                          from 'react'
 
-import { Input }                             from '@atls-ui-proto/input'
+import { Input }                             from '@atls-ui-parts/input'
 
 import { Datepicker as DatepickerComponent } from './datepicker.component'
 
