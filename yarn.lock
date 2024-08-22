@@ -780,7 +780,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/link@workspace:ui-parts/link":
+"@atls-ui-parts/link@workspace:*, @atls-ui-parts/link@workspace:ui-parts/link":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/link@workspace:ui-parts/link"
   dependencies:
@@ -913,7 +913,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/portal@workspace:ui-parts/portal":
+"@atls-ui-parts/portal@workspace:*, @atls-ui-parts/portal@workspace:ui-parts/portal":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/portal@workspace:ui-parts/portal"
   dependencies:
@@ -1098,7 +1098,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/tooltip@workspace:ui-parts/tooltip":
+"@atls-ui-parts/tooltip@workspace:*, @atls-ui-parts/tooltip@workspace:ui-parts/tooltip":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/tooltip@workspace:ui-parts/tooltip"
   dependencies:
