@@ -7,7 +7,6 @@
     "storybook/*",
     "ui-admin/*",
     "ui-parts/*",
-    "ui-proto/*",
     "ui/*",
     "utils/*"
   ],
