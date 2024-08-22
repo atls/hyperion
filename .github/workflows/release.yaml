@@ -11,6 +11,7 @@ on:
 
 jobs:
   release:
+    if: github.event.pull_request.merged == true
     uses: atls/shared/.github/workflows/pack-image.yaml@master
     permissions: write-all
     with:

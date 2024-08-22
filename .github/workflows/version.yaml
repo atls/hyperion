@@ -11,6 +11,7 @@ on:
 
 jobs:
   run:
+    if: github.event.pull_request.merged == true
     name: Version
     uses: atls/shared/.github/workflows/version.yaml@master
     permissions: write-all
