@@ -1,5 +1,0 @@
-export { ThemeProvider } from './theme.provider'
-export { colors } from './theme'
-export { fonts } from './theme'
-export { fontSizes } from './theme'
-export { fontWeights } from './theme'

@@ -510,11 +510,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/autocomplete@workspace:*, @atls-ui-parts/autocomplete@workspace:ui-parts/autocomplete":
+"@atls-ui-parts/autocomplete@workspace:ui-parts/autocomplete":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/autocomplete@workspace:ui-parts/autocomplete"
   dependencies:
-    "@atls-ui-proto/input": "workspace:*"
+    "@atls-ui-parts/input": "workspace:*"
     "@emotion/react": "npm:11.11.3"
     "@emotion/styled": "npm:11.11.0"
     "@testing-library/react": "npm:14.0.0"
@@ -614,7 +614,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/carousel@workspace:*, @atls-ui-parts/carousel@workspace:ui-parts/carousel":
+"@atls-ui-parts/carousel@workspace:ui-parts/carousel":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/carousel@workspace:ui-parts/carousel"
   dependencies:
@@ -636,7 +636,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/checkbox@workspace:*, @atls-ui-parts/checkbox@workspace:ui-parts/checkbox":
+"@atls-ui-parts/checkbox@workspace:ui-parts/checkbox":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/checkbox@workspace:ui-parts/checkbox"
   dependencies:
@@ -687,11 +687,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/datepicker@workspace:*, @atls-ui-parts/datepicker@workspace:ui-parts/datepicker":
+"@atls-ui-parts/datepicker@workspace:ui-parts/datepicker":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/datepicker@workspace:ui-parts/datepicker"
   dependencies:
-    "@atls-ui-proto/input": "workspace:*"
+    "@atls-ui-parts/input": "workspace:*"
     "@emotion/css": "npm:11.11.2"
     "@emotion/styled": "npm:11.11.0"
     "@types/react": "npm:18.2.48"
@@ -851,7 +851,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/link@workspace:*, @atls-ui-parts/link@workspace:ui-parts/link":
+"@atls-ui-parts/link@workspace:ui-parts/link":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/link@workspace:ui-parts/link"
   dependencies:
@@ -900,7 +900,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/portal@workspace:*, @atls-ui-parts/portal@workspace:ui-parts/portal":
+"@atls-ui-parts/portal@workspace:ui-parts/portal":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/portal@workspace:ui-parts/portal"
   dependencies:
@@ -914,12 +914,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/progress@workspace:*, @atls-ui-parts/progress@workspace:ui-parts/progress":
+"@atls-ui-parts/progress@workspace:ui-parts/progress":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/progress@workspace:ui-parts/progress"
   dependencies:
+    "@atls-ui-parts/button": "workspace:*"
     "@atls-ui-parts/layout": "workspace:*"
-    "@atls-ui-proto/button": "workspace:*"
     "@emotion/react": "npm:11.11.3"
     "@emotion/styled": "npm:11.11.0"
     "@testing-library/react": "npm:14.0.0"
@@ -958,7 +958,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/select@workspace:*, @atls-ui-parts/select@workspace:ui-parts/select":
+"@atls-ui-parts/select@workspace:ui-parts/select":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/select@workspace:ui-parts/select"
   dependencies:
@@ -1025,7 +1025,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/swiper@workspace:*, @atls-ui-parts/swiper@workspace:ui-parts/swiper":
+"@atls-ui-parts/swiper@workspace:ui-parts/swiper":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/swiper@workspace:ui-parts/swiper"
   dependencies:
@@ -1098,7 +1098,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/tooltip@workspace:*, @atls-ui-parts/tooltip@workspace:ui-parts/tooltip":
+"@atls-ui-parts/tooltip@workspace:ui-parts/tooltip":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/tooltip@workspace:ui-parts/tooltip"
   dependencies:
@@ -1138,509 +1138,6 @@ __metadata:
   peerDependencies:
     graphql: 16.8.0
     react: 18.2.0
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/autocomplete@workspace:ui-proto/autocomplete":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/autocomplete@workspace:ui-proto/autocomplete"
-  dependencies:
-    "@atls-ui-parts/autocomplete": "workspace:*"
-    "@emotion/css": "npm:11.11.2"
-    "@emotion/react": "npm:11.11.3"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.48"
-    "@types/react-dom": "npm:18.2.18"
-    "@types/styled-system": "npm:5.1.22"
-    react: "npm:18.2.0"
-    react-dom: "npm:18.2.0"
-    styled-system: "npm:5.1.5"
-  peerDependencies:
-    "@emotion/css": 11.11.2
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    react-dom: 18.2.0
-    styled-system: 5.1.5
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/avatar@workspace:ui-proto/avatar":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/avatar@workspace:ui-proto/avatar"
-  dependencies:
-    "@atls-ui-parts/text-transform": "workspace:*"
-    "@atls-ui-proto/core": "workspace:*"
-    "@emotion/styled": "npm:11.11.0"
-    "@radix-ui/react-avatar": "npm:1.0.3"
-    "@stitches/react": "npm:1.2.8"
-    "@types/node": "npm:20.5.7"
-    "@types/react": "npm:18.2.48"
-    "@types/react-dom": "npm:18.2.18"
-    "@types/styled-system": "npm:5.1.22"
-    react: "npm:18.2.0"
-    react-dom: "npm:18.2.0"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
-  peerDependencies:
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    react-dom: 18.2.0
-    styled-system: 5.1.5
-    styled-tools: 1.7.2
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/button@workspace:*, @atls-ui-proto/button@workspace:ui-proto/button":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/button@workspace:ui-proto/button"
-  dependencies:
-    "@atls-ui-parts/button": "workspace:*"
-    "@emotion/is-prop-valid": "npm:1.2.1"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.48"
-    "@types/styled-system": "npm:5.1.22"
-    react: "npm:18.2.0"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
-  peerDependencies:
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    styled-system: 5.1.5
-    styled-tools: 1.7.2
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/carousel@workspace:ui-proto/carousel":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/carousel@workspace:ui-proto/carousel"
-  dependencies:
-    "@atls-ui-parts/carousel": "workspace:*"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/node": "npm:18.15.3"
-    "@types/react": "npm:18.2.48"
-    "@types/styled-system": "npm:5.1.22"
-    framer-motion: "npm:10.15.2"
-    react: "npm:18.2.0"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
-  peerDependencies:
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    styled-system: 5.1.5
-    styled-tools: 1.7.2
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/checkbox@workspace:ui-proto/checkbox":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/checkbox@workspace:ui-proto/checkbox"
-  dependencies:
-    "@atls-ui-parts/checkbox": "workspace:*"
-    "@atls-ui-parts/conditional-render": "workspace:*"
-    "@atls-ui-parts/hidden-input": "workspace:*"
-    "@atls-ui-proto/layout": "workspace:*"
-    "@emotion/react": "npm:11.11.3"
-    "@emotion/styled": "npm:11.11.0"
-    react: "npm:18.2.0"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
-  peerDependencies:
-    "@emotion/react": 11.11.3
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/core@workspace:*, @atls-ui-proto/core@workspace:ui-proto/core":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/core@workspace:ui-proto/core"
-  dependencies:
-    "@stitches/react": "npm:1.2.8"
-    "@types/react": "npm:18.2.48"
-    react: "npm:18.2.0"
-  peerDependencies:
-    react: 18.2.0
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/datepicker@workspace:ui-proto/datepicker":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/datepicker@workspace:ui-proto/datepicker"
-  dependencies:
-    "@atls-ui-parts/datepicker": "workspace:*"
-    "@atls-ui-parts/layout": "workspace:*"
-    "@atls-ui-proto/input": "workspace:*"
-    "@emotion/react": "npm:11.11.3"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.48"
-    "@types/react-dom": "npm:18.2.18"
-    "@types/styled-system": "npm:5.1.22"
-    react: "npm:18.2.0"
-    react-dom: "npm:18.2.0"
-    styled-system: "npm:5.1.5"
-  peerDependencies:
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    react-dom: 18.2.0
-    styled-system: 5.1.5
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/design@workspace:ui-proto/design":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/design@workspace:ui-proto/design"
-  dependencies:
-    "@atls-ui-proto/button": "workspace:*"
-    "@atls-ui-proto/input": "workspace:*"
-    "@atls-ui-proto/theme": "workspace:*"
-    "@babel/core": "npm:^7.18.5"
-    "@emotion/babel-plugin": "npm:^11.9.2"
-    "@emotion/css": "npm:11.9.0"
-    "@emotion/react": "npm:11.9.3"
-    "@emotion/styled": "npm:11.9.3"
-    "@storybook/addon-actions": "npm:^6.5.9"
-    "@storybook/addon-docs": "npm:^6.5.9"
-    "@storybook/addon-essentials": "npm:^6.5.9"
-    "@storybook/addon-links": "npm:^6.5.9"
-    "@storybook/addons": "npm:^6.5.9"
-    "@storybook/builder-webpack5": "npm:^6.5.9"
-    "@storybook/core-common": "npm:^6.5.9"
-    "@storybook/manager-webpack5": "npm:^6.5.9"
-    "@storybook/react": "npm:^6.5.9"
-    "@storybook/theming": "npm:^6.5.9"
-    "@types/express": "npm:^4.17.13"
-    "@types/react": "npm:^18.2.48"
-    "@types/react-dom": "npm:^18.2.18"
-    babel-loader: "npm:^8.2.5"
-    core-js: "npm:^3.23.1"
-    cors: "npm:^2.8.5"
-    express: "npm:^4.18.1"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    react-is: "npm:^18.2.0"
-    typescript: "npm:4.6.2"
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/divider@workspace:ui-proto/divider":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/divider@workspace:ui-proto/divider"
-  dependencies:
-    "@atls-ui-parts/layout": "workspace:*"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.48"
-    "@types/styled-system": "npm:5.1.22"
-    react: "npm:18.2.0"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
-  peerDependencies:
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    styled-system: 5.1.5
-    styled-tools: 1.7.2
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/image@workspace:ui-proto/image":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/image@workspace:ui-proto/image"
-  dependencies:
-    "@atls-ui-parts/image": "workspace:*"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.48"
-    "@types/styled-system": "npm:5.1.22"
-    react: "npm:18.2.0"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
-  peerDependencies:
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    styled-system: 5.1.5
-    styled-tools: 1.7.2
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/input@workspace:*, @atls-ui-proto/input@workspace:ui-proto/input":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/input@workspace:ui-proto/input"
-  dependencies:
-    "@atls-ui-parts/conditional-render": "workspace:*"
-    "@atls-ui-parts/input": "workspace:*"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.48"
-    "@types/styled-system": "npm:5.1.22"
-    react: "npm:18.2.0"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
-  peerDependencies:
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    styled-system: 5.1.5
-    styled-tools: 1.7.2
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/layout@workspace:*, @atls-ui-proto/layout@workspace:ui-proto/layout":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/layout@workspace:ui-proto/layout"
-  dependencies:
-    "@atls-ui-parts/layout": "workspace:*"
-    "@types/react": "npm:18.2.48"
-    react: "npm:18.2.0"
-  peerDependencies:
-    react: 18.2.0
-    react-dom: 18.2.0
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/link@workspace:ui-proto/link":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/link@workspace:ui-proto/link"
-  dependencies:
-    "@atls-ui-parts/link": "workspace:*"
-    "@atls-ui-proto/text": "workspace:*"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.48"
-    react: "npm:18.2.0"
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/modal@workspace:ui-proto/modal":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/modal@workspace:ui-proto/modal"
-  dependencies:
-    "@atls-ui-parts/portal": "workspace:*"
-    "@emotion/css": "npm:11.11.2"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.48"
-    "@types/react-dom": "npm:18.2.18"
-    framer-motion: "npm:10.16.1"
-    react: "npm:18.2.0"
-    react-dom: "npm:18.2.0"
-  peerDependencies:
-    "@emotion/css": 11.11.2
-    "@emotion/styled": 11.11.0
-    framer-motion: 10.16.1
-    react: 18.2.0
-    react-dom: 18.2.0
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/parallax@workspace:ui-proto/parallax":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/parallax@workspace:ui-proto/parallax"
-  dependencies:
-    "@atls-ui-parts/dom": "workspace:*"
-    "@atls-ui-parts/text": "workspace:*"
-    "@emotion/styled": "npm:11.11.0"
-    events: "npm:3.3.0"
-    framer-motion: "npm:10.15.2"
-    react: "npm:18.2.0"
-    react-intersection-observer: "npm:9.5.2"
-    styled-system: "npm:5.1.5"
-  peerDependencies:
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    styled-system: 5.1.5
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/placeholder@workspace:ui-proto/placeholder":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/placeholder@workspace:ui-proto/placeholder"
-  dependencies:
-    "@atls-ui-proto/layout": "workspace:*"
-    "@atls-ui-proto/text": "workspace:*"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.48"
-    react: "npm:18.2.0"
-  peerDependencies:
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/popover@workspace:ui-proto/popover":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/popover@workspace:ui-proto/popover"
-  dependencies:
-    "@atls-ui-parts/condition": "workspace:*"
-    "@atls-ui-parts/layout": "workspace:*"
-    "@atls-ui-parts/tooltip": "workspace:*"
-    "@emotion/react": "npm:11.11.3"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.48"
-    "@types/react-dom": "npm:18.2.18"
-    "@types/styled-system": "npm:5.1.22"
-    framer-motion: "npm:6.3.11"
-    react: "npm:18.2.0"
-    react-dom: "npm:18.2.0"
-    react-laag: "npm:2.0.5"
-    styled-system: "npm:5.1.5"
-  peerDependencies:
-    "@emotion/styled": 11.11.0
-    framer-motion: 10.15.2
-    react: 18.2.0
-    react-dom: 18.2.0
-    styled-system: 5.1.5
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/progress@workspace:ui-proto/progress":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/progress@workspace:ui-proto/progress"
-  dependencies:
-    "@atls-ui-parts/progress": "workspace:*"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.48"
-    "@types/styled-system": "npm:5.1.22"
-    react: "npm:18.2.0"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
-  peerDependencies:
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    styled-system: 5.1.5
-    styled-tools: 1.7.2
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/select@workspace:ui-proto/select":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/select@workspace:ui-proto/select"
-  dependencies:
-    "@atls-ui-parts/layout": "workspace:*"
-    "@atls-ui-parts/select": "workspace:*"
-    "@atls-ui-parts/text": "workspace:*"
-    "@atls-ui-proto/button": "workspace:*"
-    "@emotion/css": "npm:11.11.2"
-    "@emotion/react": "npm:11.11.3"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.48"
-    "@types/react-dom": "npm:18.2.18"
-    "@types/styled-system": "npm:5.1.22"
-    framer-motion: "npm:10.16.1"
-    react: "npm:18.2.0"
-    react-dom: "npm:18.2.0"
-    react-laag: "npm:2.0.5"
-    styled-system: "npm:5.1.5"
-  peerDependencies:
-    "@emotion/css": 11.11.2
-    "@emotion/styled": 11.11.0
-    framer-motion: 10.16.1
-    react: 18.2.0
-    react-dom: 18.2.0
-    styled-system: 5.1.5
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/swiper@workspace:ui-proto/swiper":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/swiper@workspace:ui-proto/swiper"
-  dependencies:
-    "@atls-ui-parts/swiper": "workspace:*"
-    "@types/react": "npm:18.2.48"
-    react: "npm:18.2.0"
-  peerDependencies:
-    react: 18.2.0
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/switch@workspace:ui-proto/switch":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/switch@workspace:ui-proto/switch"
-  dependencies:
-    "@atls-ui-parts/switch": "workspace:*"
-    "@emotion/css": "npm:11.11.2"
-    "@emotion/react": "npm:11.11.3"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.48"
-    "@types/react-dom": "npm:18.2.18"
-    "@types/styled-system": "npm:5.1.22"
-    framer-motion: "npm:10.16.1"
-    react: "npm:18.2.0"
-    react-dom: "npm:18.2.0"
-    react-laag: "npm:2.0.5"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
-  peerDependencies:
-    "@emotion/css": 11.11.2
-    "@emotion/styled": 11.11.0
-    framer-motion: 10.16.1
-    react: 18.2.0
-    react-dom: 18.2.0
-    styled-system: 5.1.5
-    styled-tools: 1.7.2
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/text@workspace:*, @atls-ui-proto/text@workspace:ui-proto/text":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/text@workspace:ui-proto/text"
-  dependencies:
-    "@atls-ui-parts/text": "workspace:*"
-    "@types/react": "npm:18.2.48"
-    react: "npm:18.2.0"
-  peerDependencies:
-    react: 18.2.0
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/theme@workspace:*, @atls-ui-proto/theme@workspace:ui-proto/theme":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/theme@workspace:ui-proto/theme"
-  dependencies:
-    "@emotion/css": "npm:11.11.2"
-    "@emotion/react": "npm:11.11.3"
-    "@types/node": "npm:18.0.0"
-    "@types/react": "npm:18.2.48"
-    react: "npm:18.2.0"
-  peerDependencies:
-    "@emotion/css": 11.11.2
-    "@emotion/react": 11.11.3
-    react: 18.2.0
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/tooltip@workspace:ui-proto/tooltip":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/tooltip@workspace:ui-proto/tooltip"
-  dependencies:
-    "@atls-ui-parts/layout": "workspace:*"
-    "@atls-ui-parts/tooltip": "workspace:*"
-    "@emotion/react": "npm:11.11.3"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.48"
-    "@types/react-dom": "npm:18.2.18"
-    "@types/styled-system": "npm:5.1.22"
-    react: "npm:18.2.0"
-    react-dom: "npm:18.2.0"
-    styled-system: "npm:5.1.5"
-  peerDependencies:
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    react-dom: 18.2.0
-    styled-system: 5.1.5
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-proto/upload@workspace:ui-proto/upload":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-proto/upload@workspace:ui-proto/upload"
-  dependencies:
-    "@atls-ui-parts/upload": "workspace:*"
-    "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.48"
-    "@types/styled-system": "npm:5.1.22"
-    react: "npm:18.2.0"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
-  peerDependencies:
-    "@emotion/styled": 11.11.0
-    "@types/react": 18.2.21
-    react: 18.2.0
-    styled-system: 5.1.5
-    styled-tools: 1.7.2
   languageName: unknown
   linkType: soft
 
@@ -5722,125 +5219,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radix-ui/react-avatar@npm:1.0.3":
-  version: 1.0.3
-  resolution: "@radix-ui/react-avatar@npm:1.0.3"
-  dependencies:
-    "@babel/runtime": "npm:^7.13.10"
-    "@radix-ui/react-context": "npm:1.0.1"
-    "@radix-ui/react-primitive": "npm:1.0.3"
-    "@radix-ui/react-use-callback-ref": "npm:1.0.1"
-    "@radix-ui/react-use-layout-effect": "npm:1.0.1"
-  peerDependencies:
-    "@types/react": "*"
-    "@types/react-dom": "*"
-    react: ^16.8 || ^17.0 || ^18.0
-    react-dom: ^16.8 || ^17.0 || ^18.0
-  peerDependenciesMeta:
-    "@types/react":
-      optional: true
-    "@types/react-dom":
-      optional: true
-  checksum: 10/1cc872c32c3d0fd7e8b8cbf3b199f6aa4ab07f7c3478d8a1c0cf2959fa873fbf368ef604dbf2c991d6894f567020bc51c4159aea839c9cced7488e02f06a0ddf
-  languageName: node
-  linkType: hard
-
-"@radix-ui/react-compose-refs@npm:1.0.1":
-  version: 1.0.1
-  resolution: "@radix-ui/react-compose-refs@npm:1.0.1"
-  dependencies:
-    "@babel/runtime": "npm:^7.13.10"
-  peerDependencies:
-    "@types/react": "*"
-    react: ^16.8 || ^17.0 || ^18.0
-  peerDependenciesMeta:
-    "@types/react":
-      optional: true
-  checksum: 10/2b9a613b6db5bff8865588b6bf4065f73021b3d16c0a90b2d4c23deceeb63612f1f15de188227ebdc5f88222cab031be617a9dd025874c0487b303be3e5cc2a8
-  languageName: node
-  linkType: hard
-
-"@radix-ui/react-context@npm:1.0.1":
-  version: 1.0.1
-  resolution: "@radix-ui/react-context@npm:1.0.1"
-  dependencies:
-    "@babel/runtime": "npm:^7.13.10"
-  peerDependencies:
-    "@types/react": "*"
-    react: ^16.8 || ^17.0 || ^18.0
-  peerDependenciesMeta:
-    "@types/react":
-      optional: true
-  checksum: 10/a02187a3bae3a0f1be5fab5ad19c1ef06ceff1028d957e4d9994f0186f594a9c3d93ee34bacb86d1fa8eb274493362944398e1c17054d12cb3b75384f9ae564b
-  languageName: node
-  linkType: hard
-
-"@radix-ui/react-primitive@npm:1.0.3":
-  version: 1.0.3
-  resolution: "@radix-ui/react-primitive@npm:1.0.3"
-  dependencies:
-    "@babel/runtime": "npm:^7.13.10"
-    "@radix-ui/react-slot": "npm:1.0.2"
-  peerDependencies:
-    "@types/react": "*"
-    "@types/react-dom": "*"
-    react: ^16.8 || ^17.0 || ^18.0
-    react-dom: ^16.8 || ^17.0 || ^18.0
-  peerDependenciesMeta:
-    "@types/react":
-      optional: true
-    "@types/react-dom":
-      optional: true
-  checksum: 10/bedb934ac07c710dc5550a7bfc7065d47e099d958cde1d37e4b1947ae5451f1b7e6f8ff5965e242578bf2c619065e6038c3a3aa779e5eafa7da3e3dbc685799f
-  languageName: node
-  linkType: hard
-
-"@radix-ui/react-slot@npm:1.0.2":
-  version: 1.0.2
-  resolution: "@radix-ui/react-slot@npm:1.0.2"
-  dependencies:
-    "@babel/runtime": "npm:^7.13.10"
-    "@radix-ui/react-compose-refs": "npm:1.0.1"
-  peerDependencies:
-    "@types/react": "*"
-    react: ^16.8 || ^17.0 || ^18.0
-  peerDependenciesMeta:
-    "@types/react":
-      optional: true
-  checksum: 10/734866561e991438fbcf22af06e56b272ed6ee8f7b536489ee3bf2f736f8b53bf6bc14ebde94834aa0aceda854d018a0ce20bb171defffbaed1f566006cbb887
-  languageName: node
-  linkType: hard
-
-"@radix-ui/react-use-callback-ref@npm:1.0.1":
-  version: 1.0.1
-  resolution: "@radix-ui/react-use-callback-ref@npm:1.0.1"
-  dependencies:
-    "@babel/runtime": "npm:^7.13.10"
-  peerDependencies:
-    "@types/react": "*"
-    react: ^16.8 || ^17.0 || ^18.0
-  peerDependenciesMeta:
-    "@types/react":
-      optional: true
-  checksum: 10/b9fd39911c3644bbda14a84e4fca080682bef84212b8d8931fcaa2d2814465de242c4cfd8d7afb3020646bead9c5e539d478cea0a7031bee8a8a3bb164f3bc4c
-  languageName: node
-  linkType: hard
-
-"@radix-ui/react-use-layout-effect@npm:1.0.1":
-  version: 1.0.1
-  resolution: "@radix-ui/react-use-layout-effect@npm:1.0.1"
-  dependencies:
-    "@babel/runtime": "npm:^7.13.10"
-  peerDependencies:
-    "@types/react": "*"
-    react: ^16.8 || ^17.0 || ^18.0
-  peerDependenciesMeta:
-    "@types/react":
-      optional: true
-  checksum: 10/bed9c7e8de243a5ec3b93bb6a5860950b0dba359b6680c84d57c7a655e123dec9b5891c5dfe81ab970652e7779fe2ad102a23177c7896dde95f7340817d47ae5
-  languageName: node
-  linkType: hard
-
 "@sinclair/typebox@npm:^0.23.3":
   version: 0.23.4
   resolution: "@sinclair/typebox@npm:0.23.4"
@@ -5877,15 +5255,6 @@ __metadata:
   dependencies:
     "@sinonjs/commons": "npm:^1.7.0"
   checksum: 10/033c74ad389b0655b6af2fa1af31dddf45878e65879f06c5d1940e0ceb053a234f2f46c728dcd97df8ee9312431e45dd7aedaee3a69d47f73a2001a7547fc3d6
-  languageName: node
-  linkType: hard
-
-"@stitches/react@npm:1.2.8":
-  version: 1.2.8
-  resolution: "@stitches/react@npm:1.2.8"
-  peerDependencies:
-    react: ">= 16.3.0"
-  checksum: 10/b9b8ecdd1e4012af4876f0fcd3702b2f881ab736f86cc3f0f7dd792c3eafe522e47d3fe3ab2fe8e7bf3c78b43cc6e4eb4c7a05d2b513b3aee015788094ab2527
   languageName: node
   linkType: hard
 
@@ -8628,20 +7997,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.0.0, @types/node@npm:^18.0.0":
-  version: 18.0.0
-  resolution: "@types/node@npm:18.0.0"
-  checksum: 10/211ea0884e5f9f618927f5873908f6ef12c711b5473f22e5567c39ada4ba7ce3b042b22c1f74d6f886c1ff3dc7b40751761278bddb00b92ff2629f7498626ecf
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:18.15.3":
-  version: 18.15.3
-  resolution: "@types/node@npm:18.15.3"
-  checksum: 10/18c7a19fb2935c0cfb0498fc061c327b2beea06e8ca08f77619eb3d1a975ec8a87dfadf54ca99bc423b5dec997f89249615c4f31f34438fa456fb530213e7d37
-  languageName: node
-  linkType: hard
-
 "@types/node@npm:20.5.7":
   version: 20.5.7
   resolution: "@types/node@npm:20.5.7"
@@ -8660,6 +8015,13 @@ __metadata:
   version: 16.11.39
   resolution: "@types/node@npm:16.11.39"
   checksum: 10/d575ff503357f9c2d86a3fb0f769478f4489b097e3b872b1ed9d7e854870f903d8c61962fca0650adc34eb30e63eb404a2381f3d51d67ac80ffd37367f4c0227
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.0.0":
+  version: 18.0.0
+  resolution: "@types/node@npm:18.0.0"
+  checksum: 10/211ea0884e5f9f618927f5873908f6ef12c711b5473f22e5567c39ada4ba7ce3b042b22c1f74d6f886c1ff3dc7b40751761278bddb00b92ff2629f7498626ecf
   languageName: node
   linkType: hard
 
@@ -13123,7 +12485,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"events@npm:3.3.0, events@npm:^3.2.0, events@npm:^3.3.0":
+"events@npm:^3.2.0, events@npm:^3.3.0":
   version: 3.3.0
   resolution: "events@npm:3.3.0"
   checksum: 10/a3d47e285e28d324d7180f1e493961a2bbb4cad6412090e4dec114f4db1f5b560c7696ee8e758f55e23913ede856e3689cd3aa9ae13c56b5d8314cd3b3ddd1be
@@ -13822,35 +13184,6 @@ __metadata:
     react-dom:
       optional: true
   checksum: 10/18cc0a511e09f0d803f19a54e9a74e664c3b9eda4a8833ce99910cab989a935e5e5d905e22ec752061ca326fb35d41f1d6e343b408b73411ba8378ed94079985
-  languageName: node
-  linkType: hard
-
-"framer-motion@npm:6.3.11":
-  version: 6.3.11
-  resolution: "framer-motion@npm:6.3.11"
-  dependencies:
-    "@emotion/is-prop-valid": "npm:^0.8.2"
-    framesync: "npm:6.0.1"
-    hey-listen: "npm:^1.0.8"
-    popmotion: "npm:11.0.3"
-    style-value-types: "npm:5.0.0"
-    tslib: "npm:^2.1.0"
-  peerDependencies:
-    react: ">=16.8 || ^17.0.0 || ^18.0.0"
-    react-dom: ">=16.8 || ^17.0.0 || ^18.0.0"
-  dependenciesMeta:
-    "@emotion/is-prop-valid":
-      optional: true
-  checksum: 10/ed10f00234f142ea2ef5160c2ebc520621d373621bf0a89d1b337eae23362b17fda5a65c7a3844c6ab01c386df1a394ff31e264d73fb7a361c94f1fb5a5df999
-  languageName: node
-  linkType: hard
-
-"framesync@npm:6.0.1":
-  version: 6.0.1
-  resolution: "framesync@npm:6.0.1"
-  dependencies:
-    tslib: "npm:^2.1.0"
-  checksum: 10/38a985189c90867a969e9acc1d31bfcab8184bccc0f1ad41a12dbd573e3ec0ba74259d12f3fcabaccd914330601cabd686f47b543798cf6e8c4ad23ea3c0a581
   languageName: node
   linkType: hard
 
@@ -14835,13 +14168,6 @@ __metadata:
   version: 4.3.0
   resolution: "hex-rgb@npm:4.3.0"
   checksum: 10/c0d59346b6e7c4523ef606154979b173d0e58be266e3a218d10d3298c1aa21bba124110604c8e4f9e9f76dac0196ced2bed04390879ba504d5ae412492f590cf
-  languageName: node
-  linkType: hard
-
-"hey-listen@npm:^1.0.8":
-  version: 1.0.8
-  resolution: "hey-listen@npm:1.0.8"
-  checksum: 10/744b5f4c18c7cfb82b22bd22e1d300a9ac4eafe05a22e58fb87e48addfca8be00604d9aa006434ea02f9530990eb4b393ddb28659e2ab7f833ce873e32eb809c
   languageName: node
   linkType: hard
 
@@ -19029,18 +18355,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"popmotion@npm:11.0.3":
-  version: 11.0.3
-  resolution: "popmotion@npm:11.0.3"
-  dependencies:
-    framesync: "npm:6.0.1"
-    hey-listen: "npm:^1.0.8"
-    style-value-types: "npm:5.0.0"
-    tslib: "npm:^2.1.0"
-  checksum: 10/d2b6f16536b093d6106ab4caff105b1b4a8bb260e1deb316ca4fe81997c2ca1fc9e2d7747cee08dc2ce34d23ef7be8fd096efa7bc7f6908479da9d16343e1f63
-  languageName: node
-  linkType: hard
-
 "posix-character-classes@npm:^0.1.0":
   version: 0.1.1
   resolution: "posix-character-classes@npm:0.1.1"
@@ -19760,15 +19074,6 @@ __metadata:
   peerDependencies:
     react: ^16.8.4 || ^17.0.0
   checksum: 10/593d864c8d6834f743f895ead3764ff6c06fd01568177858cc7cf434bd8abb61d3df56e64b4489c3da6cef5871a134c36aac19b6dcceb0d73c43f12fd65276ff
-  languageName: node
-  linkType: hard
-
-"react-intersection-observer@npm:9.5.2":
-  version: 9.5.2
-  resolution: "react-intersection-observer@npm:9.5.2"
-  peerDependencies:
-    react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: 10/cb9b520d85ed0ca0b999a0534070d5339a5dd266e9fe142bbb04c60ad8203e28102b1aaa7cc921c6473ae92c124bbe216de8660536accc83259d242854b8dcaa
   languageName: node
   linkType: hard
 
@@ -21699,16 +21004,6 @@ __metadata:
   dependencies:
     inline-style-parser: "npm:0.1.1"
   checksum: 10/7de13d6428719e6757e68b4788714c2b0eef189ac002697d961ce5357f03ab618f9b73562e7565c2fdd79c7594431602638462851d47046c6b925d722e0b3166
-  languageName: node
-  linkType: hard
-
-"style-value-types@npm:5.0.0":
-  version: 5.0.0
-  resolution: "style-value-types@npm:5.0.0"
-  dependencies:
-    hey-listen: "npm:^1.0.8"
-    tslib: "npm:^2.1.0"
-  checksum: 10/a4043bcc8e9f73e393c48f3f3d26f0ed42ac518cf623b1966737a17dc07ef9a4bcefaa81bfb91037c38b160a7683e139132c87fe747aebe6527b785a04262dd8
   languageName: node
   linkType: hard
 

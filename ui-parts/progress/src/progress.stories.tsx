@@ -1,10 +1,10 @@
 import React        from 'react'
 import { useState } from 'react'
 
+import { Button }   from '@atls-ui-parts/button'
 import { Column }   from '@atls-ui-parts/layout'
 import { Layout }   from '@atls-ui-parts/layout'
 import { Row }      from '@atls-ui-parts/layout'
-import { Button }   from '@atls-ui-proto/button'
 
 import { Circle }   from './circle'
 import { Line }     from './line'

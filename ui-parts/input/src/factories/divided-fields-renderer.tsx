@@ -7,16 +7,15 @@ const createDividedFieldsRenderer = ({
     divider,
   }) =>
   // eslint-disable-next-line
-  ({ children }) =>
-    (
-      <FieldAddonsContainer>
-        {children.map((child, index) => (
-          <>
-            {index !== 0 && <DividerContainer>{divider}</DividerContainer>}
-            <FieldAddon>{child}</FieldAddon>
-          </>
-        ))}
-      </FieldAddonsContainer>
-    )
+  ({ children }) => (
+    <FieldAddonsContainer>
+      {children.map((child, index) => (
+        <>
+          {index !== 0 && <DividerContainer>{divider}</DividerContainer>}
+          <FieldAddon>{child}</FieldAddon>
+        </>
+      ))}
+    </FieldAddonsContainer>
+  )
 
 export { createDividedFieldsRenderer }
