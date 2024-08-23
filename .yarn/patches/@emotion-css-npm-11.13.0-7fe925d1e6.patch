@@ -1,0 +1,10 @@
+diff --git a/dist/declarations/src/index.d.ts b/dist/declarations/src/index.d.ts
+index 66e1d61f0390dd9c5c318378fe55f1b802184fcd..1f43a7740e4c4cbc6c3d573152b0d24cb4f8d863 100644
+--- a/dist/declarations/src/index.d.ts
++++ b/dist/declarations/src/index.d.ts
+@@ -7,4 +7,4 @@ export declare const flush: () => void, hydrate: (ids: string[]) => void, cx: (.
+ }, css: {
+     (template: TemplateStringsArray, ...args: import("./create-instance.js").CSSInterpolation[]): string;
+     (...args: import("./create-instance.js").CSSInterpolation[]): string;
+-}, sheet: import("./create-instance.js").CSSStyleSheet, cache: EmotionCache;
++}, sheet: import("./create-instance.js").CSSStyleSheet, cache: import('@emotion/cache').EmotionCache;

@@ -1,39 +1,26 @@
-import styled                                 from '@emotion/styled'
+/* eslint-disable react-hooks/rules-of-hooks */
 
-import React                                  from 'react'
-import { useState }                           from 'react'
-import { useMemo }                            from 'react'
-import { useRef }                             from 'react'
+import { Meta }                      from '@storybook/react'
+import { StoryObj }                  from '@storybook/react'
 
-import { ConditionalRender }                  from '@atls-ui-parts/conditional-render'
-import { ForwardEventsState }                 from '@atls-ui-parts/events-state'
-import { Box }                                from '@atls-ui-parts/layout'
-import { SimpleUpload }                       from '@atls-ui-parts/upload'
-import { UploadResult }                       from '@atls-ui-parts/upload'
-import { fontNames }                          from '@atls/storybook-google-fonts'
-import { useGoogleFonts }                     from '@atls/storybook-google-fonts'
+import React                         from 'react'
+import { clsx }                      from 'clsx'
+import { useRef }                    from 'react'
+import { useState }                  from 'react'
 
-import { RawInput }                           from './input'
-import { createAddonsContainerStyles }        from './addon'
-import { createAddonPositionStyles }          from './addon'
-import { createAttachmentAppearanceStyles }   from './attachment'
-import { createAttachmentBaseStyles }         from './attachment'
-import { createAttachmentPositionStyles }     from './attachment'
-import { createAttachmentShapeStyles }        from './attachment'
-import { createBaseStyles }                   from './input'
-import { createShapeStyles }                  from './input'
-import { createAppearanceStyles }             from './input'
-import { createTextareaProps }                from './textarea'
-import { createTextareaAddonContainerStyles } from './textarea'
+import { Condition }                 from '@atls-ui-parts/condition'
+import { ForwardEventsState }        from '@atls-ui-parts/events-state'
+import { Box }                       from '@atls-ui-parts/layout'
+import { SimpleUpload }              from '@atls-ui-parts/upload'
+import { UploadResult }              from '@atls-ui-parts/upload'
+import { vars }                      from '@atls-ui-parts/theme'
 
-export default {
-  title: 'Components/Input',
-  parameters: {
-    options: {
-      enableShortcuts: false,
-    },
-  },
-}
+import { Addon }                     from './addon/index.js'
+import { Attachment }                from './attachment/index.js'
+import { TextareaContainer }         from './textarea/index.js'
+import { addonsContainerBaseStyles } from './addon/index.js'
+import { baseInputStyles }           from './input/index.js'
+import { baseTextareaStyles }        from './textarea/index.js'
 
 const getAddonPosition = (addonBefore, addonAfter) => {
   if (addonBefore && addonAfter) {
@@ -51,388 +38,350 @@ const getAddonPosition = (addonBefore, addonAfter) => {
   return null
 }
 
-export const Textarea = ({
-  containerWidth,
-  size,
-  prefix,
-  suffix,
-  addonBefore,
-  addonAfter,
-  borderWidth,
-  fontFamily,
-  fontSize,
-  fontWeight,
-  shapeRounding,
-  paddingLeft,
-  paddingRight,
-  fontColor,
-  backgroundColor,
-  borderColor,
-  addonFontColor,
-  addonBackgroundColor,
-  addonBorderColor,
-  rounding,
-}) => {
-  useGoogleFonts(fontFamily, fontWeight)
+const meta: Meta = {
+  title: 'Components/Input',
+  render: ({
+    containerWidth,
+    size,
+    prefix,
+    suffix,
+    addonBefore,
+    addonAfter,
+    borderWidth,
+    fontFamily,
+    fontSize,
+    fontWeight,
+    shapeRounding,
+    paddingLeft,
+    paddingRight,
+    fontColor,
+    backgroundColor,
+    borderColor,
+    addonFontColor,
+    addonBackgroundColor,
+    addonBorderColor,
+    rounding,
+  }) => {
+    const [value, setValue] = useState('контент')
+    const [files, setFiles] = useState<Array<UploadResult>>([])
+    const ref = useRef<HTMLTextAreaElement>(null)
 
-  const [value, setValue] = useState('контент')
-  const [files, setFiles] = useState<Array<UploadResult>>([])
-  const ref = useRef<HTMLInputElement>(null)
+    const attach = getAddonPosition(addonBefore, addonAfter)
 
-  const { containerProps, rawInputProps } = createTextareaProps()
-
-  const Attachment = useMemo(
-    () =>
-      styled(ConditionalRender())(
-        createAttachmentBaseStyles(),
-        createAttachmentShapeStyles({
-          fontFamily,
-          fontSize,
-          fontWeight,
-        }),
-        createAttachmentPositionStyles(6, 6),
-        createAttachmentAppearanceStyles({
-          fontColor,
-        })
-      ),
-    [fontFamily, fontSize, fontWeight, fontColor]
-  )
-
-  const AddonsContainer = useMemo(
-    () => styled.div(createAddonsContainerStyles(borderWidth)),
-    [borderWidth]
-  )
-
-  const Addon = useMemo(
-    () =>
-      styled(ConditionalRender())(
-        createBaseStyles(),
-        createShapeStyles({
-          size,
-          borderWidth,
-          fontFamily,
-          fontSize,
-          fontWeight,
-          rounding: shapeRounding,
-          paddingLeft,
-          paddingRight,
-        }),
-        createAppearanceStyles({
-          fontColor: addonFontColor,
-          backgroundColor: addonBackgroundColor,
-          borderColor: addonBorderColor,
-        }),
-        createAddonPositionStyles()
-      ),
-    [
-      size,
-      borderWidth,
+    const addonProps = {
+      fontColor: addonFontColor,
+      backgroundColor: addonBackgroundColor,
+      borderColor: addonBorderColor,
+      size: `${size}px`,
+      borderWidth: `${borderWidth}px`,
       fontFamily,
-      fontSize,
+      fontSize: `${fontSize}px`,
       fontWeight,
-      shapeRounding,
-      paddingLeft,
-      paddingRight,
-      addonFontColor,
-      addonBackgroundColor,
-      addonBorderColor,
-    ]
-  )
+      rounding: `${shapeRounding}px`,
+      paddingLeft: `${paddingLeft}px`,
+      paddingRight: `${paddingRight}px`,
+    }
 
-  const StoryTextarea = useMemo(
-    () =>
-      styled.div(
-        createBaseStyles(),
-        createShapeStyles({
-          size,
-          borderWidth,
-          fontFamily,
-          fontSize,
-          fontWeight,
-          rounding: shapeRounding,
-          paddingLeft,
-          paddingRight,
-        }),
-        createAppearanceStyles({
-          fontColor,
-          backgroundColor,
-          borderColor,
-        })
-      ),
-    [
-      size,
-      borderWidth,
-      fontFamily,
-      fontSize,
-      fontWeight,
-      shapeRounding,
-      paddingLeft,
-      paddingRight,
+    const textareaContainerProps = {
       fontColor,
       backgroundColor,
       borderColor,
-    ]
-  )
+      size: `${size}px`,
+      borderWidth: `${borderWidth}px`,
+      fontFamily,
+      fontSize: `${fontSize}px`,
+      fontWeight,
+      rounding: `${rounding}px`,
+      paddingLeft: `${paddingLeft}px`,
+      paddingRight: `${paddingRight}px`,
+    }
 
-  const TextareaAddon = styled.div(createTextareaAddonContainerStyles())
+    const attachmentProps = {
+      offsetLeft: '6px',
+      offsetRight: '6px',
+      fontFamily,
+      fontSize: `${fontSize}px`,
+      fontWeight,
+      fontColor,
+    }
 
-  const attach = getAddonPosition(addonBefore, addonAfter)
-
-  return (
-    <Box width={containerWidth} justifyContent='center'>
-      <AddonsContainer>
-        <Addon>{addonBefore}</Addon>
-        <ForwardEventsState ref={ref} events={['focus', 'blur']}>
-          <StoryTextarea rounding={rounding} attach={attach} {...containerProps}>
-            <Attachment>{prefix}</Attachment>
-            <RawInput
-              ref={ref}
-              value={value}
-              onChange={(event) => setValue(event.target.value)}
-              {...rawInputProps}
-            />
-            <TextareaAddon>
-              {/* TODO move example to proto */}
-              <SimpleUpload bucket='bucket' multiple onFile={(file) => setFiles([...files, file])}>
-                <span>Upload file</span>
-              </SimpleUpload>
-            </TextareaAddon>
-            <Attachment type='suffix'>{suffix}</Attachment>
-          </StoryTextarea>
-        </ForwardEventsState>
-        <Addon position='after'>{addonAfter}</Addon>
-      </AddonsContainer>
-    </Box>
-  )
+    return (
+      <Box fill flexDirection='column' alignItems='center' justifyContent='center'>
+        <Box width={`${containerWidth}px`} justifyContent='center'>
+          <div className={addonsContainerBaseStyles} style={{ marginRight: borderWidth || 1 }}>
+            <Condition match={Boolean(addonBefore)}>
+              <Addon position='before' attach={attach} {...addonProps}>
+                {addonBefore}
+              </Addon>
+            </Condition>
+            <ForwardEventsState ref={ref} events={['focus', 'blur']}>
+              <TextareaContainer attach={attach} {...textareaContainerProps}>
+                <Condition match={Boolean(prefix)}>
+                  <Attachment type='prefix' {...attachmentProps}>
+                    {prefix}
+                  </Attachment>
+                </Condition>
+                <textarea
+                  ref={ref}
+                  className={clsx(baseInputStyles, baseTextareaStyles)}
+                  value={value}
+                  onChange={(event) => setValue(event.target.value)}
+                />
+                <Condition match={Boolean(suffix)}>
+                  <Attachment type='suffix' {...attachmentProps}>
+                    {suffix}
+                  </Attachment>
+                </Condition>
+              </TextareaContainer>
+            </ForwardEventsState>
+            <Condition match={Boolean(addonAfter)}>
+              <Addon position='after' attach={attach} {...addonProps}>
+                {addonAfter}
+              </Addon>
+            </Condition>
+          </div>
+        </Box>
+        <Box flexDirection='column' width={`${containerWidth}px`}>
+          <SimpleUpload bucket='bucket' multiple onFile={(file) => setFiles([...files, file])}>
+            <span>Upload file</span>
+          </SimpleUpload>
+        </Box>
+      </Box>
+    )
+  },
+  tags: ['autodocs'],
+  argTypes: {
+    containerWidth: {
+      name: 'Контейнер',
+      description: 'Ширина контейнера',
+      table: {
+        category: 'Наполнение',
+      },
+      control: {
+        type: 'range',
+        min: 300,
+        max: 1200,
+        step: 10,
+      },
+    },
+    prefix: {
+      name: 'Префикс',
+      description: 'Дополнительная информация перед полем ввода',
+      table: {
+        category: 'Наполнение',
+      },
+    },
+    suffix: {
+      name: 'Суффикс',
+      description: 'Дополнительная информация после поля ввода',
+      table: {
+        category: 'Наполнение',
+      },
+    },
+    addonBefore: {
+      name: 'Аддон слева',
+      description: 'Дополнительная блок перед полем ввода',
+      table: {
+        category: 'Наполнение',
+      },
+    },
+    addonAfter: {
+      name: 'Аддон справа',
+      description: 'Дополнительная блок после поля ввода',
+      table: {
+        category: 'Наполнение',
+      },
+    },
+    size: {
+      name: 'Размер',
+      description: 'Высота',
+      table: {
+        category: 'Представление',
+        subcategory: 'Форма',
+      },
+      control: {
+        type: 'number',
+      },
+    },
+    borderWidth: {
+      name: 'Размер обводки',
+      description: 'Размер обводки',
+      table: {
+        category: 'Представление',
+        subcategory: 'Форма',
+      },
+      control: {
+        type: 'number',
+      },
+    },
+    fontFamily: {
+      name: 'Шрифт',
+      description: 'Шрифт',
+      table: {
+        category: 'Представление',
+        subcategory: 'Форма',
+      },
+      control: { type: 'select' },
+      options: [vars.fonts.primary],
+    },
+    fontWeight: {
+      name: 'Насыщенность шрифта',
+      description: 'Насыщенность шрифта текста',
+      table: {
+        category: 'Представление',
+        subcategory: 'Форма',
+      },
+      control: {
+        type: 'range',
+        min: 400,
+        max: 600,
+        step: 100,
+      },
+    },
+    fontSize: {
+      name: 'Размер шрифта',
+      description: 'Размер шрифта текста',
+      table: {
+        category: 'Представление',
+        subcategory: 'Форма',
+      },
+      control: {
+        type: 'number',
+      },
+    },
+    shapeRounding: {
+      name: 'Скругление',
+      description: 'Скругление углов кнопки',
+      table: {
+        category: 'Представление',
+        subcategory: 'Форма',
+      },
+      control: {
+        type: 'number',
+      },
+    },
+    paddingLeft: {
+      name: 'Отступ слева',
+      description: 'Отступ слева от края до контента',
+      table: {
+        category: 'Представление',
+        subcategory: 'Форма',
+      },
+      control: {
+        type: 'number',
+      },
+    },
+    paddingRight: {
+      name: 'Отступ справа',
+      description: 'Отступ справа от края до контента',
+      table: {
+        category: 'Представление',
+        subcategory: 'Форма',
+      },
+      control: {
+        type: 'number',
+      },
+    },
+    fontColor: {
+      name: 'Цвет текста',
+      description: 'Цвет текста',
+      table: {
+        category: 'Представление',
+        subcategory: 'Внешний вид',
+      },
+      control: {
+        type: 'color',
+      },
+    },
+    backgroundColor: {
+      name: 'Цвет заливки',
+      description: 'Цвет текста',
+      table: {
+        category: 'Представление',
+        subcategory: 'Внешний вид',
+      },
+      control: {
+        type: 'color',
+      },
+    },
+    borderColor: {
+      name: 'Цвет обводки',
+      description: 'Цвет обводки',
+      table: {
+        category: 'Представление',
+        subcategory: 'Внешний вид',
+      },
+      control: {
+        type: 'color',
+      },
+    },
+    addonFontColor: {
+      name: 'Цвет текста аддона',
+      description: 'Цвет текста аддона',
+      table: {
+        category: 'Представление',
+        subcategory: 'Внешний вид',
+      },
+      control: {
+        type: 'color',
+      },
+    },
+    addonBackgroundColor: {
+      name: 'Цвет заливки аддона',
+      description: 'Цвет текста аддона',
+      table: {
+        category: 'Представление',
+        subcategory: 'Внешний вид',
+      },
+      control: {
+        type: 'color',
+      },
+    },
+    addonBorderColor: {
+      name: 'Цвет обводки аддона',
+      description: 'Цвет обводки аддона',
+      table: {
+        category: 'Представление',
+        subcategory: 'Внешний вид',
+      },
+      control: {
+        type: 'color',
+      },
+    },
+    rounding: {
+      name: 'Скругление',
+      description: 'Устанавливает величину скругления',
+      table: {
+        category: 'Модификаторы',
+        subcategory: 'Форма',
+      },
+    },
+  },
 }
 
-Textarea.args = {
-  containerWidth: 300,
-  prefix: '',
-  suffix: '',
-  addonBefore: '',
-  addonAfter: '',
-  size: 36,
-  borderWidth: 1,
-  fontFamily: 'Roboto',
-  fontWeight: 400,
-  fontSize: 12,
-  shapeRounding: undefined,
-  paddingLeft: 8,
-  paddingRight: 12,
-  fontColor: 'blue',
-  backgroundColor: 'white',
-  borderColor: 'blue',
-  addonFontColor: 'white',
-  addonBackgroundColor: 'blue',
-  addonBorderColor: 'blue',
-  rounding: 0,
-}
+export default meta
 
-Textarea.argTypes = {
-  containerWidth: {
-    name: 'Контейнер',
-    description: 'Ширина контейнера',
-    table: {
-      category: 'Наполнение',
-    },
-    control: {
-      type: 'range',
-      min: 300,
-      max: 1200,
-      step: 10,
-    },
-  },
-  prefix: {
-    name: 'Префикс',
-    description: 'Дополнительная информация перед полем ввода',
-    table: {
-      category: 'Наполнение',
-    },
-  },
-  suffix: {
-    name: 'Суффикс',
-    description: 'Дополнительная информация после поля ввода',
-    table: {
-      category: 'Наполнение',
-    },
-  },
-  addonBefore: {
-    name: 'Аддон слева',
-    description: 'Дополнительная блок перед полем ввода',
-    table: {
-      category: 'Наполнение',
-    },
-  },
-  addonAfter: {
-    name: 'Аддон справа',
-    description: 'Дополнительная блок после поля ввода',
-    table: {
-      category: 'Наполнение',
-    },
-  },
-  size: {
-    name: 'Размер',
-    description: 'Высота',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  borderWidth: {
-    name: 'Размер',
-    description: 'Размер обводки',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  fontFamily: {
-    name: 'Шрифт',
-    description: 'Шрифт',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'select',
-      options: fontNames,
-    },
-  },
-  fontWeight: {
-    name: 'Насыщенность шрифта',
-    description: 'Насыщенность шрифта текста',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'select',
-      options: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-    },
-  },
-  fontSize: {
-    name: 'Размер шрифта',
-    description: 'Размер шрифта текста',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  shapeRounding: {
-    name: 'Скругление',
-    description: 'Скругление углов кнопки',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  paddingLeft: {
-    name: 'Отступ слева',
-    description: 'Отступ слева от края до контента',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  paddingRight: {
-    name: 'Отступ справа',
-    description: 'Отступ справа от края до контента',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  fontColor: {
-    name: 'Цвет текста',
-    description: 'Цвет текста',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  backgroundColor: {
-    name: 'Цвет заливки',
-    description: 'Цвет текста',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  borderColor: {
-    name: 'Цвет обводки',
-    description: 'Цвет обводки',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  addonFontColor: {
-    name: 'Цвет текста аддона',
-    description: 'Цвет текста аддона',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  addonBackgroundColor: {
-    name: 'Цвет заливки аддона',
-    description: 'Цвет текста аддона',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  addonBorderColor: {
-    name: 'Цвет обводки аддона',
-    description: 'Цвет обводки аддона',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  rounding: {
-    name: 'Скругление',
-    description: 'Устанавливает величину скругления',
-    table: {
-      category: 'Модификаторы',
-      subcategory: 'Форма',
-    },
+export const Textarea: StoryObj = {
+  args: {
+    containerWidth: 300,
+    prefix: '',
+    suffix: '',
+    addonBefore: '',
+    addonAfter: '',
+    size: 36,
+    borderWidth: 1,
+    fontFamily: vars.fonts.primary,
+    fontWeight: 400,
+    fontSize: 12,
+    shapeRounding: undefined,
+    paddingLeft: 8,
+    paddingRight: 12,
+    fontColor: 'blue',
+    backgroundColor: 'white',
+    borderColor: 'blue',
+    addonFontColor: 'white',
+    addonBackgroundColor: 'blue',
+    addonBorderColor: 'blue',
+    rounding: 0,
   },
 }

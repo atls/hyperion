@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const useClick = (): [boolean, () => void, { onClick: () => any }] => {
+export const useClick = () => {
   const [isClicked, setClicked] = useState(false)
 
   const close = () => setClicked(false)
@@ -9,7 +9,5 @@ const useClick = (): [boolean, () => void, { onClick: () => any }] => {
     onClick: () => setClicked(!isClicked),
   }
 
-  return [isClicked, close, clickProps]
+  return [isClicked, close, clickProps] as const
 }
-
-export { useClick }

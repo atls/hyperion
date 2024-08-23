@@ -1,9 +1,16 @@
-import styled                  from '@emotion/styled'
+import React               from 'react'
+import { HTMLMotionProps } from 'framer-motion'
+import { clsx }            from 'clsx'
+import { motion }          from 'framer-motion'
+import { forwardRef }      from 'react'
 
-import { motion }              from 'framer-motion'
+import { containerStyles } from './container.css.js'
 
-import { baseContainerStyles } from './container.styles'
-
-const Container = styled(motion.div)(baseContainerStyles)
-
-export { Container }
+export const Container = forwardRef<HTMLDivElement, HTMLMotionProps<'div'>>((
+  { children, className, ...props },
+  ref
+) => (
+  <motion.div ref={ref} className={clsx(className, containerStyles)} {...props}>
+    {children}
+  </motion.div>
+))

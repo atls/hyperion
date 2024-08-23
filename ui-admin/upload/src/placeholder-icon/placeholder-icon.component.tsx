@@ -1,8 +1,16 @@
-import styled                        from '@emotion/styled'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { HTMLAttributes }            from 'react'
+import { clsx }                      from 'clsx'
 
-import { PlaceholderIconElement }    from './placeholder-icon.element'
-import { basePlaceholderIconStyles } from './placeholder-icon.styles'
+import { basePlaceholderIconStyles } from './placeholder-icon.css.js'
 
-const PlaceholderIcon = styled(PlaceholderIconElement)(basePlaceholderIconStyles)
-
-export { PlaceholderIcon }
+export const PlaceholderIcon: FC<HTMLAttributes<HTMLSpanElement>> = ({
+  children,
+  className,
+  ...props
+}) => (
+  <span className={clsx(className, basePlaceholderIconStyles)} {...props}>
+    {children}
+  </span>
+)

@@ -2,7 +2,8 @@
   "name": "@atls-ui-generators/locales",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
-  "main": "src/index.ts",
+  "type": "module",
+  "main": "./src/index.ts",
   "bin": {
     "generate-locales": "dist/generator.js"
   },
@@ -23,12 +24,20 @@
     "prettier": "2.8.8"
   },
   "devDependencies": {
-    "@types/babel__standalone": "7.1.6",
+    "@types/babel__standalone": "7.1.7",
     "@types/prettier": "2.7.3"
   },
   "publishConfig": {
     "access": "public",
+    "exports": {
+      "./package.json": "./package.json",
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
     "main": "dist/index.js",
-    "typings": "dist/index.d.ts"
+    "types": "dist/index.d.ts"
   }
 }

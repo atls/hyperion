@@ -1,29 +1,26 @@
 import React                 from 'react'
-import { FunctionComponent } from 'react'
-import { useRef }            from 'react'
+import { FC }                from 'react'
+import { PropsWithChildren } from 'react'
 
 import { Switch }            from '@atls-ui-parts/switch'
+import { useHover }          from '@atls-utils/use-hover'
 
-import { Container }         from './container'
-import { Expander }          from './expander'
-import { Items }             from './items'
-import { Pinner }            from './pinner'
-import { SidebarProps }      from './sidebar.interfaces'
-import { Wrapper }           from './wrapper'
-import { usePinnedState }    from './hooks'
-import { useHover }          from './hooks'
+import { Container }         from './container/index.js'
+import { Expander }          from './expander/index.js'
+import { Items }             from './items/index.js'
+import { Pinner }            from './pinner/index.js'
+import { Wrapper }           from './wrapper/index.js'
+import { usePinnedState }    from './hooks/index.js'
 
-const Sidebar: FunctionComponent<SidebarProps> = ({ children }) => {
-  const node = useRef<HTMLDivElement>(null)
+export const Sidebar: FC<PropsWithChildren> = ({ children }) => {
+  const [hovered, hoverProps] = useHover()
   const [pinned, setPinned] = usePinnedState()
-  const [hovered] = useHover(node)
 
   return (
     <Wrapper pinned={pinned}>
-      <Container ref={node}>
+      <Container {...hoverProps}>
         <Expander opened={pinned || hovered}>
           <Items>{children}</Items>
-
           <Pinner>
             <Switch checked={pinned} onChange={setPinned} />
           </Pinner>
@@ -32,5 +29,3 @@ const Sidebar: FunctionComponent<SidebarProps> = ({ children }) => {
     </Wrapper>
   )
 }
-
-export { Sidebar }

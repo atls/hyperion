@@ -1,1 +1,1 @@
-export * from './conditional-render.factory'
+export * from './conditional-render.factory.js'

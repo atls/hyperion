@@ -1,5 +1,5 @@
-import { HTMLAttributes }         from 'react'
+import { HTMLAttributes }     from 'react'
 
-import { UseCarouselOptionsType } from './hooks'
+import { UseCarouselOptions } from './hooks/index.js'
 
-export interface CarouselProps extends HTMLAttributes<HTMLDivElement>, UseCarouselOptionsType {}
+export interface CarouselProps extends HTMLAttributes<HTMLDivElement>, UseCarouselOptions {}

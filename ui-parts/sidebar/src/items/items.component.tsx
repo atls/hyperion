@@ -1,8 +1,12 @@
-import styled              from '@emotion/styled'
+import React              from 'react'
+import { FC }             from 'react'
+import { HTMLAttributes } from 'react'
+import { clsx }           from 'clsx'
 
-import { ItemsElement }    from './items.element'
-import { baseItemsStyles } from './items.styles'
+import { itemsStyles }    from './items.css.js'
 
-const Items = styled(ItemsElement)(baseItemsStyles)
-
-export { Items }
+export const Items: FC<HTMLAttributes<HTMLDivElement>> = ({ children, className, ...props }) => (
+  <div className={clsx(className, itemsStyles)} {...props}>
+    {children}
+  </div>
+)

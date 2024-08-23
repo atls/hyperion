@@ -1,68 +1,95 @@
-import styled                         from '@emotion/styled'
+import { Meta }              from '@storybook/react'
+import { StoryObj }          from '@storybook/react'
 
-import React                          from 'react'
+import React                 from 'react'
+import { FC }                from 'react'
+import { PropsWithChildren } from 'react'
+import { ReactNode }         from 'react'
 
-import { Box }                        from '@atls-ui-parts/layout'
-import { Column }                     from '@atls-ui-parts/layout'
+import { Button }            from '@atls-ui-parts/button'
+import { Condition }         from '@atls-ui-parts/condition'
+import { Column }            from '@atls-ui-parts/layout'
+import { Layout }            from '@atls-ui-parts/layout'
+import { Box }               from '@atls-ui-parts/layout'
 
-import { Backdrop }                   from './backdrop'
-import { Container as BaseContainer } from './container'
-import { Renderer }                   from './renderer'
-import { useCardControls }            from './animation'
+import { Backdrop }          from './backdrop/index.js'
+import { Container }         from './container/index.js'
+import { Renderer }          from './renderer/index.js'
+import { useCardControls }   from './animation/index.js'
 
-export default {
+const meta: Meta = {
   title: 'Components/Card',
+  tags: ['autodocs'],
 }
 
-const Condition = ({ match, children }) => (match && children) || null
+export default meta
 
-const CardComponent = ({ children, container, backdrop = false, ghost = false }) => {
+interface CardProps extends PropsWithChildren {
+  backdrop?: boolean
+  ghost?: boolean
+  container?: ReactNode
+}
+
+const Card: FC<CardProps> = ({ children, container, backdrop = false, ghost = false }) => {
   const { cardProps, backdropProps, rendererProps, triggerProps, hide } = useCardControls({
     scrollThreshold: true,
   })
 
-  const Container = styled(BaseContainer)({
-    borderRadius: !ghost ? 10 : 0,
-    backgroundColor: !ghost ? 'red' : 'transparent',
-    height: 'min-content',
-  })
-
   return (
-    <>
-      <div {...triggerProps}>{children}</div>
+    <Column fill alignItems='center'>
+      <Layout flexBasis='30px' />
+      <Box {...triggerProps}>{children}</Box>
       <Renderer {...rendererProps}>
         <Condition match={backdrop}>
           <Backdrop {...backdropProps} onClick={hide} />
         </Condition>
-        <Container {...cardProps}>{container}</Container>
+        <Container
+          {...cardProps}
+          style={{
+            height: 'min-content',
+            borderRadius: !ghost ? 10 : 0,
+            backgroundColor: !ghost ? 'red' : 'transparent',
+          }}
+        >
+          {container}
+        </Container>
       </Renderer>
-    </>
-  )
-}
-
-const LargeContent = () => {
-  const Block = ({ idx }) => (
-    <Box width='100%' backgroundColor={`#${idx.toString().repeat(6)}`} height={100}>
-      Item no{idx}
-    </Box>
-  )
-
-  return (
-    <Column width='100%'>
-      {[...Array(9)].map((i, idx) => (
-        <Block idx={idx} />
-      ))}
+      <Layout flexBasis='30px' />
     </Column>
   )
 }
 
-export const Card = () => (
-  <>
-    <CardComponent backdrop container={<h1>Card content</h1>}>
-      <button type='button'>Open notify</button>
-    </CardComponent>
-    <CardComponent ghost container={<LargeContent />}>
-      <button type='button'>Open large content</button>
-    </CardComponent>
-  </>
+export const CardNotify: StoryObj = {
+  name: 'Базовый',
+  render: () => (
+    <Card backdrop container={<h1>Card content</h1>}>
+      <Button size='small'>Open notify</Button>
+    </Card>
+  ),
+}
+
+const LargeContent: FC = () => (
+  <Column width='100%'>
+    {Array.from({ length: 9 }, (_, index) => (
+      <Box
+        width='100%'
+        height='100px'
+        color='$white'
+        alignItems='center'
+        style={{ backgroundColor: `#${(index + 1).toString().repeat(6)}` }}
+      >
+        <Layout flexBasis='20px' />
+        Item number {index}
+      </Box>
+    ))}
+  </Column>
 )
+
+export const CardLarge: StoryObj = {
+  name: 'Много контента',
+  render: () => (
+    <Card ghost container={<LargeContent />}>
+      <Button size='small'>Open large content</Button>
+    </Card>
+  ),
+}

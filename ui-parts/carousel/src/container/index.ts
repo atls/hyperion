@@ -1,1 +1,1 @@
-export * from './container.styles'
+export * from './container.component.js'

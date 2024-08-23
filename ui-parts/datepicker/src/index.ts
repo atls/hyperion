@@ -1,4 +1,3 @@
-export * from './datepicker.component'
-export * from './datepicker.interface'
-export * from './styles'
-export * from './locales'
+export * from './datepicker.component.js'
+export * from './datepicker.interface.js'
+export * from './utils/index.js'

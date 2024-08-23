@@ -1,9 +1,15 @@
-import styled                      from '@emotion/styled'
+import React                   from 'react'
+import { clsx }                from 'clsx'
+import { forwardRef }          from 'react'
 
-import { IndicatorElement }        from './indicator.element'
-import { baseIndicatorStyles }     from './indicator.styles'
-import { ifOpenIndicatorModifier } from './indicator.styles'
+import { IndicatorProps }      from './indicator.interfaces.js'
+import { baseIndicatorStyles } from './indicator.css.js'
 
-const Indicator = styled(IndicatorElement)(baseIndicatorStyles, ifOpenIndicatorModifier())
-
-export { Indicator }
+export const Indicator = forwardRef<HTMLButtonElement, IndicatorProps>((
+  { children, className, ...props },
+  ref
+) => (
+  <button ref={ref} className={clsx(className, baseIndicatorStyles)} type='button' {...props}>
+    {children}
+  </button>
+))

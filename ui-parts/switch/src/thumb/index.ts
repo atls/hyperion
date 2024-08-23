@@ -1,5 +1,2 @@
-export * from './thumb.component'
-export * from './thumb.element'
-export * from './thumb.motion'
-export * from './thumb.styles'
-export * from './thumb.interfaces'
+export * from './thumb.component.js'
+export * from './thumb.interfaces.js'

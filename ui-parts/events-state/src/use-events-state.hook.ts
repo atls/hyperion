@@ -3,9 +3,9 @@ import { useEffect }          from 'react'
 import { useState }           from 'react'
 import { useMemo }            from 'react'
 
-import { EventsState }        from './events-state.interfaces'
-import { fillOppositeEvents } from './events-state.utils'
-import { mergeState }         from './events-state.utils'
+import { EventsState }        from './events-state.interfaces.js'
+import { fillOppositeEvents } from './events-state.utils.js'
+import { mergeState }         from './events-state.utils.js'
 
 export const useEventsState = (
   ref: MutableRefObject<HTMLElement>,

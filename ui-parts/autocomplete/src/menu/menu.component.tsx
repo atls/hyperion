@@ -1,8 +1,15 @@
-import styled             from '@emotion/styled'
+import React              from 'react'
+import { clsx }           from 'clsx'
+import { forwardRef }     from 'react'
 
-import { MenuElement }    from './menu.element'
-import { baseMenuStyles } from './menu.styles'
+import { MenuProps }      from './menu.interfaces.js'
+import { baseMenuStyles } from './menu.css.js'
 
-const Menu = styled(MenuElement)(baseMenuStyles)
-
-export { Menu }
+export const Menu = forwardRef<HTMLDivElement, MenuProps>((
+  { children, className, ...props },
+  ref
+) => (
+  <div ref={ref} className={clsx(className, baseMenuStyles)} {...props}>
+    {children}
+  </div>
+))

@@ -1,12 +1,16 @@
+import { RecipeVariants }      from '@vanilla-extract/recipes'
+
 import { InputHTMLAttributes } from 'react'
-import { FormEventHandler }    from 'react'
 
-import { InputShapeProps }     from './input'
-import { OnChangeCallback }    from './value'
+import { inputStyles }         from './styles/index.js'
 
-export interface InputProps
-  extends Omit<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>, 'onChange'>,
-    InputShapeProps {
-  onChange?: OnChangeCallback
-  onChangeNative?: FormEventHandler<HTMLInputElement>
+type InputHTMLAttributesWithoutSize = Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>
+
+export type InputVariants = Pick<
+  NonNullable<RecipeVariants<typeof inputStyles>>,
+  'size' | 'variant'
+>
+
+export interface InputProps extends InputHTMLAttributesWithoutSize, InputVariants {
+  icon?: JSX.Element
 }

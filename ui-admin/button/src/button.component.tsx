@@ -1,21 +1,39 @@
-import styled                from '@emotion/styled'
+import React            from 'react'
+import { forwardRef }   from 'react'
+import { useState }     from 'react'
 
-import React                 from 'react'
-import { FC }                from 'react'
-import { PropsWithChildren } from 'react'
+import { ButtonProps }  from '@atls-ui-parts/button'
+import { useHover }     from '@atls-utils/use-hover'
 
-import { Content }           from '@atls-ui-parts/button'
-import { ButtonProps }       from '@atls-ui-parts/button'
+import { buttonStyles } from './styles/index.js'
 
-import { baseStyles }        from './button.styles'
-import { shapeStyles }       from './button.styles'
-import { contentStyles }     from './button.styles'
-import { variantStyles }     from './button.styles'
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>((
+  { children, icon, iconPlacement, size = 'huge', variant = 'blue', disabled, ...props },
+  ref
+) => {
+  const [pressed, setPressed] = useState<boolean>(false)
+  const [hover, hoverProps] = useHover()
+  const onMouseDown = () => setPressed(true)
+  const onMouseUp = () => setPressed(false)
 
-export const ButtonElement = styled.button(baseStyles, contentStyles, shapeStyles, variantStyles)
-
-export const Button: FC<PropsWithChildren<ButtonProps>> = ({ children, ...props }) => (
-  <ButtonElement {...props}>
-    <Content divider={12}>{children}</Content>
-  </ButtonElement>
-)
+  return (
+    <button
+      ref={ref}
+      type='button'
+      className={buttonStyles({
+        size,
+        variant,
+        pressed: pressed ? `${variant}Pressed` : undefined,
+        hover: hover ? `${variant}Hover` : undefined,
+        disabled: disabled ? `${variant}Disabled` : undefined,
+      })}
+      onMouseDown={onMouseDown}
+      onMouseUp={onMouseUp}
+      disabled={disabled}
+      {...hoverProps}
+      {...props}
+    >
+      {children}
+    </button>
+  )
+})

@@ -1,6 +1,6 @@
 import { ReactElement }       from 'react'
 
-import { TextTransformProps } from './text-transform.interfaces'
+import { TextTransformProps } from './text-transform.interfaces.js'
 
 export const TextTransform = ({
   children,
@@ -16,9 +16,9 @@ export const TextTransform = ({
         case 'upperCase':
           return result.toUpperCase()
         case 'firstLetter':
-          return result.substr(0, 1)
+          return result.slice(0, 1)
         case 'lastLetter':
-          return result.substr(-1)
+          return result.slice(-1)
         case 'substr':
           return Array.isArray(args) ? result.substr(args[0], args[1]) : result.substr(args)
         case 'replace':

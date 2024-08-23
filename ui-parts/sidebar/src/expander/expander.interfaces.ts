@@ -1,6 +1,5 @@
-import { Variants } from 'framer-motion'
+import { HTMLMotionProps } from 'framer-motion'
 
-export interface ExpanderElementProps {
-  variants?: Variants
+export interface ExpanderProps extends HTMLMotionProps<'div'> {
   opened?: boolean
 }

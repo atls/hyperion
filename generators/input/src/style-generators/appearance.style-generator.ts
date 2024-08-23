@@ -3,60 +3,86 @@ import { writeFileSync }     from 'fs'
 import { pretty }            from '@atls-ui-generators/utils'
 import { getStylesName }     from '@atls-ui-generators/utils'
 
-import { InputColorSchemes } from '../input-generator.interfaces'
+import { InputColorSchemes } from '../input-generator.interfaces.js'
 
 const getAppearanceStylesName = (variant, state) => getStylesName('appearance', variant, state)
 
-export class AppearanceStyleGenerator {
-  public readonly requiredImports = [
+export class InputAppearanceStyleGenerator {
+  readonly requiredImports = [
+    { import: '{ vars }', from: '@ui/theme' },
     { import: '{ createAppearanceStyles }', from: '@atls-ui-parts/input' },
-    { import: '{ ifProp }', from: 'styled-tools' },
-    { import: '{ switchProp }', from: 'styled-tools' },
-    { import: '{ prop }', from: 'styled-tools' },
   ]
 
-  constructor(private readonly colorSchemes: InputColorSchemes) {}
+  #variants: string[] = []
 
-  private generateVariantStatefulStyles(variant) {
-    const states = Object.keys(this.colorSchemes[variant])
-    const lines: Array<string> = []
+  constructor(private readonly colorSchemes: InputColorSchemes) {
+    const allVariants = Object.keys(colorSchemes).reduce<string[]>(
+      (array, key) => (key.startsWith('input.') ? [...array, key.split('.')[1]] : array),
+      []
+    )
 
-    for (const state of states) {
+    const uniqueVariants = [...new Set(allVariants)]
+
+    this.#variants = uniqueVariants
+  }
+
+  private generateVariantStatefulStyles(variant: string) {
+    const lines: string[] = []
+
+    const allStates: string[] = Object.keys(this.colorSchemes).reduce<string[]>(
+      (array, key) => (key.startsWith(`input.${variant}`) ? [...array, key.split('.')[2]] : array),
+      []
+    )
+
+    const uniqueStates = [...new Set(allStates)]
+
+    for (const state of uniqueStates) {
       lines.push(`const ${getAppearanceStylesName(variant, state)} = createAppearanceStyles({
-        fontColor: prop('theme.colors.input.${variant}.${state}.font'),
-        backgroundColor: prop('theme.colors.input.${variant}.${state}.background'),
-        borderColor: prop('theme.colors.input.${variant}.${state}.border'),
+        fontColor: vars.colors['input.${variant}.${state}.font'],
+        backgroundColor: vars.colors['input.${variant}.${state}.background'],
+        borderColor: vars.colors['input.${variant}.${state}.border'],
       })`)
     }
 
     return lines.join('\n\n')
   }
 
-  private generateVariantAppearanceStyles(variant) {
-    const statePriorities = ['disabled', 'error', 'pressed', 'focus', 'hover']
-
-    return `${variant}: ${statePriorities
-      .map(
-        (state) => `ifProp(
-  prop('${state}', false),
-  ${getAppearanceStylesName(variant, state)},
-  `
-      )
-      .join('')} ${getAppearanceStylesName(variant, 'default')}${')'.repeat(
-      statePriorities.length
-    )}`
+  private generateVariantAppearanceStyles(
+    variants: string[],
+    state: string,
+    addSuffix: boolean = true
+  ) {
+    const suffix = addSuffix ? state : ''
+    return variants
+      .map((variant) => `${variant}${suffix}: ${getAppearanceStylesName(variant, state)},`)
+      .join('\n')
   }
 
   generateAppearanceStyles() {
-    const variants = Object.keys(this.colorSchemes)
-
     const statefulStyles = pretty(
-      variants.map((variant) => this.generateVariantStatefulStyles(variant)).join('\n\n')
+      this.#variants.map((variant) => this.generateVariantStatefulStyles(variant)).join('\n\n')
     )
-    const appearanceStyles = pretty(`const appearanceStyles = switchProp(
-  prop('variant', 'primary'),
-  {${variants.map((variant) => this.generateVariantAppearanceStyles(variant)).join(',')}}
-  )`)
+
+    const appearanceStyles = pretty(`
+      export const appearanceVariant = {
+        ${this.generateVariantAppearanceStyles(this.#variants, 'Default', false)}
+      }
+
+      export const appearanceHover = {
+        ${this.generateVariantAppearanceStyles(this.#variants, 'Hover')}
+      }
+
+      export const appearanceFocus = {
+        ${this.generateVariantAppearanceStyles(this.#variants, 'Focus')}
+      }
+
+      export const appearanceActive = {
+        ${this.generateVariantAppearanceStyles(this.#variants, 'Active')}
+      }
+
+      export const appearanceDisabled = {
+        ${this.generateVariantAppearanceStyles(this.#variants, 'Disabled')}
+      }`)
 
     const imports = pretty(
       this.requiredImports
@@ -64,19 +90,16 @@ export class AppearanceStyleGenerator {
         .join('\n')
     )
 
-    const exports = 'export { appearanceStyles }'
-
-    return { statefulStyles, appearanceStyles, imports, exports }
+    return { statefulStyles, appearanceStyles, imports }
   }
 
-  generateFile(path, filename = 'input.appearance-styles.ts') {
+  generateFile(path, filename = 'appearance.css.ts') {
     const generated = this.generateAppearanceStyles()
 
     const code = pretty(`
     ${generated.imports}
     ${generated.statefulStyles}
     ${generated.appearanceStyles}
-    ${generated.exports}
     `)
 
     if (path.split('').pop() === '/') {

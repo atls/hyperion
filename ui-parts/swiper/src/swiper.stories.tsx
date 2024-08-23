@@ -1,42 +1,54 @@
 /**
- * Full docs on https://swiperjs.com/
- * */
+ * @docs https://swiperjs.com/
+ */
 
-import React                    from 'react'
+import { Meta }        from '@storybook/react'
+import { StoryObj }    from '@storybook/react'
 
-import { Swiper as BaseSwiper } from './'
-import { SwiperSlide }          from './'
+import React           from 'react'
+import { SwiperSlide } from 'swiper/react'
 
-export default { title: 'Components/Swiper', parameters: { layout: 'fullscreen' } }
+import { Box }         from '@atls-ui-parts/layout'
+import { Column }      from '@atls-ui-parts/layout'
+import { Layout }      from '@atls-ui-parts/layout'
 
-const Slide = ({ children }) => (
-  <div
-    style={{
-      width: 300,
-      height: 300,
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: 'orange',
-    }}
-  >
-    {children}
-  </div>
-)
+import { BaseSwiper }  from './swiper.component.js'
 
-export const Swiper = () => (
-  <BaseSwiper
-    slidesPerView={3}
-    spaceBetween={60}
-    loop
-    width={1920}
-    grabCursor
-    touchEventsTarget='container'
-  >
-    {[...Array(7)].map((i, idx) => (
-      <SwiperSlide>
-        <Slide>{idx}</Slide>
-      </SwiperSlide>
-    ))}
-  </BaseSwiper>
-)
+const meta: Meta = {
+  title: 'Components/Swiper',
+  render: () => (
+    <Column fill alignItems='center' justifyContent='center'>
+      <Layout flexBasis='50px' />
+      <BaseSwiper
+        slidesPerView={3}
+        spaceBetween={60}
+        loop
+        width={1920}
+        grabCursor
+        touchEventsTarget='container'
+      >
+        {Array.from({ length: 7 }, (_, index) => (
+          <SwiperSlide key={index}>
+            <Box
+              width='300px'
+              height='300px'
+              justifyContent='center'
+              alignItems='center'
+              backgroundColor='$blueProtective'
+            >
+              {index}
+            </Box>
+          </SwiperSlide>
+        ))}
+      </BaseSwiper>
+      <Layout flexBasis='50px' />
+    </Column>
+  ),
+  tags: ['autodocs'],
+}
+
+export default meta
+
+export const Swiper: StoryObj = {
+  name: 'Базовый',
+}

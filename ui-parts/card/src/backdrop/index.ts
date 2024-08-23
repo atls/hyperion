@@ -1,1 +1,1 @@
-export * from './backdrop.component'
+export * from './backdrop.component.js'

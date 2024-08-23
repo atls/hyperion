@@ -2,7 +2,8 @@
   "name": "@atls-utils/use-hover",
   "version": "0.0.2",
   "license": "BSD-3-Clause",
-  "main": "src/index.ts",
+  "type": "module",
+  "main": "./src/index.ts",
   "files": [
     "dist"
   ],
@@ -12,15 +13,24 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
+    "@types/react": "18.2.48",
     "react-laag": "2.0.5"
   },
   "peerDependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "*",
+    "react-dom": "*"
   },
   "publishConfig": {
     "access": "public",
+    "exports": {
+      "./package.json": "./package.json",
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
     "main": "dist/index.js",
-    "typings": "dist/index.d.ts"
+    "types": "dist/index.d.ts"
   }
 }

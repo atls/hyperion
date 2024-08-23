@@ -1,2 +1,2 @@
-export * from './input-generator.interfaces'
-export * from './style-generators'
+export * from './input-generator.interfaces.js'
+export * from './style-generators/index.js'

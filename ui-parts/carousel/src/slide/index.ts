@@ -1,1 +1,1 @@
-export * from './slide.styles'
+export * from './slide.component.js'

@@ -1,53 +1,45 @@
-import styled             from '@emotion/styled'
+/* eslint-disable react-hooks/rules-of-hooks */
 
-import React              from 'react'
-import { motion }         from 'framer-motion'
-import { nanoid }         from 'nanoid'
-import { useState }       from 'react'
+import { Meta }     from '@storybook/react'
+import { StoryObj } from '@storybook/react'
 
-import { baseItemStyles } from './item'
-import { baseMenuStyles } from './menu'
-import { useSelect }      from './use-select.hook'
+import React        from 'react'
+import { useState } from 'react'
 
-export default { title: 'Components/Select' }
+import { Column }   from '@atls-ui-parts/layout'
+import { Row }      from '@atls-ui-parts/layout'
+import { Layout }   from '@atls-ui-parts/layout'
 
-// TODO throw an error if they were created inside component where useSelect was called
-const Button = styled.button({ width: 200 })
-const Label = styled.label()
-const Menu = styled(motion.ul)(baseMenuStyles)
-const MenuItem = styled.li<{ highlighted: boolean }>(baseItemStyles, ({ highlighted }) => ({
-  backgroundColor: highlighted ? 'aqua' : 'transparent',
-  height: 40,
-}))
+import { Select }   from './select.component.js'
 
-export const Select = () => {
-  const items = ['Item1', 'Item2', 'Item3']
+const meta: Meta = {
+  title: 'Components/Select',
+  render: () => {
+    const items = ['Item1', 'Item2', 'Item3']
 
-  const [value, setValue] = useState('Placeholder')
+    const [value, setValue] = useState<string>(items[0])
 
-  const { getMenuItemProps, labelProps, buttonProps, menuProps, renderMenu, highlightedIndex } =
-    useSelect({
-      items,
-      onChange: setValue,
-    })
+    return (
+      <Column fill alignItems='center'>
+        <Layout flexBasis='40px' />
+        <Row justifyContent='center'>
+          <Select
+            label='Label'
+            placeholder='value'
+            value={value}
+            items={items}
+            onChangeValue={setValue}
+          />
+        </Row>
+        <Layout flexBasis='40px' />
+      </Column>
+    )
+  },
+  tags: ['autodocs'],
+}
 
-  return (
-    <>
-      <Label {...labelProps}>Label</Label>
-      <Button {...buttonProps}>{value}</Button>
-      {renderMenu(
-        <Menu {...menuProps}>
-          {items.map((item, index) => (
-            <MenuItem
-              key={nanoid()}
-              highlighted={index === highlightedIndex}
-              {...getMenuItemProps(item, index)}
-            >
-              {item}
-            </MenuItem>
-          ))}
-        </Menu>
-      )}
-    </>
-  )
+export default meta
+
+export const Base: StoryObj = {
+  name: 'Базовый',
 }

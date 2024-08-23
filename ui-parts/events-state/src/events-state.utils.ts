@@ -1,4 +1,4 @@
-import { EventsState } from './events-state.interfaces'
+import { EventsState } from './events-state.interfaces.js'
 
 export const mergeState = (prev: EventsState, event: string): EventsState => {
   if (event === 'focus') {

@@ -1,6 +1,6 @@
-import { defaultPaths }     from './locales-generator.constants'
-import { mergeLocales }     from './merge-locales'
-import { processDirectory } from './process-directory'
+import { defaultPaths }     from './locales-generator.constants.js'
+import { mergeLocales }     from './merge-locales/index.js'
+import { processDirectory } from './process-directory/index.js'
 
 const allLocales = []
 let outputFile = 'ru'

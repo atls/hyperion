@@ -1,15 +1,14 @@
-import { useUpload }    from '@atls/react-upload'
-
 import React            from 'react'
 import { Children }     from 'react'
 import { cloneElement } from 'react'
 import { useEffect }    from 'react'
 import { useDropzone }  from 'react-dropzone'
 
-import { Container }    from './container.component'
-import { Placeholder }  from './placeholder.component'
+import { Container }    from './container/index.js'
+import { Placeholder }  from './placeholder/index.js'
+import { useUpload }    from './use-upload/index.js'
 
-const Upload: any = ({
+export const Upload: any = ({
   children,
   accept = {},
   multiple = false,
@@ -17,7 +16,7 @@ const Upload: any = ({
   onPreview,
   onFile,
 }) => {
-  const upload = useUpload()
+  const upload = useUpload({})
 
   const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject, acceptedFiles } =
     useDropzone({ accept, multiple })
@@ -29,22 +28,12 @@ const Upload: any = ({
       if (onPreview) {
         preview = URL.createObjectURL(file)
 
-        onPreview({
-          id: null,
-          url: preview,
-          preview,
-        })
+        onPreview({ id: null, url: preview, preview })
       }
 
-      upload(file).then((data) => {
-        if (preview) {
-          onFile({ ...data, preview })
-        } else {
-          onFile(data)
-        }
-      })
+      upload(file).then((data) => (preview ? onFile({ ...data, preview }) : onFile(data)))
     })
-    // eslint-disable-next-line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [acceptedFiles.map((file) => file.name).join()])
 
   const child = Children.only(children)
@@ -74,5 +63,3 @@ const Upload: any = ({
     </Container>
   )
 }
-
-export { Upload }

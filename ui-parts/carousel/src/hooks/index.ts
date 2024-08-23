@@ -1,4 +1,3 @@
-export * from './hooks.interfaces'
-export * from './use-carousel.hook'
-export * from './use-addon-pagination.hook'
-export * from './use-addon-navigation.hook'
+export * from './use-addon-navigation/index.js'
+export * from './use-addon-pagination/index.js'
+export * from './use-carousel/index.js'

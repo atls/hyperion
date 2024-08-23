@@ -1,3 +1,2 @@
-export * from './appearance'
-export * from './shape'
-export * from './base'
+export * from './box.interfaces.js'
+export * from './styles/index.js'

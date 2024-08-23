@@ -1,10 +1,11 @@
-import { InputHTMLAttributes }    from 'react'
+import { HTMLAttributes } from 'react'
+import { ReactNode }      from 'react'
 
-import { ContainerPositionProps } from './container'
-import { OnChangeCallback }       from './hooks'
-
-export interface CheckboxProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>,
-    ContainerPositionProps {
-  onChange?: OnChangeCallback
+export interface CheckboxProps extends HTMLAttributes<HTMLDivElement> {
+  onCheck: (checked: boolean) => void
+  active: boolean
+  labelPosition?: 'start' | 'top' | 'end' | 'bottom'
+  size?: 'small' | 'medium' | 'large'
+  color?: 'blue' | 'green' | 'red'
+  icon?: ReactNode
 }

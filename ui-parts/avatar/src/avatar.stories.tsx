@@ -1,257 +1,87 @@
-import styled                     from '@emotion/styled'
+import { Meta }           from '@storybook/react'
+import { StoryObj }       from '@storybook/react'
 
-import React                      from 'react'
-import stringToColor              from 'string-to-color'
+import React              from 'react'
 
-import { ImageBlock }             from '@atls-ui-parts/image'
-import { ScalableContent }        from '@atls-ui-parts/scalable-content'
-import { TextTransform }          from '@atls-ui-parts/text-transform'
-import { fontNames }              from '@atls/storybook-google-fonts'
-import { useGoogleFonts }         from '@atls/storybook-google-fonts'
+import { TextTransform }  from '@atls-ui-parts/text-transform'
 
-import { createAppearanceStyles } from './appearance'
-// @ts-ignore
-import { templates }              from './avatar.templates'
-import { createBaseStyles }       from './base'
-import { createShapeStyles }      from './shape'
+import { AvatarFallback } from './avatar-fallback/index.js'
+import { AvatarImage }    from './avatar-image/index.js'
+import { Avatar }         from './avatar/index.js'
+import { AvatarVariants } from './avatar/index.js'
 
-export default {
+interface AvatarProps extends AvatarVariants {
+  image: string
+  fallback: string
+}
+
+const meta: Meta<AvatarProps> = {
   title: 'Components/Avatar',
-  parameters: {
-    development: {
-      templates,
-    },
-  },
-}
-
-export const Avatar = ({
-  backgroundColor,
-  borderWidth,
-  borderColor,
-  size,
-  borderRadius,
-  padding,
-  fontColor,
-  fontSize,
-  fontWeight,
-  shape,
-  fontFamily,
-  textBasedBackground,
-  contentType,
-  src,
-  icon,
-  text,
-  alt,
-}) => {
-  useGoogleFonts(fontFamily, fontWeight)
-
-  const StoryAvatar = styled.div(
-    createBaseStyles(),
-    createShapeStyles({
-      size,
-      borderRadius,
-      borderWidth,
-      padding,
-      fontSize,
-      fontWeight,
-      fontFamily,
-    }),
-    createAppearanceStyles({
-      backgroundColor,
-      borderColor,
-      fontColor,
-    })
-  )
-
-  return (
-    <StoryAvatar shape={shape} background={textBasedBackground ? stringToColor(text) : null}>
-      {(contentType === 'image' && <ImageBlock src={src} alt={alt} />) ||
-        (contentType === 'scalable-text' && <ScalableContent>{text}</ScalableContent>) ||
-        (contentType === 'first-letter-text' && (
+  render: ({ size, shape, image, fallback }) => (
+    <div style={{ display: 'flex', justifyContent: 'center', padding: 40 }}>
+      <Avatar shape={shape} size={size}>
+        <AvatarImage src={image} />
+        <AvatarFallback size={size}>
           <TextTransform firstLetter upperCase>
-            {text}
+            {fallback}
           </TextTransform>
-        )) ||
-        (contentType === 'icon' && icon)}
-    </StoryAvatar>
-  )
-}
-
-Avatar.args = {
-  contentType: 'scalable-text',
-  src: 'https://media.istockphoto.com/vectors/default-profile-picture-avatar-photo-placeholder-vector-illustration-vector-id1223671392?s=170x170',
-  text: 'Аватар',
-  fontColor: 'white',
-  backgroundColor: 'blue',
-  textBasedBackground: false,
-  borderColor: 'blue',
-  borderWidth: 4,
-  fontFamily: 'Roboto',
-  fontWeight: 400,
-  fontSize: 16,
-  size: 100,
-  borderRadius: undefined,
-  padding: 10,
-  shape: 'circle',
-  icon: '',
-}
-
-Avatar.argTypes = {
-  text: {
-    name: 'Текст',
-    description: 'Текст внутри',
-    table: {
-      category: 'Наполнение',
+        </AvatarFallback>
+      </Avatar>
+    </div>
+  ),
+  tags: ['autodocs'],
+  argTypes: {
+    image: {
+      name: 'image',
+      description: 'Основной контент, изображение',
+      table: {
+        category: 'Наполнение',
+        type: { summary: 'string' },
+      },
     },
-  },
-  src: {
-    name: 'Изображение',
-    description: 'Адресс изображения',
-    table: {
-      category: 'Наполнение',
+    fallback: {
+      name: 'fallback',
+      description: 'Основной контент, описание',
+      table: {
+        category: 'Наполнение',
+        type: { summary: 'string' },
+      },
     },
-  },
-  contentType: {
-    name: 'Контент',
-    description: 'Выбор наполнения',
-    table: {
-      category: 'Наполнение',
+    size: {
+      name: 'size',
+      description: 'Размер',
+      control: { type: 'inline-radio' },
+      options: ['small', 'normal', 'large'],
+      table: {
+        category: 'Форма',
+        type: { summary: 'string' },
+        defaultValue: { summary: 'normal' },
+      },
     },
-    control: {
-      type: 'inline-radio',
-      options: ['image', 'scalable-text', 'first-letter-text', 'icon'],
-    },
-  },
-  size: {
-    name: 'Размер',
-    description: 'Размер аватара',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  padding: {
-    name: 'Отступы',
-    description: 'Отступы от контента',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  fontFamily: {
-    name: 'Шрифт',
-    description: 'Шрифт',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'select',
-      options: fontNames,
-    },
-  },
-  fontWeight: {
-    name: 'Насыщенность шрифта',
-    description: 'Насыщенность шрифта текста',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'select',
-      options: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-    },
-  },
-  fontSize: {
-    name: 'Размер шрифта',
-    description: 'Размер шрифта текста',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  backgroundColor: {
-    name: 'Цвет заливки',
-    description: 'Цвет заливки',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  textBasedBackground: {
-    name: 'Цвет на основе текста',
-    description: 'Цвет на основе текста',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-  },
-  fontColor: {
-    name: 'Цвет текста',
-    description: 'Цвет текста',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  borderWidth: {
-    name: 'Размер обводки',
-    description: 'Размер обводки',
-    table: {
-      category: 'Представление',
-      subcategory: 'Обводка',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  borderColor: {
-    name: 'Цвет обводки',
-    description: 'Цвет обводки',
-    table: {
-      category: 'Представление',
-      subcategory: 'Обводка',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  shape: {
-    name: 'Форма',
-    description: 'Форма аватара',
-    table: {
-      category: 'Модификаторы',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'inline-radio',
+    shape: {
+      name: 'shape',
+      description: 'Форма кнопки',
+      table: {
+        category: 'Форма',
+        type: { summary: 'string' },
+        defaultValue: { summary: 'circle' },
+      },
+      control: { type: 'inline-radio' },
       options: ['square', 'circle'],
     },
   },
-  borderRadius: {
-    name: 'Скругление',
-    description: 'Устанавливает величину скругления',
-    table: {
-      category: 'Модификаторы',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'number',
-    },
+}
+
+export default meta
+
+type Story = StoryObj<AvatarProps>
+
+export const Base: Story = {
+  name: 'Базовый',
+  args: {
+    image: 'https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80',
+    fallback: 'Аватар',
+    size: 'normal',
+    shape: 'circle',
   },
 }

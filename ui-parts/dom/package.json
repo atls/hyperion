@@ -2,7 +2,8 @@
   "name": "@atls-ui-parts/dom",
   "version": "0.0.7",
   "license": "BSD-3-Clause",
-  "main": "src/index.ts",
+  "type": "module",
+  "main": "./src/index.ts",
   "files": [
     "dist"
   ],
@@ -20,7 +21,15 @@
   },
   "publishConfig": {
     "access": "public",
+    "exports": {
+      "./package.json": "./package.json",
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
     "main": "dist/index.js",
-    "typings": "dist/index.d.ts"
+    "types": "dist/index.d.ts"
   }
 }

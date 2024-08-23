@@ -1,21 +1,20 @@
-import * as dark                                 from './dark'
-import * as light                                from './light'
+import React                                  from 'react'
+import { ThemeProvider as NextThemeProvider } from 'next-themes'
+import { FC }                                 from 'react'
+import { PropsWithChildren }                  from 'react'
 
-import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
+import { darkTheme }                          from './theme.css.js'
+import { lightTheme }                         from './theme.css.js'
 
-import React                                     from 'react'
-
-import { ThemeModeProvider }                     from './mode'
-import { ThemeModeStore }                        from './mode'
-import { useThemeMode }                          from './mode'
-
-export const BaseThemeProvider = (props) => {
-  const [mode] = useThemeMode()
-  return <EmotionThemeProvider {...props} theme={() => (mode === 'dark' ? dark : light)} />
-}
-
-export const ThemeProvider = ({ mode, ...props }) => (
-  <ThemeModeProvider value={new ThemeModeStore(mode)}>
-    <BaseThemeProvider {...props} />
-  </ThemeModeProvider>
+export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => (
+  <NextThemeProvider
+    attribute='class'
+    defaultTheme='light'
+    value={{
+      light: lightTheme,
+      dark: darkTheme,
+    }}
+  >
+    {children}
+  </NextThemeProvider>
 )

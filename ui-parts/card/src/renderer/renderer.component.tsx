@@ -1,13 +1,18 @@
-import React               from 'react'
-import { AnimatePresence } from 'framer-motion'
-import { useEffect }       from 'react'
-import { useState }        from 'react'
-import { createPortal }    from 'react-dom'
+import React                       from 'react'
+import { AnimatePresence }         from 'framer-motion'
+import { FC }                      from 'react'
+import { clsx }                    from 'clsx'
+import { useEffect }               from 'react'
+import { useState }                from 'react'
+import { createPortal }            from 'react-dom'
 
-import { Container }       from './container'
+import { Box }                     from '@atls-ui-parts/layout'
 
-const Renderer = ({ children, opened, ...props }) => {
-  const [body, setBody] = useState(null)
+import { RendererProps }           from './renderer.interfaces.js'
+import { rendererContainerStyles } from './renderer.css.js'
+
+export const Renderer: FC<RendererProps> = ({ children, className, opened, ...props }) => {
+  const [body, setBody] = useState<HTMLElement | null>(null)
 
   useEffect(() => {
     setBody(document.body)
@@ -16,10 +21,14 @@ const Renderer = ({ children, opened, ...props }) => {
   return (
     body &&
     createPortal(
-      <AnimatePresence>{opened && <Container {...props}>{children}</Container>}</AnimatePresence>,
+      <AnimatePresence>
+        {opened && (
+          <Box className={clsx(className, rendererContainerStyles)} {...props}>
+            {children}
+          </Box>
+        )}
+      </AnimatePresence>,
       body
     )
   )
 }
-
-export { Renderer }

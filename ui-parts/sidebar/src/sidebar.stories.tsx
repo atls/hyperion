@@ -1,102 +1,39 @@
-import styled                      from '@emotion/styled'
-import { FontAwesomeIcon }         from '@fortawesome/react-fontawesome'
-import { faCog }                   from '@fortawesome/free-solid-svg-icons'
+import { Meta }      from '@storybook/react'
+import { StoryObj }  from '@storybook/react'
 
-import React                       from 'react'
-import { useRef }                  from 'react'
+import React         from 'react'
 
-import { Column }                  from '@atls-ui-parts/layout'
-import { Layout }                  from '@atls-ui-parts/layout'
-import { Switch }                  from '@atls-ui-parts/switch'
+import { Column }    from '@atls-ui-parts/layout'
+import { Layout }    from '@atls-ui-parts/layout'
 
-import { ContainerElement }        from './container'
-import { ExpanderElement }         from './expander'
-import { ItemElement }             from './item'
-import { ItemIconElement }         from './item'
-import { ItemLabelElement }        from './item'
-import { ItemsElement }            from './items'
-import { PinnerElement }           from './pinner'
-import { SidebarProps }            from './sidebar.interfaces'
-import { WrapperElement }          from './wrapper'
-import { baseContainerStyles }     from './container'
-import { baseExpanderStyles }      from './expander'
-import { useHover }                from './hooks'
-import { usePinnedState }          from './hooks'
-import { baseItemStyles }          from './item'
-import { ifActiveItemModifier }    from './item'
-import { baseItemIconStyles }      from './item'
-import { baseItemLabelStyles }     from './item'
-import { baseItemsStyles }         from './items'
-import { basePinnerStyles }        from './pinner'
-import { baseWrapperStyles }       from './wrapper'
-import { ifPinnedWrapperModifier } from './wrapper'
+import { Item }      from './item/index.js'
+import { ItemIcon }  from './item/index.js'
+import { ItemLabel } from './item/index.js'
+import { Sidebar }   from './sidebar.component.js'
 
-export default {
-  title: 'Компоненты/Сайдбар/Примеры',
-}
-
-export const Base = () => {
-  const Wrapper = styled(WrapperElement)(baseWrapperStyles, ifPinnedWrapperModifier())
-
-  const Container = styled(ContainerElement)(baseContainerStyles, {
-    background: '#ffffff',
-  })
-
-  const Item = styled(ItemElement)(baseItemStyles, ifActiveItemModifier())
-
-  const Expander = styled(ExpanderElement)(baseExpanderStyles)
-
-  const ItemIcon = styled(ItemIconElement)(baseItemIconStyles)
-
-  const LabelIcon = styled(ItemLabelElement)(baseItemLabelStyles)
-
-  const Items = styled(ItemsElement)(baseItemsStyles)
-
-  const Pinner = styled(PinnerElement)(basePinnerStyles)
-
-  const Sidebar = ({ children }: SidebarProps) => {
-    const node = useRef<HTMLDivElement>(null)
-    const [pinned, setPinned] = usePinnedState()
-    const [hovered] = useHover(node)
-
-    return (
-      <Wrapper pinned={pinned}>
-        <Container ref={node}>
-          <Expander opened={pinned || hovered}>
-            <Items>{children}</Items>
-
-            <Pinner>
-              <Switch checked={pinned} onChange={setPinned} />
-            </Pinner>
-          </Expander>
-        </Container>
-      </Wrapper>
-    )
-  }
-
-  return (
-    <Column>
-      <Layout>
-        <Sidebar>
-          <Item active href='/'>
-            <ItemIcon>
-              <FontAwesomeIcon icon={faCog} />
-            </ItemIcon>
-            <LabelIcon>Test text</LabelIcon>
-          </Item>
-          <Item active={false} href='/'>
-            <ItemIcon>
-              <FontAwesomeIcon icon={faCog} />
-            </ItemIcon>
-            <LabelIcon>Test text</LabelIcon>
-          </Item>
-        </Sidebar>
-      </Layout>
-      <Layout p={40}>Content</Layout>
+const meta: Meta = {
+  title: 'Components/Sidebar',
+  render: () => (
+    <Column fill justifyContent='center'>
+      <Layout flexBasis='50px' />
+      <Sidebar>
+        <Item active>
+          <ItemIcon>⚙️</ItemIcon>
+          <ItemLabel>Settings</ItemLabel>
+        </Item>
+        <Item active={false}>
+          <ItemIcon>🍕</ItemIcon>
+          <ItemLabel>Pizza</ItemLabel>
+        </Item>
+      </Sidebar>
+      <Layout flexBasis='50px' />
     </Column>
-  )
+  ),
+  tags: ['autodocs'],
 }
 
-Base.story = {
+export default meta
+
+export const BaseSidebar: StoryObj = {
   name: 'Базовый',
 }

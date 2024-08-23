@@ -1,8 +1,0 @@
-{
-  "extends": "@atls/tsconfig/tsconfig.lib.json",
-  "compilerOptions": {
-    "outDir": "dist"
-  },
-  "exclude": ["node_modules", "src/**/*.test.ts"],
-  "include": ["src"]
-}

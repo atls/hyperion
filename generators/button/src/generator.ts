@@ -1,11 +1,11 @@
-import { transform }                from '@babel/standalone'
+import { transform }                      from '@babel/standalone'
 
-import assert                       from 'assert'
-import { Command }                  from 'commander'
-import { readFileSync }             from 'fs'
-import { join }                     from 'path'
+import assert                             from 'assert'
+import { Command }                        from 'commander'
+import { readFileSync }                   from 'fs'
+import { join }                           from 'path'
 
-import { AppearanceStyleGenerator } from '@atls-ui-generators/button'
+import { ButtonAppearanceStyleGenerator } from './style-generators/index.js'
 
 const command = new Command()
   .name('Button styles generator')
@@ -22,7 +22,7 @@ const command = new Command()
     // eslint-disable-next-line no-eval
     const colors = eval(code)
 
-    const generator = new AppearanceStyleGenerator(colors.button)
+    const generator = new ButtonAppearanceStyleGenerator(colors)
 
     const genPath = join(process.cwd(), path)
     generator.generateFile(genPath)

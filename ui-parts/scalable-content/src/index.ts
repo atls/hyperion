@@ -1,4 +1,3 @@
-export * from './scalable-content.interfaces'
-export * from './scalable-content.component'
-export * from './scalable.component'
-export * from './use-scale.hook'
+export * from './hooks/index.js'
+export * from './scalable-content.component.js'
+export * from './scalable-content.interfaces.js'

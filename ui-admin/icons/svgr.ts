@@ -1,4 +1,3 @@
-import prettierConfig   from '@atlantis-lab/prettier-config'
 import svgr             from '@svgr/core'
 
 import camelcase        from 'camelcase'
@@ -7,7 +6,7 @@ import glob             from 'glob-promise'
 import path             from 'path'
 import prettier         from 'prettier'
 
-import { replacements } from './replacements'
+import { replacements } from './replacements.js'
 
 const TARGET_DIR = path.join(__dirname, 'src')
 
@@ -63,7 +62,13 @@ const save = async (sources) =>
           // @ts-ignore
           .format(replaceElement(source.code), {
             parser: 'babel',
-            ...prettierConfig,
+            semi: false,
+            singleQuote: true,
+            tabWidth: 2,
+            jsxSingleQuote: true,
+            trailingComma: 'all',
+            pluginSearchDirs: [process.cwd()],
+            printWidth: 100,
           })
           .replaceAll("{'", '')
           .replaceAll("'}", '')

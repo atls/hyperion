@@ -1,3 +1,1 @@
-export * from './handle.component'
-export * from './handle.element'
-export * from './handle.styles'
+export * from './handle.component.js'

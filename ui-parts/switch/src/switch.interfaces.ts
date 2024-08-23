@@ -1,8 +1,8 @@
-import { OnChangeCallback }  from './hooks'
-import { ThumbElementProps } from './thumb'
+import { OnChangeCallback } from './hooks/index.js'
+import { ThumbProps }       from './thumb/index.js'
 
 export interface SwitchCallbackProps {
   onChange?: OnChangeCallback
 }
 
-export type SwitchProps = ThumbElementProps & SwitchCallbackProps
+export type SwitchProps = ThumbProps & SwitchCallbackProps

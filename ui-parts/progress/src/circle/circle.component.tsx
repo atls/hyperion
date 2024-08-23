@@ -1,16 +1,14 @@
-/* eslint-disable no-param-reassign */
-
-import { useTheme }          from '@emotion/react'
-
 import React                 from 'react'
 import { FunctionComponent } from 'react'
 import { PropsWithChildren } from 'react'
 import { useState }          from 'react'
 
-import { CircleProps }       from './circle.interfaces'
-import { getGradientId }     from './utils'
-import { getPathStyles }     from './utils'
-import { toArray }           from './utils'
+import { vars }              from '@atls-ui-parts/theme'
+
+import { CircleProps }       from './circle.interfaces.js'
+import { getGradientId }     from './circle.utils.js'
+import { getPathStyles }     from './circle.utils.js'
+import { toArray }           from './circle.utils.js'
 
 const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
   trailWidth,
@@ -26,12 +24,15 @@ const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
   children,
   ...props
 }) => {
-  const theme: any = useTheme() || {}
+  const getThemeColor = (color) => (vars.colors && vars.colors[color]) || color
   const gradientId = getGradientId(strokeColor)
+  const trailThemeColor = getThemeColor(trailColor)
+  const strokeThemeColor = getThemeColor(strokeColor)
+
   const { pathString, pathStyle } = getPathStyles(
     0,
     100,
-    trailColor,
+    trailThemeColor,
     strokeWeight,
     gapDegree,
     gapPosition
@@ -49,18 +50,13 @@ const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
     return newKey
   }
 
-  const getThemeColor = (color) => (theme.colors && theme.colors[color]) || color
-
-  trailColor = getThemeColor(trailColor)
-  strokeColor = getThemeColor(strokeColor)
-
-  const gradients = toArray(strokeColor).filter(
+  const gradients = toArray(strokeThemeColor).filter(
     (color) => Object.prototype.toString.call(color) === '[object Object]'
   )
 
   const getStrokeList = () => {
     const percentList = toArray(percent)
-    const strokeColorList = toArray(strokeColor)
+    const strokeColorList = toArray(strokeThemeColor)
 
     let stackPtg = 0
     let gradientIndex = -1
@@ -111,7 +107,7 @@ const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
       ))}
       <path
         d={pathString}
-        stroke={trailColor}
+        stroke={trailThemeColor}
         strokeLinecap={strokeLinecap}
         strokeWidth={trailWidth || strokeWeight}
         fillOpacity='0'

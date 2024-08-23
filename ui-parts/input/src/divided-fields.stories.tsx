@@ -1,285 +1,252 @@
-import styled                               from '@emotion/styled'
+/* eslint-disable react-hooks/rules-of-hooks */
 
-import React                                from 'react'
-import { useState }                         from 'react'
-import { useMemo }                          from 'react'
-import { useRef }                           from 'react'
+import { Meta }                         from '@storybook/react'
+import { StoryObj }                     from '@storybook/react'
 
-import { ConditionalRender }                from '@atls-ui-parts/conditional-render'
-import { ForwardEventsState }               from '@atls-ui-parts/events-state'
-import { Box }                              from '@atls-ui-parts/layout'
-import { fontNames }                        from '@atls/storybook-google-fonts'
-import { useGoogleFonts }                   from '@atls/storybook-google-fonts'
+import React                            from 'react'
+import { useRef }                       from 'react'
+import { useState }                     from 'react'
 
-import { RawInput }                         from './input'
-import { createDividedFieldsRenderer }      from './factories'
-import { createFieldAddonsContainerStyles } from './fields-addon'
-import { createFieldAddonStyles }           from './fields-addon'
-import { createDividerContainerStyles }     from './fields-addon'
-import { createAppearanceStyles }           from './input'
-import { createBaseStyles }                 from './input'
-import { createShapeStyles }                from './input'
+import { Condition }                    from '@atls-ui-parts/condition'
+import { ForwardEventsState }           from '@atls-ui-parts/events-state'
+import { Box }                          from '@atls-ui-parts/layout'
+import { vars }                         from '@atls-ui-parts/theme'
 
-export default {
+import { DividedFieldsContainer }       from './divided-fields/index.js'
+import { RawInput }                     from './raw-input/index.js'
+import { baseDividedFieldsInputStyles } from './divided-fields/index.js'
+
+const meta: Meta = {
   title: 'Components/Input',
-}
+  render: ({
+    containerWidth,
+    size,
+    borderWidth,
+    fontFamily,
+    fontSize,
+    fontWeight,
+    paddingRight,
+    paddingLeft,
+    backgroundColor,
+    fontColor,
+    borderColor,
+    rounding,
+    divider,
+  }) => {
+    const [hrs, setHrs] = useState('')
+    const [min, setMin] = useState('')
+    const [sec, setSec] = useState('')
+    const ref = useRef<HTMLInputElement>(null)
 
-export const DividedFieldsInput = ({
-  containerWidth,
-  size,
-  borderWidth,
-  fontFamily,
-  fontSize,
-  fontWeight,
-  shapeRounding,
-  paddingRight,
-  paddingLeft,
-  backgroundColor,
-  fontColor,
-  borderColor,
-  rounding,
-  divider,
-}) => {
-  const [hrs, setHrs] = useState('')
-  const [min, setMin] = useState('')
-  const [sec, setSec] = useState('')
-  const ref = useRef<HTMLInputElement>(null)
-
-  useGoogleFonts(fontFamily, fontWeight)
-
-  const StoryInput = useMemo(
-    () =>
-      styled.div(
-        createBaseStyles(),
-        createShapeStyles({
-          size,
-          fontFamily,
-          borderWidth,
-          fontSize,
-          fontWeight,
-          rounding: shapeRounding,
-          paddingLeft,
-          paddingRight,
-        }),
-        createAppearanceStyles({
-          fontColor,
-          backgroundColor,
-          borderColor,
-        })
-      ),
-    [
-      size,
-      borderWidth,
-      fontFamily,
-      fontWeight,
-      fontSize,
-      shapeRounding,
-      paddingLeft,
-      paddingRight,
+    const dividedFieldsContainerProps = {
       fontColor,
       backgroundColor,
       borderColor,
-    ]
-  )
+      size: `${size}px`,
+      borderWidth: `${borderWidth}px`,
+      fontFamily,
+      fontSize: `${fontSize}px`,
+      fontWeight,
+      borderRadius: `${rounding}px`,
+      paddingLeft: `${paddingLeft}px`,
+      paddingRight: `${paddingRight}px`,
+    }
 
-  const FieldAddonsContainer = useMemo(
-    () => styled.div(createFieldAddonsContainerStyles(size)),
-    [size]
-  )
+    const dividedContainerProps = {
+      alignItems: 'center',
+      height: `${size}px`,
+      paddingLeft: `${paddingLeft}px`,
+      paddingRight: `${paddingRight}px`,
+    }
 
-  const FieldAddon = useMemo(() => styled.div(createFieldAddonStyles()), [])
-
-  const DividerContainer = useMemo(
-    () =>
-      styled(ConditionalRender())(createDividerContainerStyles(paddingRight, paddingLeft, size)),
-    [paddingRight, paddingLeft, size]
-  )
-
-  const DividedFields = useMemo(
-    () =>
-      createDividedFieldsRenderer({
-        FieldAddonsContainer,
-        FieldAddon,
-        DividerContainer,
-        divider,
-      }),
-    [FieldAddon, FieldAddonsContainer, DividerContainer, divider]
-  )
-
-  const Input = useMemo(
-    () =>
-      styled(RawInput)({
-        textAlign: 'center',
-      }),
-    []
-  )
-
-  return (
-    <Box width={containerWidth} justifyContent='center'>
-      <ForwardEventsState ref={ref} events={['focus', 'blur']}>
-        <StoryInput rounding={rounding}>
-          <DividedFields>
-            <Input
-              ref={ref}
-              value={hrs}
-              placeholder='0'
-              onChange={(event) => setHrs(event.target.value)}
-            />
-            <Input
-              ref={ref}
-              value={min}
-              placeholder='00'
-              onChange={(event) => setMin(event.target.value)}
-            />
-            <Input
-              ref={ref}
-              value={sec}
-              placeholder='00'
-              onChange={(event) => setSec(event.target.value)}
-            />
-          </DividedFields>
-        </StoryInput>
-      </ForwardEventsState>
-    </Box>
-  )
+    return (
+      <Box fill flexDirection='column' alignItems='center' justifyContent='center'>
+        <Box width={`${containerWidth}px`} justifyContent='center'>
+          <ForwardEventsState ref={ref} events={['focus', 'blur']}>
+            <DividedFieldsContainer {...dividedFieldsContainerProps}>
+              <Box alignItems='center' width='100%' height={`${size}px`}>
+                <RawInput
+                  ref={ref}
+                  className={baseDividedFieldsInputStyles}
+                  value={hrs}
+                  placeholder='0'
+                  onChange={(event) => setHrs(event.target.value)}
+                />
+                <Condition match={Boolean(divider)}>
+                  <Box {...dividedContainerProps}>{divider}</Box>
+                </Condition>
+                <RawInput
+                  ref={ref}
+                  className={baseDividedFieldsInputStyles}
+                  value={min}
+                  placeholder='00'
+                  onChange={(event) => setMin(event.target.value)}
+                />
+                <Condition match={Boolean(divider)}>
+                  <Box {...dividedContainerProps}>{divider}</Box>
+                </Condition>
+                <RawInput
+                  ref={ref}
+                  className={baseDividedFieldsInputStyles}
+                  value={sec}
+                  placeholder='00'
+                  onChange={(event) => setSec(event.target.value)}
+                />
+              </Box>
+            </DividedFieldsContainer>
+          </ForwardEventsState>
+        </Box>
+      </Box>
+    )
+  },
+  tags: ['autodocs'],
+  argTypes: {
+    containerWidth: {
+      name: 'Контейнер',
+      description: 'Ширина контейнера',
+      table: {
+        category: 'Наполнение',
+      },
+      control: {
+        type: 'range',
+        min: 300,
+        max: 1200,
+        step: 10,
+      },
+    },
+    size: {
+      name: 'Размер',
+      description: 'Высота',
+      table: {
+        category: 'Представление',
+        subcategory: 'Форма',
+      },
+      control: {
+        type: 'number',
+      },
+    },
+    borderWidth: {
+      name: 'Размер обводки',
+      description: 'Размер обводки',
+      table: {
+        category: 'Представление',
+        subcategory: 'Форма',
+      },
+      control: {
+        type: 'number',
+      },
+    },
+    fontFamily: {
+      name: 'Шрифт',
+      description: 'Шрифт',
+      table: {
+        category: 'Представление',
+        subcategory: 'Форма',
+      },
+      control: { type: 'select' },
+      options: [vars.fonts.primary],
+    },
+    fontWeight: {
+      name: 'Насыщенность шрифта',
+      description: 'Насыщенность шрифта текста',
+      table: {
+        category: 'Представление',
+        subcategory: 'Форма',
+      },
+      control: {
+        type: 'range',
+        min: 400,
+        max: 600,
+        step: 100,
+      },
+    },
+    fontSize: {
+      name: 'Размер шрифта',
+      description: 'Размер шрифта текста',
+      table: {
+        category: 'Представление',
+        subcategory: 'Форма',
+      },
+      control: {
+        type: 'number',
+      },
+    },
+    paddingLeft: {
+      name: 'Отступ слева',
+      description: 'Отступ слева от края до контента',
+      table: {
+        category: 'Представление',
+        subcategory: 'Форма',
+      },
+      control: {
+        type: 'number',
+      },
+    },
+    paddingRight: {
+      name: 'Отступ справа',
+      description: 'Отступ справа от края до контента',
+      table: {
+        category: 'Представление',
+        subcategory: 'Форма',
+      },
+      control: {
+        type: 'number',
+      },
+    },
+    fontColor: {
+      name: 'Цвет текста',
+      description: 'Цвет текста',
+      table: {
+        category: 'Представление',
+        subcategory: 'Внешний вид',
+      },
+      control: {
+        type: 'color',
+      },
+    },
+    backgroundColor: {
+      name: 'Цвет заливки',
+      description: 'Цвет текста',
+      table: {
+        category: 'Представление',
+        subcategory: 'Внешний вид',
+      },
+      control: {
+        type: 'color',
+      },
+    },
+    borderColor: {
+      name: 'Цвет обводки',
+      description: 'Цвет обводки',
+      table: {
+        category: 'Представление',
+        subcategory: 'Внешний вид',
+      },
+      control: {
+        type: 'color',
+      },
+    },
+    rounding: {
+      name: 'Скругление',
+      description: 'Устанавливает величину скругления',
+      table: {
+        category: 'Модификаторы',
+        subcategory: 'Форма',
+      },
+    },
+  },
 }
 
-DividedFieldsInput.args = {
-  size: 30,
-  borderWidth: 1,
-  borderColor: 'blue',
-  divider: ':',
-  paddingLeft: 10,
-  paddingRight: 15,
-  rounding: 6,
-}
+export default meta
 
-DividedFieldsInput.argTypes = {
-  containerWidth: {
-    name: 'Контейнер',
-    description: 'Ширина контейнера',
-    table: {
-      category: 'Наполнение',
-    },
-  },
-  size: {
-    name: 'Размер',
-    description: 'Высота',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  borderWidth: {
-    name: 'Размер',
-    description: 'Размер обводки',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  fontFamily: {
-    name: 'Шрифт',
-    description: 'Шрифт',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'select',
-      options: fontNames,
-    },
-  },
-  fontWeight: {
-    name: 'Насыщенность шрифта',
-    description: 'Насыщенность шрифта текста',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'select',
-      options: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-    },
-  },
-  fontSize: {
-    name: 'Размер шрифта',
-    description: 'Размер шрифта текста',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  paddingLeft: {
-    name: 'Отступ слева',
-    description: 'Отступ слева от края до контента',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  paddingRight: {
-    name: 'Отступ справа',
-    description: 'Отступ справа от края до контента',
-    table: {
-      category: 'Представление',
-      subcategory: 'Форма',
-    },
-    control: {
-      type: 'number',
-    },
-  },
-  fontColor: {
-    name: 'Цвет текста',
-    description: 'Цвет текста',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  backgroundColor: {
-    name: 'Цвет заливки',
-    description: 'Цвет текста',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  borderColor: {
-    name: 'Цвет обводки',
-    description: 'Цвет обводки',
-    table: {
-      category: 'Представление',
-      subcategory: 'Внешний вид',
-    },
-    control: {
-      type: 'color',
-    },
-  },
-  rounding: {
-    name: 'Скругление',
-    description: 'Устанавливает величину скругления',
-    table: {
-      category: 'Модификаторы',
-      subcategory: 'Форма',
-    },
+export const DividedFields: StoryObj = {
+  args: {
+    size: 30,
+    borderWidth: 1,
+    borderColor: 'blue',
+    divider: ':',
+    paddingLeft: 10,
+    paddingRight: 15,
+    rounding: 6,
   },
 }

@@ -1,2 +1,2 @@
-export * from './condition.component'
-export * from './condition.interface'
+export * from './condition.component.js'
+export * from './condition.interface.js'
