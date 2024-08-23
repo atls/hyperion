@@ -1,10 +1,10 @@
 import { createRainbowSprinkles } from 'rainbow-sprinkles'
 import { defineProperties }       from 'rainbow-sprinkles'
 
-import { colorProperties }        from '@atls-ui-parts/theme/properties'
-import { layoutProperties }       from '@atls-ui-parts/theme/properties'
-import { spaceProperties }        from '@atls-ui-parts/theme/properties'
-import { typographyProperties }   from '@atls-ui-parts/theme/properties'
+import { colorProperties }        from '@atls-ui-parts/theme'
+import { layoutProperties }       from '@atls-ui-parts/theme'
+import { spaceProperties }        from '@atls-ui-parts/theme'
+import { typographyProperties }   from '@atls-ui-parts/theme'
 
 export const textProperties = defineProperties({
   dynamicProperties: {

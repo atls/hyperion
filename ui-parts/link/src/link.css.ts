@@ -1,5 +1,6 @@
 import { style }                  from '@vanilla-extract/css'
 
+import { SprinklesFn }            from 'rainbow-sprinkles/createRuntimeFn'
 import { createRainbowSprinkles } from 'rainbow-sprinkles'
 import { defineProperties }       from 'rainbow-sprinkles'
 
@@ -10,7 +11,8 @@ const linkComponentProperties = defineProperties({
   },
 })
 
-export const linkSprinkles = createRainbowSprinkles(linkComponentProperties)
+export const linkSprinkles: SprinklesFn<[typeof linkComponentProperties]> =
+  createRainbowSprinkles(linkComponentProperties)
 
 export type LinkSprinkles = Parameters<typeof linkSprinkles>[0]
 

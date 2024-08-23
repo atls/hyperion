@@ -1,10 +1,10 @@
 import { createRainbowSprinkles } from 'rainbow-sprinkles'
 import { defineProperties }       from 'rainbow-sprinkles'
 
-import { flexboxProperties }      from '@atls-ui-parts/theme/properties'
-import { gridProperties }         from '@atls-ui-parts/theme/properties'
-import { layoutProperties }       from '@atls-ui-parts/theme/properties'
-import { spaceProperties }        from '@atls-ui-parts/theme/properties'
+import { flexboxProperties }      from '@atls-ui-parts/theme'
+import { gridProperties }         from '@atls-ui-parts/theme'
+import { layoutProperties }       from '@atls-ui-parts/theme'
+import { spaceProperties }        from '@atls-ui-parts/theme'
 
 export const gridComponentProperties = defineProperties({
   dynamicProperties: {

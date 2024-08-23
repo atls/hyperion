@@ -3,9 +3,7 @@
   "version": "0.0.8",
   "license": "BSD-3-Clause",
   "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
-  },
+  "main": "./src/index.ts",
   "files": [
     "dist"
   ],

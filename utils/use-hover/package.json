@@ -3,9 +3,7 @@
   "version": "0.0.2",
   "license": "BSD-3-Clause",
   "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
-  },
+  "main": "./src/index.ts",
   "files": [
     "dist"
   ],
@@ -15,6 +13,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
+    "@types/react": "18.2.48",
     "react-laag": "2.0.5"
   },
   "peerDependencies": {

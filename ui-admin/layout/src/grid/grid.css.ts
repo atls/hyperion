@@ -1,9 +1,9 @@
 import { createRainbowSprinkles }  from 'rainbow-sprinkles'
 
-import { flexboxProperties }       from '@atls-ui-admin/theme/properties'
-import { gridProperties }          from '@atls-ui-admin/theme/properties'
-import { layoutProperties }        from '@atls-ui-admin/theme/properties'
-import { spaceProperties }         from '@atls-ui-admin/theme/properties'
+import { flexboxProperties }       from '@atls-ui-admin/theme'
+import { gridProperties }          from '@atls-ui-admin/theme'
+import { layoutProperties }        from '@atls-ui-admin/theme'
+import { spaceProperties }         from '@atls-ui-admin/theme'
 import { gridComponentProperties } from '@atls-ui-parts/layout'
 
 export const gridSprinkles = createRainbowSprinkles(

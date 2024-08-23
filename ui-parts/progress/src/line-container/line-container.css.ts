@@ -3,8 +3,8 @@ import { style }                  from '@vanilla-extract/css'
 import { createRainbowSprinkles } from 'rainbow-sprinkles'
 
 import { vars }                   from '@atls-ui-parts/theme'
-import { colorProperties }        from '@atls-ui-parts/theme/properties'
-import { layoutProperties }       from '@atls-ui-parts/theme/properties'
+import { colorProperties }        from '@atls-ui-parts/theme'
+import { layoutProperties }       from '@atls-ui-parts/theme'
 
 export const baseLineContainerStyles = style({
   display: 'flex',

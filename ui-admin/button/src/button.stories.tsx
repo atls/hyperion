@@ -5,7 +5,7 @@ import React             from 'react'
 import { FC }            from 'react'
 import { useTheme }      from 'next-themes'
 
-import { ThemeProvider } from '@atls-ui-admin/theme/provider'
+import { ThemeProvider } from '@atls-ui-admin/theme'
 
 import { Button }        from './button.component.js'
 

@@ -1,13 +1,13 @@
 import { createRainbowSprinkles } from 'rainbow-sprinkles'
 import { defineProperties }       from 'rainbow-sprinkles'
 
-import { borderProperties }       from '@atls-ui-parts/theme/properties'
-import { colorProperties }        from '@atls-ui-parts/theme/properties'
-import { flexboxProperties }      from '@atls-ui-parts/theme/properties'
-import { layoutProperties }       from '@atls-ui-parts/theme/properties'
-import { positionProperties }     from '@atls-ui-parts/theme/properties'
-import { shadowProperties }       from '@atls-ui-parts/theme/properties'
-import { spaceProperties }        from '@atls-ui-parts/theme/properties'
+import { borderProperties }       from '@atls-ui-parts/theme'
+import { colorProperties }        from '@atls-ui-parts/theme'
+import { flexboxProperties }      from '@atls-ui-parts/theme'
+import { layoutProperties }       from '@atls-ui-parts/theme'
+import { positionProperties }     from '@atls-ui-parts/theme'
+import { shadowProperties }       from '@atls-ui-parts/theme'
+import { spaceProperties }        from '@atls-ui-parts/theme'
 
 export const boxProperties = defineProperties({
   dynamicProperties: {

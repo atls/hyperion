@@ -4,10 +4,7 @@
   "private": true,
   "license": "BSD-3-Clause",
   "type": "module",
-  "exports": {
-    ".": "./src/theme.css.ts",
-    "./properties": "./src/properties/index.ts"
-  },
+  "main": "./src/index.ts",
   "dependencies": {
     "rainbow-sprinkles": "0.17.2"
   },

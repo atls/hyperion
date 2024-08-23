@@ -3,7 +3,7 @@ import { style }                  from '@vanilla-extract/css'
 import { createRainbowSprinkles } from 'rainbow-sprinkles'
 
 import { vars }                   from '@atls-ui-parts/theme'
-import { colorProperties }        from '@atls-ui-parts/theme/properties'
+import { colorProperties }        from '@atls-ui-parts/theme'
 
 export const baseLinePercentStyles = style({
   display: 'flex',

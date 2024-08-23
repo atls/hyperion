@@ -224,6 +224,7 @@ __metadata:
     "@storybook/react": "npm:8.1.11"
     "@types/react": "npm:18.2.48"
     "@vanilla-extract/css": "npm:1.15.3"
+    "@vanilla-extract/dynamic": "npm:2.1.1"
     "@vanilla-extract/recipes": "npm:0.5.2"
     clsx: "npm:2.1.1"
     next-themes: "npm:0.3.0"
@@ -277,6 +278,7 @@ __metadata:
   dependencies:
     "@types/react": "npm:18.2.48"
     "@vanilla-extract/css": "npm:1.15.3"
+    "@vanilla-extract/dynamic": "npm:2.1.1"
     clsx: "npm:2.1.1"
   peerDependencies:
     "@vanilla-extract/css": "*"
@@ -318,6 +320,7 @@ __metadata:
     "@atls-ui-parts/layout": "workspace:*"
     "@types/react": "npm:18.2.48"
     "@vanilla-extract/css": "npm:1.15.3"
+    "@vanilla-extract/dynamic": "npm:2.1.1"
     rainbow-sprinkles: "npm:0.17.2"
   peerDependencies:
     "@vanilla-extract/css": "*"
@@ -379,6 +382,7 @@ __metadata:
     "@storybook/react": "npm:8.1.11"
     "@types/react": "npm:18.2.48"
     "@vanilla-extract/css": "npm:1.15.3"
+    "@vanilla-extract/dynamic": "npm:2.1.1"
     clsx: "npm:2.1.1"
     graphql: "npm:16.9.0"
     graphql-request: "npm:7.1.0"
@@ -518,6 +522,7 @@ __metadata:
     "@storybook/react": "npm:8.1.11"
     "@types/react": "npm:18.2.48"
     "@vanilla-extract/css": "npm:1.15.3"
+    "@vanilla-extract/dynamic": "npm:2.1.1"
     "@vanilla-extract/recipes": "npm:0.5.2"
     clsx: "npm:2.1.1"
     storybook: "npm:8.1.11"
@@ -1176,6 +1181,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-utils/use-hover@workspace:utils/use-hover"
   dependencies:
+    "@types/react": "npm:18.2.48"
     react-laag: "npm:2.0.5"
   peerDependencies:
     react: "*"

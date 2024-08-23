@@ -9,7 +9,7 @@ import { useTheme }          from 'next-themes'
 import { Button }            from '@atls-ui-admin/button'
 import { Column }            from '@atls-ui-admin/layout'
 import { Layout }            from '@atls-ui-admin/layout'
-import { ThemeProvider }     from '@atls-ui-admin/theme/provider'
+import { ThemeProvider }     from '@atls-ui-admin/theme'
 
 import { Text }              from './text/index.js'
 import { TextProps }         from './text/index.js'

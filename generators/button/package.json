@@ -3,9 +3,7 @@
   "version": "0.0.22",
   "license": "BSD-3-Clause",
   "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
-  },
+  "main": "./src/index.ts",
   "bin": {
     "generate-styles": "dist/generator.js"
   },

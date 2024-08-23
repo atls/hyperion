@@ -1,9 +1,9 @@
 import { createRainbowSprinkles } from 'rainbow-sprinkles'
 
-import { colorProperties }        from '@atls-ui-admin/theme/properties'
-import { layoutProperties }       from '@atls-ui-admin/theme/properties'
-import { spaceProperties }        from '@atls-ui-admin/theme/properties'
-import { typographyProperties }   from '@atls-ui-admin/theme/properties'
+import { colorProperties }        from '@atls-ui-admin/theme'
+import { layoutProperties }       from '@atls-ui-admin/theme'
+import { spaceProperties }        from '@atls-ui-admin/theme'
+import { typographyProperties }   from '@atls-ui-admin/theme'
 import { textProperties }         from '@atls-ui-parts/text'
 
 export const textSprinkles = createRainbowSprinkles(

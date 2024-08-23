@@ -1,6 +1,6 @@
 import { createRainbowSprinkles } from 'rainbow-sprinkles'
 
-import { layoutProperties }       from '@atls-ui-parts/theme/properties'
+import { layoutProperties }       from '@atls-ui-parts/theme'
 
 export const spaceSprinkles = createRainbowSprinkles(layoutProperties)
 

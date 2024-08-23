@@ -6,7 +6,7 @@ import { FC }                  from 'react'
 import { useTheme }            from 'next-themes'
 
 import { Button }              from '@atls-ui-admin/button'
-import { ThemeProvider }       from '@atls-ui-admin/theme/provider'
+import { ThemeProvider }       from '@atls-ui-admin/theme'
 
 import { DropzonePlaceholder } from './index.js'
 import { Upload }              from './index.js'

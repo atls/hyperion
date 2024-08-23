@@ -1,5 +1,6 @@
 import { style }                  from '@vanilla-extract/css'
 
+import { SprinklesFn }            from 'rainbow-sprinkles/createRuntimeFn'
 import { createRainbowSprinkles } from 'rainbow-sprinkles'
 import { defineProperties }       from 'rainbow-sprinkles'
 
@@ -10,7 +11,8 @@ const imageProperties = defineProperties({
   },
 })
 
-export const imageSprinkles = createRainbowSprinkles(imageProperties)
+export const imageSprinkles: SprinklesFn<[typeof imageProperties]> =
+  createRainbowSprinkles(imageProperties)
 
 export type ImageSprinkles = Parameters<typeof imageSprinkles>[0]
 

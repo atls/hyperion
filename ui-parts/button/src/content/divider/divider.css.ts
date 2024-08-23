@@ -1,5 +1,6 @@
 import { style }                  from '@vanilla-extract/css'
 
+import { SprinklesFn }            from 'rainbow-sprinkles/createRuntimeFn'
 import { createRainbowSprinkles } from 'rainbow-sprinkles'
 import { defineProperties }       from 'rainbow-sprinkles'
 
@@ -16,6 +17,7 @@ const dividerProperties = defineProperties({
   },
 })
 
-export const dividerSprinkles = createRainbowSprinkles(dividerProperties)
+export const dividerSprinkles: SprinklesFn<[typeof dividerProperties]> =
+  createRainbowSprinkles(dividerProperties)
 
 export type DividerSprinkles = Parameters<typeof dividerSprinkles>[0]
