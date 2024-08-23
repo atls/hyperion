@@ -1,7 +1,7 @@
-import { HTMLMotionProps }        from 'framer-motion'
-import { createRainbowSprinkles } from 'rainbow-sprinkles'
+import { HTMLMotionProps }   from 'framer-motion'
+import { SprinklesFn }       from 'rainbow-sprinkles/createRuntimeFn'
 
-import { ParallaxSprinkles }      from './parallax-box.css.js'
+import { ParallaxSprinkles } from './parallax-box.css.js'
 
 export type ParallaxEaseType = 'linear' | 'easeInOut'
 
@@ -18,7 +18,7 @@ export interface BaseParallaxBoxProps extends HTMLMotionProps<'div'> {
 }
 
 export interface ParallaxBoxElementProps extends BaseParallaxBoxProps {
-  sprinkles: ReturnType<typeof createRainbowSprinkles>
+  sprinkles: SprinklesFn<any>
 }
 
 export interface ParallaxBoxProps extends BaseParallaxBoxProps, ParallaxSprinkles {}
