@@ -1,10 +1,17 @@
 {
   "name": "@atls-ui-parts/theme",
   "version": "0.0.1",
-  "private": true,
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn library build",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
+  },
   "dependencies": {
     "rainbow-sprinkles": "0.17.2"
   },
@@ -16,5 +23,18 @@
     "@vanilla-extract/css": "*",
     "@vanilla-extract/dynamic": "*",
     "react": "*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      "./package.json": "./package.json",
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts"
   }
 }
