@@ -1,0 +1,26 @@
+releases:
+  "@atls-ui-admin/button": patch
+  "@atls-ui-admin/layout": patch
+  "@atls-ui-admin/text": patch
+  "@atls-ui-admin/theme": patch
+  "@atls-ui-admin/upload": patch
+  "@atls-ui-parts/autocomplete": patch
+  "@atls-ui-parts/avatar": patch
+  "@atls-ui-parts/button": patch
+  "@atls-ui-parts/card": patch
+  "@atls-ui-parts/carousel": patch
+  "@atls-ui-parts/checkbox": patch
+  "@atls-ui-parts/datepicker": patch
+  "@atls-ui-parts/input": patch
+  "@atls-ui-parts/layout": patch
+  "@atls-ui-parts/parallax": patch
+  "@atls-ui-parts/placeholder": patch
+  "@atls-ui-parts/popover": patch
+  "@atls-ui-parts/progress": patch
+  "@atls-ui-parts/select": patch
+  "@atls-ui-parts/sidebar": patch
+  "@atls-ui-parts/swiper": patch
+  "@atls-ui-parts/switch": patch
+  "@atls-ui-parts/text": patch
+  "@atls-ui-parts/theme": patch
+  "@atls-ui-parts/tooltip": patch
