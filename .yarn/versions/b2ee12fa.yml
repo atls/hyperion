@@ -2,7 +2,6 @@ releases:
   "@atls-ui-admin/button": patch
   "@atls-ui-admin/layout": patch
   "@atls-ui-admin/text": patch
-  "@atls-ui-admin/theme": patch
   "@atls-ui-admin/upload": patch
   "@atls-ui-parts/autocomplete": patch
   "@atls-ui-parts/avatar": patch
@@ -22,5 +21,4 @@ releases:
   "@atls-ui-parts/swiper": patch
   "@atls-ui-parts/switch": patch
   "@atls-ui-parts/text": patch
-  "@atls-ui-parts/theme": patch
   "@atls-ui-parts/tooltip": patch
