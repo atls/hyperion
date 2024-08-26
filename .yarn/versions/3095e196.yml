@@ -1,0 +1,3 @@
+releases:
+  "@atls-ui-admin/theme": patch
+  "@atls-ui-parts/theme": major
