@@ -81,7 +81,6 @@ const config: StorybookConfig = {
         url: false,
       }
     }
-
     return webpackConfig
   },
 }

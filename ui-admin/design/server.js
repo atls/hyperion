@@ -10,6 +10,7 @@ app.use(
     origin: true,
   })
 )
+
 app.use(express.static('dist'))
 
 app.listen(port, () => {
