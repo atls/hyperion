@@ -75,4 +75,5 @@ const config: StorybookConfig = {
     return webpackConfig
   },
 }
+
 export default config
