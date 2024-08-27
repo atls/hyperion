@@ -24,6 +24,7 @@ export const useUpload = ({ bucket, endpoint: defaultEndpoint }: UseUploadProps)
   const endpoint = defaultEndpoint ?? 'http://localhost:3000/api'
 
   // eslint-disable-next-line consistent-return
+  // @ts-expect-error return consistent
   const client = useMemo(() => {
     if (endpoint)
       return new GraphQLClient(endpoint, {

@@ -1,12 +1,11 @@
 import 'react-datepicker/dist/react-datepicker.css'
 
 import { injectGlobal }           from '@emotion/css'
-
-import React                      from 'react'
-import DatepickerComponent        from 'react-datepicker'
 import { FC }                     from 'react'
 import { useEffect }              from 'react'
 import { setDefaultLocale }       from 'react-datepicker'
+import React                      from 'react'
+import DatepickerComponent        from 'react-datepicker'
 
 import { DatepickerProps }        from './datepicker.interface.js'
 import { createAppearanceStyles } from './utils/index.js'

@@ -1,6 +1,6 @@
-import React                 from 'react'
 import { FC }                from 'react'
 import { clsx }              from 'clsx'
+import React                 from 'react'
 
 import { IconProps }         from './icon.interfaces.js'
 import { spinLoadingStyles } from './icon.css.js'

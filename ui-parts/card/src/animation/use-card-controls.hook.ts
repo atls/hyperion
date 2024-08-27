@@ -51,7 +51,7 @@ export const useCardControls = ({
     }
   }
 
-  const onCloseBeforeScroll = ({ deltaY }) => {
+  const onCloseBeforeScroll = ({ deltaY }: { deltaY: number }) => {
     if (!isScrolled && deltaY < 0) {
       hide()
     }

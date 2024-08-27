@@ -1,8 +1,8 @@
-import React                 from 'react'
 import { PropsWithChildren } from 'react'
 import { ImgHTMLAttributes } from 'react'
 import { clsx }              from 'clsx'
 import { forwardRef }        from 'react'
+import React                 from 'react'
 
 import { baseImageStyles }   from './image.css.js'
 import { imageSprinkles }    from './image.css.js'

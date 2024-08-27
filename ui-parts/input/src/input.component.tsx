@@ -1,7 +1,7 @@
 'use client'
 
-import React           from 'react'
 import { forwardRef }  from 'react'
+import React           from 'react'
 
 import { InputProps }  from './input.interfaces.js'
 import { inputStyles } from './styles/index.js'

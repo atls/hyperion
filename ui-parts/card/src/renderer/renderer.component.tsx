@@ -1,10 +1,10 @@
-import React                       from 'react'
 import { AnimatePresence }         from 'framer-motion'
 import { FC }                      from 'react'
 import { clsx }                    from 'clsx'
 import { useEffect }               from 'react'
 import { useState }                from 'react'
 import { createPortal }            from 'react-dom'
+import React                       from 'react'
 
 import { Box }                     from '@atls-ui-parts/layout'
 

@@ -1,5 +1,5 @@
-import React             from 'react'
 import { forwardRef }    from 'react'
+import React             from 'react'
 
 import { TextElement }   from './text.element.js'
 import { TextProps }     from './text.interfaces.js'

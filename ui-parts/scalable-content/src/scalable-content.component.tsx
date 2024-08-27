@@ -1,6 +1,6 @@
-import React                     from 'react'
 import { FC }                    from 'react'
 import { clsx }                  from 'clsx'
+import React                     from 'react'
 
 import { ScalableContentProps }  from './scalable-content.interfaces.js'
 import { useScale }              from './hooks/index.js'

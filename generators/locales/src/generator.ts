@@ -2,11 +2,10 @@ import { defaultPaths }     from './locales-generator.constants.js'
 import { mergeLocales }     from './merge-locales/index.js'
 import { processDirectory } from './process-directory/index.js'
 
-const allLocales = []
-let outputFile = 'ru'
-const argPaths: string[] = []
+const allLocales: Array<string> = []
+let outputFile: string = 'ru'
+const argPaths: Array<string> = []
 
-// @ts-ignore
 process.argv.slice(2).forEach((arg) => {
   if (!arg.startsWith('--out=')) {
     argPaths.push(arg)

@@ -1,6 +1,6 @@
-import React                        from 'react'
 import { clsx }                     from 'clsx'
 import { forwardRef }               from 'react'
+import React                        from 'react'
 
 import { GridElementProps }         from './grid.interfaces.js'
 import { fillStyles }               from '../styles/index.js'

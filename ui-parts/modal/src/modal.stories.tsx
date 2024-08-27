@@ -1,6 +1,5 @@
 import { Meta }       from '@storybook/react'
 import { StoryObj }   from '@storybook/react'
-
 import React          from 'react'
 
 import { Modal }      from './modal.component.js'

@@ -1,9 +1,8 @@
 import { transform }                     from '@babel/standalone'
-
-import assert                            from 'assert'
 import { Command }                       from 'commander'
 import { readFileSync }                  from 'fs'
 import { join }                          from 'path'
+import assert                            from 'assert'
 
 import { InputAppearanceStyleGenerator } from './style-generators/index.js'
 

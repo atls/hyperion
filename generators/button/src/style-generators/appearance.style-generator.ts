@@ -90,7 +90,7 @@ export class ButtonAppearanceStyleGenerator {
     return { statefulStyles, appearanceStyles, imports }
   }
 
-  generateFile(path, filename = 'appearance.css.ts') {
+  generateFile(path: string, filename = 'appearance.css.ts') {
     const generated = this.generateAppearanceStyles()
 
     const code = pretty(`

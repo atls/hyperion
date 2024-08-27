@@ -1,6 +1,6 @@
-import React                           from 'react'
 import { clsx }                        from 'clsx'
 import { forwardRef }                  from 'react'
+import React                           from 'react'
 
 import { TextareaContainerProps }      from './textarea-container.interfaces.js'
 import { textareaContainerSprinkles }  from './textarea-container.css.js'

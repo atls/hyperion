@@ -1,5 +1,4 @@
 import { style }                  from '@vanilla-extract/css'
-
 import { createRainbowSprinkles } from 'rainbow-sprinkles'
 import { defineProperties }       from 'rainbow-sprinkles'
 

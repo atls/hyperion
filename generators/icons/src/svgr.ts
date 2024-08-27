@@ -1,16 +1,16 @@
 import * as prettierPlugin from '@atls/prettier-plugin'
-
 import prettierConfig      from '@atls/config-prettier'
+// @ts-expect-error missing declaration
 import svgr                from '@svgr/core'
-
+import { format }          from 'prettier/standalone'
 import camelcase           from 'camelcase'
 import fs                  from 'fs-extra-promise'
 import glob                from 'glob-promise'
 import path                from 'path'
 import parserBabel         from 'prettier/parser-babel'
 import parserTypescript    from 'prettier/parser-typescript'
-import { format }          from 'prettier/standalone'
 
+// @ts-expect-error types
 const svgrTemplate = ({ template }, opts, { componentName, jsx }) => {
   const typeScriptTpl = template.smart({ plugins: ['typescript', 'prettier'] })
 
@@ -25,7 +25,7 @@ const svgrTemplate = ({ template }, opts, { componentName, jsx }) => {
   `
 }
 
-const read = (files) =>
+const read = (files: Array<string>) =>
   Promise.all(
     files.map(async (iconPath) => ({
       name: `${camelcase(path.basename(iconPath, path.extname(iconPath)), {
@@ -35,7 +35,7 @@ const read = (files) =>
     }))
   )
 
-const compile = (icons, replacements) =>
+const compile = (icons: Array<{ name: string, source: string }>, replacements: Record<string, any>) =>
   Promise.all(
     icons.map(async (icon) => ({
       name: icon.name,
@@ -51,7 +51,7 @@ const compile = (icons, replacements) =>
     }))
   )
 
-const save = async (sources, targetDir) =>
+const save = async (sources: Array<{ name: string }>, targetDir: string) =>
   Promise.all(
     sources.map((source) =>
       fs.writeFileAsync(
@@ -65,7 +65,7 @@ const save = async (sources, targetDir) =>
       ))
   )
 
-const createIndex = (sources, targetDir) =>
+const createIndex = (sources: Array<{ name: string }>, targetDir: string) =>
   fs.writeFileAsync(
     path.join(targetDir, 'index.ts'),
     `${sources.map((source) => `export * from './${source.name}'`).join('\n')}\n`

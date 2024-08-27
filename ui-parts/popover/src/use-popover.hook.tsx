@@ -1,5 +1,5 @@
-import React                 from 'react'
 import { ReactElement }      from 'react'
+import React                 from 'react'
 
 import { UseTooltipOptions } from '@atls-ui-parts/tooltip'
 import { useTooltip }        from '@atls-ui-parts/tooltip'

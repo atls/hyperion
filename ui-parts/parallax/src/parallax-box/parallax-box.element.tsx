@@ -1,9 +1,9 @@
-import React                       from 'react'
 import { MotionValue }             from 'framer-motion'
 import { clsx }                    from 'clsx'
 import { motion }                  from 'framer-motion'
 import { forwardRef }              from 'react'
 import { useMemo }                 from 'react'
+import React                       from 'react'
 
 import { ParallaxBoxElementProps } from './parallax-box.interfaces.js'
 import { useParallax }             from '../context/index.js'

@@ -1,6 +1,6 @@
-import React                         from 'react'
 import { clsx }                      from 'clsx'
 import { forwardRef }                from 'react'
+import React                         from 'react'
 
 import { ContainerProps }            from './container.interfaces.js'
 import { containerStyles }           from './container.css.js'

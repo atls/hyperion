@@ -1,7 +1,7 @@
-import React              from 'react'
 import { FC }             from 'react'
 import { HTMLAttributes } from 'react'
 import { clsx }           from 'clsx'
+import React              from 'react'
 
 import { slideStyles }    from './slide.css.js'
 

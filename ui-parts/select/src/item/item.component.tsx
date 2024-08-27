@@ -1,6 +1,6 @@
-import React                         from 'react'
 import { FC }                        from 'react'
 import { clsx }                      from 'clsx'
+import React                         from 'react'
 
 import { ItemProps }                 from './item.interfaces.js'
 import { baseItemStyles }            from './item.css.js'

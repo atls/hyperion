@@ -1,11 +1,10 @@
 import { StorybookConfig }               from '@storybook/react-webpack5'
 import { CompatibleString }              from '@storybook/types'
 import { VanillaExtractPlugin }          from '@vanilla-extract/webpack-plugin'
-
-import MiniCssExtractPlugin              from 'mini-css-extract-plugin'
 import { NormalModuleReplacementPlugin } from 'webpack'
 import { dirname }                       from 'path'
 import { join }                          from 'path'
+import MiniCssExtractPlugin              from 'mini-css-extract-plugin'
 
 const getAbsolutePath = (value: string): string =>
   dirname(require.resolve(join(value, 'package.json')))

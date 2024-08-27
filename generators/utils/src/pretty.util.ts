@@ -1,12 +1,10 @@
 import * as prettierPlugin from '@atls/prettier-plugin'
-
 import prettierConfig      from '@atls/config-prettier'
-
+import { format }          from 'prettier/standalone'
 import parserBabel         from 'prettier/parser-babel'
 import parserTypescript    from 'prettier/parser-typescript'
-import { format }          from 'prettier/standalone'
 
-const pretty = (string) =>
+const pretty = (string: string) =>
   // @ts-ignore
   format(string, {
     ...prettierConfig,

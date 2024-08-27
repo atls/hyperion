@@ -1,1 +1,1 @@
-export const defaultPaths = ['../../fragments', '../../pages']
+export const defaultPaths: Array<string> = ['../../fragments', '../../pages']

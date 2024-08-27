@@ -1,6 +1,6 @@
-import React               from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { FC }              from 'react'
+import React               from 'react'
 
 import { Condition }       from '@atls-ui-parts/condition'
 import { Portal }          from '@atls-ui-parts/portal'

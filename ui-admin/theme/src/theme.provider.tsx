@@ -1,7 +1,7 @@
-import React                                  from 'react'
 import { ThemeProvider as NextThemeProvider } from 'next-themes'
 import { FC }                                 from 'react'
 import { PropsWithChildren }                  from 'react'
+import React                                  from 'react'
 
 import { darkTheme }                          from './theme.css.js'
 import { lightTheme }                         from './theme.css.js'

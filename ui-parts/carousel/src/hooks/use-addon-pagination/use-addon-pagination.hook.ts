@@ -1,5 +1,5 @@
-import { createElement }            from 'react'
-import { useCallback }              from 'react'
+import { createElement } from 'react'
+import { useCallback }   from 'react'
 
 import { AddonInputOptions }        from '../use-carousel/index.js'
 import { UseAddonPaginationResult } from './use-addon-pagination.interfaces.js'
@@ -14,7 +14,7 @@ export const useAddonPagination = ({
   props,
 }: AddonInputOptions): UseAddonPaginationResult => {
   const withPagination = useCallback(
-    (Element) => {
+    (Element: string) => {
       if (centered && slidesLength <= 1) return null
       if (!centered && !loop && slidesLength < slidesPerView + 1) return null
 

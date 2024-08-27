@@ -1,9 +1,9 @@
-import React                 from 'react'
 import { AnimatePresence }   from 'framer-motion'
 import { ReactElement }      from 'react'
 import { cloneElement }      from 'react'
 import { useMemo }           from 'react'
 import { useLayer }          from 'react-laag'
+import React                 from 'react'
 
 import { Container }         from './container/index.js'
 import { UseTooltipOptions } from './tooltip.interfaces.js'

@@ -1,11 +1,10 @@
-import { writeFileSync }     from 'fs'
-
-import { pretty }            from '@atls-ui-generators/utils'
-import { getStylesName }     from '@atls-ui-generators/utils'
+import { pretty }        from '@atls-ui-generators/utils'
+import { getStylesName } from '@atls-ui-generators/utils'
+import { writeFileSync } from 'fs'
 
 import { InputColorSchemes } from '../input-generator.interfaces.js'
 
-const getAppearanceStylesName = (variant, state) => getStylesName('appearance', variant, state)
+const getAppearanceStylesName = (variant: string, state: string) => getStylesName('appearance', variant, state)
 
 export class InputAppearanceStyleGenerator {
   readonly requiredImports = [
@@ -21,9 +20,7 @@ export class InputAppearanceStyleGenerator {
       []
     )
 
-    const uniqueVariants = [...new Set(allVariants)]
-
-    this.#variants = uniqueVariants
+    this.#variants = [...new Set(allVariants)]
   }
 
   private generateVariantStatefulStyles(variant: string) {
@@ -93,7 +90,7 @@ export class InputAppearanceStyleGenerator {
     return { statefulStyles, appearanceStyles, imports }
   }
 
-  generateFile(path, filename = 'appearance.css.ts') {
+  generateFile(path: string, filename = 'appearance.css.ts') {
     const generated = this.generateAppearanceStyles()
 
     const code = pretty(`

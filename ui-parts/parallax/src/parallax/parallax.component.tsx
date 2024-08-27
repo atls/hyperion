@@ -1,10 +1,10 @@
-import React                  from 'react'
 import { FC }                 from 'react'
 import { clsx }               from 'clsx'
 import { useScroll }          from 'framer-motion'
 import { useEffect }          from 'react'
 import { useMemo }            from 'react'
 import { useRef }             from 'react'
+import React                  from 'react'
 
 import { useWindowSize }      from '@atls-ui-parts/dom'
 

@@ -1,8 +1,8 @@
-import React                   from 'react'
 import { HTMLAttributes }      from 'react'
 import { FC }                  from 'react'
 import { clsx }                from 'clsx'
 import { useInView }           from 'react-intersection-observer'
+import React                   from 'react'
 
 import { Condition }           from '@atls-ui-parts/condition'
 

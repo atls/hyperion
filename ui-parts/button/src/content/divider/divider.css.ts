@@ -1,5 +1,4 @@
 import { style }                  from '@vanilla-extract/css'
-
 import { SprinklesFn }            from 'rainbow-sprinkles/createRuntimeFn'
 import { createRainbowSprinkles } from 'rainbow-sprinkles'
 import { defineProperties }       from 'rainbow-sprinkles'

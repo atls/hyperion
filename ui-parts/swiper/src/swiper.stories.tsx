@@ -4,9 +4,8 @@
 
 import { Meta }        from '@storybook/react'
 import { StoryObj }    from '@storybook/react'
-
-import React           from 'react'
 import { SwiperSlide } from 'swiper/react'
+import React           from 'react'
 
 import { Box }         from '@atls-ui-parts/layout'
 import { Column }      from '@atls-ui-parts/layout'

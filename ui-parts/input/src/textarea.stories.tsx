@@ -2,11 +2,10 @@
 
 import { Meta }                      from '@storybook/react'
 import { StoryObj }                  from '@storybook/react'
-
-import React                         from 'react'
 import { clsx }                      from 'clsx'
 import { useRef }                    from 'react'
 import { useState }                  from 'react'
+import React                         from 'react'
 
 import { Condition }                 from '@atls-ui-parts/condition'
 import { ForwardEventsState }        from '@atls-ui-parts/events-state'
@@ -22,6 +21,7 @@ import { addonsContainerBaseStyles } from './addon/index.js'
 import { baseInputStyles }           from './input/index.js'
 import { baseTextareaStyles }        from './textarea/index.js'
 
+// @ts-expect-error any
 const getAddonPosition = (addonBefore, addonAfter) => {
   if (addonBefore && addonAfter) {
     return 'both'

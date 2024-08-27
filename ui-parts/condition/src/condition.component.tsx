@@ -1,7 +1,7 @@
-import React               from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { FC }              from 'react'
 import { motion }          from 'framer-motion'
+import React               from 'react'
 
 import { ConditionProps }  from './condition.interface.js'
 

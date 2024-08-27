@@ -1,6 +1,6 @@
-import React              from 'react'
 import { clsx }           from 'clsx'
 import { forwardRef }     from 'react'
+import React              from 'react'
 
 import { SYMBOL_SPACE }   from './space.constants.js'
 import { SpaceProps }     from './space.interfaces.js'

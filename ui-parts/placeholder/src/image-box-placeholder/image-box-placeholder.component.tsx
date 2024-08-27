@@ -1,5 +1,5 @@
-import React                        from 'react'
 import { FC }                       from 'react'
+import React                        from 'react'
 
 import { Box }                      from '@atls-ui-parts/layout'
 
