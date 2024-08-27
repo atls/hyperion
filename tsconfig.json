@@ -11,9 +11,9 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "skipLibCheck": true,
@@ -24,7 +24,15 @@
     "sourceMap": false,
     "target": "es2022",
     "jsx": "react",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "strictPropertyInitialization": false
   },
-  "include": ["generators/**/*", "ui-admin/**/*", "ui-parts/**/*", "ui/**/*", "utils/**/*"]
+  "include": [
+    "project.types.d.ts",
+    "generators/**/*",
+    "ui-admin/**/*",
+    "ui-parts/**/*",
+    "ui/**/*",
+    "utils/**/*"
+  ]
 }
