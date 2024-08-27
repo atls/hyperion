@@ -1,6 +1,6 @@
-import React                    from 'react'
 import { FC }                   from 'react'
 import { HTMLAttributes }       from 'react'
+import React                    from 'react'
 
 import { containerInnerStyles } from './container-inner.css.js'
 

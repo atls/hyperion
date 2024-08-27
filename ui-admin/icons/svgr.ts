@@ -1,5 +1,5 @@
+// @ts-expect-error no declaration
 import svgr             from '@svgr/core'
-
 import camelcase        from 'camelcase'
 import fs               from 'fs-extra-promise'
 import glob             from 'glob-promise'
@@ -12,6 +12,7 @@ const TARGET_DIR = path.join(__dirname, 'src')
 
 const replaceElement = (code: string) => code.replace('<svg', '<Icon').replace('</svg', '</Icon')
 
+// @ts-expect-error types
 const svgrTemplate = ({ template }, opts, { componentName, jsx }) => {
   const typeScriptTpl = template.smart({ plugins: ['typescript', 'prettier'] })
 
@@ -24,7 +25,7 @@ ${componentName.name}.displayName = '${componentName.name}'
 `
 }
 
-const read = (files) =>
+const read = (files: Array<string>) =>
   Promise.all(
     files.map(async (iconPath) => ({
       name: `${camelcase(path.basename(iconPath, path.extname(iconPath)), {
@@ -35,7 +36,7 @@ const read = (files) =>
     }))
   )
 
-const compile = (icons) =>
+const compile = (icons: Array<{ filename: string, name: string, source: string }>) =>
   Promise.all(
     icons.map(async (icon) => ({
       filename: icon.filename,
@@ -52,14 +53,12 @@ const compile = (icons) =>
     }))
   )
 
-const save = async (sources) =>
+const save = async (sources: Array<{ filename: string, code: string }>) =>
   Promise.all(
     sources.map((source) =>
       fs.writeFileAsync(
         path.join(TARGET_DIR, `${source.filename}.tsx`),
-        // @ts-ignore
         prettier
-          // @ts-ignore
           .format(replaceElement(source.code), {
             parser: 'babel',
             semi: false,
@@ -75,7 +74,7 @@ const save = async (sources) =>
       ))
   )
 
-const createIndex = (sources) =>
+const createIndex = (sources: Array<{ filename: string }>) =>
   fs.writeFileAsync(
     path.join(TARGET_DIR, 'index.ts'),
     sources.map((source) => `export * from './${source.filename}'`).join('\n')

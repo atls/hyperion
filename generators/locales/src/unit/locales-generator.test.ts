@@ -27,7 +27,7 @@ describe('Locale processing script', () => {
     it('should remove empty locale file', () => {
       mergeLocales([''], outputPath)
 
-      const allLocales = []
+      const allLocales: Array<string> = []
       const mergedContent = JSON.parse(readFileSync(outputPath, 'utf8'))
       expect(mergedContent).toEqual({})
       removeEmptyLocale(

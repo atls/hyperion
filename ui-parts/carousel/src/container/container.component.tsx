@@ -1,7 +1,7 @@
-import React               from 'react'
 import { HTMLAttributes }  from 'react'
 import { clsx }            from 'clsx'
 import { forwardRef }      from 'react'
+import React               from 'react'
 
 import { containerStyles } from './container.css.js'
 

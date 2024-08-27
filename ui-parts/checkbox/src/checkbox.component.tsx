@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 
-import React                       from 'react'
 import { clsx }                    from 'clsx'
 import { useEffect }               from 'react'
 import { forwardRef }              from 'react'
 import { useState }                from 'react'
+import React                       from 'react'
 
 import { CheckboxProps }           from './checkbox.interfaces.js'
 import { boxBaseStyles }           from './box/index.js'

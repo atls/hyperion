@@ -1,8 +1,8 @@
-import React                 from 'react'
 import { Children }          from 'react'
 import { PropsWithChildren } from 'react'
 import { FC }                from 'react'
 import { cloneElement }      from 'react'
+import React                 from 'react'
 
 import { PopoverProps }      from './popover.interfaces.js'
 import { usePopover }        from './use-popover.hook.js'

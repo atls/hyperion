@@ -1,6 +1,6 @@
-import React           from 'react'
 import { FC }          from 'react'
 import { useRef }      from 'react'
+import React           from 'react'
 
 import { Handle }      from './handle/index.js'
 import { SwitchProps } from './switch.interfaces.js'
@@ -13,6 +13,7 @@ export const Switch: FC<SwitchProps> = ({ disabled, checked: defaultValue, onCha
   const [checked, setChecked] = useSwitch(node, defaultValue, disabled, onChange)
 
   return (
+    // @ts-expect-error ref prop
     <Handle ref={node} onClick={setChecked}>
       <Thumb disabled={disabled} checked={checked} />
     </Handle>

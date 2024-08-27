@@ -1,14 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
+// @ts-expect-error no declaration files
 import { useUpload }    from '@atls/react-upload'
-
-import React            from 'react'
 import { ReactElement } from 'react'
 import { FC }           from 'react'
 import { Accept }       from 'react-dropzone'
 import { cloneElement } from 'react'
 import { useEffect }    from 'react'
 import { useDropzone }  from 'react-dropzone'
+import React            from 'react'
 
 export interface SimpleUploadProps {
   children: ReactElement<any, any>
@@ -40,7 +40,7 @@ export const SimpleUpload: FC<SimpleUploadProps> = ({
 
   useEffect(() => {
     acceptedFiles.forEach((file) => {
-      let preview
+      let preview: string
 
       if (onPreview) {
         preview = URL.createObjectURL(file)
@@ -52,6 +52,7 @@ export const SimpleUpload: FC<SimpleUploadProps> = ({
         })
       }
 
+      // @ts-expect-error any
       upload(file).then((data) => {
         if (preview) {
           onFile({ ...data, preview })

@@ -1,8 +1,7 @@
 import { Fallback }             from '@radix-ui/react-avatar'
-
-import React                    from 'react'
 import { clsx }                 from 'clsx'
 import { forwardRef }           from 'react'
+import React                    from 'react'
 
 import { FallbackProps }        from './avatar-fallback.interfaces.js'
 import { avatarFallbackStyles } from './avatar-fallback.css.js'

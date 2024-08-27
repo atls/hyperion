@@ -1,8 +1,9 @@
-import React                               from 'react'
 import { AnimatePresence }                 from 'framer-motion'
 import { useSelect as useDownshiftSelect } from 'downshift'
+import { ReactNode }                       from 'react'
 import { useEffect }                       from 'react'
 import { useLayer }                        from 'react-laag'
+import React                               from 'react'
 
 import { UseSelectProps }                  from './select.interfaces.js'
 
@@ -32,8 +33,8 @@ const useSelect = ({ items, onChange, placement = 'bottom-center', ...props }: U
     ...getMenuProps(layerProps),
     triggerBounds,
   }
-  const getMenuItemProps = (item, index) => getItemProps({ item, index })
-  const renderMenu = (menu) => renderLayer(<AnimatePresence>{isOpen && menu}</AnimatePresence>)
+  const getMenuItemProps = (item: string, index: number) => getItemProps({ item, index })
+  const renderMenu = (menu: ReactNode) => renderLayer(<AnimatePresence>{isOpen && menu}</AnimatePresence>)
 
   return {
     labelProps,

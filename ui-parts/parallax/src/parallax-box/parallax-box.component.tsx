@@ -1,5 +1,5 @@
-import React                  from 'react'
 import { forwardRef }         from 'react'
+import React                  from 'react'
 
 import { ParallaxBoxElement } from './parallax-box.element.js'
 import { ParallaxBoxProps }   from './parallax-box.interfaces.js'

@@ -1,7 +1,7 @@
-import React                 from 'react'
 import { FunctionComponent } from 'react'
 import { PropsWithChildren } from 'react'
 import { useState }          from 'react'
+import React                 from 'react'
 
 import { vars }              from '@atls-ui-parts/theme'
 
@@ -24,9 +24,12 @@ const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
   children,
   ...props
 }) => {
-  const getThemeColor = (color) => (vars.colors && vars.colors[color]) || color
+  // @ts-expect-error index
+  const getThemeColor = (color: string) => (vars.colors && vars.colors[color]) || color
+  // @ts-expect-error types mismatch
   const gradientId = getGradientId(strokeColor)
   const trailThemeColor = getThemeColor(trailColor)
+  // @ts-expect-error types mismatch
   const strokeThemeColor = getThemeColor(strokeColor)
 
   const { pathString, pathStyle } = getPathStyles(
@@ -39,7 +42,7 @@ const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
   )
   const [keysList, setKeysList] = useState<number[]>([])
 
-  const getKey = (index) => {
+  const getKey = (index: number) => {
     if (keysList[index]) {
       return keysList[index]
     }
@@ -70,12 +73,14 @@ const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
       const { pathString: strokePathString, pathStyle: strokePathStyle } = getPathStyles(
         stackPtg,
         ptg,
+        // @ts-expect-error string and number
         color,
         strokeWeight,
         gapDegree,
         gapPosition
       )
 
+      // @ts-expect-error string and number
       stackPtg += ptg
 
       return (
@@ -100,6 +105,7 @@ const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
             {Object.keys(gradient)
               .sort((a, b) => +a.replace('%', '') - +b.replace('%', ''))
               .map((key) => (
+                // @ts-expect-error index
                 <stop key={key + gradient[key]} offset={key} stopColor={gradient[key]} />
               ))}
           </linearGradient>

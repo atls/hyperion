@@ -1,8 +1,8 @@
-import React                   from 'react'
 import { FC }                  from 'react'
 import { clsx }                from 'clsx'
 import { motion }              from 'framer-motion'
 import { useMemo }             from 'react'
+import React                   from 'react'
 
 import { ThumbProps }          from './thumb.interfaces.js'
 import { baseThumbStyles }     from './thumb.css.js'

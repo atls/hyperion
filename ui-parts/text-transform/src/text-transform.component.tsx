@@ -8,6 +8,7 @@ export const TextTransform = ({
 }: TextTransformProps): ReactElement<any, any> => {
   try {
     const transformed = Object.keys(props).reduce((result, key) => {
+      // @ts-expect-error index type
       const args = props[key]
 
       switch (key) {
@@ -20,7 +21,7 @@ export const TextTransform = ({
         case 'lastLetter':
           return result.slice(-1)
         case 'substr':
-          return Array.isArray(args) ? result.substr(args[0], args[1]) : result.substr(args)
+          return Array.isArray(args) ? result.slice(args[0], args[1]) : result.slice(args)
         case 'replace':
           return result.replace(args[0], args[1])
         case 'hideAfter':

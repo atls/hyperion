@@ -6,6 +6,7 @@ export type Condition = ConditionFunction | string
 export const ConditionalRender = (tag: string = 'div', condition: Condition = 'children') => {
   if (typeof condition === 'function') {
     // eslint-disable-next-line
+    // @ts-expect-error any
     return (props) => {
       if (!condition(props)) return null
 
@@ -14,6 +15,7 @@ export const ConditionalRender = (tag: string = 'div', condition: Condition = 'c
   }
 
   // eslint-disable-next-line
+  // @ts-expect-error any
   return (props) => {
     // eslint-disable-next-line react/destructuring-assignment
     if (!props[condition]) return null

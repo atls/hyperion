@@ -6,7 +6,7 @@ export const useContextMenu = () => {
   const close = () => setOpened(false)
 
   const contextMenuProps = {
-    onContextMenu: (event) => {
+    onContextMenu: (event: Event) => {
       event.preventDefault()
       setOpened(true)
     },

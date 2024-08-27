@@ -1,7 +1,7 @@
-import React                         from 'react'
 import { FC }                        from 'react'
 import { AnchorHTMLAttributes }      from 'react'
 import { clsx }                      from 'clsx'
+import React                         from 'react'
 
 import { basePlaceholderLinkStyles } from './placeholder-link.css.js'
 

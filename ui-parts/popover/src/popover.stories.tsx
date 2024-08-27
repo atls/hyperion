@@ -1,10 +1,11 @@
 import { Meta }              from '@storybook/react'
 import { StoryObj }          from '@storybook/react'
-
-import React                 from 'react'
+import { MouseEventHandler } from 'react'
+import { EventHandler }      from 'react'
 import { FC }                from 'react'
 import { HTMLAttributes }    from 'react'
 import { forwardRef }        from 'react'
+import React                 from 'react'
 
 import { Column }            from '@atls-ui-parts/layout'
 import { Layout }            from '@atls-ui-parts/layout'
@@ -49,7 +50,7 @@ export const Base: StoryObj = {
   ),
 }
 
-const TestContent = ({ onClick }) => (
+const TestContent = ({ onClick }: { onClick: MouseEventHandler<HTMLButtonElement> }) => (
   <div>
     <div>Content</div>
     <button type='button' className={closeButtonStyles} onClick={onClick}>

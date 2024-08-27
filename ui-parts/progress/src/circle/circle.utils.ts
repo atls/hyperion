@@ -1,6 +1,6 @@
-export const toArray = (symArray) => (Array.isArray(symArray) ? symArray : [symArray])
+export const toArray = (symArray: Array<string | number> | string | number): Array<string | number> => (Array.isArray(symArray) ? symArray : [symArray])
 
-export const getGradientId = (strokeColor) => {
+export const getGradientId = (strokeColor: Array<string> | string) => {
   const id: string[] = []
 
   toArray(strokeColor).forEach((color) => {
@@ -8,8 +8,10 @@ export const getGradientId = (strokeColor) => {
       id.push(
         Object.keys(color).reduce((prev, current, index) => {
           if (index === 0) {
+            // @ts-expect-error index
             return `${current}-${color[current]}`
           }
+          // @ts-expect-error index
           return `${prev}-${current}-${color[current]}`
         }, '')
       )
@@ -20,12 +22,12 @@ export const getGradientId = (strokeColor) => {
 }
 
 export const getPathStyles = (
-  offset,
-  percent,
-  strokeColor,
-  strokeWidth,
+  offset: number,
+  percent: number | string,
+  strokeColor: string,
+  strokeWidth: number,
   gapDegree = 0,
-  gapPosition
+  gapPosition: 'left' | 'right' | 'bottom' | 'top'
 ) => {
   const radius = 50 - strokeWidth / 2
   let beginPositionX = 0
@@ -58,6 +60,7 @@ export const getPathStyles = (
 
   const pathStyle = {
     stroke: strokeColor,
+    // @ts-expect-error number and string
     strokeDasharray: `${(percent / 100) * (len - gapDegree)}px ${len}px`,
     strokeDashoffset: `-${gapDegree / 2 + (offset / 100) * (len - gapDegree)}px`,
     transition:

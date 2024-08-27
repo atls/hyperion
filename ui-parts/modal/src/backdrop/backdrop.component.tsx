@@ -1,6 +1,6 @@
-import React                      from 'react'
 import { FC }                     from 'react'
 import { motion }                 from 'framer-motion'
+import React                      from 'react'
 
 import { BackdropProps }          from './backdrop.interfaces.js'
 import { baseBackdropStyles }     from './backdrop.css.js'

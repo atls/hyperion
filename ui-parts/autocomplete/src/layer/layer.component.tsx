@@ -1,7 +1,7 @@
-import React               from 'react'
 import { HTMLMotionProps } from 'framer-motion'
 import { motion }          from 'framer-motion'
 import { forwardRef }      from 'react'
+import React               from 'react'
 
 export const Layer = forwardRef<HTMLDivElement, HTMLMotionProps<'div'>>((
   { children, ...props },

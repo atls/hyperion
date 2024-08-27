@@ -1,13 +1,15 @@
-import React                 from 'react'
 import { FunctionComponent } from 'react'
 import { useState }          from 'react'
+import React                 from 'react'
 
 import { vars }              from '@atls-ui-parts/theme'
 
 import { LineContainer }     from '../line-container/index.js'
 import { LinePercent }       from '../line-percent/index.js'
+import { ProgressGradient }  from '../progress.interfaces.js'
 import { LineProps }         from './line.interfaces.js'
 
+// @ts-expect-error any
 export const sortGradient = (gradients) => {
   let tempArr: any[] = []
   Object.keys(gradients).forEach((key) => {
@@ -23,7 +25,8 @@ export const sortGradient = (gradients) => {
   return tempArr.map(({ key, value }) => `${value} ${key}%`).join(', ')
 }
 
-export const handleGradient = (strokeColor) => {
+export const handleGradient = (strokeColor: ProgressGradient) => {
+  // @ts-expect-error direction is missing
   const { from = '#1890ff', to = '#1890ff', direction = 'to right', ...rest } = strokeColor
   if (Object.keys(rest).length !== 0) {
     const sortedGradients = sortGradient(rest)
@@ -40,15 +43,17 @@ export const Line: FunctionComponent<LineProps> = ({
   trailColor,
   strokeWeight = 8,
 }) => {
-  const getThemeColor = (color) => (vars.colors && vars.colors[color]) || color
+  // @ts-expect-error any
+  const getThemeColor = (color: Array<string | ProgressGradient> | string) => (vars.colors && vars.colors[color]) || color
 
   const percentList = Array.isArray(percent) ? percent : [percent]
   const strokeColorList = Array.isArray(strokeColor)
     ? getThemeColor(strokeColor)
+    // @ts-expect-error types mismatch
     : [getThemeColor(strokeColor)]
   const [keysList, setKeysList] = useState<number[]>([])
 
-  const getKey = (index) => {
+  const getKey = (index: number) => {
     if (keysList[index]) {
       return keysList[index]
     }

@@ -1,5 +1,4 @@
 import { RecipeVariants }      from '@vanilla-extract/recipes'
-
 import { InputHTMLAttributes } from 'react'
 
 import { inputStyles }         from './styles/index.js'

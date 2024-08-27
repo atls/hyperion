@@ -1,14 +1,25 @@
-import React            from 'react'
-import { Children }     from 'react'
-import { cloneElement } from 'react'
-import { useEffect }    from 'react'
-import { useDropzone }  from 'react-dropzone'
+import { ReactNode }         from 'react'
+import { FC }                from 'react'
+import { PropsWithChildren } from 'react'
+import { Children }          from 'react'
+import { cloneElement }      from 'react'
+import { useEffect }         from 'react'
+import { useDropzone }       from 'react-dropzone'
+import React                 from 'react'
 
 import { Container }    from './container/index.js'
 import { Placeholder }  from './placeholder/index.js'
 import { useUpload }    from './use-upload/index.js'
 
-export const Upload: any = ({
+interface UploadProps {
+  accept?: Record<string, any>
+  multiple?: boolean
+  placeholder: ReactNode | string
+  onPreview?: any
+  onFile?: any
+}
+
+export const Upload: FC<PropsWithChildren<UploadProps>> = ({
   children,
   accept = {},
   multiple = false,
@@ -39,15 +50,18 @@ export const Upload: any = ({
   const child = Children.only(children)
 
   const content = [
-    children.props && children.props.children ? children.props.children : null,
+    // @ts-expect-error types
+    children?.props && children.props.children ? children.props.children : null,
     placeholder ? <Placeholder key='placeholder'>{placeholder}</Placeholder> : null,
     // @ts-ignore
     <input key='input' {...getInputProps()} />,
   ]
 
   // eslint-disable-next-line no-underscore-dangle
+  // @ts-expect-error types
   if (child.type.__emotion_base) {
     return cloneElement(
+      // @ts-expect-error types
       children,
       {
         ...getRootProps({ isDragActive, isDragAccept, isDragReject }),
@@ -58,6 +72,7 @@ export const Upload: any = ({
   }
 
   return (
+    // @ts-expect-error types
     <Container {...getRootProps({ isDragActive, isDragAccept, isDragReject })} {...child.props}>
       {content}
     </Container>

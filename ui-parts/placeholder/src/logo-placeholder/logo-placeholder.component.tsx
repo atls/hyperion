@@ -1,5 +1,5 @@
-import React                    from 'react'
 import { FC }                   from 'react'
+import React                    from 'react'
 
 import { Layout }               from '@atls-ui-parts/layout'
 import { Text }                 from '@atls-ui-parts/text'

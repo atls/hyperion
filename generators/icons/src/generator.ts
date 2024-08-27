@@ -1,12 +1,11 @@
 import { transform }    from '@babel/standalone'
-
-import assert           from 'assert'
 import { Command }      from 'commander'
 import { readFileSync } from 'fs'
 import { lstatSync }    from 'fs'
 import { existsSync }   from 'fs'
 import { mkdirSync }    from 'fs'
 import { join }         from 'path'
+import assert           from 'assert'
 
 import { build }        from './svgr'
 

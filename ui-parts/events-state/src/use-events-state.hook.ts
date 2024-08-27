@@ -35,6 +35,7 @@ export const useEventsState = (
 
     if (node) {
       Object.keys(callbacks).forEach((event) => {
+        // @ts-expect-error any
         node.addEventListener(event, callbacks[event])
       })
     }
@@ -42,6 +43,7 @@ export const useEventsState = (
     return () => {
       if (node) {
         Object.keys(callbacks).forEach((event) => {
+          // @ts-expect-error any
           node.removeEventListener(event, callbacks[event])
         })
       }

@@ -17,5 +17,5 @@ export const getTransform = (
   ease: ParallaxEaseType
 ) => useTransform(scrollY, range, outputRange, { ease: easingFunctions[ease] })
 
-export const getTransformDisplay = (display) =>
+export const getTransformDisplay = (display: MotionValue) =>
   useTransform(display, (value: number) => (value > 0 ? 'flex' : 'none'))

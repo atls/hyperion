@@ -1,7 +1,7 @@
-import React                      from 'react'
 import { clsx }                   from 'clsx'
 import { motion }                 from 'framer-motion'
 import { forwardRef }             from 'react'
+import React                      from 'react'
 
 import { ExpanderProps }          from './expander.interfaces.js'
 import { expanderStyles }         from './expander.css.js'

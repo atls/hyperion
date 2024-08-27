@@ -1,8 +1,9 @@
+import { ReactNode }     from 'react'
 import { PlacementType } from 'react-laag/dist/PlacementType.js'
 import { useState }      from 'react'
 import { useLayer }      from 'react-laag'
 
-export const usePopover = (placement: PlacementType, offset = 9, trigger = 'click') => {
+export const usePopover = (placement: PlacementType, offset: number = 9, trigger: 'click' | 'hover' = 'click') => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const close = () => setIsOpen(false)
 
@@ -15,7 +16,7 @@ export const usePopover = (placement: PlacementType, offset = 9, trigger = 'clic
     triggerOffset: offset,
   })
 
-  const setTrigger = (value) => {
+  const setTrigger = (value: 'click' | 'hover') => {
     if (value === 'click') return { ...triggerProps, onClick: () => setIsOpen(!isOpen) }
     if (value === 'hover') {
       return {
@@ -28,7 +29,7 @@ export const usePopover = (placement: PlacementType, offset = 9, trigger = 'clic
     return {}
   }
 
-  const render = (children) => renderLayer(isOpen && children)
+  const render = (children: ReactNode) => renderLayer(isOpen && children)
 
   return {
     triggerProps: setTrigger(trigger),

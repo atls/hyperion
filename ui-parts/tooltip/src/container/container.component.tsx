@@ -1,7 +1,7 @@
-import React                       from 'react'
 import { Arrow }                   from 'react-laag'
 import { motion }                  from 'framer-motion'
 import { forwardRef }              from 'react'
+import React                       from 'react'
 
 import { Condition }               from '@atls-ui-parts/condition'
 
