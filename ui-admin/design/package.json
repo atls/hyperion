@@ -10,15 +10,6 @@
     "prepack": "run build",
     "start": "node server.js"
   },
-  "dependencies": {
-    "@vanilla-extract/css": "1.15.3",
-    "@vanilla-extract/dynamic": "2.1.1",
-    "cors": "2.8.5",
-    "express": "4.19.2",
-    "next-themes": "0.3.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
   "devDependencies": {
     "@chromatic-com/storybook": "1.6.0",
     "@storybook/addon-essentials": "8.1.11",
@@ -33,9 +24,16 @@
     "@storybook/types": "8.1.11",
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
+    "@vanilla-extract/css": "1.15.3",
+    "@vanilla-extract/dynamic": "2.1.1",
     "@vanilla-extract/webpack-plugin": "patch:@vanilla-extract/webpack-plugin@npm%3A2.3.11#~/.yarn/patches/@vanilla-extract-webpack-plugin-npm-2.3.11-96bc4d2d50.patch",
+    "cors": "2.8.5",
     "css-loader": "7.1.2",
+    "express": "4.19.2",
     "mini-css-extract-plugin": "2.9.0",
+    "next-themes": "0.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "storybook": "8.1.11",
     "style-loader": "4.0.0",
     "webpack": "5.92.1"
