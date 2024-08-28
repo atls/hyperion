@@ -1,5 +1,5 @@
-import { createElement } from 'react'
-import { useCallback }   from 'react'
+import { createElement }            from 'react'
+import { useCallback }              from 'react'
 
 import { AddonInputOptions }        from '../use-carousel/index.js'
 import { UseAddonPaginationResult } from './use-addon-pagination.interfaces.js'

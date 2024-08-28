@@ -35,7 +35,10 @@ const read = (files: Array<string>) =>
     }))
   )
 
-const compile = (icons: Array<{ name: string, source: string }>, replacements: Record<string, any>) =>
+const compile = (
+  icons: Array<{ name: string; source: string }>,
+  replacements: Record<string, any>
+) =>
   Promise.all(
     icons.map(async (icon) => ({
       name: icon.name,

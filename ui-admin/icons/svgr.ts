@@ -36,7 +36,7 @@ const read = (files: Array<string>) =>
     }))
   )
 
-const compile = (icons: Array<{ filename: string, name: string, source: string }>) =>
+const compile = (icons: Array<{ filename: string; name: string; source: string }>) =>
   Promise.all(
     icons.map(async (icon) => ({
       filename: icon.filename,
@@ -53,7 +53,7 @@ const compile = (icons: Array<{ filename: string, name: string, source: string }
     }))
   )
 
-const save = async (sources: Array<{ filename: string, code: string }>) =>
+const save = async (sources: Array<{ filename: string; code: string }>) =>
   Promise.all(
     sources.map((source) =>
       fs.writeFileAsync(

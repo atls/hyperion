@@ -7,9 +7,9 @@ import { useEffect }         from 'react'
 import { useDropzone }       from 'react-dropzone'
 import React                 from 'react'
 
-import { Container }    from './container/index.js'
-import { Placeholder }  from './placeholder/index.js'
-import { useUpload }    from './use-upload/index.js'
+import { Container }         from './container/index.js'
+import { Placeholder }       from './placeholder/index.js'
+import { useUpload }         from './use-upload/index.js'
 
 interface UploadProps {
   accept?: Record<string, any>
