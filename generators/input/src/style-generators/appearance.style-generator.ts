@@ -1,10 +1,12 @@
-import { pretty }        from '@atls-ui-generators/utils'
-import { getStylesName } from '@atls-ui-generators/utils'
-import { writeFileSync } from 'fs'
+import { writeFileSync }     from 'fs'
+
+import { pretty }            from '@atls-ui-generators/utils'
+import { getStylesName }     from '@atls-ui-generators/utils'
 
 import { InputColorSchemes } from '../input-generator.interfaces.js'
 
-const getAppearanceStylesName = (variant: string, state: string) => getStylesName('appearance', variant, state)
+const getAppearanceStylesName = (variant: string, state: string) =>
+  getStylesName('appearance', variant, state)
 
 export class InputAppearanceStyleGenerator {
   readonly requiredImports = [

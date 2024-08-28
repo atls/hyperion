@@ -1,4 +1,6 @@
-export const toArray = (symArray: Array<string | number> | string | number): Array<string | number> => (Array.isArray(symArray) ? symArray : [symArray])
+export const toArray = (
+  symArray: Array<string | number> | string | number
+): Array<string | number> => (Array.isArray(symArray) ? symArray : [symArray])
 
 export const getGradientId = (strokeColor: Array<string> | string) => {
   const id: string[] = []

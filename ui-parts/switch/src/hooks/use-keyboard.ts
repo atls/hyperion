@@ -2,7 +2,10 @@ import { KeyboardEventHandler } from 'react'
 import { RefObject }            from 'react'
 import { useEffect }            from 'react'
 
-export const useKeyboard = (node: RefObject<HTMLButtonElement>, setChecked: (value: boolean) => void) => {
+export const useKeyboard = (
+  node: RefObject<HTMLButtonElement>,
+  setChecked: (value: boolean) => void
+) => {
   useEffect(() => {
     const onKeyDownHandler: KeyboardEventHandler = ({ key }) => {
       if (key === 'ArrowLeft') {

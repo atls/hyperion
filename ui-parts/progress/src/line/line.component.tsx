@@ -43,14 +43,15 @@ export const Line: FunctionComponent<LineProps> = ({
   trailColor,
   strokeWeight = 8,
 }) => {
-  // @ts-expect-error any
-  const getThemeColor = (color: Array<string | ProgressGradient> | string) => (vars.colors && vars.colors[color]) || color
+  const getThemeColor = (color: Array<string | ProgressGradient> | string) =>
+    // @ts-expect-error any
+    (vars.colors && vars.colors[color]) || color
 
   const percentList = Array.isArray(percent) ? percent : [percent]
   const strokeColorList = Array.isArray(strokeColor)
     ? getThemeColor(strokeColor)
-    // @ts-expect-error types mismatch
-    : [getThemeColor(strokeColor)]
+    : // @ts-expect-error types mismatch
+      [getThemeColor(strokeColor)]
   const [keysList, setKeysList] = useState<number[]>([])
 
   const getKey = (index: number) => {
