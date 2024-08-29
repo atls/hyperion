@@ -1,5 +1,6 @@
 import { readFileSync }                   from 'fs'
 import { mkdirSync }                      from 'fs'
+import { rmdirSync }                      from 'fs'
 import { existsSync }                     from 'fs'
 
 import { pretty }                         from '@atls-ui-generators/utils'
@@ -107,6 +108,10 @@ export const appearanceDisabled = {
   lightBlueDisabled: appearanceLightBlueDisabledStyles,
 }
 `
+    afterAll(() => {
+      if (existsSync(`${__dirname}/generated`))
+        rmdirSync(`${__dirname}/generated`, { recursive: true })
+    })
 
     it('should generate code for appearance styles', () => {
       const generator = new ButtonAppearanceStyleGenerator(colors)
