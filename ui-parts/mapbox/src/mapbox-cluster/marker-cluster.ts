@@ -1,7 +1,8 @@
-import { Marker }               from 'mapbox-gl'
-import { Map }                  from 'mapbox-gl'
+import type { Map }                  from 'mapbox-gl'
 
-import { MarkerClusterOptions } from './marker-cluster.options.js'
+import type { MarkerClusterOptions } from './marker-cluster.options.js'
+
+import { Marker }                    from 'mapbox-gl'
 
 export class MarkerCluster {
   private markerElement: HTMLDivElement
@@ -25,13 +26,13 @@ export class MarkerCluster {
     if (options.hiddenMarkerClassName) this.hiddenMarkerClassName = options.hiddenMarkerClassName
   }
 
-  addMarker(marker: Marker) {
+  addMarker(marker: Marker): void {
     this.markers.push(marker)
     this.markerElement.innerHTML = `<span>${this.markers.length}</span>`
   }
 
-  addToMap(map: Map) {
-    const reconcileVisibility = (element: HTMLElement, reverse = false) => {
+  addToMap(map: Map): void {
+    const reconcileVisibility = (element: HTMLElement, reverse = false): void => {
       if (map.getZoom() < this.clusterThreshold) {
         if (reverse) element.classList.remove(this.hiddenMarkerClassName)
         else element.classList.add(this.hiddenMarkerClassName)

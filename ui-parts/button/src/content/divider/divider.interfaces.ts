@@ -1,5 +1,5 @@
-import { HTMLAttributes }   from 'react'
+import type { HTMLAttributes }   from 'react'
 
-import { DividerSprinkles } from './divider.css.js'
+import type { DividerSprinkles } from './divider.css.js'
 
 export interface DividerProps extends HTMLAttributes<HTMLSpanElement>, DividerSprinkles {}

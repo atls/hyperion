@@ -1,5 +1,6 @@
-import { Meta }                       from '@storybook/react'
-import { StoryObj }                   from '@storybook/react'
+import type { Meta }                  from '@storybook/react'
+import type { StoryObj }              from '@storybook/react'
+
 import React                          from 'react'
 
 import { Condition }                  from '@atls-ui-parts/condition'

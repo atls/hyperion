@@ -1,4 +1,4 @@
-import { WindowDimensions } from './use-window-size.interfaces.js'
+import type { WindowDimensions } from './use-window-size.interfaces.js'
 
 export const defaultWindowSize: WindowDimensions = {
   innerWidth: 0,

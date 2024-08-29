@@ -1,6 +1,6 @@
-import { globalFontFace } from '@vanilla-extract/css'
+import type { FontsTokens } from '../index.js'
 
-import { FontsTokens }    from '../index.js'
+import { globalFontFace }   from '@vanilla-extract/css'
 
 const nunitoSans = 'Nunito Sans'
 

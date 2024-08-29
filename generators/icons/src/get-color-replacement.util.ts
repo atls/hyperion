@@ -3,7 +3,9 @@ export interface GetColorReplacementOptions {
   color: string
 }
 
-export const getColorReplacement = (options: GetColorReplacementOptions) => ({
+export const getColorReplacement = (
+  options: GetColorReplacementOptions
+): Record<string, string> => ({
   [options.color]: `{(vars.colors${(options.themePaths || []).reduce(
     (str, prop) => `${str}.${prop}`,
     ''

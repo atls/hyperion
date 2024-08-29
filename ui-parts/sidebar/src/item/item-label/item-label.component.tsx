@@ -1,9 +1,10 @@
-import { FC }              from 'react'
-import { HTMLAttributes }  from 'react'
-import { clsx }            from 'clsx'
-import React               from 'react'
+import type { FC }             from 'react'
+import type { HTMLAttributes } from 'react'
 
-import { itemLabelStyles } from './item-label.css.js'
+import { clsx }                from 'clsx'
+import React                   from 'react'
+
+import { itemLabelStyles }     from './item-label.css.js'
 
 export const ItemLabel: FC<HTMLAttributes<HTMLSpanElement>> = ({
   children,

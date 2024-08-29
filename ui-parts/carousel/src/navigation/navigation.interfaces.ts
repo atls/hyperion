@@ -1,8 +1,8 @@
-import { HTMLAttributes }      from 'react'
+import type { HTMLAttributes }      from 'react'
 
-import { NavigationSprinkles } from './navigation.css.js'
+import type { NavigationSprinkles } from './navigation.css.js'
 
-export type NavigationAttachType = 'prev' | 'next'
+export type NavigationAttachType = 'next' | 'prev'
 
 export interface NavigationProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'color'>,
@@ -11,4 +11,15 @@ export interface NavigationProps
   show?: boolean
   fill?: boolean
   offset?: number | string
+}
+
+export interface CreateFillStylesResult {
+  top: number | string
+  height: string
+  marginTop?: number
+}
+
+export interface CreateAttachStylesResult {
+  right?: number | string
+  left?: number | string
 }

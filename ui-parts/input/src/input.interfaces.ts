@@ -1,7 +1,7 @@
-import { RecipeVariants }      from '@vanilla-extract/recipes'
-import { InputHTMLAttributes } from 'react'
+import type { RecipeVariants }      from '@vanilla-extract/recipes'
+import type { InputHTMLAttributes } from 'react'
 
-import { inputStyles }         from './styles/index.js'
+import type { inputStyles }         from './styles/index.js'
 
 type InputHTMLAttributesWithoutSize = Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>
 

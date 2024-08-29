@@ -1,17 +1,18 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
-import { Meta }     from '@storybook/react'
-import { StoryObj } from '@storybook/react'
-import { useState } from 'react'
-import React        from 'react'
+import type { Meta }     from '@storybook/react'
+import type { StoryObj } from '@storybook/react'
 
-import { Button }   from '@atls-ui-parts/button'
-import { Column }   from '@atls-ui-parts/layout'
-import { Layout }   from '@atls-ui-parts/layout'
-import { Row }      from '@atls-ui-parts/layout'
+import { useState }      from 'react'
+import React             from 'react'
 
-import { Circle }   from './circle/index.js'
-import { Line }     from './line/index.js'
+import { Button }        from '@atls-ui-parts/button'
+import { Column }        from '@atls-ui-parts/layout'
+import { Layout }        from '@atls-ui-parts/layout'
+import { Row }           from '@atls-ui-parts/layout'
+
+import { Circle }        from './circle/index.js'
+import { Line }          from './line/index.js'
 
 const meta: Meta = {
   title: 'Components/Progress',
@@ -71,12 +72,12 @@ export const Dinamic: StoryObj = {
   render: () => {
     const [percent, setPercent] = useState(40)
 
-    const increase = () => {
+    const increase = (): void => {
       const newPercent = percent + 10
       setPercent(newPercent < 100 ? newPercent : 100)
     }
 
-    const decline = () => {
+    const decline = (): void => {
       const newPercent = percent - 10
       setPercent(newPercent > 0 ? newPercent : 0)
     }
@@ -170,13 +171,13 @@ export const Gradient: StoryObj = {
       <Layout width='100%'>
         <Circle
           percent={[33, 33, 34]}
+          width='200px'
+          height='200px'
           strokeColor={[
             { '0%': 'purple', '100%': 'pink' },
             { '0%': 'red', '100%': 'yellow' },
             { '100%': '#108ee9', '0%': '#87d068' },
           ]}
-          width='200px'
-          height='200px'
         />
       </Layout>
     </Column>

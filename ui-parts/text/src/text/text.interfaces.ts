@@ -1,7 +1,7 @@
-import { SprinklesFn }    from 'rainbow-sprinkles/createRuntimeFn'
-import { HTMLAttributes } from 'react'
+import type { SprinklesFn }    from 'rainbow-sprinkles/createRuntimeFn'
+import type { HTMLAttributes } from 'react'
 
-import { TextSprinkles }  from './text.css.js'
+import type { TextSprinkles }  from './text.css.js'
 
 export type BaseTextProps = Omit<HTMLAttributes<HTMLSpanElement>, 'color'>
 

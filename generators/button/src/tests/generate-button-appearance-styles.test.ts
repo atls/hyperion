@@ -126,7 +126,9 @@ export const appearanceDisabled = {
 
       if (!existsSync(`${__dirname}/generated`)) mkdirSync(`${__dirname}/generated`)
 
-      expect(() => generator.generateFile(`${__dirname}/generated/`)).toThrowError()
+      expect(() => {
+        generator.generateFile(`${__dirname}/generated/`)
+      }).toThrowError()
     })
 
     it('should generate appearance styles file', () => {

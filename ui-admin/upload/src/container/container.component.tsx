@@ -1,8 +1,9 @@
+import type { ContainerProps }       from './container.interfaces.js'
+
 import { clsx }                      from 'clsx'
 import { forwardRef }                from 'react'
 import React                         from 'react'
 
-import { ContainerProps }            from './container.interfaces.js'
 import { containerStyles }           from './container.css.js'
 import { containerDragAcceptStyles } from './container.css.js'
 import { containerDragActiveStyles } from './container.css.js'

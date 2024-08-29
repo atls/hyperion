@@ -1,8 +1,9 @@
+import type { MenuItemProps }     from './menu-item.interfaces.js'
+
 import { clsx }                   from 'clsx'
 import { forwardRef }             from 'react'
 import React                      from 'react'
 
-import { MenuItemProps }          from './menu-item.interfaces.js'
 import { baseMenuItemStyles }     from './menu-item.css.js'
 import { hoveredMenuItemStyles }  from './menu-item.css.js'
 import { selectedMenuItemStyles } from './menu-item.css.js'

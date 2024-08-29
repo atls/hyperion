@@ -1,15 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-import { Meta }     from '@storybook/react'
-import { StoryObj } from '@storybook/react'
-import React        from 'react'
+import type { Meta }     from '@storybook/react'
+import type { StoryObj } from '@storybook/react'
 
-import { Image }    from '@atls-ui-parts/image'
-import { Column }   from '@atls-ui-parts/layout'
-import { Row }      from '@atls-ui-parts/layout'
-import { Layout }   from '@atls-ui-parts/layout'
-import { Link }     from '@atls-ui-parts/link'
-import { Text }     from '@atls-ui-parts/text'
+import React             from 'react'
+
+import { Image }         from '@atls-ui-parts/image'
+import { Column }        from '@atls-ui-parts/layout'
+import { Row }           from '@atls-ui-parts/layout'
+import { Layout }        from '@atls-ui-parts/layout'
+import { Link }          from '@atls-ui-parts/link'
+import { Text }          from '@atls-ui-parts/text'
 
 const meta: Meta = {
   title: 'Hyperion',

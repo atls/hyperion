@@ -11,13 +11,15 @@ import parserBabel         from 'prettier/parser-babel'
 import parserTypescript    from 'prettier/parser-typescript'
 
 // @ts-expect-error types
-const svgrTemplate = ({ template }, opts, { componentName, jsx }) => {
+const svgrTemplate = ({ template }, opts, { componentName, jsx }): any => {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   const typeScriptTpl = template.smart({ plugins: ['typescript', 'prettier'] })
 
+  // eslint-disable-next-line
   return typeScriptTpl.ast`
  import React from 'react'
  import { vars } from '@ui/theme'
- import { IconProps } from '../icons.interfaces'
+ import type { IconProps } from '../icons.interfaces'
 
     export const ${componentName} = React.memo((props: IconProps) => (
      ${jsx}
@@ -25,7 +27,7 @@ const svgrTemplate = ({ template }, opts, { componentName, jsx }) => {
   `
 }
 
-const read = (files: Array<string>) =>
+const read = async (files: Array<string>): Promise<Array<{ name: string; source: string }>> =>
   Promise.all(
     files.map(async (iconPath) => ({
       name: `${camelcase(path.basename(iconPath, path.extname(iconPath)), {
@@ -35,13 +37,14 @@ const read = (files: Array<string>) =>
     }))
   )
 
-const compile = (
+const compile = async (
   icons: Array<{ name: string; source: string }>,
   replacements: Record<string, any>
-) =>
+): Promise<Array<{ name: string; code: any }>> =>
   Promise.all(
     icons.map(async (icon) => ({
       name: icon.name,
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       code: await svgr(
         icon.source.replace(/mask0/g, icon.name),
         {
@@ -54,13 +57,16 @@ const compile = (
     }))
   )
 
-const save = async (sources: Array<{ name: string }>, targetDir: string) =>
+const save = async (
+  sources: Array<{ name: string; code?: string }>,
+  targetDir: string
+): Promise<Array<void>> =>
   Promise.all(
     sources.map((source) =>
       fs.writeFileAsync(
         path.join(targetDir, `${source.name}.tsx`),
-        // @ts-ignore
-        format(`/* eslint-disable */\n${source.code}`, {
+        // @ts-expect-error
+        format(`/* eslint-disable */\n${source?.code || ''}`, {
           ...prettierConfig,
           filepath: path.join(targetDir, `${source.name}.tsx`),
           plugins: [parserTypescript, parserBabel, prettierPlugin],
@@ -68,14 +74,21 @@ const save = async (sources: Array<{ name: string }>, targetDir: string) =>
       ))
   )
 
-const createIndex = (sources: Array<{ name: string }>, targetDir: string) =>
+const createIndex = (
+  sources: Array<{ name: string }>,
+  targetDir: string
+): ReturnType<typeof fs.writeFileAsync> =>
   fs.writeFileAsync(
     path.join(targetDir, 'index.ts'),
     `${sources.map((source) => `export * from './${source.name}'`).join('\n')}\n`
   )
 
-export const build = async (iconsPath: string, targetDir: string, replacements: object) => {
-  const prettifyIconsPath = () => {
+export const build = async (
+  iconsPath: string,
+  targetDir: string,
+  replacements: object
+): Promise<void> => {
+  const prettifyIconsPath = (): string => {
     const parts = iconsPath.split('')
     if (parts[parts.length - 1] === '/') {
       parts.pop()

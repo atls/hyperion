@@ -1,8 +1,9 @@
+import type { PaginationProps } from './pagination.interfaces.js'
+
 import { clsx }                 from 'clsx'
 import { forwardRef }           from 'react'
 import React                    from 'react'
 
-import { PaginationProps }      from './pagination.interfaces.js'
 import { basePaginationStyles } from './pagination.css.js'
 import { paginationSprinkles }  from './pagination.css.js'
 
@@ -18,7 +19,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>((
     <div
       ref={ref}
       {...otherProps}
-      className={clsx(className, otherProps?.className, basePaginationStyles)}
+      className={clsx(className, String(otherProps?.className || ''), basePaginationStyles)}
       style={{ ...style, ...otherProps?.style }}
     >
       {children}

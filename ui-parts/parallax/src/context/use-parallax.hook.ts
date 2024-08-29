@@ -1,23 +1,27 @@
-import { useContext }    from 'react'
-import { useEffect }     from 'react'
-import { useState }      from 'react'
+import type { MotionValue }   from 'framer-motion'
 
-import { Context }       from './parallax.context.js'
-import { ParallaxStore } from './parallax.store.js'
+import type { ParallaxStore } from './parallax.store.js'
 
-export const useParallax = () => {
+import { useContext }         from 'react'
+import { useEffect }          from 'react'
+import { useState }           from 'react'
+
+import { Context }            from './parallax.context.js'
+
+export const useParallax = (): [MotionValue<number> | null, number] => {
   const store: ParallaxStore = useContext(Context)
 
   if (!store) {
     throw new Error('Missing <ParallaxProvider>')
   }
 
-  const [, setState] = useState(store.getState())
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [state, setState] = useState(store.getState())
 
   useEffect(() => {
     store.addListener('changed', setState)
 
-    return () => {
+    return (): void => {
       store.removeListener('changed', setState)
     }
   }, [store])

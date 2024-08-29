@@ -10,7 +10,7 @@ const command = new Command()
   .name('Button styles generator')
   .argument('path <string>', 'Path to save the styles')
   .option('-t, --theme path <string>', 'Path to colors file')
-  .action((path, options) => {
+  .action((path: string, options: Record<string, string>) => {
     assert.ok(options.theme, 'Theme colors path is required')
 
     const colorsFile = readFileSync(join(process.cwd(), options.theme)).toString('utf-8')
@@ -18,8 +18,8 @@ const command = new Command()
 
     if (!code) throw Error('Could not read the file')
 
-    // eslint-disable-next-line no-eval
-    const colors = eval(code)
+    // eslint-disable-next-line no-eval, security/detect-eval-with-expression
+    const colors: Record<string, any> = eval(code)
 
     const generator = new ButtonAppearanceStyleGenerator(colors)
 

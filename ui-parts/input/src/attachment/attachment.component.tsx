@@ -1,8 +1,9 @@
+import type { AttachmentProps } from './attachment.interfaces.js'
+
 import { clsx }                 from 'clsx'
 import { forwardRef }           from 'react'
 import React                    from 'react'
 
-import { AttachmentProps }      from './attachment.interfaces.js'
 import { attachmentSprinkles }  from './attachment.css.js'
 import { attachmentBaseStyles } from './attachment.css.js'
 
@@ -18,7 +19,7 @@ export const Attachment = forwardRef<HTMLDivElement, AttachmentProps>((
     <div
       ref={ref}
       {...otherProps}
-      className={clsx(className, attachmentBaseStyles, otherProps?.className)}
+      className={clsx(className, attachmentBaseStyles, String(otherProps?.className || ''))}
       style={{ ...style, ...otherProps?.style }}
     >
       {children}

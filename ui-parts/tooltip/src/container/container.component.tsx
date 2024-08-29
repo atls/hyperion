@@ -1,23 +1,23 @@
-import { Arrow }                   from 'react-laag'
-import { motion }                  from 'framer-motion'
-import { forwardRef }              from 'react'
-import React                       from 'react'
+import type { ContainerComponentProps } from './container.interfaces.js'
 
-import { Condition }               from '@atls-ui-parts/condition'
+import { Arrow }                        from 'react-laag'
+import { motion }                       from 'framer-motion'
+import { forwardRef }                   from 'react'
+import React                            from 'react'
 
-import { ContainerComponentProps } from './container.interfaces.js'
-import { baseContainerStyles }     from './container.css.js'
+import { Condition }                    from '@atls-ui-parts/condition'
+
+import { animateProps }                 from './container.contants.js'
+import { baseContainerStyles }          from './container.css.js'
 
 export const Container = forwardRef<HTMLDivElement, ContainerComponentProps>((
-  { text, showArrow, arrowOptions, arrowProps, layerSide, animate, style },
+  { text, showArrow, arrowOptions, arrowProps, layerSide, animate = false, style },
   ref
 ) => (
   <motion.div
     ref={ref}
     className={baseContainerStyles}
-    initial={animate ? { opacity: 0, scale: 0.8 } : {}}
-    animate={animate ? { opacity: 1, scale: 1, y: 0 } : {}}
-    exit={animate ? { opacity: 0, scale: 0.8 } : {}}
+    {...(animate ? animateProps : {})}
     transition={{ type: 'spring', damping: 30, stiffness: 500 }}
     style={style}
   >

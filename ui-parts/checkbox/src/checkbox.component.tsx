@@ -1,13 +1,14 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 
+import type { CheckboxProps }      from './checkbox.interfaces.js'
+
 import { clsx }                    from 'clsx'
 import { useEffect }               from 'react'
 import { forwardRef }              from 'react'
 import { useState }                from 'react'
 import React                       from 'react'
 
-import { CheckboxProps }           from './checkbox.interfaces.js'
 import { boxBaseStyles }           from './box/index.js'
 import { boxShapeStyles }          from './box/index.js'
 import { boxColorStyles }          from './box/index.js'
@@ -41,23 +42,23 @@ export const Checkbox = forwardRef<HTMLDivElement, CheckboxProps>((
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [active])
 
-  const handleCheck = () => {
+  const handleCheck = (): void => {
     setIsChecked(!isChecked)
     onCheck(!isChecked)
   }
 
   return (
     <div
+      ref={ref}
       className={clsx(containerBaseStyles, containerPositionStyles[labelPosition])}
       onClick={handleCheck}
-      ref={ref}
       {...props}
     >
       <input
         className={hiddenInputStyles}
         checked={isChecked}
         type='checkbox'
-        onChange={() => handleCheck()}
+        onChange={handleCheck}
       />
       <div className={clsx(boxBaseStyles, boxShapeStyles[size], boxColorStyles[color])}>
         <div className={clsx(checkBaseStyles, isChecked && checkCheckedStyles)}>{icon}</div>

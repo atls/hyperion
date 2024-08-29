@@ -1,5 +1,5 @@
-import { BaseTextProps } from '@atls-ui-parts/text'
+import type { BaseTextProps } from '@atls-ui-parts/text'
 
-import { TextSprinkles } from './text.css.js'
+import type { TextSprinkles } from './text.css.js'
 
 export interface TextProps extends TextSprinkles, BaseTextProps {}

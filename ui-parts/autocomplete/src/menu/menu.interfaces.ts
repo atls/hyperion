@@ -1,3 +1,3 @@
-import { HTMLAttributes } from 'react'
+import type { HTMLAttributes } from 'react'
 
-export interface MenuProps extends HTMLAttributes<HTMLDivElement> {}
+export type MenuProps = HTMLAttributes<HTMLDivElement>

@@ -1,11 +1,14 @@
-import { Meta }     from '@storybook/react'
-import { StoryObj } from '@storybook/react'
-import React        from 'react'
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 
-import { Box }      from '@atls-ui-parts/layout'
-import { Column }   from '@atls-ui-parts/layout'
-import { Layout }   from '@atls-ui-parts/layout'
-import { vars }     from '@atls-ui-parts/theme'
+import type { Meta }     from '@storybook/react'
+import type { StoryObj } from '@storybook/react'
+
+import React             from 'react'
+
+import { Box }           from '@atls-ui-parts/layout'
+import { Column }        from '@atls-ui-parts/layout'
+import { Layout }        from '@atls-ui-parts/layout'
+import { vars }          from '@atls-ui-parts/theme'
 
 const meta: Meta = {
   title: 'Components/Button',

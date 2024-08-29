@@ -1,4 +1,4 @@
-import { FontSizesTokens } from '../index.js'
+import type { FontSizesTokens } from '../index.js'
 
 export const fontSizes: FontSizesTokens = {
   inherit: 'inherit',

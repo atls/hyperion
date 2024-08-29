@@ -1,11 +1,13 @@
-import { Children }          from 'react'
-import { PropsWithChildren } from 'react'
-import { FC }                from 'react'
-import { cloneElement }      from 'react'
-import React                 from 'react'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { PopoverProps }      from './popover.interfaces.js'
-import { usePopover }        from './use-popover.hook.js'
+import type { PopoverProps }      from './popover.interfaces.js'
+
+import { Children }               from 'react'
+import { cloneElement }           from 'react'
+import React                      from 'react'
+
+import { usePopover }             from './use-popover.hook.js'
 
 export const Popover: FC<PropsWithChildren<PopoverProps>> = ({
   title,
@@ -15,15 +17,17 @@ export const Popover: FC<PropsWithChildren<PopoverProps>> = ({
 }) => {
   const { isOpen, close, triggerProps, render } = usePopover({ ...props })
 
-  const renderChildren = () => {
-    if (typeof children === 'function') return children(isOpen, close)
-
-    return Children.only(cloneElement(children as any, triggerProps))
-  }
+  if (typeof children === 'function')
+    return (
+      <>
+        {children(isOpen, close)}
+        {render({ title, content })}
+      </>
+    )
 
   return (
     <>
-      {renderChildren()}
+      {Children.only(cloneElement(children as never, triggerProps))}
       {render({ title, content })}
     </>
   )

@@ -1,9 +1,11 @@
-import { Meta }       from '@storybook/react'
-import { StoryObj }   from '@storybook/react'
-import React          from 'react'
+import type { Meta }       from '@storybook/react'
+import type { StoryObj }   from '@storybook/react'
 
-import { Modal }      from './modal.component.js'
-import { ModalProps } from './modal.interfaces.js'
+import type { ModalProps } from './modal.interfaces.js'
+
+import React               from 'react'
+
+import { Modal }           from './modal.component.js'
 
 const meta: Meta<ModalProps> = {
   title: 'Components/Modal',

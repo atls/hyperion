@@ -1,24 +1,26 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
-import { Meta }               from '@storybook/react'
-import { StoryObj }           from '@storybook/react'
-import { FC }                 from 'react'
-import { SVGProps }           from 'react'
-import { useRef }             from 'react'
-import React                  from 'react'
+import type { Meta }            from '@storybook/react'
+import type { StoryObj }        from '@storybook/react'
+import type { FC }              from 'react'
+import type { SVGProps }        from 'react'
 
-import { Condition }          from '@atls-ui-parts/condition'
-import { Box }                from '@atls-ui-parts/layout'
+import type { PaginationProps } from './pagination/index.js'
 
-import { Container }          from './container/index.js'
-import { Navigation }         from './navigation/index.js'
-import { Pagination }         from './pagination/index.js'
-import { PaginationProps }    from './pagination/index.js'
-import { Slide }              from './slide/index.js'
-import { Wrapper }            from './wrapper/index.js'
-import { useAddonNavigation } from './hooks/index.js'
-import { useAddonPagination } from './hooks/index.js'
-import { useCarousel }        from './hooks/index.js'
+import { useRef }               from 'react'
+import React                    from 'react'
+
+import { Condition }            from '@atls-ui-parts/condition'
+import { Box }                  from '@atls-ui-parts/layout'
+
+import { Container }            from './container/index.js'
+import { Navigation }           from './navigation/index.js'
+import { Pagination }           from './pagination/index.js'
+import { Slide }                from './slide/index.js'
+import { Wrapper }              from './wrapper/index.js'
+import { useAddonNavigation }   from './hooks/index.js'
+import { useAddonPagination }   from './hooks/index.js'
+import { useCarousel }          from './hooks/index.js'
 
 const StoryArrow: FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
@@ -152,19 +154,19 @@ const meta: Meta<CarouselStoryProps> = {
         <Container ref={containerRef} style={{ backgroundColor: '#eee' }}>
           <Condition match={navigation}>
             <Navigation
+              fill
               width='50px'
               backgroundColor='rgba(0, 0, 0, 0)'
               attach='prev'
-              fill
               {...prevProp}
             >
               <StoryArrow style={{ transform: 'rotate(180deg)' }} />
             </Navigation>
             <Navigation
+              fill
               width='50px'
               backgroundColor='rgba(0, 0, 0, 0)'
               attach='next'
-              fill
               {...nextProp}
             >
               <StoryArrow />

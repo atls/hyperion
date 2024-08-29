@@ -1,13 +1,14 @@
-import { AddonProps } from '../addon.interfaces.js'
+import type { AddonProps }              from '../addon.interfaces.js'
+import type { GetRoundingStylesReturn } from './get-rounding-styles.interfaces.js'
 
 export const getRoundingStyles = (
   rounding: AddonProps['rounding'],
   position: AddonProps['position']
-) => {
+): GetRoundingStylesReturn => {
   if (position === 'before') {
     return {
-      borderBottomRightRadius: 0,
-      borderTopRightRadius: 0,
+      borderBottomRightRadius: '0',
+      borderTopRightRadius: '0',
       borderBottomLeftRadius: rounding,
       borderTopLeftRadius: rounding,
     }
@@ -16,7 +17,7 @@ export const getRoundingStyles = (
   return {
     borderBottomRightRadius: rounding,
     borderTopRightRadius: rounding,
-    borderBottomLeftRadius: 0,
-    borderTopLeftRadius: 0,
+    borderBottomLeftRadius: '0',
+    borderTopLeftRadius: '0',
   }
 }

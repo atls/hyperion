@@ -1,13 +1,15 @@
 import 'react-datepicker/dist/react-datepicker.css'
 
+import type { FC }                from 'react'
+
+import type { DatepickerProps }   from './datepicker.interface.js'
+
 import { injectGlobal }           from '@emotion/css'
-import { FC }                     from 'react'
 import { useEffect }              from 'react'
 import { setDefaultLocale }       from 'react-datepicker'
 import React                      from 'react'
 import DatepickerComponent        from 'react-datepicker'
 
-import { DatepickerProps }        from './datepicker.interface.js'
 import { createAppearanceStyles } from './utils/index.js'
 import { createShapeStyles }      from './utils/index.js'
 import { registerLocales }        from './utils/index.js'
@@ -23,10 +25,10 @@ export const Datepicker: FC<DatepickerProps> = ({ withBaseStyle = true, ...props
       const shapeStyles = createShapeStyles(props)
       const appearanceStyles = createAppearanceStyles(props)
 
-      injectGlobal(shapeStyles, appearanceStyles)
+      injectGlobal(shapeStyles as never, appearanceStyles as never)
     }
   }, [withBaseStyle, props])
 
-  // @ts-ignore correct default import
+  // @ts-expect-error correct default import
   return <DatepickerComponent {...props} />
 }

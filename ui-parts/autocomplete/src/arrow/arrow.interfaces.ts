@@ -1,4 +1,4 @@
-import { SVGProps } from 'react'
+import type { SVGProps } from 'react'
 
 export interface ArrowProps extends SVGProps<SVGSVGElement> {
   isOpen?: boolean

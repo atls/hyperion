@@ -1,16 +1,18 @@
-import { FunctionComponent } from 'react'
-import { PropsWithChildren } from 'react'
-import { useState }          from 'react'
-import React                 from 'react'
+import type { PropsWithChildren } from 'react'
+import type { FC }                from 'react'
 
-import { vars }              from '@atls-ui-parts/theme'
+import type { CircleProps }       from './circle.interfaces.js'
 
-import { CircleProps }       from './circle.interfaces.js'
-import { getGradientId }     from './circle.utils.js'
-import { getPathStyles }     from './circle.utils.js'
-import { toArray }           from './circle.utils.js'
+import { useState }               from 'react'
+import React                      from 'react'
 
-const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
+import { vars }                   from '@atls-ui-parts/theme'
+
+import { getGradientId }          from './circle.utils.js'
+import { getPathStyles }          from './circle.utils.js'
+import { toArray }                from './circle.utils.js'
+
+const Circle: FC<PropsWithChildren<CircleProps>> = ({
   trailWidth,
   strokeWeight = 6,
   gapDegree,
@@ -25,7 +27,7 @@ const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
   ...props
 }) => {
   // @ts-expect-error index
-  const getThemeColor = (color: string) => (vars.colors && vars.colors[color]) || color
+  const getThemeColor = (color: string): any => vars?.colors[color] || color
   // @ts-expect-error types mismatch
   const gradientId = getGradientId(strokeColor)
   const trailThemeColor = getThemeColor(trailColor)
@@ -35,14 +37,15 @@ const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
   const { pathString, pathStyle } = getPathStyles(
     0,
     100,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     trailThemeColor,
     strokeWeight,
     gapDegree,
     gapPosition
   )
-  const [keysList, setKeysList] = useState<number[]>([])
+  const [keysList, setKeysList] = useState<Array<number>>([])
 
-  const getKey = (index: number) => {
+  const getKey = (index: number): number => {
     if (keysList[index]) {
       return keysList[index]
     }
@@ -53,12 +56,14 @@ const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
     return newKey
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   const gradients = toArray(strokeThemeColor).filter(
     (color) => Object.prototype.toString.call(color) === '[object Object]'
   )
 
-  const getStrokeList = () => {
+  const getStrokeList = (): Array<React.JSX.Element> => {
     const percentList = toArray(percent)
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     const strokeColorList = toArray(strokeThemeColor)
 
     let stackPtg = 0
@@ -83,13 +88,16 @@ const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
       // @ts-expect-error string and number
       stackPtg += ptg
 
+      const strokeWidth = ptg === 0 ? 0 : strokeWeight
+      const stroke = gradient ? `url(#${gradientId[gradientIndex]})` : undefined
+
       return (
         <path
           key={key}
           d={strokePathString}
-          stroke={gradient ? `url(#${gradientId[gradientIndex]})` : undefined}
+          stroke={stroke}
           strokeLinecap={strokeLinecap}
-          strokeWidth={ptg === 0 ? 0 : strokeWeight}
+          strokeWidth={strokeWidth}
           fillOpacity='0'
           style={strokePathStyle}
         />
@@ -99,13 +107,13 @@ const Circle: FunctionComponent<PropsWithChildren<CircleProps>> = ({
 
   return (
     <svg viewBox='0 0 100 100' width={width} height={height} {...props}>
-      {gradients.map((gradient, index) => (
+      {gradients.map((gradient: any, index: number) => (
         <defs key={gradientId[index]}>
           <linearGradient id={`${gradientId[index]}`} x1='100%' y1='0%' x2='0%' y2='0%'>
-            {Object.keys(gradient)
+            {Object.keys(gradient as never as Record<string, string>)
               .sort((a, b) => +a.replace('%', '') - +b.replace('%', ''))
               .map((key) => (
-                // @ts-expect-error index
+                // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
                 <stop key={key + gradient[key]} offset={key} stopColor={gradient[key]} />
               ))}
           </linearGradient>

@@ -1,10 +1,11 @@
-import { Preview }           from '@storybook/react'
-import { FC }                from 'react'
-import { PropsWithChildren } from 'react'
-import { useEffect }         from 'react'
-import React                 from 'react'
+import type { Preview }           from '@storybook/react'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { globalThemeId }     from '@atls-ui-parts/theme'
+import { useEffect }              from 'react'
+import React                      from 'react'
+
+import { globalThemeId }          from '@atls-ui-parts/theme'
 
 const ThemeContainer: FC<PropsWithChildren> = ({ children }) => {
   useEffect(() => {

@@ -1,14 +1,16 @@
-import { MotionValue }             from 'framer-motion'
-import { clsx }                    from 'clsx'
-import { motion }                  from 'framer-motion'
-import { forwardRef }              from 'react'
-import { useMemo }                 from 'react'
-import React                       from 'react'
+import type { MotionValue }             from 'framer-motion'
 
-import { ParallaxBoxElementProps } from './parallax-box.interfaces.js'
-import { useParallax }             from '../context/index.js'
-import { getTransform }            from './parallax-box.utils.js'
-import { getTransformDisplay }     from './parallax-box.utils.js'
+import type { ParallaxBoxElementProps } from './parallax-box.interfaces.js'
+
+import { clsx }                         from 'clsx'
+import { motion }                       from 'framer-motion'
+import { forwardRef }                   from 'react'
+import { useMemo }                      from 'react'
+import React                            from 'react'
+
+import { useParallax }                  from '../context/index.js'
+import { getTransform }                 from './parallax-box.utils.js'
+import { getTransformDisplay }          from './parallax-box.utils.js'
 
 export const ParallaxBoxElement = forwardRef<HTMLDivElement, ParallaxBoxElementProps>((
   {
@@ -35,13 +37,13 @@ export const ParallaxBoxElement = forwardRef<HTMLDivElement, ParallaxBoxElementP
     [windowHeight, inputRange, pageNumber, heightMultiplier]
   )
 
-  const animatedStyles = useMemo<Record<string, MotionValue<string | number>>>(() => {
-    const values: Record<string, MotionValue<string | number>> = {}
+  const animatedStyles = useMemo<Record<string, MotionValue<number>>>(() => {
+    const values: Record<string, MotionValue<number>> = {}
 
     if (!scrollY) return values
 
     Object.keys(animations).forEach((key: string) => {
-      values[key] = getTransform(scrollY, range, animations[key], ease)
+      values[key] = getTransform(scrollY, range, animations[key], ease) as MotionValue<number>
     })
 
     return values
@@ -59,7 +61,7 @@ export const ParallaxBoxElement = forwardRef<HTMLDivElement, ParallaxBoxElementP
     <motion.div
       ref={ref}
       {...otherProps}
-      className={clsx(className, otherProps?.className)}
+      className={clsx(className, String(otherProps?.className || ''))}
       style={{ ...style, ...otherProps?.style, ...animatedStyles, ...displayStyle }}
     >
       {children}

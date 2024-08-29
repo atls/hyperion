@@ -1,15 +1,16 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
-import { Meta }     from '@storybook/react'
-import { StoryObj } from '@storybook/react'
-import { useState } from 'react'
-import React        from 'react'
+import type { Meta }     from '@storybook/react'
+import type { StoryObj } from '@storybook/react'
 
-import { Column }   from '@atls-ui-parts/layout'
-import { Row }      from '@atls-ui-parts/layout'
-import { Layout }   from '@atls-ui-parts/layout'
+import { useState }      from 'react'
+import React             from 'react'
 
-import { Select }   from './select.component.js'
+import { Column }        from '@atls-ui-parts/layout'
+import { Row }           from '@atls-ui-parts/layout'
+import { Layout }        from '@atls-ui-parts/layout'
+
+import { Select }        from './select.component.js'
 
 const meta: Meta = {
   title: 'Components/Select',

@@ -1,4 +1,7 @@
-import { FC }                 from 'react'
+import type { FC }            from 'react'
+
+import type { ParallaxProps } from './parallax.interfaces.js'
+
 import { clsx }               from 'clsx'
 import { useScroll }          from 'framer-motion'
 import { useEffect }          from 'react'
@@ -10,7 +13,6 @@ import { useWindowSize }      from '@atls-ui-parts/dom'
 
 import { ParallaxStore }      from '../context/index.js'
 import { Provider }           from '../context/index.js'
-import { ParallaxProps }      from './parallax.interfaces.js'
 import { baseParallaxStyles } from './parallax.css.js'
 
 export const Parallax: FC<ParallaxProps> = ({ children, className, isIphone, ...props }) => {

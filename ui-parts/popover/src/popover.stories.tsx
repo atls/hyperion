@@ -1,19 +1,19 @@
-import { Meta }              from '@storybook/react'
-import { StoryObj }          from '@storybook/react'
-import { MouseEventHandler } from 'react'
-import { EventHandler }      from 'react'
-import { FC }                from 'react'
-import { HTMLAttributes }    from 'react'
-import { forwardRef }        from 'react'
-import React                 from 'react'
+import type { Meta }              from '@storybook/react'
+import type { StoryObj }          from '@storybook/react'
+import type { FC }                from 'react'
+import type { HTMLAttributes }    from 'react'
+import type { MouseEventHandler } from 'react'
 
-import { Column }            from '@atls-ui-parts/layout'
-import { Layout }            from '@atls-ui-parts/layout'
+import { forwardRef }             from 'react'
+import React                      from 'react'
 
-import { Popover }           from './popover.component.js'
-import { closeButtonStyles } from './popover.css.js'
-import { testButtonStyles }  from './popover.css.js'
-import { usePopover }        from './use-popover.hook.js'
+import { Column }                 from '@atls-ui-parts/layout'
+import { Layout }                 from '@atls-ui-parts/layout'
+
+import { Popover }                from './popover.component.js'
+import { closeButtonStyles }      from './popover.css.js'
+import { testButtonStyles }       from './popover.css.js'
+import { usePopover }             from './use-popover.hook.js'
 
 const meta: Meta = {
   title: 'Components/Popover',
@@ -50,7 +50,7 @@ export const Base: StoryObj = {
   ),
 }
 
-const TestContent = ({ onClick }: { onClick: MouseEventHandler<HTMLButtonElement> }) => (
+const TestContent: FC<{ onClick: MouseEventHandler<HTMLButtonElement> }> = ({ onClick }) => (
   <div>
     <div>Content</div>
     <button type='button' className={closeButtonStyles} onClick={onClick}>
@@ -65,6 +65,7 @@ const PopoverHook: FC = () => {
   return (
     <Column fill alignItems='center'>
       <Layout flexBasis='100px' />
+      {/* eslint-disable-next-line react/jsx-no-leaked-render */}
       {isOpen && render({ title: 'Title', content: <TestContent onClick={close} /> })}
       <TestButton {...triggerProps}>Hook</TestButton>
       <Layout flexBasis='100px' />

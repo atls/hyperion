@@ -1,9 +1,10 @@
-import { AnimatePresence } from 'framer-motion'
-import { FC }              from 'react'
-import { motion }          from 'framer-motion'
-import React               from 'react'
+import type { FC }             from 'react'
 
-import { ConditionProps }  from './condition.interface.js'
+import type { ConditionProps } from './condition.interface.js'
+
+import { AnimatePresence }     from 'framer-motion'
+import { motion }              from 'framer-motion'
+import React                   from 'react'
 
 export const Condition: FC<ConditionProps> = ({
   smooth = false,

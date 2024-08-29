@@ -1,12 +1,14 @@
-import { Meta }        from '@storybook/react'
-import { StoryObj }    from '@storybook/react'
-import React           from 'react'
+import type { Meta }        from '@storybook/react'
+import type { StoryObj }    from '@storybook/react'
 
-import { Column }      from '@atls-ui-parts/layout'
-import { Layout }      from '@atls-ui-parts/layout'
+import type { SwitchProps } from './switch.interfaces.js'
 
-import { Switch }      from './switch.component.js'
-import { SwitchProps } from './switch.interfaces.js'
+import React                from 'react'
+
+import { Column }           from '@atls-ui-parts/layout'
+import { Layout }           from '@atls-ui-parts/layout'
+
+import { Switch }           from './switch.component.js'
 
 const meta: Meta<SwitchProps> = {
   title: 'Components/Switch',

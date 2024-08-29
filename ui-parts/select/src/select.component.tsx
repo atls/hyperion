@@ -1,4 +1,7 @@
-import { FC }                from 'react'
+import type { FC }           from 'react'
+
+import type { SelectProps }  from './select.interfaces.js'
+
 import { clsx }              from 'clsx'
 import { motion }            from 'framer-motion'
 import React                 from 'react'
@@ -6,7 +9,6 @@ import React                 from 'react'
 import { useSelect }         from '@atls-utils/use-select'
 
 import { MenuItem }          from './item/index.js'
-import { SelectProps }       from './select.interfaces.js'
 import { baseButtonStyles }  from './button/index.js'
 import { baseMenuSprinkles } from './menu/index.js'
 import { baseMenuStyles }    from './menu/index.js'
@@ -41,11 +43,12 @@ export const Select: FC<SelectProps> = ({
       <button type='button' {...buttonProps} className={baseButtonStyles}>
         {value}
       </button>
+      {/* eslint-disable-next-line react/jsx-no-leaked-render */}
       {isOpen &&
         renderMenu(
           <motion.ul
             {...otherProps}
-            className={clsx(baseMenuStyles, otherProps?.className, className)}
+            className={clsx(baseMenuStyles, String(otherProps?.className || ''), className)}
             style={{ ...style, ...otherProps?.style }}
             {...menuProps}
           >

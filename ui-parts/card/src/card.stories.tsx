@@ -1,20 +1,21 @@
-import { Meta }              from '@storybook/react'
-import { StoryObj }          from '@storybook/react'
-import { FC }                from 'react'
-import { PropsWithChildren } from 'react'
-import { ReactNode }         from 'react'
-import React                 from 'react'
+import type { Meta }              from '@storybook/react'
+import type { StoryObj }          from '@storybook/react'
+import type { FC }                from 'react'
+import type { ReactNode }         from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { Button }            from '@atls-ui-parts/button'
-import { Condition }         from '@atls-ui-parts/condition'
-import { Column }            from '@atls-ui-parts/layout'
-import { Layout }            from '@atls-ui-parts/layout'
-import { Box }               from '@atls-ui-parts/layout'
+import React                      from 'react'
 
-import { Backdrop }          from './backdrop/index.js'
-import { Container }         from './container/index.js'
-import { Renderer }          from './renderer/index.js'
-import { useCardControls }   from './animation/index.js'
+import { Button }                 from '@atls-ui-parts/button'
+import { Condition }              from '@atls-ui-parts/condition'
+import { Column }                 from '@atls-ui-parts/layout'
+import { Layout }                 from '@atls-ui-parts/layout'
+import { Box }                    from '@atls-ui-parts/layout'
+
+import { Backdrop }               from './backdrop/index.js'
+import { Container }              from './container/index.js'
+import { Renderer }               from './renderer/index.js'
+import { useCardControls }        from './animation/index.js'
 
 const meta: Meta = {
   title: 'Components/Card',
@@ -71,6 +72,7 @@ const LargeContent: FC = () => (
   <Column width='100%'>
     {Array.from({ length: 9 }, (_, index) => (
       <Box
+        key={index}
         width='100%'
         height='100px'
         color='$white'

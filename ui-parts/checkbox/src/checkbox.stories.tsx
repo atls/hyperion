@@ -1,12 +1,14 @@
-import { Meta }          from '@storybook/react'
-import { StoryObj }      from '@storybook/react'
-import React             from 'react'
+import type { Meta }          from '@storybook/react'
+import type { StoryObj }      from '@storybook/react'
 
-import { Column }        from '@atls-ui-parts/layout'
-import { Layout }        from '@atls-ui-parts/layout'
+import type { CheckboxProps } from './checkbox.interfaces.js'
 
-import { Checkbox }      from './checkbox.component.js'
-import { CheckboxProps } from './checkbox.interfaces.js'
+import React                  from 'react'
+
+import { Column }             from '@atls-ui-parts/layout'
+import { Layout }             from '@atls-ui-parts/layout'
+
+import { Checkbox }           from './checkbox.component.js'
 
 const meta: Meta<CheckboxProps> = {
   title: 'Components/Checkbox',

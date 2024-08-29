@@ -1,12 +1,13 @@
 /* eslint-disable no-console */
 
-import { execSync }             from 'child_process'
-import { existsSync }           from 'fs'
-import { readdirSync }          from 'fs'
-import { join }                 from 'path'
+import type { ProcessDirectoryType } from './process-directory.interfaces.js'
 
-import { ProcessDirectoryType } from './process-directory.interfaces.js'
-import { removeEmptyLocale }    from '../remove-empty-locale/index.js'
+import { execSync }                  from 'child_process'
+import { existsSync }                from 'fs'
+import { readdirSync }               from 'fs'
+import { join }                      from 'path'
+
+import { removeEmptyLocale }         from '../remove-empty-locale/index.js'
 
 export const processDirectory: ProcessDirectoryType = (
   startPath,

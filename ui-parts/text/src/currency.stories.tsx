@@ -1,5 +1,6 @@
-import { Meta }                     from '@storybook/react'
-import { StoryObj }                 from '@storybook/react'
+import type { Meta }                from '@storybook/react'
+import type { StoryObj }            from '@storybook/react'
+
 import React                        from 'react'
 
 import { Column }                   from '@atls-ui-parts/layout'
@@ -13,7 +14,7 @@ interface CurrencyStoryProps {
   color: string
   amount: number
   currency: string
-  options: Omit<Intl.NumberFormatOptions, 'style' | 'currency'>
+  options: Omit<Intl.NumberFormatOptions, 'currency' | 'style'>
   locale?: string
   keepZeros?: boolean
   currencySignPlacement?: 'prefix' | 'suffix'

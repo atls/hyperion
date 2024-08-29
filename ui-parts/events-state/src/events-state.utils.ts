@@ -1,4 +1,4 @@
-import { EventsState } from './events-state.interfaces.js'
+import type { EventsState } from './events-state.interfaces.js'
 
 export const mergeState = (prev: EventsState, event: string): EventsState => {
   if (event === 'focus') {
@@ -23,8 +23,8 @@ export const mergeState = (prev: EventsState, event: string): EventsState => {
   }
 }
 
-export const fillOppositeEvents = (events: string[]): string[] => {
-  const oppositeEvents: string[] = []
+export const fillOppositeEvents = (events: Array<string>): Array<string> => {
+  const oppositeEvents: Array<string> = []
 
   if (events.includes('blur') && !events.includes('focus')) {
     oppositeEvents.push('focus')

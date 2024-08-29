@@ -1,10 +1,10 @@
+import type { UseScaleResult }  from './use-scale.interfaces.js'
+
 import { useEffect }            from 'react'
 import { useRef }               from 'react'
 import { useState }             from 'react'
 
 import { getContentDimensions } from '@atls-ui-parts/dom'
-
-import { UseScaleResult }       from './use-scale.interfaces.js'
 
 export const useScale = (): UseScaleResult => {
   const ref = useRef<HTMLDivElement>(null)

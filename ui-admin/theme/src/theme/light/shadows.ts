@@ -1,4 +1,4 @@
-import { ShadowsTokens } from '../index.js'
+import type { ShadowsTokens } from '../index.js'
 
 export const shadows: ShadowsTokens = {
   gunsmoke: '0px 0px 1px rgba(135, 135, 135, 0.10)',

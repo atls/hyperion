@@ -1,15 +1,16 @@
-import { EventEmitter } from 'events'
-import { MotionValue }  from 'framer-motion'
+import type { MotionValue } from 'framer-motion'
+
+import { EventEmitter }     from 'events'
 
 interface StoreState {
-  scrollY: null | MotionValue<number>
+  scrollY: MotionValue<number> | null
   windowHeight: number
 }
 
 export class ParallaxStore extends EventEmitter {
   private state: StoreState
 
-  constructor(scrollY: null | MotionValue<number>, windowHeight: number) {
+  constructor(scrollY: MotionValue<number> | null, windowHeight: number) {
     super()
 
     this.setMaxListeners(50)
@@ -20,11 +21,7 @@ export class ParallaxStore extends EventEmitter {
     }
   }
 
-  getState(): StoreState {
-    return this.state
-  }
-
-  get scrollY(): null | MotionValue<number> {
+  get scrollY(): MotionValue<number> | null {
     return this.state.scrollY
   }
 
@@ -32,7 +29,11 @@ export class ParallaxStore extends EventEmitter {
     return this.state.windowHeight
   }
 
-  select(state: StoreState) {
+  getState(): StoreState {
+    return this.state
+  }
+
+  select(state: StoreState): void {
     this.state = state
     this.emit('changed', state)
   }

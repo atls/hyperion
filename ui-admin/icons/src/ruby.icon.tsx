@@ -1,9 +1,10 @@
-import React         from 'react'
+import type { IconProps } from '@atls-ui-admin/icon'
 
-import { Icon }      from '@atls-ui-admin/icon'
-import { IconProps } from '@atls-ui-admin/icon'
+import React              from 'react'
 
-export const RubyIcon = (props: IconProps) => (
+import { Icon }           from '@atls-ui-admin/icon'
+
+export const RubyIcon: React.FC<IconProps> = (props) => (
   <Icon
     width='1em'
     height='1em'

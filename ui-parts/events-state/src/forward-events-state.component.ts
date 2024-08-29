@@ -1,10 +1,12 @@
-import { MutableRefObject }        from 'react'
-import { cloneElement }            from 'react'
-import { forwardRef }              from 'react'
-import { isValidElement }          from 'react'
+import type { MutableRefObject }        from 'react'
 
-import { ForwardEventsStateProps } from './events-state.interfaces.js'
-import { useEventsState }          from './use-events-state.hook.js'
+import type { ForwardEventsStateProps } from './events-state.interfaces.js'
+
+import { cloneElement }                 from 'react'
+import { forwardRef }                   from 'react'
+import { isValidElement }               from 'react'
+
+import { useEventsState }               from './use-events-state.hook.js'
 
 export const ForwardEventsState = forwardRef<HTMLElement, ForwardEventsStateProps>((
   { events, children },

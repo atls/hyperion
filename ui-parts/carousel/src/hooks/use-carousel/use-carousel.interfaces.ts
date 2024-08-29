@@ -1,7 +1,7 @@
-import { MotionProps }  from 'framer-motion'
-import { ReactElement } from 'react'
-import { ReactNode }    from 'react'
-import { RefObject }    from 'react'
+import type { MotionProps }  from 'framer-motion'
+import type { ReactElement } from 'react'
+import type { ReactNode }    from 'react'
+import type { RefObject }    from 'react'
 
 export type CarouselDirection = 'horizontal' | 'vertical'
 
@@ -12,7 +12,7 @@ export interface SlideToTwoIndexesArray {
 
 export type CarouselSlideToIndex = (index: number, duration?: number) => void
 
-export type CarouselSlideToTwoIndexes = (indexes: SlideToTwoIndexesArray[]) => Promise<void>
+export type CarouselSlideToTwoIndexes = (indexes: Array<SlideToTwoIndexesArray>) => Promise<void>
 
 export interface AddonInputOptions {
   slidesLength: number
@@ -38,15 +38,21 @@ export interface UseCarouselOptions {
 
 export interface UseCarouselProps {
   ref: RefObject<HTMLDivElement>
-  items: ReactElement[]
+  items: Array<ReactElement>
   options: UseCarouselOptions
 }
 
 export interface UseCarouselResult {
-  slides: ReactNode[] | boolean
+  slides: Array<ReactNode> | boolean
   slideToIndex: CarouselSlideToIndex
   slideToTwoIndexes: CarouselSlideToTwoIndexes
   activeSlide: number
   slidesLength: number
   wrapperOptions: MotionProps
+}
+
+export interface GetSlideStylesReturn {
+  width?: number
+  height?: number
+  margin: string
 }

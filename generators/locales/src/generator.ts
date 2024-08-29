@@ -16,6 +16,8 @@ process.argv.slice(2).forEach((arg) => {
 })
 const paths = argPaths.length ? argPaths : defaultPaths
 
-paths.forEach((path) => processDirectory(path, 'locales', allLocales, outputFile))
+paths.forEach((path): void => {
+  processDirectory(path, 'locales', allLocales, outputFile)
+})
 
 mergeLocales(allLocales, `./locales/${outputFile}.json`)

@@ -1,7 +1,7 @@
-import { AvatarFallbackProps }  from '@radix-ui/react-avatar'
-import { RecipeVariants }       from '@vanilla-extract/recipes'
+import type { AvatarFallbackProps }  from '@radix-ui/react-avatar'
+import type { RecipeVariants }       from '@vanilla-extract/recipes'
 
-import { avatarFallbackStyles } from './avatar-fallback.css.js'
+import type { avatarFallbackStyles } from './avatar-fallback.css.js'
 
 export type AvatarFallbackVariants = NonNullable<RecipeVariants<typeof avatarFallbackStyles>>
 

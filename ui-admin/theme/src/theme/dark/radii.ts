@@ -1,4 +1,4 @@
-import { RadiiTokens } from '../index.js'
+import type { RadiiTokens } from '../index.js'
 
 export const radii: RadiiTokens = {
   none: 'none',

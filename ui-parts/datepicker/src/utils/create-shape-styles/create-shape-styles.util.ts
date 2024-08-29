@@ -1,6 +1,6 @@
-import { CSSProperties } from 'react'
+import type { CSSProperties } from 'react'
 
-import { ShapeStyles }   from './create-shape-styles.interfaces.js'
+import type { ShapeStyles }   from './create-shape-styles.interfaces.js'
 
 export const createHeaderShapeStyles = (
   padding?: number | string,
@@ -8,7 +8,7 @@ export const createHeaderShapeStyles = (
   fontWeight?: CSSProperties['fontWeight'],
   fontStyle?: string,
   fontSize?: number | string
-) => ({
+): Record<string, CSSProperties> => ({
   '.react-datepicker__current-month': {
     paddingTop: padding,
     paddingBottom: padding,
@@ -32,7 +32,7 @@ export const createCellShapeStyles = (
   dayNameFontStyle?: string,
   dayNameFontWeight?: CSSProperties['fontWeight'],
   dayNameFontSize?: number | string
-) => ({
+): Record<string, CSSProperties> => ({
   '.react-datepicker__day-name': {
     margin,
     padding,
@@ -64,9 +64,9 @@ export const createCellShapeStyles = (
 })
 
 export const createDividerShapeStyles = (
-  position?: 'middle' | 'bottom' | 'none',
+  position?: 'bottom' | 'middle' | 'none',
   borderWidth?: number | string
-) => ({
+): Record<string, CSSProperties> => ({
   '.react-datepicker__header': {
     borderStyle: 'solid',
     borderWidth: 0,
@@ -87,7 +87,7 @@ export const createInputShapeStyles = (
   fontWeight?: CSSProperties['fontWeight'],
   fontFamily?: string,
   borderRadius?: number | string
-) => ({
+): Record<string, CSSProperties> => ({
   '.react-datepicker__input-container>input': {
     height: size,
     borderWidth,
@@ -123,7 +123,7 @@ export const createShapeStyles = ({
   currentMonthFontWeight,
   currentMonthFontSize,
   currentMonthPadding,
-}: ShapeStyles) => ({
+}: ShapeStyles): Record<string, CSSProperties> => ({
   ...createCellShapeStyles(
     cellMargin,
     cellPadding,

@@ -1,16 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
-import { useCallback }          from 'react'
-import { useEffect }            from 'react'
-import { useState }             from 'react'
+import type { OnChangeCallback }     from './hooks.interfaces.js'
+import type { UseSwitchStateResult } from './hooks.interfaces.js'
 
-import { OnChangeCallback }     from './hooks.interfaces.js'
-import { UseSwitchStateResult } from './hooks.interfaces.js'
+import { useCallback }               from 'react'
+import { useEffect }                 from 'react'
+import { useState }                  from 'react'
 
 export const useSwitchState = (
   defaultValue: boolean = false,
   disabled: boolean = false,
-  onChange: OnChangeCallback | undefined
+  onChange: OnChangeCallback | undefined = undefined
 ): UseSwitchStateResult => {
   const [checked, setChecked] = useState<boolean>(defaultValue)
 
@@ -21,9 +21,9 @@ export const useSwitchState = (
   }, [defaultValue])
 
   const change = useCallback(
-    (nextValue?: boolean | any): void => {
+    (nextValue?: any): void => {
       if (!disabled) {
-        const value = nextValue === true || nextValue === false ? nextValue : !checked
+        const value = typeof nextValue === 'boolean' ? nextValue : !checked
 
         setChecked(value)
 

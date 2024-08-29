@@ -1,6 +1,6 @@
-import { AnchorHTMLAttributes } from 'react'
+import type { AnchorHTMLAttributes } from 'react'
 
-import { LinkSprinkles }        from './link.css.js'
+import type { LinkSprinkles }        from './link.css.js'
 
 export interface LinkProps
   extends LinkSprinkles,

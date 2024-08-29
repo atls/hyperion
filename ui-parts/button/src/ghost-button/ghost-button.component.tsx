@@ -1,8 +1,9 @@
+import type { ButtonProps }  from '../button.interfaces.js'
+
 import { clsx }              from 'clsx'
 import { forwardRef }        from 'react'
 import React                 from 'react'
 
-import { ButtonProps }       from '../button.interfaces.js'
 import { baseStyles }        from '../styles/base.css.js'
 import { nulledGhostStyles } from './ghost-button.css.js'
 import { shapeGhostStyles }  from './ghost-button.css.js'

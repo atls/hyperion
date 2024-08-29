@@ -1,12 +1,14 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
-import { Meta }                from '@storybook/react'
-import { StoryObj }            from '@storybook/react'
-import { HTMLAttributes }      from 'react'
+import type { Meta }           from '@storybook/react'
+import type { StoryObj }       from '@storybook/react'
+import type { HTMLAttributes } from 'react'
+
 import { forwardRef }          from 'react'
 import { useState }            from 'react'
 import React                   from 'react'
 
+import { Condition }           from '@atls-ui-parts/condition'
 import { Column }              from '@atls-ui-parts/layout'
 import { Layout }              from '@atls-ui-parts/layout'
 import { Row }                 from '@atls-ui-parts/layout'
@@ -38,7 +40,7 @@ export const Base: StoryObj = {
   render: () => (
     <Column fill alignItems='center'>
       <Layout flexBasis='30px' />
-      <Tooltip text='test' trigger='click' animate>
+      <Tooltip animate text='test' trigger='click'>
         <TestButton>Base</TestButton>
       </Tooltip>
       <Layout flexBasis='30px' />
@@ -54,7 +56,7 @@ export const Hook: StoryObj = {
     return (
       <Column fill alignItems='center'>
         <Layout flexBasis='30px' />
-        {isOpen && render({ text: 'Hook' })}
+        <Condition match={isOpen}>{render({ text: 'Hook' })}</Condition>
         <TestButton {...triggerProps}>Hook</TestButton>
         <Layout flexBasis='30px' />
       </Column>
@@ -140,11 +142,11 @@ export const Arrow: StoryObj = {
     <Column justifyContent='center' alignItems='center'>
       <Layout flexBasis='50px' />
       <Row justifyContent='center' alignItems='center'>
-        <Tooltip text='test' showArrow>
+        <Tooltip showArrow text='test'>
           <TestButton>Arrow</TestButton>
         </Tooltip>
         <Layout flexBasis='24px' />
-        <Tooltip text='test' showArrow={false}>
+        <Tooltip showArrow={false} text='test'>
           <TestButton>Without arrow</TestButton>
         </Tooltip>
       </Row>
@@ -172,7 +174,7 @@ export const Animate: StoryObj = {
     <Column justifyContent='center' alignItems='center'>
       <Layout flexBasis='50px' />
       <Row justifyContent='center' alignItems='center'>
-        <Tooltip text='test' animate>
+        <Tooltip animate text='test'>
           <TestButton>With animate</TestButton>
         </Tooltip>
         <Layout flexBasis='24px' />
@@ -194,11 +196,17 @@ export const Controlled: StoryObj = {
       <Column justifyContent='center' alignItems='center'>
         <Layout flexBasis='50px' />
         <Row justifyContent='center' alignItems='center'>
-          <Tooltip text='test' trigger='hover' isOpen={open} closeOnOutsideClick={false} animate>
+          <Tooltip animate text='test' trigger='hover' isOpen={open} closeOnOutsideClick={false}>
             <TestButton>Controlled</TestButton>
           </Tooltip>
           <Layout flexBasis='24px' />
-          <TestButton onClick={() => setOpen(!open)}>Click</TestButton>
+          <TestButton
+            onClick={(): void => {
+              setOpen(!open)
+            }}
+          >
+            Click
+          </TestButton>
         </Row>
         <Layout flexBasis='50px' />
       </Column>

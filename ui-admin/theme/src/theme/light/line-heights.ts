@@ -1,4 +1,4 @@
-import { LineHeightsTokens } from '../index.js'
+import type { LineHeightsTokens } from '../index.js'
 
 export const lineHeights: LineHeightsTokens = {
   micro: '0.5',

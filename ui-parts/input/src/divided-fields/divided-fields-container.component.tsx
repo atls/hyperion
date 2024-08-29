@@ -1,8 +1,9 @@
+import type { DividedFieldsContainerProps } from './divided-fields-container.interfaces.js'
+
 import { clsx }                             from 'clsx'
 import { forwardRef }                       from 'react'
 import React                                from 'react'
 
-import { DividedFieldsContainerProps }      from './divided-fields-container.interfaces.js'
 import { dividedFieldsContainerSprinkles }  from './divided-fields-container.css.js'
 import { baseDividedFieldsContainerStyles } from './divided-fields-container.css.js'
 
@@ -25,8 +26,12 @@ export const DividedFieldsContainer = forwardRef<HTMLDivElement, DividedFieldsCo
     <div
       ref={ref}
       {...otherProps}
-      className={clsx(className, otherProps?.className, baseDividedFieldsContainerStyles)}
       style={{ ...style, ...otherProps?.style }}
+      className={clsx(
+        className,
+        String(otherProps?.className || ''),
+        baseDividedFieldsContainerStyles
+      )}
     >
       {children}
     </div>

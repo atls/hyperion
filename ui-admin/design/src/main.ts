@@ -1,5 +1,6 @@
-import { StorybookConfig }               from '@storybook/react-webpack5'
-import { CompatibleString }              from '@storybook/types'
+import type { StorybookConfig }          from '@storybook/react-webpack5'
+import type { CompatibleString }         from '@storybook/types'
+
 import { VanillaExtractPlugin }          from '@vanilla-extract/webpack-plugin'
 import { NormalModuleReplacementPlugin } from 'webpack'
 import { dirname }                       from 'path'

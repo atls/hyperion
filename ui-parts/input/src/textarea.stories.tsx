@@ -1,7 +1,10 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 
-import { Meta }                      from '@storybook/react'
-import { StoryObj }                  from '@storybook/react'
+import type { UploadResult }         from '@atls-ui-parts/upload'
+import type { Meta }                 from '@storybook/react'
+import type { StoryObj }             from '@storybook/react'
+
 import { clsx }                      from 'clsx'
 import { useRef }                    from 'react'
 import { useState }                  from 'react'
@@ -11,7 +14,6 @@ import { Condition }                 from '@atls-ui-parts/condition'
 import { ForwardEventsState }        from '@atls-ui-parts/events-state'
 import { Box }                       from '@atls-ui-parts/layout'
 import { SimpleUpload }              from '@atls-ui-parts/upload'
-import { UploadResult }              from '@atls-ui-parts/upload'
 import { vars }                      from '@atls-ui-parts/theme'
 
 import { Addon }                     from './addon/index.js'
@@ -21,8 +23,10 @@ import { addonsContainerBaseStyles } from './addon/index.js'
 import { baseInputStyles }           from './input/index.js'
 import { baseTextareaStyles }        from './textarea/index.js'
 
-// @ts-expect-error any
-const getAddonPosition = (addonBefore, addonAfter) => {
+const getAddonPosition = (
+  addonBefore: boolean,
+  addonAfter: boolean
+): 'both' | 'left' | 'right' | null => {
   if (addonBefore && addonAfter) {
     return 'both'
   }
@@ -66,7 +70,7 @@ const meta: Meta = {
     const [files, setFiles] = useState<Array<UploadResult>>([])
     const ref = useRef<HTMLTextAreaElement>(null)
 
-    const attach = getAddonPosition(addonBefore, addonAfter)
+    const attach = getAddonPosition(Boolean(addonBefore), Boolean(addonAfter))
 
     const addonProps = {
       fontColor: addonFontColor,
@@ -125,7 +129,9 @@ const meta: Meta = {
                   ref={ref}
                   className={clsx(baseInputStyles, baseTextareaStyles)}
                   value={value}
-                  onChange={(event) => setValue(event.target.value)}
+                  onChange={(event): void => {
+                    setValue(event.target.value)
+                  }}
                 />
                 <Condition match={Boolean(suffix)}>
                   <Attachment type='suffix' {...attachmentProps}>
@@ -142,7 +148,13 @@ const meta: Meta = {
           </div>
         </Box>
         <Box flexDirection='column' width={`${containerWidth}px`}>
-          <SimpleUpload bucket='bucket' multiple onFile={(file) => setFiles([...files, file])}>
+          <SimpleUpload
+            multiple
+            bucket='bucket'
+            onFile={(file): void => {
+              setFiles([...files, file])
+            }}
+          >
             <span>Upload file</span>
           </SimpleUpload>
         </Box>

@@ -1,17 +1,18 @@
-import { FunctionComponent } from 'react'
-import { useState }          from 'react'
-import React                 from 'react'
+import type { FC }               from 'react'
 
-import { vars }              from '@atls-ui-parts/theme'
+import type { ProgressGradient } from '../progress.interfaces.js'
+import type { LineProps }        from './line.interfaces.js'
 
-import { LineContainer }     from '../line-container/index.js'
-import { LinePercent }       from '../line-percent/index.js'
-import { ProgressGradient }  from '../progress.interfaces.js'
-import { LineProps }         from './line.interfaces.js'
+import { useState }              from 'react'
+import React                     from 'react'
 
-// @ts-expect-error any
-export const sortGradient = (gradients) => {
-  let tempArr: any[] = []
+import { vars }                  from '@atls-ui-parts/theme'
+
+import { LineContainer }         from '../line-container/index.js'
+import { LinePercent }           from '../line-percent/index.js'
+
+export const sortGradient = (gradients: Record<string, string>): string => {
+  let tempArr: Array<{ key: number; value: string }> = []
   Object.keys(gradients).forEach((key) => {
     const formattedKey = parseFloat(key.replace(/%/g, ''))
     if (!Number.isNaN(formattedKey)) {
@@ -25,8 +26,9 @@ export const sortGradient = (gradients) => {
   return tempArr.map(({ key, value }) => `${value} ${key}%`).join(', ')
 }
 
-export const handleGradient = (strokeColor: ProgressGradient) => {
-  // @ts-expect-error direction is missing
+export const handleGradient = (
+  strokeColor: ProgressGradient & { direction?: string }
+): Record<'backgroundImage', string> => {
   const { from = '#1890ff', to = '#1890ff', direction = 'to right', ...rest } = strokeColor
   if (Object.keys(rest).length !== 0) {
     const sortedGradients = sortGradient(rest)
@@ -35,7 +37,7 @@ export const handleGradient = (strokeColor: ProgressGradient) => {
   return { backgroundImage: `linear-gradient(${direction}, ${from}, ${to})` }
 }
 
-export const Line: FunctionComponent<LineProps> = ({
+export const Line: FC<LineProps> = ({
   percent,
   strokeColor = '$blueProtective',
   strokeLinecap,
@@ -43,18 +45,17 @@ export const Line: FunctionComponent<LineProps> = ({
   trailColor,
   strokeWeight = 8,
 }) => {
-  const getThemeColor = (color: Array<string | ProgressGradient> | string) =>
-    // @ts-expect-error any
-    (vars.colors && vars.colors[color]) || color
+  const getThemeColor = (color: Array<ProgressGradient | string> | string): any =>
+    vars?.colors[color as keyof typeof vars.colors] || color
 
   const percentList = Array.isArray(percent) ? percent : [percent]
   const strokeColorList = Array.isArray(strokeColor)
     ? getThemeColor(strokeColor)
     : // @ts-expect-error types mismatch
       [getThemeColor(strokeColor)]
-  const [keysList, setKeysList] = useState<number[]>([])
+  const [keysList, setKeysList] = useState<Array<number>>([])
 
-  const getKey = (index: number) => {
+  const getKey = (index: number): number => {
     if (keysList[index]) {
       return keysList[index]
     }
@@ -76,11 +77,13 @@ export const Line: FunctionComponent<LineProps> = ({
           let backgroundProps = {}
 
           if (strokeColorList[index] && typeof strokeColorList[index] !== 'string') {
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
             backgroundProps = handleGradient(strokeColorList[index])
           } else if (
             !strokeColorList[index] &&
             typeof strokeColorList[strokeColorList.length - 1] !== 'string'
           ) {
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
             backgroundProps = handleGradient(strokeColorList[strokeColorList.length - 1])
           } else {
             backgroundProps = {

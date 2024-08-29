@@ -1,13 +1,14 @@
-import { GraphQLClient }         from 'graphql-request'
-import { useMemo }               from 'react'
+import type { ConfirmMutationResult } from './use-upload.interfaces.js'
+import type { UploadMutationResult }  from './use-upload.interfaces.js'
+import type { UseUploadProps }        from './use-upload.interfaces.js'
 
-import { ConfirmMutationResult } from './use-upload.interfaces.js'
-import { UploadMutationResult }  from './use-upload.interfaces.js'
-import { UseUploadProps }        from './use-upload.interfaces.js'
-import { confirmMutation }       from './use-upload.mutations.js'
-import { uploadMutation }        from './use-upload.mutations.js'
+import { GraphQLClient }              from 'graphql-request'
+import { useMemo }                    from 'react'
 
-const upload = async (url: string, file: File) => {
+import { confirmMutation }            from './use-upload.mutations.js'
+import { uploadMutation }             from './use-upload.mutations.js'
+
+const upload = async (url: string, file: File): Promise<void> => {
   try {
     await fetch(url, {
       method: 'POST',
@@ -20,22 +21,25 @@ const upload = async (url: string, file: File) => {
   } catch {}
 }
 
-export const useUpload = ({ bucket, endpoint: defaultEndpoint }: UseUploadProps) => {
+export const useUpload = ({
+  bucket,
+  endpoint: defaultEndpoint,
+}: UseUploadProps): ((file: File) => Promise<ConfirmMutationResult['confirmUpload']>) => {
   const endpoint = defaultEndpoint ?? 'http://localhost:3000/api'
 
-  // eslint-disable-next-line consistent-return
-  // @ts-expect-error return consistent
-  const client = useMemo(() => {
+  const client = useMemo((): GraphQLClient | undefined => {
     if (endpoint)
       return new GraphQLClient(endpoint, {
         credentials: 'include',
       })
-  }, [endpoint]) as GraphQLClient
 
-  return async (file: File) => {
+    return undefined
+  }, [endpoint])
+
+  return async (file: File): Promise<ConfirmMutationResult['confirmUpload']> => {
     if (!bucket) return null
 
-    const data = await client.request<UploadMutationResult>(uploadMutation, {
+    const data = await client?.request<UploadMutationResult>(uploadMutation, {
       input: {
         bucket,
         name: file.name,
@@ -43,16 +47,16 @@ export const useUpload = ({ bucket, endpoint: defaultEndpoint }: UseUploadProps)
       },
     })
 
-    if (!data.createUpload) return null
+    if (!data?.createUpload) return null
 
     const { id, url } = data.createUpload
 
     await upload(url, file)
 
-    const confirmData = await client.request<ConfirmMutationResult>(confirmMutation, {
+    const confirmData = await client?.request<ConfirmMutationResult>(confirmMutation, {
       input: { id },
     })
 
-    return confirmData.confirmUpload
+    return confirmData?.confirmUpload
   }
 }

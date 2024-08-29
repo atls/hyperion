@@ -4,7 +4,7 @@ export interface ValueType {
 }
 
 export interface AutocompleteProps {
-  options: ValueType[]
+  options: Array<ValueType>
   value: ValueType | null
   getOptionLabel?: (option: ValueType | null) => string
   onChange?: (value: ValueType | null) => void

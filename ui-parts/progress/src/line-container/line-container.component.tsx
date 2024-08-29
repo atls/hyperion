@@ -1,8 +1,9 @@
+import type { LineContainerProps }   from './line-container.interfaces.js'
+
 import { clsx }                      from 'clsx'
 import { forwardRef }                from 'react'
 import React                         from 'react'
 
-import { LineContainerProps }        from './line-container.interfaces.js'
 import { baseLineContainerStyles }   from './line-container.css.js'
 import { lineContainerSprinkles }    from './line-container.css.js'
 import { roundLineContainerStyles }  from './line-container.css.js'
@@ -18,13 +19,13 @@ export const LineContainer = forwardRef<HTMLDivElement, LineContainerProps>((
     <div
       ref={ref}
       {...otherProps}
+      style={{ ...style, ...otherProps?.style }}
       className={clsx(
         className,
-        otherProps?.className,
+        String(otherProps?.className || ''),
         baseLineContainerStyles,
         trailLinecap === 'round' ? roundLineContainerStyles : squareLineContainerStyles
       )}
-      style={{ ...style, ...otherProps?.style }}
     >
       {children}
     </div>

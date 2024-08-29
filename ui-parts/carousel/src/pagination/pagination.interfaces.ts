@@ -1,6 +1,6 @@
-import { HTMLAttributes }      from 'react'
+import type { HTMLAttributes }      from 'react'
 
-import { PaginationSprinkles } from './pagination.css.js'
+import type { PaginationSprinkles } from './pagination.css.js'
 
 export interface ActiveStyles {
   color?: PaginationSprinkles['color']

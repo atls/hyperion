@@ -1,20 +1,23 @@
-export const toArray = (
-  symArray: Array<string | number> | string | number
-): Array<string | number> => (Array.isArray(symArray) ? symArray : [symArray])
+import type { GetPathStylesResult } from './circle.interfaces.js'
 
-export const getGradientId = (strokeColor: Array<string> | string) => {
-  const id: string[] = []
+export const toArray = (
+  symArray: Array<number | string> | number | string
+): Array<number | string> => (Array.isArray(symArray) ? symArray : [symArray])
+
+export const getGradientId = (strokeColor: Array<string> | string): Array<string> => {
+  const id: Array<string> = []
 
   toArray(strokeColor).forEach((color) => {
     if (Object.prototype.toString.call(color) === '[object Object]') {
+      const object: Record<string, string> = color as any
+
       id.push(
-        Object.keys(color).reduce((prev, current, index) => {
+        Object.keys(object).reduce((prev, current, index) => {
           if (index === 0) {
-            // @ts-expect-error index
-            return `${current}-${color[current]}`
+            return `${current}-${object[current]}`
           }
-          // @ts-expect-error index
-          return `${prev}-${current}-${color[current]}`
+
+          return `${prev}-${current}-${object[current]}`
         }, '')
       )
     }
@@ -29,8 +32,8 @@ export const getPathStyles = (
   strokeColor: string,
   strokeWidth: number,
   gapDegree = 0,
-  gapPosition: 'left' | 'right' | 'bottom' | 'top'
-) => {
+  gapPosition: 'bottom' | 'left' | 'right' | 'top' = 'top'
+): GetPathStylesResult => {
   const radius = 50 - strokeWidth / 2
   let beginPositionX = 0
   let beginPositionY = -radius
@@ -62,8 +65,7 @@ export const getPathStyles = (
 
   const pathStyle = {
     stroke: strokeColor,
-    // @ts-expect-error number and string
-    strokeDasharray: `${(percent / 100) * (len - gapDegree)}px ${len}px`,
+    strokeDasharray: `${(+percent / 100) * (len - gapDegree)}px ${len}px`,
     strokeDashoffset: `-${gapDegree / 2 + (offset / 100) * (len - gapDegree)}px`,
     transition:
       'stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s',

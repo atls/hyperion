@@ -1,11 +1,11 @@
-import { writeFileSync }     from 'fs'
+import type { InputColorSchemes } from '../input-generator.interfaces.js'
 
-import { pretty }            from '@atls-ui-generators/utils'
-import { getStylesName }     from '@atls-ui-generators/utils'
+import { writeFileSync }          from 'fs'
 
-import { InputColorSchemes } from '../input-generator.interfaces.js'
+import { pretty }                 from '@atls-ui-generators/utils'
+import { getStylesName }          from '@atls-ui-generators/utils'
 
-const getAppearanceStylesName = (variant: string, state: string) =>
+const getAppearanceStylesName = (variant: string, state: string): string =>
   getStylesName('appearance', variant, state)
 
 export class InputAppearanceStyleGenerator {
@@ -14,10 +14,10 @@ export class InputAppearanceStyleGenerator {
     { import: '{ createAppearanceStyles }', from: '@atls-ui-parts/input' },
   ]
 
-  #variants: string[] = []
+  #variants: Array<string> = []
 
   constructor(private readonly colorSchemes: InputColorSchemes) {
-    const allVariants = Object.keys(colorSchemes).reduce<string[]>(
+    const allVariants = Object.keys(colorSchemes).reduce<Array<string>>(
       (array, key) => (key.startsWith('input.') ? [...array, key.split('.')[1]] : array),
       []
     )
@@ -25,39 +25,7 @@ export class InputAppearanceStyleGenerator {
     this.#variants = [...new Set(allVariants)]
   }
 
-  private generateVariantStatefulStyles(variant: string) {
-    const lines: string[] = []
-
-    const allStates: string[] = Object.keys(this.colorSchemes).reduce<string[]>(
-      (array, key) => (key.startsWith(`input.${variant}`) ? [...array, key.split('.')[2]] : array),
-      []
-    )
-
-    const uniqueStates = [...new Set(allStates)]
-
-    for (const state of uniqueStates) {
-      lines.push(`const ${getAppearanceStylesName(variant, state)} = createAppearanceStyles({
-        fontColor: vars.colors['input.${variant}.${state}.font'],
-        backgroundColor: vars.colors['input.${variant}.${state}.background'],
-        borderColor: vars.colors['input.${variant}.${state}.border'],
-      })`)
-    }
-
-    return lines.join('\n\n')
-  }
-
-  private generateVariantAppearanceStyles(
-    variants: string[],
-    state: string,
-    addSuffix: boolean = true
-  ) {
-    const suffix = addSuffix ? state : ''
-    return variants
-      .map((variant) => `${variant}${suffix}: ${getAppearanceStylesName(variant, state)},`)
-      .join('\n')
-  }
-
-  generateAppearanceStyles() {
+  generateAppearanceStyles(): Record<'appearanceStyles' | 'imports' | 'statefulStyles', string> {
     const statefulStyles = pretty(
       this.#variants.map((variant) => this.generateVariantStatefulStyles(variant)).join('\n\n')
     )
@@ -92,7 +60,7 @@ export class InputAppearanceStyleGenerator {
     return { statefulStyles, appearanceStyles, imports }
   }
 
-  generateFile(path: string, filename = 'appearance.css.ts') {
+  generateFile(path: string, filename = 'appearance.css.ts'): void {
     const generated = this.generateAppearanceStyles()
 
     const code = pretty(`
@@ -106,5 +74,37 @@ export class InputAppearanceStyleGenerator {
     }
 
     writeFileSync(`${path}/${filename}`, code)
+  }
+
+  private generateVariantStatefulStyles(variant: string): string {
+    const lines: Array<string> = []
+
+    const allStates: Array<string> = Object.keys(this.colorSchemes).reduce<Array<string>>(
+      (array, key) => (key.startsWith(`input.${variant}`) ? [...array, key.split('.')[2]] : array),
+      []
+    )
+
+    const uniqueStates = [...new Set(allStates)]
+
+    for (const state of uniqueStates) {
+      lines.push(`const ${getAppearanceStylesName(variant, state)} = createAppearanceStyles({
+        fontColor: vars.colors['input.${variant}.${state}.font'],
+        backgroundColor: vars.colors['input.${variant}.${state}.background'],
+        borderColor: vars.colors['input.${variant}.${state}.border'],
+      })`)
+    }
+
+    return lines.join('\n\n')
+  }
+
+  private generateVariantAppearanceStyles(
+    variants: Array<string>,
+    state: string,
+    addSuffix: boolean = true
+  ): string {
+    const suffix = addSuffix ? state : ''
+    return variants
+      .map((variant) => `${variant}${suffix}: ${getAppearanceStylesName(variant, state)},`)
+      .join('\n')
   }
 }

@@ -1,5 +1,7 @@
-import { AppearanceStyles } from './create-appearance-styles.interfaces.js'
-import { CSSColor }         from './create-appearance-styles.interfaces.js'
+import type { CSSProperties }    from 'react'
+
+import type { AppearanceStyles } from './create-appearance-styles.interfaces.js'
+import type { CSSColor }         from './create-appearance-styles.interfaces.js'
 
 export const createCellColorStyles = (
   backgroundColor?: CSSColor,
@@ -13,7 +15,7 @@ export const createCellColorStyles = (
   inRangeHoverColor?: CSSColor,
   inRangeHoverFontColor?: CSSColor,
   dayNameFontColor?: CSSColor
-) => ({
+): Record<string, CSSProperties> => ({
   '.react-datepicker__day-name': {
     color: dayNameFontColor,
   },
@@ -44,7 +46,10 @@ export const createCellColorStyles = (
   },
 })
 
-export const createArrowColorStyles = (borderColor?: CSSColor, borderHoverColor?: CSSColor) => ({
+export const createArrowColorStyles = (
+  borderColor?: CSSColor,
+  borderHoverColor?: CSSColor
+): Record<string, CSSProperties> => ({
   '.react-datepicker__navigation-icon::before': {
     borderColor,
   },
@@ -57,7 +62,7 @@ export const createHeaderColorStyles = (
   backgroundColor?: CSSColor,
   borderColor?: CSSColor,
   fontColor?: CSSColor
-) => ({
+): Record<string, CSSProperties> => ({
   '.react-datepicker__header ': {
     backgroundColor,
     borderColor,
@@ -67,7 +72,9 @@ export const createHeaderColorStyles = (
   },
 })
 
-export const createDividerColorStyles = (borderColor?: CSSColor) => ({
+export const createDividerColorStyles = (
+  borderColor?: CSSColor
+): Record<string, CSSProperties> => ({
   '.react-datepicker__day-names': {
     borderTopColor: borderColor,
   },
@@ -77,7 +84,7 @@ export const createInputColorStyles = (
   backgroundColor?: CSSColor,
   borderColor?: CSSColor,
   activeBorderColor?: CSSColor
-) => ({
+): Record<string, CSSProperties> => ({
   '.react-datepicker__input-container>input': {
     backgroundColor,
     borderColor,
@@ -107,7 +114,7 @@ export const createAppearanceStyles = ({
   inputBackgroundColor,
   inputBorderColor,
   inputActiveBorderColor,
-}: AppearanceStyles) => ({
+}: AppearanceStyles): Record<string, CSSProperties> => ({
   ...createCellColorStyles(
     cellColor,
     cellFontColor,

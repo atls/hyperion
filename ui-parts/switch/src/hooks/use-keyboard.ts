@@ -1,11 +1,12 @@
-import { KeyboardEventHandler } from 'react'
-import { RefObject }            from 'react'
-import { useEffect }            from 'react'
+import type { RefObject }            from 'react'
+import type { KeyboardEventHandler } from 'react'
+
+import { useEffect }                 from 'react'
 
 export const useKeyboard = (
   node: RefObject<HTMLButtonElement>,
   setChecked: (value: boolean) => void
-) => {
+): null => {
   useEffect(() => {
     const onKeyDownHandler: KeyboardEventHandler = ({ key }) => {
       if (key === 'ArrowLeft') {
@@ -20,7 +21,7 @@ export const useKeyboard = (
     // @ts-expect-error overload
     current?.addEventListener('keydown', onKeyDownHandler)
 
-    return () => {
+    return (): void => {
       // @ts-expect-error overload
       current?.removeEventListener('keydown', onKeyDownHandler)
     }

@@ -1,11 +1,13 @@
-import { FC }                   from 'react'
-import React                    from 'react'
+import type { FC }                   from 'react'
 
-import { Layout }               from '@atls-ui-parts/layout'
-import { Text }                 from '@atls-ui-parts/text'
+import type { LogoPlaceholderProps } from './logo-placeholder.interfaces.js'
 
-import { ImagePlaceholder }     from '../image-placeholder/index.js'
-import { LogoPlaceholderProps } from './logo-placeholder.interfaces.js'
+import React                         from 'react'
+
+import { Layout }                    from '@atls-ui-parts/layout'
+import { Text }                      from '@atls-ui-parts/text'
+
+import { ImagePlaceholder }          from '../image-placeholder/index.js'
 
 export const LogoPlaceholder: FC<LogoPlaceholderProps> = ({
   type = 'horizontal',

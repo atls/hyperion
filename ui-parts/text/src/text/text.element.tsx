@@ -1,8 +1,8 @@
-import { clsx }             from 'clsx'
-import { forwardRef }       from 'react'
-import React                from 'react'
+import type { TextElementProps } from './text.interfaces.js'
 
-import { TextElementProps } from './text.interfaces.js'
+import { clsx }                  from 'clsx'
+import { forwardRef }            from 'react'
+import React                     from 'react'
 
 export const TextElement = forwardRef<HTMLSpanElement, TextElementProps>((
   { children, sprinkles, ...props },
@@ -14,7 +14,7 @@ export const TextElement = forwardRef<HTMLSpanElement, TextElementProps>((
     <span
       ref={ref}
       {...otherProps}
-      className={clsx(className, otherProps?.className)}
+      className={clsx(className, String(otherProps?.className || ''))}
       style={{ ...style, ...otherProps?.style }}
     >
       {children}

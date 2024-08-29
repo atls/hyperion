@@ -1,14 +1,20 @@
 import { useState } from 'react'
 
-export const useContextMenu = () => {
-  const [isOpened, setOpened] = useState(false)
+export const useContextMenu = (): [
+  boolean,
+  () => void,
+  { onContextMenu: (event: Event) => void },
+] => {
+  const [isOpened, setIsOpened] = useState<boolean>(false)
 
-  const close = () => setOpened(false)
+  const close = (): void => {
+    setIsOpened(false)
+  }
 
   const contextMenuProps = {
-    onContextMenu: (event: Event) => {
+    onContextMenu: (event: Event): void => {
       event.preventDefault()
-      setOpened(true)
+      setIsOpened(true)
     },
   }
 

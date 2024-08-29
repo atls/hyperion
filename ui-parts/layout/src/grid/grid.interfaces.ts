@@ -1,7 +1,7 @@
-import { SprinklesFn }    from 'rainbow-sprinkles/createRuntimeFn'
-import { HTMLAttributes } from 'react'
+import type { SprinklesFn }    from 'rainbow-sprinkles/createRuntimeFn'
+import type { HTMLAttributes } from 'react'
 
-import { GridSprinkles }  from './grid.css.js'
+import type { GridSprinkles }  from './grid.css.js'
 
 export interface BaseGridProps extends HTMLAttributes<HTMLDivElement> {
   fill?: boolean
