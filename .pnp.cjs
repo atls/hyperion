@@ -10468,7 +10468,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/react", "npm:18.2.48"],\
           ["@types/prop-types", "npm:15.7.12"],\
-          ["@types/scheduler", "npm:0.23.0"],\
+          ["@types/scheduler", "npm:0.16.8"],\
           ["csstype", "npm:3.1.3"],\
           ["scheduler", "npm:0.20.2"]\
         ],\
@@ -10485,6 +10485,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/react-onclickoutside", [\
+      ["npm:6.7.10", {\
+        "packageLocation": "../.yarn/berry/cache/@types-react-onclickoutside-npm-6.7.10-d3e260e83c-10.zip/node_modules/@types/react-onclickoutside/",\
+        "packageDependencies": [\
+          ["@types/react-onclickoutside", "npm:6.7.10"],\
+          ["@types/react", "npm:18.2.48"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/resolve", [\
       ["npm:1.20.6", {\
         "packageLocation": "../.yarn/berry/cache/@types-resolve-npm-1.20.6-6ab126a04b-10.zip/node_modules/@types/resolve/",\
@@ -10495,10 +10505,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/scheduler", [\
-      ["npm:0.23.0", {\
-        "packageLocation": "../.yarn/berry/cache/@types-scheduler-npm-0.23.0-a698c23f51-10.zip/node_modules/@types/scheduler/",\
+      ["npm:0.16.8", {\
+        "packageLocation": "../.yarn/berry/cache/@types-scheduler-npm-0.16.8-303819b439-10.zip/node_modules/@types/scheduler/",\
         "packageDependencies": [\
-          ["@types/scheduler", "npm:0.23.0"]\
+          ["@types/scheduler", "npm:0.16.8"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20194,6 +20204,7 @@ const RAW_RUNTIME_STATE =
           ["@floating-ui/react", "virtual:20891e7a52a70902fdf5b4daec2b7512e42dfab10cd3bc42e85495ad014a0e538390c41f417b05e57c60173326b0617da315f1d0295a59c8077aa570e85973b5#npm:0.26.22"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", null],\
+          ["@types/react-onclickoutside", "npm:6.7.10"],\
           ["clsx", "npm:2.1.1"],\
           ["date-fns", "npm:3.6.0"],\
           ["prop-types", "npm:15.8.1"],\
