@@ -226,7 +226,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-generators/button@workspace:generators/button"
   dependencies:
-    "@atls-ui-generators/utils": "npm:0.0.6"
+    "@atls-ui-generators/utils": "npm:0.0.7"
     "@atls/config-prettier": "npm:0.0.5"
     "@atls/prettier-plugin": "npm:0.0.7"
     "@babel/standalone": "npm:7.22.20"
@@ -245,7 +245,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-generators/icons@workspace:generators/icons"
   dependencies:
-    "@atls-ui-generators/utils": "npm:0.0.6"
+    "@atls-ui-generators/utils": "npm:0.0.7"
     "@atls/config-prettier": "npm:0.0.5"
     "@atls/prettier-plugin": "npm:0.0.7"
     "@babel/standalone": "npm:7.22.20"
@@ -268,7 +268,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-generators/input@workspace:generators/input"
   dependencies:
-    "@atls-ui-generators/utils": "npm:0.0.6"
+    "@atls-ui-generators/utils": "npm:0.0.7"
     "@atls/config-prettier": "npm:0.0.5"
     "@atls/prettier-plugin": "npm:0.0.7"
     "@babel/standalone": "npm:7.22.20"
@@ -300,7 +300,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-generators/utils@npm:0.0.6, @atls-ui-generators/utils@workspace:generators/utils":
+"@atls-ui-generators/utils@npm:0.0.7, @atls-ui-generators/utils@workspace:generators/utils":
   version: 0.0.0-use.local
   resolution: "@atls-ui-generators/utils@workspace:generators/utils"
   dependencies:

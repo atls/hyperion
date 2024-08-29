@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-generators/icons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "bin": {
@@ -15,7 +15,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-generators/utils": "0.0.6",
+    "@atls-ui-generators/utils": "0.0.7",
     "@atls/config-prettier": "0.0.5",
     "@atls/prettier-plugin": "0.0.7",
     "@babel/standalone": "7.22.20",
