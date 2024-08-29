@@ -1,4 +1,5 @@
 import { readFileSync }                  from 'fs'
+import { rmdirSync }                     from 'fs'
 import { mkdirSync }                     from 'fs'
 import { existsSync }                    from 'fs'
 
@@ -130,6 +131,10 @@ export const appearanceDisabled = {
   whiteDisabled: appearanceWhiteDisabledStyles,
 }
 `
+    afterAll(() => {
+      if (existsSync(`${__dirname}/generated`))
+        rmdirSync(`${__dirname}/generated`, { recursive: true })
+    })
 
     it('should generate code for appearance styles', () => {
       const generator = new InputAppearanceStyleGenerator(colors)
