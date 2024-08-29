@@ -4,8 +4,8 @@ import { format }          from 'prettier/standalone'
 import parserBabel         from 'prettier/parser-babel'
 import parserTypescript    from 'prettier/parser-typescript'
 
-const pretty = (string: string) =>
-  // @ts-ignore
+const pretty = (string: string): string =>
+  // @ts-expect-error
   format(string, {
     ...prettierConfig,
     parser: 'babel',

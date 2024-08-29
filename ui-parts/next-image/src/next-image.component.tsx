@@ -1,9 +1,10 @@
+import type { NextImageProps }    from './next-image.interfaces.js'
+
 import { clsx }                   from 'clsx'
 import { forwardRef }             from 'react'
 import Image                      from 'next/image.js'
 import React                      from 'react'
 
-import { NextImageProps }         from './next-image.interfaces.js'
 import { nextImageWrapperStyles } from './next-image.css.js'
 
 const BaseImage = Image.default

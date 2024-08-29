@@ -10,22 +10,27 @@ import { replacements } from './replacements.js'
 
 const TARGET_DIR = path.join(__dirname, 'src')
 
-const replaceElement = (code: string) => code.replace('<svg', '<Icon').replace('</svg', '</Icon')
+const replaceElement = (code: string): string =>
+  code.replace('<svg', '<Icon').replace('</svg', '</Icon')
 
 // @ts-expect-error types
-const svgrTemplate = ({ template }, opts, { componentName, jsx }) => {
+const svgrTemplate = ({ template }, opts, { componentName, jsx }): any => {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   const typeScriptTpl = template.smart({ plugins: ['typescript', 'prettier'] })
 
+  // eslint-disable-next-line
   return typeScriptTpl.ast`
 import React from 'react'
 
 import { Icon, IconProps } from '@atls-ui-admin/icon'
-export const ${componentName.name} = (props: IconProps) => ${jsx}
+export const ${componentName.name} : React.FC<IconProps> = (props) => ${jsx}
 ${componentName.name}.displayName = '${componentName.name}'
 `
 }
 
-const read = (files: Array<string>) =>
+const read = async (
+  files: Array<string>
+): Promise<Array<{ name: string; filename: string; source: string }>> =>
   Promise.all(
     files.map(async (iconPath) => ({
       name: `${camelcase(path.basename(iconPath, path.extname(iconPath)), {
@@ -36,11 +41,14 @@ const read = (files: Array<string>) =>
     }))
   )
 
-const compile = (icons: Array<{ filename: string; name: string; source: string }>) =>
+const compile = async (
+  icons: Array<{ filename: string; name: string; source: string }>
+): Promise<Array<{ filename: string; name: string; code: any }>> =>
   Promise.all(
     icons.map(async (icon) => ({
       filename: icon.filename,
       name: icon.name,
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       code: await svgr(
         icon.source.replace(/mask0/g, icon.name),
         {
@@ -53,7 +61,7 @@ const compile = (icons: Array<{ filename: string; name: string; source: string }
     }))
   )
 
-const save = async (sources: Array<{ filename: string; code: string }>) =>
+const save = async (sources: Array<{ filename: string; code: string }>): Promise<Array<void>> =>
   Promise.all(
     sources.map((source) =>
       fs.writeFileAsync(
@@ -74,13 +82,13 @@ const save = async (sources: Array<{ filename: string; code: string }>) =>
       ))
   )
 
-const createIndex = (sources: Array<{ filename: string }>) =>
+const createIndex = (sources: Array<{ filename: string }>): ReturnType<typeof fs.writeFileAsync> =>
   fs.writeFileAsync(
     path.join(TARGET_DIR, 'index.ts'),
     sources.map((source) => `export * from './${source.filename}'`).join('\n')
   )
 
-const build = async () => {
+const build = async (): Promise<void> => {
   const files = await glob('./icons/*.svg')
   const icons = await read(files)
 

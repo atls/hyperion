@@ -1,14 +1,15 @@
-import { Meta }      from '@storybook/react'
-import { StoryObj }  from '@storybook/react'
-import React         from 'react'
+import type { Meta }     from '@storybook/react'
+import type { StoryObj } from '@storybook/react'
 
-import { Column }    from '@atls-ui-parts/layout'
-import { Layout }    from '@atls-ui-parts/layout'
+import React             from 'react'
 
-import { Item }      from './item/index.js'
-import { ItemIcon }  from './item/index.js'
-import { ItemLabel } from './item/index.js'
-import { Sidebar }   from './sidebar.component.js'
+import { Column }        from '@atls-ui-parts/layout'
+import { Layout }        from '@atls-ui-parts/layout'
+
+import { Item }          from './item/index.js'
+import { ItemIcon }      from './item/index.js'
+import { ItemLabel }     from './item/index.js'
+import { Sidebar }       from './sidebar.component.js'
 
 const meta: Meta = {
   title: 'Components/Sidebar',

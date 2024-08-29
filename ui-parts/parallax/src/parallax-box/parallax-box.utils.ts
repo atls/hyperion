@@ -1,9 +1,10 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
-import { MotionValue }      from 'framer-motion'
-import { useTransform }     from 'framer-motion'
+import type { MotionValue }      from 'framer-motion'
 
-import { ParallaxEaseType } from './parallax-box.interfaces.js'
+import type { ParallaxEaseType } from './parallax-box.interfaces.js'
+
+import { useTransform }          from 'framer-motion'
 
 export const easingFunctions = {
   easeInOut: (x: number): number => -(Math.cos(Math.PI * x) - 1) / 2,
@@ -12,10 +13,11 @@ export const easingFunctions = {
 
 export const getTransform = (
   scrollY: MotionValue<number>,
-  range: number[],
+  range: Array<number>,
   outputRange: Array<number | string>,
   ease: ParallaxEaseType
-) => useTransform(scrollY, range, outputRange, { ease: easingFunctions[ease] })
+): MotionValue<number | string> =>
+  useTransform(scrollY, range, outputRange, { ease: easingFunctions[ease] })
 
-export const getTransformDisplay = (display: MotionValue) =>
+export const getTransformDisplay = (display: MotionValue<number>): MotionValue<'flex' | 'none'> =>
   useTransform(display, (value: number) => (value > 0 ? 'flex' : 'none'))

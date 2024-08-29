@@ -1,19 +1,21 @@
-import { DraggableProps }            from 'framer-motion'
-import { PanInfo }                   from 'framer-motion'
-import { Children }                  from 'react'
-import { useAnimation }              from 'framer-motion'
-import { cloneElement }              from 'react'
-import { useState }                  from 'react'
-import { useEffect }                 from 'react'
-import { useCallback }               from 'react'
+import type { DraggableProps }            from 'framer-motion'
+import type { PanInfo }                   from 'framer-motion'
 
-import { getContentDimensions }      from '@atls-ui-parts/dom'
-import { useWindowSize }             from '@atls-ui-parts/dom'
+import type { UseCarouselProps }          from './use-carousel.interfaces.js'
+import type { UseCarouselResult }         from './use-carousel.interfaces.js'
+import type { GetSlideStylesReturn }      from './use-carousel.interfaces.js'
+import type { CarouselSlideToIndex }      from './use-carousel.interfaces.js'
+import type { CarouselSlideToTwoIndexes } from './use-carousel.interfaces.js'
 
-import { UseCarouselProps }          from './use-carousel.interfaces.js'
-import { UseCarouselResult }         from './use-carousel.interfaces.js'
-import { CarouselSlideToIndex }      from './use-carousel.interfaces.js'
-import { CarouselSlideToTwoIndexes } from './use-carousel.interfaces.js'
+import { Children }                       from 'react'
+import { useAnimation }                   from 'framer-motion'
+import { cloneElement }                   from 'react'
+import { useState }                       from 'react'
+import { useEffect }                      from 'react'
+import { useCallback }                    from 'react'
+
+import { getContentDimensions }           from '@atls-ui-parts/dom'
+import { useWindowSize }                  from '@atls-ui-parts/dom'
 
 const swipePower = (offset: number, velocity: number): number => Math.abs(offset) * velocity
 
@@ -102,20 +104,21 @@ export const useCarousel = ({
   }, [wrapperSize, slideSize, slidesLength])
 
   const getSlides = useCallback(() => {
-    const getSlideStyles = (num: number, length: number) => {
+    const getSlideStyles = (num: number, length: number): GetSlideStylesReturn => {
       if (direction === 'horizontal') {
         return {
           width: slideSize,
-          margin: num !== length - 1 ? `0 ${spaceBetween}px 0 0` : 0,
+          margin: num !== length - 1 ? `0 ${spaceBetween}px 0 0` : '0',
         }
       }
       return {
         height: slideSize,
-        margin: num !== length - 1 ? `0 0 ${spaceBetween}px 0` : 0,
+        margin: num !== length - 1 ? `0 0 ${spaceBetween}px 0` : '0',
       }
     }
 
     return Children.map(items, (item, num) =>
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       cloneElement(item, {
         // eslint-disable-next-line
         key: num,
@@ -135,7 +138,7 @@ export const useCarousel = ({
       newItems.unshift(items[items.length - 1 - i])
     }
 
-    const getSlideStyles = () => {
+    const getSlideStyles = (): GetSlideStylesReturn => {
       if (direction === 'horizontal') {
         return {
           width: slideSize,
@@ -149,6 +152,7 @@ export const useCarousel = ({
     }
 
     return Children.map(newItems, (item, num) =>
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       cloneElement(item, {
         // eslint-disable-next-line
         key: num - 1,

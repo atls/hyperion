@@ -1,4 +1,4 @@
-import { HTMLMotionProps } from 'framer-motion'
+import type { HTMLMotionProps } from 'framer-motion'
 
 export interface ExpanderProps extends HTMLMotionProps<'div'> {
   opened?: boolean

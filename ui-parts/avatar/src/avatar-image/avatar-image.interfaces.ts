@@ -1,3 +1,3 @@
-import { AvatarImageProps } from '@radix-ui/react-avatar'
+import type { AvatarImageProps } from '@radix-ui/react-avatar'
 
-export interface ImageProps extends AvatarImageProps {}
+export type ImageProps = AvatarImageProps

@@ -1,3 +1,3 @@
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
-export type UseAddonPaginationResult = (dot: any) => ReactNode[] | null
+export type UseAddonPaginationResult = (dot: any) => Array<ReactNode> | null

@@ -1048,6 +1048,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/react-webpack5", "virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#npm:8.1.11"],\
           ["@storybook/test", "npm:8.1.11"],\
           ["@storybook/types", "npm:8.1.11"],\
+          ["@types/express", "npm:4.17.21"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", "npm:18.2.18"],\
           ["@vanilla-extract/css", "npm:1.15.3"],\

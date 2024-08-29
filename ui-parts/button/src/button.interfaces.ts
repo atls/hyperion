@@ -1,7 +1,7 @@
-import { RecipeVariants }       from '@vanilla-extract/recipes'
-import { ButtonHTMLAttributes } from 'react'
+import type { RecipeVariants }       from '@vanilla-extract/recipes'
+import type { ButtonHTMLAttributes } from 'react'
 
-import { buttonStyles }         from './styles/index.js'
+import type { buttonStyles }         from './styles/index.js'
 
 export type ButtonVariants = Pick<
   NonNullable<RecipeVariants<typeof buttonStyles>>,

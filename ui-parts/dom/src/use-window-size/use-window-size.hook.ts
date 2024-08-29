@@ -1,9 +1,10 @@
-import { useEffect }         from 'react'
-import { useState }          from 'react'
-import { useCallback }       from 'react'
+import type { WindowDimensions } from './use-window-size.interfaces.js'
 
-import { WindowDimensions }  from './use-window-size.interfaces.js'
-import { defaultWindowSize } from './use-window-size.constants.js'
+import { useEffect }             from 'react'
+import { useState }              from 'react'
+import { useCallback }           from 'react'
+
+import { defaultWindowSize }     from './use-window-size.constants.js'
 
 export function useWindowSize(): WindowDimensions {
   const [windowSize, setWindowSize] = useState<WindowDimensions>(defaultWindowSize)
@@ -27,7 +28,9 @@ export function useWindowSize(): WindowDimensions {
 
   useEffect(() => {
     window.addEventListener('resize', fetchWindowDimensionsAndSave)
-    return () => window.removeEventListener('resize', fetchWindowDimensionsAndSave)
+    return (): void => {
+      window.removeEventListener('resize', fetchWindowDimensionsAndSave)
+    }
   }, [fetchWindowDimensionsAndSave])
 
   return windowSize

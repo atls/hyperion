@@ -1,6 +1,6 @@
-import { style }            from '@vanilla-extract/css'
+import type { InputShapeStyles } from './create-shape-styles.interfaces.js'
 
-import { InputShapeStyles } from './create-shape-styles.interfaces.js'
+import { style }                 from '@vanilla-extract/css'
 
 export const createShapeStyles = ({
   size,
@@ -12,7 +12,7 @@ export const createShapeStyles = ({
   paddingRight,
   paddingRatio = 0.5,
   rounding = 0,
-}: InputShapeStyles) =>
+}: InputShapeStyles): string =>
   style({
     height: size,
     borderWidth,

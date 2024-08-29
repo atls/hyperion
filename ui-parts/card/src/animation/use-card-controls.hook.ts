@@ -1,57 +1,65 @@
-import { useEffect }            from 'react'
-import { useState }             from 'react'
-import { useRef }               from 'react'
+import type { UseCardControlsProps } from './use-card-controls.interfaces.js'
 
-import { getContentDimensions } from '@atls-ui-parts/dom'
+import { useEffect }                 from 'react'
+import { useState }                  from 'react'
+import { useRef }                    from 'react'
 
-import { UseCardControlsProps } from './use-card-controls.interfaces.js'
+import { getContentDimensions }      from '@atls-ui-parts/dom'
 
-const doNothing = () => {
+const doNothing = (): void => {
   // do nothing
 }
 
+// eslint-disable-next-line
 export const useCardControls = ({
   topOffset = 0,
   duration = 0.5,
   isOpen = false,
   scrollThreshold = false,
-  onClose = () => {
+  onClose = (): void => {
     // do nothing
   },
 }: UseCardControlsProps) => {
   const [windowHeight, setWindowHeight] = useState<number>(0)
   const [cardHeight, setCardHeight] = useState<number>(0)
   const [opened, setOpened] = useState<boolean>(isOpen)
-  const cardNode = useRef(null)
+  const cardNode = useRef<HTMLDivElement>(null)
 
   const isScrolled = useRef<boolean>(false)
 
-  const show = () => setOpened(true)
-  const hide = () => {
+  const show = (): void => {
+    setOpened(true)
+  }
+  const hide = (): void => {
     isScrolled.current = false
     setOpened(false)
     onClose()
   }
-  const toggle = () => (opened ? hide() : show())
+  const toggle = (): void => {
+    if (opened) hide()
+    else show()
+  }
 
   const slideInPosition =
     windowHeight - cardHeight >= topOffset ? windowHeight - cardHeight : topOffset
 
-  const updateWindowHeight = () => {
+  const updateWindowHeight = (): void => {
     setWindowHeight(window.innerHeight)
   }
 
-  const onScrollToThreshold = () => {
-    const scrollPosition = (cardNode.current as any).getBoundingClientRect().y
+  const onScrollToThreshold = (): void => {
+    if (cardNode.current) {
+      const scrollPosition = cardNode.current.getBoundingClientRect().y
 
-    isScrolled.current = true
+      isScrolled.current = true
 
-    if (scrollPosition >= slideInPosition) {
-      hide()
+      if (scrollPosition >= slideInPosition) {
+        hide()
+      }
     }
   }
 
-  const onCloseBeforeScroll = ({ deltaY }: { deltaY: number }) => {
+  const onCloseBeforeScroll = ({ deltaY }: { deltaY: number }): void => {
     if (!isScrolled && deltaY < 0) {
       hide()
     }
@@ -62,7 +70,9 @@ export const useCardControls = ({
 
     document.addEventListener('resize', updateWindowHeight)
 
-    return () => document.removeEventListener('resize', updateWindowHeight)
+    return (): void => {
+      document.removeEventListener('resize', updateWindowHeight)
+    }
   }, [])
 
   useEffect(() => {

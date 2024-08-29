@@ -1,10 +1,12 @@
-import { FC }                  from 'react'
+import type { FC }             from 'react'
+
+import type { ThumbProps }     from './thumb.interfaces.js'
+
 import { clsx }                from 'clsx'
 import { motion }              from 'framer-motion'
 import { useMemo }             from 'react'
 import React                   from 'react'
 
-import { ThumbProps }          from './thumb.interfaces.js'
 import { baseThumbStyles }     from './thumb.css.js'
 import { disabledThumbStyles } from './thumb.css.js'
 import { thumbSprinkles }      from './thumb.css.js'
@@ -20,13 +22,13 @@ export const Thumb: FC<ThumbProps> = ({ checked, disabled, ...props }) => {
       initial={initial}
       animate={checked && !disabled ? 'checked' : 'visible'}
       {...otherProps}
+      style={{ ...style, ...otherProps?.style }}
       className={clsx(
         baseThumbStyles,
         disabled ? disabledThumbStyles : '',
-        otherProps?.className,
+        String(otherProps?.className || ''),
         className
       )}
-      style={{ ...style, ...otherProps?.style }}
     />
   )
 }

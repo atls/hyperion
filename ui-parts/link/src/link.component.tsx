@@ -1,11 +1,12 @@
 'use client'
 
+import type { LinkProps } from './link.interfaces.js'
+
 import { clsx }           from 'clsx'
 import { forwardRef }     from 'react'
 import NextLink           from 'next/link.js'
 import React              from 'react'
 
-import { LinkProps }      from './link.interfaces.js'
 import { baseLinkStyles } from './link.css.js'
 import { linkSprinkles }  from './link.css.js'
 
@@ -22,7 +23,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>((
       ref={ref}
       href={path}
       {...otherProps}
-      className={clsx(baseLinkStyles, otherProps?.className, className)}
+      className={clsx(baseLinkStyles, String(otherProps?.className || ''), className)}
       style={{ ...style, ...otherProps?.style }}
     >
       {children}

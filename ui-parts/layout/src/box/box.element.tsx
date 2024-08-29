@@ -1,8 +1,9 @@
+import type { BoxElementProps }     from './box.interfaces.js'
+
 import { clsx }                     from 'clsx'
 import { forwardRef }               from 'react'
 import React                        from 'react'
 
-import { BoxElementProps }          from './box.interfaces.js'
 import { fillStyles }               from '../styles/index.js'
 import { fullViewportHeightStyles } from '../styles/index.js'
 import { fullViewportWidthStyles }  from '../styles/index.js'
@@ -17,14 +18,14 @@ export const BoxElement = forwardRef<HTMLDivElement, BoxElementProps>((
     <div
       ref={ref}
       {...otherProps}
+      style={{ ...style, ...otherProps?.style }}
       className={clsx(
         className,
-        otherProps?.className,
+        String(otherProps?.className || ''),
         fill && fillStyles,
         fullViewportWidth && fullViewportWidthStyles,
         fullViewportHeight && fullViewportHeightStyles
       )}
-      style={{ ...style, ...otherProps?.style }}
     >
       {children}
     </div>

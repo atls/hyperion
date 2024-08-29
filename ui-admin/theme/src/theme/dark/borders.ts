@@ -1,4 +1,4 @@
-import { BordersTokens } from '../contract/index.js'
+import type { BordersTokens } from '../contract/index.js'
 
 export const borders: BordersTokens = {
   none: 'none',

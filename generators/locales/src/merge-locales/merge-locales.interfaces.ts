@@ -1,1 +1,1 @@
-export type MergeLocalesType = (files: string[], outputPath: string) => void
+export type MergeLocalesType = (files: Array<string>, outputPath: string) => void

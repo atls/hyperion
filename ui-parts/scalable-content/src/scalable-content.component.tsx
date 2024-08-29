@@ -1,10 +1,12 @@
-import { FC }                    from 'react'
-import { clsx }                  from 'clsx'
-import React                     from 'react'
+import type { FC }                   from 'react'
 
-import { ScalableContentProps }  from './scalable-content.interfaces.js'
-import { useScale }              from './hooks/index.js'
-import { scalableContentStyles } from './scalable-content.css.js'
+import type { ScalableContentProps } from './scalable-content.interfaces.js'
+
+import { clsx }                      from 'clsx'
+import React                         from 'react'
+
+import { useScale }                  from './hooks/index.js'
+import { scalableContentStyles }     from './scalable-content.css.js'
 
 export const ScalableContent: FC<ScalableContentProps> = ({ className, style, ...props }) => {
   const { ref, style: scaleStyle } = useScale()

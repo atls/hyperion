@@ -14,7 +14,7 @@ const command = new Command()
   .argument('path <string>', 'Path to save icons')
   .option('-i, --icons path <string>', 'Path to icons dir')
   .option('-r, --replacements path <string>', 'Path to replacements file')
-  .action(async (path, options) => {
+  .action(async (path: string, options: Record<string, string>) => {
     assert.ok(options.icons, 'Icons dir path is required')
 
     const iconsPath = join(process.cwd(), options.icons)
@@ -37,7 +37,7 @@ const command = new Command()
 
       if (!code) throw Error('Could not read the file')
 
-      // eslint-disable-next-line no-eval
+      // eslint-disable-next-line no-eval, security/detect-eval-with-expression
       replacements = eval(code)
     }
 

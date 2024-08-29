@@ -1,14 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+
+import type { FC }           from 'react'
+import type { ReactElement } from 'react'
+import type { Accept }       from 'react-dropzone'
 
 // @ts-expect-error no declaration files
-import { useUpload }    from '@atls/react-upload'
-import { ReactElement } from 'react'
-import { FC }           from 'react'
-import { Accept }       from 'react-dropzone'
-import { cloneElement } from 'react'
-import { useEffect }    from 'react'
-import { useDropzone }  from 'react-dropzone'
-import React            from 'react'
+import { useUpload }         from '@atls/react-upload'
+import { cloneElement }      from 'react'
+import { useEffect }         from 'react'
+import { useDropzone }       from 'react-dropzone'
+import React                 from 'react'
 
 export interface SimpleUploadProps {
   children: ReactElement<any, any>
@@ -52,8 +54,7 @@ export const SimpleUpload: FC<SimpleUploadProps> = ({
         })
       }
 
-      // @ts-expect-error any
-      upload(file).then((data) => {
+      upload(file).then((data: UploadResult) => {
         if (preview) {
           onFile({ ...data, preview })
         } else {

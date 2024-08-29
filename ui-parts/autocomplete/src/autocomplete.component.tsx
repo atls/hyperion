@@ -1,27 +1,29 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 
-import { AnimatePresence }   from 'framer-motion'
-import { FC }                from 'react'
-import { useCombobox }       from 'downshift'
-import { useEffect }         from 'react'
-import { useState }          from 'react'
-import { useLayer }          from 'react-laag'
-import React                 from 'react'
+import type { FC }                from 'react'
 
-import { Input }             from '@atls-ui-parts/input'
+import type { AutocompleteProps } from './autocomplete.interfaces.js'
+import type { ValueType }         from './autocomplete.interfaces.js'
 
-import { Arrow }             from './arrow/index.js'
-import { AutocompleteProps } from './autocomplete.interfaces.js'
-import { ValueType }         from './autocomplete.interfaces.js'
-import { Indicator }         from './indicator/index.js'
-import { Layer }             from './layer/index.js'
-import { MenuItem }          from './menu-item/index.js'
-import { Menu }              from './menu/index.js'
+import { AnimatePresence }        from 'framer-motion'
+import { useCombobox }            from 'downshift'
+import { useEffect }              from 'react'
+import { useState }               from 'react'
+import { useLayer }               from 'react-laag'
+import React                      from 'react'
+
+import { Input }                  from '@atls-ui-parts/input'
+
+import { Arrow }                  from './arrow/index.js'
+import { Indicator }              from './indicator/index.js'
+import { Layer }                  from './layer/index.js'
+import { MenuItem }               from './menu-item/index.js'
+import { Menu }                   from './menu/index.js'
 
 export const Autocomplete: FC<AutocompleteProps> = ({
   options = [],
   value,
-  getOptionLabel = (option: ValueType | null) => (option ? option.value : ''),
+  getOptionLabel = (option: ValueType | null): string => (option ? option.value : ''),
   onChange,
   onInputChange,
 }) => {
@@ -87,12 +89,13 @@ export const Autocomplete: FC<AutocompleteProps> = ({
       <Input
         size='normal'
         variant='blue'
-        onFocus={openMenu}
         suffix={suffix}
+        onFocus={openMenu}
         {...getInputProps(triggerProps)}
       />
       {renderLayer(
         <AnimatePresence>
+          {/* eslint-disable-next-line react/jsx-no-leaked-render */}
           {isOpen && (
             <Layer
               ref={layerProps.ref}
@@ -101,6 +104,8 @@ export const Autocomplete: FC<AutocompleteProps> = ({
               <Menu {...getMenuProps({ style: {} })}>
                 {items.map((item, index) => (
                   <MenuItem
+                    // eslint-disable-next-line react/no-array-index-key
+                    key={index}
                     {...getItemProps({ key: item.value, index, item })}
                     selected={selectedItem === item}
                     hover={highlightedIndex === index}

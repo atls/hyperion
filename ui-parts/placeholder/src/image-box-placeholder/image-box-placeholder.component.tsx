@@ -1,10 +1,12 @@
-import { FC }                       from 'react'
-import React                        from 'react'
+import type { FC }                       from 'react'
 
-import { Box }                      from '@atls-ui-parts/layout'
+import type { ImageBoxPlaceholderProps } from './image-box-placeholder.interfaces.js'
 
-import { ImagePlaceholder }         from '../image-placeholder/index.js'
-import { ImageBoxPlaceholderProps } from './image-box-placeholder.interfaces.js'
+import React                             from 'react'
+
+import { Box }                           from '@atls-ui-parts/layout'
+
+import { ImagePlaceholder }              from '../image-placeholder/index.js'
 
 export const ImageBoxPlaceholder: FC<ImageBoxPlaceholderProps> = ({
   size = 32,

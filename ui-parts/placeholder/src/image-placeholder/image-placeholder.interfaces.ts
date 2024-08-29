@@ -1,4 +1,4 @@
-import { SVGProps } from 'react'
+import type { SVGProps } from 'react'
 
 export interface ImagePlaceholderProps extends SVGProps<SVGSVGElement> {
   color?: string

@@ -1,8 +1,9 @@
+import type { IndicatorProps } from './indicator.interfaces.js'
+
 import { clsx }                from 'clsx'
 import { forwardRef }          from 'react'
 import React                   from 'react'
 
-import { IndicatorProps }      from './indicator.interfaces.js'
 import { baseIndicatorStyles } from './indicator.css.js'
 
 export const Indicator = forwardRef<HTMLButtonElement, IndicatorProps>((

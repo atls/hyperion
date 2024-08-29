@@ -1,7 +1,7 @@
-import { SprinklesFn }    from 'rainbow-sprinkles/createRuntimeFn'
-import { HTMLAttributes } from 'react'
+import type { SprinklesFn }    from 'rainbow-sprinkles/createRuntimeFn'
+import type { HTMLAttributes } from 'react'
 
-import { BoxSprinkles }   from './box.css.js'
+import type { BoxSprinkles }   from './box.css.js'
 
 export interface BaseBoxProps extends Omit<HTMLAttributes<HTMLDivElement>, 'color'> {
   fill?: boolean

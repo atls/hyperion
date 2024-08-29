@@ -1,7 +1,7 @@
-import { CSSProperties } from 'react'
+import type { CSSProperties } from 'react'
 
 export interface ShapeStyles {
-  dividerPosition?: 'middle' | 'bottom' | 'none'
+  dividerPosition?: 'bottom' | 'middle' | 'none'
   dividerWidth?: number | string
   cellMargin?: number | string
   cellPadding?: number | string

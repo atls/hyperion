@@ -1,6 +1,8 @@
-import { ReactElement }       from 'react'
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 
-import { TextTransformProps } from './text-transform.interfaces.js'
+import type { ReactElement }       from 'react'
+
+import type { TextTransformProps } from './text-transform.interfaces.js'
 
 export const TextTransform = ({
   children,
@@ -8,8 +10,7 @@ export const TextTransform = ({
 }: TextTransformProps): ReactElement<any, any> => {
   try {
     const transformed = Object.keys(props).reduce((result, key) => {
-      // @ts-expect-error index type
-      const args = props[key]
+      const args = props[key as keyof typeof props]
 
       switch (key) {
         case 'lowerCase':
@@ -21,10 +22,13 @@ export const TextTransform = ({
         case 'lastLetter':
           return result.slice(-1)
         case 'substr':
+          // @ts-expect-error
           return Array.isArray(args) ? result.slice(args[0], args[1]) : result.slice(args)
         case 'replace':
+          // @ts-expect-error
           return result.replace(args[0], args[1])
         case 'hideAfter':
+          // @ts-expect-error
           return `${result.slice(0, args)}...`
         default:
           return result
@@ -37,6 +41,7 @@ export const TextTransform = ({
       throw error
     }
 
-    return children as any
+    // @ts-expect-error
+    return children
   }
 }

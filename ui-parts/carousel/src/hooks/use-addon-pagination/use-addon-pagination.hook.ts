@@ -1,8 +1,10 @@
-import { createElement }            from 'react'
-import { useCallback }              from 'react'
+import type { DOMElement }               from 'react'
 
-import { AddonInputOptions }        from '../use-carousel/index.js'
-import { UseAddonPaginationResult } from './use-addon-pagination.interfaces.js'
+import type { AddonInputOptions }        from '../use-carousel/index.js'
+import type { UseAddonPaginationResult } from './use-addon-pagination.interfaces.js'
+
+import { createElement }                 from 'react'
+import { useCallback }                   from 'react'
 
 export const useAddonPagination = ({
   slidesLength,
@@ -18,9 +20,9 @@ export const useAddonPagination = ({
       if (centered && slidesLength <= 1) return null
       if (!centered && !loop && slidesLength < slidesPerView + 1) return null
 
-      const dots: any = []
+      const dots: Array<DOMElement<Record<string, any>, Element>> = []
 
-      const onClick = (index: number) => {
+      const onClick = (index: number): void => {
         if (loop) {
           slideTo(index + slidesPerView)
           return
@@ -34,7 +36,9 @@ export const useAddonPagination = ({
           createElement(Element, {
             key: i,
             active: i === activeSlide - Number(loop && slidesPerView),
-            onClick: () => onClick(i),
+            onClick: () => {
+              onClick(i)
+            },
             ...props,
           })
         )

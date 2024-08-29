@@ -1,3 +1,7 @@
+import type { FC }                 from 'react'
+import type { PropsWithChildren }  from 'react'
+import type { ReactNode }          from 'react'
+
 import React                       from 'react'
 
 import { UploadIcon }              from '@atls-ui-admin/icons'
@@ -7,7 +11,10 @@ import { PlaceholderIcon }         from './placeholder-icon/index.js'
 import { PlaceholderLink }         from './placeholder-link/index.js'
 import { dropzoneContainerStyles } from './container/container.css.js'
 
-export const DropzonePlaceholder = ({ accept, children }: any) => (
+export const DropzonePlaceholder: FC<PropsWithChildren<{ accept: ReactNode }>> = ({
+  accept,
+  children,
+}) => (
   <div className={dropzoneContainerStyles}>
     <PlaceholderIcon>
       <UploadIcon height={40} width={40} />

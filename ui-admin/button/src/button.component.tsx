@@ -1,11 +1,12 @@
-import { forwardRef }   from 'react'
-import { useState }     from 'react'
-import React            from 'react'
+import type { ButtonProps } from '@atls-ui-parts/button'
 
-import { ButtonProps }  from '@atls-ui-parts/button'
-import { useHover }     from '@atls-utils/use-hover'
+import { forwardRef }       from 'react'
+import { useState }         from 'react'
+import React                from 'react'
 
-import { buttonStyles } from './styles/index.js'
+import { useHover }         from '@atls-utils/use-hover'
+
+import { buttonStyles }     from './styles/index.js'
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>((
   { children, icon, iconPlacement, size = 'huge', variant = 'blue', disabled, ...props },
@@ -13,13 +14,18 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>((
 ) => {
   const [pressed, setPressed] = useState<boolean>(false)
   const [hover, hoverProps] = useHover()
-  const onMouseDown = () => setPressed(true)
-  const onMouseUp = () => setPressed(false)
+  const onMouseDown = (): void => {
+    setPressed(true)
+  }
+  const onMouseUp = (): void => {
+    setPressed(false)
+  }
 
   return (
     <button
       ref={ref}
       type='button'
+      disabled={disabled}
       className={buttonStyles({
         size,
         variant,
@@ -29,7 +35,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>((
       })}
       onMouseDown={onMouseDown}
       onMouseUp={onMouseUp}
-      disabled={disabled}
       {...hoverProps}
       {...props}
     >

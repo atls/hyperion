@@ -1,12 +1,13 @@
-import { Meta }              from '@storybook/react'
-import { StoryObj }          from '@storybook/react'
-import { PropsWithChildren } from 'react'
-import React                 from 'react'
+import type { Meta }              from '@storybook/react'
+import type { StoryObj }          from '@storybook/react'
+import type { PropsWithChildren } from 'react'
 
-import { Column }            from '@atls-ui-parts/layout'
-import { Layout }            from '@atls-ui-parts/layout'
+import React                      from 'react'
 
-import { Text as BaseText }  from './text/index.js'
+import { Column }                 from '@atls-ui-parts/layout'
+import { Layout }                 from '@atls-ui-parts/layout'
+
+import { Text as BaseText }       from './text/index.js'
 
 interface TextStoryProps extends PropsWithChildren {
   fontWeight: number

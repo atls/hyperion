@@ -1,13 +1,15 @@
-import { Meta }           from '@storybook/react'
-import { StoryObj }       from '@storybook/react'
-import React              from 'react'
+import type { Meta }           from '@storybook/react'
+import type { StoryObj }       from '@storybook/react'
 
-import { TextTransform }  from '@atls-ui-parts/text-transform'
+import type { AvatarVariants } from './avatar/index.js'
 
-import { AvatarFallback } from './avatar-fallback/index.js'
-import { AvatarImage }    from './avatar-image/index.js'
-import { Avatar }         from './avatar/index.js'
-import { AvatarVariants } from './avatar/index.js'
+import React                   from 'react'
+
+import { TextTransform }       from '@atls-ui-parts/text-transform'
+
+import { AvatarFallback }      from './avatar-fallback/index.js'
+import { AvatarImage }         from './avatar-image/index.js'
+import { Avatar }              from './avatar/index.js'
 
 interface AvatarProps extends AvatarVariants {
   image: string

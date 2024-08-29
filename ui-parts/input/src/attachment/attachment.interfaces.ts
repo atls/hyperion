@@ -1,6 +1,6 @@
-import { HTMLAttributes }      from 'react'
+import type { HTMLAttributes }      from 'react'
 
-import { AttachmentSprinkles } from './attachment.css.js'
+import type { AttachmentSprinkles } from './attachment.css.js'
 
 export interface AttachmentProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'color'>,

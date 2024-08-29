@@ -1,22 +1,23 @@
-import { ReactNode }         from 'react'
-import { FC }                from 'react'
-import { PropsWithChildren } from 'react'
-import { Children }          from 'react'
-import { cloneElement }      from 'react'
-import { useEffect }         from 'react'
-import { useDropzone }       from 'react-dropzone'
-import React                 from 'react'
+import type { FC }                from 'react'
+import type { ReactNode }         from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { Container }         from './container/index.js'
-import { Placeholder }       from './placeholder/index.js'
-import { useUpload }         from './use-upload/index.js'
+import { Children }               from 'react'
+import { cloneElement }           from 'react'
+import { useEffect }              from 'react'
+import { useDropzone }            from 'react-dropzone'
+import React                      from 'react'
+
+import { Container }              from './container/index.js'
+import { Placeholder }            from './placeholder/index.js'
+import { useUpload }              from './use-upload/index.js'
 
 interface UploadProps {
   accept?: Record<string, any>
   multiple?: boolean
   placeholder: ReactNode | string
-  onPreview?: any
-  onFile?: any
+  onPreview?: (data?: Record<string, string | null>) => void
+  onFile?: (data?: Record<string, string> | null) => void
 }
 
 export const Upload: FC<PropsWithChildren<UploadProps>> = ({
@@ -42,7 +43,7 @@ export const Upload: FC<PropsWithChildren<UploadProps>> = ({
         onPreview({ id: null, url: preview, preview })
       }
 
-      upload(file).then((data) => (preview ? onFile({ ...data, preview }) : onFile(data)))
+      upload(file).then((data) => (preview ? onFile?.({ ...data, preview }) : onFile?.(data)))
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [acceptedFiles.map((file) => file.name).join()])
@@ -53,12 +54,11 @@ export const Upload: FC<PropsWithChildren<UploadProps>> = ({
     // @ts-expect-error types
     children?.props && children.props.children ? children.props.children : null,
     placeholder ? <Placeholder key='placeholder'>{placeholder}</Placeholder> : null,
-    // @ts-ignore
     <input key='input' {...getInputProps()} />,
   ]
 
-  // eslint-disable-next-line no-underscore-dangle
   // @ts-expect-error types
+  // eslint-disable-next-line no-underscore-dangle
   if (child.type.__emotion_base) {
     return cloneElement(
       // @ts-expect-error types

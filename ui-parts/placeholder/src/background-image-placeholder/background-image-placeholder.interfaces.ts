@@ -1,3 +1,3 @@
-import { HTMLAttributes } from 'react'
+import type { HTMLAttributes } from 'react'
 
-export interface BackgroundImagePlaceholderProps extends HTMLAttributes<HTMLDivElement> {}
+export type BackgroundImagePlaceholderProps = HTMLAttributes<HTMLDivElement>

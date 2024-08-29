@@ -1,15 +1,17 @@
-import { MutableRefObject }   from 'react'
-import { useEffect }          from 'react'
-import { useState }           from 'react'
-import { useMemo }            from 'react'
+import type { MutableRefObject } from 'react'
 
-import { EventsState }        from './events-state.interfaces.js'
-import { fillOppositeEvents } from './events-state.utils.js'
-import { mergeState }         from './events-state.utils.js'
+import type { EventsState }      from './events-state.interfaces.js'
+
+import { useEffect }             from 'react'
+import { useState }              from 'react'
+import { useMemo }               from 'react'
+
+import { fillOppositeEvents }    from './events-state.utils.js'
+import { mergeState }            from './events-state.utils.js'
 
 export const useEventsState = (
   ref: MutableRefObject<HTMLElement>,
-  originalEvents: string[] = []
+  originalEvents: Array<string> = []
 ): EventsState => {
   const events = useMemo(() => fillOppositeEvents(originalEvents), [originalEvents])
 
@@ -25,17 +27,18 @@ export const useEventsState = (
   useEffect(() => {
     const node = ref?.current
 
-    const callbacks = events.reduce(
+    const callbacks = events.reduce<Record<string, () => void>>(
       (result, event) => ({
         ...result,
-        [event]: () => setState((prev) => mergeState(prev, event)),
+        [event]: (): void => {
+          setState((prev) => mergeState(prev, event))
+        },
       }),
       {}
     )
 
     if (node) {
       Object.keys(callbacks).forEach((event) => {
-        // @ts-expect-error any
         node.addEventListener(event, callbacks[event])
       })
     }
@@ -43,7 +46,6 @@ export const useEventsState = (
     return () => {
       if (node) {
         Object.keys(callbacks).forEach((event) => {
-          // @ts-expect-error any
           node.removeEventListener(event, callbacks[event])
         })
       }

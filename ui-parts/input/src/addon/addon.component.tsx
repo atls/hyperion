@@ -1,8 +1,9 @@
+import type { AddonProps }           from './addon.interfaces.js'
+
 import { clsx }                      from 'clsx'
 import { forwardRef }                from 'react'
 import React                         from 'react'
 
-import { AddonProps }                from './addon.interfaces.js'
 import { addonSprinkles }            from './addon.css.js'
 import { addonPositionAfterStyles }  from './addon.css.js'
 import { addonPositionBeforeStyles } from './addon.css.js'
@@ -41,13 +42,13 @@ export const Addon = forwardRef<HTMLDivElement, AddonProps>((
     <div
       ref={ref}
       {...otherProps}
+      style={{ ...style, ...otherProps?.style }}
       className={clsx(
         className,
-        otherProps?.className,
+        String(otherProps?.className || ''),
         baseAddonStyles,
         position === 'before' ? addonPositionBeforeStyles : addonPositionAfterStyles
       )}
-      style={{ ...style, ...otherProps?.style }}
     >
       {children}
     </div>

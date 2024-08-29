@@ -1,9 +1,10 @@
+import type { WrapperProps }       from './wrapper.interfaces.js'
+
 import { clsx }                    from 'clsx'
 import { motion }                  from 'framer-motion'
 import { forwardRef }              from 'react'
 import React                       from 'react'
 
-import { WrapperProps }            from './wrapper.interfaces.js'
 import { baseWrapperStyles }       from './wrapper.css.js'
 import { horizontalWrapperStyles } from './wrapper.css.js'
 import { verticalWrapperStyles }   from './wrapper.css.js'

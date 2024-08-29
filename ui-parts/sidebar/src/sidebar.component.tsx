@@ -1,16 +1,17 @@
-import { FC }                from 'react'
-import { PropsWithChildren } from 'react'
-import React                 from 'react'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { Switch }            from '@atls-ui-parts/switch'
-import { useHover }          from '@atls-utils/use-hover'
+import React                      from 'react'
 
-import { Container }         from './container/index.js'
-import { Expander }          from './expander/index.js'
-import { Items }             from './items/index.js'
-import { Pinner }            from './pinner/index.js'
-import { Wrapper }           from './wrapper/index.js'
-import { usePinnedState }    from './hooks/index.js'
+import { Switch }                 from '@atls-ui-parts/switch'
+import { useHover }               from '@atls-utils/use-hover'
+
+import { Container }              from './container/index.js'
+import { Expander }               from './expander/index.js'
+import { Items }                  from './items/index.js'
+import { Pinner }                 from './pinner/index.js'
+import { Wrapper }                from './wrapper/index.js'
+import { usePinnedState }         from './hooks/index.js'
 
 export const Sidebar: FC<PropsWithChildren> = ({ children }) => {
   const [hovered, hoverProps] = useHover()

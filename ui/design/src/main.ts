@@ -1,5 +1,6 @@
-import { StorybookConfig }               from '@storybook/react-webpack5'
-import { CompatibleString }              from '@storybook/types'
+import type { StorybookConfig }          from '@storybook/react-webpack5'
+import type { CompatibleString }         from '@storybook/types'
+
 import { VanillaExtractPlugin }          from '@vanilla-extract/webpack-plugin'
 import { NormalModuleReplacementPlugin } from 'webpack'
 import { dirname }                       from 'path'
@@ -65,11 +66,11 @@ const config: StorybookConfig = {
   refs: {
     parts: {
       title: 'Parts',
-      url: 'https://ui-parts.ui.atls.design',
+      url: 'http://localhost:3001/',
     },
     admin: {
       title: 'Admin',
-      url: 'https://ui-admin.ui.atls.design',
+      url: 'http://localhost:3002/',
     },
   },
   webpackFinal: async (webpackConfig) => {

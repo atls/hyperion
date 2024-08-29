@@ -1,9 +1,8 @@
-import { MotionStyle }        from 'framer-motion'
-import { ReactNode }          from 'react'
-import { LayerSide }          from 'react-laag'
-import { UseLayerArrowProps } from 'react-laag'
-
-import { ArrowOptions }       from '@atls-ui-parts/tooltip'
+import type { ArrowOptions }       from '@atls-ui-parts/tooltip'
+import type { MotionStyle }        from 'framer-motion'
+import type { ReactNode }          from 'react'
+import type { LayerSide }          from 'react-laag'
+import type { UseLayerArrowProps } from 'react-laag'
 
 export interface ContainerElementProps {
   animate?: boolean

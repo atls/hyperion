@@ -1,5 +1,6 @@
-import { HTMLAttributes }      from 'react'
-import { FC }                  from 'react'
+import type { HTMLAttributes } from 'react'
+import type { FC }             from 'react'
+
 import { clsx }                from 'clsx'
 import { useInView }           from 'react-intersection-observer'
 import React                   from 'react'

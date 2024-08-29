@@ -1,16 +1,14 @@
-import { HTMLMotionProps }   from 'framer-motion'
-import { SprinklesFn }       from 'rainbow-sprinkles/createRuntimeFn'
+import type { HTMLMotionProps }   from 'framer-motion'
+import type { SprinklesFn }       from 'rainbow-sprinkles/createRuntimeFn'
 
-import { ParallaxSprinkles } from './parallax-box.css.js'
+import type { ParallaxSprinkles } from './parallax-box.css.js'
 
-export type ParallaxEaseType = 'linear' | 'easeInOut'
+export type ParallaxEaseType = 'easeInOut' | 'linear'
 
-export type ParallaxAnimationsType = {
-  [key: string]: Array<number | string>
-}
+export type ParallaxAnimationsType = Record<string, Array<number | string>>
 
 export interface BaseParallaxBoxProps extends HTMLMotionProps<'div'> {
-  inputRange: number[]
+  inputRange: Array<number>
   animations?: ParallaxAnimationsType
   pageNumber?: number
   ease?: ParallaxEaseType

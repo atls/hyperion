@@ -498,6 +498,7 @@ __metadata:
     "@storybook/react-webpack5": "npm:8.1.11"
     "@storybook/test": "npm:8.1.11"
     "@storybook/types": "npm:8.1.11"
+    "@types/express": "npm:4.17.21"
     "@types/react": "npm:18.2.48"
     "@types/react-dom": "npm:18.2.18"
     "@vanilla-extract/css": "npm:1.15.3"

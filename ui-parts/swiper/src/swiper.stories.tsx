@@ -2,16 +2,17 @@
  * @docs https://swiperjs.com/
  */
 
-import { Meta }        from '@storybook/react'
-import { StoryObj }    from '@storybook/react'
-import { SwiperSlide } from 'swiper/react'
-import React           from 'react'
+import type { Meta }     from '@storybook/react'
+import type { StoryObj } from '@storybook/react'
 
-import { Box }         from '@atls-ui-parts/layout'
-import { Column }      from '@atls-ui-parts/layout'
-import { Layout }      from '@atls-ui-parts/layout'
+import { SwiperSlide }   from 'swiper/react'
+import React             from 'react'
 
-import { BaseSwiper }  from './swiper.component.js'
+import { Box }           from '@atls-ui-parts/layout'
+import { Column }        from '@atls-ui-parts/layout'
+import { Layout }        from '@atls-ui-parts/layout'
+
+import { BaseSwiper }    from './swiper.component.js'
 
 const meta: Meta = {
   title: 'Components/Swiper',
@@ -19,11 +20,11 @@ const meta: Meta = {
     <Column fill alignItems='center' justifyContent='center'>
       <Layout flexBasis='50px' />
       <BaseSwiper
+        loop
+        grabCursor
         slidesPerView={3}
         spaceBetween={60}
-        loop
         width={1920}
-        grabCursor
         touchEventsTarget='container'
       >
         {Array.from({ length: 7 }, (_, index) => (

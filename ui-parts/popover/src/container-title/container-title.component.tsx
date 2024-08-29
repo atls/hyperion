@@ -1,5 +1,6 @@
-import { FC }                   from 'react'
-import { HTMLAttributes }       from 'react'
+import type { FC }              from 'react'
+import type { HTMLAttributes }  from 'react'
+
 import React                    from 'react'
 
 import { containerTitleStyles } from './container-title.css.js'

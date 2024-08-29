@@ -1,7 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 
-import { Meta }                         from '@storybook/react'
-import { StoryObj }                     from '@storybook/react'
+import type { Meta }                    from '@storybook/react'
+import type { StoryObj }                from '@storybook/react'
+
 import { useRef }                       from 'react'
 import { useState }                     from 'react'
 import React                            from 'react'
@@ -69,7 +71,9 @@ const meta: Meta = {
                   className={baseDividedFieldsInputStyles}
                   value={hrs}
                   placeholder='0'
-                  onChange={(event) => setHrs(event.target.value)}
+                  onChange={(event): void => {
+                    setHrs(event.target.value)
+                  }}
                 />
                 <Condition match={Boolean(divider)}>
                   <Box {...dividedContainerProps}>{divider}</Box>
@@ -79,7 +83,9 @@ const meta: Meta = {
                   className={baseDividedFieldsInputStyles}
                   value={min}
                   placeholder='00'
-                  onChange={(event) => setMin(event.target.value)}
+                  onChange={(event): void => {
+                    setMin(event.target.value)
+                  }}
                 />
                 <Condition match={Boolean(divider)}>
                   <Box {...dividedContainerProps}>{divider}</Box>
@@ -89,7 +95,9 @@ const meta: Meta = {
                   className={baseDividedFieldsInputStyles}
                   value={sec}
                   placeholder='00'
-                  onChange={(event) => setSec(event.target.value)}
+                  onChange={(event): void => {
+                    setSec(event.target.value)
+                  }}
                 />
               </Box>
             </DividedFieldsContainer>

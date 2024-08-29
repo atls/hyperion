@@ -1,8 +1,10 @@
-import { FC }              from 'react'
+import type { FC }         from 'react'
+
+import type { ArrowProps } from './arrow.interfaces.js'
+
 import { clsx }            from 'clsx'
 import React               from 'react'
 
-import { ArrowProps }      from './arrow.interfaces.js'
 import { baseArrowStyles } from './arrow.css.js'
 import { openArrowStyles } from './arrow.css.js'
 

@@ -1,13 +1,16 @@
-import { ReactElement }      from 'react'
-import React                 from 'react'
+import type { UseTooltipOptions } from '@atls-ui-parts/tooltip'
+import type { ReactElement }      from 'react'
+import type { ReactPortal }       from 'react'
 
-import { UseTooltipOptions } from '@atls-ui-parts/tooltip'
-import { useTooltip }        from '@atls-ui-parts/tooltip'
+import React                      from 'react'
 
-import { Container }         from './container/index.js'
+import { useTooltip }             from '@atls-ui-parts/tooltip'
+
+import { Container }              from './container/index.js'
 
 type RenderOptions = { title?: string; content?: ReactElement }
 
+// eslint-disable-next-line
 export const usePopover = ({
   container = <Container />,
   arrowOptions = {
@@ -23,7 +26,7 @@ export const usePopover = ({
     container,
   })
 
-  const renderContainer = (options: RenderOptions) => render(options)
+  const renderContainer = (options: RenderOptions): ReactPortal | null => render(options)
 
   return {
     close,

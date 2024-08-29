@@ -1,6 +1,6 @@
 export type ProcessDirectoryType = (
   startPath: string,
   folderName: string,
-  allLocales: string[],
+  allLocales: Array<string>,
   outputLocale: string
 ) => void

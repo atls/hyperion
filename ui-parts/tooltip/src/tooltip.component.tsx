@@ -1,25 +1,29 @@
-import { Children }          from 'react'
-import { FC }                from 'react'
-import { PropsWithChildren } from 'react'
-import { cloneElement }      from 'react'
-import React                 from 'react'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { Container }         from './container/index.js'
-import { TooltipProps }      from './tooltip.interfaces.js'
-import { useTooltip }        from './use-tooltip.hook.js'
+import type { TooltipProps }      from './tooltip.interfaces.js'
+
+import { Children }               from 'react'
+import { cloneElement }           from 'react'
+import React                      from 'react'
+
+import { Container }              from './container/index.js'
+import { useTooltip }             from './use-tooltip.hook.js'
 
 export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({ children, text, ...props }) => {
   const { isOpen, close, triggerProps, render } = useTooltip({ ...props })
 
-  const renderChildren = () => {
-    if (typeof children === 'function') return children(isOpen, close)
-
-    return Children.only(cloneElement(children as any, triggerProps))
-  }
+  if (typeof children === 'function')
+    return (
+      <>
+        {children(isOpen, close)}
+        {render({ text })}
+      </>
+    )
 
   return (
     <>
-      {renderChildren()}
+      {Children.only(cloneElement(children as never, triggerProps))}
       {render({ text })}
     </>
   )

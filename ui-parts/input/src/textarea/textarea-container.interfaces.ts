@@ -1,11 +1,11 @@
-import { HTMLAttributes }             from 'react'
+import type { HTMLAttributes }             from 'react'
 
-import { TextareaContainerSprinkles } from './textarea-container.css.js'
+import type { TextareaContainerSprinkles } from './textarea-container.css.js'
 
 export interface TextareaContainerProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'color'>,
     TextareaContainerSprinkles {
-  attach?: 'left' | 'right' | 'both' | null
+  attach?: 'both' | 'left' | 'right' | null
   paddingRatio?: number
   rounding?: string
   size?: string

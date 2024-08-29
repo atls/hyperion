@@ -1,7 +1,7 @@
-import { SprinklesFn }     from 'rainbow-sprinkles/createRuntimeFn'
-import { HTMLAttributes }  from 'react'
+import type { SprinklesFn }     from 'rainbow-sprinkles/createRuntimeFn'
+import type { HTMLAttributes }  from 'react'
 
-import { LayoutSprinkles } from './layout.css.js'
+import type { LayoutSprinkles } from './layout.css.js'
 
 export interface BaseLayoutProps extends HTMLAttributes<HTMLDivElement> {
   fill?: boolean

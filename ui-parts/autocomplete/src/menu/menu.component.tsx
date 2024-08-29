@@ -1,8 +1,9 @@
+import type { MenuProps } from './menu.interfaces.js'
+
 import { clsx }           from 'clsx'
 import { forwardRef }     from 'react'
 import React              from 'react'
 
-import { MenuProps }      from './menu.interfaces.js'
 import { baseMenuStyles } from './menu.css.js'
 
 export const Menu = forwardRef<HTMLDivElement, MenuProps>((

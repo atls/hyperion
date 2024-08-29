@@ -1,11 +1,13 @@
-import { FC }          from 'react'
-import { useRef }      from 'react'
-import React           from 'react'
+import type { FC }          from 'react'
 
-import { Handle }      from './handle/index.js'
-import { SwitchProps } from './switch.interfaces.js'
-import { Thumb }       from './thumb/index.js'
-import { useSwitch }   from './hooks/index.js'
+import type { SwitchProps } from './switch.interfaces.js'
+
+import { useRef }           from 'react'
+import React                from 'react'
+
+import { Handle }           from './handle/index.js'
+import { Thumb }            from './thumb/index.js'
+import { useSwitch }        from './hooks/index.js'
 
 export const Switch: FC<SwitchProps> = ({ disabled, checked: defaultValue, onChange }) => {
   const node = useRef<HTMLButtonElement>(null)

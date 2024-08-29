@@ -1,9 +1,10 @@
-import { forwardRef }         from 'react'
-import React                  from 'react'
+import type { ParallaxBoxProps } from './parallax-box.interfaces.js'
 
-import { ParallaxBoxElement } from './parallax-box.element.js'
-import { ParallaxBoxProps }   from './parallax-box.interfaces.js'
-import { parallaxSprinkles }  from './parallax-box.css.js'
+import { forwardRef }            from 'react'
+import React                     from 'react'
+
+import { ParallaxBoxElement }    from './parallax-box.element.js'
+import { parallaxSprinkles }     from './parallax-box.css.js'
 
 export const ParallaxBox = forwardRef<HTMLDivElement, ParallaxBoxProps>((
   { children, ...props },

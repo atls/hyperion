@@ -1,6 +1,7 @@
-import { Meta }                from '@storybook/react'
-import { StoryObj }            from '@storybook/react'
-import { FC }                  from 'react'
+import type { Meta }           from '@storybook/react'
+import type { StoryObj }       from '@storybook/react'
+import type { FC }             from 'react'
+
 import { useTheme }            from 'next-themes'
 import React                   from 'react'
 
@@ -16,7 +17,9 @@ const ToggleTheme: FC = (props) => {
   return (
     <Button
       style={{ width: 'fit-content', margin: '0 0 10px auto' }}
-      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      onClick={(): void => {
+        setTheme(theme === 'light' ? 'dark' : 'light')
+      }}
       {...props}
     >
       Toggle Theme: {theme}

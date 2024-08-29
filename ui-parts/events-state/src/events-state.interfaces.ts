@@ -1,10 +1,8 @@
-import { ReactElement } from 'react'
+import type { ReactElement } from 'react'
 
-export interface EventsState {
-  [key: string]: boolean
-}
+export type EventsState = Record<string, boolean>
 
 export interface ForwardEventsStateProps {
-  children: ReactElement<any>
-  events: string[]
+  children: ReactElement
+  events: Array<string>
 }

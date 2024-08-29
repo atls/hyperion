@@ -1,8 +1,9 @@
+import type { NavigationProps } from './navigation.interfaces.js'
+
 import { clsx }                 from 'clsx'
 import { forwardRef }           from 'react'
 import React                    from 'react'
 
-import { NavigationProps }      from './navigation.interfaces.js'
 import { baseNavigationStyles } from './navigation.css.js'
 import { hideNavigationStyles } from './navigation.css.js'
 import { navigationSprinkles }  from './navigation.css.js'
@@ -27,13 +28,13 @@ export const Navigation = forwardRef<HTMLDivElement, NavigationProps>((
     <div
       ref={ref}
       {...otherProps}
+      style={{ ...style, ...otherProps?.style }}
       className={clsx(
         className,
-        otherProps?.className,
+        String(otherProps?.className || ''),
         baseNavigationStyles,
         show ? showNavigationStyles : hideNavigationStyles
       )}
-      style={{ ...style, ...otherProps?.style }}
     >
       {children}
     </div>

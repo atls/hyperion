@@ -1,16 +1,18 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
-import { Meta }             from '@storybook/react'
-import { StoryObj }         from '@storybook/react'
-import { useState }         from 'react'
-import React                from 'react'
+import type { Meta }             from '@storybook/react'
+import type { StoryObj }         from '@storybook/react'
 
-import { Input }            from '@atls-ui-parts/input'
-import { Box }              from '@atls-ui-parts/layout'
+import type { AppearanceStyles } from './utils/index.js'
+import type { ShapeStyles }      from './utils/index.js'
 
-import { Datepicker }       from './datepicker.component.js'
-import { AppearanceStyles } from './utils/index.js'
-import { ShapeStyles }      from './utils/index.js'
+import { useState }              from 'react'
+import React                     from 'react'
+
+import { Input }                 from '@atls-ui-parts/input'
+import { Box }                   from '@atls-ui-parts/layout'
+
+import { Datepicker }            from './datepicker.component.js'
 
 interface DatepickerStoryProps extends AppearanceStyles, ShapeStyles {
   showPopperArrow: boolean
@@ -23,7 +25,7 @@ const meta: Meta<DatepickerStoryProps> = {
 
     const [startDate, setStartDate] = useState<Date>(new Date('2021/06/07'))
 
-    const handleDateChange = (date: Date | null) => {
+    const handleDateChange = (date: Date | null): void => {
       if (!date) return
 
       if (date.getTime() > endDate.getTime()) {
@@ -49,13 +51,13 @@ const meta: Meta<DatepickerStoryProps> = {
       >
         <Datepicker
           isClearable
-          dateFormat='dd.MM.yy'
           strictParsing
+          dateFormat='dd.MM.yy'
           startDate={startDate}
           endDate={endDate}
           selected={startDate}
-          onChange={handleDateChange}
           customInput={<Input value={dateRangeValue} />}
+          onChange={handleDateChange}
           {...props}
         />
       </Box>

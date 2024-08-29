@@ -1,3 +1,3 @@
-import { HTMLAttributes } from 'react'
+import type { HTMLAttributes } from 'react'
 
-export interface IndicatorProps extends HTMLAttributes<HTMLButtonElement> {}
+export type IndicatorProps = HTMLAttributes<HTMLButtonElement>

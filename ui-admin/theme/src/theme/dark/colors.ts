@@ -1,4 +1,4 @@
-import { ColorsTokens } from '../contract/index.js'
+import type { ColorsTokens } from '../contract/index.js'
 
 export const colors: ColorsTokens = {
   blue: 'rgba(65, 109, 223, 1)',

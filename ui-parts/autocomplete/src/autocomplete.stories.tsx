@@ -1,16 +1,18 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
-import { Meta }         from '@storybook/react'
-import { StoryObj }     from '@storybook/react'
-import { useEffect }    from 'react'
-import { useState }     from 'react'
-import React            from 'react'
+import type { Meta }      from '@storybook/react'
+import type { StoryObj }  from '@storybook/react'
 
-import { Column }       from '@atls-ui-parts/layout'
-import { Layout }       from '@atls-ui-parts/layout'
+import type { ValueType } from './autocomplete.interfaces.js'
 
-import { Autocomplete } from './autocomplete.component.js'
-import { ValueType }    from './autocomplete.interfaces.js'
+import { useEffect }      from 'react'
+import { useState }       from 'react'
+import React              from 'react'
+
+import { Column }         from '@atls-ui-parts/layout'
+import { Layout }         from '@atls-ui-parts/layout'
+
+import { Autocomplete }   from './autocomplete.component.js'
 
 const meta: Meta = {
   title: 'Components/Autocomplete',
@@ -19,7 +21,7 @@ const meta: Meta = {
 
 export default meta
 
-const options: ValueType[] = [{ value: 'Neptunium' }, { value: 'Plutonium' }]
+const options: Array<ValueType> = [{ value: 'Neptunium' }, { value: 'Plutonium' }]
 
 export const Base: StoryObj = {
   name: 'Базовый',
@@ -56,11 +58,11 @@ export const WithInputChange: StoryObj = {
 
     useEffect(() => {
       if (!inputValue) {
-        setInputOptions(options as any)
+        setInputOptions(options)
       } else {
         setInputOptions(
           options.filter((option) =>
-            option.value.toLowerCase().startsWith(inputValue.toLowerCase())) as any
+            option.value.toLowerCase().startsWith(inputValue.toLowerCase()))
         )
       }
     }, [inputValue])

@@ -1,9 +1,10 @@
-import React         from 'react'
+import type { IconProps } from '@atls-ui-admin/icon'
 
-import { Icon }      from '@atls-ui-admin/icon'
-import { IconProps } from '@atls-ui-admin/icon'
+import React              from 'react'
 
-export const CheckIcon = (props: IconProps) => (
+import { Icon }           from '@atls-ui-admin/icon'
+
+export const CheckIcon: React.FC<IconProps> = (props) => (
   <Icon
     xmlns='http://www.w3.org/2000/svg'
     className='icon'

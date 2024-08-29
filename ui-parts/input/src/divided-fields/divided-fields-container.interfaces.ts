@@ -1,6 +1,6 @@
-import { HTMLAttributes }                  from 'react'
+import type { HTMLAttributes }                  from 'react'
 
-import { DividedFieldsContainerSprinkles } from './divided-fields-container.css.js'
+import type { DividedFieldsContainerSprinkles } from './divided-fields-container.css.js'
 
 export interface DividedFieldsContainerProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'color'>,

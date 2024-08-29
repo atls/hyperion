@@ -1,5 +1,5 @@
-import { CSSProperties } from 'react'
-import { RefObject }     from 'react'
+import type { CSSProperties } from 'react'
+import type { RefObject }     from 'react'
 
 export interface StyleResult {
   opacity: CSSProperties['opacity']

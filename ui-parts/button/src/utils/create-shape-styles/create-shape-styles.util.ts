@@ -1,6 +1,6 @@
-import { style }             from '@vanilla-extract/css'
+import type { ButtonShapeStyles } from './create-shape-styles.interfaces.js'
 
-import { ButtonShapeStyles } from './create-shape-styles.interfaces.js'
+import { style }                  from '@vanilla-extract/css'
 
 export const createShapeStyles = ({
   size,
@@ -11,7 +11,7 @@ export const createShapeStyles = ({
   paddingRight,
   paddingRatio = 0.5,
   rounding = 0,
-}: ButtonShapeStyles) =>
+}: ButtonShapeStyles): string =>
   style({
     height: size,
     fontSize,

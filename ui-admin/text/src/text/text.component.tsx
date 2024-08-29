@@ -1,10 +1,11 @@
-import { forwardRef }    from 'react'
-import React             from 'react'
+import type { TextProps } from './text.interfaces.js'
 
-import { TextElement }   from '@atls-ui-parts/text'
+import { forwardRef }     from 'react'
+import React              from 'react'
 
-import { TextProps }     from './text.interfaces.js'
-import { textSprinkles } from './text.css.js'
+import { TextElement }    from '@atls-ui-parts/text'
+
+import { textSprinkles }  from './text.css.js'
 
 export const Text = forwardRef<HTMLSpanElement, TextProps>(({ children, ...props }, ref) => (
   <TextElement ref={ref} sprinkles={textSprinkles as any} {...props}>

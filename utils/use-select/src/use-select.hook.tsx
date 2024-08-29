@@ -1,12 +1,15 @@
+import type { ReactNode }                  from 'react'
+import type { ReactPortal }                from 'react'
+
+import type { UseSelectProps }             from './select.interfaces.js'
+
 import { AnimatePresence }                 from 'framer-motion'
-import { ReactNode }                       from 'react'
 import { useSelect as useDownshiftSelect } from 'downshift'
 import { useEffect }                       from 'react'
 import { useLayer }                        from 'react-laag'
 import React                               from 'react'
 
-import { UseSelectProps }                  from './select.interfaces.js'
-
+// eslint-disable-next-line
 const useSelect = ({ items, onChange, placement = 'bottom-center', ...props }: UseSelectProps) => {
   const {
     isOpen,
@@ -33,8 +36,9 @@ const useSelect = ({ items, onChange, placement = 'bottom-center', ...props }: U
     ...getMenuProps(layerProps),
     triggerBounds,
   }
-  const getMenuItemProps = (item: string, index: number) => getItemProps({ item, index })
-  const renderMenu = (menu: ReactNode) =>
+  const getMenuItemProps = (item: string, index: number): any => getItemProps({ item, index })
+  const renderMenu = (menu: ReactNode): ReactPortal | null =>
+    // eslint-disable-next-line react/jsx-no-leaked-render
     renderLayer(<AnimatePresence>{isOpen && menu}</AnimatePresence>)
 
   return {

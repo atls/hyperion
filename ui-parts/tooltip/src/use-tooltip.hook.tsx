@@ -1,20 +1,25 @@
-import { AnimatePresence }   from 'framer-motion'
-import { ReactElement }      from 'react'
-import { cloneElement }      from 'react'
-import { useMemo }           from 'react'
-import { useLayer }          from 'react-laag'
-import React                 from 'react'
+import type { ReactElement }      from 'react'
+import type { ReactPortal }       from 'react'
+import type { JSX }               from 'react'
 
-import { Container }         from './container/index.js'
-import { UseTooltipOptions } from './tooltip.interfaces.js'
-import { useClick }          from './hooks/index.js'
-import { useContextMenu }    from './hooks/index.js'
-import { useHover }          from './hooks/index.js'
+import type { UseTooltipOptions } from './tooltip.interfaces.js'
 
-const doNothing = () => {
+import { AnimatePresence }        from 'framer-motion'
+import { cloneElement }           from 'react'
+import { useMemo }                from 'react'
+import { useLayer }               from 'react-laag'
+import React                      from 'react'
+
+import { Container }              from './container/index.js'
+import { useClick }               from './hooks/index.js'
+import { useContextMenu }         from './hooks/index.js'
+import { useHover }               from './hooks/index.js'
+
+const doNothing = (): void => {
   /** do nothing */
 }
 
+// eslint-disable-next-line
 export const useTooltip = ({
   anchor = 'top-center',
   animate = false,
@@ -41,7 +46,7 @@ export const useTooltip = ({
   })
 
   const [isTriggered, close, customTriggerProps] = useMemo(() => {
-    let triggerValues: [boolean, () => void, Object] = [false, doNothing, {}]
+    let triggerValues: [boolean, () => void, object] = [false, doNothing, {}]
 
     if (trigger === 'menu') {
       triggerValues = [isContextMenu, closeContextMenu, contextMenuProps]
@@ -70,7 +75,7 @@ export const useTooltip = ({
     ...props,
   })
 
-  const renderContainer = (containerProps: Object) => {
+  const renderContainer = (containerProps: object): JSX.Element | null => {
     if (!isTriggered) return null
 
     let renderedContainer: ReactElement
@@ -78,7 +83,7 @@ export const useTooltip = ({
     if (typeof container === 'function') {
       renderedContainer = container(close)
     } else {
-      renderedContainer = cloneElement(container!, {
+      renderedContainer = cloneElement(container, {
         ...layerProps,
         ...containerProps,
         animate,
@@ -94,7 +99,8 @@ export const useTooltip = ({
     return renderedContainer
   }
 
-  const render = (containerProps: Object) => renderLayer(renderContainer(containerProps))
+  const render = (containerProps: object): ReactPortal | null =>
+    renderLayer(renderContainer(containerProps))
 
   return {
     isOpen: isTriggered,

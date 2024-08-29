@@ -1,9 +1,10 @@
-import { forwardRef }      from 'react'
-import React               from 'react'
+import type { LayoutProps } from './layout.interfaces.js'
 
-import { LayoutElement }   from './layout.element.js'
-import { LayoutProps }     from './layout.interfaces.js'
-import { layoutSprinkles } from './layout.css.js'
+import { forwardRef }       from 'react'
+import React                from 'react'
+
+import { LayoutElement }    from './layout.element.js'
+import { layoutSprinkles }  from './layout.css.js'
 
 export const Layout = forwardRef<HTMLDivElement, LayoutProps>(({ children, ...props }, ref) => (
   <LayoutElement ref={ref} sprinkles={layoutSprinkles as any} {...props}>

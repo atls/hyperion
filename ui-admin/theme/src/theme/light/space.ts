@@ -1,4 +1,4 @@
-import { SpaceTokens } from '../index.js'
+import type { SpaceTokens } from '../index.js'
 
 export const space: SpaceTokens = {
   zero: '0',
