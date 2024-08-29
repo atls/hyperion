@@ -42,6 +42,7 @@
     "react-dom": "18.2.0",
     "storybook": "8.1.11",
     "style-loader": "4.0.0",
+    "typescript": "5.4.2",
     "webpack": "5.92.1"
   }
 }
