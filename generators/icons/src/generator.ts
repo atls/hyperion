@@ -7,7 +7,7 @@ import { mkdirSync }    from 'fs'
 import { join }         from 'path'
 import assert           from 'assert'
 
-import { build }        from './svgr'
+import { svgrBuild }    from './utils'
 
 const command = new Command()
   .name('Icons generator')
@@ -41,7 +41,7 @@ const command = new Command()
       replacements = eval(code)
     }
 
-    await build(iconsPath, genPath, replacements)
+    await svgrBuild(iconsPath, genPath, replacements)
 
     // eslint-disable-next-line no-console
     console.log(`Generated into ${genPath}`)

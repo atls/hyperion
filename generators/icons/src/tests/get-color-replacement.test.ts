@@ -1,4 +1,4 @@
-import { getColorReplacement } from './get-color-replacement.util'
+import { getColorReplacement } from '../get-color-replacement'
 
 describe('generators', () => {
   describe('icons', () => {
@@ -8,7 +8,7 @@ describe('generators', () => {
 
         expect(replacement).toEqual(
           expect.objectContaining({
-            '#000000': '{(vars.colors[props.color || 0] || props.color) || "#000000"}',
+            '#000000': '{(props.color && vars.colors[props.color]) || props.color || "#000000"}',
           })
         )
       })
@@ -18,7 +18,8 @@ describe('generators', () => {
 
         expect(replacement).toEqual(
           expect.objectContaining({
-            '#000000': '{(vars.colors.icons[props.color || 0] || props.color) || "#000000"}',
+            '#000000':
+              '{(props.color && vars.colors.icons[props.color]) || props.color || "#000000"}',
           })
         )
       })
@@ -32,7 +33,7 @@ describe('generators', () => {
         expect(replacement).toEqual(
           expect.objectContaining({
             '#000000':
-              '{(vars.colors.icons.primary.some[props.color || 0] || props.color) || "#000000"}',
+              '{(props.color && vars.colors.icons.primary.some[props.color]) || props.color || "#000000"}',
           })
         )
       })

@@ -5,7 +5,7 @@
   "type": "module",
   "main": "./src/index.ts",
   "bin": {
-    "generate-styles": "dist/generator.js"
+    "generate-styles": "dist/generator.cjs"
   },
   "files": [
     "dist"
@@ -21,7 +21,7 @@
     "@atls/prettier-plugin": "0.0.7",
     "@babel/standalone": "7.22.20",
     "camelcase": "6.3.0",
-    "commander": "9.5.0",
+    "commander": "12.1.0",
     "prettier": "2.8.8"
   },
   "devDependencies": {

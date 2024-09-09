@@ -1,2 +1,2 @@
-export * from './get-color-replacement.util'
-export * from './svgr'
+export * from './get-color-replacement'
+export * from './utils'

@@ -4,13 +4,11 @@ import { readFileSync }                   from 'fs'
 import { join }                           from 'path'
 import assert                             from 'assert'
 
-import { ButtonAppearanceStyleGenerator } from './style-generators/index.js'
-
 const command = new Command()
   .name('Button styles generator')
   .argument('path <string>', 'Path to save the styles')
   .option('-t, --theme path <string>', 'Path to colors file')
-  .action((path: string, options: Record<string, string>) => {
+  .action(async (path: string, options: Record<string, string>) => {
     assert.ok(options.theme, 'Theme colors path is required')
 
     const colorsFile = readFileSync(join(process.cwd(), options.theme)).toString('utf-8')
@@ -20,6 +18,8 @@ const command = new Command()
 
     // eslint-disable-next-line no-eval, security/detect-eval-with-expression
     const colors: Record<string, any> = eval(code)
+
+    const { ButtonAppearanceStyleGenerator } = await import('./style-generators/index.js')
 
     const generator = new ButtonAppearanceStyleGenerator(colors)
 
