@@ -301,19 +301,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-generators/utils@npm:0.0.7":
-  version: 0.0.7
-  resolution: "@atls-ui-generators/utils@npm:0.0.7"
-  dependencies:
-    "@atls/config-prettier": "npm:0.0.5"
-    "@atls/prettier-plugin": "npm:0.0.7"
-    camelcase: "npm:6.3.0"
-    prettier: "npm:2.8.8"
-  checksum: 10/e02d8f4eab50f8411502601ec32a97533452a14b2944db67b134b4c4851cfc88040963daeb91810b86fea2a135e1e6d80603e20d4e3b3188f40c80cd7fa88b5c
-  languageName: node
-  linkType: hard
-
-"@atls-ui-generators/utils@workspace:generators/utils":
+"@atls-ui-generators/utils@npm:0.0.7, @atls-ui-generators/utils@workspace:generators/utils":
   version: 0.0.0-use.local
   resolution: "@atls-ui-generators/utils@workspace:generators/utils"
   dependencies:
@@ -15560,7 +15548,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.0.1, source-map-js@npm:^1.0.2, source-map-js@npm:^1.2.0":
+"source-map-js@npm:^1.0.1":
+  version: 1.2.1
+  resolution: "source-map-js@npm:1.2.1"
+  checksum: 10/ff9d8c8bf096d534a5b7707e0382ef827b4dd360a577d3f34d2b9f48e12c9d230b5747974ee7c607f0df65113732711bb701fe9ece3c7edbd43cb2294d707df3
+  languageName: node
+  linkType: hard
+
+"source-map-js@npm:^1.0.2, source-map-js@npm:^1.2.0":
   version: 1.2.0
   resolution: "source-map-js@npm:1.2.0"
   checksum: 10/74f331cfd2d121c50790c8dd6d3c9de6be21926de80583b23b37029b0f37aefc3e019fa91f9a10a5e120c08135297e1ecf312d561459c45908cb1e0e365f49e5

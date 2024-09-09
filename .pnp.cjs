@@ -677,7 +677,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./generators/button/",\
         "packageDependencies": [\
           ["@atls-ui-generators/button", "workspace:generators/button"],\
-          ["@atls-ui-generators/utils", "npm:0.0.7"],\
+          ["@atls-ui-generators/utils", "workspace:generators/utils"],\
           ["@atls/config-prettier", "npm:0.0.5"],\
           ["@atls/prettier-plugin", "npm:0.0.7"],\
           ["@babel/standalone", "npm:7.22.20"],\
@@ -696,7 +696,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./generators/icons/",\
         "packageDependencies": [\
           ["@atls-ui-generators/icons", "workspace:generators/icons"],\
-          ["@atls-ui-generators/utils", "npm:0.0.7"],\
+          ["@atls-ui-generators/utils", "workspace:generators/utils"],\
           ["@atls/config-prettier", "npm:0.0.5"],\
           ["@atls/prettier-plugin", "npm:0.0.7"],\
           ["@babel/standalone", "npm:7.22.20"],\
@@ -720,7 +720,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./generators/input/",\
         "packageDependencies": [\
           ["@atls-ui-generators/input", "workspace:generators/input"],\
-          ["@atls-ui-generators/utils", "npm:0.0.7"],\
+          ["@atls-ui-generators/utils", "workspace:generators/utils"],\
           ["@atls/config-prettier", "npm:0.0.5"],\
           ["@atls/prettier-plugin", "npm:0.0.7"],\
           ["@babel/standalone", "npm:7.22.20"],\
@@ -752,17 +752,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@atls-ui-generators/utils", [\
-      ["npm:0.0.7", {\
-        "packageLocation": "../.yarn/berry/cache/@atls-ui-generators-utils-npm-0.0.7-64211fc786-10.zip/node_modules/@atls-ui-generators/utils/",\
-        "packageDependencies": [\
-          ["@atls-ui-generators/utils", "npm:0.0.7"],\
-          ["@atls/config-prettier", "npm:0.0.5"],\
-          ["@atls/prettier-plugin", "npm:0.0.7"],\
-          ["camelcase", "npm:6.3.0"],\
-          ["prettier", "npm:2.8.8"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["workspace:generators/utils", {\
         "packageLocation": "./generators/utils/",\
         "packageDependencies": [\
@@ -13390,7 +13379,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["css-tree", "npm:2.2.1"],\
           ["mdn-data", "npm:2.0.28"],\
-          ["source-map-js", "npm:1.2.0"]\
+          ["source-map-js", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -13399,7 +13388,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["css-tree", "npm:2.3.1"],\
           ["mdn-data", "npm:2.0.30"],\
-          ["source-map-js", "npm:1.2.0"]\
+          ["source-map-js", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21879,6 +21868,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../.yarn/berry/cache/source-map-js-npm-1.2.0-6e63f357e5-10.zip/node_modules/source-map-js/",\
         "packageDependencies": [\
           ["source-map-js", "npm:1.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:1.2.1", {\
+        "packageLocation": "../.yarn/berry/cache/source-map-js-npm-1.2.1-b9a47d7e1a-10.zip/node_modules/source-map-js/",\
+        "packageDependencies": [\
+          ["source-map-js", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
