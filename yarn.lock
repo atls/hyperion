@@ -1073,6 +1073,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-utils/use-outside-click@workspace:utils/use-outside-click":
+  version: 0.0.0-use.local
+  resolution: "@atls-utils/use-outside-click@workspace:utils/use-outside-click"
+  dependencies:
+    "@types/react": "npm:18.2.48"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
 "@atls-utils/use-popover@workspace:utils/use-popover":
   version: 0.0.0-use.local
   resolution: "@atls-utils/use-popover@workspace:utils/use-popover"
