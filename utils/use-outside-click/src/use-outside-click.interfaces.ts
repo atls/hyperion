@@ -1,1 +1,1 @@
-export type UseOutsideClickType = (action: VoidFunction) => { ref: React.RefObject<HTMLDivElement> }
+export type UseOutsideClickType = (action: VoidFunction) => { ref: React.RefObject<HTMLElement> }
