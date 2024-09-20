@@ -211,6 +211,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:utils/use-hover"\
     },\
     {\
+      "name": "@atls-utils/use-outside-click",\
+      "reference": "workspace:utils/use-outside-click"\
+    },\
+    {\
       "name": "@atls-utils/use-popover",\
       "reference": "workspace:utils/use-popover"\
     },\
@@ -271,6 +275,7 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-parts/upload", ["virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/upload", "workspace:ui-parts/upload"]],\
     ["@atls-ui/design", ["workspace:ui/design"]],\
     ["@atls-utils/use-hover", ["virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#workspace:utils/use-hover", "virtual:ab74b0ad21d788b5faaef36e69cfdc113b850f1834ee613c0e84e69c90b4422225458e49681dd5efa10b62df03744b2c5390da900b6092fa9e40fd6605cda940#workspace:utils/use-hover", "workspace:utils/use-hover"]],\
+    ["@atls-utils/use-outside-click", ["workspace:utils/use-outside-click"]],\
     ["@atls-utils/use-popover", ["workspace:utils/use-popover"]],\
     ["@atls-utils/use-select", ["virtual:9c076913ffd643939b8ac6e8c374fd1470f44689001261d35898fb07091ea0aa596a24d8bcdfb508f949d0c68789b448702cfb68072c423229496303e9a11342#workspace:utils/use-select", "workspace:utils/use-select"]],\
     ["hyperion", ["workspace:."]]\
@@ -1978,6 +1983,16 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:18.2.0"],\
           ["react-laag", "virtual:91cd7926d46286ec573214d8b701ff86d8c1fd83824f906742eefb7b1d7589b49a6ca1492f2b5debf3cdbc06f7bf432ad9b840d19b21a26dc52449c70d507d19#npm:2.0.5"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@atls-utils/use-outside-click", [\
+      ["workspace:utils/use-outside-click", {\
+        "packageLocation": "./utils/use-outside-click/",\
+        "packageDependencies": [\
+          ["@atls-utils/use-outside-click", "workspace:utils/use-outside-click"],\
+          ["@types/react", "npm:18.2.48"]\
         ],\
         "linkType": "SOFT"\
       }]\
