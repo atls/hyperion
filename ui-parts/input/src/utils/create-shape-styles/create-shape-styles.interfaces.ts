@@ -4,8 +4,8 @@ export interface InputShapeStyles {
   fontFamily?: string
   fontSize?: number | string
   fontWeight?: number | string
-  rounding?: number
-  paddingLeft?: number
-  paddingRight?: number
+  rounding?: number | string
+  paddingLeft?: number | string
+  paddingRight?: number | string
   paddingRatio?: number
 }
