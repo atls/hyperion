@@ -1,12 +1,11 @@
 import type { InputColorSchemes } from '../input-generator.interfaces.js'
 
-import { writeFileSync }          from 'fs'
+import { writeFileSync }           from 'fs'
 
-import { pretty }                 from '@atls-ui-generators/utils'
-import { getStylesName }          from '@atls-ui-generators/utils'
+import { pretty }                  from '@atls-ui-generators/utils'
 
-const getAppearanceStylesName = (variant: string, state: string): string =>
-  getStylesName('appearance', variant, state)
+import { capitalizeFirstLetter }   from '../utils/index.js'
+import { getAppearanceStylesName } from '../utils/index.js'
 
 export class InputAppearanceStyleGenerator {
   readonly requiredImports = [
