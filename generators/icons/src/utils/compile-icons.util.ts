@@ -12,7 +12,7 @@ const createSvgrTemplate: CreateSvgrTemplate = (withReplacement) =>
   import React from 'react'
   import { memo } from 'react'
 
-  ${withReplacement ? `import { vars } from '@atls-ui-admin/theme'` : ''}
+  ${withReplacement ? `import { vars } from '@ui/theme'` : ''}
 
   export const ${componentName} = memo((props: IconProps) => (
     ${jsx}
