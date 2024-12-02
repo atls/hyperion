@@ -11,12 +11,19 @@ const createSvgrTemplate: CreateSvgrTemplate = (withReplacement) =>
 
   import React from 'react'
   import { memo } from 'react'
+  import { clsx } from 'clsx'
 
   ${withReplacement ? `import { vars } from '@ui/theme'` : ''}
 
-  export const ${componentName} = memo((props: IconProps) => (
-    ${jsx}
-  ))
+  import { iconSprinkles }  from '../icon.css.js'
+
+  export const ${componentName} = memo((props: IconProps) => {
+    const { className, style, otherProps } = iconSprinkles(props)
+
+    return (
+      ${jsx}
+    )
+})
 `
 
 export const compileIcons = async (
@@ -33,7 +40,11 @@ export const compileIcons = async (
           typescript: true,
           template: createSvgrTemplate(Boolean(replacements[icon.name])),
           plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
-          replaceAttrValues: replacements[icon.name] || {},
+          svgProps: {
+            className: '{clsx(className, otherProps?.className)}',
+            style: '{Object.assign({}, style, otherProps.style)}',
+          },
+          replaceAttrValues: { ...replacements[icon.name] },
         },
         { componentName: icon.name.replace('50+', 'FiftyPlus') }
       ),
