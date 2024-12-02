@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
 import type { Meta }     from '@storybook/react'
 import type { StoryObj } from '@storybook/react'
 
@@ -54,17 +52,17 @@ const meta: Meta = {
       </Text>
       <Layout flexBasis='16px' />
       <Row gap='16px'>
-        <Link path='https://ui.atls.design'>
+        <Link href='https://ui.atls.design'>
           <Text fontSize='$medium' lineHeight='$extraMedium' color='$text.lightBlue'>
             📕 StoryBook
           </Text>
         </Link>
-        <Link path='https://github.com/atls/hyperion/wiki'>
+        <Link href='https://github.com/atls/hyperion/wiki'>
           <Text fontSize='$medium' lineHeight='$extraMedium' color='$text.lightBlue'>
             📑 Документация
           </Text>
         </Link>
-        <Link path='https://github.com/atls/hyperion/issues/new?assignees=TorinAsakura&labels=bug&template=bug.yaml'>
+        <Link href='https://github.com/atls/hyperion/issues/new?assignees=TorinAsakura&labels=bug&template=bug.yaml'>
           <Text fontSize='$medium' lineHeight='$extraMedium' color='$text.lightBlue'>
             🐛 Report bug
           </Text>

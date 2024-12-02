@@ -1,9 +1,9 @@
-import type { AnchorHTMLAttributes } from 'react'
+import type { LinkProps as BaseLinkProps } from 'next/link.js'
+import type { AnchorHTMLAttributes }       from 'react'
 
-import type { LinkSprinkles }        from './link.css.js'
+import type { LinkSprinkles }              from './link.css.js'
 
 export interface LinkProps
   extends LinkSprinkles,
-    Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'color'> {
-  path: string
-}
+    BaseLinkProps,
+    Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof BaseLinkProps | 'color'> {}
