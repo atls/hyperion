@@ -1,20 +1,20 @@
-import type { ReactNode }     from 'react'
-import type { ReactPortal }   from 'react'
-import type { PlacementType } from 'react-laag/dist/PlacementType.js'
+import type { ReactNode } from "react";
+import type { ReactPortal } from "react";
+import type { PlacementType } from "react-laag/dist/PlacementType.js";
 
-import { useState }           from 'react'
-import { useLayer }           from 'react-laag'
+import { useState } from "react";
+import { useLayer } from "react-laag";
 
 // eslint-disable-next-line
 export const usePopover = (
   placement: PlacementType,
   offset: number = 9,
-  trigger: 'click' | 'hover' = 'click'
+  trigger: "click" | "hover" = "click"
 ) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const close = (): void => {
-    setIsOpen(false)
-  }
+    setIsOpen(false);
+  };
 
   const { layerProps, triggerProps, renderLayer } = useLayer({
     isOpen,
@@ -23,30 +23,33 @@ export const usePopover = (
     onOutsideClick: close,
     onDisappear: close,
     triggerOffset: offset,
-  })
+  });
 
-  const setTrigger = (value: 'click' | 'hover'): object => {
-    if (value === 'click')
+  const setTrigger = (value: "click" | "hover"): object => {
+    if (value === "click")
       return {
         ...triggerProps,
         onClick: (): void => {
-          setIsOpen(!isOpen)
+          setIsOpen(!isOpen);
         },
-      }
-    if (value === 'hover') {
+      };
+    if (value === "hover") {
       return {
         ...triggerProps,
-        onMouseLeave: (): false => false,
-        onMouseEnter: (): void => {
-          setIsOpen(true)
+        onMouseLeave: (): void => {
+          setIsOpen(false);
         },
-      }
+        onMouseEnter: (): void => {
+          setIsOpen(true);
+        },
+      };
     }
 
-    return {}
-  }
+    return {};
+  };
 
-  const render = (children: ReactNode): ReactPortal | null => renderLayer(isOpen && children)
+  const render = (children: ReactNode): ReactPortal | null =>
+    renderLayer(isOpen && children);
 
   return {
     triggerProps: setTrigger(trigger),
@@ -59,5 +62,5 @@ export const usePopover = (
     render,
     isOpen,
     setIsOpen,
-  }
-}
+  };
+};
