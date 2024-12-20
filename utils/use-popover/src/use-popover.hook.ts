@@ -36,7 +36,9 @@ export const usePopover = (
     if (value === 'hover') {
       return {
         ...triggerProps,
-        onMouseLeave: (): false => false,
+        onMouseLeave: (): void => {
+          setIsOpen(false)
+        },
         onMouseEnter: (): void => {
           setIsOpen(true)
         },
