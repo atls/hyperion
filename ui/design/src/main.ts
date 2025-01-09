@@ -11,7 +11,7 @@ const getAbsolutePath = (value: string): string =>
   dirname(require.resolve(join(value, 'package.json')))
 
 const config: StorybookConfig = {
-  stories: ['./*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: ['./*.stories.@(js|jsx|mjs|ts|tsx|mdx)', './*.mdx'],
   addons: [
     getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
     getAbsolutePath('@storybook/addon-links'),
