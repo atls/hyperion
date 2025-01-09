@@ -54,6 +54,7 @@ __metadata:
   resolution: "@atls-ui-admin/design@workspace:ui-admin/design"
   dependencies:
     "@chromatic-com/storybook": "npm:1.6.0"
+    "@mdx-js/react": "npm:3.1.0"
     "@storybook/addon-essentials": "npm:8.1.11"
     "@storybook/addon-interactions": "npm:8.1.11"
     "@storybook/addon-links": "npm:8.1.11"
@@ -519,6 +520,7 @@ __metadata:
   dependencies:
     "@atls-ui-parts/theme": "workspace:*"
     "@chromatic-com/storybook": "npm:1.6.0"
+    "@mdx-js/react": "npm:3.1.0"
     "@storybook/addon-essentials": "npm:8.1.11"
     "@storybook/addon-interactions": "npm:8.1.11"
     "@storybook/addon-links": "npm:8.1.11"
@@ -970,6 +972,7 @@ __metadata:
   resolution: "@atls-ui-parts/theme@workspace:ui-parts/theme"
   dependencies:
     "@atls-ui-parts/layout": "workspace:*"
+    "@storybook/blocks": "npm:8.1.11"
     "@storybook/react": "npm:8.1.11"
     "@types/react": "npm:18.2.48"
     "@vanilla-extract/css": "npm:1.15.3"
@@ -1036,6 +1039,7 @@ __metadata:
     "@atls-ui-parts/text": "workspace:*"
     "@atls-ui-parts/theme": "workspace:*"
     "@chromatic-com/storybook": "npm:1.6.0"
+    "@mdx-js/react": "npm:3.1.0"
     "@storybook/addon-essentials": "npm:8.1.11"
     "@storybook/addon-interactions": "npm:8.1.11"
     "@storybook/addon-links": "npm:8.1.11"
@@ -3746,6 +3750,18 @@ __metadata:
   version: 3.1.0
   resolution: "@mapbox/whoots-js@npm:3.1.0"
   checksum: 10/c1837c04effd205b207f441356d952eae7e8aad6c58f7c4900de50318c2147cf175936fc9434f20dfa409f9e6a78ec604d61e70c1c20572db0cc7655fbb65f50
+  languageName: node
+  linkType: hard
+
+"@mdx-js/react@npm:3.1.0":
+  version: 3.1.0
+  resolution: "@mdx-js/react@npm:3.1.0"
+  dependencies:
+    "@types/mdx": "npm:^2.0.0"
+  peerDependencies:
+    "@types/react": ">=16"
+    react: ">=16"
+  checksum: 10/cf89d6392c76091622fb647f205e1ab5cbdf5edd4401dde7092138cefc9fbb6d61428aa63557de0bccca3695d5a8854dd4a93b34a27cb8e27369da7eaeaa3e73
   languageName: node
   linkType: hard
 

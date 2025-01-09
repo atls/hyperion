@@ -17,7 +17,6 @@ import { useContainerWidth }        from './use-container-width.hook.js'
 
 const meta: Meta = {
   title: 'Components/ContainerStyles',
-  tags: ['autodocs'],
 }
 
 export default meta
