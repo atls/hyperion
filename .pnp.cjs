@@ -395,6 +395,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/types", "npm:8.1.11"],\
           ["@types/cors", "npm:2.8.17"],\
           ["@types/express", "npm:4.17.21"],\
+          ["@types/node", "npm:20.11.5"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", "npm:18.2.18"],\
           ["@vanilla-extract/css", "npm:1.15.3"],\
@@ -460,6 +461,7 @@ const RAW_RUNTIME_STATE =
           ["@atls-ui-admin/icon", "virtual:8abd482360ef540236bb22f7f640d838feaf62f3c0611c27cb08b87169f5fba58928d4fb96fbf3710d32e2d87fd7503456789a58c4b25b6508d2255b10341dd0#workspace:ui-admin/icon"],\
           ["@svgr/core", "npm:5.5.0"],\
           ["@types/fs-extra-promise", "npm:1.0.12"],\
+          ["@types/node", "npm:20.11.5"],\
           ["@types/prettier", "npm:2.7.3"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", null],\
@@ -496,6 +498,7 @@ const RAW_RUNTIME_STATE =
           ["@atls-ui-admin/icon", "virtual:8abd482360ef540236bb22f7f640d838feaf62f3c0611c27cb08b87169f5fba58928d4fb96fbf3710d32e2d87fd7503456789a58c4b25b6508d2255b10341dd0#workspace:ui-admin/icon"],\
           ["@svgr/core", "npm:5.5.0"],\
           ["@types/fs-extra-promise", "npm:1.0.12"],\
+          ["@types/node", "npm:20.11.5"],\
           ["@types/prettier", "npm:2.7.3"],\
           ["@types/react", "npm:18.2.48"],\
           ["camelcase", "npm:6.3.0"],\
@@ -688,6 +691,7 @@ const RAW_RUNTIME_STATE =
           ["@atls/prettier-plugin", "npm:0.0.7"],\
           ["@babel/standalone", "npm:7.22.20"],\
           ["@types/babel__standalone", "npm:7.1.7"],\
+          ["@types/node", "npm:20.11.5"],\
           ["@types/prettier", "npm:2.7.3"],\
           ["@types/react", "npm:18.2.48"],\
           ["camelcase", "npm:6.3.0"],\
@@ -710,6 +714,7 @@ const RAW_RUNTIME_STATE =
           ["@types/babel__core", "npm:7.20.5"],\
           ["@types/babel__standalone", "npm:7.1.7"],\
           ["@types/fs-extra-promise", "npm:1.0.12"],\
+          ["@types/node", "npm:20.11.5"],\
           ["@types/prettier", "npm:2.7.3"],\
           ["camelcase", "npm:6.3.0"],\
           ["commander", "npm:9.5.0"],\
@@ -731,6 +736,7 @@ const RAW_RUNTIME_STATE =
           ["@atls/prettier-plugin", "npm:0.0.7"],\
           ["@babel/standalone", "npm:7.22.20"],\
           ["@types/babel__standalone", "npm:7.1.7"],\
+          ["@types/node", "npm:20.11.5"],\
           ["@types/prettier", "npm:2.7.3"],\
           ["@types/react", "npm:18.2.48"],\
           ["camelcase", "npm:6.3.0"],\
@@ -749,6 +755,7 @@ const RAW_RUNTIME_STATE =
           ["@atls/prettier-plugin", "npm:0.0.7"],\
           ["@babel/standalone", "npm:7.22.20"],\
           ["@types/babel__standalone", "npm:7.1.7"],\
+          ["@types/node", "npm:20.11.5"],\
           ["@types/prettier", "npm:2.7.3"],\
           ["camelcase", "npm:6.3.0"],\
           ["commander", "npm:9.5.0"],\
@@ -1086,6 +1093,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/test", "npm:8.1.11"],\
           ["@storybook/types", "npm:8.1.11"],\
           ["@types/express", "npm:4.17.21"],\
+          ["@types/node", "npm:20.11.5"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", "npm:18.2.18"],\
           ["@vanilla-extract/css", "npm:1.15.3"],\
@@ -1781,6 +1789,8 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@atls-ui-parts/text-transform", "virtual:144bd10b47610de450c041ff553326fefe11958aedc1da4a2a09dafd48e073b7fc7fd88c35623eafbf7d353919a302f576bfc9d4dea4795b88e73d2fea0dc288#workspace:ui-parts/text-transform"],\
           ["@testing-library/react", "virtual:d3f7af9d87434711683c3b7566c83f2fb01dbad29d588a6e2e3177732977cc2d26a61886ed720c60327b3fd671c570c7ddcf463e7ca4fe1568e073300aa40abe#npm:14.2.1"],\
+          ["@types/jest", "npm:29.5.11"],\
+          ["@types/node", "npm:20.11.5"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", "npm:18.2.18"],\
           ["react", "npm:18.2.0"],\
@@ -1798,6 +1808,8 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@atls-ui-parts/text-transform", "workspace:ui-parts/text-transform"],\
           ["@testing-library/react", "virtual:7014f7e670636a382c5d88d6ce313c6725cf072634f7550c7473f6e0d09fcb9ce1da5784e5b35bd043fb9ebe928ece0134c96e782a9b5b0008e2a84724870d99#npm:14.2.1"],\
+          ["@types/jest", "npm:29.5.11"],\
+          ["@types/node", "npm:20.11.5"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", "npm:18.2.18"],\
           ["react", "npm:18.2.0"]\
@@ -1991,6 +2003,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/test", "npm:8.1.11"],\
           ["@storybook/types", "npm:8.1.11"],\
           ["@types/express", "npm:4.17.21"],\
+          ["@types/node", "npm:20.11.5"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", "npm:18.2.18"],\
           ["@vanilla-extract/css", "npm:1.15.3"],\
