@@ -1,0 +1,55 @@
+import { Meta, Story } from '@storybook/blocks'
+import * as ContainerStylesStories from './container-styles.stories'
+
+<Meta of={ContainerStylesStories} />
+
+## ContainerStyles
+
+Для использования [container-queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries)
+с компонентами `Hyperion` необходимо создать `*.css.ts` стили для контейнера и дочернего элемента,
+после прокинуть их в `className` пропс используемых компонентов.
+
+#### Пример:
+
+```ts
+import { createContainer }       from '@vanilla-extract/css'
+import { style }                 from '@vanilla-extract/css'
+
+import { createContainerStyles } from '@atls-ui-parts/theme'
+
+const wrapperContainer = createContainer()
+
+export const wrapperStyles = style({
+  containerName: wrapperContainer,
+  containerType: 'inline-size',
+  width: '100%',
+  maxWidth: '500px',
+  height: '50px',
+})
+
+export const componentStyles = style({
+  background: '#B8C2F5',
+  color: '#2C348D',
+  fontSize: '24px',
+})
+
+export const componentContainerStyles = createContainerStyles({
+  breakpoint: '300px',
+  container: wrapperContainer,
+  css: {
+    background: '#BE95A2',
+    color: '#4D236E',
+    fontSize: '16px',
+  },
+})
+```
+
+```tsx
+<Box className={wrapperStyles}>
+  <Box className={componentStyles}>{children}</Box>
+</Box>
+```
+
+#### Результат:
+
+<Story of={ContainerStylesStories.Base} />

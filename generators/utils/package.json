@@ -24,5 +24,6 @@
     "access": "public",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts"
-  }
+  },
+  "typecheckSkipLibCheck": true
 }
