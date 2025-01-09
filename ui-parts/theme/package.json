@@ -13,12 +13,18 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
+    "clsx": "2.1.1",
     "rainbow-sprinkles": "0.17.2"
   },
   "devDependencies": {
+    "@atls-ui-parts/layout": "workspace:*",
+    "@storybook/react": "8.1.11",
     "@types/react": "18.2.48",
     "@vanilla-extract/css": "1.15.3",
-    "@vanilla-extract/dynamic": "2.1.1"
+    "@vanilla-extract/dynamic": "2.1.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "storybook": "8.1.11"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "*",

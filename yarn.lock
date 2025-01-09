@@ -969,10 +969,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/theme@workspace:ui-parts/theme"
   dependencies:
+    "@atls-ui-parts/layout": "workspace:*"
+    "@storybook/react": "npm:8.1.11"
     "@types/react": "npm:18.2.48"
     "@vanilla-extract/css": "npm:1.15.3"
     "@vanilla-extract/dynamic": "npm:2.1.1"
+    clsx: "npm:2.1.1"
     rainbow-sprinkles: "npm:0.17.2"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    storybook: "npm:8.1.11"
   peerDependencies:
     "@vanilla-extract/css": "*"
     "@vanilla-extract/dynamic": "*"
