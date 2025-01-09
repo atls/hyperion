@@ -15,13 +15,13 @@
     "@vanilla-extract/integration@npm:^7.1.7": "patch:@vanilla-extract/integration@npm%3A7.1.7#~/.yarn/patches/@vanilla-extract-integration-npm-7.1.7-cf020c7449.patch"
   },
   "devDependencies": {
-    "@atls/code-runtime": "1.1.0",
+    "@atls/code-runtime": "2.1.2",
     "@types/jest": "29.5.11",
     "@types/node": "20.11.5",
     "jest-environment-jsdom": "29.7.0",
-    "typescript": "5.4.2"
+    "typescript": "5.5.4"
   },
-  "packageManager": "yarn@4.4.1",
+  "packageManager": "yarn@4.6.0",
   "tools": {
     "schematic": {
       "collection": "@atls/schematics",
