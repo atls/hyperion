@@ -15,7 +15,7 @@ export const useOutsideClick: UseOutsideClickType = (action) => {
 
     document.addEventListener('mousedown', handleClickOutside)
 
-    return () => {
+    return (): void => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [action])

@@ -1,2 +1,2 @@
 export * from './indicator.component.js'
-export * from './indicator.interfaces.js'
+export type * from './indicator.interfaces.js'

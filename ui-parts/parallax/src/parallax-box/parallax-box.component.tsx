@@ -10,6 +10,7 @@ export const ParallaxBox = forwardRef<HTMLDivElement, ParallaxBoxProps>((
   { children, ...props },
   ref
 ) => (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <ParallaxBoxElement ref={ref} sprinkles={parallaxSprinkles as any} {...props}>
     {children}
   </ParallaxBoxElement>

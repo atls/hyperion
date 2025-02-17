@@ -7,6 +7,7 @@ import { LayoutElement }    from './layout.element.js'
 import { layoutSprinkles }  from './layout.css.js'
 
 export const Layout = forwardRef<HTMLDivElement, LayoutProps>(({ children, ...props }, ref) => (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <LayoutElement ref={ref} sprinkles={layoutSprinkles as any} {...props}>
     {children}
   </LayoutElement>

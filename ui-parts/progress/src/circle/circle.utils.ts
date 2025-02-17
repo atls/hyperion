@@ -9,6 +9,7 @@ export const getGradientId = (strokeColor: Array<string> | string): Array<string
 
   toArray(strokeColor).forEach((color) => {
     if (Object.prototype.toString.call(color) === '[object Object]') {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const object: Record<string, string> = color as any
 
       id.push(

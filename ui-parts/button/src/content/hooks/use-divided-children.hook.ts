@@ -16,6 +16,7 @@ const combineChildren = (children: ReactNode): Array<ReactNode> => {
       const lastIndex = childList.length - 1
       const lastChild = childList[lastIndex]
 
+      // eslint-disable-next-line @typescript-eslint/no-base-to-string
       childList[lastIndex] = [lastChild, child].join(' ')
     } else {
       childList.push(child)

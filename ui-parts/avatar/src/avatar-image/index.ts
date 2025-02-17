@@ -1,2 +1,2 @@
 export * from './avatar-image.component.js'
-export * from './avatar-image.interfaces.js'
+export type * from './avatar-image.interfaces.js'

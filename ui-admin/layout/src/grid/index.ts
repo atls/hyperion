@@ -1,2 +1,2 @@
 export * from './grid.component.js'
-export * from './grid.interfaces.js'
+export type * from './grid.interfaces.js'

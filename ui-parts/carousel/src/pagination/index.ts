@@ -1,2 +1,2 @@
 export * from './pagination.component.js'
-export * from './pagination.interfaces.js'
+export type * from './pagination.interfaces.js'

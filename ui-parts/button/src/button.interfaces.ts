@@ -1,5 +1,6 @@
 import type { RecipeVariants }       from '@vanilla-extract/recipes'
 import type { ButtonHTMLAttributes } from 'react'
+import type { JSX }                  from 'react'
 
 import type { buttonStyles }         from './styles/index.js'
 

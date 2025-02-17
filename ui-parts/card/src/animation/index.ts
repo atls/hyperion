@@ -1,2 +1,2 @@
 export * from './use-card-controls.hook.js'
-export * from './use-card-controls.interfaces.js'
+export type * from './use-card-controls.interfaces.js'

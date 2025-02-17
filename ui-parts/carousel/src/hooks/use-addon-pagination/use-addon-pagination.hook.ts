@@ -1,4 +1,4 @@
-import type { DOMElement }               from 'react'
+import type { ReactNode }                from 'react'
 
 import type { AddonInputOptions }        from '../use-carousel/index.js'
 import type { UseAddonPaginationResult } from './use-addon-pagination.interfaces.js'
@@ -20,7 +20,7 @@ export const useAddonPagination = ({
       if (centered && slidesLength <= 1) return null
       if (!centered && !loop && slidesLength < slidesPerView + 1) return null
 
-      const dots: Array<DOMElement<Record<string, any>, Element>> = []
+      const dots: Array<ReactNode> = []
 
       const onClick = (index: number): void => {
         if (loop) {
@@ -46,7 +46,7 @@ export const useAddonPagination = ({
 
       return dots
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
     [slidesLength, activeSlide, slideTo, centered, loop, slidesPerView]
   )
 

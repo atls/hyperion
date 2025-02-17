@@ -1,5 +1,5 @@
 import type { DraggableProps }            from 'framer-motion'
-import type { PanInfo }                   from 'framer-motion'
+import type { DragHandlers }              from 'framer-motion'
 
 import type { UseCarouselProps }          from './use-carousel.interfaces.js'
 import type { UseCarouselResult }         from './use-carousel.interfaces.js'
@@ -206,7 +206,7 @@ export const useCarousel = ({
     setActiveSlide(indexes[1].index)
   }
 
-  const onDragEnd = (e: any, { offset, velocity }: PanInfo): void => {
+  const onDragEnd: DragHandlers['onDragEnd'] = (e, { offset, velocity }): void => {
     const swipe =
       direction === 'horizontal'
         ? swipePower(offset.x, velocity.x)

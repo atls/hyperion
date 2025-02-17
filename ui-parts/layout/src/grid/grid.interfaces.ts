@@ -10,6 +10,7 @@ export interface BaseGridProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export interface GridElementProps extends BaseGridProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   sprinkles: SprinklesFn<any>
 }
 

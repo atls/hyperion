@@ -1,3 +1,5 @@
+/* eslint-disable n/no-sync */
+
 import { readFileSync }                  from 'fs'
 import { rmdirSync }                     from 'fs'
 import { mkdirSync }                     from 'fs'
@@ -38,7 +40,7 @@ describe('input generator', () => {
 
         expect(() => {
           generator.generateFile(`${__dirname}/generated/`)
-        }).toThrowError()
+        }).toThrow()
       })
 
       it(`${testCaseName} should generate appearance styles file`, () => {

@@ -1,2 +1,2 @@
 export * from './space.component.js'
-export * from './space.interfaces.js'
+export type * from './space.interfaces.js'

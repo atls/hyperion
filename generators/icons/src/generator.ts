@@ -1,3 +1,4 @@
+/* eslint-disable n/no-sync */
 import { transform }    from '@babel/standalone'
 import { Command }      from 'commander'
 import { readFileSync } from 'fs'

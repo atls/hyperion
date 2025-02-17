@@ -13,8 +13,8 @@ const TARGET_DIR = path.join(__dirname, 'src')
 const replaceElement = (code: string): string =>
   code.replace('<svg', '<Icon').replace('</svg', '</Icon')
 
-// @ts-expect-error types
-const svgrTemplate = ({ template }, opts, { componentName, jsx }): any => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const svgrTemplate = ({ template }: any, opts: any, { componentName, jsx }: any): any => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   const typeScriptTpl = template.smart({ plugins: ['typescript', 'prettier'] })
 
@@ -43,6 +43,7 @@ const read = async (
 
 const compile = async (
   icons: Array<{ filename: string; name: string; source: string }>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
 ): Promise<Array<{ filename: string; name: string; code: any }>> =>
   Promise.all(
     icons.map(async (icon) => ({
@@ -92,7 +93,7 @@ const build = async (): Promise<void> => {
   const files = await glob('./icons/*.svg')
   const icons = await read(files)
 
-  const sources = await compile(icons.filter((icon: any) => icon.source))
+  const sources = await compile(icons.filter((icon) => icon.source))
 
   await fs.ensureDir(TARGET_DIR)
 

@@ -1,2 +1,2 @@
 export * from './logo-placeholder.component.js'
-export * from './logo-placeholder.interfaces.js'
+export type * from './logo-placeholder.interfaces.js'

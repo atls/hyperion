@@ -1,3 +1,5 @@
+/* eslint-disable n/no-sync */
+
 import type { ButtonColorSchemes } from '../button-generator.interfaces.js'
 
 import { writeFileSync }           from 'fs'

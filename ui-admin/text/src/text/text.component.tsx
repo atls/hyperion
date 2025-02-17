@@ -8,6 +8,7 @@ import { TextElement }    from '@atls-ui-parts/text'
 import { textSprinkles }  from './text.css.js'
 
 export const Text = forwardRef<HTMLSpanElement, TextProps>(({ children, ...props }, ref) => (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <TextElement ref={ref} sprinkles={textSprinkles as any} {...props}>
     {children}
   </TextElement>

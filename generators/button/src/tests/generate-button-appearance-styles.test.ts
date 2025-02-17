@@ -1,3 +1,5 @@
+/* eslint-disable n/no-sync */
+
 import { readFileSync }                   from 'fs'
 import { mkdirSync }                      from 'fs'
 import { rmdirSync }                      from 'fs'
@@ -133,7 +135,7 @@ export const appearanceDisabled = {
 
       expect(() => {
         generator.generateFile(`${__dirname}/generated/`)
-      }).toThrowError()
+      }).toThrow()
     })
 
     it('should generate appearance styles file', () => {

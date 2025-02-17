@@ -1,3 +1,5 @@
+/* eslint-disable n/no-sync */
+
 import { existsSync }        from 'fs'
 import { readFileSync }      from 'fs'
 

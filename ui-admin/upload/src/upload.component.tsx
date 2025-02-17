@@ -1,6 +1,7 @@
 import type { FC }                from 'react'
 import type { ReactNode }         from 'react'
 import type { PropsWithChildren } from 'react'
+import type { Accept }            from 'react-dropzone'
 
 import { Children }               from 'react'
 import { cloneElement }           from 'react'
@@ -13,7 +14,7 @@ import { Placeholder }            from './placeholder/index.js'
 import { useUpload }              from './use-upload/index.js'
 
 interface UploadProps {
-  accept?: Record<string, any>
+  accept?: Accept
   multiple?: boolean
   placeholder: ReactNode | string
   onPreview?: (data?: Record<string, string | null>) => void
@@ -45,23 +46,22 @@ export const Upload: FC<PropsWithChildren<UploadProps>> = ({
 
       upload(file).then((data) => (preview ? onFile?.({ ...data, preview }) : onFile?.(data)))
     })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [acceptedFiles.map((file) => file.name).join()])
 
   const child = Children.only(children)
 
   const content = [
-    // @ts-expect-error types
-    children?.props && children.props.children ? children.props.children : null,
+    // @ts-expect-error correct children types
+    children?.props?.children ? children.props.children : null,
     placeholder ? <Placeholder key='placeholder'>{placeholder}</Placeholder> : null,
     <input key='input' {...getInputProps()} />,
   ]
 
-  // @ts-expect-error types
+  // @ts-expect-error correct child types
   // eslint-disable-next-line no-underscore-dangle
   if (child.type.__emotion_base) {
     return cloneElement(
-      // @ts-expect-error types
+      // @ts-expect-error correct children types
       children,
       {
         ...getRootProps({ isDragActive, isDragAccept, isDragReject }),
@@ -72,7 +72,7 @@ export const Upload: FC<PropsWithChildren<UploadProps>> = ({
   }
 
   return (
-    // @ts-expect-error types
+    // @ts-expect-error correct child types
     <Container {...getRootProps({ isDragActive, isDragAccept, isDragReject })} {...child.props}>
       {content}
     </Container>

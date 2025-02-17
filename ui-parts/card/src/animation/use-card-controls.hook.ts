@@ -1,16 +1,20 @@
-import type { UseCardControlsProps } from './use-card-controls.interfaces.js'
+import type { UseCardControlsProps }  from './use-card-controls.interfaces.js'
+import type { UseCardControlsReturn } from './use-card-controls.interfaces.js'
+import type { BackdropProps }         from './use-card-controls.interfaces.js'
+import type { CardProps }             from './use-card-controls.interfaces.js'
+import type { RendererCardProps }     from './use-card-controls.interfaces.js'
+import type { TriggerProps }          from './use-card-controls.interfaces.js'
 
-import { useEffect }                 from 'react'
-import { useState }                  from 'react'
-import { useRef }                    from 'react'
+import { useEffect }                  from 'react'
+import { useState }                   from 'react'
+import { useRef }                     from 'react'
 
-import { getContentDimensions }      from '@atls-ui-parts/dom'
+import { getContentDimensions }       from '@atls-ui-parts/dom'
 
 const doNothing = (): void => {
   // do nothing
 }
 
-// eslint-disable-next-line
 export const useCardControls = ({
   topOffset = 0,
   duration = 0.5,
@@ -19,7 +23,7 @@ export const useCardControls = ({
   onClose = (): void => {
     // do nothing
   },
-}: UseCardControlsProps) => {
+}: UseCardControlsProps): UseCardControlsReturn => {
   const [windowHeight, setWindowHeight] = useState<number>(0)
   const [cardHeight, setCardHeight] = useState<number>(0)
   const [opened, setOpened] = useState<boolean>(isOpen)
@@ -81,7 +85,7 @@ export const useCardControls = ({
     }
   }, [])
 
-  const cardProps = {
+  const cardProps: CardProps = {
     animate: { y: slideInPosition },
     exit: { y: windowHeight },
     initial: { y: windowHeight },
@@ -90,7 +94,7 @@ export const useCardControls = ({
     key: 'card-container',
   }
 
-  const backdropProps = {
+  const backdropProps: BackdropProps = {
     animate: { opacity: 1 },
     exit: { opacity: 0 },
     initial: { opacity: 0 },
@@ -98,13 +102,13 @@ export const useCardControls = ({
     key: 'card-backdrop',
   }
 
-  const rendererProps = {
+  const rendererProps: RendererCardProps = {
     opened,
     onScroll: scrollThreshold ? onScrollToThreshold : doNothing,
     onWheel: scrollThreshold ? onCloseBeforeScroll : doNothing,
   }
 
-  const triggerProps = {
+  const triggerProps: TriggerProps = {
     onClick: toggle,
   }
 

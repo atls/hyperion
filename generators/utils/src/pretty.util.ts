@@ -5,7 +5,7 @@ import parserBabel         from 'prettier/parser-babel'
 import parserTypescript    from 'prettier/parser-typescript'
 
 const pretty = (string: string): string =>
-  // @ts-expect-error
+  // @ts-expect-error correct options types
   format(string, {
     ...prettierConfig,
     parser: 'babel',

@@ -1,4 +1,5 @@
 import type { UseTooltipOptions } from '@atls-ui-parts/tooltip'
+import type { UseTooltipReturn }  from '@atls-ui-parts/tooltip'
 import type { ReactElement }      from 'react'
 import type { ReactPortal }       from 'react'
 
@@ -10,7 +11,6 @@ import { Container }              from './container/index.js'
 
 type RenderOptions = { title?: string; content?: ReactElement }
 
-// eslint-disable-next-line
 export const usePopover = ({
   container = <Container />,
   arrowOptions = {
@@ -19,7 +19,7 @@ export const usePopover = ({
     size: 8,
   },
   ...props
-}: UseTooltipOptions) => {
+}: UseTooltipOptions): UseTooltipReturn => {
   const { close, isOpen, layerProps, render, style, triggerProps } = useTooltip({
     ...props,
     arrowOptions,

@@ -10,6 +10,7 @@ export interface BaseLayoutProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export interface LayoutElementProps extends BaseLayoutProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   sprinkles: SprinklesFn<any>
 }
 

@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+/* eslint-disable n/no-sync */
 
 import type { ProcessDirectoryType } from './process-directory.interfaces.js'
 

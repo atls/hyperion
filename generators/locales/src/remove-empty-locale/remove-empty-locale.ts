@@ -1,3 +1,5 @@
+/* eslint-disable n/no-sync */
+
 import type { RemoveEmptyLocaleType } from './remove-empty-locale.interfaces.js'
 
 import { existsSync }                 from 'fs'
