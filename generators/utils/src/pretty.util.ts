@@ -1,15 +1,16 @@
 import * as prettierPlugin from '@atls/prettier-plugin'
-import prettierConfig      from '@atls/config-prettier'
-import { format }          from 'prettier/standalone'
-import parserBabel         from 'prettier/parser-babel'
-import parserTypescript    from 'prettier/parser-typescript'
+import atlsPrettierConfig  from '@atls/config-prettier'
+import parserBabel         from 'prettier/parser-babel.js'
+import parserTypescript    from 'prettier/parser-typescript.js'
+import standalone          from 'prettier/standalone.js'
 
-const pretty = (string: string): string =>
+const prettierConfig =
+  'default' in atlsPrettierConfig ? atlsPrettierConfig.default : atlsPrettierConfig
+
+export const pretty = (string: string): string =>
   // @ts-expect-error correct options types
-  format(string, {
+  standalone.format(string, {
     ...prettierConfig,
     parser: 'babel',
     plugins: [parserTypescript, parserBabel, prettierPlugin],
   })
-
-export { pretty }
