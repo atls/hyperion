@@ -1,10 +1,10 @@
-import type { Replacements } from '../icons.interfaces'
+import type { Replacements } from '../icons.interfaces.js'
 
 import glob                  from 'glob-promise'
 
-import { compileIcons }      from './compile-icons.util'
-import { createFiles }       from './create-files.util'
-import { readFiles }         from './read-files.util'
+import { compileIcons }      from './compile-icons.util.js'
+import { createFiles }       from './create-files.util.js'
+import { readFiles }         from './read-files.util.js'
 
 export const svgrBuild = async (
   iconsPath: string,

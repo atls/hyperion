@@ -1,1 +1,1 @@
-export * from './svgr-build.util'
+export * from './svgr-build.util.js'

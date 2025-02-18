@@ -8,7 +8,7 @@ import { mkdirSync }    from 'fs'
 import { join }         from 'path'
 import assert           from 'assert'
 
-import { svgrBuild }    from './utils'
+import { svgrBuild }    from './utils/index.js'
 
 const command = new Command()
   .name('Icons generator')
