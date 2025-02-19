@@ -1,5 +1,12 @@
 
 
+## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-admin/button@1.0.3...@atls-ui-admin/button@1.0.4) (2025-02-19)
+
+
+
+
+
+
 ## 1.0.3 (2025-01-09)
 
 

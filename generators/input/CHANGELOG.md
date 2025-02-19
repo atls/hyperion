@@ -1,5 +1,17 @@
 
 
+## [1.0.5](https://github.com/atls/hyperion/compare/@atls-ui-generators/input@1.0.4...@atls-ui-generators/input@1.0.5) (2025-02-19)
+
+
+### Bug Fixes
+
+
+* **hyperion:** lintter and tests ([#593](https://github.com/atls/hyperion/issues/593)) ([a01c488](https://github.com/atls/hyperion/commit/a01c488064d6386f754aafd2eecb28a19396635e))
+
+
+
+
+
 ## 1.0.4 (2025-01-09)
 
 
