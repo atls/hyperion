@@ -5,6 +5,7 @@ import { vars }             from '../theme.css.js'
 export const typographyProperties = defineProperties({
   dynamicProperties: {
     textAlign: true,
+    textIndent: true,
     fontStyle: true,
   },
   staticProperties: {
