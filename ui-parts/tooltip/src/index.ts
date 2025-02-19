@@ -1,5 +1,5 @@
 export * from './tooltip.component.js'
-export * from './tooltip.interfaces.js'
+export type * from './tooltip.interfaces.js'
 export * from './use-tooltip.hook.js'
 export type { ArrowOptions } from './container/index.js'
 export { Arrow } from 'react-laag'

@@ -1,3 +1,4 @@
+/* eslint-disable n/no-sync */
 import type { InputColorSchemes }  from '../input-generator.interfaces.js'
 
 import { writeFileSync }           from 'fs'

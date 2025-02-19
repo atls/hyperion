@@ -1,2 +1,2 @@
 export * from './text-transform.component.js'
-export * from './text-transform.interfaces.js'
+export type * from './text-transform.interfaces.js'

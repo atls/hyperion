@@ -16,9 +16,9 @@
   },
   "devDependencies": {
     "@atls/code-runtime": "2.1.2",
-    "@types/jest": "29.5.11",
+    "@types/eslint": "9.6.1",
     "@types/node": "20.11.5",
-    "jest-environment-jsdom": "29.7.0",
+    "eslint": "9.17.0",
     "typescript": "5.5.4"
   },
   "packageManager": "yarn@4.6.0",

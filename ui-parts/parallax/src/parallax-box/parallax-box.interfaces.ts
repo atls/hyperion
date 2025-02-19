@@ -16,6 +16,7 @@ export interface BaseParallaxBoxProps extends HTMLMotionProps<'div'> {
 }
 
 export interface ParallaxBoxElementProps extends BaseParallaxBoxProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   sprinkles: SprinklesFn<any>
 }
 

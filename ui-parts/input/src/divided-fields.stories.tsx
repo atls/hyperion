@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
 
 import type { Meta }                    from '@storybook/react'
 import type { StoryObj }                from '@storybook/react'

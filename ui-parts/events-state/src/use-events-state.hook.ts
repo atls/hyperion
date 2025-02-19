@@ -43,7 +43,7 @@ export const useEventsState = (
       })
     }
 
-    return () => {
+    return (): void => {
       if (node) {
         Object.keys(callbacks).forEach((event) => {
           node.removeEventListener(event, callbacks[event])

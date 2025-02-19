@@ -1,3 +1,4 @@
+/* eslint-disable n/no-sync */
 import { transform }    from '@babel/standalone'
 import { Command }      from 'commander'
 import { readFileSync } from 'fs'
@@ -7,7 +8,7 @@ import { mkdirSync }    from 'fs'
 import { join }         from 'path'
 import assert           from 'assert'
 
-import { svgrBuild }    from './utils'
+import { svgrBuild }    from './utils/index.js'
 
 const command = new Command()
   .name('Icons generator')

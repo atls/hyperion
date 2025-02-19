@@ -15,7 +15,7 @@ export const Switch: FC<SwitchProps> = ({ disabled, checked: defaultValue, onCha
   const [checked, setChecked] = useSwitch(node, defaultValue, disabled, onChange)
 
   return (
-    // @ts-expect-error ref prop
+    // @ts-expect-error correct ref prop
     <Handle ref={node} onClick={setChecked}>
       <Thumb disabled={disabled} checked={checked} />
     </Handle>

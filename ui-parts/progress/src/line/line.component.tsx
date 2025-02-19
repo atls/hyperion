@@ -45,6 +45,7 @@ export const Line: FC<LineProps> = ({
   trailColor,
   strokeWeight = 8,
 }) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const getThemeColor = (color: Array<ProgressGradient | string> | string): any =>
     vars?.colors[color as keyof typeof vars.colors] || color
 

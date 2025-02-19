@@ -1,2 +1,2 @@
 export * from './thumb.component.js'
-export * from './thumb.interfaces.js'
+export type * from './thumb.interfaces.js'

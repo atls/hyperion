@@ -1,2 +1,2 @@
 export * from './use-scale.hook.js'
-export * from './use-scale.interfaces.js'
+export type * from './use-scale.interfaces.js'

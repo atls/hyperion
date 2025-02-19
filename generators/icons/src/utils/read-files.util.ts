@@ -1,4 +1,4 @@
-import type { Icon } from '../icons.interfaces'
+import type { Icon } from '../icons.interfaces.js'
 
 import camelcase     from 'camelcase'
 import fs            from 'fs-extra-promise'

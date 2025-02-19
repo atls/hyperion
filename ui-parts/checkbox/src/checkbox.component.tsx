@@ -39,7 +39,6 @@ export const Checkbox = forwardRef<HTMLDivElement, CheckboxProps>((
   useEffect(() => {
     setIsChecked(active)
     onCheck(active)
-    /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [active])
 
   const handleCheck = (): void => {

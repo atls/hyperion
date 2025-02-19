@@ -1,2 +1,2 @@
 export * from './get-content-dimensions.util.js'
-export * from './get-content-dimensions.interfaces.js'
+export type * from './get-content-dimensions.interfaces.js'

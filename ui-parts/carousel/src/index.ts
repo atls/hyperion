@@ -1,4 +1,4 @@
-export * from './carousel.interfaces.js'
+export type * from './carousel.interfaces.js'
 export * from './container/index.js'
 export * from './hooks/index.js'
 export * from './navigation/index.js'

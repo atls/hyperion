@@ -1,2 +1,2 @@
 export * from './avatar-fallback.component.js'
-export * from './avatar-fallback.interfaces.js'
+export type * from './avatar-fallback.interfaces.js'

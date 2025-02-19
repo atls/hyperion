@@ -1,7 +1,7 @@
 export * from './box/index.js'
 export * from './check/index.js'
 export * from './checkbox.component.js'
-export * from './checkbox.interfaces.js'
+export type * from './checkbox.interfaces.js'
 export * from './container/index.js'
 export * from './hidden-input/index.js'
 export * from './label/index.js'

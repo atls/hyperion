@@ -1,23 +1,25 @@
-import type { DOMElement } from 'react'
+import type { ReactNode } from 'react'
 
-import { createElement }   from 'react'
+import { createElement }  from 'react'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ConditionFunction = (props: any) => boolean
 export type Condition = ConditionFunction | string
 
 export const ConditionalRender = (
   tag: string = 'div',
   condition: Condition = 'children'
-): ((props: any) => DOMElement<any, Element> | null) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+): ((props: any) => ReactNode) => {
   if (typeof condition === 'function') {
-    return (props): DOMElement<any, Element> | null => {
+    return (props): ReactNode => {
       if (!condition(props)) return null
 
       return createElement(tag, props)
     }
   }
 
-  return (props): DOMElement<any, Element> | null => {
+  return (props): ReactNode => {
     // eslint-disable-next-line react/destructuring-assignment
     if (!props[condition]) return null
 

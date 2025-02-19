@@ -2,6 +2,7 @@
   "name": "@atls-ui-generators/icons",
   "version": "1.0.4",
   "license": "BSD-3-Clause",
+  "type": "module",
   "main": "src/index.ts",
   "bin": {
     "generate-icons": "dist/generator.js"

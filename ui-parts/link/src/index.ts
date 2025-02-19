@@ -1,2 +1,2 @@
 export * from './link.component.js'
-export * from './link.interfaces.js'
+export type * from './link.interfaces.js'

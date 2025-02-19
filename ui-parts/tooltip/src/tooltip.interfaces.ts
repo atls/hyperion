@@ -1,5 +1,9 @@
+import type { CSSProperties }   from 'react'
 import type { ReactElement }    from 'react'
+import type { ReactPortal }     from 'react'
 import type { ReactNode }       from 'react'
+import type { LayerProps }      from 'react-laag'
+import type { TriggerProps }    from 'react-laag'
 import type { UseLayerOptions } from 'react-laag'
 import type { Placement }       from 'react-laag'
 
@@ -29,4 +33,13 @@ export interface UseTooltipOptions extends Omit<UseLayerOptions, OmitOptions> {
 export interface TooltipProps extends UseTooltipOptions {
   text?: ReactNode
   children: ChildrenFunction | ReactElement
+}
+
+export interface UseTooltipReturn {
+  isOpen: boolean
+  close: VoidFunction
+  triggerProps: TriggerProps
+  layerProps: LayerProps
+  style: CSSProperties
+  render: (containerProps: object) => ReactPortal | null
 }

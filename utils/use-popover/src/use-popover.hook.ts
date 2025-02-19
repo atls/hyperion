@@ -1,16 +1,17 @@
-import type { ReactNode }     from 'react'
-import type { ReactPortal }   from 'react'
-import type { PlacementType } from 'react-laag/dist/PlacementType.js'
+import type { ReactNode }        from 'react'
+import type { ReactPortal }      from 'react'
+import type { PlacementType }    from 'react-laag/dist/PlacementType.js'
 
-import { useState }           from 'react'
-import { useLayer }           from 'react-laag'
+import type { UsePopoverReturn } from './use-popover.interfaces.js'
 
-// eslint-disable-next-line
+import { useState }              from 'react'
+import { useLayer }              from 'react-laag'
+
 export const usePopover = (
   placement: PlacementType,
   offset: number = 9,
   trigger: 'click' | 'hover' = 'click'
-) => {
+): UsePopoverReturn => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const close = (): void => {
     setIsOpen(false)

@@ -1,2 +1,2 @@
 export * from './wrapper.component.js'
-export * from './wrapper.interfaces.js'
+export type * from './wrapper.interfaces.js'

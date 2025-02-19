@@ -1,43 +1,51 @@
-import { readFileSync }                   from 'fs'
-import { mkdirSync }                      from 'fs'
-import { rmdirSync }                      from 'fs'
-import { existsSync }                     from 'fs'
+/* eslint-disable n/no-sync */
+
+import assert                             from 'node:assert/strict'
+import { readFileSync }                   from 'node:fs'
+import { mkdirSync }                      from 'node:fs'
+import { rmdirSync }                      from 'node:fs'
+import { existsSync }                     from 'node:fs'
+import * as path                          from 'node:path'
+import { describe }                       from 'node:test'
+import { after }                          from 'node:test'
+import { it }                             from 'node:test'
 
 import { pretty }                         from '@atls-ui-generators/utils'
 
 import { ButtonAppearanceStyleGenerator } from '../style-generators/index.js'
 
-describe('button generator', () => {
-  describe('appearance styles generator', () => {
-    const colors: Record<string, string> = {
-      'button.blue.default.font': 'rgba(255, 255, 255, 1)',
-      'button.blue.default.background': 'rgba(65, 109, 223, 1)',
-      'button.blue.default.border': 'rgba(0,0,0,0)',
-      'button.blue.hover.font': 'rgba(255, 255, 255, 1)',
-      'button.blue.hover.background': 'rgba(0, 66, 236, 1)',
-      'button.blue.hover.border': 'rgba(0,0,0,0)',
-      'button.blue.pressed.font': 'rgba(255, 255, 255, 1)',
-      'button.blue.pressed.background': 'rgba(0, 66, 236, 1)',
-      'button.blue.pressed.border': 'rgba(0,0,0,0)',
-      'button.blue.disabled.font': 'rgba(138, 138, 138, 1)',
-      'button.blue.disabled.background': 'rgba(212, 212, 212, 1)',
-      'button.blue.disabled.border': 'rgba(0,0,0,0)',
+const dirname = path.dirname(new URL(import.meta.url).pathname)
 
-      'button.lightBlue.default.font': 'rgba(255, 255, 255, 1)',
-      'button.lightBlue.default.background': 'rgba(84, 169, 235, 1)',
-      'button.lightBlue.default.border': 'rgba(0,0,0,0)',
-      'button.lightBlue.hover.font': 'rgba(255, 255, 255, 1)',
-      'button.lightBlue.hover.background': 'rgba(84, 169, 235, 0.8)',
-      'button.lightBlue.hover.border': 'rgba(0,0,0,0)',
-      'button.lightBlue.pressed.font': 'rgba(255, 255, 255, 1)',
-      'button.lightBlue.pressed.background': 'rgba(84, 169, 235, 1)',
-      'button.lightBlue.pressed.border': 'rgba(0,0,0,0)',
-      'button.lightBlue.disabled.font': 'rgba(255, 255, 255, 1)',
-      'button.lightBlue.disabled.background': 'rgba(221, 221, 221, 1)',
-      'button.lightBlue.disabled.border': 'rgba(0,0,0,0)',
-    }
+describe('button appearance styles generator', () => {
+  const colors: Record<string, string> = {
+    'button.blue.default.font': 'rgba(255, 255, 255, 1)',
+    'button.blue.default.background': 'rgba(65, 109, 223, 1)',
+    'button.blue.default.border': 'rgba(0,0,0,0)',
+    'button.blue.hover.font': 'rgba(255, 255, 255, 1)',
+    'button.blue.hover.background': 'rgba(0, 66, 236, 1)',
+    'button.blue.hover.border': 'rgba(0,0,0,0)',
+    'button.blue.pressed.font': 'rgba(255, 255, 255, 1)',
+    'button.blue.pressed.background': 'rgba(0, 66, 236, 1)',
+    'button.blue.pressed.border': 'rgba(0,0,0,0)',
+    'button.blue.disabled.font': 'rgba(138, 138, 138, 1)',
+    'button.blue.disabled.background': 'rgba(212, 212, 212, 1)',
+    'button.blue.disabled.border': 'rgba(0,0,0,0)',
 
-    const expectedCode = `import { vars } from '@ui/theme'
+    'button.lightBlue.default.font': 'rgba(255, 255, 255, 1)',
+    'button.lightBlue.default.background': 'rgba(84, 169, 235, 1)',
+    'button.lightBlue.default.border': 'rgba(0,0,0,0)',
+    'button.lightBlue.hover.font': 'rgba(255, 255, 255, 1)',
+    'button.lightBlue.hover.background': 'rgba(84, 169, 235, 0.8)',
+    'button.lightBlue.hover.border': 'rgba(0,0,0,0)',
+    'button.lightBlue.pressed.font': 'rgba(255, 255, 255, 1)',
+    'button.lightBlue.pressed.background': 'rgba(84, 169, 235, 1)',
+    'button.lightBlue.pressed.border': 'rgba(0,0,0,0)',
+    'button.lightBlue.disabled.font': 'rgba(255, 255, 255, 1)',
+    'button.lightBlue.disabled.background': 'rgba(221, 221, 221, 1)',
+    'button.lightBlue.disabled.border': 'rgba(0,0,0,0)',
+  }
+
+  const expectedCode = `import { vars } from '@ui/theme'
 import { createAppearanceStyles } from '@atls-ui-parts/button'
 
 const appearanceBlueDefaultStyles = createAppearanceStyles({
@@ -108,44 +116,42 @@ export const appearanceDisabled = {
   lightBlueDisabled: appearanceLightBlueDisabledStyles,
 }
 `
-    afterAll(() => {
-      if (existsSync(`${__dirname}/generated`))
-        rmdirSync(`${__dirname}/generated`, { recursive: true })
-    })
+  after(() => {
+    if (existsSync(`${dirname}/generated`)) rmdirSync(`${dirname}/generated`, { recursive: true })
+  })
 
-    it('should generate code for appearance styles', () => {
-      const generator = new ButtonAppearanceStyleGenerator(colors)
-      const generated = generator.generateAppearanceStyles()
+  it('should generate code for appearance styles', () => {
+    const generator = new ButtonAppearanceStyleGenerator(colors)
+    const generated = generator.generateAppearanceStyles()
 
-      const code = pretty(`
+    const code = pretty(`
       ${generated.imports}     
       ${generated.statefulStyles}      
       ${generated.appearanceStyles}
       `)
 
-      expect(code).toBe(expectedCode)
+    assert.equal(code, expectedCode)
+  })
+
+  it('should fail if path ends with slash character', () => {
+    const generator = new ButtonAppearanceStyleGenerator(colors)
+
+    if (!existsSync(`${dirname}/generated`)) mkdirSync(`${dirname}/generated`)
+
+    assert.throws(() => {
+      generator.generateFile(`${dirname}/generated/`)
     })
+  })
 
-    it('should fail if path ends with slash character', () => {
-      const generator = new ButtonAppearanceStyleGenerator(colors)
+  it('should generate appearance styles file', () => {
+    const generator = new ButtonAppearanceStyleGenerator(colors)
 
-      if (!existsSync(`${__dirname}/generated`)) mkdirSync(`${__dirname}/generated`)
+    if (!existsSync(`${dirname}/generated`)) mkdirSync(`${dirname}/generated`)
 
-      expect(() => {
-        generator.generateFile(`${__dirname}/generated/`)
-      }).toThrowError()
-    })
+    generator.generateFile(`${dirname}/generated`)
 
-    it('should generate appearance styles file', () => {
-      const generator = new ButtonAppearanceStyleGenerator(colors)
+    const code = readFileSync(`${dirname}/generated/appearance.css.ts`)
 
-      if (!existsSync(`${__dirname}/generated`)) mkdirSync(`${__dirname}/generated`)
-
-      generator.generateFile(`${__dirname}/generated`)
-
-      const code = readFileSync(`${__dirname}/generated/appearance.css.ts`)
-
-      expect(Buffer.from(code).toString()).toBe(expectedCode)
-    })
+    assert.equal(Buffer.from(code).toString(), expectedCode)
   })
 })

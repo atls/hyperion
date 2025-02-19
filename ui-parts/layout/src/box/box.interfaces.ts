@@ -10,6 +10,7 @@ export interface BaseBoxProps extends Omit<HTMLAttributes<HTMLDivElement>, 'colo
 }
 
 export interface BoxElementProps extends BaseBoxProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   sprinkles: SprinklesFn<any>
 }
 

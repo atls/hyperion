@@ -22,7 +22,7 @@ export interface AddonInputOptions {
   slideToTwo?: CarouselSlideToTwoIndexes
   centered?: boolean
   loop?: boolean
-  props?: Record<string, any>
+  props?: object
 }
 
 export interface UseCarouselOptions {

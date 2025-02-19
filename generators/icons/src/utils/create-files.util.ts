@@ -1,14 +1,17 @@
 import type { Options }    from 'prettier'
 
-import type { Source }     from '../icons.interfaces'
+import type { Source }     from '../icons.interfaces.js'
 
 import * as prettierPlugin from '@atls/prettier-plugin'
-import prettierConfig      from '@atls/config-prettier'
+import atlsPrettierConfig  from '@atls/config-prettier'
 import fs                  from 'fs-extra-promise'
 import path                from 'path'
-import parserBabel         from 'prettier/parser-babel'
-import parserTypescript    from 'prettier/parser-typescript'
-import prettier            from 'prettier/standalone'
+import parserBabel         from 'prettier/parser-babel.js'
+import parserTypescript    from 'prettier/parser-typescript.js'
+import prettier            from 'prettier/standalone.js'
+
+const prettierConfig =
+  'default' in atlsPrettierConfig ? atlsPrettierConfig.default : atlsPrettierConfig
 
 const writeSourceFile = async (source: Source, targetDir: string): Promise<void> => {
   const filename = path.join(targetDir, `${source.name}.tsx`)

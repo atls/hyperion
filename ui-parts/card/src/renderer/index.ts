@@ -1,2 +1,2 @@
 export * from './renderer.component.js'
-export * from './renderer.interfaces.js'
+export type * from './renderer.interfaces.js'

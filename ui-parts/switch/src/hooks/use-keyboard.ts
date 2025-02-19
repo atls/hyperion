@@ -18,11 +18,11 @@ export const useKeyboard = (
 
     const current = node?.current || null
 
-    // @ts-expect-error overload
+    // @ts-expect-error correct overload
     current?.addEventListener('keydown', onKeyDownHandler)
 
     return (): void => {
-      // @ts-expect-error overload
+      // @ts-expect-error correct overload
       current?.removeEventListener('keydown', onKeyDownHandler)
     }
   }, [node, setChecked])

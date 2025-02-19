@@ -1,2 +1,2 @@
 export * from './autocomplete.component.js'
-export * from './autocomplete.interfaces.js'
+export type * from './autocomplete.interfaces.js'

@@ -1,4 +1,4 @@
-import type { GetColorReplacement } from './get-color-replacement.interfaces'
+import type { GetColorReplacement } from './get-color-replacement.interfaces.js'
 
 export const getColorReplacement: GetColorReplacement = (options) => ({
   [options.color]: `{(props.color && vars.colors${(options.themePaths || []).reduce(

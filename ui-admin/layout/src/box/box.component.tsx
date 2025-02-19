@@ -8,6 +8,7 @@ import { BoxElement }    from '@atls-ui-parts/layout'
 import { boxSprinkles }  from './box.css.js'
 
 export const Box = forwardRef<HTMLDivElement, BoxProps>(({ children, ...props }, ref) => (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <BoxElement ref={ref} sprinkles={boxSprinkles as any} {...props}>
     {children}
   </BoxElement>

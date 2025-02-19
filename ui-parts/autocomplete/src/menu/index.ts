@@ -1,2 +1,2 @@
 export * from './menu.component.js'
-export * from './menu.interfaces.js'
+export type * from './menu.interfaces.js'

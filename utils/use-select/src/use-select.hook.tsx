@@ -36,6 +36,7 @@ const useSelect = ({ items, onChange, placement = 'bottom-center', ...props }: U
     ...getMenuProps(layerProps),
     triggerBounds,
   }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const getMenuItemProps = (item: string, index: number): any => getItemProps({ item, index })
   const renderMenu = (menu: ReactNode): ReactPortal | null =>
     // eslint-disable-next-line react/jsx-no-leaked-render

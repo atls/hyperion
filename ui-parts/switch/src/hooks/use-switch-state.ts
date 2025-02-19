@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-
 import type { OnChangeCallback }     from './hooks.interfaces.js'
 import type { UseSwitchStateResult } from './hooks.interfaces.js'
 
@@ -21,6 +19,7 @@ export const useSwitchState = (
   }, [defaultValue])
 
   const change = useCallback(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (nextValue?: any): void => {
       if (!disabled) {
         const value = typeof nextValue === 'boolean' ? nextValue : !checked

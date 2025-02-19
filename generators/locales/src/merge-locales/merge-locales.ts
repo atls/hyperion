@@ -1,3 +1,5 @@
+/* eslint-disable n/no-sync */
+
 import type { MergeLocalesType } from './merge-locales.interfaces.js'
 
 import { existsSync }            from 'fs'

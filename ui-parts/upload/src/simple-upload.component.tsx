@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 
 import type { FC }           from 'react'
@@ -13,7 +12,7 @@ import { useDropzone }       from 'react-dropzone'
 import React                 from 'react'
 
 export interface SimpleUploadProps {
-  children: ReactElement<any, any>
+  children: ReactElement
   bucket: string
   accept?: Accept
   multiple?: boolean

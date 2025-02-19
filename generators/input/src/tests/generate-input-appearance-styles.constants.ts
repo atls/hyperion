@@ -1,3 +1,6 @@
+import * as path from 'node:path'
+
+export const dirname = path.dirname(new URL(import.meta.url).pathname)
 interface TestCase {
   colors: Record<string, string>
   expectedCode: string

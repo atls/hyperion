@@ -1,7 +1,7 @@
-import type { Icon }               from '../icons.interfaces'
-import type { Replacements }       from '../icons.interfaces'
-import type { Source }             from '../icons.interfaces'
-import type { CreateSvgrTemplate } from '../icons.interfaces'
+import type { Icon }               from '../icons.interfaces.js'
+import type { Replacements }       from '../icons.interfaces.js'
+import type { Source }             from '../icons.interfaces.js'
+import type { CreateSvgrTemplate } from '../icons.interfaces.js'
 
 import { transform }               from '@svgr/core'
 

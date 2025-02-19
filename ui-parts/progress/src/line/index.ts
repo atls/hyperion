@@ -1,2 +1,2 @@
 export * from './line.component.js'
-export * from './line.interfaces.js'
+export type * from './line.interfaces.js'

@@ -3,6 +3,7 @@ import type { ReactPortal }       from 'react'
 import type { JSX }               from 'react'
 
 import type { UseTooltipOptions } from './tooltip.interfaces.js'
+import type { UseTooltipReturn }  from './tooltip.interfaces.js'
 
 import { AnimatePresence }        from 'framer-motion'
 import { cloneElement }           from 'react'
@@ -19,7 +20,6 @@ const doNothing = (): void => {
   /** do nothing */
 }
 
-// eslint-disable-next-line
 export const useTooltip = ({
   anchor = 'top-center',
   animate = false,
@@ -37,7 +37,7 @@ export const useTooltip = ({
   trigger = 'click',
   triggerOffset = 8,
   ...props
-}: UseTooltipOptions) => {
+}: UseTooltipOptions): UseTooltipReturn => {
   const [isContextMenu, closeContextMenu, contextMenuProps] = useContextMenu()
   const [isClicked, closeClicked, clickedProps] = useClick()
   const [isOver, hoverProps] = useHover({
@@ -63,8 +63,6 @@ export const useTooltip = ({
     }
 
     return triggerValues
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [trigger, isOpen, isContextMenu, isClicked, isOver])
 
   const { arrowProps, triggerProps, layerProps, layerSide, renderLayer } = useLayer({

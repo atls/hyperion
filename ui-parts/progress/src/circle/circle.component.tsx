@@ -26,7 +26,8 @@ const Circle: FC<PropsWithChildren<CircleProps>> = ({
   children,
   ...props
 }) => {
-  // @ts-expect-error index
+  // @ts-expect-error correct type color
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const getThemeColor = (color: string): any => vars?.colors[color] || color
   // @ts-expect-error types mismatch
   const gradientId = getGradientId(strokeColor)
@@ -107,18 +108,20 @@ const Circle: FC<PropsWithChildren<CircleProps>> = ({
 
   return (
     <svg viewBox='0 0 100 100' width={width} height={height} {...props}>
-      {gradients.map((gradient: any, index: number) => (
-        <defs key={gradientId[index]}>
-          <linearGradient id={`${gradientId[index]}`} x1='100%' y1='0%' x2='0%' y2='0%'>
-            {Object.keys(gradient as never as Record<string, string>)
-              .sort((a, b) => +a.replace('%', '') - +b.replace('%', ''))
-              .map((key) => (
-                // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
-                <stop key={key + gradient[key]} offset={key} stopColor={gradient[key]} />
-              ))}
-          </linearGradient>
-        </defs>
-      ))}
+      {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        gradients.map((gradient: any, index: number) => (
+          <defs key={gradientId[index]}>
+            <linearGradient id={`${gradientId[index]}`} x1='100%' y1='0%' x2='0%' y2='0%'>
+              {Object.keys(gradient as never as Record<string, string>)
+                .sort((a, b) => +a.replace('%', '') - +b.replace('%', ''))
+                .map((key) => (
+                  <stop key={key + gradient[key]} offset={key} stopColor={gradient[key]} />
+                ))}
+            </linearGradient>
+          </defs>
+        ))
+      }
       <path
         d={pathString}
         stroke={trailThemeColor}

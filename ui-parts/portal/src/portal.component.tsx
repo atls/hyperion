@@ -18,7 +18,7 @@ export const Portal: FC<PropsWithChildren> = ({ children }) => {
 
     document.body.appendChild(node)
 
-    return () => {
+    return (): void => {
       document.body.removeChild(node)
     }
   }, [portal])
