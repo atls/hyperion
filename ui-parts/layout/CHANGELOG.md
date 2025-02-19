@@ -1,5 +1,17 @@
 
 
+## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/layout@1.0.4...@atls-ui-parts/layout@1.0.4) (2025-02-19)
+
+
+### Features
+
+
+* **layout:** semantic components ([#594](https://github.com/atls/hyperion/issues/594)) ([068ceb7](https://github.com/atls/hyperion/commit/068ceb74a41d06d168151b96f942ebdd018a2a68))
+
+
+
+
+
 ## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/layout@1.0.3...@atls-ui-parts/layout@1.0.4) (2025-02-19)
 
 

@@ -8,6 +8,23 @@
 
 * **hyperion:** lintter and tests ([#593](https://github.com/atls/hyperion/issues/593)) ([a01c488](https://github.com/atls/hyperion/commit/a01c488064d6386f754aafd2eecb28a19396635e))
 
+### Features
+
+
+* **layout:** semantic components ([#594](https://github.com/atls/hyperion/issues/594)) ([068ceb7](https://github.com/atls/hyperion/commit/068ceb74a41d06d168151b96f942ebdd018a2a68))
+
+
+
+
+
+## [1.0.2](https://github.com/atls/hyperion/compare/@atls-ui-parts/theme@1.0.2...@atls-ui-parts/theme@1.0.2) (2025-02-19)
+
+
+### Bug Fixes
+
+
+* **hyperion:** lintter and tests ([#593](https://github.com/atls/hyperion/issues/593)) ([a01c488](https://github.com/atls/hyperion/commit/a01c488064d6386f754aafd2eecb28a19396635e))
+
 
 
 
