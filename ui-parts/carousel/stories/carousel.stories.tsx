@@ -5,7 +5,7 @@ import type { StoryObj }        from '@storybook/react'
 import type { FC }              from 'react'
 import type { SVGProps }        from 'react'
 
-import type { PaginationProps } from './pagination/index.js'
+import type { PaginationProps } from '../src/pagination/index.js'
 
 import { useRef }               from 'react'
 import React                    from 'react'
@@ -13,14 +13,14 @@ import React                    from 'react'
 import { Condition }            from '@atls-ui-parts/condition'
 import { Box }                  from '@atls-ui-parts/layout'
 
-import { Container }            from './container/index.js'
-import { Navigation }           from './navigation/index.js'
-import { Pagination }           from './pagination/index.js'
-import { Slide }                from './slide/index.js'
-import { Wrapper }              from './wrapper/index.js'
-import { useAddonNavigation }   from './hooks/index.js'
-import { useAddonPagination }   from './hooks/index.js'
-import { useCarousel }          from './hooks/index.js'
+import { Container }            from '../src/container/index.js'
+import { Navigation }           from '../src/navigation/index.js'
+import { Pagination }           from '../src/pagination/index.js'
+import { Slide }                from '../src/slide/index.js'
+import { Wrapper }              from '../src/wrapper/index.js'
+import { useAddonNavigation }   from '../src/hooks/index.js'
+import { useAddonPagination }   from '../src/hooks/index.js'
+import { useCarousel }          from '../src/hooks/index.js'
 
 const StoryArrow: FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg

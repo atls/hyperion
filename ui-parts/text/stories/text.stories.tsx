@@ -7,9 +7,9 @@ import React                          from 'react'
 import { Column }                     from '@atls-ui-parts/layout'
 import { Layout }                     from '@atls-ui-parts/layout'
 
-import { Paragraph as BaseParagraph } from './paragraph/index.js'
-import { Text as BaseText }           from './text/index.js'
-import { Title as BaseTitle }         from './title/index.js'
+import { Paragraph as BaseParagraph } from '../src/paragraph/index.js'
+import { Text as BaseText }           from '../src/text/index.js'
+import { Title as BaseTitle }         from '../src/title/index.js'
 
 interface TextStoryProps extends PropsWithChildren {
   fontWeight: number

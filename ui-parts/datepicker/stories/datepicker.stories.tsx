@@ -3,8 +3,8 @@
 import type { Meta }             from '@storybook/react'
 import type { StoryObj }         from '@storybook/react'
 
-import type { AppearanceStyles } from './utils/index.js'
-import type { ShapeStyles }      from './utils/index.js'
+import type { AppearanceStyles } from '../src/utils/index.js'
+import type { ShapeStyles }      from '../src/utils/index.js'
 
 import { useState }              from 'react'
 import React                     from 'react'
@@ -12,7 +12,7 @@ import React                     from 'react'
 import { Input }                 from '@atls-ui-parts/input'
 import { Box }                   from '@atls-ui-parts/layout'
 
-import { Datepicker }            from './datepicker.component.js'
+import { Datepicker }            from '../src/datepicker.component.js'
 
 interface DatepickerStoryProps extends AppearanceStyles, ShapeStyles {
   showPopperArrow: boolean

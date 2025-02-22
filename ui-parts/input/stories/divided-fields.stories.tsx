@@ -12,9 +12,9 @@ import { ForwardEventsState }           from '@atls-ui-parts/events-state'
 import { Box }                          from '@atls-ui-parts/layout'
 import { vars }                         from '@atls-ui-parts/theme'
 
-import { DividedFieldsContainer }       from './divided-fields/index.js'
-import { RawInput }                     from './raw-input/index.js'
-import { baseDividedFieldsInputStyles } from './divided-fields/index.js'
+import { DividedFieldsContainer }       from '../src/divided-fields/index.js'
+import { RawInput }                     from '../src/raw-input/index.js'
+import { baseDividedFieldsInputStyles } from '../src/divided-fields/index.js'
 
 const meta: Meta = {
   title: 'Components/Input',

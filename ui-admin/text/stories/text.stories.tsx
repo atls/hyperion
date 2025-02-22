@@ -3,7 +3,7 @@ import type { StoryObj }          from '@storybook/react'
 import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
 
-import type { TextProps }         from './text/index.js'
+import type { TextProps }         from '../src/text/index.js'
 
 import { useTheme }               from 'next-themes'
 import React                      from 'react'
@@ -13,7 +13,7 @@ import { Column }                 from '@atls-ui-admin/layout'
 import { Layout }                 from '@atls-ui-admin/layout'
 import { ThemeProvider }          from '@atls-ui-admin/theme'
 
-import { Text }                   from './text/index.js'
+import { Text }                   from '../src/text/index.js'
 
 const ToggleTheme: FC = (props) => {
   const { theme, setTheme } = useTheme()
