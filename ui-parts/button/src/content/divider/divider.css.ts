@@ -1,4 +1,4 @@
-import type { SprinklesFn }       from 'rainbow-sprinkles/createRuntimeFn'
+import type { SprinklesFn }       from 'rainbow-sprinkles'
 
 import { style }                  from '@vanilla-extract/css'
 import { createRainbowSprinkles } from 'rainbow-sprinkles'

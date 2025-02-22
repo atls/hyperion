@@ -1,4 +1,4 @@
-import type { SprinklesFn }    from 'rainbow-sprinkles/createRuntimeFn'
+import type { SprinklesFn }    from 'rainbow-sprinkles'
 import type { HTMLAttributes } from 'react'
 
 import type { TitleSprinkles } from './title.css.js'

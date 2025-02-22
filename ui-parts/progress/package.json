@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/progress",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -15,7 +15,7 @@
   "dependencies": {
     "@atls-ui-parts/theme": "workspace:*",
     "clsx": "2.1.1",
-    "rainbow-sprinkles": "0.17.2"
+    "rainbow-sprinkles": "1.0.0"
   },
   "devDependencies": {
     "@atls-ui-parts/button": "workspace:*",

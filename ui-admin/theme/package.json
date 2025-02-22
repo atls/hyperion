@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-admin/theme",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -13,7 +13,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "rainbow-sprinkles": "0.17.2"
+    "rainbow-sprinkles": "1.0.0"
   },
   "devDependencies": {
     "@types/react": "18.2.48",
