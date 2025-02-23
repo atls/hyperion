@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/datepicker",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -16,7 +16,7 @@
     "@emotion/css": "patch:@emotion/css@npm%3A11.13.0#~/.yarn/patches/@emotion-css-npm-11.13.0-7fe925d1e6.patch",
     "clsx": "2.1.1",
     "date-fns": "3.6.0",
-    "rainbow-sprinkles": "0.17.2",
+    "rainbow-sprinkles": "1.0.0",
     "react-datepicker": "patch:react-datepicker@npm%3A7.3.0#~/.yarn/patches/react-datepicker-npm-7.3.0-bde3927397.patch"
   },
   "devDependencies": {

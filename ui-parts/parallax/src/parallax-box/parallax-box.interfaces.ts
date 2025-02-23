@@ -1,5 +1,5 @@
 import type { HTMLMotionProps }   from 'framer-motion'
-import type { SprinklesFn }       from 'rainbow-sprinkles/createRuntimeFn'
+import type { SprinklesFn }       from 'rainbow-sprinkles'
 
 import type { ParallaxSprinkles } from './parallax-box.css.js'
 

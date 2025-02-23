@@ -6,7 +6,7 @@ import React                        from 'react'
 import { Column }                   from '@atls-ui-parts/layout'
 import { Layout }                   from '@atls-ui-parts/layout'
 
-import { Currency as BaseCurrency } from './currency/index.js'
+import { Currency as BaseCurrency } from '../src/currency/index.js'
 
 interface CurrencyStoryProps {
   fontWeight: number

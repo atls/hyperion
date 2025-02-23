@@ -7,7 +7,7 @@ import React             from 'react'
 
 import { ThemeProvider } from '@atls-ui-admin/theme'
 
-import { Button }        from './button.component.js'
+import { Button }        from '../src/button.component.js'
 
 const ToggleTheme: FC = (props) => {
   const { theme, setTheme } = useTheme()

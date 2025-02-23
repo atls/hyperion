@@ -22,6 +22,9 @@
     "typescript": "5.5.4"
   },
   "packageManager": "yarn@4.6.0",
+  "formatterIgnorePatterns": [
+    "**/*/CHANGELOG.md"
+  ],
   "tools": {
     "schematic": {
       "collection": "@atls/schematics",

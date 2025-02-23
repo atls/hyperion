@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/parallax",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "BSD 3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -13,7 +13,7 @@
     "@atls-ui-parts/theme": "workspace:*",
     "clsx": "2.1.1",
     "framer-motion": "11.2.11",
-    "rainbow-sprinkles": "0.17.2",
+    "rainbow-sprinkles": "1.0.0",
     "react-intersection-observer": "9.13.0"
   },
   "devDependencies": {

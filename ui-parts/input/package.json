@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/input",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -16,7 +16,7 @@
     "@atls-ui-parts/theme": "workspace:*",
     "@vanilla-extract/recipes": "0.5.2",
     "clsx": "2.1.1",
-    "rainbow-sprinkles": "0.17.2"
+    "rainbow-sprinkles": "1.0.0"
   },
   "devDependencies": {
     "@atls-ui-parts/condition": "workspace:*",

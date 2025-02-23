@@ -8,10 +8,10 @@ import { Box }                        from '@atls-ui-parts/layout'
 import { Column }                     from '@atls-ui-parts/layout'
 import { Layout }                     from '@atls-ui-parts/layout'
 
-import { BackgroundImagePlaceholder } from './background-image-placeholder/index.js'
-import { ImageBoxPlaceholder }        from './image-box-placeholder/index.js'
-import { ImagePlaceholder }           from './image-placeholder/index.js'
-import { LogoPlaceholder }            from './logo-placeholder/index.js'
+import { BackgroundImagePlaceholder } from '../src/background-image-placeholder/index.js'
+import { ImageBoxPlaceholder }        from '../src/image-box-placeholder/index.js'
+import { ImagePlaceholder }           from '../src/image-placeholder/index.js'
+import { LogoPlaceholder }            from '../src/logo-placeholder/index.js'
 
 const placeholderTypes = [
   'image',

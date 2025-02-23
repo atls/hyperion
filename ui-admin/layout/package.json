@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-admin/layout",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -15,7 +15,7 @@
   "dependencies": {
     "@atls-ui-admin/theme": "workspace:*",
     "@atls-ui-parts/layout": "workspace:*",
-    "rainbow-sprinkles": "0.17.2"
+    "rainbow-sprinkles": "1.0.0"
   },
   "devDependencies": {
     "@types/react": "18.2.48",

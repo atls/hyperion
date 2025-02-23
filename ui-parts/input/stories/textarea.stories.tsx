@@ -15,12 +15,12 @@ import { Box }                       from '@atls-ui-parts/layout'
 import { SimpleUpload }              from '@atls-ui-parts/upload'
 import { vars }                      from '@atls-ui-parts/theme'
 
-import { Addon }                     from './addon/index.js'
-import { Attachment }                from './attachment/index.js'
-import { TextareaContainer }         from './textarea/index.js'
-import { addonsContainerBaseStyles } from './addon/index.js'
-import { baseInputStyles }           from './input/index.js'
-import { baseTextareaStyles }        from './textarea/index.js'
+import { Addon }                     from '../src/addon/index.js'
+import { Attachment }                from '../src/attachment/index.js'
+import { TextareaContainer }         from '../src/textarea/index.js'
+import { addonsContainerBaseStyles } from '../src/addon/index.js'
+import { baseInputStyles }           from '../src/input/index.js'
+import { baseTextareaStyles }        from '../src/textarea/index.js'
 
 const getAddonPosition = (
   addonBefore: boolean,

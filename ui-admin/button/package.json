@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-admin/button",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -18,7 +18,7 @@
     "@atls-utils/use-hover": "workspace:*",
     "@vanilla-extract/recipes": "0.5.2",
     "clsx": "2.1.1",
-    "rainbow-sprinkles": "0.17.2"
+    "rainbow-sprinkles": "1.0.0"
   },
   "devDependencies": {
     "@storybook/react": "8.1.11",

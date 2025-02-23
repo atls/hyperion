@@ -36,7 +36,7 @@ __metadata:
     "@vanilla-extract/recipes": "npm:0.5.2"
     clsx: "npm:2.1.1"
     next-themes: "npm:0.3.0"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     storybook: "npm:8.1.11"
@@ -139,7 +139,7 @@ __metadata:
     "@types/react": "npm:18.2.48"
     "@vanilla-extract/css": "npm:1.15.3"
     "@vanilla-extract/dynamic": "npm:2.1.1"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
   peerDependencies:
@@ -163,7 +163,7 @@ __metadata:
     "@vanilla-extract/css": "npm:1.15.3"
     "@vanilla-extract/dynamic": "npm:2.1.1"
     next-themes: "npm:0.3.0"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     storybook: "npm:8.1.11"
@@ -184,7 +184,7 @@ __metadata:
     "@vanilla-extract/css": "npm:1.15.3"
     "@vanilla-extract/dynamic": "npm:2.1.1"
     next-themes: "npm:0.3.0"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
   peerDependencies:
@@ -383,7 +383,7 @@ __metadata:
     "@vanilla-extract/dynamic": "npm:2.1.1"
     "@vanilla-extract/recipes": "npm:0.5.2"
     clsx: "npm:2.1.1"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     storybook: "npm:8.1.11"
@@ -435,7 +435,7 @@ __metadata:
     "@vanilla-extract/dynamic": "npm:2.1.1"
     clsx: "npm:2.1.1"
     framer-motion: "npm:11.2.11"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     storybook: "npm:8.1.11"
@@ -507,7 +507,7 @@ __metadata:
     "@vanilla-extract/dynamic": "npm:2.1.1"
     clsx: "npm:2.1.1"
     date-fns: "npm:3.6.0"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-datepicker: "patch:react-datepicker@npm%3A7.3.0#~/.yarn/patches/react-datepicker-npm-7.3.0-bde3927397.patch"
     react-dom: "npm:18.2.0"
@@ -587,7 +587,7 @@ __metadata:
     "@vanilla-extract/css": "npm:1.15.3"
     "@vanilla-extract/dynamic": "npm:2.1.1"
     clsx: "npm:2.1.1"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
   peerDependencies:
     "@vanilla-extract/css": "*"
     "@vanilla-extract/dynamic": "*"
@@ -611,7 +611,7 @@ __metadata:
     "@vanilla-extract/dynamic": "npm:2.1.1"
     "@vanilla-extract/recipes": "npm:0.5.2"
     clsx: "npm:2.1.1"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     storybook: "npm:8.1.11"
@@ -632,7 +632,7 @@ __metadata:
     "@vanilla-extract/css": "npm:1.15.3"
     "@vanilla-extract/dynamic": "npm:2.1.1"
     clsx: "npm:2.1.1"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
   peerDependencies:
@@ -652,7 +652,7 @@ __metadata:
     "@vanilla-extract/dynamic": "npm:2.1.1"
     clsx: "npm:2.1.1"
     next: "npm:14.1.0"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
   peerDependencies:
@@ -728,7 +728,7 @@ __metadata:
     "@vanilla-extract/dynamic": "npm:2.1.1"
     clsx: "npm:2.1.1"
     framer-motion: "npm:11.2.11"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-intersection-observer: "npm:9.13.0"
   peerDependencies:
@@ -814,7 +814,7 @@ __metadata:
     "@vanilla-extract/css": "npm:1.15.3"
     "@vanilla-extract/dynamic": "npm:2.1.1"
     clsx: "npm:2.1.1"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     storybook: "npm:8.1.11"
@@ -855,7 +855,7 @@ __metadata:
     "@vanilla-extract/dynamic": "npm:2.1.1"
     clsx: "npm:2.1.1"
     framer-motion: "npm:11.2.11"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     storybook: "npm:8.1.11"
@@ -924,7 +924,7 @@ __metadata:
     "@vanilla-extract/dynamic": "npm:2.1.1"
     clsx: "npm:2.1.1"
     framer-motion: "npm:11.2.11"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     storybook: "npm:8.1.11"
@@ -967,7 +967,7 @@ __metadata:
     "@vanilla-extract/css": "npm:1.15.3"
     "@vanilla-extract/dynamic": "npm:2.1.1"
     clsx: "npm:2.1.1"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     storybook: "npm:8.1.11"
@@ -990,7 +990,7 @@ __metadata:
     "@vanilla-extract/css": "npm:1.15.3"
     "@vanilla-extract/dynamic": "npm:2.1.1"
     clsx: "npm:2.1.1"
-    rainbow-sprinkles: "npm:0.17.2"
+    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     storybook: "npm:8.1.11"
@@ -13908,13 +13908,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rainbow-sprinkles@npm:0.17.2":
-  version: 0.17.2
-  resolution: "rainbow-sprinkles@npm:0.17.2"
+"rainbow-sprinkles@npm:1.0.0":
+  version: 1.0.0
+  resolution: "rainbow-sprinkles@npm:1.0.0"
   peerDependencies:
     "@vanilla-extract/css": ^1
     "@vanilla-extract/dynamic": ^2
-  checksum: 10/9ca84affe20f70f3797cd69d3edace115017e92e2294f6d72fe4862703efe2364ff91f1f5e40c6d14b9096c7556d733633785c6747d9fad2c65e4e2ad8f17c06
+  checksum: 10/0f6c480b96fcfa5650cb6df7e133c5f42527c60a66f451efb71902cb863e2fc78ce4f19a7011975caf320a104db454436314d09c21de3a676778007871931cde
   languageName: node
   linkType: hard
 
