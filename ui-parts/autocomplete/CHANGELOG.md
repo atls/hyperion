@@ -1,5 +1,12 @@
 
 
+## [1.0.5](https://github.com/atls/hyperion/compare/@atls-ui-parts/autocomplete@1.0.5...@atls-ui-parts/autocomplete@1.0.5) (2025-02-23)
+
+
+
+
+
+
 ## [1.0.5](https://github.com/atls/hyperion/compare/@atls-ui-parts/autocomplete@1.0.4...@atls-ui-parts/autocomplete@1.0.5) (2025-02-19)
 
 

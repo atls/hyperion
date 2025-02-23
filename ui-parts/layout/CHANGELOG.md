@@ -1,5 +1,18 @@
 
 
+## [1.0.5](https://github.com/atls/hyperion/compare/@atls-ui-parts/layout@1.0.4...@atls-ui-parts/layout@1.0.5) (2025-02-23)
+
+
+### Features
+
+
+* **atls-ui:** bump rainbow sprinkles ([#595](https://github.com/atls/hyperion/issues/595)) ([be18713](https://github.com/atls/hyperion/commit/be1871351926c38605bbed4d7aa11a4759f80f3d))
+* **layout:** semantic components ([#594](https://github.com/atls/hyperion/issues/594)) ([068ceb7](https://github.com/atls/hyperion/commit/068ceb74a41d06d168151b96f942ebdd018a2a68))
+
+
+
+
+
 ## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/layout@1.0.4...@atls-ui-parts/layout@1.0.4) (2025-02-19)
 
 

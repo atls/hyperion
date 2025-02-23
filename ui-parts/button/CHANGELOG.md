@@ -1,5 +1,17 @@
 
 
+## [1.0.5](https://github.com/atls/hyperion/compare/@atls-ui-parts/button@1.0.3...@atls-ui-parts/button@1.0.5) (2025-02-23)
+
+
+### Features
+
+
+* **atls-ui:** bump rainbow sprinkles ([#595](https://github.com/atls/hyperion/issues/595)) ([be18713](https://github.com/atls/hyperion/commit/be1871351926c38605bbed4d7aa11a4759f80f3d))
+
+
+
+
+
 ## [1.0.3](https://github.com/atls/hyperion/compare/@atls-ui-parts/button@1.0.3...@atls-ui-parts/button@1.0.3) (2025-02-19)
 
 

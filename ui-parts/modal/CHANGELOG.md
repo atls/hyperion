@@ -1,5 +1,22 @@
 
 
+## [1.0.2](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.1...@atls-ui-parts/modal@1.0.2) (2025-02-23)
+
+
+### Bug Fixes
+
+
+* **hyperion:** lintter and tests ([#593](https://github.com/atls/hyperion/issues/593)) ([a01c488](https://github.com/atls/hyperion/commit/a01c488064d6386f754aafd2eecb28a19396635e))
+
+### Features
+
+
+* **atls-ui:** bump rainbow sprinkles ([#595](https://github.com/atls/hyperion/issues/595)) ([be18713](https://github.com/atls/hyperion/commit/be1871351926c38605bbed4d7aa11a4759f80f3d))
+
+
+
+
+
 ## [1.0.1](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.1...@atls-ui-parts/modal@1.0.1) (2025-02-19)
 
 
