@@ -1,0 +1,50 @@
+{
+  "name": "@atls-ui-generators/appearance",
+  "version": "1.0.0",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "main": "./src/index.ts",
+  "bin": {
+    "generate-styles": "dist/appearance.generator.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn library build",
+    "generate-styles": "node --import @swc-node/register/esm-register src/appearance.generator.ts",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
+  },
+  "dependencies": {
+    "@atls-ui-generators/utils": "workspace:*",
+    "commander": "13.1.0"
+  },
+  "devDependencies": {
+    "@swc-node/register": "1.9.0",
+    "@swc/core": "1.6.1",
+    "@types/node": "22.13.8",
+    "@types/react": "18.2.48",
+    "@vanilla-extract/css": "1.15.3",
+    "@vanilla-extract/dynamic": "2.1.1",
+    "typescript": "5.5.4"
+  },
+  "peerDependencies": {
+    "@vanilla-extract/css": "*",
+    "@vanilla-extract/dynamic": "*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      "./package.json": "./package.json",
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts"
+  },
+  "typecheckSkipLibCheck": true
+}
