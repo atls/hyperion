@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-generators/utils",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "src/index.ts",
@@ -13,13 +13,18 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls/config-prettier": "0.0.5",
-    "@atls/prettier-plugin": "0.0.7",
-    "camelcase": "6.3.0",
-    "prettier": "2.8.8"
+    "@atls/config-prettier": "2.0.2",
+    "@atls/prettier-plugin": "1.0.1",
+    "@babel/standalone": "7.22.20",
+    "camelcase": "8.0.0",
+    "pino": "9.6.0",
+    "pino-pretty": "13.0.0",
+    "prettier": "3.4.2"
   },
   "devDependencies": {
-    "@types/prettier": "2.7.3"
+    "@types/babel__core": "7.20.5",
+    "@types/babel__standalone": "7.1.7",
+    "@types/prettier": "3.0.0"
   },
   "publishConfig": {
     "access": "public",
