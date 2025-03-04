@@ -12,7 +12,7 @@ export const createLogger = (
     level: process.env.LOG_LEVEL ?? level,
     transport: {
       target: 'pino-pretty',
-      options: { colorize: true, translateTime: 'SYS:standard' },
+      options: { colorize: true, translateTime: true },
     },
     base: undefined,
   })
