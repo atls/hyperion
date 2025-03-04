@@ -1,5 +1,22 @@
 
 
+## [1.0.1](https://github.com/atls/hyperion/compare/@atls-ui-generators/utils@0.0.7...@atls-ui-generators/utils@1.0.1) (2025-03-04)
+
+
+### Bug Fixes
+
+
+* **hyperion:** lintter and tests ([#593](https://github.com/atls/hyperion/issues/593)) ([a01c488](https://github.com/atls/hyperion/commit/a01c488064d6386f754aafd2eecb28a19396635e))
+
+### Features
+
+
+* **generators:** appearance styles generator ([#598](https://github.com/atls/hyperion/issues/598)) ([54a7517](https://github.com/atls/hyperion/commit/54a7517fa1373ed9de24fd83d5e2a856d65df23f))
+
+
+
+
+
 ## [0.0.7](https://github.com/atls/hyperion/compare/@atls-ui-generators/utils@0.0.7...@atls-ui-generators/utils@0.0.7) (2025-02-19)
 
 
