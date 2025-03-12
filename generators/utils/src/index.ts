@@ -1,3 +1,4 @@
+export * from './get-icon-names.util.js'
 export * from './get-styles-name.util.js'
 export * from './logger.util.js'
 export * from './pretty.util.js'
