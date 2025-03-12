@@ -5,11 +5,16 @@ import path             from 'node:path'
 import { transform }    from '@babel/standalone'
 
 export const processFile = (filePath: string): object => {
+  const filePathTsExt = filePath.replace('.js', '.ts')
+
   // eslint-disable-next-line n/no-sync
-  const file = readFileSync(filePath.replace('.js', '.ts')).toString('utf-8')
+  const file = readFileSync(filePathTsExt).toString('utf-8')
+
+  const filename = path.basename(filePathTsExt)
 
   const { code } = transform(file, {
-    presets: ['env'],
+    filename,
+    presets: ['env', 'typescript'],
     plugins: ['transform-modules-commonjs'],
   })
 
