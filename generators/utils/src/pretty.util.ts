@@ -13,6 +13,6 @@ const prettierConfig =
 export const pretty = async (string: string): Promise<string> =>
   standalone.format(string, {
     ...prettierConfig,
-    parser: 'babel',
+    parser: 'typescript',
     plugins: [parserBabel, parserTypescript, pluginEstree, prettierPlugin],
   })
