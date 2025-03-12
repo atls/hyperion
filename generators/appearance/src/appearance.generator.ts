@@ -1,6 +1,9 @@
+/* eslint-disable n/no-sync */
+
 import type { ColorSchemes }        from './appearance.interfaces.js'
 
 import assert                       from 'node:assert/strict'
+import { lstatSync }                from 'node:fs'
 import { join }                     from 'node:path'
 
 import { program }                  from 'commander'
@@ -21,13 +24,17 @@ try {
     .parse(process.argv)
 
   const path = program.args.at(0)
-  const { theme, prefix } = program.opts()
+  const { theme: themePath, prefix } = program.opts()
 
   assert.ok(path && typeof path === 'string', 'Path to save the styles is required')
-  assert.ok(theme && typeof theme === 'string', 'Theme colors path is required')
+  assert.ok(lstatSync(path).isDirectory(), 'Path to save the styles should point to a directory.')
+  assert.ok(themePath && typeof themePath === 'string', 'Theme colors path is required')
+  assert.ok(lstatSync(themePath).isFile(), 'Theme colors path should point to a file')
   assert.ok(prefix && typeof prefix === 'string', 'Prefix of color styles is required')
 
-  const absoluteThemePath = join(process.cwd(), theme)
+  logger.info(`Extract theme colors from ${themePath}`)
+
+  const absoluteThemePath = join(process.cwd(), themePath)
 
   const exports = processFile(absoluteThemePath)
 
@@ -36,9 +43,12 @@ try {
   const generator = new AppearanceStyleGenerator(prefix, colors)
 
   const genPath = join(process.cwd(), path)
+
+  logger.info(`Appearance styles generation started into ${path}`)
+
   await generator.generateFile(genPath)
 
-  logger.info(`Generated into ${genPath}`)
+  logger.info(`Generated into ${path}`)
 } catch (error) {
   logger.error(error)
 }
