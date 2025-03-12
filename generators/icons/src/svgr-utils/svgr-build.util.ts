@@ -1,6 +1,6 @@
 import type { Replacements } from '../icons.interfaces.js'
 
-import glob                  from 'glob-promise'
+import { glob }              from 'glob'
 
 import { compileIcons }      from './compile-icons.util.js'
 import { createFiles }       from './create-files.util.js'
@@ -22,7 +22,7 @@ export const svgrBuild = async (
   }
 
   const files = await glob(`${prettifyIconsPath()}/*.svg`)
-  const icons = await readFiles(files)
+  const icons = readFiles(files)
 
   const sources = await compileIcons(
     icons.filter((icon) => icon.source),
