@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-generators/utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "src/index.ts",
@@ -15,7 +15,7 @@
   "dependencies": {
     "@atls/config-prettier": "2.0.2",
     "@atls/prettier-plugin": "1.0.1",
-    "@babel/standalone": "7.22.20",
+    "@babel/standalone": "7.26.10",
     "camelcase": "8.0.0",
     "pino": "9.6.0",
     "pino-pretty": "13.0.0",
