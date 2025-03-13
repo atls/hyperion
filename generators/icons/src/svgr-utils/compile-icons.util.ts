@@ -9,21 +9,24 @@ const createSvgrTemplate: CreateSvgrTemplate = (withReplacement) =>
   ({ jsx, componentName }, { tpl }) => tpl`
   import type { IconProps } from '../icons.interfaces.js'
 
+  import type { FC } from 'react'
+
   import React from 'react'
-  import { memo } from 'react'
   import { clsx } from 'clsx'
 
   ${withReplacement ? `import { vars } from '@ui/theme'` : ''}
 
   import { iconSprinkles }  from '../icon.css.js'
 
-  export const ${componentName} = memo((props: IconProps) => {
+  export const ${componentName}: FC<IconProps> = (props) => {
     const { className, style, otherProps } = iconSprinkles(props)
+
+    const iconStyle = { ...style, ...otherProps.style } 
 
     return (
       ${jsx}
     )
-})
+}
 `
 
 export const compileIcons = async (
@@ -41,8 +44,8 @@ export const compileIcons = async (
           template: createSvgrTemplate(Boolean(replacements[icon.name])),
           plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
           svgProps: {
-            className: '{clsx(className, otherProps?.className)}',
-            style: '{Object.assign({}, style, otherProps.style)}',
+            className: `{clsx(className, typeof otherProps?.className === 'string' && otherProps.className)}`,
+            style: '{iconStyle}',
           },
           replaceAttrValues: { ...replacements[icon.name] },
         },

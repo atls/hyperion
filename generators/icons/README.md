@@ -1,6 +1,18 @@
-# Changelog
+# Appearance генератор
 
-## 0.0.9
+### Использование
 
-- Зафиксированы версии зависимостей.
-- ВАЖНО: `@babel/standalone` на 7.23.0 и выше ломает скрипт
+```
+generate-icons --help
+
+generate-icons ./src/icons -i ./svg -r ./src/replacements.ts
+```
+
+### Разработка
+
+Запуск тестов
+
+```
+yarn test unit create-replacements.test.ts
+yarn test unit get-color-replacement.test.ts
+```

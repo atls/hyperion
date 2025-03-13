@@ -40,7 +40,8 @@ export const testCases: Array<TestCase> = [
       'input.white.disabled.background': 'rgba(71, 84, 103, 1)',
       'input.white.disabled.border': 'transparent',
     },
-    expectedCode: `import { vars } from '@ui/theme/theme-css'
+    expectedCode: `import { vars }                   from '@ui/theme/theme-css'
+
 import { createAppearanceStyles } from '@atls-ui-generators/appearance'
 
 const appearanceBlueDefaultStyles = createAppearanceStyles({
@@ -148,7 +149,8 @@ export const appearanceDisabled = {
       'input.input.error.font': 'rgba(24, 24, 27, 1)',
       'input.input.error.border': 'rgba(225, 29, 72, 0.65)',
     },
-    expectedCode: `import { vars } from '@ui/theme/theme-css'
+    expectedCode: `import { vars }                   from '@ui/theme/theme-css'
+
 import { createAppearanceStyles } from '@atls-ui-generators/appearance'
 
 const appearanceInputDefaultStyles = createAppearanceStyles({
@@ -248,7 +250,8 @@ export const appearanceError = {
       'badge.draft.outline.font': 'rgba(24, 24, 27, 0.5)',
       'badge.draft.outline.border': 'rgba(24, 24, 27, 0.5)',
     },
-    expectedCode: `import { vars } from '@ui/theme/theme-css'
+    expectedCode: `import { vars }                   from '@ui/theme/theme-css'
+
 import { createAppearanceStyles } from '@atls-ui-generators/appearance'
 
 const appearancePrimaryDefaultStyles = createAppearanceStyles({
