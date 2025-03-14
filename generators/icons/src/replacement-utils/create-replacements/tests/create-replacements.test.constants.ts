@@ -12,10 +12,10 @@ export const testCases: Array<TestCase> = [
     },
     expectedResult: {
       CircleIcon: {
-        '#18181B': '{(props.color && vars.colors[props.color]) || props.color || "#18181B"}',
+        '#18181B': '{(color && vars.colors[color]) || color || "#18181B"}',
       },
       LeftIcon: {
-        '#18181B': '{(props.color && vars.colors[props.color]) || props.color || "#18181B"}',
+        '#18181B': '{(color && vars.colors[color]) || color || "#18181B"}',
       },
     },
   },
@@ -26,13 +26,13 @@ export const testCases: Array<TestCase> = [
     },
     expectedResult: {
       CircleIcon: {
-        '#18181B': '{(props.color && vars.colors[props.color]) || props.color || "#18181B"}',
-        '#000000': '{(props.color && vars.colors[props.color]) || props.color || "#000000"}',
+        '#18181B': '{(color && vars.colors[color]) || color || "#18181B"}',
+        '#000000': '{(color && vars.colors[color]) || color || "#000000"}',
       },
       LeftIcon: {
-        '#18181B': '{(props.color && vars.colors[props.color]) || props.color || "#18181B"}',
-        '#000000': '{(props.color && vars.colors[props.color]) || props.color || "#000000"}',
-        '#0000FF': '{(props.color && vars.colors[props.color]) || props.color || "#0000FF"}',
+        '#18181B': '{(color && vars.colors[color]) || color || "#18181B"}',
+        '#000000': '{(color && vars.colors[color]) || color || "#000000"}',
+        '#0000FF': '{(color && vars.colors[color]) || color || "#0000FF"}',
       },
     },
   },

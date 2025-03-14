@@ -1,8 +1,9 @@
-import assert           from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
-import path             from 'node:path'
+import assert            from 'node:assert/strict'
+import { readFileSync }  from 'node:fs'
+import { createRequire } from 'node:module'
+import path              from 'node:path'
 
-import { transform }    from '@babel/standalone'
+import { transform }     from '@babel/standalone'
 
 export const processFile = (filePath: string): object => {
   const filePathTsExt = filePath.replace('.js', '.ts')
@@ -25,10 +26,7 @@ export const processFile = (filePath: string): object => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { exports } = module
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const require = (modulePath: string): object => {
-    const absolutePath = path.resolve(path.dirname(filePath), modulePath)
-    return processFile(absolutePath)
-  }
+  const require = createRequire(filePath)
 
   // eslint-disable-next-line no-eval, security/detect-eval-with-expression
   eval(`

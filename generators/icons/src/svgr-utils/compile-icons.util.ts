@@ -18,7 +18,7 @@ const createSvgrTemplate: CreateSvgrTemplate = (withReplacement) =>
 
   import { iconSprinkles }  from '../icon.css.js'
 
-  export const ${componentName}: FC<IconProps> = (props) => {
+  export const ${componentName}: FC<IconProps> = ({ color, ...props }) => {
     const { className, style, otherProps } = iconSprinkles(props)
 
     const iconStyle = { ...style, ...otherProps.style } 

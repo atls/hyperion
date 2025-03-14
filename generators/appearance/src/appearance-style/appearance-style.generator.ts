@@ -12,7 +12,7 @@ import { getAppearanceStylesName } from '../utils/index.js'
 export class AppearanceStyleGenerator {
   readonly requiredImports = [
     { import: '{ vars }', from: '@ui/theme/theme-css' },
-    { import: '{ createAppearanceStyles }', from: '@atls-ui-generators/appearance' },
+    { import: '{ createAppearanceStyles }', from: '@atls-ui-generators/appearance/create' },
   ]
 
   #variants: Array<string> = []
