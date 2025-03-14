@@ -42,7 +42,7 @@ export const testCases: Array<TestCase> = [
     },
     expectedCode: `import { vars }                   from '@ui/theme/theme-css'
 
-import { createAppearanceStyles } from '@atls-ui-generators/appearance'
+import { createAppearanceStyles } from '@atls-ui-generators/appearance/create'
 
 const appearanceBlueDefaultStyles = createAppearanceStyles({
   fontColor: vars.colors['input.blue.default.font'],
@@ -151,7 +151,7 @@ export const appearanceDisabled = {
     },
     expectedCode: `import { vars }                   from '@ui/theme/theme-css'
 
-import { createAppearanceStyles } from '@atls-ui-generators/appearance'
+import { createAppearanceStyles } from '@atls-ui-generators/appearance/create'
 
 const appearanceInputDefaultStyles = createAppearanceStyles({
   fontColor: vars.colors['input.input.default.font'],
@@ -252,7 +252,7 @@ export const appearanceError = {
     },
     expectedCode: `import { vars }                   from '@ui/theme/theme-css'
 
-import { createAppearanceStyles } from '@atls-ui-generators/appearance'
+import { createAppearanceStyles } from '@atls-ui-generators/appearance/create'
 
 const appearancePrimaryDefaultStyles = createAppearanceStyles({
   fontColor: vars.colors['badge.primary.default.font'],

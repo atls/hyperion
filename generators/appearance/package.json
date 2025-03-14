@@ -45,10 +45,10 @@
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
       },
-      "./utils": {
-        "import": "./dist/utils/index.js",
-        "types": "./dist/utils/index.d.ts",
-        "default": "./dist/utils/index.js"
+      "./create": {
+        "import": "./dist/utils/create-appearance-styles/index.js",
+        "types": "./dist/utils/create-appearance-styles/index.d.ts",
+        "default": "./dist/utils/create-appearance-styles/index.js"
       }
     },
     "main": "dist/index.js",
