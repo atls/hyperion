@@ -9,7 +9,7 @@ describe('icons generators get-color-replacement util', () => {
     const replacement = getColorReplacement({ color: '#000000' })
 
     assert.deepEqual(replacement, {
-      '#000000': '{(props.color && vars.colors[props.color]) || props.color || "#000000"}',
+      '#000000': '{(color && vars.colors[color]) || color || "#000000"}',
     })
   })
 
@@ -17,7 +17,7 @@ describe('icons generators get-color-replacement util', () => {
     const replacement = getColorReplacement({ themePaths: ['icons'], color: '#000000' })
 
     assert.deepEqual(replacement, {
-      '#000000': '{(props.color && vars.colors.icons[props.color]) || props.color || "#000000"}',
+      '#000000': '{(color && vars.colors.icons[color]) || color || "#000000"}',
     })
   })
 
@@ -27,8 +27,7 @@ describe('icons generators get-color-replacement util', () => {
       color: '#000000',
     })
     assert.deepEqual(replacement, {
-      '#000000':
-        '{(props.color && vars.colors.icons.primary.some[props.color]) || props.color || "#000000"}',
+      '#000000': '{(color && vars.colors.icons.primary.some[color]) || color || "#000000"}',
     })
   })
 })
