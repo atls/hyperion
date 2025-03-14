@@ -1,5 +1,17 @@
 
 
+## [1.1.2](https://github.com/atls/hyperion/compare/@atls-ui-generators/appearance@1.1.1...@atls-ui-generators/appearance@1.1.2) (2025-03-14)
+
+
+### Bug Fixes
+
+
+* **generators:** errors ([#602](https://github.com/atls/hyperion/issues/602)) ([ecbce14](https://github.com/atls/hyperion/commit/ecbce14ed6be459b40c17e089547bf921e1bf7ed))
+
+
+
+
+
 ## [1.1.1](https://github.com/atls/hyperion/compare/@atls-ui-generators/appearance@1.0.0...@atls-ui-generators/appearance@1.1.1) (2025-03-13)
 
 
