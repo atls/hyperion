@@ -1,5 +1,5 @@
-import type { Browser }            from 'playwright'
-import type { Page }               from 'playwright'
+import type { Browser }            from '@playwright/test'
+import type { Page }               from '@playwright/test'
 
 import type { TextTransformProps } from '../text-transform.interfaces.js'
 
@@ -10,8 +10,8 @@ import { before }                  from 'node:test'
 import { it }                      from 'node:test'
 
 import { expect }                  from '@playwright/test'
+import { chromium }                from '@playwright/test'
 import { createServer }            from 'http-server'
-import { chromium }                from 'playwright'
 import { createElement }           from 'react'
 import { renderToString }          from 'react-dom/server'
 
