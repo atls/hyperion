@@ -16,13 +16,15 @@
   },
   "devDependencies": {
     "@atls/code-runtime": "2.1.4",
+    "@playwright/test": "1.51.1",
     "@types/node": "22.13.8",
     "eslint": "9.21.0",
     "typescript": "5.5.4"
   },
   "packageManager": "yarn@4.7.0",
   "formatterIgnorePatterns": [
-    "**/*/CHANGELOG.md"
+    "**/*/CHANGELOG.md",
+    ".github/ISSUE_TEMPLATE/*"
   ],
   "tools": {
     "schematic": {
