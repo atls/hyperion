@@ -7,14 +7,14 @@ import { dirname }                       from 'path'
 import { join }                          from 'path'
 import MiniCssExtractPlugin              from 'mini-css-extract-plugin'
 
-import { UI_ADMIN_URL }                  from './constants.js'
-import { UI_PARTS_URL }                  from './constants.js'
+import { UI_ADMIN_URL }                  from '@atls-ui/design/constants'
+import { UI_PARTS_URL }                  from '@atls-ui/design/constants'
 
 const getAbsolutePath = (value: string): string =>
   dirname(require.resolve(join(value, 'package.json')))
 
 const config: StorybookConfig = {
-  stories: ['./*.stories.@(js|jsx|mjs|ts|tsx|mdx)', './*.mdx'],
+  stories: ['**/*.stories.@(js|jsx|mjs|ts|tsx|mdx)', '**/*.mdx'],
   addons: [
     getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
     getAbsolutePath('@storybook/addon-links'),
@@ -69,11 +69,11 @@ const config: StorybookConfig = {
   refs: {
     parts: {
       title: 'Parts',
-      url: UI_ADMIN_URL,
+      url: UI_PARTS_URL,
     },
     admin: {
       title: 'Admin',
-      url: UI_PARTS_URL,
+      url: UI_ADMIN_URL,
     },
   },
   webpackFinal: async (webpackConfig) => {

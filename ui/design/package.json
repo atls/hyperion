@@ -4,6 +4,9 @@
   "private": true,
   "license": "BSD-3-Clause",
   "type": "module",
+  "exports": {
+    "./constants": "./src/constants.ts"
+  },
   "scripts": {
     "build": "storybook build --config-dir ./src -o dist --quiet && run build:server",
     "build:server": "yarn service build",
