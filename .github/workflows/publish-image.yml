@@ -15,8 +15,8 @@ jobs:
     uses: atls/shared/.github/workflows/pack-image.yaml@master
     permissions: write-all
     with:
-      registryURL: 'cr.yandex'
+      registryURL: 'eu.gcr.io'
       registryUser: 'json_key'
     secrets:
-      registryKey: ${{ secrets.YCR_KEYFILE }}
-      project: ${{ secrets.YCR_PROJECT_ID }}
+      registryKey: ${{ secrets.GCR_KEYFILE }}
+      project: ${{ secrets.GCR_PROJECT_ID }}
