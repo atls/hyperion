@@ -1,5 +1,17 @@
 
 
+## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/text-transform@1.0.3...@atls-ui-parts/text-transform@1.0.4) (2025-04-08)
+
+
+### Bug Fixes
+
+
+* **atls-ui:** unit test ([586a40e](https://github.com/atls/hyperion/commit/586a40ef6d83c5b250ca4baa515e214afb5075e4))
+
+
+
+
+
 ## [1.0.3](https://github.com/atls/hyperion/compare/@atls-ui-parts/text-transform@1.0.2...@atls-ui-parts/text-transform@1.0.3) (2025-02-19)
 
 

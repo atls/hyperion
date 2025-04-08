@@ -1,5 +1,18 @@
 
 
+## [0.0.1](https://github.com/atls/hyperion/compare/@atls-ui/design@0.0.1...@atls-ui/design@0.0.1) (2025-04-08)
+
+
+### Bug Fixes
+
+
+* **atls-ui:** fallback urls ([712dbd8](https://github.com/atls/hyperion/commit/712dbd82e1a5febbe1c39c52a4a3a7bc783fda7e))
+* **atls-ui:** release design ([c968aca](https://github.com/atls/hyperion/commit/c968aca1219f604ad910b6f2613dee3dbb6254c6))
+
+
+
+
+
 ## [0.0.1](https://github.com/atls/hyperion/compare/@atls-ui/design@0.0.1...@atls-ui/design@0.0.1) (2025-02-23)
 
 
