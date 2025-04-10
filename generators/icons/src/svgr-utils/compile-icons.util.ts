@@ -9,7 +9,7 @@ const createSvgrTemplate: CreateSvgrTemplate = (withReplacement) =>
   ({ jsx, componentName }, { tpl }) => tpl`
   import type { IconProps } from '../icons.interfaces.js'
 
-  import type { FC } from 'react'
+  import type { ReactNode } from 'react'
 
   import React from 'react'
   import { clsx } from 'clsx'
@@ -18,7 +18,7 @@ const createSvgrTemplate: CreateSvgrTemplate = (withReplacement) =>
 
   import { iconSprinkles }  from '../icon.css.js'
 
-  export const ${componentName}: FC<IconProps> = ({ color, ...props }) => {
+  export const ${componentName} = ({ color, ...props }: IconProps): ReactNode => {
     const { className, style, otherProps } = iconSprinkles(props)
 
     const iconStyle = { ...style, ...otherProps.style } 
