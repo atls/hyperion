@@ -1,5 +1,12 @@
 
 
+## [1.1.3](https://github.com/atls/hyperion/compare/@atls-ui-generators/icons@1.1.2...@atls-ui-generators/icons@1.1.3) (2025-04-10)
+
+
+
+
+
+
 ## [1.1.2](https://github.com/atls/hyperion/compare/@atls-ui-generators/icons@1.1.0...@atls-ui-generators/icons@1.1.2) (2025-03-14)
 
 
