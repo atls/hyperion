@@ -13,7 +13,7 @@
     "postpack": "rm -rf dist"
   },
   "devDependencies": {
-    "@types/react": "18.2.48"
+    "@types/react": "19.1.2"
   },
   "peerDependencies": {
     "react": "*",
