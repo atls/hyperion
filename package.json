@@ -10,8 +10,7 @@
     "utils/**/*"
   ],
   "resolutions": {
-    "@types/scheduler": "0.16.8",
-    "@vanilla-extract/integration@npm:^7.1.7": "patch:@vanilla-extract/integration@npm%3A7.1.7#~/.yarn/patches/@vanilla-extract-integration-npm-7.1.7-cf020c7449.patch"
+    "@types/scheduler": "0.16.8"
   },
   "devDependencies": {
     "@atls/code-runtime": "2.1.8",

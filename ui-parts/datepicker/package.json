@@ -17,7 +17,7 @@
     "clsx": "2.1.1",
     "date-fns": "3.6.0",
     "rainbow-sprinkles": "1.0.0",
-    "react-datepicker": "patch:react-datepicker@npm%3A7.3.0#~/.yarn/patches/react-datepicker-npm-7.3.0-bde3927397.patch"
+    "react-datepicker": "8.3.0"
   },
   "devDependencies": {
     "@atls-ui-parts/condition": "workspace:*",
