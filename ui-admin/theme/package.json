@@ -3,6 +3,11 @@
   "version": "1.0.5",
   "license": "BSD-3-Clause",
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./properties": "./src/properties/index.ts",
+    "./theme-css": "./src/theme.css.ts"
+  },
   "main": "./src/index.ts",
   "files": [
     "dist"

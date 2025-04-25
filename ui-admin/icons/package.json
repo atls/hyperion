@@ -9,28 +9,23 @@
   ],
   "scripts": {
     "build": "yarn library build",
-    "build-icons": "ts-node svgr.ts",
+    "generate-icons": "generate-icons ./src/icons -i ./icons",
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-admin/icon": "workspace:*"
+    "@atls-ui-admin/icon": "workspace:*",
+    "@atls-ui-admin/theme": "workspace:*",
+    "@atls-ui-generators/icons": "workspace:*",
+    "clsx": "2.1.1",
+    "rainbow-sprinkles": "1.0.0"
   },
   "devDependencies": {
-    "@svgr/core": "5.5.0",
-    "@types/fs-extra-promise": "1.0.13",
-    "@types/node": "22.15.0",
-    "@types/prettier": "2.7.3",
     "@types/react": "19.1.2",
-    "camelcase": "6.3.0",
-    "fs-extra-promise": "1.0.1",
-    "glob": "8.0.3",
-    "glob-promise": "5.0.0",
-    "prettier": "2.8.8",
+    "@vanilla-extract/css": "1.17.1",
+    "@vanilla-extract/dynamic": "2.1.2",
     "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "ts-node": "8.10.2",
-    "typescript": "5.2.2"
+    "react-dom": "19.1.0"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "*",
