@@ -4,7 +4,7 @@ import type { KeyboardEventHandler } from 'react'
 import { useEffect }                 from 'react'
 
 export const useKeyboard = (
-  node: RefObject<HTMLButtonElement>,
+  node: RefObject<HTMLButtonElement | null>,
   setChecked: (value: boolean) => void
 ): null => {
   useEffect(() => {

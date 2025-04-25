@@ -12,13 +12,24 @@ import { createAttachStyles }   from './navigation.utils.js'
 import { createFillStyles }     from './navigation.utils.js'
 
 export const Navigation = forwardRef<HTMLDivElement, NavigationProps>((
-  { children, attach = 'prev', fill = false, show = true, offset, ...props },
+  {
+    children,
+    attach = 'prev',
+    fill = false,
+    show = true,
+    offset,
+    borderWidth = 0,
+    borderRadius = 0,
+    ...props
+  },
   ref
 ) => {
   const fillStyles = createFillStyles(fill, String(props.height))
   const attachStyles = createAttachStyles(attach, offset)
 
   const { className, style, otherProps } = navigationSprinkles({
+    borderWidth,
+    borderRadius,
     ...props,
     ...fillStyles,
     ...attachStyles,
@@ -40,8 +51,3 @@ export const Navigation = forwardRef<HTMLDivElement, NavigationProps>((
     </div>
   )
 })
-
-Navigation.defaultProps = {
-  borderWidth: 0,
-  borderRadius: 0,
-}

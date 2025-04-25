@@ -6,14 +6,17 @@ import React                     from 'react'
 import { NavElement }            from './nav.element.js'
 import { htmlElementSprinkles }  from '../html-element.css.js'
 
-export const Nav = forwardRef<HTMLElement, HTMLElementProps>(({ children, ...props }, ref) => (
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  <NavElement ref={ref} sprinkles={htmlElementSprinkles as any} {...props}>
+export const Nav = forwardRef<HTMLElement, HTMLElementProps>((
+  { children, display = 'flex', boxSizing = 'border-box', ...props },
+  ref
+) => (
+  <NavElement
+    ref={ref}
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    sprinkles={htmlElementSprinkles as any}
+    {...{ display, boxSizing }}
+    {...props}
+  >
     {children}
   </NavElement>
 ))
-
-Nav.defaultProps = {
-  display: 'flex',
-  boxSizing: 'border-box',
-}

@@ -1,26 +1,23 @@
-import type { ParagraphProps } from './paragraph.interfaces.js'
+import type { ParagraphProps }   from './paragraph.interfaces.js'
 
-import { forwardRef }          from 'react'
-import React                   from 'react'
+import { forwardRef }            from 'react'
+import React                     from 'react'
 
-import { ParagraphElement }    from './paragraph.element.js'
-import { paragraphSprinkles }  from './paragraph.css.js'
+import { ParagraphElement }      from './paragraph.element.js'
+import { defaultParagraphProps } from './paragraph.constants.js'
+import { paragraphSprinkles }    from './paragraph.css.js'
 
 export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>((
   { children, ...props },
   ref
 ) => (
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  <ParagraphElement ref={ref} sprinkles={paragraphSprinkles as any} {...props}>
+  <ParagraphElement
+    ref={ref}
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    sprinkles={paragraphSprinkles as any}
+    {...defaultParagraphProps}
+    {...props}
+  >
     {children}
   </ParagraphElement>
 ))
-
-Paragraph.defaultProps = {
-  display: 'inline-flex',
-  color: '$text.black',
-  fontSize: '$medium',
-  fontWeight: '$regular',
-  fontFamily: '$primary',
-  lineHeight: '$default',
-}

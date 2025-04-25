@@ -20,6 +20,7 @@ export const Addon = forwardRef<HTMLDivElement, AddonProps>((
     paddingRatio = 0.5,
     rounding = '0',
     size = '16px',
+    borderWidth = '1px',
     ...props
   },
   ref
@@ -33,6 +34,7 @@ export const Addon = forwardRef<HTMLDivElement, AddonProps>((
   }
 
   const { className, style, otherProps } = addonSprinkles({
+    borderWidth,
     ...props,
     ...paddingStyles,
     ...roundingStyles,
@@ -54,7 +56,3 @@ export const Addon = forwardRef<HTMLDivElement, AddonProps>((
     </div>
   )
 })
-
-Addon.defaultProps = {
-  borderWidth: '1px',
-}

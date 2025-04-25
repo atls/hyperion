@@ -16,7 +16,8 @@ const ParallaxScreenContent: FC<PropsWithChildren> = ({ children }) => {
 
   if (!height) return null
 
-  return Children.map(children, (child) => cloneElement(child as ReactElement, { height }))
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return Children.map(children, (child) => cloneElement(child as ReactElement<any>, { height }))
 }
 
 export const ParallaxScreen: FC<HTMLAttributes<HTMLDivElement>> = ({

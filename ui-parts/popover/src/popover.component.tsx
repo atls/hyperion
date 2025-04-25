@@ -13,9 +13,17 @@ export const Popover: FC<PropsWithChildren<PopoverProps>> = ({
   title,
   content,
   children,
+  animate = true,
+  triggerOffset = 15,
+  showArrow = true,
   ...props
 }) => {
-  const { isOpen, close, triggerProps, render } = usePopover({ ...props })
+  const { isOpen, close, triggerProps, render } = usePopover({
+    animate,
+    triggerOffset,
+    showArrow,
+    ...props,
+  })
 
   if (typeof children === 'function')
     return (
@@ -31,10 +39,4 @@ export const Popover: FC<PropsWithChildren<PopoverProps>> = ({
       {render({ title, content })}
     </>
   )
-}
-
-Popover.defaultProps = {
-  animate: true,
-  triggerOffset: 15,
-  showArrow: true,
 }

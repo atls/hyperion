@@ -17,6 +17,7 @@ export const TextareaContainer = forwardRef<HTMLDivElement, TextareaContainerPro
     paddingRatio = 0.5,
     rounding = '0',
     size = '16px',
+    borderWidth = '1px',
     ...props
   },
   ref
@@ -29,6 +30,7 @@ export const TextareaContainer = forwardRef<HTMLDivElement, TextareaContainerPro
   }
 
   const { className, style, otherProps } = textareaContainerSprinkles({
+    borderWidth,
     ...props,
     ...paddingStyles,
     ...roundingStyles,
@@ -45,7 +47,3 @@ export const TextareaContainer = forwardRef<HTMLDivElement, TextareaContainerPro
     </div>
   )
 })
-
-TextareaContainer.defaultProps = {
-  borderWidth: '1px',
-}

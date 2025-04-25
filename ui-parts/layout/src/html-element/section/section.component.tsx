@@ -6,14 +6,17 @@ import React                     from 'react'
 import { SectionElement }        from './section.element.js'
 import { htmlElementSprinkles }  from '../html-element.css.js'
 
-export const Section = forwardRef<HTMLElement, HTMLElementProps>(({ children, ...props }, ref) => (
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  <SectionElement ref={ref} sprinkles={htmlElementSprinkles as any} {...props}>
+export const Section = forwardRef<HTMLElement, HTMLElementProps>((
+  { children, display = 'flex', boxSizing = 'border-box', ...props },
+  ref
+) => (
+  <SectionElement
+    ref={ref}
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    sprinkles={htmlElementSprinkles as any}
+    {...{ display, boxSizing }}
+    {...props}
+  >
     {children}
   </SectionElement>
 ))
-
-Section.defaultProps = {
-  display: 'flex',
-  boxSizing: 'border-box',
-}

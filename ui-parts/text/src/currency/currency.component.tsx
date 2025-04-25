@@ -8,7 +8,15 @@ import { Condition }          from '@atls-ui-parts/condition'
 import { Text }               from '../text/index.js'
 
 export const Currency = forwardRef<HTMLSpanElement, CurrencyProps>((
-  { currency, amount, locale, options, keepZeros, currencySignPlacement, ...props },
+  {
+    options,
+    currency = 'USD',
+    amount = 0,
+    locale = 'ru-RU',
+    keepZeros = false,
+    currencySignPlacement = 'suffix',
+    ...props
+  },
   ref
 ) => {
   const baseValue = new Intl.NumberFormat(locale, {
@@ -28,12 +36,3 @@ export const Currency = forwardRef<HTMLSpanElement, CurrencyProps>((
     </Text>
   )
 })
-
-Currency.defaultProps = {
-  amount: 0,
-  currency: 'USD',
-  keepZeros: false,
-  currencySignPlacement: 'suffix',
-  locale: 'ru-RU',
-  ...Text.defaultProps,
-}

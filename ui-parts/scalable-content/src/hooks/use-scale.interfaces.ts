@@ -7,6 +7,6 @@ export interface StyleResult {
 }
 
 export interface UseScaleResult {
-  ref: RefObject<HTMLDivElement>
+  ref: RefObject<HTMLDivElement | null>
   style: StyleResult
 }

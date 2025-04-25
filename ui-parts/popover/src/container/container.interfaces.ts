@@ -4,13 +4,10 @@ import type { ReactNode }          from 'react'
 import type { LayerSide }          from 'react-laag'
 import type { UseLayerArrowProps } from 'react-laag'
 
-export interface ContainerElementProps {
+export interface ContainerComponentProps {
+  title?: string
   animate?: boolean
   style?: MotionStyle
-}
-
-export interface ContainerComponentProps extends ContainerElementProps {
-  title?: string
   content?: ReactNode
   showArrow?: boolean
   layerSide?: LayerSide

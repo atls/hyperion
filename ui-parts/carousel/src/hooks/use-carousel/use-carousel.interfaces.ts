@@ -37,7 +37,7 @@ export interface UseCarouselOptions {
 }
 
 export interface UseCarouselProps {
-  ref: RefObject<HTMLDivElement>
+  ref: RefObject<HTMLDivElement | null>
   items: Array<ReactElement>
   options: UseCarouselOptions
 }

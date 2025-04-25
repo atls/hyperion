@@ -10,10 +10,10 @@ import { roundLineContainerStyles }  from './line-container.css.js'
 import { squareLineContainerStyles } from './line-container.css.js'
 
 export const LineContainer = forwardRef<HTMLDivElement, LineContainerProps>((
-  { children, trailLinecap = 'square', ...props },
+  { children, trailLinecap = 'square', backgroundColor = '$gray', ...props },
   ref
 ) => {
-  const { className, style, otherProps } = lineContainerSprinkles(props)
+  const { className, style, otherProps } = lineContainerSprinkles({ backgroundColor, ...props })
 
   return (
     <div
@@ -31,7 +31,3 @@ export const LineContainer = forwardRef<HTMLDivElement, LineContainerProps>((
     </div>
   )
 })
-
-LineContainer.defaultProps = {
-  backgroundColor: '$gray',
-}

@@ -1,5 +1,6 @@
 import type { DraggableProps }            from 'framer-motion'
 import type { DragHandlers }              from 'framer-motion'
+import type { ReactElement }              from 'react'
 
 import type { UseCarouselProps }          from './use-carousel.interfaces.js'
 import type { UseCarouselResult }         from './use-carousel.interfaces.js'
@@ -117,7 +118,8 @@ export const useCarousel = ({
       }
     }
 
-    return Children.map(items, (item, num) =>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return Children.map(items, (item: ReactElement<any>, num) =>
       // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       cloneElement(item, {
         // eslint-disable-next-line
@@ -151,7 +153,8 @@ export const useCarousel = ({
       }
     }
 
-    return Children.map(newItems, (item, num) =>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return Children.map(newItems, (item: ReactElement<any>, num) =>
       // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       cloneElement(item, {
         // eslint-disable-next-line

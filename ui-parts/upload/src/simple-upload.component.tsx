@@ -12,7 +12,8 @@ import { useDropzone }       from 'react-dropzone'
 import React                 from 'react'
 
 export interface SimpleUploadProps {
-  children: ReactElement
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  children: ReactElement<Record<string, any>>
   bucket: string
   accept?: Accept
   multiple?: boolean
@@ -64,7 +65,7 @@ export const SimpleUpload: FC<SimpleUploadProps> = ({
   }, [acceptedFiles.map((file) => file.name).join()])
 
   const content = [
-    children?.props.children ? children.props.children : null,
+    children.props.children ? children.props.children : null,
     <input key='input' {...getInputProps()} />,
   ]
 

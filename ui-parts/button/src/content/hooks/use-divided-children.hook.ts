@@ -36,7 +36,7 @@ export const useDividedChildren = (
   if (Children.count(children) > 1) {
     const combinedChildren = combineChildren(children)
 
-    return Children.map(combinedChildren, (child, index) => {
+    return Children.map(combinedChildren, async (child, index) => {
       if (index > 0) {
         return createElement(Wrapper, props, child)
       }

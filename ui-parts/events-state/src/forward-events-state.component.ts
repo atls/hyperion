@@ -1,4 +1,4 @@
-import type { MutableRefObject }        from 'react'
+import type { RefObject }               from 'react'
 
 import type { ForwardEventsStateProps } from './events-state.interfaces.js'
 
@@ -12,7 +12,7 @@ export const ForwardEventsState = forwardRef<HTMLElement, ForwardEventsStateProp
   { events, children },
   ref
 ) => {
-  const state = useEventsState(ref as MutableRefObject<HTMLElement>, events)
+  const state = useEventsState(ref as RefObject<HTMLElement>, events)
 
   if (isValidElement(children)) {
     return cloneElement(children, state)

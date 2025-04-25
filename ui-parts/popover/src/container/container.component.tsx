@@ -30,7 +30,13 @@ export const Container = forwardRef<HTMLDivElement, ContainerComponentProps>((
       <ContainerInner>{content}</ContainerInner>
     </Condition>
     <Condition match={Boolean(showArrow)}>
-      <Arrow layerSide={layerSide} {...arrowOptions} {...arrowProps} />
+      <Arrow
+        layerSide={layerSide}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+        {...arrowOptions}
+        {...arrowProps}
+      />
     </Condition>
   </motion.div>
 ))

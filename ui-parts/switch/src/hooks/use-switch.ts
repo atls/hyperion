@@ -7,7 +7,7 @@ import { useKeyboard }               from './use-keyboard.js'
 import { useSwitchState }            from './use-switch-state.js'
 
 export const useSwitch = (
-  node: RefObject<HTMLButtonElement>,
+  node: RefObject<HTMLButtonElement | null>,
   defaultValue: boolean = false,
   disabled: boolean = false,
   onChange: OnChangeCallback | undefined = undefined

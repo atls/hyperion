@@ -49,6 +49,7 @@ describe('TextTransform', () => {
       const rootElement = document.querySelector('div')
 
       // @ts-expect-error correct element type
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       window.ReactDOM.render(stringElement, rootElement)
     }, renderToString(element))
   }

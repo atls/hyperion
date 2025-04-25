@@ -8,7 +8,15 @@ import { dividedFieldsContainerSprinkles }  from './divided-fields-container.css
 import { baseDividedFieldsContainerStyles } from './divided-fields-container.css.js'
 
 export const DividedFieldsContainer = forwardRef<HTMLDivElement, DividedFieldsContainerProps>((
-  { children, paddingLeft, paddingRight, paddingRatio = 0.5, size = '16px', ...props },
+  {
+    children,
+    paddingLeft,
+    paddingRight,
+    paddingRatio = 0.5,
+    size = '16px',
+    borderWidth = '1px',
+    ...props
+  },
   ref
 ) => {
   const paddingStyles = {
@@ -18,6 +26,7 @@ export const DividedFieldsContainer = forwardRef<HTMLDivElement, DividedFieldsCo
   }
 
   const { className, style, otherProps } = dividedFieldsContainerSprinkles({
+    borderWidth,
     ...props,
     ...paddingStyles,
   })
@@ -37,7 +46,3 @@ export const DividedFieldsContainer = forwardRef<HTMLDivElement, DividedFieldsCo
     </div>
   )
 })
-
-DividedFieldsContainer.defaultProps = {
-  borderWidth: '1px',
-}

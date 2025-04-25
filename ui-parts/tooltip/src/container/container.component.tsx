@@ -18,12 +18,17 @@ export const Container = forwardRef<HTMLDivElement, ContainerComponentProps>((
     ref={ref}
     className={baseContainerStyles}
     {...(animate ? animateProps : {})}
-    transition={{ type: 'spring', damping: 30, stiffness: 500 }}
     style={style}
   >
     {text}
     <Condition match={Boolean(showArrow)}>
-      <Arrow layerSide={layerSide} {...arrowOptions} {...arrowProps} />
+      <Arrow
+        layerSide={layerSide}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+        {...arrowOptions}
+        {...arrowProps}
+      />
     </Condition>
   </motion.div>
 ))

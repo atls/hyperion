@@ -1,3 +1,4 @@
+import type { JSX }               from 'react'
 import type { PropsWithChildren } from 'react'
 import type { FC }                from 'react'
 
@@ -62,7 +63,7 @@ const Circle: FC<PropsWithChildren<CircleProps>> = ({
     (color) => Object.prototype.toString.call(color) === '[object Object]'
   )
 
-  const getStrokeList = (): Array<React.JSX.Element> => {
+  const getStrokeList = (): Array<JSX.Element> => {
     const percentList = toArray(percent)
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     const strokeColorList = toArray(strokeThemeColor)

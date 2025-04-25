@@ -7,15 +7,11 @@ import { ParallaxBoxElement }    from './parallax-box.element.js'
 import { parallaxSprinkles }     from './parallax-box.css.js'
 
 export const ParallaxBox = forwardRef<HTMLDivElement, ParallaxBoxProps>((
-  { children, ...props },
+  { children, display = 'flex', ...props },
   ref
 ) => (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  <ParallaxBoxElement ref={ref} sprinkles={parallaxSprinkles as any} {...props}>
+  <ParallaxBoxElement ref={ref} sprinkles={parallaxSprinkles as any} {...{ display }} {...props}>
     {children}
   </ParallaxBoxElement>
 ))
-
-ParallaxBox.defaultProps = {
-  display: 'flex',
-}

@@ -45,6 +45,9 @@ const Card: FC<CardProps> = ({ children, container, backdrop = false, ghost = fa
         </Condition>
         <Container
           {...cardProps}
+          animate={{ y: cardProps.animate.y }}
+          initial={{ y: cardProps.initial.y }}
+          exit={{ y: cardProps.exit.y }}
           style={{
             height: 'min-content',
             borderRadius: !ghost ? 10 : 0,

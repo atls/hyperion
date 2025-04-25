@@ -7,8 +7,11 @@ import React               from 'react'
 import { SYMBOL_SPACE }    from './space.constants.js'
 import { spaceSprinkles }  from './space.css.js'
 
-export const Space = forwardRef<HTMLSpanElement, SpaceProps>(({ count = 1, ...props }, ref) => {
-  const { className, style, otherProps } = spaceSprinkles(props)
+export const Space = forwardRef<HTMLSpanElement, SpaceProps>((
+  { count = 1, display = 'inline-flex', ...props },
+  ref
+) => {
+  const { className, style, otherProps } = spaceSprinkles({ display, ...props })
 
   return (
     <span
@@ -21,7 +24,3 @@ export const Space = forwardRef<HTMLSpanElement, SpaceProps>(({ count = 1, ...pr
     </span>
   )
 })
-
-Space.defaultProps = {
-  display: 'inline-flex',
-}

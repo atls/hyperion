@@ -6,14 +6,17 @@ import React                     from 'react'
 import { FooterElement }         from './footer.element.js'
 import { htmlElementSprinkles }  from '../html-element.css.js'
 
-export const Footer = forwardRef<HTMLElement, HTMLElementProps>(({ children, ...props }, ref) => (
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  <FooterElement ref={ref} sprinkles={htmlElementSprinkles as any} {...props}>
+export const Footer = forwardRef<HTMLElement, HTMLElementProps>((
+  { children, display = 'flex', boxSizing = 'border-box', ...props },
+  ref
+) => (
+  <FooterElement
+    ref={ref}
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    sprinkles={htmlElementSprinkles as any}
+    {...{ display, boxSizing }}
+    {...props}
+  >
     {children}
   </FooterElement>
 ))
-
-Footer.defaultProps = {
-  display: 'flex',
-  boxSizing: 'border-box',
-}
