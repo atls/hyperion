@@ -1,4 +1,4 @@
-import type { FC }             from 'react'
+import type { ReactNode }      from 'react'
 
 import type { TooltipProps }   from './tooltip.interfaces.js'
 
@@ -9,7 +9,7 @@ import React                   from 'react'
 import { defaultTooltipProps } from './tooltip.constants.js'
 import { useTooltip }          from './use-tooltip.hook.js'
 
-export const Tooltip: FC<TooltipProps> = ({ children, text, ...props }) => {
+export const Tooltip = ({ children, text, ...props }: TooltipProps): ReactNode => {
   const { isOpen, close, triggerProps, render } = useTooltip({ ...defaultTooltipProps, ...props })
 
   if (typeof children === 'function')

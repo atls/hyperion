@@ -1,4 +1,4 @@
-import type { FC }                 from 'react'
+import type { ReactNode }          from 'react'
 
 import type { RendererProps }      from './renderer.interfaces.js'
 
@@ -14,7 +14,7 @@ import { Box }                     from '@atls-ui-parts/layout'
 
 import { rendererContainerStyles } from './renderer.css.js'
 
-export const Renderer: FC<RendererProps> = ({ children, className, opened, ...props }) => {
+export const Renderer = ({ children, className, opened, ...props }: RendererProps): ReactNode => {
   const [body, setBody] = useState<HTMLElement | null>(null)
 
   useEffect(() => {

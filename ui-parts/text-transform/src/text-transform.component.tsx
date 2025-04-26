@@ -1,13 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 
-import type { FC }                 from 'react'
+import type { ReactNode }          from 'react'
 
 import type { TextTransformProps } from './text-transform.interfaces.js'
 
-export const TextTransform: FC<TextTransformProps> = ({
-  children,
-  ...props
-}: TextTransformProps) => {
+export const TextTransform = ({ children, ...props }: TextTransformProps): ReactNode => {
   try {
     const transformed = Object.keys(props).reduce((result, key) => {
       const args = props[key as keyof typeof props]

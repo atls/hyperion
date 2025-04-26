@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 
-import type { FC }           from 'react'
+import type { ReactNode }    from 'react'
 import type { ReactElement } from 'react'
 import type { Accept }       from 'react-dropzone'
 
@@ -27,14 +27,14 @@ export interface UploadResult {
   preview?: string
 }
 
-export const SimpleUpload: FC<SimpleUploadProps> = ({
+export const SimpleUpload = ({
   children,
   bucket,
   accept,
   multiple = false,
   onPreview,
   onFile,
-}) => {
+}: SimpleUploadProps): ReactNode => {
   const upload = useUpload({ bucket })
 
   const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject, acceptedFiles } =

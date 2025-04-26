@@ -1,4 +1,4 @@
-import type { FC }          from 'react'
+import type { ReactNode }   from 'react'
 
 import type { SwitchProps } from './switch.interfaces.js'
 
@@ -9,7 +9,7 @@ import { Handle }           from './handle/index.js'
 import { Thumb }            from './thumb/index.js'
 import { useSwitch }        from './hooks/index.js'
 
-export const Switch: FC<SwitchProps> = ({ disabled, checked: defaultValue, onChange }) => {
+export const Switch = ({ disabled, checked: defaultValue, onChange }: SwitchProps): ReactNode => {
   const node = useRef<HTMLButtonElement>(null)
 
   const [checked, setChecked] = useSwitch(node, defaultValue, disabled, onChange)

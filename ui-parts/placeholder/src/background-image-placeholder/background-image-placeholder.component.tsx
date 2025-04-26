@@ -1,4 +1,4 @@
-import type { FC }                              from 'react'
+import type { ReactNode }                       from 'react'
 
 import type { BackgroundImagePlaceholderProps } from './background-image-placeholder.interfaces.js'
 
@@ -7,7 +7,9 @@ import React                                    from 'react'
 
 import { backgroundImagePlaceholderStyles }     from './background-image-placeholder.css.js'
 
-export const BackgroundImagePlaceholder: FC<BackgroundImagePlaceholderProps> = ({
+export const BackgroundImagePlaceholder = ({
   className,
   ...props
-}) => <div className={clsx(backgroundImagePlaceholderStyles, className)} {...props} />
+}: BackgroundImagePlaceholderProps): ReactNode => (
+  <div className={clsx(backgroundImagePlaceholderStyles, className)} {...props} />
+)

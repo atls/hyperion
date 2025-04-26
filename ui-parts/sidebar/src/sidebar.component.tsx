@@ -1,4 +1,4 @@
-import type { FC }                from 'react'
+import type { ReactNode }         from 'react'
 import type { PropsWithChildren } from 'react'
 
 import React                      from 'react'
@@ -13,7 +13,7 @@ import { Pinner }                 from './pinner/index.js'
 import { Wrapper }                from './wrapper/index.js'
 import { usePinnedState }         from './hooks/index.js'
 
-export const Sidebar: FC<PropsWithChildren> = ({ children }) => {
+export const Sidebar = ({ children }: PropsWithChildren): ReactNode => {
   const [hovered, hoverProps] = useHover()
   const [pinned, setPinned] = usePinnedState()
 

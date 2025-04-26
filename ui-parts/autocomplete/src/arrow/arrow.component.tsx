@@ -1,4 +1,4 @@
-import type { FC }         from 'react'
+import type { ReactNode }  from 'react'
 
 import type { ArrowProps } from './arrow.interfaces.js'
 
@@ -8,7 +8,7 @@ import React               from 'react'
 import { baseArrowStyles } from './arrow.css.js'
 import { openArrowStyles } from './arrow.css.js'
 
-export const Arrow: FC<ArrowProps> = ({ className, isOpen, ...props }) => (
+export const Arrow = ({ className, isOpen, ...props }: ArrowProps): ReactNode => (
   <svg
     className={clsx(className, baseArrowStyles, isOpen && openArrowStyles)}
     width={16}

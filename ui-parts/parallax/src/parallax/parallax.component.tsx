@@ -1,4 +1,4 @@
-import type { FC }            from 'react'
+import type { ReactNode }     from 'react'
 
 import type { ParallaxProps } from './parallax.interfaces.js'
 
@@ -15,7 +15,7 @@ import { ParallaxStore }      from '../context/index.js'
 import { Provider }           from '../context/index.js'
 import { baseParallaxStyles } from './parallax.css.js'
 
-export const Parallax: FC<ParallaxProps> = ({ children, className, isIphone, ...props }) => {
+export const Parallax = ({ children, className, isIphone, ...props }: ParallaxProps): ReactNode => {
   const parallaxRef = useRef<HTMLDivElement>(null)
 
   const { scrollY: scrollViewport } = useScroll()

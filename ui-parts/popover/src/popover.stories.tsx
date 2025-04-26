@@ -1,6 +1,6 @@
 import type { Meta }              from '@storybook/react'
 import type { StoryObj }          from '@storybook/react'
-import type { FC }                from 'react'
+import type { ReactNode }         from 'react'
 import type { HTMLAttributes }    from 'react'
 import type { MouseEventHandler } from 'react'
 
@@ -50,7 +50,7 @@ export const Base: StoryObj = {
   ),
 }
 
-const TestContent: FC<{ onClick: MouseEventHandler<HTMLButtonElement> }> = ({ onClick }) => (
+const TestContent = ({ onClick }: { onClick: MouseEventHandler<HTMLButtonElement> }): ReactNode => (
   <div>
     <div>Content</div>
     <button type='button' className={closeButtonStyles} onClick={onClick}>
@@ -59,7 +59,7 @@ const TestContent: FC<{ onClick: MouseEventHandler<HTMLButtonElement> }> = ({ on
   </div>
 )
 
-const PopoverHook: FC = () => {
+const PopoverHook = (): ReactNode => {
   const { triggerProps, render, close, isOpen } = usePopover({ animate: true })
 
   return (

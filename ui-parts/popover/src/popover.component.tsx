@@ -1,4 +1,4 @@
-import type { FC }                from 'react'
+import type { ReactNode }         from 'react'
 import type { PropsWithChildren } from 'react'
 
 import type { PopoverProps }      from './popover.interfaces.js'
@@ -9,7 +9,7 @@ import React                      from 'react'
 
 import { usePopover }             from './use-popover.hook.js'
 
-export const Popover: FC<PropsWithChildren<PopoverProps>> = ({
+export const Popover = ({
   title,
   content,
   children,
@@ -17,7 +17,7 @@ export const Popover: FC<PropsWithChildren<PopoverProps>> = ({
   triggerOffset = 15,
   showArrow = true,
   ...props
-}) => {
+}: PropsWithChildren<PopoverProps>): ReactNode => {
   const { isOpen, close, triggerProps, render } = usePopover({
     animate,
     triggerOffset,

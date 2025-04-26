@@ -1,4 +1,4 @@
-import type { FC }             from 'react'
+import type { ReactNode }      from 'react'
 
 import type { WrapperProps }   from './wrapper.interfaces.js'
 
@@ -8,7 +8,7 @@ import React                   from 'react'
 import { pinnedWrapperStyles } from './wrapper.css.js'
 import { baseWrapperStyles }   from './wrapper.css.js'
 
-export const Wrapper: FC<WrapperProps> = ({ children, pinned, className, ...props }) => (
+export const Wrapper = ({ children, pinned, className, ...props }: WrapperProps): ReactNode => (
   <div className={clsx(className, baseWrapperStyles, pinned && pinnedWrapperStyles)} {...props}>
     {children}
   </div>

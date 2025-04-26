@@ -1,7 +1,7 @@
 import type { HTMLAttributes }      from 'react'
 import type { PropsWithChildren }   from 'react'
 import type { ReactElement }        from 'react'
-import type { FC }                  from 'react'
+import type { ReactNode }           from 'react'
 
 import { Children }                 from 'react'
 import { clsx }                     from 'clsx'
@@ -11,7 +11,7 @@ import React                        from 'react'
 import { useParallax }              from '../context/index.js'
 import { baseParallaxScreenStyles } from './parallax-screen.css.js'
 
-const ParallaxScreenContent: FC<PropsWithChildren> = ({ children }) => {
+const ParallaxScreenContent = ({ children }: PropsWithChildren): ReactNode => {
   const [, height] = useParallax()
 
   if (!height) return null
@@ -20,11 +20,11 @@ const ParallaxScreenContent: FC<PropsWithChildren> = ({ children }) => {
   return Children.map(children, (child) => cloneElement(child as ReactElement<any>, { height }))
 }
 
-export const ParallaxScreen: FC<HTMLAttributes<HTMLDivElement>> = ({
+export const ParallaxScreen = ({
   children,
   className,
   ...props
-}) => (
+}: HTMLAttributes<HTMLDivElement>): ReactNode => (
   <div className={clsx(className, baseParallaxScreenStyles)} {...props}>
     <ParallaxScreenContent>{children}</ParallaxScreenContent>
   </div>

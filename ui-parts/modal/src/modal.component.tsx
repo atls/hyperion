@@ -1,4 +1,4 @@
-import type { FC }         from 'react'
+import type { ReactNode }  from 'react'
 
 import type { ModalProps } from './modal.interfaces.js'
 
@@ -11,7 +11,7 @@ import { Portal }          from '@atls-ui-parts/portal'
 import { Backdrop }        from './backdrop/index.js'
 import { Container }       from './container/index.js'
 
-export const Modal: FC<ModalProps> = ({ children, open, onClose }) => (
+export const Modal = ({ children, open, onClose }: ModalProps): ReactNode => (
   <AnimatePresence>
     <Condition match={Boolean(open)}>
       <Portal>

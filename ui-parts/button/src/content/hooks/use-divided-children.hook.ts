@@ -1,4 +1,3 @@
-import type { FC }        from 'react'
 import type { ReactNode } from 'react'
 
 import { Children }       from 'react'
@@ -30,7 +29,8 @@ const combineChildren = (children: ReactNode): Array<ReactNode> => {
 
 export const useDividedChildren = (
   children: ReactNode,
-  Wrapper: FC,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  Wrapper: (props: Record<string, any>) => ReactNode,
   props = {}
 ): Array<ReactNode> | ReactNode => {
   if (Children.count(children) > 1) {

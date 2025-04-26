@@ -1,4 +1,4 @@
-import type { FC }                   from 'react'
+import type { ReactNode }            from 'react'
 
 import type { LogoPlaceholderProps } from './logo-placeholder.interfaces.js'
 
@@ -9,12 +9,12 @@ import { Text }                      from '@atls-ui-parts/text'
 
 import { ImagePlaceholder }          from '../image-placeholder/index.js'
 
-export const LogoPlaceholder: FC<LogoPlaceholderProps> = ({
+export const LogoPlaceholder = ({
   type = 'horizontal',
   children = 'Логотип',
   color = 'black',
   size = 32,
-}) => (
+}: LogoPlaceholderProps): ReactNode => (
   <Layout
     flexDirection={type === 'horizontal' ? 'row' : 'column'}
     display='inline-flex'

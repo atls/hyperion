@@ -2,7 +2,7 @@
 
 import type { Meta }            from '@storybook/react'
 import type { StoryObj }        from '@storybook/react'
-import type { FC }              from 'react'
+import type { ReactNode }       from 'react'
 import type { SVGProps }        from 'react'
 
 import type { PaginationProps } from '../src/pagination/index.js'
@@ -22,7 +22,7 @@ import { useAddonNavigation }   from '../src/hooks/index.js'
 import { useAddonPagination }   from '../src/hooks/index.js'
 import { useCarousel }          from '../src/hooks/index.js'
 
-const StoryArrow: FC<SVGProps<SVGSVGElement>> = (props) => (
+const StoryArrow = (props: SVGProps<SVGSVGElement>): ReactNode => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 448 512'

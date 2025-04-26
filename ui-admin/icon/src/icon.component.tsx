@@ -1,4 +1,4 @@
-import type { FC }           from 'react'
+import type { ReactNode }    from 'react'
 
 import type { IconProps }    from './icon.interfaces.js'
 
@@ -7,7 +7,7 @@ import React                 from 'react'
 
 import { spinLoadingStyles } from './icon.css.js'
 
-export const Icon: FC<IconProps> = ({ className, spin, children, ...props }) => (
+export const Icon = ({ className, spin, children, ...props }: IconProps): ReactNode => (
   <svg className={clsx(className, spin && spinLoadingStyles)} {...props}>
     {children}
   </svg>

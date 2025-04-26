@@ -1,4 +1,4 @@
-import type { FC }             from 'react'
+import type { ReactNode }      from 'react'
 
 import type { ThumbProps }     from './thumb.interfaces.js'
 
@@ -12,12 +12,12 @@ import { disabledThumbStyles } from './thumb.css.js'
 import { thumbSprinkles }      from './thumb.css.js'
 import { thumbMotionVariants } from './thumb.motion.js'
 
-export const Thumb: FC<ThumbProps> = ({
+export const Thumb = ({
   checked,
   disabled,
   variants = thumbMotionVariants,
   ...props
-}) => {
+}: ThumbProps): ReactNode => {
   const initial = useMemo(() => (checked ? 'checked' : 'visible'), [checked])
 
   const { className, style, otherProps } = thumbSprinkles(props)

@@ -1,6 +1,7 @@
+import type { ButtonProps }    from '@atls-ui-admin/button'
 import type { Meta }           from '@storybook/react'
 import type { StoryObj }       from '@storybook/react'
-import type { FC }             from 'react'
+import type { ReactNode }      from 'react'
 
 import { useTheme }            from 'next-themes'
 import React                   from 'react'
@@ -11,7 +12,7 @@ import { ThemeProvider }       from '@atls-ui-admin/theme'
 import { DropzonePlaceholder } from './index.js'
 import { Upload }              from './index.js'
 
-const ToggleTheme: FC = (props) => {
+const ToggleTheme = (props: ButtonProps): ReactNode => {
   const { theme, setTheme } = useTheme()
 
   return (
