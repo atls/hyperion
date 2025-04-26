@@ -13,7 +13,6 @@ import { useAnimation }                   from 'framer-motion'
 import { cloneElement }                   from 'react'
 import { useState }                       from 'react'
 import { useEffect }                      from 'react'
-import { useCallback }                    from 'react'
 
 import { getContentDimensions }           from '@atls-ui-parts/dom'
 import { useWindowSize }                  from '@atls-ui-parts/dom'
@@ -104,7 +103,7 @@ export const useCarousel = ({
     }
   }, [wrapperSize, slideSize, slidesLength])
 
-  const getSlides = useCallback(() => {
+  const getSlides = (): Array<ReactElement> => {
     const getSlideStyles = (num: number, length: number): GetSlideStylesReturn => {
       if (direction === 'horizontal') {
         return {
@@ -130,9 +129,8 @@ export const useCarousel = ({
           ...getSlideStyles(num, slidesLength),
         },
       }))
-  }, [items, direction, slideSize, slidesLength, spaceBetween])
-
-  const getLoopSlides = useCallback(() => {
+  }
+  const getLoopSlides = (): Array<ReactElement> => {
     const newItems = [...items]
 
     for (let i = 0; i < slidesPerView; i += 1) {
@@ -165,7 +163,7 @@ export const useCarousel = ({
           ...getSlideStyles(),
         },
       }))
-  }, [items, direction, slideSize, slidesPerView, spaceBetween])
+  }
 
   const slideToIndex: CarouselSlideToIndex = (index, duration = transitionDuration) => {
     const valueAnimateTo =

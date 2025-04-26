@@ -5,7 +5,6 @@ import type { ParallaxProps } from './parallax.interfaces.js'
 import { clsx }               from 'clsx'
 import { useScroll }          from 'framer-motion'
 import { useEffect }          from 'react'
-import { useMemo }            from 'react'
 import { useRef }             from 'react'
 import React                  from 'react'
 
@@ -23,10 +22,7 @@ export const Parallax = ({ children, className, isIphone, ...props }: ParallaxPr
 
   const { innerHeight } = useWindowSize()
 
-  const store = useMemo(
-    () => new ParallaxStore(isIphone ? scrollElement : scrollViewport, innerHeight),
-    [innerHeight, isIphone, scrollElement, scrollViewport]
-  )
+  const store = new ParallaxStore(isIphone ? scrollElement : scrollViewport, innerHeight)
 
   useEffect(() => {
     if (!isIphone) return

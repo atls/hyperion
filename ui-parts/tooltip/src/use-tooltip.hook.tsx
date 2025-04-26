@@ -7,7 +7,6 @@ import type { UseTooltipReturn }  from './tooltip.interfaces.js'
 
 import { AnimatePresence }        from 'framer-motion'
 import { cloneElement }           from 'react'
-import { useMemo }                from 'react'
 import { useLayer }               from 'react-laag'
 import React                      from 'react'
 
@@ -45,25 +44,21 @@ export const useTooltip = ({
     delayLeave: mouseLeaveDelay,
   })
 
-  const [isTriggered, close, customTriggerProps] = useMemo(() => {
-    let triggerValues: [boolean, () => void, object] = [false, doNothing, {}]
+  let triggerValues: [boolean, () => void, object] = [false, doNothing, {}]
 
-    if (trigger === 'menu') {
-      triggerValues = [isContextMenu, closeContextMenu, contextMenuProps]
-    } //
-    else if (trigger === 'click') {
-      triggerValues = [isClicked, closeClicked, clickedProps]
-    } //
-    else if (trigger === 'hover') {
-      triggerValues = [isOver, doNothing, hoverProps]
-    }
+  if (trigger === 'menu') {
+    triggerValues = [isContextMenu, closeContextMenu, contextMenuProps]
+  } else if (trigger === 'click') {
+    triggerValues = [isClicked, closeClicked, clickedProps]
+  } else if (trigger === 'hover') {
+    triggerValues = [isOver, doNothing, hoverProps]
+  }
 
-    if (typeof isOpen === 'boolean') {
-      triggerValues[0] = isOpen
-    }
+  if (typeof isOpen === 'boolean') {
+    triggerValues[0] = isOpen
+  }
 
-    return triggerValues
-  }, [trigger, isOpen, isContextMenu, isClicked, isOver])
+  const [isTriggered, close, customTriggerProps] = triggerValues
 
   const { arrowProps, triggerProps, layerProps, layerSide, renderLayer } = useLayer({
     isOpen: isTriggered,

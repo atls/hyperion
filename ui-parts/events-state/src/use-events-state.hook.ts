@@ -4,7 +4,6 @@ import type { EventsState }   from './events-state.interfaces.js'
 
 import { useEffect }          from 'react'
 import { useState }           from 'react'
-import { useMemo }            from 'react'
 
 import { fillOppositeEvents } from './events-state.utils.js'
 import { mergeState }         from './events-state.utils.js'
@@ -13,7 +12,7 @@ export const useEventsState = (
   ref: RefObject<HTMLElement>,
   originalEvents: Array<string> = []
 ): EventsState => {
-  const events = useMemo(() => fillOppositeEvents(originalEvents), [originalEvents])
+  const events = fillOppositeEvents(originalEvents)
 
   const [state, setState] = useState<EventsState>(() =>
     events.reduce(

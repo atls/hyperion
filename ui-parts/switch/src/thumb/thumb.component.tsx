@@ -4,7 +4,6 @@ import type { ThumbProps }     from './thumb.interfaces.js'
 
 import { clsx }                from 'clsx'
 import { motion }              from 'framer-motion'
-import { useMemo }             from 'react'
 import React                   from 'react'
 
 import { baseThumbStyles }     from './thumb.css.js'
@@ -18,7 +17,7 @@ export const Thumb = ({
   variants = thumbMotionVariants,
   ...props
 }: ThumbProps): ReactNode => {
-  const initial = useMemo(() => (checked ? 'checked' : 'visible'), [checked])
+  const initial = checked ? 'checked' : 'visible'
 
   const { className, style, otherProps } = thumbSprinkles(props)
 
