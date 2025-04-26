@@ -1067,7 +1067,6 @@ __metadata:
     "@types/react": "npm:19.1.2"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
-    react-laag: "npm:2.0.5"
   peerDependencies:
     react: "*"
     react-dom: "*"
