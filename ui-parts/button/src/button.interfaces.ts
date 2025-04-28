@@ -1,5 +1,6 @@
 import type { RecipeVariants }       from '@vanilla-extract/recipes'
 import type { ButtonHTMLAttributes } from 'react'
+import type { Ref }                  from 'react'
 import type { JSX }                  from 'react'
 
 import type { buttonStyles }         from './styles/index.js'
@@ -17,4 +18,5 @@ export enum IconPlacement {
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, ButtonVariants {
   icon?: JSX.Element
   iconPlacement?: IconPlacement
+  ref?: Ref<HTMLButtonElement>
 }

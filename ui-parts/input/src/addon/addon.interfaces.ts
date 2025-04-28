@@ -1,4 +1,5 @@
 import type { HTMLAttributes } from 'react'
+import type { Ref }            from 'react'
 
 import type { AddonSprinkles } from './addon.css.js'
 
@@ -8,4 +9,5 @@ export interface AddonProps extends Omit<HTMLAttributes<HTMLDivElement>, 'color'
   paddingRatio?: number
   rounding?: string
   size?: string
+  ref?: Ref<HTMLDivElement>
 }

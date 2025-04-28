@@ -1,18 +1,22 @@
+import type { ReactNode }       from 'react'
+
 import type { AttachmentProps } from './attachment.interfaces.js'
 
 import { clsx }                 from 'clsx'
-import { forwardRef }           from 'react'
 import React                    from 'react'
 
 import { attachmentSprinkles }  from './attachment.css.js'
 import { attachmentBaseStyles } from './attachment.css.js'
 
-export const Attachment = forwardRef<HTMLDivElement, AttachmentProps>((
-  { children, type = 'prefix', offsetLeft, offsetRight, ...props },
-  ref
-) => {
+export const Attachment = ({
+  children,
+  type = 'prefix',
+  offsetLeft,
+  offsetRight,
+  ref,
+  ...props
+}: AttachmentProps): ReactNode => {
   const typeStyles = type === 'prefix' ? { paddingRight: offsetLeft } : { paddingLeft: offsetRight }
-
   const { className, style, otherProps } = attachmentSprinkles({ ...props, ...typeStyles })
 
   return (
@@ -25,4 +29,4 @@ export const Attachment = forwardRef<HTMLDivElement, AttachmentProps>((
       {children}
     </div>
   )
-})
+}

@@ -1,17 +1,15 @@
-import type { HTMLMotionProps } from 'framer-motion'
+import type { ReactNode }      from 'react'
 
-import { clsx }                 from 'clsx'
-import { motion }               from 'framer-motion'
-import { forwardRef }           from 'react'
-import React                    from 'react'
+import type { ContainerProps } from './container.interfaces.js'
 
-import { containerStyles }      from './container.css.js'
+import { clsx }                from 'clsx'
+import { motion }              from 'framer-motion'
+import React                   from 'react'
 
-export const Container = forwardRef<HTMLDivElement, HTMLMotionProps<'div'>>((
-  { children, className, ...props },
-  ref
-) => (
+import { containerStyles }     from './container.css.js'
+
+export const Container = ({ children, className, ref, ...props }: ContainerProps): ReactNode => (
   <motion.div ref={ref} className={clsx(className, containerStyles)} {...props}>
     {children}
   </motion.div>
-))
+)

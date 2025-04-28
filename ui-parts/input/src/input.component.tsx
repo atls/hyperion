@@ -1,16 +1,23 @@
 'use client'
 
+import type { ReactNode }  from 'react'
+
 import type { InputProps } from './input.interfaces.js'
 
-import { forwardRef }      from 'react'
 import React               from 'react'
 
 import { inputStyles }     from './styles/index.js'
 
-export const Input = forwardRef<HTMLInputElement, InputProps>((
-  { size, value, type = 'text', variant = 'blue', disabled, onChange, ...props },
-  ref
-) => (
+export const Input = ({
+  size,
+  value,
+  type = 'text',
+  variant = 'blue',
+  disabled,
+  onChange,
+  ref,
+  ...props
+}: InputProps): ReactNode => (
   <input
     ref={ref}
     value={value}
@@ -24,4 +31,4 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((
     onChange={onChange}
     {...props}
   />
-))
+)

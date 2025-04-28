@@ -1,16 +1,14 @@
-import type { HTMLAttributes } from 'react'
+import type { ReactNode }      from 'react'
+
+import type { ContainerProps } from './container.interfaces.js'
 
 import { clsx }                from 'clsx'
-import { forwardRef }          from 'react'
 import React                   from 'react'
 
 import { containerStyles }     from './container.css.js'
 
-export const Container = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>((
-  { children, className, ...props },
-  ref
-) => (
+export const Container = ({ children, className, ref, ...props }: ContainerProps): ReactNode => (
   <div ref={ref} className={clsx(className, containerStyles)} {...props}>
     {children}
   </div>
-))
+)

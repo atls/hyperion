@@ -1,7 +1,8 @@
+import type { ReactNode }          from 'react'
+
 import type { LinePercentProps }   from './line-percent.interfaces.js'
 
 import { clsx }                    from 'clsx'
-import { forwardRef }              from 'react'
 import React                       from 'react'
 
 import { baseLinePercentStyles }   from './line-percent.css.js'
@@ -9,10 +10,12 @@ import { linePercentSprinkles }    from './line-percent.css.js'
 import { roundLinePercentStyles }  from './line-percent.css.js'
 import { squareLinePercentStyles } from './line-percent.css.js'
 
-export const LinePercent = forwardRef<HTMLDivElement, LinePercentProps>((
-  { children, strokeLinecap = 'square', ...props },
-  ref
-) => {
+export const LinePercent = ({
+  children,
+  strokeLinecap = 'square',
+  ref,
+  ...props
+}: LinePercentProps): ReactNode => {
   const { className, style, otherProps } = linePercentSprinkles(props)
 
   return (
@@ -30,4 +33,4 @@ export const LinePercent = forwardRef<HTMLDivElement, LinePercentProps>((
       {children}
     </div>
   )
-})
+}

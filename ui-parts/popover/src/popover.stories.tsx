@@ -4,7 +4,6 @@ import type { ReactNode }         from 'react'
 import type { HTMLAttributes }    from 'react'
 import type { MouseEventHandler } from 'react'
 
-import { forwardRef }             from 'react'
 import React                      from 'react'
 
 import { Column }                 from '@atls-ui-parts/layout'
@@ -22,14 +21,11 @@ const meta: Meta = {
 
 export default meta
 
-const TestButton = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>((
-  { children, ...props },
-  ref
-) => (
-  <div ref={ref} className={testButtonStyles} {...props}>
+const TestButton = ({ children, ...props }: HTMLAttributes<HTMLDivElement>): ReactNode => (
+  <div className={testButtonStyles} {...props}>
     {children}
   </div>
-))
+)
 
 export const Base: StoryObj = {
   name: 'Базовый',

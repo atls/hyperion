@@ -1,4 +1,5 @@
 import type { HTMLAttributes } from 'react'
+import type { Ref }            from 'react'
 import type { ReactNode }      from 'react'
 
 export interface CheckboxProps extends HTMLAttributes<HTMLDivElement> {
@@ -8,4 +9,5 @@ export interface CheckboxProps extends HTMLAttributes<HTMLDivElement> {
   size?: 'large' | 'medium' | 'small'
   color?: 'blue' | 'green' | 'red'
   icon?: ReactNode
+  ref?: Ref<HTMLDivElement>
 }

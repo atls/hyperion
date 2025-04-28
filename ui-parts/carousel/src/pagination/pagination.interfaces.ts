@@ -1,4 +1,5 @@
 import type { HTMLAttributes }      from 'react'
+import type { Ref }                 from 'react'
 
 import type { PaginationSprinkles } from './pagination.css.js'
 
@@ -17,4 +18,5 @@ export interface PaginationProps
     PaginationSprinkles {
   active?: boolean
   activeStyleOptions?: ActiveStyles
+  ref?: Ref<HTMLDivElement>
 }

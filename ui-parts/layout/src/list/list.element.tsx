@@ -1,15 +1,20 @@
+import type { ReactNode }        from 'react'
+
 import type { ListElementProps } from './list.interfaces.js'
 
 import { clsx }                  from 'clsx'
 import { createElement }         from 'react'
-import { forwardRef }            from 'react'
 
 import { fillStyles }            from '../styles/index.js'
 
-export const ListElement = forwardRef<HTMLUListElement, ListElementProps>((
-  { children, sprinkles, fill, numeric, ...props },
-  ref
-) => {
+export const ListElement = ({
+  children,
+  sprinkles,
+  fill,
+  numeric,
+  ref,
+  ...props
+}: ListElementProps): ReactNode => {
   const { className, style, otherProps } = sprinkles(props)
 
   return createElement(
@@ -22,4 +27,4 @@ export const ListElement = forwardRef<HTMLUListElement, ListElementProps>((
     },
     children
   )
-})
+}

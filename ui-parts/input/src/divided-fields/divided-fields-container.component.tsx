@@ -1,24 +1,23 @@
+import type { ReactNode }                   from 'react'
+
 import type { DividedFieldsContainerProps } from './divided-fields-container.interfaces.js'
 
 import { clsx }                             from 'clsx'
-import { forwardRef }                       from 'react'
 import React                                from 'react'
 
 import { dividedFieldsContainerSprinkles }  from './divided-fields-container.css.js'
 import { baseDividedFieldsContainerStyles } from './divided-fields-container.css.js'
 
-export const DividedFieldsContainer = forwardRef<HTMLDivElement, DividedFieldsContainerProps>((
-  {
-    children,
-    paddingLeft,
-    paddingRight,
-    paddingRatio = 0.5,
-    size = '16px',
-    borderWidth = '1px',
-    ...props
-  },
-  ref
-) => {
+export const DividedFieldsContainer = ({
+  children,
+  paddingLeft,
+  paddingRight,
+  paddingRatio = 0.5,
+  size = '16px',
+  borderWidth = '1px',
+  ref,
+  ...props
+}: DividedFieldsContainerProps): ReactNode => {
   const paddingStyles = {
     size,
     paddingLeft: paddingLeft || `${parseInt(size, 10) * paddingRatio}px`,
@@ -45,4 +44,4 @@ export const DividedFieldsContainer = forwardRef<HTMLDivElement, DividedFieldsCo
       {children}
     </div>
   )
-})
+}

@@ -1,4 +1,5 @@
 import type { HTMLAttributes }                  from 'react'
+import type { Ref }                             from 'react'
 
 import type { DividedFieldsContainerSprinkles } from './divided-fields-container.css.js'
 
@@ -7,4 +8,5 @@ export interface DividedFieldsContainerProps
     DividedFieldsContainerSprinkles {
   paddingRatio?: number
   size?: string
+  ref?: Ref<HTMLDivElement>
 }

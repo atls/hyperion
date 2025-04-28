@@ -1,15 +1,19 @@
+import type { ReactNode }        from 'react'
+
 import type { HTMLElementProps } from '../html-element.interfaces.js'
 
-import { forwardRef }            from 'react'
 import React                     from 'react'
 
 import { SectionElement }        from './section.element.js'
 import { htmlElementSprinkles }  from '../html-element.css.js'
 
-export const Section = forwardRef<HTMLElement, HTMLElementProps>((
-  { children, display = 'flex', boxSizing = 'border-box', ...props },
-  ref
-) => (
+export const Section = ({
+  children,
+  display = 'flex',
+  boxSizing = 'border-box',
+  ref,
+  ...props
+}: HTMLElementProps): ReactNode => (
   <SectionElement
     ref={ref}
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -19,4 +23,4 @@ export const Section = forwardRef<HTMLElement, HTMLElementProps>((
   >
     {children}
   </SectionElement>
-))
+)

@@ -1,12 +1,12 @@
-import type { InputHTMLAttributes } from 'react'
+import type { ReactNode }        from 'react'
 
-import { clsx }                     from 'clsx'
-import { forwardRef }               from 'react'
-import React                        from 'react'
+import type { HiddenInputProps } from './hidden-input.interfaces.js'
 
-import { hiddenInputStyles }        from './hidden-input.css.js'
+import { clsx }                  from 'clsx'
+import React                     from 'react'
 
-export const HiddenInput = forwardRef<HTMLInputElement, InputHTMLAttributes<HTMLInputElement>>((
-  { className, ...props },
-  ref
-) => <input ref={ref} className={clsx({ className, hiddenInputStyles })} {...props} />)
+import { hiddenInputStyles }     from './hidden-input.css.js'
+
+export const HiddenInput = ({ className, ref, ...props }: HiddenInputProps): ReactNode => (
+  <input ref={ref} className={clsx({ className, hiddenInputStyles })} {...props} />
+)

@@ -3,8 +3,8 @@
 import type { Meta }           from '@storybook/react'
 import type { StoryObj }       from '@storybook/react'
 import type { HTMLAttributes } from 'react'
+import type { ReactNode }      from 'react'
 
-import { forwardRef }          from 'react'
 import { useState }            from 'react'
 import React                   from 'react'
 
@@ -26,14 +26,11 @@ const meta: Meta = {
 
 export default meta
 
-const TestButton = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>((
-  { children, ...props },
-  ref
-) => (
-  <div ref={ref} className={testButtonStyles} {...props}>
+const TestButton = ({ children, ...props }: HTMLAttributes<HTMLDivElement>): ReactNode => (
+  <div className={testButtonStyles} {...props}>
     {children}
   </div>
-))
+)
 
 export const Base: StoryObj = {
   name: 'Базовый',

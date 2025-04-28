@@ -1,7 +1,8 @@
+import type { ReactNode }            from 'react'
+
 import type { LineContainerProps }   from './line-container.interfaces.js'
 
 import { clsx }                      from 'clsx'
-import { forwardRef }                from 'react'
 import React                         from 'react'
 
 import { baseLineContainerStyles }   from './line-container.css.js'
@@ -9,10 +10,13 @@ import { lineContainerSprinkles }    from './line-container.css.js'
 import { roundLineContainerStyles }  from './line-container.css.js'
 import { squareLineContainerStyles } from './line-container.css.js'
 
-export const LineContainer = forwardRef<HTMLDivElement, LineContainerProps>((
-  { children, trailLinecap = 'square', backgroundColor = '$gray', ...props },
-  ref
-) => {
+export const LineContainer = ({
+  children,
+  trailLinecap = 'square',
+  backgroundColor = '$gray',
+  ref,
+  ...props
+}: LineContainerProps): ReactNode => {
   const { className, style, otherProps } = lineContainerSprinkles({ backgroundColor, ...props })
 
   return (
@@ -30,4 +34,4 @@ export const LineContainer = forwardRef<HTMLDivElement, LineContainerProps>((
       {children}
     </div>
   )
-})
+}

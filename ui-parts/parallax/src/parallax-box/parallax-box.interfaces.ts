@@ -1,5 +1,6 @@
 import type { HTMLMotionProps }   from 'framer-motion'
 import type { SprinklesFn }       from 'rainbow-sprinkles'
+import type { Ref }               from 'react'
 
 import type { ParallaxSprinkles } from './parallax-box.css.js'
 
@@ -13,6 +14,7 @@ export interface BaseParallaxBoxProps extends HTMLMotionProps<'div'> {
   pageNumber?: number
   ease?: ParallaxEaseType
   heightMultiplier?: number
+  ref?: Ref<HTMLDivElement>
 }
 
 export interface ParallaxBoxElementProps extends BaseParallaxBoxProps {

@@ -1,13 +1,16 @@
+import type { ReactNode }             from 'react'
+
 import type { ParagraphElementProps } from './paragraph.interfaces.js'
 
 import { clsx }                       from 'clsx'
-import { forwardRef }                 from 'react'
 import React                          from 'react'
 
-export const ParagraphElement = forwardRef<HTMLParagraphElement, ParagraphElementProps>((
-  { children, sprinkles, ...props },
-  ref
-) => {
+export const ParagraphElement = ({
+  children,
+  sprinkles,
+  ref,
+  ...props
+}: ParagraphElementProps): ReactNode => {
   const { className, style, otherProps } = sprinkles(props)
 
   return (
@@ -20,4 +23,4 @@ export const ParagraphElement = forwardRef<HTMLParagraphElement, ParagraphElemen
       {children}
     </p>
   )
-})
+}

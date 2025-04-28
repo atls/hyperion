@@ -1,31 +1,28 @@
 import type { MotionValue }             from 'framer-motion'
+import type { ReactNode }               from 'react'
 
 import type { ParallaxBoxElementProps } from './parallax-box.interfaces.js'
 
 import { clsx }                         from 'clsx'
 import { motion }                       from 'framer-motion'
-import { forwardRef }                   from 'react'
 import React                            from 'react'
 
 import { useParallax }                  from '../context/index.js'
 import { getTransform }                 from './parallax-box.utils.js'
 import { getTransformDisplay }          from './parallax-box.utils.js'
 
-export const ParallaxBoxElement = forwardRef<HTMLDivElement, ParallaxBoxElementProps>((
-  {
-    children,
-    inputRange,
-    pageNumber = 0,
-    animations = {},
-    ease = 'easeInOut',
-    heightMultiplier = 1,
-    sprinkles,
-    ...props
-  },
-  ref
-) => {
+export const ParallaxBoxElement = ({
+  children,
+  inputRange,
+  pageNumber = 0,
+  animations = {},
+  ease = 'easeInOut',
+  heightMultiplier = 1,
+  sprinkles,
+  ref,
+  ...props
+}: ParallaxBoxElementProps): ReactNode => {
   const { className, style, otherProps } = sprinkles(props)
-
   const [scrollY, windowHeight] = useParallax()
 
   const range = inputRange.map(
@@ -59,4 +56,4 @@ export const ParallaxBoxElement = forwardRef<HTMLDivElement, ParallaxBoxElementP
       {children}
     </motion.div>
   )
-})
+}

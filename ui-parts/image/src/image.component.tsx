@@ -1,19 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 
-import type { PropsWithChildren } from 'react'
-import type { ImgHTMLAttributes } from 'react'
+import type { ReactNode }  from 'react'
 
-import { clsx }                   from 'clsx'
-import { forwardRef }             from 'react'
-import React                      from 'react'
+import type { ImageProps } from './image.interfaces.js'
 
-import { baseImageStyles }        from './image.css.js'
-import { imageSprinkles }         from './image.css.js'
+import { clsx }            from 'clsx'
+import React               from 'react'
 
-export const Image = forwardRef<
-  HTMLImageElement,
-  PropsWithChildren<ImgHTMLAttributes<HTMLImageElement>>
->(({ alt, width, height, ...props }, ref) => {
+import { baseImageStyles } from './image.css.js'
+import { imageSprinkles }  from './image.css.js'
+
+export const Image = ({ alt, width, height, ref, ...props }: ImageProps): ReactNode => {
   const { className, style, otherProps } = imageSprinkles({ ...props, width, height })
 
   return (
@@ -27,4 +24,4 @@ export const Image = forwardRef<
       height={height}
     />
   )
-})
+}

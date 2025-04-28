@@ -1,16 +1,20 @@
+import type { ReactNode }       from 'react'
+
 import type { PaginationProps } from './pagination.interfaces.js'
 
 import { clsx }                 from 'clsx'
-import { forwardRef }           from 'react'
 import React                    from 'react'
 
 import { basePaginationStyles } from './pagination.css.js'
 import { paginationSprinkles }  from './pagination.css.js'
 
-export const Pagination = forwardRef<HTMLDivElement, PaginationProps>((
-  { children, active = false, activeStyleOptions, ...props },
-  ref
-) => {
+export const Pagination = ({
+  children,
+  active = false,
+  activeStyleOptions,
+  ref,
+  ...props
+}: PaginationProps): ReactNode => {
   const activeStyles = active ? activeStyleOptions : {}
 
   const { className, style, otherProps } = paginationSprinkles({ ...props, ...activeStyles })
@@ -25,4 +29,4 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>((
       {children}
     </div>
   )
-})
+}

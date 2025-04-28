@@ -1,16 +1,20 @@
+import type { ReactNode }   from 'react'
+
 import type { LayoutProps } from './layout.interfaces.js'
 
-import { forwardRef }       from 'react'
 import React                from 'react'
 
 import { LayoutElement }    from '@atls-ui-parts/layout'
 
 import { layoutSprinkles }  from './layout.css.js'
 
-export const Layout = forwardRef<HTMLDivElement, LayoutProps>((
-  { children, display = 'flex', boxSizing = 'border-box', ...props },
-  ref
-) => (
+export const Layout = ({
+  children,
+  display = 'flex',
+  boxSizing = 'border-box',
+  ref,
+  ...props
+}: LayoutProps): ReactNode => (
   <LayoutElement
     ref={ref}
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -20,4 +24,4 @@ export const Layout = forwardRef<HTMLDivElement, LayoutProps>((
   >
     {children}
   </LayoutElement>
-))
+)

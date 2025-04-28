@@ -1,4 +1,5 @@
 import type { HTMLAttributes }      from 'react'
+import type { Ref }                 from 'react'
 
 import type { NavigationSprinkles } from './navigation.css.js'
 
@@ -11,6 +12,7 @@ export interface NavigationProps
   show?: boolean
   fill?: boolean
   offset?: number | string
+  ref?: Ref<HTMLDivElement>
 }
 
 export interface CreateFillStylesResult {

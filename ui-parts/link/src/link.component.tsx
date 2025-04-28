@@ -1,9 +1,10 @@
 'use client'
 
+import type { ReactNode } from 'react'
+
 import type { LinkProps } from './link.interfaces.js'
 
 import { clsx }           from 'clsx'
-import { forwardRef }     from 'react'
 import NextLink           from 'next/link.js'
 import React              from 'react'
 
@@ -12,10 +13,7 @@ import { linkSprinkles }  from './link.css.js'
 
 const BaseLink = NextLink.default
 
-export const Link = forwardRef<HTMLAnchorElement, LinkProps>((
-  { children, href, ...props },
-  ref
-) => {
+export const Link = ({ children, href, ref, ...props }: LinkProps): ReactNode => {
   const { className, style, otherProps } = linkSprinkles(props)
 
   return (
@@ -29,4 +27,4 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>((
       {children}
     </BaseLink>
   )
-})
+}

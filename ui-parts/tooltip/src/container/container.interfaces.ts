@@ -1,5 +1,6 @@
 import type { MotionStyle }        from 'framer-motion'
 import type { ReactNode }          from 'react'
+import type { Ref }                from 'react'
 import type { LayerSide }          from 'react-laag'
 import type { UseLayerArrowProps } from 'react-laag'
 import type { Arrow }              from 'react-laag'
@@ -17,4 +18,5 @@ export interface ContainerComponentProps {
   layerSide?: LayerSide
   arrowProps?: UseLayerArrowProps
   arrowOptions?: ArrowOptions
+  ref?: Ref<HTMLDivElement>
 }

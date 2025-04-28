@@ -1,12 +1,13 @@
+import type { ReactNode }    from 'react'
+
 import type { DividerProps } from './divider.interfaces.js'
 
 import { clsx }              from 'clsx'
-import { forwardRef }        from 'react'
 import React                 from 'react'
 
 import { dividerSprinkles }  from './divider.css.js'
 
-export const Divider = forwardRef<HTMLSpanElement, DividerProps>((props, ref) => {
+export const Divider = ({ ref, ...props }: DividerProps): ReactNode => {
   const { className, style, otherProps } = dividerSprinkles(props)
 
   return (
@@ -17,4 +18,4 @@ export const Divider = forwardRef<HTMLSpanElement, DividerProps>((props, ref) =>
       style={{ ...style, ...otherProps?.style }}
     />
   )
-})
+}
