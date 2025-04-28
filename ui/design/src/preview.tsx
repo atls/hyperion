@@ -1,5 +1,5 @@
 import type { Preview }           from '@storybook/react'
-import type { FC }                from 'react'
+import type { ReactNode }         from 'react'
 import type { PropsWithChildren } from 'react'
 
 import { useEffect }              from 'react'
@@ -7,7 +7,7 @@ import React                      from 'react'
 
 import { globalThemeId }          from '@atls-ui-parts/theme'
 
-const ThemeContainer: FC<PropsWithChildren> = ({ children }) => {
+const ThemeContainer = ({ children }: PropsWithChildren): ReactNode => {
   useEffect(() => {
     document.querySelector('body')?.setAttribute('id', globalThemeId)
   }, [])

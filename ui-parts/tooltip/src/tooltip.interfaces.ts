@@ -26,13 +26,14 @@ export interface UseTooltipOptions extends Omit<UseLayerOptions, OmitOptions> {
   closeOnOutsideClick?: boolean
   animate?: boolean
   isOpen?: boolean
-  container?: ContainerFunction | ReactElement
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  container?: ContainerFunction | ReactElement<any>
   arrowOptions?: ArrowOptions
 }
 
 export interface TooltipProps extends UseTooltipOptions {
   text?: ReactNode
-  children: ChildrenFunction | ReactElement
+  children: ChildrenFunction | ReactNode
 }
 
 export interface UseTooltipReturn {

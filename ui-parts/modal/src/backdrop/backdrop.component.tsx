@@ -1,4 +1,4 @@
-import type { FC }                from 'react'
+import type { ReactNode }         from 'react'
 
 import type { BackdropProps }     from './backdrop.interfaces.js'
 
@@ -8,7 +8,7 @@ import React                      from 'react'
 import { baseBackdropStyles }     from './backdrop.css.js'
 import { backdropMotionVariants } from './backdrop.motion.js'
 
-export const Backdrop: FC<BackdropProps> = (props) => (
+export const Backdrop = (props: BackdropProps): ReactNode => (
   <motion.div
     className={baseBackdropStyles}
     variants={backdropMotionVariants}

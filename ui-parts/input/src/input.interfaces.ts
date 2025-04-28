@@ -1,5 +1,6 @@
 import type { RecipeVariants }      from '@vanilla-extract/recipes'
 import type { InputHTMLAttributes } from 'react'
+import type { Ref }                 from 'react'
 import type { JSX }                 from 'react'
 
 import type { inputStyles }         from './styles/index.js'
@@ -13,4 +14,5 @@ export type InputVariants = Pick<
 
 export interface InputProps extends InputHTMLAttributesWithoutSize, InputVariants {
   icon?: JSX.Element
+  ref?: Ref<HTMLInputElement>
 }

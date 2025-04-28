@@ -1,6 +1,6 @@
 import type { Meta }              from '@storybook/react'
 import type { StoryObj }          from '@storybook/react'
-import type { FC }                from 'react'
+import type { ReactNode }         from 'react'
 import type { PropsWithChildren } from 'react'
 
 import type { TextProps }         from '../src/text/index.js'
@@ -15,7 +15,7 @@ import { ThemeProvider }          from '@atls-ui-admin/theme'
 
 import { Text }                   from '../src/text/index.js'
 
-const ToggleTheme: FC = (props) => {
+const ToggleTheme = (): ReactNode => {
   const { theme, setTheme } = useTheme()
 
   return (
@@ -24,7 +24,6 @@ const ToggleTheme: FC = (props) => {
       onClick={(): void => {
         setTheme(theme === 'light' ? 'dark' : 'light')
       }}
-      {...props}
     >
       Toggle Theme: {theme}
     </Button>

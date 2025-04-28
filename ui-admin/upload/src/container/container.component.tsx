@@ -1,7 +1,8 @@
+import type { ReactNode }            from 'react'
+
 import type { ContainerProps }       from './container.interfaces.js'
 
 import { clsx }                      from 'clsx'
-import { forwardRef }                from 'react'
 import React                         from 'react'
 
 import { containerStyles }           from './container.css.js'
@@ -9,10 +10,15 @@ import { containerDragAcceptStyles } from './container.css.js'
 import { containerDragActiveStyles } from './container.css.js'
 import { containerDragRejectStyles } from './container.css.js'
 
-export const Container = forwardRef<HTMLDivElement, ContainerProps>((
-  { children, isDragAccept, isDragActive, isDragReject, className, ...props },
-  ref
-) => (
+export const Container = ({
+  children,
+  isDragAccept,
+  isDragActive,
+  isDragReject,
+  className,
+  ref,
+  ...props
+}: ContainerProps): ReactNode => (
   <div
     ref={ref}
     className={clsx(
@@ -26,4 +32,4 @@ export const Container = forwardRef<HTMLDivElement, ContainerProps>((
   >
     {children}
   </div>
-))
+)

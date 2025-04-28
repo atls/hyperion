@@ -1,14 +1,20 @@
+import type { ReactNode }  from 'react'
+
 import type { SpaceProps } from './space.interfaces.js'
 
 import { clsx }            from 'clsx'
-import { forwardRef }      from 'react'
 import React               from 'react'
 
 import { SYMBOL_SPACE }    from './space.constants.js'
 import { spaceSprinkles }  from './space.css.js'
 
-export const Space = forwardRef<HTMLSpanElement, SpaceProps>(({ count = 1, ...props }, ref) => {
-  const { className, style, otherProps } = spaceSprinkles(props)
+export const Space = ({
+  count = 1,
+  display = 'inline-flex',
+  ref,
+  ...props
+}: SpaceProps): ReactNode => {
+  const { className, style, otherProps } = spaceSprinkles({ display, ...props })
 
   return (
     <span
@@ -20,8 +26,4 @@ export const Space = forwardRef<HTMLSpanElement, SpaceProps>(({ count = 1, ...pr
       {SYMBOL_SPACE.repeat(count)}
     </span>
   )
-})
-
-Space.defaultProps = {
-  display: 'inline-flex',
 }

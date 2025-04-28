@@ -3,10 +3,10 @@
 
 import type { ProcessDirectoryType } from './process-directory.interfaces.js'
 
-import { execSync }                  from 'child_process'
-import { existsSync }                from 'fs'
-import { readdirSync }               from 'fs'
-import { join }                      from 'path'
+import { execSync }                  from 'node:child_process'
+import { existsSync }                from 'node:fs'
+import { readdirSync }               from 'node:fs'
+import { join }                      from 'node:path'
 
 import { removeEmptyLocale }         from '../remove-empty-locale/index.js'
 

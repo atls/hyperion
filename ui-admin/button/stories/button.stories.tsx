@@ -1,15 +1,16 @@
-import type { Meta }     from '@storybook/react'
-import type { StoryObj } from '@storybook/react'
-import type { FC }       from 'react'
+import type { ButtonProps } from '@atls-ui-parts/button'
+import type { Meta }        from '@storybook/react'
+import type { StoryObj }    from '@storybook/react'
+import type { ReactNode }   from 'react'
 
-import { useTheme }      from 'next-themes'
-import React             from 'react'
+import { useTheme }         from 'next-themes'
+import React                from 'react'
 
-import { ThemeProvider } from '@atls-ui-admin/theme'
+import { ThemeProvider }    from '@atls-ui-admin/theme'
 
-import { Button }        from '../src/button.component.js'
+import { Button }           from '../src/button.component.js'
 
-const ToggleTheme: FC = (props) => {
+const ToggleTheme = (props: ButtonProps): ReactNode => {
   const { theme, setTheme } = useTheme()
 
   return (

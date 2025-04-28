@@ -1,4 +1,4 @@
-import type { FC }             from 'react'
+import type { ReactNode }      from 'react'
 
 import type { ConditionProps } from './condition.interface.js'
 
@@ -6,13 +6,13 @@ import { AnimatePresence }     from 'framer-motion'
 import { motion }              from 'framer-motion'
 import React                   from 'react'
 
-export const Condition: FC<ConditionProps> = ({
+export const Condition = ({
   smooth = false,
   match,
   smoothDuration = 0.3,
   smoothPattern = 'in-and-out',
   children,
-}) => {
+}: ConditionProps): ReactNode => {
   if (!match) return null
 
   if (smooth) {

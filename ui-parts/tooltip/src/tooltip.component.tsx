@@ -1,17 +1,16 @@
-import type { FC }                from 'react'
-import type { PropsWithChildren } from 'react'
+import type { ReactNode }      from 'react'
 
-import type { TooltipProps }      from './tooltip.interfaces.js'
+import type { TooltipProps }   from './tooltip.interfaces.js'
 
-import { Children }               from 'react'
-import { cloneElement }           from 'react'
-import React                      from 'react'
+import { Children }            from 'react'
+import { cloneElement }        from 'react'
+import React                   from 'react'
 
-import { Container }              from './container/index.js'
-import { useTooltip }             from './use-tooltip.hook.js'
+import { defaultTooltipProps } from './tooltip.constants.js'
+import { useTooltip }          from './use-tooltip.hook.js'
 
-export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({ children, text, ...props }) => {
-  const { isOpen, close, triggerProps, render } = useTooltip({ ...props })
+export const Tooltip = ({ children, text, ...props }: TooltipProps): ReactNode => {
+  const { isOpen, close, triggerProps, render } = useTooltip({ ...defaultTooltipProps, ...props })
 
   if (typeof children === 'function')
     return (
@@ -27,22 +26,4 @@ export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({ children, text, .
       {render({ text })}
     </>
   )
-}
-
-Tooltip.defaultProps = {
-  showArrow: true,
-  trigger: 'click',
-  arrowOptions: {
-    angle: 30,
-    size: 8,
-    backgroundColor: 'rgba(0, 0, 0, 0.75)',
-  },
-  mouseEnterDelay: 100,
-  mouseLeaveDelay: 100,
-  anchor: 'top-center',
-  triggerOffset: 8,
-  animate: false,
-  closeOnOutsideClick: true,
-  container: <Container />,
-  text: 'Text',
 }

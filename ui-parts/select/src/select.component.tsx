@@ -1,4 +1,4 @@
-import type { FC }           from 'react'
+import type { ReactNode }    from 'react'
 
 import type { SelectProps }  from './select.interfaces.js'
 
@@ -13,14 +13,14 @@ import { baseButtonStyles }  from './button/index.js'
 import { baseMenuSprinkles } from './menu/index.js'
 import { baseMenuStyles }    from './menu/index.js'
 
-export const Select: FC<SelectProps> = ({
+export const Select = ({
   items,
   label,
   value,
   onChangeValue,
   placeholder,
   ...props
-}) => {
+}: SelectProps): ReactNode => {
   const {
     isOpen,
     getMenuItemProps,
@@ -49,8 +49,8 @@ export const Select: FC<SelectProps> = ({
           <motion.ul
             {...otherProps}
             className={clsx(baseMenuStyles, String(otherProps?.className || ''), className)}
-            style={{ ...style, ...otherProps?.style }}
             {...menuProps}
+            style={{ ...style, ...otherProps?.style, ...menuProps.style }}
           >
             {items.map((item, index) => (
               <MenuItem

@@ -13,14 +13,14 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls/react-upload": "0.0.3",
-    "graphql": "16.9.0",
-    "react-dropzone": "14.2.3"
+    "@atls/react-upload": "1.0.3",
+    "graphql": "16.11.0",
+    "react-dropzone": "14.3.8"
   },
   "devDependencies": {
-    "@types/react": "18.2.48",
-    "@types/react-dom": "18.2.18",
-    "react": "18.2.0"
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.2",
+    "react": "19.1.0"
   },
   "peerDependencies": {
     "react": "*",

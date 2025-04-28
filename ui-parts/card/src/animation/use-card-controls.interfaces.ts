@@ -19,7 +19,7 @@ export interface CardProps {
   transition: {
     duration: number
   }
-  ref: RefObject<HTMLDivElement>
+  ref: RefObject<HTMLDivElement | null>
   key: string
 }
 

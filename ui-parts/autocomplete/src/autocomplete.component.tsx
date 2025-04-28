@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 
-import type { FC }                from 'react'
+import type { ReactNode }         from 'react'
 
 import type { AutocompleteProps } from './autocomplete.interfaces.js'
 import type { ValueType }         from './autocomplete.interfaces.js'
@@ -13,6 +13,7 @@ import { useLayer }               from 'react-laag'
 import React                      from 'react'
 
 import { Input }                  from '@atls-ui-parts/input'
+import { Row }                    from '@atls-ui-parts/layout'
 
 import { Arrow }                  from './arrow/index.js'
 import { Indicator }              from './indicator/index.js'
@@ -20,13 +21,13 @@ import { Layer }                  from './layer/index.js'
 import { MenuItem }               from './menu-item/index.js'
 import { Menu }                   from './menu/index.js'
 
-export const Autocomplete: FC<AutocompleteProps> = ({
+export const Autocomplete = ({
   options = [],
   value,
   getOptionLabel = (option: ValueType | null): string => (option ? option.value : ''),
   onChange,
   onInputChange,
-}) => {
+}: AutocompleteProps): ReactNode => {
   const [items, setItems] = useState(options)
 
   const {
@@ -85,14 +86,9 @@ export const Autocomplete: FC<AutocompleteProps> = ({
   )
 
   return (
-    <>
-      <Input
-        size='normal'
-        variant='blue'
-        suffix={suffix}
-        onFocus={openMenu}
-        {...getInputProps(triggerProps)}
-      />
+    <Row>
+      <Input size='normal' variant='blue' onFocus={openMenu} {...getInputProps(triggerProps)} />
+      {suffix}
       {renderLayer(
         <AnimatePresence>
           {/* eslint-disable-next-line react/jsx-no-leaked-render */}
@@ -104,9 +100,9 @@ export const Autocomplete: FC<AutocompleteProps> = ({
               <Menu {...getMenuProps({ style: {} })}>
                 {items.map((item, index) => (
                   <MenuItem
+                    {...getItemProps({ key: item.value, index, item })}
                     // eslint-disable-next-line react/no-array-index-key
                     key={index}
-                    {...getItemProps({ key: item.value, index, item })}
                     selected={selectedItem === item}
                     hover={highlightedIndex === index}
                   >
@@ -118,6 +114,6 @@ export const Autocomplete: FC<AutocompleteProps> = ({
           )}
         </AnimatePresence>
       )}
-    </>
+    </Row>
   )
 }

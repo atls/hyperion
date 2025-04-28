@@ -2,11 +2,11 @@
 
 import type { MergeLocalesType } from './merge-locales.interfaces.js'
 
-import { existsSync }            from 'fs'
-import { readFileSync }          from 'fs'
-import { mkdirSync }             from 'fs'
-import { writeFileSync }         from 'fs'
-import { dirname }               from 'path'
+import { existsSync }            from 'node:fs'
+import { readFileSync }          from 'node:fs'
+import { mkdirSync }             from 'node:fs'
+import { writeFileSync }         from 'node:fs'
+import { dirname }               from 'node:path'
 
 export const mergeLocales: MergeLocalesType = (files, outputPath) => {
   if (!files.length) return

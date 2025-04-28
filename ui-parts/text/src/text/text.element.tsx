@@ -1,13 +1,16 @@
+import type { ReactNode }        from 'react'
+
 import type { TextElementProps } from './text.interfaces.js'
 
 import { clsx }                  from 'clsx'
-import { forwardRef }            from 'react'
 import React                     from 'react'
 
-export const TextElement = forwardRef<HTMLSpanElement, TextElementProps>((
-  { children, sprinkles, ...props },
-  ref
-) => {
+export const TextElement = ({
+  children,
+  sprinkles,
+  ref,
+  ...props
+}: TextElementProps): ReactNode => {
   const { className, style, otherProps } = sprinkles(props)
 
   return (
@@ -20,4 +23,4 @@ export const TextElement = forwardRef<HTMLSpanElement, TextElementProps>((
       {children}
     </span>
   )
-})
+}

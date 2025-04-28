@@ -3,7 +3,6 @@ import type { UploadMutationResult }  from './use-upload.interfaces.js'
 import type { UseUploadProps }        from './use-upload.interfaces.js'
 
 import { GraphQLClient }              from 'graphql-request'
-import { useMemo }                    from 'react'
 
 import { confirmMutation }            from './use-upload.mutations.js'
 import { uploadMutation }             from './use-upload.mutations.js'
@@ -27,14 +26,7 @@ export const useUpload = ({
 }: UseUploadProps): ((file: File) => Promise<ConfirmMutationResult['confirmUpload']>) => {
   const endpoint = defaultEndpoint ?? 'http://localhost:3000/api'
 
-  const client = useMemo((): GraphQLClient | undefined => {
-    if (endpoint)
-      return new GraphQLClient(endpoint, {
-        credentials: 'include',
-      })
-
-    return undefined
-  }, [endpoint])
+  const client = endpoint ? new GraphQLClient(endpoint, { credentials: 'include' }) : undefined
 
   return async (file: File): Promise<ConfirmMutationResult['confirmUpload']> => {
     if (!bucket) return null

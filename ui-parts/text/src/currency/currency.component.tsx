@@ -1,16 +1,23 @@
+import type { ReactNode }     from 'react'
+
 import type { CurrencyProps } from './currency.interfaces.js'
 
-import { forwardRef }         from 'react'
 import React                  from 'react'
 
 import { Condition }          from '@atls-ui-parts/condition'
 
 import { Text }               from '../text/index.js'
 
-export const Currency = forwardRef<HTMLSpanElement, CurrencyProps>((
-  { currency, amount, locale, options, keepZeros, currencySignPlacement, ...props },
-  ref
-) => {
+export const Currency = ({
+  options,
+  currency = 'USD',
+  amount = 0,
+  locale = 'ru-RU',
+  keepZeros = false,
+  currencySignPlacement = 'suffix',
+  ref,
+  ...props
+}: CurrencyProps): ReactNode => {
   const baseValue = new Intl.NumberFormat(locale, {
     style: 'currency',
     currency,
@@ -27,13 +34,4 @@ export const Currency = forwardRef<HTMLSpanElement, CurrencyProps>((
       <Condition match={currencySignPlacement === 'prefix'}>{valueWithPrefix}</Condition>
     </Text>
   )
-})
-
-Currency.defaultProps = {
-  amount: 0,
-  currency: 'USD',
-  keepZeros: false,
-  currencySignPlacement: 'suffix',
-  locale: 'ru-RU',
-  ...Text.defaultProps,
 }

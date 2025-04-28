@@ -1,5 +1,6 @@
+import type { JSX }               from 'react'
 import type { PropsWithChildren } from 'react'
-import type { FC }                from 'react'
+import type { ReactNode }         from 'react'
 
 import type { CircleProps }       from './circle.interfaces.js'
 
@@ -12,7 +13,7 @@ import { getGradientId }          from './circle.utils.js'
 import { getPathStyles }          from './circle.utils.js'
 import { toArray }                from './circle.utils.js'
 
-const Circle: FC<PropsWithChildren<CircleProps>> = ({
+const Circle = ({
   trailWidth,
   strokeWeight = 6,
   gapDegree,
@@ -25,7 +26,7 @@ const Circle: FC<PropsWithChildren<CircleProps>> = ({
   percent,
   children,
   ...props
-}) => {
+}: PropsWithChildren<CircleProps>): ReactNode => {
   // @ts-expect-error correct type color
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const getThemeColor = (color: string): any => vars?.colors[color] || color
@@ -62,7 +63,7 @@ const Circle: FC<PropsWithChildren<CircleProps>> = ({
     (color) => Object.prototype.toString.call(color) === '[object Object]'
   )
 
-  const getStrokeList = (): Array<React.JSX.Element> => {
+  const getStrokeList = (): Array<JSX.Element> => {
     const percentList = toArray(percent)
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     const strokeColorList = toArray(strokeThemeColor)

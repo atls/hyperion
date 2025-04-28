@@ -1,10 +1,9 @@
-import type { FC }             from 'react'
+import type { ReactNode }      from 'react'
 
 import type { ThumbProps }     from './thumb.interfaces.js'
 
 import { clsx }                from 'clsx'
 import { motion }              from 'framer-motion'
-import { useMemo }             from 'react'
 import React                   from 'react'
 
 import { baseThumbStyles }     from './thumb.css.js'
@@ -12,8 +11,13 @@ import { disabledThumbStyles } from './thumb.css.js'
 import { thumbSprinkles }      from './thumb.css.js'
 import { thumbMotionVariants } from './thumb.motion.js'
 
-export const Thumb: FC<ThumbProps> = ({ checked, disabled, ...props }) => {
-  const initial = useMemo(() => (checked ? 'checked' : 'visible'), [checked])
+export const Thumb = ({
+  checked,
+  disabled,
+  variants = thumbMotionVariants,
+  ...props
+}: ThumbProps): ReactNode => {
+  const initial = checked ? 'checked' : 'visible'
 
   const { className, style, otherProps } = thumbSprinkles(props)
 
@@ -21,6 +25,7 @@ export const Thumb: FC<ThumbProps> = ({ checked, disabled, ...props }) => {
     <motion.span
       initial={initial}
       animate={checked && !disabled ? 'checked' : 'visible'}
+      variants={variants}
       {...otherProps}
       style={{ ...style, ...otherProps?.style }}
       className={clsx(
@@ -31,8 +36,4 @@ export const Thumb: FC<ThumbProps> = ({ checked, disabled, ...props }) => {
       )}
     />
   )
-}
-
-Thumb.defaultProps = {
-  variants: thumbMotionVariants,
 }

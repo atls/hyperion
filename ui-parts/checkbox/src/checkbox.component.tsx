@@ -1,11 +1,12 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 
+import type { ReactNode }          from 'react'
+
 import type { CheckboxProps }      from './checkbox.interfaces.js'
 
 import { clsx }                    from 'clsx'
 import { useEffect }               from 'react'
-import { forwardRef }              from 'react'
 import { useState }                from 'react'
 import React                       from 'react'
 
@@ -21,19 +22,17 @@ import { labelAppearanceStyles }   from './label/index.js'
 import { labelPositionStyles }     from './label/index.js'
 import { labelShapeStyles }        from './label/index.js'
 
-export const Checkbox = forwardRef<HTMLDivElement, CheckboxProps>((
-  {
-    onCheck,
-    children,
-    active,
-    labelPosition = 'end',
-    size = 'medium',
-    color = 'blue',
-    icon,
-    ...props
-  },
-  ref
-) => {
+export const Checkbox = ({
+  onCheck,
+  children,
+  active,
+  labelPosition = 'end',
+  size = 'medium',
+  color = 'blue',
+  icon,
+  ref,
+  ...props
+}: CheckboxProps): ReactNode => {
   const [isChecked, setIsChecked] = useState<boolean>(active)
 
   useEffect(() => {
@@ -73,4 +72,4 @@ export const Checkbox = forwardRef<HTMLDivElement, CheckboxProps>((
       </div>
     </div>
   )
-})
+}

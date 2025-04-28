@@ -1,11 +1,14 @@
-import type { FC }              from 'react'
+import type { ReactNode }       from 'react'
 import type { HTMLAttributes }  from 'react'
 
 import React                    from 'react'
 
 import { containerInnerStyles } from './container-inner.css.js'
 
-export const ContainerInner: FC<HTMLAttributes<HTMLDivElement>> = ({ children, ...props }) => (
+export const ContainerInner = ({
+  children,
+  ...props
+}: HTMLAttributes<HTMLDivElement>): ReactNode => (
   <div className={containerInnerStyles} {...props}>
     {children}
   </div>

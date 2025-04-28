@@ -1,17 +1,23 @@
+import type { ReactNode }           from 'react'
+
 import type { LayoutElementProps }  from './layout.interfaces.js'
 
 import { clsx }                     from 'clsx'
-import { forwardRef }               from 'react'
 import React                        from 'react'
 
 import { fillStyles }               from '../styles/index.js'
 import { fullViewportHeightStyles } from '../styles/index.js'
 import { fullViewportWidthStyles }  from '../styles/index.js'
 
-export const LayoutElement = forwardRef<HTMLDivElement, LayoutElementProps>((
-  { children, sprinkles, fill, fullViewportWidth, fullViewportHeight, ...props },
-  ref
-) => {
+export const LayoutElement = ({
+  children,
+  ref,
+  sprinkles,
+  fill,
+  fullViewportWidth,
+  fullViewportHeight,
+  ...props
+}: LayoutElementProps): ReactNode => {
   const { className, style, otherProps } = sprinkles(props)
 
   return (
@@ -30,4 +36,4 @@ export const LayoutElement = forwardRef<HTMLDivElement, LayoutElementProps>((
       {children}
     </div>
   )
-})
+}

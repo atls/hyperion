@@ -1,17 +1,23 @@
+import type { ReactNode }               from 'react'
+
 import type { HTMLElementElementProps } from '../index.js'
 
 import { clsx }                         from 'clsx'
-import { forwardRef }                   from 'react'
 import React                            from 'react'
 
 import { fillStyles }                   from '../../styles/index.js'
 import { fullViewportHeightStyles }     from '../../styles/index.js'
 import { fullViewportWidthStyles }      from '../../styles/index.js'
 
-export const HeaderElement = forwardRef<HTMLElement, HTMLElementElementProps>((
-  { children, fill, fullViewportWidth, fullViewportHeight, sprinkles, ...props },
-  ref
-) => {
+export const HeaderElement = ({
+  children,
+  fill,
+  fullViewportWidth,
+  fullViewportHeight,
+  sprinkles,
+  ref,
+  ...props
+}: HTMLElementElementProps): ReactNode => {
   const { className, style, otherProps } = sprinkles(props)
 
   return (
@@ -30,4 +36,4 @@ export const HeaderElement = forwardRef<HTMLElement, HTMLElementElementProps>((
       {children}
     </header>
   )
-})
+}

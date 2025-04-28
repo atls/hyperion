@@ -1,4 +1,5 @@
 import type { HTMLAttributes }      from 'react'
+import type { Ref }                 from 'react'
 
 import type { AttachmentSprinkles } from './attachment.css.js'
 
@@ -8,4 +9,5 @@ export interface AttachmentProps
   type: 'prefix' | 'suffix'
   offsetLeft: string
   offsetRight: string
+  ref?: Ref<HTMLDivElement>
 }

@@ -1,3 +1,4 @@
+export * from './list-item/index.js'
 export * from './list.component.js'
 export * from './list.css.js'
 export * from './list.element.js'

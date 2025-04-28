@@ -1,17 +1,23 @@
+import type { ReactNode }           from 'react'
+
 import type { GridElementProps }    from './grid.interfaces.js'
 
 import { clsx }                     from 'clsx'
-import { forwardRef }               from 'react'
 import React                        from 'react'
 
 import { fillStyles }               from '../styles/index.js'
 import { fullViewportHeightStyles } from '../styles/index.js'
 import { fullViewportWidthStyles }  from '../styles/index.js'
 
-export const GridElement = forwardRef<HTMLDivElement, GridElementProps>((
-  { children, sprinkles, fill, fullViewportWidth, fullViewportHeight, ...props },
-  ref
-) => {
+export const GridElement = ({
+  children,
+  sprinkles,
+  fill,
+  fullViewportWidth,
+  fullViewportHeight,
+  ref,
+  ...props
+}: GridElementProps): ReactNode => {
   const { className, style, otherProps } = sprinkles(props)
 
   return (
@@ -30,4 +36,4 @@ export const GridElement = forwardRef<HTMLDivElement, GridElementProps>((
       {children}
     </div>
   )
-})
+}

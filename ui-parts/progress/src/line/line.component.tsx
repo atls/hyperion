@@ -1,4 +1,4 @@
-import type { FC }               from 'react'
+import type { ReactNode }        from 'react'
 
 import type { ProgressGradient } from '../progress.interfaces.js'
 import type { LineProps }        from './line.interfaces.js'
@@ -37,14 +37,14 @@ export const handleGradient = (
   return { backgroundImage: `linear-gradient(${direction}, ${from}, ${to})` }
 }
 
-export const Line: FC<LineProps> = ({
+export const Line = ({
   percent,
   strokeColor = '$blueProtective',
   strokeLinecap,
   trailLinecap,
   trailColor,
   strokeWeight = 8,
-}) => {
+}: LineProps): ReactNode => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const getThemeColor = (color: Array<ProgressGradient | string> | string): any =>
     vars?.colors[color as keyof typeof vars.colors] || color

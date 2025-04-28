@@ -3,6 +3,13 @@
   "version": "1.1.3",
   "license": "BSD-3-Clause",
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./replacement": {
+      "import": "./src/replacement-utils/index.ts",
+      "require": "./src/replacement-utils/index.cts"
+    }
+  },
   "main": "src/index.ts",
   "bin": {
     "generate-icons": "dist/icons.generator.js"
@@ -22,10 +29,10 @@
     "@swc-node/register": "1.9.0",
     "@swc/core": "1.6.1",
     "commander": "13.1.0",
-    "glob": "11.0.1"
+    "glob": "11.0.2"
   },
   "devDependencies": {
-    "@types/node": "22.13.8",
+    "@types/node": "22.15.3",
     "tsx": "4.19.3",
     "typescript": "5.5.4"
   },

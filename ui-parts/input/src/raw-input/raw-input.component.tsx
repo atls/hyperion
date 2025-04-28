@@ -1,12 +1,12 @@
-import type { InputHTMLAttributes } from 'react'
+import type { ReactNode }     from 'react'
 
-import { clsx }                     from 'clsx'
-import { forwardRef }               from 'react'
-import React                        from 'react'
+import type { RawInputInput } from './raw-input.interfaces.js'
 
-import { rawInputStyles }           from './raw-input.css.js'
+import { clsx }               from 'clsx'
+import React                  from 'react'
 
-export const RawInput = forwardRef<HTMLInputElement, InputHTMLAttributes<HTMLInputElement>>((
-  { className, ...props },
-  ref
-) => <input ref={ref} className={clsx(className, rawInputStyles)} {...props} />)
+import { rawInputStyles }     from './raw-input.css.js'
+
+export const RawInput = ({ className, ref, ...props }: RawInputInput): ReactNode => (
+  <input ref={ref} className={clsx(className, rawInputStyles)} {...props} />
+)

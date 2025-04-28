@@ -1,24 +1,16 @@
-import type { TitleProps } from './title.interfaces.js'
+import type { ReactNode }    from 'react'
 
-import { forwardRef }      from 'react'
-import React               from 'react'
+import type { TitleProps }   from './title.interfaces.js'
 
-import { TitleElement }    from './title.element.js'
-import { titleSprinkles }  from './title.css.js'
+import React                 from 'react'
 
-export const Title = forwardRef<HTMLHeadingElement, TitleProps>(({ children, ...props }, ref) => (
+import { TitleElement }      from './title.element.js'
+import { defaultTitleProps } from './title.constants.js'
+import { titleSprinkles }    from './title.css.js'
+
+export const Title = ({ children, ref, ...props }: TitleProps): ReactNode => (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  <TitleElement ref={ref} sprinkles={titleSprinkles as any} {...props}>
+  <TitleElement ref={ref} sprinkles={titleSprinkles as any} {...defaultTitleProps} {...props}>
     {children}
   </TitleElement>
-))
-
-Title.defaultProps = {
-  display: 'inline-flex',
-  color: '$text.black',
-  fontSize: '$medium',
-  fontWeight: '$regular',
-  fontFamily: '$primary',
-  lineHeight: '$default',
-  margin: '$zero',
-}
+)

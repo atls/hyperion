@@ -1,5 +1,6 @@
 import type { SprinklesFn }    from 'rainbow-sprinkles'
 import type { HTMLAttributes } from 'react'
+import type { Ref }            from 'react'
 
 import type { BoxSprinkles }   from './box.css.js'
 
@@ -7,6 +8,7 @@ export interface BaseBoxProps extends Omit<HTMLAttributes<HTMLDivElement>, 'colo
   fill?: boolean
   fullViewportWidth?: boolean
   fullViewportHeight?: boolean
+  ref?: Ref<HTMLDivElement>
 }
 
 export interface BoxElementProps extends BaseBoxProps {

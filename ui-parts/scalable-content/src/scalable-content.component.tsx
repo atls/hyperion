@@ -1,4 +1,4 @@
-import type { FC }                   from 'react'
+import type { ReactNode }            from 'react'
 
 import type { ScalableContentProps } from './scalable-content.interfaces.js'
 
@@ -8,7 +8,11 @@ import React                         from 'react'
 import { useScale }                  from './hooks/index.js'
 import { scalableContentStyles }     from './scalable-content.css.js'
 
-export const ScalableContent: FC<ScalableContentProps> = ({ className, style, ...props }) => {
+export const ScalableContent = ({
+  className,
+  style,
+  ...props
+}: ScalableContentProps): ReactNode => {
   const { ref, style: scaleStyle } = useScale()
 
   return (

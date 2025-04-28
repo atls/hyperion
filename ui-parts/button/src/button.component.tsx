@@ -1,6 +1,7 @@
+import type { ReactNode }   from 'react'
+
 import type { ButtonProps } from './button.interfaces.js'
 
-import { forwardRef }       from 'react'
 import { useState }         from 'react'
 import React                from 'react'
 
@@ -8,10 +9,16 @@ import { useHover }         from '@atls-utils/use-hover'
 
 import { buttonStyles }     from './styles/index.js'
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>((
-  { children, icon, iconPlacement, size = 'huge', variant = 'blue', disabled, ...props },
-  ref
-) => {
+export const Button = ({
+  children,
+  ref,
+  icon,
+  iconPlacement,
+  size = 'huge',
+  variant = 'blue',
+  disabled,
+  ...props
+}: ButtonProps): ReactNode => {
   const [pressed, setPressed] = useState<boolean>(false)
   const [hover, hoverProps] = useHover()
 
@@ -43,4 +50,4 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>((
       {children}
     </button>
   )
-})
+}

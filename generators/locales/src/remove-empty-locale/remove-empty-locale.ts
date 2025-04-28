@@ -2,12 +2,12 @@
 
 import type { RemoveEmptyLocaleType } from './remove-empty-locale.interfaces.js'
 
-import { existsSync }                 from 'fs'
-import { readFileSync }               from 'fs'
-import { readdirSync }                from 'fs'
-import { rmSync }                     from 'fs'
-import { unlinkSync }                 from 'fs'
-import { join }                       from 'path'
+import { existsSync }                 from 'node:fs'
+import { readFileSync }               from 'node:fs'
+import { readdirSync }                from 'node:fs'
+import { rmSync }                     from 'node:fs'
+import { unlinkSync }                 from 'node:fs'
+import { join }                       from 'node:path'
 
 export const removeEmptyLocale: RemoveEmptyLocaleType = (
   outputFilePath,

@@ -3,7 +3,7 @@ import type { RefObject } from 'react'
 import { useState }       from 'react'
 import { useEffect }      from 'react'
 
-export const useContainerWidth = (ref: RefObject<HTMLElement>): number => {
+export const useContainerWidth = (ref: RefObject<HTMLElement | null>): number => {
   const [width, setWidth] = useState(0)
 
   useEffect(() => {

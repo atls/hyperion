@@ -1,13 +1,17 @@
+import type { ReactNode }         from 'react'
+
 import type { TitleElementProps } from './title.interfaces.js'
 
 import { createElement }          from 'react'
-import { forwardRef }             from 'react'
 import clsx                       from 'clsx'
 
-export const TitleElement = forwardRef<HTMLHeadingElement, TitleElementProps>((
-  { children, sprinkles, level = 1, ...props },
-  ref
-) => {
+export const TitleElement = ({
+  children,
+  sprinkles,
+  level = 1,
+  ref,
+  ...props
+}: TitleElementProps): ReactNode => {
   const { className, style, otherProps } = sprinkles(props)
 
   return createElement(
@@ -20,4 +24,4 @@ export const TitleElement = forwardRef<HTMLHeadingElement, TitleElementProps>((
     },
     children
   )
-})
+}

@@ -1,4 +1,3 @@
-import type { FC }                from 'react'
 import type { ReactNode }         from 'react'
 import type { PropsWithChildren } from 'react'
 import type { Accept }            from 'react-dropzone'
@@ -21,14 +20,14 @@ interface UploadProps {
   onFile?: (data?: Record<string, string> | null) => void
 }
 
-export const Upload: FC<PropsWithChildren<UploadProps>> = ({
+export const Upload = ({
   children,
   accept = {},
   multiple = false,
   placeholder,
   onPreview,
   onFile,
-}) => {
+}: PropsWithChildren<UploadProps>): ReactNode => {
   const upload = useUpload({})
 
   const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject, acceptedFiles } =

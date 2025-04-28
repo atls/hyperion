@@ -1,17 +1,21 @@
+import type { ReactNode }         from 'react'
+
 import type { ExpanderProps }     from './expander.interfaces.js'
 
 import { clsx }                   from 'clsx'
 import { motion }                 from 'framer-motion'
-import { forwardRef }             from 'react'
 import React                      from 'react'
 
 import { expanderStyles }         from './expander.css.js'
 import { expanderMotionVariants } from './expander.motion.js'
 
-export const Expander = forwardRef<HTMLDivElement, ExpanderProps>((
-  { children, className, opened, ...props },
-  ref
-) => (
+export const Expander = ({
+  children,
+  className,
+  opened,
+  ref,
+  ...props
+}: ExpanderProps): ReactNode => (
   <motion.div
     ref={ref}
     className={clsx(className, expanderStyles)}
@@ -22,4 +26,4 @@ export const Expander = forwardRef<HTMLDivElement, ExpanderProps>((
   >
     {children}
   </motion.div>
-))
+)

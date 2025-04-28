@@ -1,17 +1,15 @@
-import type { HTMLMotionProps } from 'framer-motion'
+import type { ReactNode }     from 'react'
 
-import { clsx }                 from 'clsx'
-import { motion }               from 'framer-motion'
-import { forwardRef }           from 'react'
-import React                    from 'react'
+import type { BackdropProps } from './backdrop.interfaces.js'
 
-import { backdropStyles }       from './backdrop.css.js'
+import { clsx }               from 'clsx'
+import { motion }             from 'framer-motion'
+import React                  from 'react'
 
-export const Backdrop = forwardRef<HTMLDivElement, HTMLMotionProps<'div'>>((
-  { children, className, ...props },
-  ref
-) => (
+import { backdropStyles }     from './backdrop.css.js'
+
+export const Backdrop = ({ children, className, ref, ...props }: BackdropProps): ReactNode => (
   <motion.div ref={ref} className={clsx(className, backdropStyles)} {...props}>
     {children}
   </motion.div>
-))
+)

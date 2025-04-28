@@ -1,6 +1,6 @@
 import 'react-datepicker/dist/react-datepicker.css'
 
-import type { FC }                from 'react'
+import type { ReactNode }         from 'react'
 
 import type { DatepickerProps }   from './datepicker.interface.js'
 
@@ -14,7 +14,7 @@ import { createAppearanceStyles } from './utils/index.js'
 import { createShapeStyles }      from './utils/index.js'
 import { registerLocales }        from './utils/index.js'
 
-export const Datepicker: FC<DatepickerProps> = ({ withBaseStyle = true, ...props }) => {
+export const Datepicker = ({ withBaseStyle = true, ...props }: DatepickerProps): ReactNode => {
   useEffect(() => {
     registerLocales()
     setDefaultLocale('ru')

@@ -13,17 +13,17 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls/config-prettier": "2.0.2",
+    "@atls/config-prettier": "2.0.3",
     "@atls/prettier-plugin": "1.0.1",
-    "@babel/standalone": "7.26.10",
+    "@babel/standalone": "7.27.0",
     "camelcase": "8.0.0",
     "pino": "9.6.0",
     "pino-pretty": "13.0.0",
-    "prettier": "3.4.2"
+    "prettier": "3.5.3"
   },
   "devDependencies": {
     "@types/babel__core": "7.20.5",
-    "@types/babel__standalone": "7.1.7",
+    "@types/babel__standalone": "7.1.9",
     "@types/prettier": "3.0.0"
   },
   "publishConfig": {

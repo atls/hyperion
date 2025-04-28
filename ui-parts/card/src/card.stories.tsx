@@ -1,6 +1,5 @@
 import type { Meta }              from '@storybook/react'
 import type { StoryObj }          from '@storybook/react'
-import type { FC }                from 'react'
 import type { ReactNode }         from 'react'
 import type { PropsWithChildren } from 'react'
 
@@ -30,7 +29,7 @@ interface CardProps extends PropsWithChildren {
   container?: ReactNode
 }
 
-const Card: FC<CardProps> = ({ children, container, backdrop = false, ghost = false }) => {
+const Card = ({ children, container, backdrop = false, ghost = false }: CardProps): ReactNode => {
   const { cardProps, backdropProps, rendererProps, triggerProps, hide } = useCardControls({
     scrollThreshold: true,
   })
@@ -45,6 +44,9 @@ const Card: FC<CardProps> = ({ children, container, backdrop = false, ghost = fa
         </Condition>
         <Container
           {...cardProps}
+          animate={{ y: cardProps.animate.y }}
+          initial={{ y: cardProps.initial.y }}
+          exit={{ y: cardProps.exit.y }}
           style={{
             height: 'min-content',
             borderRadius: !ghost ? 10 : 0,
@@ -68,7 +70,7 @@ export const CardNotify: StoryObj = {
   ),
 }
 
-const LargeContent: FC = () => (
+const LargeContent = (): ReactNode => (
   <Column width='100%'>
     {Array.from({ length: 9 }, (_, index) => (
       <Box
