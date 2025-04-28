@@ -1,5 +1,12 @@
 
 
+## [1.0.3](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.2...@atls-ui-parts/modal@1.0.3) (2025-04-28)
+
+
+
+
+
+
 ## [1.0.2](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.1...@atls-ui-parts/modal@1.0.2) (2025-02-23)
 
 

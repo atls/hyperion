@@ -1,5 +1,18 @@
 
 
+## [1.0.2](https://github.com/atls/hyperion/compare/@atls-ui-parts/upload@1.0.1...@atls-ui-parts/upload@1.0.2) (2025-04-28)
+
+
+### Bug Fixes
+
+
+* **hyperion:** lintter and tests ([#593](https://github.com/atls/hyperion/issues/593)) ([a01c488](https://github.com/atls/hyperion/commit/a01c488064d6386f754aafd2eecb28a19396635e))
+* **ui:** type and lint errors ([da072ab](https://github.com/atls/hyperion/commit/da072abf91f465b4a6f0b736e2b26c78a2891d1d))
+
+
+
+
+
 ## [1.0.1](https://github.com/atls/hyperion/compare/@atls-ui-parts/upload@1.0.1...@atls-ui-parts/upload@1.0.1) (2025-02-19)
 
 

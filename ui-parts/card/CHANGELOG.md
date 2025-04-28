@@ -1,5 +1,17 @@
 
 
+## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.4...@atls-ui-parts/card@1.0.4) (2025-04-28)
+
+
+### Bug Fixes
+
+
+* **ui:** type and lint errors ([da072ab](https://github.com/atls/hyperion/commit/da072abf91f465b4a6f0b736e2b26c78a2891d1d))
+
+
+
+
+
 ## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.4...@atls-ui-parts/card@1.0.4) (2025-02-23)
 
 

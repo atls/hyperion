@@ -1,5 +1,18 @@
 
 
+## [0.0.1](https://github.com/atls/hyperion/compare/@atls-ui-parts/design@0.0.1...@atls-ui-parts/design@0.0.1) (2025-04-28)
+
+
+### Bug Fixes
+
+
+* **atls-ui-parts:** design cors ([7763791](https://github.com/atls/hyperion/commit/77637910495d572a809e9204fa59d35bbd447c3a))
+* **ui:** type and lint errors ([da072ab](https://github.com/atls/hyperion/commit/da072abf91f465b4a6f0b736e2b26c78a2891d1d))
+
+
+
+
+
 ## [0.0.1](https://github.com/atls/hyperion/compare/@atls-ui-parts/design@0.0.1...@atls-ui-parts/design@0.0.1) (2025-04-09)
 
 

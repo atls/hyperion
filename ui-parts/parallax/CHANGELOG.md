@@ -1,5 +1,17 @@
 
 
+## [1.0.6](https://github.com/atls/hyperion/compare/@atls-ui-parts/parallax@1.0.5...@atls-ui-parts/parallax@1.0.6) (2025-04-28)
+
+
+### Bug Fixes
+
+
+* **ui:** type and lint errors ([da072ab](https://github.com/atls/hyperion/commit/da072abf91f465b4a6f0b736e2b26c78a2891d1d))
+
+
+
+
+
 ## [1.0.5](https://github.com/atls/hyperion/compare/@atls-ui-parts/parallax@1.0.3...@atls-ui-parts/parallax@1.0.5) (2025-02-23)
 
 

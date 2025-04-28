@@ -1,5 +1,17 @@
 
 
+## [1.0.2](https://github.com/atls/hyperion/compare/@atls-utils/use-hover@1.0.2...@atls-utils/use-hover@1.0.2) (2025-04-28)
+
+
+### Bug Fixes
+
+
+* **use-hover:** release ([a06a04e](https://github.com/atls/hyperion/commit/a06a04e694ae8ce4acd98a1859603cdd1bdc96e0))
+
+
+
+
+
 ## 1.0.2 (2025-01-09)
 
 
