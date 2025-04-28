@@ -1,6 +1,7 @@
 import type { MouseEvent }     from 'react'
 
 import type { HoverProps }     from './use-hover.interfaces.js'
+import type { Timeout }        from './use-hover.interfaces.js'
 import type { UseHoverProps }  from './use-hover.interfaces.js'
 import type { UseHoverReturn } from './use-hover.interfaces.js'
 
@@ -15,8 +16,8 @@ export const useHover = ({
 }: UseHoverProps = {}): UseHoverReturn => {
   const [show, setShow] = useState(false)
 
-  const enterTimeout = useRef<NodeJS.Timeout | null>(null)
-  const exitTimeout = useRef<NodeJS.Timeout | null>(null)
+  const enterTimeout = useRef<Timeout | null>(null)
+  const exitTimeout = useRef<Timeout | null>(null)
 
   const hasTouchMoved = useRef<boolean>(false)
 

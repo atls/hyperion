@@ -28,3 +28,5 @@ export interface HoverProps {
 }
 
 export type UseHoverReturn = readonly [boolean, HoverProps, () => void]
+
+export type Timeout = ReturnType<typeof setTimeout>
