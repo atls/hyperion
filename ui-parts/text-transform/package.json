@@ -15,7 +15,7 @@
   "devDependencies": {
     "@playwright/test": "1.52.0",
     "@types/http-server": "0.12.4",
-    "@types/node": "22.15.0",
+    "@types/node": "22.15.3",
     "@types/react": "19.1.2",
     "@types/react-dom": "19.1.2",
     "http-server": "14.1.1",

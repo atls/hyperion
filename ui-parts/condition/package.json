@@ -13,7 +13,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "framer-motion": "12.9.1"
+    "framer-motion": "12.9.2"
   },
   "devDependencies": {
     "@types/react": "19.1.2",

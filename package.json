@@ -15,8 +15,8 @@
   "devDependencies": {
     "@atls/code-runtime": "2.1.8",
     "@playwright/test": "1.52.0",
-    "@types/node": "22.15.0",
-    "eslint": "9.21.0",
+    "@types/node": "22.15.3",
+    "eslint": "9.25.1",
     "typescript": "5.5.4"
   },
   "packageManager": "yarn@4.9.1",

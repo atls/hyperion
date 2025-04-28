@@ -13,8 +13,8 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls/react-upload": "0.0.3",
-    "graphql": "16.10.0",
+    "@atls/react-upload": "1.0.3",
+    "graphql": "16.11.0",
     "react-dropzone": "14.3.8"
   },
   "devDependencies": {

@@ -16,7 +16,7 @@
     "@atls-ui-parts/switch": "workspace:*",
     "@atls-utils/use-hover": "workspace:*",
     "clsx": "2.1.1",
-    "framer-motion": "12.9.1"
+    "framer-motion": "12.9.2"
   },
   "devDependencies": {
     "@atls-ui-parts/layout": "workspace:*",

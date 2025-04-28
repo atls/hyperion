@@ -13,8 +13,8 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "downshift": "7.6.2",
-    "framer-motion": "12.9.1",
+    "downshift": "9.0.9",
+    "framer-motion": "12.9.2",
     "react-laag": "2.0.5"
   },
   "devDependencies": {

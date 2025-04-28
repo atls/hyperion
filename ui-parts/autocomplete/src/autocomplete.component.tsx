@@ -13,6 +13,7 @@ import { useLayer }               from 'react-laag'
 import React                      from 'react'
 
 import { Input }                  from '@atls-ui-parts/input'
+import { Row }                    from '@atls-ui-parts/layout'
 
 import { Arrow }                  from './arrow/index.js'
 import { Indicator }              from './indicator/index.js'
@@ -85,14 +86,9 @@ export const Autocomplete = ({
   )
 
   return (
-    <>
-      <Input
-        size='normal'
-        variant='blue'
-        suffix={suffix}
-        onFocus={openMenu}
-        {...getInputProps(triggerProps)}
-      />
+    <Row>
+      <Input size='normal' variant='blue' onFocus={openMenu} {...getInputProps(triggerProps)} />
+      {suffix}
       {renderLayer(
         <AnimatePresence>
           {/* eslint-disable-next-line react/jsx-no-leaked-render */}
@@ -104,9 +100,9 @@ export const Autocomplete = ({
               <Menu {...getMenuProps({ style: {} })}>
                 {items.map((item, index) => (
                   <MenuItem
+                    {...getItemProps({ key: item.value, index, item })}
                     // eslint-disable-next-line react/no-array-index-key
                     key={index}
-                    {...getItemProps({ key: item.value, index, item })}
                     selected={selectedItem === item}
                     hover={highlightedIndex === index}
                   >
@@ -118,6 +114,6 @@ export const Autocomplete = ({
           )}
         </AnimatePresence>
       )}
-    </>
+    </Row>
   )
 }

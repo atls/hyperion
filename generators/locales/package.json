@@ -15,18 +15,8 @@
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
   },
-  "dependencies": {
-    "@atls/config-prettier": "0.0.5",
-    "@atls/prettier-plugin": "0.0.7",
-    "@babel/standalone": "7.22.20",
-    "camelcase": "6.3.0",
-    "commander": "9.5.0",
-    "prettier": "2.8.8"
-  },
   "devDependencies": {
-    "@types/babel__standalone": "7.1.7",
-    "@types/node": "22.15.0",
-    "@types/prettier": "2.7.3"
+    "@types/node": "22.15.3"
   },
   "publishConfig": {
     "access": "public",

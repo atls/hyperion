@@ -17,7 +17,7 @@
     "@atls-ui-parts/dom": "workspace:*",
     "@atls-ui-parts/layout": "workspace:*",
     "clsx": "2.1.1",
-    "framer-motion": "12.9.1"
+    "framer-motion": "12.9.2"
   },
   "devDependencies": {
     "@atls-ui-parts/button": "workspace:*",

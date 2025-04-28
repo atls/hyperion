@@ -49,8 +49,8 @@ export const Select = ({
           <motion.ul
             {...otherProps}
             className={clsx(baseMenuStyles, String(otherProps?.className || ''), className)}
-            style={{ ...style, ...otherProps?.style }}
             {...menuProps}
+            style={{ ...style, ...otherProps?.style, ...menuProps.style }}
           >
             {items.map((item, index) => (
               <MenuItem

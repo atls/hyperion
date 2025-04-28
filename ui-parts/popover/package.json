@@ -16,7 +16,7 @@
     "@atls-ui-parts/condition": "workspace:*",
     "@atls-ui-parts/theme": "workspace:*",
     "@atls-ui-parts/tooltip": "workspace:*",
-    "framer-motion": "12.9.1",
+    "framer-motion": "12.9.2",
     "react-laag": "2.0.5"
   },
   "devDependencies": {

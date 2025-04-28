@@ -1,10 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-
 import type { ReactNode }    from 'react'
 import type { ReactElement } from 'react'
 import type { Accept }       from 'react-dropzone'
 
-// @ts-expect-error no declaration files
 import { useUpload }         from '@atls/react-upload'
 import { cloneElement }      from 'react'
 import { useEffect }         from 'react'
@@ -54,11 +51,13 @@ export const SimpleUpload = ({
         })
       }
 
-      upload(file).then((data: UploadResult) => {
+      upload(file).then((data) => {
+        const result = data as never as UploadResult
+
         if (preview) {
-          onFile({ ...data, preview })
+          onFile({ ...result, preview })
         } else {
-          onFile(data)
+          onFile(result)
         }
       })
     })

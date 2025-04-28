@@ -15,7 +15,7 @@
   "dependencies": {
     "@atls-ui-parts/theme": "workspace:*",
     "clsx": "2.1.1",
-    "framer-motion": "12.9.1",
+    "framer-motion": "12.9.2",
     "rainbow-sprinkles": "1.0.0"
   },
   "devDependencies": {

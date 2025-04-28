@@ -16,7 +16,7 @@
     "@atls-ui-parts/condition": "workspace:*",
     "@atls-ui-parts/portal": "workspace:*",
     "clsx": "2.1.1",
-    "framer-motion": "12.9.1"
+    "framer-motion": "12.9.2"
   },
   "devDependencies": {
     "@storybook/react": "8.6.12",
