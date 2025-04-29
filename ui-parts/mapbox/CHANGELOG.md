@@ -1,5 +1,12 @@
 
 
+## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/mapbox@1.0.3...@atls-ui-parts/mapbox@1.0.4) (2025-04-29)
+
+
+
+
+
+
 ## [1.0.3](https://github.com/atls/hyperion/compare/@atls-ui-parts/mapbox@1.0.3...@atls-ui-parts/mapbox@1.0.3) (2025-04-28)
 
 

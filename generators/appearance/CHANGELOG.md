@@ -1,5 +1,12 @@
 
 
+## [1.1.3](https://github.com/atls/hyperion/compare/@atls-ui-generators/appearance@1.1.3...@atls-ui-generators/appearance@1.1.3) (2025-04-29)
+
+
+
+
+
+
 ## [1.1.3](https://github.com/atls/hyperion/compare/@atls-ui-generators/appearance@1.1.2...@atls-ui-generators/appearance@1.1.3) (2025-04-28)
 
 
