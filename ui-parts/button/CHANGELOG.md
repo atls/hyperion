@@ -1,5 +1,17 @@
 
 
+## [1.0.8](https://github.com/atls/hyperion/compare/@atls-ui-parts/button@1.0.7...@atls-ui-parts/button@1.0.8) (2025-05-15)
+
+
+### Features
+
+
+* **atls-ui-parts:** update create-shape-styles interfaces ([eb1dc5e](https://github.com/atls/hyperion/commit/eb1dc5e02014404c6c39c4dfe5e668eef6ab01ed))
+
+
+
+
+
 ## [1.0.7](https://github.com/atls/hyperion/compare/@atls-ui-parts/button@1.0.6...@atls-ui-parts/button@1.0.7) (2025-04-29)
 
 
