@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "yarn library build",
-    "generate-icons": "generate-icons ./src/icons -i ./icons",
+    "generate-icons": "generate-icons ./src/icons -i ./svg",
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
   },
