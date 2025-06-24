@@ -9,25 +9,7 @@ describe('icons generators get-color-replacement util', () => {
     const replacement = getColorReplacement({ color: '#000000' })
 
     assert.deepEqual(replacement, {
-      '#000000': '{(color && vars.colors[color]) || color || "#000000"}',
-    })
-  })
-
-  it('should generate replacement with one theme paths', () => {
-    const replacement = getColorReplacement({ themePaths: ['icons'], color: '#000000' })
-
-    assert.deepEqual(replacement, {
-      '#000000': '{(color && vars.colors.icons[color]) || color || "#000000"}',
-    })
-  })
-
-  it('should generate replacement with several theme paths', () => {
-    const replacement = getColorReplacement({
-      themePaths: ['icons', 'primary', 'some'],
-      color: '#000000',
-    })
-    assert.deepEqual(replacement, {
-      '#000000': '{(color && vars.colors.icons.primary.some[color]) || color || "#000000"}',
+      '#000000': 'currentColor',
     })
   })
 })

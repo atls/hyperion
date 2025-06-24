@@ -1,5 +1,4 @@
 export interface GetColorReplacementOptions {
-  themePaths?: Array<string>
   color: string
 }
 

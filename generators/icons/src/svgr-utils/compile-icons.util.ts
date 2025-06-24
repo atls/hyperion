@@ -1,12 +1,12 @@
-import type { Icon }               from '../icons.interfaces.js'
-import type { Replacements }       from '../icons.interfaces.js'
-import type { Source }             from '../icons.interfaces.js'
-import type { CreateSvgrTemplate } from '../icons.interfaces.js'
+import type { Config }       from '@svgr/core'
 
-import { transform }               from '@svgr/core'
+import type { Icon }         from '../icons.interfaces.js'
+import type { Replacements } from '../icons.interfaces.js'
+import type { Source }       from '../icons.interfaces.js'
 
-const createSvgrTemplate: CreateSvgrTemplate = (withReplacement) =>
-  ({ jsx, componentName }, { tpl }) => tpl`
+import { transform }         from '@svgr/core'
+
+const svgrTemplate: Config['template'] = ({ jsx, componentName }, { tpl }) => tpl`
   import type { IconProps } from '../icons.interfaces.js'
 
   import type { ReactNode } from 'react'
@@ -14,11 +14,9 @@ const createSvgrTemplate: CreateSvgrTemplate = (withReplacement) =>
   import React from 'react'
   import { clsx } from 'clsx'
 
-  ${withReplacement ? `import { vars } from '@ui/theme'` : ''}
-
   import { iconSprinkles }  from '../icon.css.js'
 
-  export const ${componentName} = ({ color, ...props }: IconProps): ReactNode => {
+  export const ${componentName} = (props: IconProps): ReactNode => {
     const { className, style, otherProps } = iconSprinkles(props)
 
     const iconStyle = { ...style, ...otherProps.style } 
@@ -41,10 +39,10 @@ export const compileIcons = async (
         {
           icon: true,
           typescript: true,
-          template: createSvgrTemplate(Boolean(replacements[icon.name])),
+          template: svgrTemplate,
           plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
           svgProps: {
-            className: `{clsx(className, typeof otherProps?.className === 'string' && otherProps.className)}`,
+            className: `{clsx(className, String(otherProps.className || ''))}`,
             style: '{iconStyle}',
           },
           replaceAttrValues: { ...replacements[icon.name] },

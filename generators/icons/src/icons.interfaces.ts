@@ -1,5 +1,3 @@
-import type { Config } from '@svgr/core'
-
 export interface Icon {
   name: string
   source: string
@@ -13,5 +11,3 @@ export interface Source {
 }
 
 export type Replacements = Record<string, Record<string, string>>
-
-export type CreateSvgrTemplate = (withReplacement: boolean) => Config['template']
