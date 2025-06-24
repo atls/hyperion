@@ -1,5 +1,17 @@
 
 
+## [1.1.6](https://github.com/atls/hyperion/compare/@atls-ui-generators/icons@1.1.5...@atls-ui-generators/icons@1.1.6) (2025-06-24)
+
+
+### Features
+
+
+* **icons:** add added color extraction from theme via icon sprinkles ([2f37178](https://github.com/atls/hyperion/commit/2f37178dabc502d922db0172a75ae2c5da6e2a5c))
+
+
+
+
+
 ## [1.1.5](https://github.com/atls/hyperion/compare/@atls-ui-generators/icons@1.1.3...@atls-ui-generators/icons@1.1.5) (2025-04-29)
 
 

@@ -1,5 +1,18 @@
 
 
+## [1.0.6](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.0.5...@atls-ui-admin/icons@1.0.6) (2025-06-24)
+
+
+### Features
+
+
+* **icons:** add icons stories ([510e719](https://github.com/atls/hyperion/commit/510e719abca75fcc892ca6398a7961dd73d92fa5))
+* **icons:** update admin icons ([4ae2374](https://github.com/atls/hyperion/commit/4ae2374599d27ecb558c32858aa336af46506726))
+
+
+
+
+
 ## [1.0.5](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.0.3...@atls-ui-admin/icons@1.0.5) (2025-04-29)
 
 
