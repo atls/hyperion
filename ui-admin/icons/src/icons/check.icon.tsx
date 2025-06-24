@@ -7,7 +7,7 @@ import React              from 'react'
 
 import { iconSprinkles }  from '../icon.css.js'
 
-export const CheckIcon = ({ color, ...props }: IconProps): ReactNode => {
+export const CheckIcon = (props: IconProps): ReactNode => {
   const { className, style, otherProps } = iconSprinkles(props)
   const iconStyle = {
     ...style,
@@ -16,7 +16,7 @@ export const CheckIcon = ({ color, ...props }: IconProps): ReactNode => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      className={clsx(className, typeof otherProps?.className === 'string' && otherProps.className)}
+      className={clsx(className, String(otherProps.className || ''))}
       viewBox='0 0 1024 1024'
       width='1em'
       height='1em'
