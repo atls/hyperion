@@ -7,13 +7,15 @@ export const iconProperties = defineProperties({
   dynamicProperties: {
     width: true,
     height: true,
+    color: true,
+    stroke: true,
   },
   staticProperties: {
     width: vars.space,
     height: vars.space,
+    color: vars.colors,
+    stroke: vars.colors,
   },
 })
 
 export const iconSprinkles = createRainbowSprinkles(iconProperties)
-
-export type IconSprinkles = Parameters<typeof iconSprinkles>[0]

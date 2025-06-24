@@ -7,7 +7,7 @@ import React              from 'react'
 
 import { iconSprinkles }  from '../icon.css.js'
 
-export const UploadIcon = ({ color, ...props }: IconProps): ReactNode => {
+export const UploadIcon = (props: IconProps): ReactNode => {
   const { className, style, otherProps } = iconSprinkles(props)
   const iconStyle = {
     ...style,
@@ -19,7 +19,7 @@ export const UploadIcon = ({ color, ...props }: IconProps): ReactNode => {
       width='1em'
       height='1em'
       viewBox='0 0 40 40'
-      className={clsx(className, typeof otherProps?.className === 'string' && otherProps.className)}
+      className={clsx(className, String(otherProps.className || ''))}
       style={iconStyle}
       {...props}
     >

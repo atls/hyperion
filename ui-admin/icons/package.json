@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "yarn library build",
-    "generate-icons": "generate-icons ./src/icons -i ./icons",
+    "generate-icons": "generate-icons ./src/icons -i ./svg",
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
   },
@@ -21,15 +21,20 @@
     "rainbow-sprinkles": "1.0.0"
   },
   "devDependencies": {
+    "@atls-ui-admin/layout": "workspace:*",
+    "@storybook/react": "8.6.12",
     "@types/react": "19.1.2",
     "@vanilla-extract/css": "1.17.1",
     "@vanilla-extract/dynamic": "2.1.2",
+    "next-themes": "0.4.6",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "storybook": "8.6.12"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "*",
     "@vanilla-extract/dynamic": "*",
+    "next-themes": "*",
     "react": "*",
     "react-dom": "*"
   },

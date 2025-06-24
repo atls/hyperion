@@ -12,10 +12,10 @@ export const testCases: Array<TestCase> = [
     },
     expectedResult: {
       CircleIcon: {
-        '#18181B': '{(color && vars.colors[color]) || color || "#18181B"}',
+        '#18181B': 'currentColor',
       },
       LeftIcon: {
-        '#18181B': '{(color && vars.colors[color]) || color || "#18181B"}',
+        '#18181B': 'currentColor',
       },
     },
   },
@@ -26,13 +26,13 @@ export const testCases: Array<TestCase> = [
     },
     expectedResult: {
       CircleIcon: {
-        '#18181B': '{(color && vars.colors[color]) || color || "#18181B"}',
-        '#000000': '{(color && vars.colors[color]) || color || "#000000"}',
+        '#18181B': 'currentColor',
+        '#000000': 'currentColor',
       },
       LeftIcon: {
-        '#18181B': '{(color && vars.colors[color]) || color || "#18181B"}',
-        '#000000': '{(color && vars.colors[color]) || color || "#000000"}',
-        '#0000FF': '{(color && vars.colors[color]) || color || "#0000FF"}',
+        '#18181B': 'currentColor',
+        '#000000': 'currentColor',
+        '#0000FF': 'currentColor',
       },
     },
   },
