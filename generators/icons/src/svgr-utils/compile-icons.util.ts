@@ -48,7 +48,7 @@ export const compileIcons = async (
           replaceAttrValues: { ...replacements[icon.name] },
         },
         { componentName: icon.name.replace('50+', 'FiftyPlus') }
-      ),
+      ).then((value) => value.replace('...props', '...otherProps')),
       withReplacement: Boolean(replacements[icon.name]),
     }))
   )

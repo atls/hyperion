@@ -22,7 +22,7 @@ export const BagIcon = (props: IconProps): ReactNode => {
       viewBox='0 0 25 28'
       className={clsx(className, String(otherProps.className || ''))}
       style={iconStyle}
-      {...props}
+      {...otherProps}
     >
       <path
         fill='#fff'

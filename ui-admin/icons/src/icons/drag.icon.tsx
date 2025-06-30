@@ -22,7 +22,7 @@ export const DragIcon = (props: IconProps): ReactNode => {
       viewBox='0 0 16 12'
       className={clsx(className, String(otherProps.className || ''))}
       style={iconStyle}
-      {...props}
+      {...otherProps}
     >
       <path
         fill='currentColor'
