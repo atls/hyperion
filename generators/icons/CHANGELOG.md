@@ -1,5 +1,17 @@
 
 
+## [1.1.6](https://github.com/atls/hyperion/compare/@atls-ui-generators/icons@1.1.6...@atls-ui-generators/icons@1.1.6) (2025-06-30)
+
+
+### Bug Fixes
+
+
+* **icons:** generator template ([78c04b6](https://github.com/atls/hyperion/commit/78c04b6951a51f0bbcded17dd2da85082da9a49f))
+
+
+
+
+
 ## [1.1.6](https://github.com/atls/hyperion/compare/@atls-ui-generators/icons@1.1.5...@atls-ui-generators/icons@1.1.6) (2025-06-24)
 
 
