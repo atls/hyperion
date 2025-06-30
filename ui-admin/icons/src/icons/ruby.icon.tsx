@@ -22,7 +22,7 @@ export const RubyIcon = (props: IconProps): ReactNode => {
       viewBox='0 0 33 28'
       className={clsx(className, String(otherProps.className || ''))}
       style={iconStyle}
-      {...props}
+      {...otherProps}
     >
       <path
         fill='#387DFF'

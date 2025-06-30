@@ -22,7 +22,7 @@ export const PencilIcon = (props: IconProps): ReactNode => {
       className={clsx(className, String(otherProps.className || ''))}
       viewBox='0 0 24 24'
       style={iconStyle}
-      {...props}
+      {...otherProps}
     >
       <path
         fill='none'

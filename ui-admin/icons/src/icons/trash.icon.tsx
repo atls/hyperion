@@ -22,7 +22,7 @@ export const TrashIcon = (props: IconProps): ReactNode => {
       viewBox='0 0 14 16'
       className={clsx(className, String(otherProps.className || ''))}
       style={iconStyle}
-      {...props}
+      {...otherProps}
     >
       <path
         fill='#FE5F58'

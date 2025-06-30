@@ -22,7 +22,7 @@ export const UserIcon = (props: IconProps): ReactNode => {
       viewBox='0 0 25 25'
       className={clsx(className, String(otherProps.className || ''))}
       style={iconStyle}
-      {...props}
+      {...otherProps}
     >
       <path
         fill='currentColor'

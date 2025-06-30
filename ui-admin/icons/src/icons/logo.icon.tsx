@@ -22,7 +22,7 @@ export const LogoIcon = (props: IconProps): ReactNode => {
       viewBox='0 0 48 54'
       className={clsx(className, String(otherProps.className || ''))}
       style={iconStyle}
-      {...props}
+      {...otherProps}
     >
       <path
         fill='#387DFF'
