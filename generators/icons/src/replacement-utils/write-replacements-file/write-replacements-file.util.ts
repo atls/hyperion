@@ -20,9 +20,9 @@ export const writeReplacementsFile = (
     })
 
   const content = `${imports}
-    export const replacements = createReplacements({
-      ${replacementStrings.join(',\n')}
-    })`
+export const replacements = createReplacements({
+  ${replacementStrings.join(',\n')}
+})`
 
   writeFileSync(targetFile, content)
 }

@@ -16,7 +16,8 @@ export const createReplacementIconColors = async (
       const colors = getSvgColors(source)
 
       if (colors.length === 1) {
-        ;[items[icon.name]] = colors
+        // eslint-disable-next-line prefer-destructuring
+        items[icon.name] = colors[0]
       }
 
       if (colors.length > 1) {
