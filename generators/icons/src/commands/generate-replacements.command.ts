@@ -28,7 +28,7 @@ export class GenerateReplacementsCommand extends Command {
 
   private readonly iconsPath = Option.String('-i,--icons', {
     required: true,
-    description: 'Path to icons svg dir (required)',
+    description: 'Path to icons svg directory (required)',
   })
 
   async execute(): Promise<void> {

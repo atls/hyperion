@@ -9,9 +9,7 @@ export const createReplacementIconColors = async (
 ): Promise<ReplacementIconColors> => {
   const items: ReplacementIconColors = {}
 
-  const promises: Array<Promise<void>> = []
-
-  icons.forEach((icon) => {
+  const promises: Array<Promise<void>> = icons.map(async (icon) => {
     const fillItems = async (): Promise<void> => {
       const source = await compileIconJsx(icon)
 
@@ -26,7 +24,7 @@ export const createReplacementIconColors = async (
       }
     }
 
-    promises.push(fillItems())
+    return fillItems()
   })
 
   await Promise.all(promises)

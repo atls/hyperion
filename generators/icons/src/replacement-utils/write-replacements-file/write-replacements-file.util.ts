@@ -11,7 +11,7 @@ export const writeReplacementsFile = (
   replacementIconColors: ReplacementIconColors
 ): void => {
   const replacementStrings = Object.entries(replacementIconColors)
-    .sort(([keyA], [keyB]) => keyA[0].localeCompare(keyB[0]))
+    .sort(([keyA], [keyB]) => keyA.localeCompare(keyB))
     .map(([key, value]) => {
       if (Array.isArray(value)) {
         return `${key}: [${value.map((color) => `'${color}'`).join(', ')}]`

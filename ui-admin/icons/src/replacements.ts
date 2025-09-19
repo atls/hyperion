@@ -7,6 +7,6 @@ export const replacements = createReplacements({
   LogoIcon: ['#387DFF', '#fff'],
   RubyIcon: '#387DFF',
   TrashIcon: '#FE5F58',
-  UsersIcon: '#fff',
   UserIcon: '#fff',
+  UsersIcon: '#fff',
 })

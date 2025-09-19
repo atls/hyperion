@@ -11,7 +11,7 @@ export const svgrBuild = async (
   targetDir: string,
   replacements: Replacements
 ): Promise<void> => {
-  const files = await glob(`${iconsPath}/*.svg`)
+  const files = await glob(`${iconsPath}/**/*.svg`)
   const icons = readFiles(files)
 
   const sources = await compileIcons(

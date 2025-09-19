@@ -7,7 +7,7 @@ import { colorAttributes }             from '../icons.constants.js'
 export const getSvgColors = (source: string): Array<string> => {
   const colors = new Set<string>()
 
-  const cheerio = load(source)
+  const cheerio = load(source, { xml: true })
 
   cheerio('*').each((index, element) => {
     const attributes = cheerio(element).attr() ?? {}
