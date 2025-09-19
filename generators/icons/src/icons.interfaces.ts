@@ -11,3 +11,5 @@ export interface Source {
 }
 
 export type Replacements = Record<string, Record<string, string>>
+
+export type ReplacementIconColors = Record<string, Array<string> | string>

@@ -52,3 +52,11 @@ export const compileIcons = async (
       withReplacement: Boolean(replacements[icon.name]),
     }))
   )
+
+export const compileIconJsx = async (icon: Icon): Promise<string> =>
+  transform(icon.source.replace(/mask0/g, icon.name), {
+    icon: true,
+    typescript: true,
+    template: ({ jsx }, { tpl }) => tpl`${jsx}`,
+    plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
+  })
