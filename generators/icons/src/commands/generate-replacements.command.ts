@@ -1,7 +1,7 @@
 /* eslint-disable n/no-sync */
 
 import assert                from 'node:assert/strict'
-import { lstatSync }         from 'node:fs'
+import fs                    from 'node:fs'
 import path                  from 'node:path'
 
 import { Command }           from 'clipanion'
@@ -36,12 +36,16 @@ export class GenerateReplacementsCommand extends Command {
       this.logger.info('Starting replacements generation...')
 
       const outputPath = path.resolve(this.outputPath)
+      const outputDir = path.dirname(outputPath)
       const iconsPath = path.resolve(this.iconsPath)
 
       this.logger.info(`Resolved paths: output=${outputPath}, icons=${iconsPath}`)
 
-      assert.ok(lstatSync(outputPath).isFile(), 'Path to save replacements should point to a file.')
-      assert.ok(lstatSync(iconsPath).isDirectory(), 'Icons path should point to a directory')
+      assert.ok(
+        fs.existsSync(outputDir) && fs.lstatSync(outputDir).isDirectory(),
+        'Directory for output file must exist'
+      )
+      assert.ok(fs.lstatSync(iconsPath).isDirectory(), 'Icons path should point to a directory')
 
       await buildReplacements(iconsPath, outputPath)
 
