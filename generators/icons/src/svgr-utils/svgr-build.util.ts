@@ -11,17 +11,7 @@ export const svgrBuild = async (
   targetDir: string,
   replacements: Replacements
 ): Promise<void> => {
-  const prettifyIconsPath = (): string => {
-    const parts = iconsPath.split('')
-    if (parts[parts.length - 1] === '/') {
-      parts.pop()
-      return parts.join('')
-    }
-
-    return iconsPath
-  }
-
-  const files = await glob(`${prettifyIconsPath()}/*.svg`)
+  const files = await glob(`${iconsPath}/*.svg`)
   const icons = readFiles(files)
 
   const sources = await compileIcons(
