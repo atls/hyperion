@@ -4,6 +4,8 @@ import type { Icon }    from '../icons.interfaces.js'
 
 import fs               from 'node:fs'
 
+import { glob }         from 'glob'
+
 import { getIconNames } from '@atls-ui-generators/utils'
 
 const createIcon = (iconPath: string): Icon => ({
@@ -11,4 +13,8 @@ const createIcon = (iconPath: string): Icon => ({
   source: fs.readFileSync(iconPath).toString(),
 })
 
-export const readFiles = (files: Array<string>): Array<Icon> => files.map(createIcon)
+export const discoverIcons = async (svgDirectory: string): Promise<Array<Icon>> => {
+  const files = await glob(`${svgDirectory}/*.svg`)
+
+  return files.map(createIcon)
+}

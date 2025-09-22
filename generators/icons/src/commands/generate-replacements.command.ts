@@ -1,12 +1,11 @@
 import path                      from 'node:path'
 
 import { Option }                from 'clipanion'
-import { glob }                  from 'glob'
 
 import { BaseIconsCommand }      from './base-icons.command.js'
 import { buildReplacements }     from '../replacement-utils/index.js'
 import { writeReplacementsFile } from '../replacement-utils/index.js'
-import { readFiles }             from '../svgr-utils/index.js'
+import { discoverIcons }         from '../svgr-utils/index.js'
 
 export class GenerateReplacementsCommand extends BaseIconsCommand {
   static readonly paths = [['replacements']]
@@ -30,8 +29,7 @@ export class GenerateReplacementsCommand extends BaseIconsCommand {
 
       const outputFilePath = path.resolve(outputPath, this.fileName)
 
-      const files = await glob(`${iconsPath}/*.svg`)
-      const icons = readFiles(files)
+      const icons = await discoverIcons(iconsPath)
 
       const replacements = await buildReplacements(icons)
 

@@ -11,7 +11,7 @@ import { Option }            from 'clipanion'
 import { processFile }       from '@atls-ui-generators/utils'
 
 import { BaseIconsCommand }  from './base-icons.command.js'
-import { svgrBuild }         from '../svgr-utils/index.js'
+import { buildSvgr }         from '../svgr-utils/index.js'
 
 export class GenerateIconsCommand extends BaseIconsCommand {
   static readonly usage = BaseIconsCommand.Usage({
@@ -52,7 +52,7 @@ export class GenerateIconsCommand extends BaseIconsCommand {
 
       this.logger.info(`Icon generation started into ${outputPath}`)
 
-      await svgrBuild(iconsPath, outputPath, replacements)
+      await buildSvgr(iconsPath, outputPath, replacements)
 
       this.logger.info(`Generated into ${outputPath}`)
     } catch (error) {
