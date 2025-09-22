@@ -6,17 +6,15 @@ import assert                from 'node:assert/strict'
 import { lstatSync }         from 'node:fs'
 import path                  from 'node:path'
 
-import { Command }           from 'clipanion'
 import { Option }            from 'clipanion'
 
-import { createLogger }      from '@atls-ui-generators/utils'
 import { processFile }       from '@atls-ui-generators/utils'
 
+import { BaseIconsCommand }  from './base-icons.command.js'
 import { svgrBuild }         from '../svgr-utils/index.js'
 
-export class GenerateIconsCommand extends Command {
-  static readonly usage = Command.Usage({
-    category: 'Icons',
+export class GenerateIconsCommand extends BaseIconsCommand {
+  static readonly usage = BaseIconsCommand.Usage({
     description: 'Generate icon components from SVG files',
     details: `
       Reads all SVG files from the provided directory and generates icon components into the specified output directory. 
@@ -28,15 +26,6 @@ export class GenerateIconsCommand extends Command {
     ],
   })
 
-  private readonly logger = createLogger(GenerateIconsCommand.name)
-
-  private readonly outputPath = Option.String({ name: 'output', required: true })
-
-  private readonly iconsPath = Option.String('-i,--icons', {
-    required: true,
-    description: 'Path to icons svg directory (required)',
-  })
-
   private readonly replacementsPath = Option.String('-r,--replacements', '', {
     description: 'Path to replacements file (optional)',
   })
@@ -45,16 +34,7 @@ export class GenerateIconsCommand extends Command {
     try {
       this.logger.info('Starting icons generation...')
 
-      const outputPath = path.resolve(this.outputPath)
-      const iconsPath = path.resolve(this.iconsPath)
-
-      this.logger.info(`Resolved paths: output=${outputPath}, icons=${iconsPath}`)
-
-      assert.ok(
-        lstatSync(outputPath).isDirectory(),
-        'Path to save icons should point to a directory.'
-      )
-      assert.ok(lstatSync(iconsPath).isDirectory(), 'Icons path should point to a directory')
+      const { iconsPath, outputPath } = this.resolvePaths()
 
       let replacements: Replacements = {}
 
