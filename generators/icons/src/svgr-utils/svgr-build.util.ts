@@ -2,7 +2,7 @@ import type { Replacements } from '../icons.interfaces.js'
 
 import { glob }              from 'glob'
 
-import { compileIcons }      from './compile-icons.util.js'
+import { compileIcons }      from './compile-icons/index.js'
 import { createFiles }       from './create-files.util.js'
 import { readFiles }         from './read-files.util.js'
 
