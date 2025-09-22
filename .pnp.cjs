@@ -708,6 +708,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:22.15.3"],\
           ["cheerio", "npm:1.1.2"],\
           ["clipanion", "virtual:d0c77e885bef42d9872329dbb67e8e620c133c2e36ca32403a2fbabbcf79159a0ff0fdbfcdea70626b974fc5682fbba9965253f1859d6b45c7222e36551358c2#npm:4.0.0-rc.4"],\
+          ["domhandler", "npm:5.0.3"],\
           ["glob", "npm:11.0.2"],\
           ["is-svg", "npm:6.1.0"],\
           ["tsx", "npm:4.20.5"],\
