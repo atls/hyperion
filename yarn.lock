@@ -261,6 +261,7 @@ __metadata:
     cheerio: "npm:1.1.2"
     clipanion: "npm:4.0.0-rc.4"
     glob: "npm:11.0.2"
+    is-svg: "npm:6.1.0"
     tsx: "npm:4.20.5"
     typescript: "npm:5.5.4"
   bin:
@@ -3676,6 +3677,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@file-type/xml@npm:^0.4.3":
+  version: 0.4.4
+  resolution: "@file-type/xml@npm:0.4.4"
+  dependencies:
+    sax: "npm:^1.4.1"
+    strtok3: "npm:^10.3.4"
+  checksum: 10/a7c9bdbdb188fbc11bb08efdc699b49c5367952f732e3a9505396e905edfe47e2f924623861827be992a7899158b1864515770ec9252a43d6c0e37e404b4bd7a
+  languageName: node
+  linkType: hard
+
 "@floating-ui/core@npm:^1.6.0":
   version: 1.6.7
   resolution: "@floating-ui/core@npm:1.6.7"
@@ -5426,6 +5437,13 @@ __metadata:
   peerDependencies:
     "@testing-library/dom": ">=7.21.4"
   checksum: 10/49821459d81c6bc435d97128d6386ca24f1e4b3ba8e46cb5a96fe3643efa6e002d88c1b02b7f2ec58da593e805c59b78d7fdf0db565c1f02ba782f63ee984040
+  languageName: node
+  linkType: hard
+
+"@tokenizer/token@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "@tokenizer/token@npm:0.3.0"
+  checksum: 10/889c1f1e63ac7c92c0ea22d4a2861142f1b43c3d92eb70ec42aa9e9851fab2e9952211d50f541b287781280df2f979bf5600a9c1f91fbc61b7fcf9994e9376a5
   languageName: node
   linkType: hard
 
@@ -11485,6 +11503,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-svg@npm:6.1.0":
+  version: 6.1.0
+  resolution: "is-svg@npm:6.1.0"
+  dependencies:
+    "@file-type/xml": "npm:^0.4.3"
+  checksum: 10/16b106b83398ded673b4465773e30ee5857a444125fc2153c225f403016e341af39a10bfc1d0c1104c2cac3afcc3be446f786eb6184913c5f069ad85b94030e0
+  languageName: node
+  linkType: hard
+
 "is-symbol@npm:^1.0.2, is-symbol@npm:^1.0.3":
   version: 1.0.4
   resolution: "is-symbol@npm:1.0.4"
@@ -14403,6 +14430,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sax@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "sax@npm:1.4.1"
+  checksum: 10/b1c784b545019187b53a0c28edb4f6314951c971e2963a69739c6ce222bfbc767e54d320e689352daba79b7d5e06d22b5d7113b99336219d6e93718e2f99d335
+  languageName: node
+  linkType: hard
+
 "scheduler@npm:0.20.2":
   version: 0.20.2
   resolution: "scheduler@npm:0.20.2"
@@ -15235,6 +15269,15 @@ __metadata:
   version: 3.1.1
   resolution: "strip-json-comments@npm:3.1.1"
   checksum: 10/492f73e27268f9b1c122733f28ecb0e7e8d8a531a6662efbd08e22cccb3f9475e90a1b82cab06a392f6afae6d2de636f977e231296400d0ec5304ba70f166443
+  languageName: node
+  linkType: hard
+
+"strtok3@npm:^10.3.4":
+  version: 10.3.4
+  resolution: "strtok3@npm:10.3.4"
+  dependencies:
+    "@tokenizer/token": "npm:^0.3.0"
+  checksum: 10/53be14a567dca149be56cb072eaa3c0fffd70d066acf800cf588b91558c6d475364ff8d550524ce0499fc4873a4b0d42ad8c542bfdb9fb39cba520ef2e2e9818
   languageName: node
   linkType: hard
 

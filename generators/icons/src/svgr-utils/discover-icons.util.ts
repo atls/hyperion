@@ -5,6 +5,7 @@ import type { Icon }    from '../icons.interfaces.js'
 import fs               from 'node:fs'
 
 import { glob }         from 'glob'
+import isSvg            from 'is-svg'
 
 import { getIconNames } from '@atls-ui-generators/utils'
 
@@ -14,7 +15,9 @@ const createIcon = (iconPath: string): Icon => ({
 })
 
 export const discoverIcons = async (svgDirectory: string): Promise<Array<Icon>> => {
-  const files = await glob(`${svgDirectory}/*.svg`)
+  const files = await glob(`${svgDirectory}/**/*.svg`, { nodir: true })
 
-  return files.map(createIcon)
+  const icons = files.map(createIcon)
+
+  return icons.filter((icon) => isSvg(icon.source))
 }

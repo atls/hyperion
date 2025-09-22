@@ -30,7 +30,8 @@
     "@swc/core": "1.6.1",
     "cheerio": "1.1.2",
     "clipanion": "4.0.0-rc.4",
-    "glob": "11.0.2"
+    "glob": "11.0.2",
+    "is-svg": "6.1.0"
   },
   "devDependencies": {
     "@types/node": "22.15.3",
