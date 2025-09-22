@@ -1,4 +1,6 @@
-export const colorAttributes = new Set<string>([
+import type { GetSvgColorsOptions } from '../../svgr-utils/index.js'
+
+const colorAttributes = new Set<string>([
   'fill',
   'stroke',
   'color',
@@ -13,7 +15,7 @@ export const colorAttributes = new Set<string>([
   'border-color',
 ])
 
-export const ignoredColorAttributeValues = new Set<string>([
+const ignoredColorAttributeValues = new Set<string>([
   'none',
   'currentcolor',
   'currentColor',
@@ -23,4 +25,7 @@ export const ignoredColorAttributeValues = new Set<string>([
   'unset',
 ])
 
-export const STYLE_COLOR_ATTRIBUTE_KEY = 'style'
+export const getSvgColorsOptions: GetSvgColorsOptions = {
+  colorAttributes,
+  ignoredColorAttributeValues,
+}

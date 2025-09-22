@@ -3,6 +3,7 @@ import type { ReplacementIconColors } from '../../icons.interfaces.js'
 
 import { compileIconJsx }             from '../../svgr-utils/index.js'
 import { getSvgColors }               from '../../svgr-utils/index.js'
+import { getSvgColorsOptions }        from './create-replacement-icon-colors.constants.js'
 
 export const createReplacementIconColors = async (
   icons: Array<Icon>
@@ -10,7 +11,7 @@ export const createReplacementIconColors = async (
   const promises = icons.map(async (icon) => {
     const source = await compileIconJsx(icon)
 
-    const colors = getSvgColors(source)
+    const colors = getSvgColors(source, getSvgColorsOptions)
 
     if (colors.length === 1) {
       return [icon.name, colors[0]] as const
