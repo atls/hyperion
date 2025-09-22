@@ -1,16 +1,11 @@
-import { glob }                        from 'glob'
+import type { Icon }                   from '../../icons.interfaces.js'
+import type { Replacements }           from '../../icons.interfaces.js'
 
-import { readFiles }                   from '../../svgr-utils/index.js'
 import { createReplacementIconColors } from '../create-replacement-icon-colors/index.js'
 import { createReplacements }          from '../create-replacements/index.js'
-import { writeReplacementsFile }       from '../write-replacements-file/index.js'
 
-export const buildReplacements = async (iconsPath: string, targetFile: string): Promise<void> => {
-  const files = await glob(`${iconsPath}/**/*.svg`)
-  const icons = readFiles(files)
-
+export const buildReplacements = async (icons: Array<Icon>): Promise<Replacements> => {
   const replacementIconColors = await createReplacementIconColors(icons)
-  const replacements = createReplacements(replacementIconColors)
 
-  writeReplacementsFile(targetFile, replacements)
+  return createReplacements(replacementIconColors)
 }
