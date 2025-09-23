@@ -1,21 +1,24 @@
-import type { CreateReplacements } from './create-replacements.interfaces.js'
+import type { Replacements }          from '../../icons.interfaces.js'
+import type { ReplacementIconColors } from '../../icons.interfaces.js'
 
-import { getColorReplacement }     from '../get-color-replacement/index.js'
+import { getColorReplacement }        from '../get-color-replacement/index.js'
 
-export const createReplacements: CreateReplacements = (replacementIcons) =>
-  Object.entries(replacementIcons).reduce<Record<string, Record<string, string>>>((
-    replacement,
-    [icon, value]
-  ) => {
+export const createReplacements = (replacementIconColors: ReplacementIconColors): Replacements => {
+  const replacements: Replacements = {}
+
+  for (const [icon, value] of Object.entries(replacementIconColors)) {
     if (Array.isArray(value)) {
-      return {
-        ...replacement,
-        [icon]: value.reduce<Record<string, string>>(
-          (colors, color) => ({ ...colors, ...getColorReplacement({ color }) }),
-          {}
-        ),
-      }
-    }
+      const colors: Record<string, string> = {}
 
-    return { ...replacement, [icon]: getColorReplacement({ color: value }) }
-  }, {})
+      for (const color of value) {
+        Object.assign(colors, getColorReplacement({ color }))
+      }
+
+      replacements[icon] = colors
+    } else {
+      replacements[icon] = getColorReplacement({ color: value })
+    }
+  }
+
+  return replacements
+}

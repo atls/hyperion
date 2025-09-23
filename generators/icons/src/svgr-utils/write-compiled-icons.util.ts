@@ -25,7 +25,10 @@ const writeIndexFile = (sources: Array<Source>, targetDir: string): void => {
   fs.writeFileSync(filename, data)
 }
 
-export const createFiles = async (sources: Array<Source>, targetDir: string): Promise<void> => {
+export const writeCompiledIcons = async (
+  sources: Array<Source>,
+  targetDir: string
+): Promise<void> => {
   if (!fs.existsSync(targetDir)) {
     fs.mkdirSync(targetDir, { recursive: true })
   }

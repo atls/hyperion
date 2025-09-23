@@ -13,7 +13,7 @@
     "postpack": "rm -rf dist"
   },
   "devDependencies": {
-    "@playwright/test": "1.53.1",
+    "@playwright/test": "1.55.0",
     "@types/http-server": "0.12.4",
     "@types/node": "22.15.3",
     "@types/react": "19.1.2",
