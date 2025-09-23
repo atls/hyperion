@@ -1,3 +1,15 @@
+
+
+## [1.0.8](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.0.7...@atls-ui-admin/icons@1.0.8) (2025-09-23)
+
+
+### Features
+
+
+* **admin:** add generate-icons and generate-replacements scripts to icons ([633ce1f](https://github.com/atls/hyperion/commit/633ce1f228741fa12d600aa64a41d3ffc8bbf49e))
+
+
+
 ## [1.0.7](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.0.7...@atls-ui-admin/icons@1.0.7) (2025-06-30)
 
 ## [1.0.7](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.0.6...@atls-ui-admin/icons@1.0.7) (2025-06-30)

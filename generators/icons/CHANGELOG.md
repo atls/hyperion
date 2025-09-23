@@ -1,5 +1,19 @@
 
 
+## [1.2.1](https://github.com/atls/hyperion/compare/@atls-ui-generators/icons@1.1.8...@atls-ui-generators/icons@1.2.1) (2025-09-23)
+
+
+### Features
+
+
+* **generator:** add check what output directory exists ([01c40fb](https://github.com/atls/hyperion/commit/01c40fb7d3e8c601569b8c6b9be23b30bcfc2027))
+* **generator:** add clipanion generate icons command ([e7fa72b](https://github.com/atls/hyperion/commit/e7fa72beb296402c7b14340b62543994e24b8d3e))
+* **generator:** add generate replacements command to icons generator ([70529f3](https://github.com/atls/hyperion/commit/70529f3a4fc1c179349ea76bcd4ff145da11e353))
+
+
+
+
+
 ## [1.1.8](https://github.com/atls/hyperion/compare/@atls-ui-generators/icons@1.1.6...@atls-ui-generators/icons@1.1.8) (2025-06-30)
 
 
