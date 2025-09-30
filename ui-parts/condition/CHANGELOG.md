@@ -1,5 +1,17 @@
 
 
+## [1.1.1](https://github.com/atls/hyperion/compare/@atls-ui-parts/condition@1.0.5...@atls-ui-parts/condition@1.1.1) (2025-09-30)
+
+
+### Features
+
+
+* **ui-parts:** condition props ([645205c](https://github.com/atls/hyperion/commit/645205cc2bbeaabe434511833c3dd55e025a28d0))
+
+
+
+
+
 ## [1.0.5](https://github.com/atls/hyperion/compare/@atls-ui-parts/condition@1.0.3...@atls-ui-parts/condition@1.0.5) (2025-04-29)
 
 

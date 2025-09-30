@@ -1,5 +1,12 @@
 
 
+## [1.0.8](https://github.com/atls/hyperion/compare/@atls-ui-parts/parallax@1.0.7...@atls-ui-parts/parallax@1.0.8) (2025-09-30)
+
+
+
+
+
+
 ## [1.0.7](https://github.com/atls/hyperion/compare/@atls-ui-parts/parallax@1.0.6...@atls-ui-parts/parallax@1.0.7) (2025-04-29)
 
 
