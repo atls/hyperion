@@ -1,29 +1,53 @@
-import type { ReactNode }      from 'react'
+import type { ReactNode }    from 'react'
 
-import type { TooltipProps }   from './tooltip.interfaces.js'
+import type { TooltipProps } from './tooltip.interfaces.js'
 
-import { Children }            from 'react'
-import { cloneElement }        from 'react'
-import React                   from 'react'
+import { FloatingPortal }    from '@floating-ui/react'
+import { FloatingArrow }     from '@floating-ui/react'
+import { cloneElement }      from 'react'
+import React                 from 'react'
 
-import { defaultTooltipProps } from './tooltip.constants.js'
-import { useTooltip }          from './use-tooltip.hook.js'
+import { Condition }         from '@atls-ui-parts/condition'
+import { vars }              from '@atls-ui-parts/theme'
+import { useFloat }          from '@atls-utils/use-float'
 
-export const Tooltip = ({ children, text, ...props }: TooltipProps): ReactNode => {
-  const { isOpen, close, triggerProps, render } = useTooltip({ ...defaultTooltipProps, ...props })
+import { Container }         from './container/index.js'
 
-  if (typeof children === 'function')
-    return (
-      <>
-        {children(isOpen, close)}
-        {render({ text })}
-      </>
-    )
+export const Tooltip = ({
+  children,
+  text,
+  container = <Container />,
+  animated,
+  open,
+  arrow = true,
+  ...props
+}: TooltipProps): ReactNode => {
+  const { arrowRef, refs, isOpen, context, floatingStyles, getFloatingProps, getReferenceProps } =
+    useFloat({ open, role: 'tooltip', ...props })
+
+  const TriggerElement = cloneElement(children, { ref: refs.setReference, ...getReferenceProps() })
+
+  const ContainerElement = cloneElement(
+    container,
+    { ref: refs.setFloating, style: floatingStyles, open: isOpen, animated, ...getFloatingProps() },
+    <>
+      <Condition match={!!arrow}>
+        <FloatingArrow
+          ref={arrowRef}
+          context={context}
+          width={12}
+          fill={vars.colors.blackThreeQuarters}
+          {...(typeof arrow === 'boolean' ? {} : arrow)}
+        />
+      </Condition>
+      {text}
+    </>
+  )
 
   return (
     <>
-      {Children.only(cloneElement(children as never, triggerProps))}
-      {render({ text })}
+      {TriggerElement}
+      <FloatingPortal>{ContainerElement}</FloatingPortal>
     </>
   )
 }

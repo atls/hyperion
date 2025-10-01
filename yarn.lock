@@ -989,14 +989,15 @@ __metadata:
     "@atls-ui-parts/condition": "workspace:*"
     "@atls-ui-parts/layout": "workspace:*"
     "@atls-ui-parts/theme": "workspace:*"
+    "@atls-utils/use-float": "workspace:*"
+    "@floating-ui/react": "npm:0.27.8"
     "@storybook/react": "npm:8.6.12"
     "@types/react": "npm:19.1.2"
     "@vanilla-extract/css": "npm:1.17.1"
     "@vanilla-extract/dynamic": "npm:2.1.2"
-    framer-motion: "npm:12.9.2"
+    framer-motion: "npm:12.23.22"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
-    react-laag: "npm:2.0.5"
     storybook: "npm:8.6.12"
   peerDependencies:
     "@vanilla-extract/css": "*"
@@ -1063,6 +1064,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-utils/use-float@workspace:*, @atls-utils/use-float@workspace:utils/use-float":
+  version: 0.0.0-use.local
+  resolution: "@atls-utils/use-float@workspace:utils/use-float"
+  dependencies:
+    "@floating-ui/react": "npm:0.27.8"
+    "@types/react": "npm:19.1.2"
+    react: "npm:19.1.0"
+    react-dom: "npm:19.1.0"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
 "@atls-utils/use-hover@workspace:*, @atls-utils/use-hover@workspace:utils/use-hover":
   version: 0.0.0-use.local
   resolution: "@atls-utils/use-hover@workspace:utils/use-hover"
@@ -1082,20 +1097,6 @@ __metadata:
   resolution: "@atls-utils/use-outside-click@workspace:utils/use-outside-click"
   dependencies:
     "@types/react": "npm:19.1.2"
-  peerDependencies:
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@atls-utils/use-popover@workspace:utils/use-popover":
-  version: 0.0.0-use.local
-  resolution: "@atls-utils/use-popover@workspace:utils/use-popover"
-  dependencies:
-    "@types/react": "npm:19.1.2"
-    react: "npm:19.1.0"
-    react-dom: "npm:19.1.0"
-    react-laag: "npm:2.0.5"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -3722,7 +3723,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@floating-ui/react@npm:^0.27.3":
+"@floating-ui/react@npm:0.27.8, @floating-ui/react@npm:^0.27.3":
   version: 0.27.8
   resolution: "@floating-ui/react@npm:0.27.8"
   dependencies:

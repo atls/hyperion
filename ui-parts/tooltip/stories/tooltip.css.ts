@@ -1,8 +1,8 @@
 import { style } from '@vanilla-extract/css'
 
 export const testContainerStyles = style({
-  width: 50,
-  height: 30,
+  width: '50px',
+  height: '30px',
   background: 'green',
   margin: 0,
 })
@@ -12,7 +12,7 @@ export const testButtonStyles = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  height: 32,
+  height: '32px',
   padding: '0px 16px',
   color: 'rgba(0, 0, 0, 0.65)',
   backgroundColor: '#fff',
