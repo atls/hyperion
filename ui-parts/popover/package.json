@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/popover",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -14,10 +14,9 @@
   },
   "dependencies": {
     "@atls-ui-parts/condition": "workspace:*",
-    "@atls-ui-parts/theme": "workspace:*",
-    "@atls-ui-parts/tooltip": "workspace:*",
-    "framer-motion": "12.9.2",
-    "react-laag": "2.0.5"
+    "@atls-utils/use-float": "workspace:*",
+    "@floating-ui/react": "0.27.8",
+    "framer-motion": "12.23.22"
   },
   "devDependencies": {
     "@atls-ui-parts/layout": "workspace:*",
