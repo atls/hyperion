@@ -751,16 +751,15 @@ __metadata:
   dependencies:
     "@atls-ui-parts/condition": "workspace:*"
     "@atls-ui-parts/layout": "workspace:*"
-    "@atls-ui-parts/theme": "workspace:*"
-    "@atls-ui-parts/tooltip": "workspace:*"
+    "@atls-utils/use-float": "workspace:*"
+    "@floating-ui/react": "npm:0.27.8"
     "@storybook/react": "npm:8.6.12"
     "@types/react": "npm:19.1.2"
     "@vanilla-extract/css": "npm:1.17.1"
     "@vanilla-extract/dynamic": "npm:2.1.2"
-    framer-motion: "npm:12.9.2"
+    framer-motion: "npm:12.23.22"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
-    react-laag: "npm:2.0.5"
     storybook: "npm:8.6.12"
   peerDependencies:
     "@vanilla-extract/css": "*"
@@ -982,13 +981,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/tooltip@workspace:*, @atls-ui-parts/tooltip@workspace:ui-parts/tooltip":
+"@atls-ui-parts/tooltip@workspace:ui-parts/tooltip":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/tooltip@workspace:ui-parts/tooltip"
   dependencies:
     "@atls-ui-parts/condition": "workspace:*"
     "@atls-ui-parts/layout": "workspace:*"
-    "@atls-ui-parts/theme": "workspace:*"
     "@atls-utils/use-float": "workspace:*"
     "@floating-ui/react": "npm:0.27.8"
     "@storybook/react": "npm:8.6.12"
