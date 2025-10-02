@@ -1,13 +1,13 @@
 import { style } from '@vanilla-extract/css'
 
-export const testContainerStyles = style({
-  width: '50px',
+export const storyContainerStyles = style({
+  width: '150px',
   height: '30px',
   background: 'green',
   margin: 0,
 })
 
-export const testButtonStyles = style({
+export const storyTriggerStyles = style({
   boxSizing: 'border-box',
   display: 'flex',
   alignItems: 'center',

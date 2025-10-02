@@ -1,19 +1,17 @@
 import { style } from '@vanilla-extract/css'
 
-import { vars }  from '@atls-ui-parts/theme'
-
 export const baseContainerStyles = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   minWidth: 30,
   minHeight: 32,
-  padding: `${vars.space.g8} ${vars.space.g12}`,
-  margin: vars.space.zero,
-  color: vars.colors.white,
+  padding: '8px 12px',
+  margin: 0,
+  color: 'rgba(255, 255, 255, 1)',
   wordWrap: 'break-word',
-  backgroundColor: vars.colors.blackThreeQuarters,
-  borderRadius: vars.radii.f8,
-  boxShadow: vars.shadows.gordonsgreen,
+  backgroundColor: 'rgba(0, 0, 0, 0.75)',
+  borderRadius: '8px',
+  boxShadow: '0px 2px 24px rgba(0, 0, 0, 0.15)',
   zIndex: 1000,
 })

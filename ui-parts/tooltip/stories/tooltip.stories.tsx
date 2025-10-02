@@ -1,20 +1,20 @@
-import type { TooltipProps }   from '@atls-ui-parts/tooltip'
-import type { Meta }           from '@storybook/react'
-import type { StoryObj }       from '@storybook/react'
-import type { HTMLAttributes } from 'react'
-import type { ReactNode }      from 'react'
+/* eslint-disable react/jsx-no-leaked-render */
 
-import React                   from 'react'
+import type { TooltipProps }    from '@atls-ui-parts/tooltip'
+import type { Meta }            from '@storybook/react'
+import type { StoryObj }        from '@storybook/react'
 
-import { Tooltip }             from '@atls-ui-parts/tooltip'
+import React                    from 'react'
 
-import { testContainerStyles } from './tooltip.css.js'
-import { testButtonStyles }    from './tooltip.css.js'
+import { Tooltip }              from '@atls-ui-parts/tooltip'
 
-type StoryTooltipProps = Pick<
-  TooltipProps,
-  'animated' | 'arrow' | 'container' | 'offset' | 'placement' | 'trigger'
->
+import { storyTriggerStyles }   from './tooltip.stories.css.js'
+import { storyContainerStyles } from './tooltip.stories.css.js'
+
+interface StoryTooltipProps
+  extends Pick<TooltipProps, 'animated' | 'arrow' | 'offset' | 'placement' | 'trigger'> {
+  customContainer: boolean
+}
 
 const meta: Meta<StoryTooltipProps> = {
   title: 'Components/Tooltip',
@@ -31,7 +31,7 @@ const meta: Meta<StoryTooltipProps> = {
       description: 'Указатель',
       control: { type: 'boolean' },
     },
-    container: {
+    customContainer: {
       description: 'Свой контейнер',
       control: { type: 'boolean' },
     },
@@ -58,7 +58,7 @@ const meta: Meta<StoryTooltipProps> = {
       ],
     },
     trigger: {
-      description: 'Тригер',
+      description: 'Триггер',
       control: { type: 'select' },
       options: ['click', 'hover'],
     },
@@ -66,6 +66,7 @@ const meta: Meta<StoryTooltipProps> = {
   args: {
     animated: true,
     arrow: true,
+    customContainer: false,
     offset: 10,
     placement: 'top',
     trigger: 'click',
@@ -74,24 +75,18 @@ const meta: Meta<StoryTooltipProps> = {
 
 export default meta
 
-const TestButton = ({ children, ...props }: HTMLAttributes<HTMLDivElement>): ReactNode => (
-  <div className={testButtonStyles} {...props}>
-    {children}
-  </div>
-)
-
 export const Base: StoryObj<StoryTooltipProps> = {
-  render: ({ animated, arrow, offset, placement, container, trigger }) => (
+  render: ({ animated, arrow, customContainer, offset, placement, trigger }) => (
     <Tooltip
       animated={animated}
-      arrow={arrow}
+      arrow={arrow && customContainer ? { fill: 'green' } : arrow}
       offset={offset}
       placement={placement}
       trigger={trigger}
       text='Tooltip text'
-      container={container ? <div className={testContainerStyles} /> : undefined}
+      container={customContainer ? <div className={storyContainerStyles} /> : undefined}
     >
-      <TestButton>Trigger</TestButton>
+      <div className={storyTriggerStyles}>Trigger</div>
     </Tooltip>
   ),
 }

@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@atls-ui-parts/condition": "workspace:*",
-    "@atls-ui-parts/theme": "workspace:*",
     "@atls-utils/use-float": "workspace:*",
     "@floating-ui/react": "0.27.8",
     "framer-motion": "12.23.22"

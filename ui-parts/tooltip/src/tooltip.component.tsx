@@ -3,22 +3,23 @@ import type { ReactNode }    from 'react'
 import type { TooltipProps } from './tooltip.interfaces.js'
 
 import { FloatingPortal }    from '@floating-ui/react'
-import { FloatingArrow }     from '@floating-ui/react'
+import { AnimatePresence }   from 'framer-motion'
+import { motion }            from 'framer-motion'
 import { cloneElement }      from 'react'
 import React                 from 'react'
 
-import { Condition }         from '@atls-ui-parts/condition'
-import { vars }              from '@atls-ui-parts/theme'
 import { useFloat }          from '@atls-utils/use-float'
 
+import { Arrow }             from './arrow/index.js'
 import { Container }         from './container/index.js'
+import { animateProps }      from './tooltip.constants.js'
 
 export const Tooltip = ({
   children,
   text,
-  container = <Container />,
-  animated,
   open,
+  container = <Container />,
+  animated = true,
   arrow = true,
   ...props
 }: TooltipProps): ReactNode => {
@@ -29,25 +30,27 @@ export const Tooltip = ({
 
   const ContainerElement = cloneElement(
     container,
-    { ref: refs.setFloating, style: floatingStyles, open: isOpen, animated, ...getFloatingProps() },
+    { open: isOpen },
     <>
-      <Condition match={!!arrow}>
-        <FloatingArrow
-          ref={arrowRef}
-          context={context}
-          width={12}
-          fill={vars.colors.blackThreeQuarters}
-          {...(typeof arrow === 'boolean' ? {} : arrow)}
-        />
-      </Condition>
+      <Arrow ref={arrowRef} context={context} arrow={arrow} />
       {text}
     </>
   )
 
+  const motionProps = typeof animated === 'boolean' ? animateProps : animated
+
   return (
     <>
       {TriggerElement}
-      <FloatingPortal>{ContainerElement}</FloatingPortal>
+      <FloatingPortal>
+        <div ref={refs.setFloating} style={floatingStyles} {...getFloatingProps()}>
+          <AnimatePresence>
+            {!!isOpen && (
+              <motion.div {...(animated ? motionProps : {})}>{ContainerElement}</motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </FloatingPortal>
     </>
   )
 }
