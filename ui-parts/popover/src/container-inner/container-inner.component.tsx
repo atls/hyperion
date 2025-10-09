@@ -1,8 +1,6 @@
 import type { ReactNode }       from 'react'
 import type { HTMLAttributes }  from 'react'
 
-import React                    from 'react'
-
 import { containerInnerStyles } from './container-inner.css.js'
 
 export const ContainerInner = ({

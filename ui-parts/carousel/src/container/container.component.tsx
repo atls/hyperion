@@ -3,7 +3,6 @@ import type { ReactNode }      from 'react'
 import type { ContainerProps } from './container.interfaces.js'
 
 import { clsx }                from 'clsx'
-import React                   from 'react'
 
 import { containerStyles }     from './container.css.js'
 

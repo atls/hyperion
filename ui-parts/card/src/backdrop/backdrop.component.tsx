@@ -4,7 +4,6 @@ import type { BackdropProps } from './backdrop.interfaces.js'
 
 import { clsx }               from 'clsx'
 import { motion }             from 'framer-motion'
-import React                  from 'react'
 
 import { backdropStyles }     from './backdrop.css.js'
 

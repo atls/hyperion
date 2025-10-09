@@ -10,7 +10,6 @@ import { useCombobox }            from 'downshift'
 import { useEffect }              from 'react'
 import { useState }               from 'react'
 import { useLayer }               from 'react-laag'
-import React                      from 'react'
 
 import { Input }                  from '@atls-ui-parts/input'
 import { Row }                    from '@atls-ui-parts/layout'

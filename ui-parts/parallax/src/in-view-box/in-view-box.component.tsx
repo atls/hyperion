@@ -3,7 +3,6 @@ import type { ReactNode }      from 'react'
 
 import { clsx }                from 'clsx'
 import { useInView }           from 'react-intersection-observer'
-import React                   from 'react'
 
 import { Condition }           from '@atls-ui-parts/condition'
 

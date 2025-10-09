@@ -4,7 +4,6 @@ import type { FallbackProps }   from './avatar-fallback.interfaces.js'
 
 import { Fallback }             from '@radix-ui/react-avatar'
 import { clsx }                 from 'clsx'
-import React                    from 'react'
 
 import { avatarFallbackStyles } from './avatar-fallback.css.js'
 

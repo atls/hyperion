@@ -3,7 +3,6 @@ import type { ReactNode }  from 'react'
 import type { ModalProps } from './modal.interfaces.js'
 
 import { AnimatePresence } from 'framer-motion'
-import React               from 'react'
 
 import { Condition }       from '@atls-ui-parts/condition'
 import { Portal }          from '@atls-ui-parts/portal'

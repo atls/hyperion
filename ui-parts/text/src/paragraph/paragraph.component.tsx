@@ -2,8 +2,6 @@ import type { ReactNode }        from 'react'
 
 import type { ParagraphProps }   from './paragraph.interfaces.js'
 
-import React                     from 'react'
-
 import { ParagraphElement }      from './paragraph.element.js'
 import { defaultParagraphProps } from './paragraph.constants.js'
 import { paragraphSprinkles }    from './paragraph.css.js'

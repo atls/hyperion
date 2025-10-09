@@ -3,7 +3,6 @@ import type { ReactNode }            from 'react'
 import type { LineContainerProps }   from './line-container.interfaces.js'
 
 import { clsx }                      from 'clsx'
-import React                         from 'react'
 
 import { baseLineContainerStyles }   from './line-container.css.js'
 import { lineContainerSprinkles }    from './line-container.css.js'

@@ -2,8 +2,6 @@ import type { ReactNode }    from 'react'
 
 import type { TitleProps }   from './title.interfaces.js'
 
-import React                 from 'react'
-
 import { TitleElement }      from './title.element.js'
 import { defaultTitleProps } from './title.constants.js'
 import { titleSprinkles }    from './title.css.js'

@@ -3,7 +3,6 @@ import type { ReactNode }             from 'react'
 import type { ParagraphElementProps } from './paragraph.interfaces.js'
 
 import { clsx }                       from 'clsx'
-import React                          from 'react'
 
 export const ParagraphElement = ({
   children,

@@ -6,7 +6,6 @@ import type { LinkProps } from './link.interfaces.js'
 
 import { clsx }           from 'clsx'
 import NextLink           from 'next/link.js'
-import React              from 'react'
 
 import { baseLinkStyles } from './link.css.js'
 import { linkSprinkles }  from './link.css.js'

@@ -2,8 +2,6 @@ import type { ReactNode }     from 'react'
 
 import type { CurrencyProps } from './currency.interfaces.js'
 
-import React                  from 'react'
-
 import { Condition }          from '@atls-ui-parts/condition'
 
 import { Text }               from '../text/index.js'

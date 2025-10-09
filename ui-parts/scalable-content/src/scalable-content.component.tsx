@@ -3,7 +3,6 @@ import type { ReactNode }            from 'react'
 import type { ScalableContentProps } from './scalable-content.interfaces.js'
 
 import { clsx }                      from 'clsx'
-import React                         from 'react'
 
 import { useScale }                  from './hooks/index.js'
 import { scalableContentStyles }     from './scalable-content.css.js'

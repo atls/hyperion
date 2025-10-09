@@ -5,7 +5,6 @@ import type { ReactNode }         from 'react'
 import type { CircleProps }       from './circle.interfaces.js'
 
 import { useState }               from 'react'
-import React                      from 'react'
 
 import { vars }                   from '@atls-ui-parts/theme'
 

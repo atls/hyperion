@@ -5,7 +5,6 @@ export const svgrTemplate: Config['template'] = ({ jsx, componentName }, { tpl }
 
   import type { ReactNode } from 'react'
 
-  import React from 'react'
   import { clsx } from 'clsx'
 
   import { iconSprinkles }  from '../icon.css.js'

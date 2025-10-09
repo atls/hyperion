@@ -3,7 +3,6 @@ import type { ReactNode }   from 'react'
 import type { SwitchProps } from './switch.interfaces.js'
 
 import { useRef }           from 'react'
-import React                from 'react'
 
 import { Handle }           from './handle/index.js'
 import { Thumb }            from './thumb/index.js'

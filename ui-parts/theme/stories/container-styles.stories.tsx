@@ -5,7 +5,6 @@ import type { StoryObj }            from '@storybook/react'
 
 import { clsx }                     from 'clsx'
 import { useRef }                   from 'react'
-import React                        from 'react'
 
 import { Box }                      from '@atls-ui-parts/layout'
 import { Column }                   from '@atls-ui-parts/layout'

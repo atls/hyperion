@@ -3,7 +3,6 @@ import type { ReactNode }    from 'react'
 import type { ButtonProps }  from '../button.interfaces.js'
 
 import { clsx }              from 'clsx'
-import React                 from 'react'
 
 import { baseStyles }        from '../styles/base.css.js'
 import { nulledGhostStyles } from './ghost-button.css.js'

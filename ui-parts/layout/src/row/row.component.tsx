@@ -2,8 +2,6 @@ import type { ReactNode }   from 'react'
 
 import type { LayoutProps } from '../layout/index.js'
 
-import React                from 'react'
-
 import { Layout }           from '../layout/index.js'
 
 export const Row = ({

@@ -3,7 +3,6 @@ import type { ReactNode }       from 'react'
 import type { PaginationProps } from './pagination.interfaces.js'
 
 import { clsx }                 from 'clsx'
-import React                    from 'react'
 
 import { basePaginationStyles } from './pagination.css.js'
 import { paginationSprinkles }  from './pagination.css.js'

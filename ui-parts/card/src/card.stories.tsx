@@ -3,8 +3,6 @@ import type { StoryObj }          from '@storybook/react'
 import type { ReactNode }         from 'react'
 import type { PropsWithChildren } from 'react'
 
-import React                      from 'react'
-
 import { Button }                 from '@atls-ui-parts/button'
 import { Condition }              from '@atls-ui-parts/condition'
 import { Column }                 from '@atls-ui-parts/layout'

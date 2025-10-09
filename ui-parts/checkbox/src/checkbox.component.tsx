@@ -8,7 +8,6 @@ import type { CheckboxProps }      from './checkbox.interfaces.js'
 import { clsx }                    from 'clsx'
 import { useEffect }               from 'react'
 import { useState }                from 'react'
-import React                       from 'react'
 
 import { boxBaseStyles }           from './box/index.js'
 import { boxShapeStyles }          from './box/index.js'

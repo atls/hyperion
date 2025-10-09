@@ -2,8 +2,6 @@ import type { ReactNode }                from 'react'
 
 import type { ImageBoxPlaceholderProps } from './image-box-placeholder.interfaces.js'
 
-import React                             from 'react'
-
 import { Box }                           from '@atls-ui-parts/layout'
 
 import { ImagePlaceholder }              from '../image-placeholder/index.js'

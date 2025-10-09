@@ -2,8 +2,6 @@ import type { ReactNode }   from 'react'
 
 import type { TextProps }   from './text.interfaces.js'
 
-import React                from 'react'
-
 import { TextElement }      from '@atls-ui-parts/text'
 
 import { defaultTextProps } from './text.constants.js'

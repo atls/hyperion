@@ -6,7 +6,6 @@ import type { HTMLAttributes } from 'react'
 import type { ReactNode }      from 'react'
 
 import { useState }            from 'react'
-import React                   from 'react'
 
 import { Condition }           from '@atls-ui-parts/condition'
 import { Column }              from '@atls-ui-parts/layout'

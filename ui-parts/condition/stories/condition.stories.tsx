@@ -2,8 +2,6 @@ import type { ConditionProps } from '@atls-ui-parts/condition'
 import type { Meta }           from '@storybook/react'
 import type { StoryObj }       from '@storybook/react'
 
-import React                   from 'react'
-
 import { Condition }           from '@atls-ui-parts/condition'
 
 interface StoryConditionProps extends Pick<ConditionProps, 'animated'> {
