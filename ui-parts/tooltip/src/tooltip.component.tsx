@@ -4,7 +4,6 @@ import type { TooltipProps }   from './tooltip.interfaces.js'
 
 import { Children }            from 'react'
 import { cloneElement }        from 'react'
-import React                   from 'react'
 
 import { defaultTooltipProps } from './tooltip.constants.js'
 import { useTooltip }          from './use-tooltip.hook.js'

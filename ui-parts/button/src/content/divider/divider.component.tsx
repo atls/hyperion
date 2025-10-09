@@ -3,7 +3,6 @@ import type { ReactNode }    from 'react'
 import type { DividerProps } from './divider.interfaces.js'
 
 import { clsx }              from 'clsx'
-import React                 from 'react'
 
 import { dividerSprinkles }  from './divider.css.js'
 

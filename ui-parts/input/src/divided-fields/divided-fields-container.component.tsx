@@ -3,7 +3,6 @@ import type { ReactNode }                   from 'react'
 import type { DividedFieldsContainerProps } from './divided-fields-container.interfaces.js'
 
 import { clsx }                             from 'clsx'
-import React                                from 'react'
 
 import { dividedFieldsContainerSprinkles }  from './divided-fields-container.css.js'
 import { baseDividedFieldsContainerStyles } from './divided-fields-container.css.js'

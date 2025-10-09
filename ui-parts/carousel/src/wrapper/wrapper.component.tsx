@@ -4,7 +4,6 @@ import type { WrapperProps }       from './wrapper.interfaces.js'
 
 import { clsx }                    from 'clsx'
 import { motion }                  from 'framer-motion'
-import React                       from 'react'
 
 import { baseWrapperStyles }       from './wrapper.css.js'
 import { horizontalWrapperStyles } from './wrapper.css.js'

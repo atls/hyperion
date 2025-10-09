@@ -5,7 +5,6 @@ import type { PopoverProps }      from './popover.interfaces.js'
 
 import { Children }               from 'react'
 import { cloneElement }           from 'react'
-import React                      from 'react'
 
 import { usePopover }             from './use-popover.hook.js'
 

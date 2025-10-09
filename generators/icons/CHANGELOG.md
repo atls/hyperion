@@ -1,5 +1,16 @@
 
 
+
+
+## [1.2.2] (2025-10-10)
+
+
+### BREAKING CHANGES
+
+
+* Requires React version 18 or higher for proper component functionality
+
+
 ## [1.2.1](https://github.com/atls/hyperion/compare/@atls-ui-generators/icons@1.1.8...@atls-ui-generators/icons@1.2.1) (2025-09-23)
 
 

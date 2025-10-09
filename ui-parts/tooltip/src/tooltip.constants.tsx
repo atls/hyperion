@@ -1,7 +1,5 @@
 import type { TooltipProps } from './tooltip.interfaces.js'
 
-import React                 from 'react'
-
 import { Container }         from './container/index.js'
 
 export const defaultTooltipProps: TooltipProps = {

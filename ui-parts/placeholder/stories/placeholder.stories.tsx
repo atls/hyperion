@@ -1,8 +1,6 @@
 import type { Meta }                  from '@storybook/react'
 import type { StoryObj }              from '@storybook/react'
 
-import React                          from 'react'
-
 import { Condition }                  from '@atls-ui-parts/condition'
 import { Box }                        from '@atls-ui-parts/layout'
 import { Column }                     from '@atls-ui-parts/layout'

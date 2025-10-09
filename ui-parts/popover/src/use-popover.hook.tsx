@@ -3,8 +3,6 @@ import type { UseTooltipReturn }  from '@atls-ui-parts/tooltip'
 import type { ReactElement }      from 'react'
 import type { ReactPortal }       from 'react'
 
-import React                      from 'react'
-
 import { useTooltip }             from '@atls-ui-parts/tooltip'
 
 import { Container }              from './container/index.js'

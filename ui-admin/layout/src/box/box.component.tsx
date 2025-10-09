@@ -2,8 +2,6 @@ import type { ReactNode } from 'react'
 
 import type { BoxProps }  from './box.interfaces.js'
 
-import React              from 'react'
-
 import { BoxElement }     from '@atls-ui-parts/layout'
 
 import { boxSprinkles }   from './box.css.js'

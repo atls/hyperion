@@ -1,8 +1,6 @@
 import type { Meta }     from '@storybook/react'
 import type { StoryObj } from '@storybook/react'
 
-import React             from 'react'
-
 import { BagIcon }       from '@atls-ui-admin/icons'
 import { ChartIcon }     from '@atls-ui-admin/icons'
 import { CheckIcon }     from '@atls-ui-admin/icons'

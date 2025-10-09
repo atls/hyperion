@@ -3,7 +3,6 @@ import type { ReactNode }         from 'react'
 import type { PropsWithChildren } from 'react'
 
 import { useEffect }              from 'react'
-import React                      from 'react'
 
 import { globalThemeId }          from '@atls-ui-parts/theme'
 

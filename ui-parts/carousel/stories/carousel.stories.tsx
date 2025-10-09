@@ -8,7 +8,6 @@ import type { SVGProps }        from 'react'
 import type { PaginationProps } from '../src/pagination/index.js'
 
 import { useRef }               from 'react'
-import React                    from 'react'
 
 import { Condition }            from '@atls-ui-parts/condition'
 import { Box }                  from '@atls-ui-parts/layout'

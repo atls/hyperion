@@ -2,7 +2,6 @@ import type { ConditionProps } from './condition.interfaces.js'
 
 import { AnimatePresence }     from 'framer-motion'
 import { motion }              from 'framer-motion'
-import React                   from 'react'
 
 import { smoothProps }         from './condition.constants.js'
 

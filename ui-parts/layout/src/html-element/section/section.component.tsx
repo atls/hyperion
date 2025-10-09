@@ -2,8 +2,6 @@ import type { ReactNode }        from 'react'
 
 import type { HTMLElementProps } from '../html-element.interfaces.js'
 
-import React                     from 'react'
-
 import { SectionElement }        from './section.element.js'
 import { htmlElementSprinkles }  from '../html-element.css.js'
 

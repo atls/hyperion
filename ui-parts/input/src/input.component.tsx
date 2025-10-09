@@ -4,8 +4,6 @@ import type { ReactNode }  from 'react'
 
 import type { InputProps } from './input.interfaces.js'
 
-import React               from 'react'
-
 import { inputStyles }     from './styles/index.js'
 
 export const Input = ({

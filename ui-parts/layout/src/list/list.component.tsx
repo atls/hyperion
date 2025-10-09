@@ -2,8 +2,6 @@ import type { ReactNode } from 'react'
 
 import type { ListProps } from './list.interfaces.js'
 
-import React              from 'react'
-
 import { ListItem }       from './list-item/index.js'
 import { ListElement }    from './list.element.js'
 import { listSprinkles }  from './list.css.js'

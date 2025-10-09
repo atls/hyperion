@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/tooltip",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",

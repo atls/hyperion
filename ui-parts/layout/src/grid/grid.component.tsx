@@ -2,8 +2,6 @@ import type { ReactNode } from 'react'
 
 import type { GridProps } from './grid.interfaces.js'
 
-import React              from 'react'
-
 import { GridElement }    from './grid.element.js'
 import { gridSprinkles }  from './grid.css.js'
 

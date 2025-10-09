@@ -2,7 +2,6 @@ import type { ButtonProps } from '@atls-ui-parts/button'
 import type { ReactNode }   from 'react'
 
 import { useState }         from 'react'
-import React                from 'react'
 
 import { useHover }         from '@atls-utils/use-hover'
 

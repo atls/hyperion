@@ -8,7 +8,6 @@ import type { UseTooltipReturn }  from './tooltip.interfaces.js'
 import { AnimatePresence }        from 'framer-motion'
 import { cloneElement }           from 'react'
 import { useLayer }               from 'react-laag'
-import React                      from 'react'
 
 import { Container }              from './container/index.js'
 import { useClick }               from './hooks/index.js'

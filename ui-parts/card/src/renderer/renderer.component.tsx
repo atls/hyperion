@@ -7,7 +7,6 @@ import { clsx }                    from 'clsx'
 import { useEffect }               from 'react'
 import { useState }                from 'react'
 import { createPortal }            from 'react-dom'
-import React                       from 'react'
 
 import { Condition }               from '@atls-ui-parts/condition'
 import { Box }                     from '@atls-ui-parts/layout'

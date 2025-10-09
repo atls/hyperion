@@ -7,7 +7,6 @@ import type { ValueType } from './autocomplete.interfaces.js'
 
 import { useEffect }      from 'react'
 import { useState }       from 'react'
-import React              from 'react'
 
 import { Column }         from '@atls-ui-parts/layout'
 import { Layout }         from '@atls-ui-parts/layout'

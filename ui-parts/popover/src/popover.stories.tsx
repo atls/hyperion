@@ -4,8 +4,6 @@ import type { ReactNode }         from 'react'
 import type { HTMLAttributes }    from 'react'
 import type { MouseEventHandler } from 'react'
 
-import React                      from 'react'
-
 import { Column }                 from '@atls-ui-parts/layout'
 import { Layout }                 from '@atls-ui-parts/layout'
 

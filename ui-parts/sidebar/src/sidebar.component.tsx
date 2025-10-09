@@ -1,8 +1,6 @@
 import type { ReactNode }         from 'react'
 import type { PropsWithChildren } from 'react'
 
-import React                      from 'react'
-
 import { Switch }                 from '@atls-ui-parts/switch'
 import { useHover }               from '@atls-utils/use-hover'
 

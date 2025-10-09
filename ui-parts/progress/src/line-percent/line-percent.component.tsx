@@ -3,7 +3,6 @@ import type { ReactNode }          from 'react'
 import type { LinePercentProps }   from './line-percent.interfaces.js'
 
 import { clsx }                    from 'clsx'
-import React                       from 'react'
 
 import { baseLinePercentStyles }   from './line-percent.css.js'
 import { linePercentSprinkles }    from './line-percent.css.js'

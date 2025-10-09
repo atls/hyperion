@@ -3,7 +3,6 @@ import type { ReactNode } from 'react'
 import type { IconProps } from '../icons.interfaces.js'
 
 import { clsx }           from 'clsx'
-import React              from 'react'
 
 import { iconSprinkles }  from '../icon.css.js'
 

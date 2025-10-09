@@ -3,7 +3,6 @@ import type { ReactNode }       from 'react'
 import type { NavigationProps } from './navigation.interfaces.js'
 
 import { clsx }                 from 'clsx'
-import React                    from 'react'
 
 import { baseNavigationStyles } from './navigation.css.js'
 import { hideNavigationStyles } from './navigation.css.js'

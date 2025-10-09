@@ -1,5 +1,16 @@
 
 
+
+
+## [1.0.9] (2025-10-10)
+
+
+### BREAKING CHANGES
+
+
+* Requires React version 18 or higher for proper component functionality
+
+
 ## [1.0.8](https://github.com/atls/hyperion/compare/@atls-ui-admin/upload@1.0.8...@atls-ui-admin/upload@1.0.8) (2025-09-23)
 
 
