@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/text",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
