@@ -3,7 +3,6 @@ import type { ReactNode }        from 'react'
 import type { TextElementProps } from './text.interfaces.js'
 
 import { clsx }                  from 'clsx'
-import React                     from 'react'
 
 export const TextElement = ({
   children,

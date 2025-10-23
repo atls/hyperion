@@ -5,7 +5,6 @@ import type { ReactNode }  from 'react'
 import type { ImageProps } from './image.interfaces.js'
 
 import { clsx }            from 'clsx'
-import React               from 'react'
 
 import { baseImageStyles } from './image.css.js'
 import { imageSprinkles }  from './image.css.js'

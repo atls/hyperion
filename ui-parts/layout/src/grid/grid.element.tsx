@@ -3,7 +3,6 @@ import type { ReactNode }           from 'react'
 import type { GridElementProps }    from './grid.interfaces.js'
 
 import { clsx }                     from 'clsx'
-import React                        from 'react'
 
 import { fillStyles }               from '../styles/index.js'
 import { fullViewportHeightStyles } from '../styles/index.js'

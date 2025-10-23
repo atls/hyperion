@@ -3,7 +3,6 @@ import type { ReactNode }    from 'react'
 import type { IconProps }    from './icon.interfaces.js'
 
 import { clsx }              from 'clsx'
-import React                 from 'react'
 
 import { spinLoadingStyles } from './icon.css.js'
 

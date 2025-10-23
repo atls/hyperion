@@ -3,7 +3,6 @@ import type { ReactNode }      from 'react'
 import type { IndicatorProps } from './indicator.interfaces.js'
 
 import { clsx }                from 'clsx'
-import React                   from 'react'
 
 import { baseIndicatorStyles } from './indicator.css.js'
 

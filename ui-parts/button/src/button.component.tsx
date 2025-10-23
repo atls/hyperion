@@ -3,7 +3,6 @@ import type { ReactNode }   from 'react'
 import type { ButtonProps } from './button.interfaces.js'
 
 import { useState }         from 'react'
-import React                from 'react'
 
 import { useHover }         from '@atls-utils/use-hover'
 

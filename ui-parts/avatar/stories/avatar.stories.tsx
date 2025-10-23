@@ -3,8 +3,6 @@ import type { StoryObj }       from '@storybook/react'
 
 import type { AvatarVariants } from '../src/avatar/index.js'
 
-import React                   from 'react'
-
 import { TextTransform }       from '@atls-ui-parts/text-transform'
 
 import { AvatarFallback }      from '../src/avatar-fallback/index.js'

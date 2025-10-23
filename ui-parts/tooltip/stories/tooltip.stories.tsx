@@ -4,8 +4,6 @@ import type { TooltipProps }    from '@atls-ui-parts/tooltip'
 import type { Meta }            from '@storybook/react'
 import type { StoryObj }        from '@storybook/react'
 
-import React                    from 'react'
-
 import { Tooltip }              from '@atls-ui-parts/tooltip'
 
 import { storyTriggerStyles }   from './tooltip.stories.css.js'

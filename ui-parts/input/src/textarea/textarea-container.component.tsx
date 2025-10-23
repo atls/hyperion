@@ -3,7 +3,6 @@ import type { ReactNode }              from 'react'
 import type { TextareaContainerProps } from './textarea-container.interfaces.js'
 
 import { clsx }                        from 'clsx'
-import React                           from 'react'
 
 import { textareaContainerSprinkles }  from './textarea-container.css.js'
 import { baseTextareaContainerStyles } from './textarea-container.css.js'

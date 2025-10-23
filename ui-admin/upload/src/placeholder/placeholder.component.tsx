@@ -2,7 +2,6 @@ import type { ReactNode }        from 'react'
 import type { HTMLAttributes }   from 'react'
 
 import { clsx }                  from 'clsx'
-import React                     from 'react'
 
 import { basePlaceholderStyles } from './placeholder.css.js'
 

@@ -2,8 +2,6 @@ import type { ReactNode }        from 'react'
 
 import type { ParallaxBoxProps } from './parallax-box.interfaces.js'
 
-import React                     from 'react'
-
 import { ParallaxBoxElement }    from './parallax-box.element.js'
 import { parallaxSprinkles }     from './parallax-box.css.js'
 

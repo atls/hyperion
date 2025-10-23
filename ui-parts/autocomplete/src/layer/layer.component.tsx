@@ -2,7 +2,6 @@ import type { HTMLMotionProps } from 'framer-motion'
 import type { ReactNode }       from 'react'
 
 import { motion }               from 'framer-motion'
-import React                    from 'react'
 
 import { defaultLayerProps }    from './layer.constants.js'
 

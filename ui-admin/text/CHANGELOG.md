@@ -1,5 +1,23 @@
 
 
+## [1.0.12](https://github.com/atls/hyperion/compare/@atls-ui-admin/text@1.0.10...@atls-ui-admin/text@1.0.12) (2025-10-09)
+
+
+
+
+
+
+
+
+## [1.0.11] (2025-10-10)
+
+
+### BREAKING CHANGES
+
+
+* Requires React version 18 or higher for proper component functionality
+
+
 ## [1.0.10](https://github.com/atls/hyperion/compare/@atls-ui-admin/text@1.0.10...@atls-ui-admin/text@1.0.10) (2025-09-30)
 
 

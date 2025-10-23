@@ -13,13 +13,13 @@
     "@types/scheduler": "0.16.8"
   },
   "devDependencies": {
-    "@atls/code-runtime": "2.1.9",
+    "@atls/code-runtime": "2.1.14",
     "@playwright/test": "1.55.0",
     "@types/node": "22.15.3",
     "eslint": "9.25.1",
     "typescript": "5.5.4"
   },
-  "packageManager": "yarn@4.9.2",
+  "packageManager": "yarn@4.10.3",
   "formatterIgnorePatterns": [
     "**/*/CHANGELOG.md",
     ".github/ISSUE_TEMPLATE/*"

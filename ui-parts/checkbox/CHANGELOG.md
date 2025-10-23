@@ -1,5 +1,23 @@
 
 
+## [1.0.8](https://github.com/atls/hyperion/compare/@atls-ui-parts/checkbox@1.0.6...@atls-ui-parts/checkbox@1.0.8) (2025-10-09)
+
+
+
+
+
+
+
+
+## [1.0.7] (2025-10-10)
+
+
+### BREAKING CHANGES
+
+
+* Requires React version 18 or higher for proper component functionality
+
+
 ## [1.0.6](https://github.com/atls/hyperion/compare/@atls-ui-parts/checkbox@1.0.5...@atls-ui-parts/checkbox@1.0.6) (2025-04-29)
 
 

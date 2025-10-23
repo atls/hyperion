@@ -4,7 +4,6 @@ import type { Meta }     from '@storybook/react'
 import type { StoryObj } from '@storybook/react'
 
 import { useState }      from 'react'
-import React             from 'react'
 
 import { Column }        from '@atls-ui-parts/layout'
 import { Row }           from '@atls-ui-parts/layout'

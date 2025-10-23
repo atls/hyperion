@@ -3,7 +3,6 @@ import type { ReactNode }               from 'react'
 import type { HTMLElementElementProps } from '../index.js'
 
 import { clsx }                         from 'clsx'
-import React                            from 'react'
 
 import { fillStyles }                   from '../../styles/index.js'
 import { fullViewportHeightStyles }     from '../../styles/index.js'

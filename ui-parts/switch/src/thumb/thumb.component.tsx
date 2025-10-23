@@ -4,7 +4,6 @@ import type { ThumbProps }     from './thumb.interfaces.js'
 
 import { clsx }                from 'clsx'
 import { motion }              from 'framer-motion'
-import React                   from 'react'
 
 import { baseThumbStyles }     from './thumb.css.js'
 import { disabledThumbStyles } from './thumb.css.js'

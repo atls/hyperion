@@ -4,7 +4,6 @@ import type { ProgressGradient } from '../progress.interfaces.js'
 import type { LineProps }        from './line.interfaces.js'
 
 import { useState }              from 'react'
-import React                     from 'react'
 
 import { vars }                  from '@atls-ui-parts/theme'
 

@@ -2,8 +2,6 @@ import type { ReactNode }   from 'react'
 
 import type { LayoutProps } from './layout.interfaces.js'
 
-import React                from 'react'
-
 import { LayoutElement }    from './layout.element.js'
 import { layoutSprinkles }  from './layout.css.js'
 

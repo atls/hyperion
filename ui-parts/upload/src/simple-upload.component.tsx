@@ -6,7 +6,6 @@ import { useUpload }         from '@atls/react-upload'
 import { cloneElement }      from 'react'
 import { useEffect }         from 'react'
 import { useDropzone }       from 'react-dropzone'
-import React                 from 'react'
 
 export interface SimpleUploadProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

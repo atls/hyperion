@@ -3,7 +3,6 @@ import type { ReactNode }       from 'react'
 import type { AttachmentProps } from './attachment.interfaces.js'
 
 import { clsx }                 from 'clsx'
-import React                    from 'react'
 
 import { attachmentSprinkles }  from './attachment.css.js'
 import { attachmentBaseStyles } from './attachment.css.js'

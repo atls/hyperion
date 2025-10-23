@@ -3,7 +3,6 @@ import type { ReactNode } from 'react'
 import type { MenuProps } from './menu.interfaces.js'
 
 import { clsx }           from 'clsx'
-import React              from 'react'
 
 import { baseMenuStyles } from './menu.css.js'
 

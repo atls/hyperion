@@ -3,7 +3,6 @@ import type { ReactNode }     from 'react'
 import type { RawInputInput } from './raw-input.interfaces.js'
 
 import { clsx }               from 'clsx'
-import React                  from 'react'
 
 import { rawInputStyles }     from './raw-input.css.js'
 

@@ -6,7 +6,6 @@ import { FloatingPortal }    from '@floating-ui/react'
 import { AnimatePresence }   from 'framer-motion'
 import { motion }            from 'framer-motion'
 import { cloneElement }      from 'react'
-import React                 from 'react'
 
 import { useFloat }          from '@atls-utils/use-float'
 

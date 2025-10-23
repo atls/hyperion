@@ -5,7 +5,6 @@ import type { ParallaxBoxElementProps } from './parallax-box.interfaces.js'
 
 import { clsx }                         from 'clsx'
 import { motion }                       from 'framer-motion'
-import React                            from 'react'
 
 import { useParallax }                  from '../context/index.js'
 import { getTransform }                 from './parallax-box.utils.js'

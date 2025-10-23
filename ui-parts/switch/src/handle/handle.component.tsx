@@ -2,7 +2,6 @@ import type { ReactNode }         from 'react'
 import type { PropsWithChildren } from 'react'
 
 import { clsx }                   from 'clsx'
-import React                      from 'react'
 
 import { baseHandleStyles }       from './handle.css.js'
 import { handleSprinkles }        from './handle.css.js'

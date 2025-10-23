@@ -3,7 +3,6 @@ import type { ReactNode }  from 'react'
 import type { ArrowProps } from './arrow.interfaces.js'
 
 import { clsx }            from 'clsx'
-import React               from 'react'
 
 import { baseArrowStyles } from './arrow.css.js'
 import { openArrowStyles } from './arrow.css.js'

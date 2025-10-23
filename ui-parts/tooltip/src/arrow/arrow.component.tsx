@@ -3,7 +3,6 @@ import type { ReactNode }  from 'react'
 import type { ArrowProps } from './arrow.interfaces.js'
 
 import { FloatingArrow }   from '@floating-ui/react'
-import React               from 'react'
 
 import { Condition }       from '@atls-ui-parts/condition'
 

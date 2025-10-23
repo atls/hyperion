@@ -3,7 +3,6 @@ import type { ReactNode }  from 'react'
 import type { SpaceProps } from './space.interfaces.js'
 
 import { clsx }            from 'clsx'
-import React               from 'react'
 
 import { SYMBOL_SPACE }    from './space.constants.js'
 import { spaceSprinkles }  from './space.css.js'

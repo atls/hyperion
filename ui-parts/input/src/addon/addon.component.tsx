@@ -3,7 +3,6 @@ import type { ReactNode }            from 'react'
 import type { AddonProps }           from './addon.interfaces.js'
 
 import { clsx }                      from 'clsx'
-import React                         from 'react'
 
 import { addonSprinkles }            from './addon.css.js'
 import { addonPositionAfterStyles }  from './addon.css.js'

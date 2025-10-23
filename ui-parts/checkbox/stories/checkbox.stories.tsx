@@ -3,8 +3,6 @@ import type { StoryObj }      from '@storybook/react'
 
 import type { CheckboxProps } from '../src/checkbox.interfaces.js'
 
-import React                  from 'react'
-
 import { Column }             from '@atls-ui-parts/layout'
 import { Layout }             from '@atls-ui-parts/layout'
 

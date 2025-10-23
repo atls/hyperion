@@ -2,8 +2,6 @@ import type { Meta }                  from '@storybook/react'
 import type { StoryObj }              from '@storybook/react'
 import type { PropsWithChildren }     from 'react'
 
-import React                          from 'react'
-
 import { Column }                     from '@atls-ui-parts/layout'
 import { Layout }                     from '@atls-ui-parts/layout'
 

@@ -3,8 +3,6 @@ import type { StoryObj }    from '@storybook/react'
 
 import type { SwitchProps } from '../src/switch.interfaces.js'
 
-import React                from 'react'
-
 import { Column }           from '@atls-ui-parts/layout'
 import { Layout }           from '@atls-ui-parts/layout'
 

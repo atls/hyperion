@@ -1,5 +1,23 @@
 
 
+## [1.0.5](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.4...@atls-ui-parts/modal@1.0.5) (2025-10-09)
+
+
+
+
+
+
+
+
+## [1.0.5] (2025-10-10)
+
+
+### BREAKING CHANGES
+
+
+* Requires React version 18 or higher for proper component functionality
+
+
 ## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.4...@atls-ui-parts/modal@1.0.4) (2025-09-30)
 
 

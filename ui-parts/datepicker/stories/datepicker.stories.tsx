@@ -7,7 +7,6 @@ import type { AppearanceStyles } from '../src/utils/index.js'
 import type { ShapeStyles }      from '../src/utils/index.js'
 
 import { useState }              from 'react'
-import React                     from 'react'
 
 import { Input }                 from '@atls-ui-parts/input'
 import { Box }                   from '@atls-ui-parts/layout'

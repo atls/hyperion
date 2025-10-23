@@ -6,7 +6,6 @@ import type { ReactNode }           from 'react'
 import { Children }                 from 'react'
 import { clsx }                     from 'clsx'
 import { cloneElement }             from 'react'
-import React                        from 'react'
 
 import { useParallax }              from '../context/index.js'
 import { baseParallaxScreenStyles } from './parallax-screen.css.js'

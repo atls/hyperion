@@ -8,7 +8,6 @@ import type { ReactNode }            from 'react'
 import type { ReactElement }         from 'react'
 
 import { useState }                  from 'react'
-import React                         from 'react'
 
 import { Popover }                   from '@atls-ui-parts/popover'
 

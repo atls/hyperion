@@ -6,7 +6,6 @@ import type { PropsWithChildren } from 'react'
 import type { TextProps }         from '../src/text/index.js'
 
 import { useTheme }               from 'next-themes'
-import React                      from 'react'
 
 import { Button }                 from '@atls-ui-admin/button'
 import { Column }                 from '@atls-ui-admin/layout'

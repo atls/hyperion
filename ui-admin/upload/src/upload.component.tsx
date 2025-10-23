@@ -6,7 +6,6 @@ import { Children }               from 'react'
 import { cloneElement }           from 'react'
 import { useEffect }              from 'react'
 import { useDropzone }            from 'react-dropzone'
-import React                      from 'react'
 
 import { Container }              from './container/index.js'
 import { Placeholder }            from './placeholder/index.js'

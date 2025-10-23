@@ -3,8 +3,6 @@ import type { StoryObj }   from '@storybook/react'
 
 import type { ModalProps } from '../src/modal.interfaces.js'
 
-import React               from 'react'
-
 import { Modal }           from '../src/modal.component.js'
 
 const meta: Meta<ModalProps> = {

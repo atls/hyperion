@@ -4,7 +4,6 @@ import type { AvatarProps } from './avatar.interfaces.js'
 
 import { Root }             from '@radix-ui/react-avatar'
 import { clsx }             from 'clsx'
-import React                from 'react'
 
 import { avatarStyles }     from './avatar.css.js'
 

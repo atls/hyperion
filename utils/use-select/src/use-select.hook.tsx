@@ -7,7 +7,6 @@ import { AnimatePresence }                 from 'framer-motion'
 import { useSelect as useDownshiftSelect } from 'downshift'
 import { useEffect }                       from 'react'
 import { useLayer }                        from 'react-laag'
-import React                               from 'react'
 
 // eslint-disable-next-line
 const useSelect = ({ items, onChange, placement = 'bottom-center', ...props }: UseSelectProps) => {

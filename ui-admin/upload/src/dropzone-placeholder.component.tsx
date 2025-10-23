@@ -1,8 +1,6 @@
 import type { ReactNode }          from 'react'
 import type { PropsWithChildren }  from 'react'
 
-import React                       from 'react'
-
 import { UploadIcon }              from '@atls-ui-admin/icons'
 
 import { PlaceholderAccept }       from './placeholder-accept/index.js'
