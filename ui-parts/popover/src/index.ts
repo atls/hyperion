@@ -1,3 +1,3 @@
 export * from './arrow/index.js'
-export * from './popover.component.js'
-export type * from './popover.interfaces.js'
+export * from './component.js'
+export type * from './interfaces.js'

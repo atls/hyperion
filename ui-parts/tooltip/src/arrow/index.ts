@@ -1,2 +1,2 @@
-export * from './arrow.component.js'
-export type * from './arrow.interfaces.js'
+export * from './component.js'
+export type * from './interfaces.js'

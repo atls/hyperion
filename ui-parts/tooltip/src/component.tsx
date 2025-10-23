@@ -1,6 +1,6 @@
 import type { ReactNode }    from 'react'
 
-import type { TooltipProps } from './tooltip.interfaces.js'
+import type { TooltipProps } from './interfaces.js'
 
 import { FloatingPortal }    from '@floating-ui/react'
 import { AnimatePresence }   from 'framer-motion'
@@ -11,7 +11,7 @@ import { useFloat }          from '@atls-utils/use-float'
 
 import { Arrow }             from './arrow/index.js'
 import { Container }         from './container/index.js'
-import { animateProps }      from './tooltip.constants.js'
+import { animateProps }      from './constants.js'
 
 export const Tooltip = ({
   children,

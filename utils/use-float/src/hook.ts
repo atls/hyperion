@@ -1,5 +1,5 @@
-import type { UseFloatReturn } from './use-float.interfaces.js'
-import type { UseFloatProps }  from './use-float.interfaces.js'
+import type { UseFloatReturn } from './interfaces.js'
+import type { UseFloatProps }  from './interfaces.js'
 
 import { useFloating }         from '@floating-ui/react'
 import { autoUpdate }          from '@floating-ui/react'

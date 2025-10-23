@@ -1,6 +1,6 @@
 import type { ReactNode }  from 'react'
 
-import type { ArrowProps } from './arrow.interfaces.js'
+import type { ArrowProps } from './interfaces.js'
 
 import { FloatingArrow }   from '@floating-ui/react'
 
@@ -11,8 +11,8 @@ export const Arrow = ({ ref, context, arrow = true }: ArrowProps): ReactNode => 
     <FloatingArrow
       ref={ref}
       context={context}
-      width={16}
-      fill='rgba(255, 255, 255, 1)'
+      width={12}
+      fill='rgba(0, 0, 0, 0.75)'
       {...(typeof arrow === 'boolean' ? {} : arrow)}
     />
   </Condition>

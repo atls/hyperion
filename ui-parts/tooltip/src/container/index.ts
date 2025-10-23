@@ -1,1 +1,1 @@
-export * from './container.component.js'
+export * from './component.js'
