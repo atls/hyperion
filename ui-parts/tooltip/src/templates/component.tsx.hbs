@@ -1,0 +1,15 @@
+import type { TooltipProps }      from '@atls-ui-parts/tooltip'
+import type { ReactNode }         from 'react'
+
+import React                      from 'react'
+
+import { Box }                    from '@atls-ui-parts/layout'
+import { Tooltip as BaseTooltip } from '@atls-ui-parts/tooltip'
+
+import { baseContainerStyles }    from './styles.css.js'
+
+export const Tooltip = ({ children, ...props }: TooltipProps): ReactNode => (
+  <BaseTooltip {...props} container={<Box className={baseContainerStyles} />}>
+    {children}
+  </BaseTooltip>
+)
