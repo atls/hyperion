@@ -1,18 +1,9 @@
-/* eslint-disable react/jsx-no-leaked-render */
+import type { Meta }              from '@storybook/react'
+import type { StoryObj }          from '@storybook/react'
 
-import type { TooltipProps }    from '@atls-ui-parts/tooltip'
-import type { Meta }            from '@storybook/react'
-import type { StoryObj }        from '@storybook/react'
+import type { StoryTooltipProps } from './interfaces.js'
 
-import { Tooltip }              from '@atls-ui-parts/tooltip'
-
-import { storyTriggerStyles }   from './tooltip.stories.css.js'
-import { storyContainerStyles } from './tooltip.stories.css.js'
-
-interface StoryTooltipProps
-  extends Pick<TooltipProps, 'animated' | 'arrow' | 'offset' | 'placement' | 'trigger'> {
-  customContainer: boolean
-}
+import { StoryTooltip }           from './story-tooltip.js'
 
 const meta: Meta<StoryTooltipProps> = {
   title: 'Components/Tooltip',
@@ -74,17 +65,5 @@ const meta: Meta<StoryTooltipProps> = {
 export default meta
 
 export const Base: StoryObj<StoryTooltipProps> = {
-  render: ({ animated, arrow, customContainer, offset, placement, trigger }) => (
-    <Tooltip
-      animated={animated}
-      arrow={arrow && customContainer ? { fill: 'green' } : arrow}
-      offset={offset}
-      placement={placement}
-      trigger={trigger}
-      text='Tooltip text'
-      container={customContainer ? <div className={storyContainerStyles} /> : undefined}
-    >
-      <div className={storyTriggerStyles}>Trigger</div>
-    </Tooltip>
-  ),
+  render: StoryTooltip,
 }

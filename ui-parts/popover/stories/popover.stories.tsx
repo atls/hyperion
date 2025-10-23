@@ -1,30 +1,9 @@
-/* eslint-disable react/jsx-no-leaked-render */
+import type { Meta }              from '@storybook/react'
+import type { StoryObj }          from '@storybook/react'
 
-import type { PopoverProps }         from '@atls-ui-parts/popover'
-import type { Meta }                 from '@storybook/react'
-import type { StoryObj }             from '@storybook/react'
-import type { PropsWithChildren }    from 'react'
-import type { ReactNode }            from 'react'
-import type { ReactElement }         from 'react'
+import type { StoryPopoverProps } from './interfaces.js'
 
-import { useState }                  from 'react'
-
-import { Popover }                   from '@atls-ui-parts/popover'
-
-import { storyTriggerStyles }        from './popover.stories.css.js'
-import { storyContainerStyles }      from './popover.stories.css.js'
-import { storyContainerCloseStyles } from './popover.stories.css.js'
-
-interface StoryPopoverProps
-  extends Pick<PopoverProps, 'animated' | 'arrow' | 'offset' | 'placement' | 'trigger'> {
-  customContainer: boolean
-}
-
-interface StoryPopoverContainerProps extends PropsWithChildren {
-  title?: string
-  content?: ReactNode
-  onClose?: () => void
-}
+import { StoryPopover }           from './story-popover.js'
 
 const meta: Meta<StoryPopoverProps> = {
   title: 'Components/Popover',
@@ -84,54 +63,6 @@ const meta: Meta<StoryPopoverProps> = {
 }
 
 export default meta
-
-const StoryPopoverContainer = ({
-  children,
-  content,
-  title,
-  onClose,
-}: StoryPopoverContainerProps): ReactElement => (
-  <div className={storyContainerStyles}>
-    <div>{title}</div>
-    <div>{content}</div>
-    <button type='button' className={storyContainerCloseStyles} onClick={onClose}>
-      Close
-    </button>
-    {children}
-  </div>
-)
-
-const StoryPopover = ({
-  animated,
-  arrow,
-  customContainer,
-  offset,
-  placement,
-  trigger,
-}: StoryPopoverProps): ReactElement => {
-  const [open, setOpen] = useState<boolean>(false)
-
-  const handleClose = (): void => {
-    setOpen(false)
-  }
-
-  return (
-    <Popover
-      open={open}
-      animated={animated}
-      arrow={arrow}
-      offset={offset}
-      placement={placement}
-      trigger={trigger}
-      title='Popover title'
-      content='Popover content'
-      container={customContainer ? <StoryPopoverContainer onClose={handleClose} /> : undefined}
-      onOpenChange={setOpen}
-    >
-      <div className={storyTriggerStyles}>Trigger</div>
-    </Popover>
-  )
-}
 
 export const Base: StoryObj<StoryPopoverProps> = {
   render: StoryPopover,
