@@ -49,7 +49,7 @@ export const Select = ({
             {...otherProps}
             className={clsx(baseMenuStyles, String(otherProps?.className || ''), className)}
             {...menuProps}
-            style={{ ...style, ...otherProps?.style, ...menuProps.style }}
+            style={{ ...style, ...otherProps?.style }}
           >
             {items.map((item, index) => (
               <MenuItem

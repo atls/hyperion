@@ -1,15 +1,16 @@
 import type { ReactNode }                  from 'react'
-import type { ReactPortal }                from 'react'
 
 import type { UseSelectProps }             from './select.interfaces.js'
 
+import { FloatingPortal }                  from '@floating-ui/react'
 import { AnimatePresence }                 from 'framer-motion'
 import { useSelect as useDownshiftSelect } from 'downshift'
 import { useEffect }                       from 'react'
-import { useLayer }                        from 'react-laag'
+
+import { useFloat }                        from '@atls-utils/use-float'
 
 // eslint-disable-next-line
-const useSelect = ({ items, onChange, placement = 'bottom-center', ...props }: UseSelectProps) => {
+const useSelect = ({ items, onChange, placement = 'bottom', ...props }: UseSelectProps) => {
   const {
     isOpen,
     selectedItem,
@@ -20,8 +21,8 @@ const useSelect = ({ items, onChange, placement = 'bottom-center', ...props }: U
     getItemProps,
   } = useDownshiftSelect({ items, ...props })
 
-  const { renderLayer, layerProps, triggerProps, triggerBounds } = useLayer({
-    isOpen,
+  const { refs, floatingStyles, getFloatingProps, getReferenceProps } = useFloat({
+    open: isOpen,
     placement,
   })
 
@@ -30,16 +31,18 @@ const useSelect = ({ items, onChange, placement = 'bottom-center', ...props }: U
   }, [selectedItem, onChange])
 
   const labelProps = getLabelProps()
-  const buttonProps = getToggleButtonProps(triggerProps)
-  const menuProps = {
-    ...getMenuProps(layerProps),
-    triggerBounds,
-  }
+  const buttonProps = getToggleButtonProps({ ref: refs.setReference, ...getReferenceProps() })
+  const menuProps = getMenuProps()
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const getMenuItemProps = (item: string, index: number): any => getItemProps({ item, index })
-  const renderMenu = (menu: ReactNode): ReactPortal | null =>
-    // eslint-disable-next-line react/jsx-no-leaked-render
-    renderLayer(<AnimatePresence>{isOpen && menu}</AnimatePresence>)
+  const renderMenu = (menu: ReactNode): ReactNode => (
+    <FloatingPortal>
+      <div ref={refs.setFloating} style={floatingStyles} {...getFloatingProps()}>
+        {/* eslint-disable-next-line react/jsx-no-leaked-render */}
+        <AnimatePresence>{isOpen && menu}</AnimatePresence>
+      </div>
+    </FloatingPortal>
+  )
 
   return {
     labelProps,
@@ -50,7 +53,6 @@ const useSelect = ({ items, onChange, placement = 'bottom-center', ...props }: U
     selectedItem,
     isOpen,
     highlightedIndex,
-    triggerBounds,
   }
 }
 

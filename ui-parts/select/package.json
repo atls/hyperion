@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/select",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -15,7 +15,7 @@
   "dependencies": {
     "@atls-utils/use-select": "workspace:*",
     "clsx": "2.1.1",
-    "framer-motion": "12.9.2",
+    "framer-motion": "12.23.22",
     "rainbow-sprinkles": "1.0.0"
   },
   "devDependencies": {
