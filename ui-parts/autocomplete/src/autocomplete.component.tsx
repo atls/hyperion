@@ -9,10 +9,11 @@ import { AnimatePresence }        from 'framer-motion'
 import { useCombobox }            from 'downshift'
 import { useEffect }              from 'react'
 import { useState }               from 'react'
-import { useLayer }               from 'react-laag'
 
 import { Input }                  from '@atls-ui-parts/input'
 import { Row }                    from '@atls-ui-parts/layout'
+import { Box }                    from '@atls-ui-parts/layout'
+import { useFloat }               from '@atls-utils/use-float'
 
 import { Arrow }                  from './arrow/index.js'
 import { Indicator }              from './indicator/index.js'
@@ -55,12 +56,10 @@ export const Autocomplete = ({
     },
   })
 
-  const { layerProps, renderLayer, triggerProps, triggerBounds } = useLayer({
-    isOpen,
-    auto: true,
-    triggerOffset: 0,
+  const { refs, floatingStyles, getFloatingProps, getReferenceProps } = useFloat({
+    open: isOpen,
+    offset: 0,
     placement: 'bottom-start',
-    possiblePlacements: ['bottom-start', 'top-start'],
   })
 
   useEffect(() => {
@@ -85,17 +84,14 @@ export const Autocomplete = ({
   )
 
   return (
-    <Row>
-      <Input size='normal' variant='blue' onFocus={openMenu} {...getInputProps(triggerProps)} />
+    <Row ref={refs.setReference} {...getReferenceProps()}>
+      <Input size='normal' variant='blue' onFocus={openMenu} {...getInputProps()} />
       {suffix}
-      {renderLayer(
+      <Box ref={refs.setFloating} style={floatingStyles} {...getFloatingProps()}>
         <AnimatePresence>
           {/* eslint-disable-next-line react/jsx-no-leaked-render */}
           {isOpen && (
-            <Layer
-              ref={layerProps.ref}
-              style={{ ...layerProps.style, width: triggerBounds?.width }}
-            >
+            <Layer>
               <Menu {...getMenuProps({ style: {} })}>
                 {items.map((item, index) => (
                   <MenuItem
@@ -112,7 +108,7 @@ export const Autocomplete = ({
             </Layer>
           )}
         </AnimatePresence>
-      )}
+      </Box>
     </Row>
   )
 }

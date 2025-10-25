@@ -16,10 +16,10 @@
     "@atls-ui-parts/input": "workspace:*",
     "@atls-ui-parts/layout": "workspace:*",
     "@atls-ui-parts/theme": "workspace:*",
+    "@atls-utils/use-float": "workspace:*",
     "clsx": "2.1.1",
     "downshift": "9.0.9",
-    "framer-motion": "12.9.2",
-    "react-laag": "2.0.5"
+    "framer-motion": "12.23.22"
   },
   "devDependencies": {
     "@storybook/react": "8.6.12",

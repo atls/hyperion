@@ -1,6 +1,6 @@
 {
-  "name": "@atls-utils/use-select",
-  "version": "1.1.0",
+  "name": "@atls-utils/use-float",
+  "version": "1.0.0",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -13,10 +13,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-utils/use-float": "workspace:*",
-    "@floating-ui/react": "0.27.8",
-    "downshift": "9.0.9",
-    "framer-motion": "12.23.22"
+    "@floating-ui/react": "0.27.8"
   },
   "devDependencies": {
     "@types/react": "19.1.2",
