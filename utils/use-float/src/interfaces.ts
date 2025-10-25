@@ -1,4 +1,5 @@
 import type { OffsetOptions }         from '@floating-ui/react'
+import type { SizeOptions }           from '@floating-ui/react'
 import type { Placement }             from '@floating-ui/react'
 import type { UseDismissProps }       from '@floating-ui/react'
 import type { UseRoleProps }          from '@floating-ui/react'
@@ -17,6 +18,7 @@ export interface UseFloatProps {
   placement?: Placement
   strategy?: Strategy
   offset?: OffsetOptions
+  size?: SizeOptions
   trigger?: Trigger
   triggerOnFocus?: boolean
   mouseEnterDelay?: number

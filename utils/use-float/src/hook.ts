@@ -13,6 +13,7 @@ import { useRole }             from '@floating-ui/react'
 import { useHover }            from '@floating-ui/react'
 import { useInteractions }     from '@floating-ui/react'
 import { arrow }               from '@floating-ui/react'
+import { size }                from '@floating-ui/react'
 import { useRef }              from 'react'
 import { useState }            from 'react'
 
@@ -23,6 +24,7 @@ export const useFloat = ({
   transform = true,
   placement = 'top',
   offset: offsetProps = 10,
+  size: sizeProps = {},
   trigger = 'click',
   triggerOnFocus = true,
   mouseEnterDelay = 100,
@@ -44,6 +46,7 @@ export const useFloat = ({
     middleware: [
       shift(),
       offset(offsetProps),
+      size(sizeProps),
       flip({ fallbackAxisSideDirection: 'start' }),
       arrow({ element: arrowRef }),
     ],
