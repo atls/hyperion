@@ -1,5 +1,18 @@
 
 
+# 1.0.0 (2025-10-25)
+
+
+### Features
+
+
+* **ui-utils:** add size middleware to use-float ([ff7ca75](https://github.com/atls/hyperion/commit/ff7ca75eb883fda130ea7842694c400d4d5ad2bb))
+* **ui-utils:** add use-float ([2a1b46b](https://github.com/atls/hyperion/commit/2a1b46b92a76d794eb18812e69ba42391221fe41))
+
+
+
+
+
 ## [1.0.6](https://github.com/atls/hyperion/compare/@atls-utils/use-popover@1.0.4...@atls-utils/use-popover@1.0.6) (2025-04-29)
 
 

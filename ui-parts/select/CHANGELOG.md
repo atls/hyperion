@@ -1,5 +1,17 @@
 
 
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/select@1.0.9...@atls-ui-parts/select@1.1.0) (2025-10-25)
+
+
+### Features
+
+
+* **ui-utils:** add using floating ui to use-select ([90a4cbe](https://github.com/atls/hyperion/commit/90a4cbe687ec6810c87e811604af2ac915a297d9))
+
+
+
+
+
 ## [1.0.9](https://github.com/atls/hyperion/compare/@atls-ui-parts/select@1.0.7...@atls-ui-parts/select@1.0.9) (2025-10-09)
 
 

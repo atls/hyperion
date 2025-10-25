@@ -1,5 +1,17 @@
 
 
+## [1.0.9](https://github.com/atls/hyperion/compare/@atls-ui-parts/autocomplete@1.0.8...@atls-ui-parts/autocomplete@1.0.9) (2025-10-25)
+
+
+### Features
+
+
+* **ui-parts:** add using floating ui to autocomplete ([c1ac13c](https://github.com/atls/hyperion/commit/c1ac13c8b5186b160fc5c856d497d0b343266e21))
+
+
+
+
+
 ## [1.0.8](https://github.com/atls/hyperion/compare/@atls-ui-parts/autocomplete@1.0.7...@atls-ui-parts/autocomplete@1.0.8) (2025-10-09)
 
 

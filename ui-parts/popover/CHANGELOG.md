@@ -1,5 +1,17 @@
 
 
+## [1.1.1](https://github.com/atls/hyperion/compare/@atls-ui-parts/popover@1.0.8...@atls-ui-parts/popover@1.1.1) (2025-10-25)
+
+
+### Features
+
+
+* **ui-utils:** add using floating ui to popover ([28feb7c](https://github.com/atls/hyperion/commit/28feb7c633e32eb997a4c6f047b7cb0952e62f11))
+
+
+
+
+
 ## [1.0.8](https://github.com/atls/hyperion/compare/@atls-ui-parts/popover@1.0.7...@atls-ui-parts/popover@1.0.8) (2025-10-09)
 
 

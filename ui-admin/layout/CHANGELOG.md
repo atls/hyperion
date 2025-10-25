@@ -1,5 +1,12 @@
 
 
+## [1.0.7](https://github.com/atls/hyperion/compare/@atls-ui-admin/layout@1.0.7...@atls-ui-admin/layout@1.0.7) (2025-10-25)
+
+
+
+
+
+
 ## [1.0.7](https://github.com/atls/hyperion/compare/@atls-ui-admin/layout@1.0.6...@atls-ui-admin/layout@1.0.7) (2025-10-09)
 
 

@@ -1,5 +1,18 @@
 
 
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/tooltip@1.0.10...@atls-ui-parts/tooltip@1.1.0) (2025-10-25)
+
+
+### Features
+
+
+* **ui-parts:** add tooltip component generator ([2b8101d](https://github.com/atls/hyperion/commit/2b8101dbe4daf9c46cb621b66a5640b5242666c2))
+* **ui-utils:** add using floating ui to tooltip ([7e18a8d](https://github.com/atls/hyperion/commit/7e18a8dd0a662a07c91e22dfc655e90a7ce401b0))
+
+
+
+
+
 ## [1.0.10](https://github.com/atls/hyperion/compare/@atls-ui-parts/tooltip@1.0.8...@atls-ui-parts/tooltip@1.0.10) (2025-10-09)
 
 
