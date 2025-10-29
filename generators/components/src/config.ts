@@ -4,7 +4,7 @@ import { join }             from 'node:path'
 
 const generator = (plop: NodePlopAPI): void => {
   plop.setGenerator('component', {
-    description: 'Create a components',
+    description: 'Create a file structure for a new ui component',
     prompts: [
       {
         type: 'list',
@@ -19,7 +19,7 @@ const generator = (plop: NodePlopAPI): void => {
     actions: (data) => [
       {
         type: 'addMany',
-        base: `./templates/${data?.type}`,
+        base: `./templates`,
         destination: join(process.cwd(), 'src'),
         templateFiles: `./templates/${data?.type}/**/*`,
         force: true,
