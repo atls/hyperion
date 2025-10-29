@@ -1,0 +1,42 @@
+{
+  "name": "@atls-ui-generators/components",
+  "version": "1.0.0",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "main": "./src/index.ts",
+  "bin": {
+    "generate-component": "./dist/command.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn library build && cp -R ./src/templates ./dist/templates",
+    "generate-component": "NODE_OPTIONS=\"$NODE_OPTIONS --import tsx\" plop --plopfile=./src/config.ts",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
+  },
+  "dependencies": {
+    "minimist": "1.2.8",
+    "plop": "4.0.4"
+  },
+  "devDependencies": {
+    "@types/minimist": "1.2.5",
+    "@types/node": "22.15.3",
+    "tsx": "4.20.5"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      "./package.json": "./package.json",
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts"
+  },
+  "typecheckSkipLibCheck": true
+}
