@@ -19,7 +19,7 @@ const generator = (plop: NodePlopAPI): void => {
     actions: (data) => [
       {
         type: 'addMany',
-        base: `./templates`,
+        base: `./templates/${data?.type}`,
         destination: join(process.cwd(), 'src'),
         templateFiles: `./templates/${data?.type}/**/*`,
         force: true,
