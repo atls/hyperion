@@ -249,6 +249,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui-generators/components@workspace:generators/components":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-generators/components@workspace:generators/components"
+  dependencies:
+    "@types/minimist": "npm:1.2.5"
+    "@types/node": "npm:22.15.3"
+    minimist: "npm:1.2.8"
+    plop: "npm:4.0.4"
+    tsx: "npm:4.20.5"
+  bin:
+    generate-component: ./dist/command.js
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-generators/icons@workspace:*, @atls-ui-generators/icons@workspace:generators/icons":
   version: 0.0.0-use.local
   resolution: "@atls-ui-generators/icons@workspace:generators/icons"
@@ -994,18 +1008,14 @@ __metadata:
     "@vanilla-extract/css": "npm:1.17.1"
     "@vanilla-extract/dynamic": "npm:2.1.2"
     framer-motion: "npm:12.23.22"
-    plop: "npm:4.0.4"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
     storybook: "npm:8.6.12"
-    tsx: "npm:4.20.5"
   peerDependencies:
     "@vanilla-extract/css": "*"
     "@vanilla-extract/dynamic": "*"
     react: "*"
     react-dom: "*"
-  bin:
-    generate-component: plop --plopfile=./dist/generator.js
   languageName: unknown
   linkType: soft
 
@@ -5849,6 +5859,13 @@ __metadata:
   version: 1.3.5
   resolution: "@types/mime@npm:1.3.5"
   checksum: 10/e29a5f9c4776f5229d84e525b7cd7dd960b51c30a0fb9a028c0821790b82fca9f672dab56561e2acd9e8eed51d431bde52eafdfef30f643586c4162f1aecfc78
+  languageName: node
+  linkType: hard
+
+"@types/minimist@npm:1.2.5":
+  version: 1.2.5
+  resolution: "@types/minimist@npm:1.2.5"
+  checksum: 10/477047b606005058ab0263c4f58097136268007f320003c348794f74adedc3166ffc47c80ec3e94687787f2ab7f4e72c468223946e79892cf0fd9e25e9970a90
   languageName: node
   linkType: hard
 
@@ -12770,7 +12787,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.2.0, minimist@npm:^1.2.5, minimist@npm:^1.2.6, minimist@npm:^1.2.8":
+"minimist@npm:1.2.8, minimist@npm:^1.2.0, minimist@npm:^1.2.5, minimist@npm:^1.2.6, minimist@npm:^1.2.8":
   version: 1.2.8
   resolution: "minimist@npm:1.2.8"
   checksum: 10/908491b6cc15a6c440ba5b22780a0ba89b9810e1aea684e253e43c4e3b8d56ec1dcdd7ea96dde119c29df59c936cde16062159eae4225c691e19c70b432b6e6f
