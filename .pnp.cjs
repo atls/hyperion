@@ -19,6 +19,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:generators/appearance"\
     },\
     {\
+      "name": "@atls-ui-generators/components",\
+      "reference": "workspace:generators/components"\
+    },\
+    {\
       "name": "@atls-ui-generators/icons",\
       "reference": "workspace:generators/icons"\
     },\
@@ -231,6 +235,7 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-admin/theme", ["virtual:5e1dd7cf34e66bb2aab43b03cae7b8b0c1e65b3d44b05741c8997edb10a72a85c281563355d71f7d10134de5c3488b3dfb2f35daa2478f9f717088adce8a0051#workspace:ui-admin/theme", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#workspace:ui-admin/theme", "workspace:ui-admin/theme"]],\
     ["@atls-ui-admin/upload", ["workspace:ui-admin/upload"]],\
     ["@atls-ui-generators/appearance", ["workspace:generators/appearance"]],\
+    ["@atls-ui-generators/components", ["workspace:generators/components"]],\
     ["@atls-ui-generators/icons", ["workspace:generators/icons"]],\
     ["@atls-ui-generators/locales", ["workspace:generators/locales"]],\
     ["@atls-ui-generators/utils", ["workspace:generators/utils"]],\
@@ -692,6 +697,20 @@ const RAW_RUNTIME_STATE =
           ["commander", "npm:13.1.0"],\
           ["tsx", "npm:4.19.3"],\
           ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@atls-ui-generators/components", [\
+      ["workspace:generators/components", {\
+        "packageLocation": "./generators/components/",\
+        "packageDependencies": [\
+          ["@atls-ui-generators/components", "workspace:generators/components"],\
+          ["@types/minimist", "npm:1.2.5"],\
+          ["@types/node", "npm:22.15.3"],\
+          ["minimist", "npm:1.2.8"],\
+          ["plop", "npm:4.0.4"],\
+          ["tsx", "npm:4.20.5"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -1963,11 +1982,9 @@ const RAW_RUNTIME_STATE =
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
           ["framer-motion", "virtual:3dba37771ce499e6d5c33bd82b7263c259fd8b9b612d0bf65962a3da6b1ec4612c0f051c5ab6d1701e4760bde49cb56e2383e557801939071c5dbec0f467c0d5#npm:12.23.22"],\
-          ["plop", "npm:4.0.4"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:19.1.0"],\
-          ["storybook", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:8.6.12"],\
-          ["tsx", "npm:4.20.5"]\
+          ["storybook", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:8.6.12"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -9450,6 +9467,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../.yarn/berry/cache/@types-mime-npm-1.3.5-48d28990db-10.zip/node_modules/@types/mime/",\
         "packageDependencies": [\
           ["@types/mime", "npm:1.3.5"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/minimist", [\
+      ["npm:1.2.5", {\
+        "packageLocation": "../.yarn/berry/cache/@types-minimist-npm-1.2.5-c85664a9d8-10.zip/node_modules/@types/minimist/",\
+        "packageDependencies": [\
+          ["@types/minimist", "npm:1.2.5"]\
         ],\
         "linkType": "HARD"\
       }]\

@@ -4,15 +4,11 @@
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
-  "bin": {
-    "generate-component": "plop --plopfile=./dist/generator.js"
-  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "yarn library build && cp -R ./src/templates ./dist/templates",
-    "generate-component": "NODE_OPTIONS=\"$NODE_OPTIONS --import tsx\" plop --plopfile=./src/generator.ts",
+    "build": "yarn library build",
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
   },
@@ -20,8 +16,7 @@
     "@atls-ui-parts/condition": "workspace:*",
     "@atls-utils/use-float": "workspace:*",
     "@floating-ui/react": "0.27.8",
-    "framer-motion": "12.23.22",
-    "plop": "4.0.4"
+    "framer-motion": "12.23.22"
   },
   "devDependencies": {
     "@atls-ui-parts/layout": "workspace:*",
@@ -31,8 +26,7 @@
     "@vanilla-extract/dynamic": "2.1.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "storybook": "8.6.12",
-    "tsx": "4.20.5"
+    "storybook": "8.6.12"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "*",

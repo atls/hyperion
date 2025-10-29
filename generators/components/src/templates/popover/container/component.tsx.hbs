@@ -1,0 +1,19 @@
+import type { ReactNode }             from 'react'
+
+import type { PopoverContainerProps } from './interfaces.js'
+
+import { Box }                        from '@ui/layout'
+
+import { baseContainerStyles }        from './styles.css.js'
+
+export const PopoverContainer = ({
+  children,
+  content,
+  title,
+}: PopoverContainerProps): ReactNode => (
+  <Box className={baseContainerStyles}>
+    <Box>{title}</Box>
+    <Box>{content}</Box>
+    {children}
+  </Box>
+)

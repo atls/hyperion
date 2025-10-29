@@ -1,0 +1,12 @@
+import type { PopoverProps }      from '@atls-ui-parts/popover'
+import type { ReactNode }         from 'react'
+
+import { Popover as BasePopover } from '@atls-ui-parts/popover'
+
+import { PopoverContainer }       from './container/index.js'
+
+export const Popover = ({ children, ...props }: PopoverProps): ReactNode => (
+  <BasePopover {...props} container={<PopoverContainer />}>
+    {children}
+  </BasePopover>
+)
