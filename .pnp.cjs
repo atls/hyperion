@@ -261,7 +261,7 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-parts/parallax", ["workspace:ui-parts/parallax"]],\
     ["@atls-ui-parts/placeholder", ["workspace:ui-parts/placeholder"]],\
     ["@atls-ui-parts/popover", ["workspace:ui-parts/popover"]],\
-    ["@atls-ui-parts/portal", ["virtual:20752c45b516a7cf8cf2b84e29157482069ba63be80fff17a718858cac902b29bada9110da68b0a70a390a297428f9346894fcee811de4554b109e55e7c45ba1#workspace:ui-parts/portal", "workspace:ui-parts/portal"]],\
+    ["@atls-ui-parts/portal", ["workspace:ui-parts/portal"]],\
     ["@atls-ui-parts/progress", ["workspace:ui-parts/progress"]],\
     ["@atls-ui-parts/scalable-content", ["workspace:ui-parts/scalable-content"]],\
     ["@atls-ui-parts/select", ["workspace:ui-parts/select"]],\
@@ -1501,14 +1501,14 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./ui-parts/modal/",\
         "packageDependencies": [\
           ["@atls-ui-parts/modal", "workspace:ui-parts/modal"],\
-          ["@atls-ui-parts/condition", "virtual:b378c3744940a7b99c67abdb39dc737773a80c0cc25dff9c1c69af815451ed8f73418ff7e0686ab1125f5a97f0715093ece934285ed0996c6ab9e33426941881#workspace:ui-parts/condition"],\
-          ["@atls-ui-parts/portal", "virtual:20752c45b516a7cf8cf2b84e29157482069ba63be80fff17a718858cac902b29bada9110da68b0a70a390a297428f9346894fcee811de4554b109e55e7c45ba1#workspace:ui-parts/portal"],\
+          ["@atls-utils/use-float", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:utils/use-float"],\
+          ["@floating-ui/react", "virtual:bdec61daa5ce18b211e41086a87aa58babcd016eed745eb318a2389812d34b0215bd01c4e05f4de11cfc30bd0259efe6cace4826920dba58cacb6c2dd7978d3e#npm:0.27.8"],\
+          ["@storybook/preview-api", "virtual:d87b8c50b4c79ae7b890b1fcbf569b95ccdf466c039532eb282dbfc4c036f6f5fdf62014e7b6374f865d392b63f4ff5a61a942c6a3e22d83e6714205a8303709#npm:8.6.12"],\
           ["@storybook/react", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:8.6.12"],\
           ["@types/react", "npm:19.1.2"],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
           ["clsx", "npm:2.1.1"],\
-          ["framer-motion", "virtual:b378c3744940a7b99c67abdb39dc737773a80c0cc25dff9c1c69af815451ed8f73418ff7e0686ab1125f5a97f0715093ece934285ed0996c6ab9e33426941881#npm:12.9.2"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:19.1.0"],\
           ["storybook", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:8.6.12"]\
@@ -1594,22 +1594,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@atls-ui-parts/portal", [\
-      ["virtual:20752c45b516a7cf8cf2b84e29157482069ba63be80fff17a718858cac902b29bada9110da68b0a70a390a297428f9346894fcee811de4554b109e55e7c45ba1#workspace:ui-parts/portal", {\
-        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-portal-virtual-b1f375b0b6/1/ui-parts/portal/",\
-        "packageDependencies": [\
-          ["@atls-ui-parts/portal", "virtual:20752c45b516a7cf8cf2b84e29157482069ba63be80fff17a718858cac902b29bada9110da68b0a70a390a297428f9346894fcee811de4554b109e55e7c45ba1#workspace:ui-parts/portal"],\
-          ["@types/react", "npm:19.1.2"],\
-          ["@types/react-dom", "virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#npm:19.1.2"],\
-          ["react", "npm:19.1.0"],\
-          ["react-dom", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:19.1.0"]\
-        ],\
-        "packagePeers": [\
-          "@types/react",\
-          "react-dom",\
-          "react"\
-        ],\
-        "linkType": "SOFT"\
-      }],\
       ["workspace:ui-parts/portal", {\
         "packageLocation": "./ui-parts/portal/",\
         "packageDependencies": [\

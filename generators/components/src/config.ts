@@ -11,6 +11,7 @@ const generator = (plop: NodePlopAPI): void => {
         name: 'type',
         message: 'Select component type:',
         choices: [
+          { name: 'Modal', value: 'modal' },
           { name: 'Popover', value: 'popover' },
           { name: 'Tooltip', value: 'tooltip' },
         ],
