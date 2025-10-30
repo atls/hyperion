@@ -1,5 +1,17 @@
 
 
+## [1.0.3](https://github.com/atls/hyperion/compare/@atls-ui-generators/components@1.0.2...@atls-ui-generators/components@1.0.3) (2025-10-30)
+
+
+### Features
+
+
+* **ui-parts:** floating ui modal ([#635](https://github.com/atls/hyperion/issues/635)) ([cf3665d](https://github.com/atls/hyperion/commit/cf3665d8143b3880f38fe0207630ff0d7f3cc934))
+
+
+
+
+
 ## [1.0.2](https://github.com/atls/hyperion/compare/@atls-ui-generators/components@1.0.1...@atls-ui-generators/components@1.0.2) (2025-10-29)
 
 

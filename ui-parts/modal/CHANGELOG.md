@@ -1,5 +1,17 @@
 
 
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.6...@atls-ui-parts/modal@1.1.0) (2025-10-30)
+
+
+### Features
+
+
+* **ui-parts:** floating ui modal ([#635](https://github.com/atls/hyperion/issues/635)) ([cf3665d](https://github.com/atls/hyperion/commit/cf3665d8143b3880f38fe0207630ff0d7f3cc934))
+
+
+
+
+
 ## [1.0.6](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.5...@atls-ui-parts/modal@1.0.6) (2025-10-25)
 
 
