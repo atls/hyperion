@@ -1,4 +1,2 @@
-export * from './backdrop/index.js'
-export * from './container/index.js'
-export * from './modal.component.js'
-export type * from './modal.interfaces.js'
+export * from './component.js'
+export type * from './interfaces.js'

@@ -675,14 +675,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/modal@workspace:ui-parts/modal"
   dependencies:
-    "@atls-ui-parts/condition": "workspace:*"
-    "@atls-ui-parts/portal": "workspace:*"
+    "@atls-utils/use-float": "workspace:*"
+    "@floating-ui/react": "npm:0.27.8"
+    "@storybook/preview-api": "npm:8.6.12"
     "@storybook/react": "npm:8.6.12"
     "@types/react": "npm:19.1.2"
     "@vanilla-extract/css": "npm:1.17.1"
     "@vanilla-extract/dynamic": "npm:2.1.2"
     clsx: "npm:2.1.1"
-    framer-motion: "npm:12.9.2"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
     storybook: "npm:8.6.12"
@@ -783,7 +783,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/portal@workspace:*, @atls-ui-parts/portal@workspace:ui-parts/portal":
+"@atls-ui-parts/portal@workspace:ui-parts/portal":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/portal@workspace:ui-parts/portal"
   dependencies:
