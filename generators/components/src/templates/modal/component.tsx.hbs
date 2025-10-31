@@ -7,7 +7,7 @@ import { backdropStyles }     from './styles.css.js'
 import { containerStyles }    from './styles.css.js'
 
 export const Modal = ({ children, ...props }: ModalProps): ReactElement => (
-  <BaseModal backdropProps={{ className: backdropStyles }} {...props}>
+  <BaseModal backdropProps=\{{ className: backdropStyles }} {...props}>
     <div className={containerStyles}>{children}</div>
   </BaseModal>
 )
