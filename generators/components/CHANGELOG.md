@@ -1,5 +1,17 @@
 
 
+## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-generators/components@1.0.3...@atls-ui-generators/components@1.0.4) (2025-10-31)
+
+
+### Bug Fixes
+
+
+* **generators:** modal component template ([#636](https://github.com/atls/hyperion/issues/636)) ([8db08f9](https://github.com/atls/hyperion/commit/8db08f9aabd4d4b2d4072eeced1bb9fef3ac1d6c))
+
+
+
+
+
 ## [1.0.3](https://github.com/atls/hyperion/compare/@atls-ui-generators/components@1.0.2...@atls-ui-generators/components@1.0.3) (2025-10-30)
 
 
