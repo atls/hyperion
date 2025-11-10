@@ -1,13 +1,12 @@
-import type { ReactElement }      from 'react'
-import type { FunctionComponent } from 'react'
+import type { ReactElement }  from 'react'
+import type { ComponentType } from 'react'
 
-import { createElement }          from 'react'
-import React                      from 'react'
+import { createElement }      from 'react'
 
-import { sidebarItemStyles }      from './sidebar-item.styles.css.js'
+import { sidebarItemStyles }  from './styles.css.js'
 
 export interface SidebarItemProps {
-  icon: FunctionComponent<{
+  icon: ComponentType<{
     color?: string
     width?: number | string
     height?: number | string

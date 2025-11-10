@@ -1,20 +1,28 @@
 /* eslint-disable @next/next/no-img-element */
 
+import type { SidebarProps }   from '@atls-ui-examples/sidebar'
 import type { Meta }           from '@storybook/react'
 import type { StoryObj }       from '@storybook/react'
-
-import type { SidebarProps }   from './sidebar.component.jsx'
+import type { ReactElement }   from 'react'
 
 import { MixerHorizontalIcon } from '@radix-ui/react-icons'
 import { PersonIcon }          from '@radix-ui/react-icons'
 import { ReaderIcon }          from '@radix-ui/react-icons'
 import { RowsIcon }            from '@radix-ui/react-icons'
-import React                   from 'react'
 
-import { Sidebar }             from './sidebar.component.jsx'
+import { ThemeProvider }       from '@atls-ui-admin/theme'
+import { Sidebar }             from '@atls-ui-examples/sidebar'
+
+import adminLogo               from './admin-logo.png'
+
+const StorySidebar = (props: SidebarProps): ReactElement => (
+  <ThemeProvider>
+    <Sidebar {...props} />
+  </ThemeProvider>
+)
 
 const meta: Meta<SidebarProps> = {
-  title: 'Sidebar',
+  title: 'Examples/Sidebar',
 
   parameters: {
     layout: 'fullscreen',
@@ -23,12 +31,12 @@ const meta: Meta<SidebarProps> = {
     },
   },
 
-  component: Sidebar,
+  component: StorySidebar,
 }
 
 export const Base: StoryObj<SidebarProps> = {
   args: {
-    logo: <img src='/images/admin-logos_transparent.png' alt='logo' style={{ height: 40 }} />,
+    logo: <img src={adminLogo} alt='logo' style={{ height: 40 }} />,
     items: [
       {
         icon: RowsIcon,

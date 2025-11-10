@@ -1,1 +1,1 @@
-export * from './sidebar.component.jsx'
+export * from './component.js'

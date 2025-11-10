@@ -3,8 +3,6 @@ import type { ReactNode }        from 'react'
 
 import type { SidebarItemProps } from './sidebar-item/index.js'
 
-import React                     from 'react'
-
 import { SidebarItem }           from './sidebar-item/index.js'
 import { SidebarLogo }           from './sidebar-logo/index.js'
 import { SidebarRoot }           from './sidebar-root/index.js'
