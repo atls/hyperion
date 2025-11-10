@@ -10,15 +10,18 @@ import { RowsIcon }                   from '@radix-ui/react-icons'
 
 import { Column }                     from '@atls-ui-admin/layout'
 import { Layout }                     from '@atls-ui-admin/layout'
+import { ThemeProvider }              from '@atls-ui-admin/theme'
 import { BottomNavigation }           from '@atls-ui-examples/bottom-navigation'
 
 const StoryBottomNavigation = (props: BottomNavigationProps): ReactElement => (
-  <Column height='100%'>
-    <Layout flexGrow={1} />
-    <Layout>
-      <BottomNavigation {...props} />
-    </Layout>
-  </Column>
+  <ThemeProvider>
+    <Column height='100%'>
+      <Layout flexGrow={1} />
+      <Layout>
+        <BottomNavigation {...props} />
+      </Layout>
+    </Column>
+  </ThemeProvider>
 )
 
 const meta: Meta<BottomNavigationProps> = {
