@@ -1,8 +1,7 @@
+import type { BottomNavigationProps } from '@atls-ui-examples/bottom-navigation'
 import type { Meta }                  from '@storybook/react'
 import type { StoryObj }              from '@storybook/react'
 import type { ReactElement }          from 'react'
-
-import type { BottomNavigationProps } from '../src/component.js'
 
 import { MixerHorizontalIcon }        from '@radix-ui/react-icons'
 import { PersonIcon }                 from '@radix-ui/react-icons'
@@ -11,8 +10,7 @@ import { RowsIcon }                   from '@radix-ui/react-icons'
 
 import { Column }                     from '@atls-ui-admin/layout'
 import { Layout }                     from '@atls-ui-admin/layout'
-
-import { BottomNavigation }           from '../src/component.js'
+import { BottomNavigation }           from '@atls-ui-examples/bottom-navigation'
 
 const StoryBottomNavigation = (props: BottomNavigationProps): ReactElement => (
   <Column height='100%'>
