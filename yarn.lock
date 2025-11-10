@@ -22,6 +22,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-admin/bottom-navigation@workspace:ui-admin/examples/bottom-navigation":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-admin/bottom-navigation@workspace:ui-admin/examples/bottom-navigation"
+  dependencies:
+    "@atls-ui-admin/layout": "workspace:*"
+    "@atls-ui-admin/theme": "workspace:*"
+    "@radix-ui/react-icons": "npm:1.3.2"
+    "@storybook/react": "npm:8.6.12"
+    "@types/react": "npm:19.1.2"
+    "@vanilla-extract/css": "npm:1.17.1"
+    "@vanilla-extract/dynamic": "npm:2.1.2"
+    react: "npm:19.1.0"
+    react-dom: "npm:19.1.0"
+    storybook: "npm:8.6.12"
+  peerDependencies:
+    "@vanilla-extract/css": ^1
+    "@vanilla-extract/dynamic": ^2
+    react: ^19
+    react-dom: ^19
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-admin/button@workspace:*, @atls-ui-admin/button@workspace:ui-admin/button":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/button@workspace:ui-admin/button"
@@ -150,6 +172,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui-admin/sidebar@workspace:ui-admin/examples/sidebar":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-admin/sidebar@workspace:ui-admin/examples/sidebar"
+  dependencies:
+    "@atls-ui-admin/layout": "workspace:*"
+    "@atls-ui-admin/theme": "workspace:*"
+    "@radix-ui/react-icons": "npm:1.3.2"
+    "@storybook/react": "npm:8.6.12"
+    "@types/react": "npm:19.1.2"
+    "@vanilla-extract/css": "npm:1.17.1"
+    "@vanilla-extract/dynamic": "npm:2.1.2"
+    "@vanilla-extract/recipes": "npm:0.5.5"
+    react: "npm:19.1.0"
+    react-dom: "npm:19.1.0"
+    storybook: "npm:8.6.12"
+  peerDependencies:
+    "@vanilla-extract/css": ^1
+    "@vanilla-extract/dynamic": ^2
+    react: ^19
+    react-dom: ^19
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-admin/text@workspace:ui-admin/text":
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/text@workspace:ui-admin/text"
@@ -222,51 +267,6 @@ __metadata:
     next-themes: "*"
     react: "*"
     react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-examples/bottom-navigation@workspace:ui-admin/bottom-navigation":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-examples/bottom-navigation@workspace:ui-admin/bottom-navigation"
-  dependencies:
-    "@atls-ui-admin/layout": "workspace:*"
-    "@atls-ui-admin/theme": "workspace:*"
-    "@radix-ui/react-icons": "npm:1.3.2"
-    "@storybook/react": "npm:8.6.12"
-    "@types/react": "npm:19.1.2"
-    "@vanilla-extract/css": "npm:1.17.1"
-    "@vanilla-extract/dynamic": "npm:2.1.2"
-    react: "npm:19.1.0"
-    react-dom: "npm:19.1.0"
-    storybook: "npm:8.6.12"
-  peerDependencies:
-    "@vanilla-extract/css": ^1
-    "@vanilla-extract/dynamic": ^2
-    react: ^19
-    react-dom: ^19
-  languageName: unknown
-  linkType: soft
-
-"@atls-ui-examples/sidebar@workspace:ui-admin/sidebar":
-  version: 0.0.0-use.local
-  resolution: "@atls-ui-examples/sidebar@workspace:ui-admin/sidebar"
-  dependencies:
-    "@atls-ui-admin/layout": "workspace:*"
-    "@atls-ui-admin/theme": "workspace:*"
-    "@radix-ui/react-icons": "npm:1.3.2"
-    "@storybook/react": "npm:8.6.12"
-    "@types/react": "npm:19.1.2"
-    "@vanilla-extract/css": "npm:1.17.1"
-    "@vanilla-extract/dynamic": "npm:2.1.2"
-    "@vanilla-extract/recipes": "npm:0.5.5"
-    react: "npm:19.1.0"
-    react-dom: "npm:19.1.0"
-    storybook: "npm:8.6.12"
-  peerDependencies:
-    "@vanilla-extract/css": ^1
-    "@vanilla-extract/dynamic": ^2
-    react: ^19
-    react-dom: ^19
   languageName: unknown
   linkType: soft
 

@@ -1,4 +1,4 @@
-import type { BottomNavigationProps } from '@atls-ui-examples/bottom-navigation'
+import type { BottomNavigationProps } from '@atls-ui-admin/bottom-navigation'
 import type { Meta }                  from '@storybook/react'
 import type { StoryObj }              from '@storybook/react'
 import type { ReactElement }          from 'react'
@@ -8,10 +8,10 @@ import { PersonIcon }                 from '@radix-ui/react-icons'
 import { ReaderIcon }                 from '@radix-ui/react-icons'
 import { RowsIcon }                   from '@radix-ui/react-icons'
 
+import { BottomNavigation }           from '@atls-ui-admin/bottom-navigation'
 import { Column }                     from '@atls-ui-admin/layout'
 import { Layout }                     from '@atls-ui-admin/layout'
 import { ThemeProvider }              from '@atls-ui-admin/theme'
-import { BottomNavigation }           from '@atls-ui-examples/bottom-navigation'
 
 const StoryBottomNavigation = (props: BottomNavigationProps): ReactElement => (
   <ThemeProvider>
