@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
-import type { SidebarProps }   from '@atls-ui-examples/sidebar'
+import type { SidebarProps }   from '@atls-ui-admin/sidebar'
 import type { Meta }           from '@storybook/react'
 import type { StoryObj }       from '@storybook/react'
 import type { ReactElement }   from 'react'
@@ -10,8 +10,8 @@ import { PersonIcon }          from '@radix-ui/react-icons'
 import { ReaderIcon }          from '@radix-ui/react-icons'
 import { RowsIcon }            from '@radix-ui/react-icons'
 
+import { Sidebar }             from '@atls-ui-admin/sidebar'
 import { ThemeProvider }       from '@atls-ui-admin/theme'
-import { Sidebar }             from '@atls-ui-examples/sidebar'
 
 import adminLogo               from './admin-logo.png'
 
