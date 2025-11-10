@@ -59,6 +59,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:ui-admin/layout"\
     },\
     {\
+      "name": "@atls-ui-examples/sidebar",\
+      "reference": "workspace:ui-admin/sidebar"\
+    },\
+    {\
       "name": "@atls-ui-admin/text",\
       "reference": "workspace:ui-admin/text"\
     },\
@@ -239,6 +243,7 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-admin/theme", ["virtual:4f9ed8e845989318077357137aeec211ebfba38101ecc05195908019c7c51988d72a6f28ff2deb4a6d24cede839d65a1b302e11c916a1b5d8c845d427be961b1#workspace:ui-admin/theme", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#workspace:ui-admin/theme", "workspace:ui-admin/theme"]],\
     ["@atls-ui-admin/upload", ["workspace:ui-admin/upload"]],\
     ["@atls-ui-examples/bottom-navigation", ["workspace:ui-admin/bottom-navigation"]],\
+    ["@atls-ui-examples/sidebar", ["workspace:ui-admin/sidebar"]],\
     ["@atls-ui-generators/appearance", ["workspace:generators/appearance"]],\
     ["@atls-ui-generators/components", ["workspace:generators/components"]],\
     ["@atls-ui-generators/icons", ["workspace:generators/icons"]],\
@@ -699,6 +704,26 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.1.2"],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
+          ["react", "npm:19.1.0"],\
+          ["react-dom", "virtual:4f9ed8e845989318077357137aeec211ebfba38101ecc05195908019c7c51988d72a6f28ff2deb4a6d24cede839d65a1b302e11c916a1b5d8c845d427be961b1#npm:19.1.0"],\
+          ["storybook", "virtual:4f9ed8e845989318077357137aeec211ebfba38101ecc05195908019c7c51988d72a6f28ff2deb4a6d24cede839d65a1b302e11c916a1b5d8c845d427be961b1#npm:8.6.12"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@atls-ui-examples/sidebar", [\
+      ["workspace:ui-admin/sidebar", {\
+        "packageLocation": "./ui-admin/sidebar/",\
+        "packageDependencies": [\
+          ["@atls-ui-examples/sidebar", "workspace:ui-admin/sidebar"],\
+          ["@atls-ui-admin/layout", "virtual:4f9ed8e845989318077357137aeec211ebfba38101ecc05195908019c7c51988d72a6f28ff2deb4a6d24cede839d65a1b302e11c916a1b5d8c845d427be961b1#workspace:ui-admin/layout"],\
+          ["@atls-ui-admin/theme", "virtual:4f9ed8e845989318077357137aeec211ebfba38101ecc05195908019c7c51988d72a6f28ff2deb4a6d24cede839d65a1b302e11c916a1b5d8c845d427be961b1#workspace:ui-admin/theme"],\
+          ["@radix-ui/react-icons", "virtual:4f9ed8e845989318077357137aeec211ebfba38101ecc05195908019c7c51988d72a6f28ff2deb4a6d24cede839d65a1b302e11c916a1b5d8c845d427be961b1#npm:1.3.2"],\
+          ["@storybook/react", "virtual:4f9ed8e845989318077357137aeec211ebfba38101ecc05195908019c7c51988d72a6f28ff2deb4a6d24cede839d65a1b302e11c916a1b5d8c845d427be961b1#npm:8.6.12"],\
+          ["@types/react", "npm:19.1.2"],\
+          ["@vanilla-extract/css", "npm:1.17.1"],\
+          ["@vanilla-extract/dynamic", "npm:2.1.2"],\
+          ["@vanilla-extract/recipes", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:0.5.5"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:4f9ed8e845989318077357137aeec211ebfba38101ecc05195908019c7c51988d72a6f28ff2deb4a6d24cede839d65a1b302e11c916a1b5d8c845d427be961b1#npm:19.1.0"],\
           ["storybook", "virtual:4f9ed8e845989318077357137aeec211ebfba38101ecc05195908019c7c51988d72a6f28ff2deb4a6d24cede839d65a1b302e11c916a1b5d8c845d427be961b1#npm:8.6.12"]\

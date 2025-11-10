@@ -14,6 +14,7 @@ const generator = (plop: NodePlopAPI): void => {
           { name: 'Bottom Navigation', value: 'bottom-navigation' },
           { name: 'Modal', value: 'modal' },
           { name: 'Popover', value: 'popover' },
+          { name: 'Sidebar', value: 'sidebar' },
           { name: 'Tooltip', value: 'tooltip' },
         ],
       },

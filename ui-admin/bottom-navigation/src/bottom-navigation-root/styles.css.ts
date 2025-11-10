@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css'
 
-import { vars }  from '@atls-ui-admin/theme'
+import { vars }  from '@atls-ui-admin/theme/theme-css'
 
 export const bottomNavigationRootStyles = style({
   display: 'flex',
