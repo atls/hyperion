@@ -1,1 +1,1 @@
-export * from './bottom-navigation.component.jsx'
+export * from './component.js'
