@@ -245,6 +245,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui-examples/bottom-navigation@workspace:ui-admin/bottom-navigation":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-examples/bottom-navigation@workspace:ui-admin/bottom-navigation"
+  dependencies:
+    "@atls-ui-admin/layout": "workspace:*"
+    "@atls-ui-admin/theme": "workspace:*"
+    "@radix-ui/react-icons": "npm:1.3.2"
+    "@storybook/react": "npm:8.6.12"
+    "@types/react": "npm:19.1.2"
+    "@vanilla-extract/css": "npm:1.17.1"
+    "@vanilla-extract/dynamic": "npm:2.1.2"
+    react: "npm:19.1.0"
+    react-dom: "npm:19.1.0"
+    storybook: "npm:8.6.12"
+  peerDependencies:
+    "@vanilla-extract/css": ^1
+    "@vanilla-extract/dynamic": ^2
+    react: ^19
+    react-dom: ^19
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-generators/appearance@workspace:generators/appearance":
   version: 0.0.0-use.local
   resolution: "@atls-ui-generators/appearance@workspace:generators/appearance"
@@ -4542,7 +4564,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radix-ui/react-icons@npm:^1.3.0":
+"@radix-ui/react-icons@npm:1.3.2":
   version: 1.3.2
   resolution: "@radix-ui/react-icons@npm:1.3.2"
   peerDependencies:
