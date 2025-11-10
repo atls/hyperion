@@ -1,5 +1,12 @@
 
 
+## [0.0.3](https://github.com/atls/hyperion/compare/@atls-ui-examples/sidebar@0.0.1...@atls-ui-examples/sidebar@0.0.3) (2025-11-10)
+
+
+
+
+
+
 ## 0.0.1 (2025-11-10)
 
 

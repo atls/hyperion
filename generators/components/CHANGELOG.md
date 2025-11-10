@@ -1,5 +1,18 @@
 
 
+## [1.0.6](https://github.com/atls/hyperion/compare/@atls-ui-generators/components@1.0.4...@atls-ui-generators/components@1.0.6) (2025-11-10)
+
+
+### Features
+
+
+* **generators:** bottom-navigation component ([b2d9934](https://github.com/atls/hyperion/commit/b2d9934a3480439b0f3980bb0d0351e52c745b82))
+* **generators:** sidebar component ([bdf050b](https://github.com/atls/hyperion/commit/bdf050bde1827b3686effce23055eb17d8b762ba))
+
+
+
+
+
 ## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-generators/components@1.0.4...@atls-ui-generators/components@1.0.4) (2025-11-10)
 
 
