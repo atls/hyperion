@@ -1,6 +1,6 @@
 {
-  "name": "@atls-ui-examples/bottom-navigation",
-  "version": "0.0.1",
+  "name": "@atls-ui-examples/sidebar",
+  "version": "0.0.0",
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {
@@ -15,6 +15,9 @@
     "build": "yarn library build",
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
+  },
+  "dependencies": {
+    "@vanilla-extract/recipes": "0.5.5"
   },
   "devDependencies": {
     "@atls-ui-admin/layout": "workspace:*",
