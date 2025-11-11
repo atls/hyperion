@@ -10,4 +10,3 @@ jobs:
     permissions: write-all
     with:
       node-version: '22'
-      playwright-version: '1.55.0'
