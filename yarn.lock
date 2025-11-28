@@ -699,9 +699,9 @@ __metadata:
   peerDependencies:
     "@vanilla-extract/css": "*"
     "@vanilla-extract/dynamic": "*"
-    next: "*"
-    react: "*"
-    react-dom: "*"
+    next: ^15 || ^16
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -752,8 +752,9 @@ __metadata:
   peerDependencies:
     "@vanilla-extract/css": "*"
     "@vanilla-extract/dynamic": "*"
-    react: "*"
-    react-dom: "*"
+    next: ^15 || ^16
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
