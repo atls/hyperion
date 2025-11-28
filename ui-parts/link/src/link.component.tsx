@@ -10,7 +10,7 @@ import NextLink           from 'next/link.js'
 import { baseLinkStyles } from './link.css.js'
 import { linkSprinkles }  from './link.css.js'
 
-const BaseLink = NextLink.default
+const BaseLink = 'default' in NextLink ? NextLink.default : NextLink
 
 export const Link = ({ children, href, ref, ...props }: LinkProps): ReactNode => {
   const { className, style, otherProps } = linkSprinkles(props)

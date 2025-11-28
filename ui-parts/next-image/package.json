@@ -25,8 +25,9 @@
   "peerDependencies": {
     "@vanilla-extract/css": "*",
     "@vanilla-extract/dynamic": "*",
-    "react": "*",
-    "react-dom": "*"
+    "next": "^15 || ^16",
+    "react": "^19",
+    "react-dom": "^19"
   },
   "publishConfig": {
     "access": "public",
