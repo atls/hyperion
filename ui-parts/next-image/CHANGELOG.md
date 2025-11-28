@@ -1,5 +1,17 @@
 
 
+## [1.0.6](https://github.com/atls/hyperion/compare/@atls-ui-parts/next-image@1.0.6...@atls-ui-parts/next-image@1.0.6) (2025-11-28)
+
+
+### Bug Fixes
+
+
+* **ui-parts:** next link and image ([#648](https://github.com/atls/hyperion/issues/648)) ([28be946](https://github.com/atls/hyperion/commit/28be94632929408384949fea2171e4b29ba31346))
+
+
+
+
+
 ## [1.0.6](https://github.com/atls/hyperion/compare/@atls-ui-parts/next-image@1.0.6...@atls-ui-parts/next-image@1.0.6) (2025-10-25)
 
 
