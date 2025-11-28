@@ -7,7 +7,7 @@ import Image                      from 'next/image.js'
 
 import { nextImageWrapperStyles } from './next-image.css.js'
 
-const BaseImage = Image.default
+const BaseImage = 'default' in Image ? Image.default : Image
 
 export const NextImage = ({ wrapperClassName, ref, ...props }: NextImageProps): ReactNode => (
   <div className={clsx(nextImageWrapperStyles, wrapperClassName)}>
