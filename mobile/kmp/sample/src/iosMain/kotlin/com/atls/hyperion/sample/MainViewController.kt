@@ -1,4 +1,4 @@
-package com.atls.hyperion.storyboard
+package com.atls.hyperion.sample
 
 import androidx.compose.ui.window.ComposeUIViewController
 

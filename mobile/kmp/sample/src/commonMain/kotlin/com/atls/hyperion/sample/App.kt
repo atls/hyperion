@@ -1,4 +1,4 @@
-package com.atls.hyperion.storyboard
+package com.atls.hyperion.sample
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize

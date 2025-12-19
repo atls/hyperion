@@ -1,4 +1,4 @@
-package com.atls.hyperion.storyboard
+package com.atls.hyperion.sample
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
