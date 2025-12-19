@@ -1,5 +1,5 @@
 [versions]
-kotlin = "2.1.0"
+kotlin = "2.2.0"
 compose = "1.10.0-rc02"
 agp = "8.9.0"
 androidx-activityCompose = "1.9.3"
