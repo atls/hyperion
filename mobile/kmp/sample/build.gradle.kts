@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
@@ -7,10 +9,8 @@ plugins {
 
 kotlin {
     androidTarget {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "21"
-            }
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_21)
         }
     }
     
@@ -20,7 +20,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
-            baseName = "Storyboard"
+            baseName = "Sample"
             isStatic = true
         }
     }
@@ -43,10 +43,10 @@ kotlin {
 }
 
 android {
-    namespace = "com.atls.hyperion.storyboard"
+    namespace = "com.atls.hyperion.sample"
     compileSdk = 36
     defaultConfig {
-        applicationId = "com.atls.hyperion.storyboard"
+        applicationId = "com.atls.hyperion.sample"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
