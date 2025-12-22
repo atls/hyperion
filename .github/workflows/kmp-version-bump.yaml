@@ -20,8 +20,7 @@ jobs:
         id: bump
         run: |
           cd mobile/kmp
-          VERSION=$(./gradlew bumpVersion -Pmodule=ui -Pbump=minor | grep '^VERSION=' | cut -d= -f2)
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          ./gradlew bumpVersion
 
       - name: Commit
         uses: atls/shared/.github/actions/github/commit/create@master

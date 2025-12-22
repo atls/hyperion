@@ -25,6 +25,9 @@ abstract class VersionBumpTask : DefaultTask() {
         props.setProperty(Keys.VERSION, next)
         file.outputStream().use { props.store(it, null) }
 
-        println("VERSION=$next")
+        val githubOutput = System.getenv("GITHUB_OUTPUT")
+        if (githubOutput != null) {
+            java.io.File(githubOutput).appendText("version=$next\n")
+        }
     }
 }
