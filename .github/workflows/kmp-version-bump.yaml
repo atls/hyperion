@@ -1,0 +1,33 @@
+name: Bump mobile version
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [master]
+    paths:
+      - 'mobile/kmp/**'
+
+jobs:
+  bump:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Bump version
+        id: bump
+        run: |
+          cd mobile/kmp
+          VERSION=$(./gradlew bumpVersion -Pmodule=ui -Pbump=minor | grep '^VERSION=' | cut -d= -f2)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Commit
+        uses: atls/shared/commit/create@master
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          branchName: master
+          commitMessage: "chore(common): version bump to ${{ steps.bump.outputs.version }}"
+          workingDirectory: .
+          filePattern: mobile/kmp/**
