@@ -1,3 +1,4 @@
+import config.Keys
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -8,7 +9,7 @@ plugins {
 }
 
 group = "com.atls.hyperion"
-version = "0.1.0"
+version = VersionProvider.load(rootDir)
 
 kotlin {
     androidTarget {
@@ -43,12 +44,12 @@ kotlin {
 android {
     namespace = "com.atls.hyperion.ui"
 
-    val compileSdkValue = System.getenv(Versions.COMPILE_SDK_KEY)?.toInt()
-        ?: (extra[Versions.COMPILE_SDK_KEY] as String).toInt()
-    val minSdkValue = System.getenv(Versions.MIN_SDK_KEY)?.toInt()
-        ?: (extra[Versions.MIN_SDK_KEY] as String).toInt()
-    val javaTargetValue = System.getenv(Versions.JAVA_TARGET_KEY)?.toInt()
-        ?: (extra[Versions.JAVA_TARGET_KEY] as String).toInt()
+    val compileSdkValue = System.getenv(Keys.COMPILE_SDK)?.toInt()
+        ?: (extra[Keys.COMPILE_SDK] as String).toInt()
+    val minSdkValue = System.getenv(Keys.MIN_SDK)?.toInt()
+        ?: (extra[Keys.MIN_SDK] as String).toInt()
+    val javaTargetValue = System.getenv(Keys.JAVA_TARGET)?.toInt()
+        ?: (extra[Keys.JAVA_TARGET] as String).toInt()
 
     compileSdk = compileSdkValue
     defaultConfig {
