@@ -3,7 +3,9 @@ name: Bump mobile version
 on:
   pull_request:
     types: [closed]
-    branches: [master]
+    branches:
+      - master
+      - test/kmp-bump
     paths:
       - 'mobile/kmp/**'
 
