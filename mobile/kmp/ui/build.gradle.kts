@@ -39,12 +39,20 @@ kotlin {
 
 android {
     namespace = "com.atls.hyperion.ui"
-    compileSdk = 36
+
+    val compileSdkValue = System.getenv(Versions.COMPILE_SDK_KEY)?.toInt()
+        ?: (extra[Versions.COMPILE_SDK_KEY] as String).toInt()
+    val minSdkValue = System.getenv(Versions.MIN_SDK_KEY)?.toInt()
+        ?: (extra[Versions.MIN_SDK_KEY] as String).toInt()
+    val javaTargetValue = System.getenv(Versions.JAVA_TARGET_KEY)?.toInt()
+        ?: (extra[Versions.JAVA_TARGET_KEY] as String).toInt()
+
+    compileSdk = compileSdkValue
     defaultConfig {
-        minSdk = 24
+        minSdk = minSdkValue
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.toVersion(javaTargetValue)
+        targetCompatibility = JavaVersion.toVersion(javaTargetValue)
     }
 }

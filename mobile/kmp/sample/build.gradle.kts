@@ -44,11 +44,22 @@ kotlin {
 
 android {
     namespace = "com.atls.hyperion.sample"
-    compileSdk = 36
+
+    val compileSdkValue = System.getenv(Versions.COMPILE_SDK_KEY)?.toInt()
+        ?: (extra[Versions.COMPILE_SDK_KEY] as String).toInt()
+    val minSdkValue = System.getenv(Versions.MIN_SDK_KEY)?.toInt()
+        ?: (extra[Versions.MIN_SDK_KEY] as String).toInt()
+    val targetSdkValue = System.getenv(Versions.TARGET_SDK_KEY)?.toInt()
+        ?: (extra[Versions.TARGET_SDK_KEY] as String).toInt()
+    val javaTargetValue = System.getenv(Versions.JAVA_TARGET_KEY)?.toInt()
+        ?: (extra[Versions.JAVA_TARGET_KEY] as String).toInt()
+
+    compileSdk = compileSdkValue
+
     defaultConfig {
         applicationId = "com.atls.hyperion.sample"
-        minSdk = 24
-        targetSdk = 36
+        minSdk = minSdkValue
+        targetSdk = targetSdkValue
         versionCode = 1
         versionName = "1.0"
     }
@@ -63,7 +74,7 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.toVersion(javaTargetValue)
+        targetCompatibility = JavaVersion.toVersion(javaTargetValue)
     }
 }
