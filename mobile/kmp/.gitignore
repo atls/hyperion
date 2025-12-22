@@ -6,3 +6,4 @@ local.properties
 .DS_Store
 iosApp/Pods
 iosApp/GoogleService-Info.plist
+xcuserdata/
