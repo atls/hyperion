@@ -7,6 +7,9 @@ plugins {
     alias(libs.plugins.composeCompiler)
 }
 
+group = "com.atls.hyperion"
+version = "0.1.0"
+
 kotlin {
     androidTarget {
         compilerOptions {
