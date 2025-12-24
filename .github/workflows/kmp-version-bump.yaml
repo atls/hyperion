@@ -18,22 +18,23 @@ jobs:
           app-id: ${{ vars.ATLANTIS_SUPER_BOT_APP_ID }}
           private-key: ${{ secrets.ATLANTIS_SUPER_BOT_PRIVATE_KEY }}
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: gradle/actions/setup-gradle@v4
 
       - name: Bump version
         id: bump
+        working-directory: mobile/kmp
         run: |
-          cd mobile/kmp
           VERSION=$(./gradlew bumpVersion -Pmodule=ui -Pbump=minor | grep '^VERSION=' | cut -d= -f2)
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Commit
-        uses: atls/shared/commit/create@master
+        uses: planetscale/ghcommit-action@v0.2.0
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
         with:
-          githubToken: ${{ steps.app-token.outputs.token }}
-          branchName: master
-          commitMessage: "chore(common): version bump to ${{ steps.bump.outputs.version }}"
-          workingDirectory: .
-          filePattern: mobile/kmp/**
+          repo: ${{ github.repository }}
+          branch: master
+          commit_message: "chore(common): version bump to ${{ steps.bump.outputs.version }}"
+          file_pattern: mobile/kmp/**
