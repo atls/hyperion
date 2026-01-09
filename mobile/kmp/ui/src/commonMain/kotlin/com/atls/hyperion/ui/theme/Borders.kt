@@ -4,7 +4,7 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
-object Borders {
+object Border {
     val none: BorderStroke? = null
     val thinLightBlue = BorderStroke(0.5.dp, Color(0xFFD2DDF9))
     val thinLightGray = BorderStroke(0.5.dp, Color(0xFFE4E4E4))

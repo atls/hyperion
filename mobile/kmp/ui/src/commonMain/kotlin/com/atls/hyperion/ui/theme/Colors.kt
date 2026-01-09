@@ -2,7 +2,7 @@ package com.atls.hyperion.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-object Colors {
+object Color {
     val blue = Color(0xFF416DDF)
     val blueProtective = Color(0xFF1890FF)
     val white = Color(0xFFFFFFFF)
