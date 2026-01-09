@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.atls.hyperion"
-version = "0.2.0"
+version = "0.1.0"
 
 kotlin {
     androidTarget {
@@ -23,21 +23,18 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
-            baseName = "ui"
+            baseName = "storybook"
             isStatic = true
         }
     }
     
     sourceSets {
         commonMain.dependencies {
-            api(project(":storybook"))
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
             implementation(compose.ui)
             implementation(compose.components.resources)
-            implementation(compose.components.uiToolingPreview)
-            implementation(libs.compose.shadow)
         }
     }
 }
@@ -48,7 +45,7 @@ compose.resources {
 }
 
 android {
-    namespace = "com.atls.hyperion.ui"
+    namespace = "com.atls.hyperion.storybook"
 
     val compileSdkValue = System.getenv(Versions.COMPILE_SDK_KEY)?.toInt()
         ?: (extra[Versions.COMPILE_SDK_KEY] as String).toInt()
