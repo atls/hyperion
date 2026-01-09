@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.theme
+package com.atls.hyperion.ui.theme.tokens
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp

@@ -1,9 +1,9 @@
-package com.atls.hyperion.ui.properties
+package com.atls.hyperion.ui.theme.modifiers
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import com.adamglin.composeshadow.dropShadow
-import com.atls.hyperion.ui.theme.Shadow
+import com.atls.hyperion.ui.theme.tokens.Shadow
 
 fun Modifier.shadow(shadow: Shadow, shape: Shape): Modifier = this.then(
     dropShadow(

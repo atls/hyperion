@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.typography
+package com.atls.hyperion.ui.theme.typography
 
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
