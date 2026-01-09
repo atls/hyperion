@@ -1,4 +1,4 @@
-package com.atls.hyperion.storybook
+package com.atls.hyperion.storybook.fragments.storybook.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -17,10 +17,12 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import com.atls.hyperion.storybook.config.sidebarWidth
 import com.atls.hyperion.storybook.generated.resources.Res
 import com.atls.hyperion.storybook.generated.resources.components
+import com.atls.hyperion.storybook.shared.model.ComponentExample
+import com.atls.hyperion.storybook.shared.ui.theme.FontSize
+import com.atls.hyperion.storybook.shared.ui.theme.Padding
 import org.jetbrains.compose.resources.stringResource
 
 @Composable
@@ -38,19 +40,19 @@ fun Sidebar(
         Surface(
             modifier = Modifier
                 .fillMaxHeight()
-                .width(250.dp),
+                .width(sidebarWidth),
             color = MaterialTheme.colors.surface
         ) {
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(14.dp)
+                    .padding(Padding.medium)
             ) {
                 Text(
                     text = stringResource(Res.string.components),
-                    fontSize = 20.sp,
+                    fontSize = FontSize.large,
                     fontWeight = FontWeight.Bold,
-                    modifier = Modifier.padding(vertical = 24.dp)
+                    modifier = Modifier.padding(vertical = Padding.large)
                 )
                 LazyColumn {
                     items(components) { component ->
@@ -59,9 +61,9 @@ fun Sidebar(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clickable { onComponentClick(component) }
-                                .padding(vertical = 12.dp),
+                                .padding(vertical = Padding.small),
                             fontWeight = if (component == selectedComponent) FontWeight.Bold else FontWeight.Normal,
-                            fontSize = 16.sp
+                            fontSize = FontSize.small
                         )
                         Divider()
                     }

@@ -1,4 +1,4 @@
-package com.atls.hyperion.storybook
+package com.atls.hyperion.storybook.shared.model
 
 import androidx.compose.runtime.Composable
 

@@ -1,4 +1,4 @@
-package com.atls.hyperion.storybook
+package com.atls.hyperion.storybook.fragments.storybook
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.slideInHorizontally
@@ -19,11 +19,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import com.atls.hyperion.storybook.fragments.storybook.ui.Sidebar
 import com.atls.hyperion.storybook.generated.resources.Res
 import com.atls.hyperion.storybook.generated.resources.menu
 import com.atls.hyperion.storybook.generated.resources.select_component_from_sidebar
 import com.atls.hyperion.storybook.generated.resources.toggle_sidebar
+import com.atls.hyperion.storybook.shared.model.ComponentExample
+import com.atls.hyperion.storybook.shared.ui.theme.Padding
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 
@@ -45,7 +47,7 @@ fun Storybook(
             IconButton(
                 onClick = { isSidebarVisible = !isSidebarVisible },
                 modifier = Modifier
-                    .padding(12.dp)
+                    .padding(Padding.small)
             ) {
                 Icon(
                     painter = painterResource(Res.drawable.menu),

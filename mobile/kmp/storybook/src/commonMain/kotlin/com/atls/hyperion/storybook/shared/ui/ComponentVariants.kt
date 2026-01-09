@@ -1,4 +1,4 @@
-package com.atls.hyperion.storybook
+package com.atls.hyperion.storybook.shared.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,8 +12,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import com.atls.hyperion.storybook.shared.ui.theme.FontSize
+import com.atls.hyperion.storybook.shared.ui.theme.Padding
 
 @Composable
 fun <A, S> ComponentVariants(
@@ -26,22 +26,22 @@ fun <A, S> ComponentVariants(
         modifier = Modifier
             .fillMaxWidth()
             .verticalScroll(rememberScrollState())
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(24.dp)
+            .padding(Padding.medium),
+        verticalArrangement = Arrangement.spacedBy(Padding.large)
     ) {
         Text(
             text = name,
-            fontSize = 24.sp,
+            fontSize = FontSize.large,
             fontWeight = FontWeight.Bold
         )
 
         appearances.forEach { (appearanceName, appearanceProvider) ->
             Column(
-                verticalArrangement = Arrangement.spacedBy(16.dp)
+                verticalArrangement = Arrangement.spacedBy(Padding.medium),
             ) {
                 Text(
                     text = appearanceName,
-                    fontSize = 20.sp,
+                    fontSize = FontSize.medium,
                     fontWeight = FontWeight.SemiBold
                 )
 
@@ -52,8 +52,8 @@ fun <A, S> ComponentVariants(
                     ) {
                         Text(
                             text = shapeName,
-                            fontSize = 16.sp,
-                            modifier = Modifier.padding(top = 8.dp)
+                            fontSize = FontSize.small,
+                            modifier = Modifier.padding(top = Padding.tiny)
                         )
                         content(appearanceProvider(), shapeProvider())
                     }

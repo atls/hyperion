@@ -11,6 +11,7 @@ object Space {
     val g10 = 10.dp
     val g12 = 12.dp
     val g14 = 14.dp
+    val g16 = 16.dp
     val g17 = 17.dp
     val g22 = 22.dp
     val g24 = 24.dp
