@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.theme.tokens
+package com.atls.hyperion.ui.theme.tokens.layout
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.ui.graphics.Color
