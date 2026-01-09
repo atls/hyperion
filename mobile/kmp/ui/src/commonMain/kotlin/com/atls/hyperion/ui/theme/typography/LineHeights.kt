@@ -1,19 +1,18 @@
 package com.atls.hyperion.ui.theme.typography
 
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 
 object LineHeights {
-    val micro = 0.5.sp
-    val extraMicro = 0.8.sp
-    val small = 0.9.sp
-    val compact = 1.sp
-    val extraCompact = 1.1.sp
-    val default = 1.2.sp
-    val extraDefault = 1.3.sp
-    val medium = 1.4.sp
-    val extraMedium = 1.5.sp
-    val increased = 1.6.sp
-    val extraIncreased = 1.8.sp
-    val big = 2.3.sp
+    val xs2 = 12.sp
+    val xs = 16.sp
+    val sm = 20.sp
+    val md = 24.sp
+    val lg = 28.sp
+    val xl = 32.sp
+    val xl2 = 36.sp
+    val xl3 = 40.sp
+    val xl4 = 44.sp
+    val xl5 = 48.sp
+    val xl6 = 52.sp
+    val xl7 = 56.sp
 }
