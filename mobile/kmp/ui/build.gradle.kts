@@ -41,6 +41,11 @@ kotlin {
     }
 }
 
+compose.resources {
+    publicResClass = false
+    generateResClass = auto
+}
+
 android {
     namespace = "com.atls.hyperion.ui"
 
