@@ -1,0 +1,5 @@
+<resources>
+    <string name="components">Components</string>
+    <string name="select_component_from_sidebar">Select a component from the sidebar</string>
+    <string name="toggle_sidebar">Toggle Sidebar</string>
+</resources>
