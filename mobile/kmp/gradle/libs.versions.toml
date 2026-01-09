@@ -1,11 +1,13 @@
 [versions]
 kotlin = "2.2.0"
 compose = "1.10.0-rc02"
+composeShadow = "2.0.4"
 agp = "8.9.0"
 androidx-activityCompose = "1.9.3"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+compose-shadow = { module = "com.adamglin:compose-shadow", version.ref = "composeShadow" }
 
 [plugins]
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
