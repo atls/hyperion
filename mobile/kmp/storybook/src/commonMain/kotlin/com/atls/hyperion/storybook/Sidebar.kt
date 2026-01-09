@@ -1,4 +1,4 @@
-package com.atls.hyperion.sample.storybook
+package com.atls.hyperion.storybook
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -18,11 +18,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.atls.hyperion.ui.shared.stories.ComponentExample
-import com.atls.hyperion.ui.theme.tokens.Space
-import com.atls.hyperion.ui.theme.typography.FontSize
-import hyperion.sample.generated.resources.Res
-import hyperion.sample.generated.resources.components
+import androidx.compose.ui.unit.sp
+import com.atls.hyperion.storybook.generated.resources.Res
+import com.atls.hyperion.storybook.generated.resources.components
 import org.jetbrains.compose.resources.stringResource
 
 @Composable
@@ -46,13 +44,13 @@ fun Sidebar(
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(Space.g14)
+                    .padding(14.dp)
             ) {
                 Text(
                     text = stringResource(Res.string.components),
-                    fontSize = FontSize.large,
+                    fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
-                    modifier = Modifier.padding(vertical = Space.g24)
+                    modifier = Modifier.padding(vertical = 24.dp)
                 )
                 LazyColumn {
                     items(components) { component ->
@@ -61,9 +59,9 @@ fun Sidebar(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clickable { onComponentClick(component) }
-                                .padding(vertical = Space.g12),
+                                .padding(vertical = 12.dp),
                             fontWeight = if (component == selectedComponent) FontWeight.Bold else FontWeight.Normal,
-                            fontSize = FontSize.medium
+                            fontSize = 16.sp
                         )
                         Divider()
                     }
