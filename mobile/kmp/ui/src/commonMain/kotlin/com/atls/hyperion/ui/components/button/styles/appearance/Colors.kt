@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.components.button.styles.appearance.colors
+package com.atls.hyperion.ui.components.button.styles.appearance
 
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -19,4 +19,3 @@ sealed class Colors(
         borderColor: Color = Color.Transparent
     ) : Colors(textColor, borderColor)
 }
-
