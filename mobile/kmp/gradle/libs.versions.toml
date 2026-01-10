@@ -1,13 +1,19 @@
 [versions]
 kotlin = "2.2.0"
+ktor = "3.3.1"
 compose = "1.10.0-rc02"
 composeShadow = "2.0.4"
+coilCompose = "3.3.0"
 agp = "8.9.0"
 androidx-activityCompose = "1.9.3"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 compose-shadow = { module = "com.adamglin:compose-shadow", version.ref = "composeShadow" }
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilCompose" }
+coil-network-ktor = { module = "io.coil-kt.coil3:coil-network-ktor3", version.ref = "coilCompose" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
 
 [plugins]
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }

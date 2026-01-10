@@ -16,7 +16,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_21)
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -27,7 +27,7 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     sourceSets {
         commonMain.dependencies {
             api(project(":storybook"))
@@ -38,6 +38,20 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.compose.shadow)
+            implementation(libs.coil.compose)
+            implementation(libs.coil.network.ktor)
+        }
+
+        androidMain {
+            dependencies {
+                implementation(libs.ktor.client.okhttp)
+            }
+        }
+
+        iosMain {
+            dependencies {
+                implementation(libs.ktor.client.darwin)
+            }
         }
     }
 }
