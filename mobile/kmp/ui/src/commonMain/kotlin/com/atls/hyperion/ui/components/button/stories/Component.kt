@@ -29,6 +29,7 @@ import com.atls.hyperion.ui.components.button.styles.shape.smallSizeMediumRadii
 import com.atls.hyperion.ui.primitives.HorizontalSpacer
 import com.atls.hyperion.ui.primitives.VerticalSpacer
 import com.atls.hyperion.ui.theme.tokens.layout.Space
+import com.atls.hyperion.ui.theme.tokens.layout.Weight
 
 class ButtonStory : ComponentExample {
     override val name: String = "Button"
@@ -43,7 +44,7 @@ class ButtonStory : ComponentExample {
                     .fillMaxWidth()
                     .padding(horizontal = Space.g12)
             ) {
-                Text(modifier = Modifier.weight(1f), text = "Enabled")
+                Text(modifier = Modifier.weight(Weight.full), text = "Enabled")
                 HorizontalSpacer(Space.g12)
                 Switch(checked = enabled, onCheckedChange = { enabled = it })
             }
