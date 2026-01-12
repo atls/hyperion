@@ -13,6 +13,7 @@ object Colors {
         val black = Color(0xFF000000)
         val blackThreeQuarters = Color(0xBF000000)
         val lightPurple = Color(0xFFDADEED)
+        val transparent = Color.Transparent
     }
 
     object Text {

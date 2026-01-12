@@ -16,7 +16,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Color
 import com.atls.hyperion.ui.components.button.locals.LocalState
 import com.atls.hyperion.ui.components.button.state.ButtonState
 import com.atls.hyperion.ui.components.button.styles.appearance.ButtonAppearance
@@ -25,6 +24,7 @@ import com.atls.hyperion.ui.components.button.styles.shape.ButtonShape
 import com.atls.hyperion.ui.shared.addon.AddonPosition
 import com.atls.hyperion.ui.shared.addon.AddonSlotManager
 import com.atls.hyperion.ui.theme.tokens.Elevation
+import com.atls.hyperion.ui.theme.tokens.colors.Colors as ThemeColors
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
@@ -57,12 +57,12 @@ fun ButtonLayout(
             colors = ButtonDefaults.buttonColors(
                 backgroundColor = when (colors) {
                     is Colors.Solid -> colors.backgroundColor
-                    is Colors.Gradient -> Color.Transparent
+                    is Colors.Gradient -> ThemeColors.Palette.transparent
                 },
                 contentColor = colors.textColor,
                 disabledBackgroundColor = when (colors) {
                     is Colors.Solid -> colors.backgroundColor
-                    is Colors.Gradient -> Color.Transparent
+                    is Colors.Gradient -> ThemeColors.Palette.transparent
                 },
                 disabledContentColor = colors.textColor
             ),
