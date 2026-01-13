@@ -9,7 +9,11 @@ import com.atls.hyperion.ui.components.card.stories.CardStory
 import com.atls.hyperion.ui.components.checkbox.stories.CheckboxStory
 import com.atls.hyperion.ui.components.divider.stories.DividerStory
 import com.atls.hyperion.ui.components.input.stories.InputStory
+import com.atls.hyperion.ui.components.modal.bottom.stories.BottomDialogStory
+import com.atls.hyperion.ui.components.modal.popup.stories.PopupStory
 import com.atls.hyperion.ui.components.switch.stories.SwitchStory
+import com.atls.hyperion.ui.fragment.datepicker.stories.DatePickerStory
+import com.atls.hyperion.ui.fragment.datepicker.stories.DateRangePickerStory
 import com.atls.hyperion.ui.primitives.stories.LinkStory
 import com.atls.hyperion.ui.primitives.stories.TextStory
 
@@ -19,10 +23,14 @@ fun App() {
         Storybook(
             components = listOf(
                 AvatarStory(),
+                BottomDialogStory(),
                 ButtonStory(),
                 CheckboxStory(),
+                DatePickerStory(),
+                DateRangePickerStory(),
                 DividerStory(),
                 InputStory(),
+                PopupStory(),
                 SwitchStory(),
                 CardStory(),
                 TextStory(),
