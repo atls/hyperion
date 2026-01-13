@@ -5,13 +5,12 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import com.atls.hyperion.ui.fragment.datepicker.style.appearance.DatepickerAppearance
-import com.atls.hyperion.ui.fragment.datepicker.style.shape.DatepickerShape
+import com.atls.hyperion.ui.fragment.datepicker.style.appearance.DatePickerAppearance
+import com.atls.hyperion.ui.fragment.datepicker.style.shape.DatePickerShape
 import com.atls.hyperion.ui.primitives.Text
 import com.atls.hyperion.ui.shared.layout.aspectSquare
 import com.atls.hyperion.ui.theme.tokens.colors.Colors
@@ -26,8 +25,8 @@ fun Day(
     isInRange: Boolean,
     isRangeStart: Boolean,
     isRangeEnd: Boolean,
-    appearance: DatepickerAppearance,
-    shape: DatepickerShape,
+    appearance: DatePickerAppearance,
+    shape: DatePickerShape,
     onClick: (LocalDate) -> Unit,
 ) {
     val isCurrentMonth = day.position == DayPosition.MonthDate
@@ -44,16 +43,23 @@ fun Day(
         else -> appearance.cellBackgroundColor
     }
 
+    val cellShape = when {
+        isSelected -> shape.cellActiveShape
+        isInRange -> shape.cellRangeShape
+        else -> shape.cellShape
+    }
+
     val textColor = when {
         isSelected || isRangeStart || isRangeEnd -> appearance.cellActiveTextColor
         isInRange -> appearance.cellInRangeTextColor
         else -> appearance.cellTextColor
     }
 
+
     val containerModifier = Modifier
         .aspectSquare()
         .padding(shape.cellSpacing)
-        .clip(shape.cellShape ?: RoundedCornerShape(shape.cellCornerRadius))
+        .clip(cellShape)
         .background(backgroundColor)
         .padding(shape.cellPadding)
         .then(
@@ -61,19 +67,19 @@ fun Day(
                 Modifier.border(
                     shape.cellBorderWidth,
                     appearance.cellActiveBorderColor,
-                    shape.cellShape ?: RoundedCornerShape(shape.cellCornerRadius)
+                    cellShape
                 )
             else if (isInRange && appearance.cellInRangeBorderColor != Colors.Palette.transparent)
                 Modifier.border(
                     shape.cellBorderWidth,
                     appearance.cellInRangeBorderColor,
-                    shape.cellShape ?: RoundedCornerShape(shape.cellCornerRadius)
+                    cellShape
                 )
             else if (appearance.cellBorderColor != Colors.Palette.transparent)
                 Modifier.border(
                     shape.cellBorderWidth,
                     appearance.cellBorderColor,
-                    shape.cellShape ?: RoundedCornerShape(shape.cellCornerRadius)
+                    cellShape
                 )
             else Modifier
         )
