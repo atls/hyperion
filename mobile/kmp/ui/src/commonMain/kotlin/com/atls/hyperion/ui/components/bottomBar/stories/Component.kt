@@ -153,9 +153,9 @@ class BottomBarStory : ComponentExample {
                     modifier = Modifier.padding(vertical = 8.dp)
                 ) {
                     RadioButton(
-                        selected = tabPosition == Arrangement.Start,
-                        onClick = { tabPosition = Arrangement.Start })
-                    Text("Start", modifier = Modifier.padding(start = 4.dp, end = 8.dp))
+                        selected = tabPosition == Arrangement.SpaceAround,
+                        onClick = { tabPosition = Arrangement.SpaceAround })
+                    Text("Space around", modifier = Modifier.padding(start = 4.dp, end = 8.dp))
 
                     RadioButton(
                         selected = tabPosition == Arrangement.Center,
@@ -163,9 +163,9 @@ class BottomBarStory : ComponentExample {
                     Text("Center", modifier = Modifier.padding(start = 4.dp, end = 8.dp))
 
                     RadioButton(
-                        selected = tabPosition == Arrangement.End,
-                        onClick = { tabPosition = Arrangement.End })
-                    Text("End", modifier = Modifier.padding(start = 4.dp))
+                        selected = tabPosition == Arrangement.SpaceBetween,
+                        onClick = { tabPosition = Arrangement.SpaceBetween })
+                    Text("Space between", modifier = Modifier.padding(start = 4.dp))
                 }
             }
 
