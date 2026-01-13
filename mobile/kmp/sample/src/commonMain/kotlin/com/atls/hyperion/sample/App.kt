@@ -4,7 +4,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import com.atls.hyperion.storybook.fragments.storybook.Storybook
 import com.atls.hyperion.ui.components.avatar.stories.AvatarStory
-import com.atls.hyperion.ui.components.bottombar.stories.BottomBarStory
+import com.atls.hyperion.ui.components.bottomBar.stories.BottomBarStory
 import com.atls.hyperion.ui.components.button.stories.ButtonStory
 import com.atls.hyperion.ui.components.card.stories.CardStory
 import com.atls.hyperion.ui.components.carousel.stories.CarouselStory

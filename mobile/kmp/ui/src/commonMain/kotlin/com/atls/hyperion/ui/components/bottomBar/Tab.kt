@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.components.bottombar
+package com.atls.hyperion.ui.components.bottomBar
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -14,10 +14,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.style.TextAlign
-import com.atls.hyperion.ui.components.bottombar.styles.appearance.BottomBarAppearance
-import com.atls.hyperion.ui.components.bottombar.styles.appearance.Colors
-import com.atls.hyperion.ui.components.bottombar.styles.appearance.primary
-import com.atls.hyperion.ui.components.bottombar.styles.shape.BottomBarShape
+import com.atls.hyperion.ui.components.bottomBar.styles.appearance.BottomBarAppearance
+import com.atls.hyperion.ui.components.bottomBar.styles.appearance.Colors
+import com.atls.hyperion.ui.components.bottomBar.styles.appearance.primary
+import com.atls.hyperion.ui.components.bottomBar.styles.shape.BottomBarShape
 
 @Composable
 fun BottomBarTab(

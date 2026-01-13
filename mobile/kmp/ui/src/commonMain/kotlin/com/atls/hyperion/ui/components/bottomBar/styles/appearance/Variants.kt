@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.components.bottombar.styles.appearance
+package com.atls.hyperion.ui.components.bottomBar.styles.appearance
 
 import com.atls.hyperion.ui.theme.tokens.colors.Alpha
 import com.atls.hyperion.ui.theme.tokens.colors.Colors as ThemeColors

@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.components.bottombar.styles.shape
+package com.atls.hyperion.ui.components.bottomBar.styles.shape
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.text.TextStyle

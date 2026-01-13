@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.components.bottombar.styles.shape
+package com.atls.hyperion.ui.components.bottomBar.styles.shape
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.TextStyle

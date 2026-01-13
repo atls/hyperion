@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.components.bottombar.stories
+package com.atls.hyperion.ui.components.bottomBar.stories
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -27,20 +27,20 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.unit.dp
 import com.atls.hyperion.storybook.shared.model.ComponentExample
 import com.atls.hyperion.storybook.shared.ui.ComponentVariants
-import com.atls.hyperion.ui.components.bottombar.BottomBar
-import com.atls.hyperion.ui.components.bottombar.model.BottomBarItem
-import com.atls.hyperion.ui.components.bottombar.styles.appearance.BottomBarAppearance
-import com.atls.hyperion.ui.components.bottombar.styles.appearance.dark
-import com.atls.hyperion.ui.components.bottombar.styles.appearance.darkWithoutLabel
-import com.atls.hyperion.ui.components.bottombar.styles.appearance.primary
-import com.atls.hyperion.ui.components.bottombar.styles.appearance.primaryWithoutLabel
-import com.atls.hyperion.ui.components.bottombar.styles.appearance.secondary
-import com.atls.hyperion.ui.components.bottombar.styles.appearance.secondaryWithoutLabel
-import com.atls.hyperion.ui.components.bottombar.styles.shape.BottomBarShape.WithLabel
-import com.atls.hyperion.ui.components.bottombar.styles.shape.BottomBarShape.WithoutLabel
-import com.atls.hyperion.ui.components.bottombar.styles.shape.default
-import com.atls.hyperion.ui.components.bottombar.styles.shape.elevated
-import com.atls.hyperion.ui.components.bottombar.styles.shape.rounded
+import com.atls.hyperion.ui.components.bottomBar.BottomBar
+import com.atls.hyperion.ui.components.bottomBar.model.BottomBarItem
+import com.atls.hyperion.ui.components.bottomBar.styles.appearance.BottomBarAppearance
+import com.atls.hyperion.ui.components.bottomBar.styles.appearance.dark
+import com.atls.hyperion.ui.components.bottomBar.styles.appearance.darkWithoutLabel
+import com.atls.hyperion.ui.components.bottomBar.styles.appearance.primary
+import com.atls.hyperion.ui.components.bottomBar.styles.appearance.primaryWithoutLabel
+import com.atls.hyperion.ui.components.bottomBar.styles.appearance.secondary
+import com.atls.hyperion.ui.components.bottomBar.styles.appearance.secondaryWithoutLabel
+import com.atls.hyperion.ui.components.bottomBar.styles.shape.BottomBarShape.WithLabel
+import com.atls.hyperion.ui.components.bottomBar.styles.shape.BottomBarShape.WithoutLabel
+import com.atls.hyperion.ui.components.bottomBar.styles.shape.default
+import com.atls.hyperion.ui.components.bottomBar.styles.shape.elevated
+import com.atls.hyperion.ui.components.bottomBar.styles.shape.rounded
 import kotlin.math.PI
 
 class BottomBarStory : ComponentExample {
