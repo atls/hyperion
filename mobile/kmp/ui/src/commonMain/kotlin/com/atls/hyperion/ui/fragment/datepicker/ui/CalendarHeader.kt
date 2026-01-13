@@ -10,7 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import com.atls.hyperion.ui.components.divider.horizontal.HorizontalDivider
-import com.atls.hyperion.ui.fragment.datepicker.model.CalendarDivider
+import com.atls.hyperion.ui.fragment.datepicker.model.DividerPosition
 import com.atls.hyperion.ui.fragment.datepicker.style.appearance.DatePickerAppearance
 import com.atls.hyperion.ui.fragment.datepicker.style.shape.DatePickerShape
 import com.atls.hyperion.ui.generated.resources.Res
@@ -33,7 +33,7 @@ fun CalendarHeader(
     onPrevMonth: () -> Unit,
     onNextMonth: () -> Unit,
 ) {
-    if (shape.divider == CalendarDivider.TOP) {
+    if (shape.divider == DividerPosition.TOP) {
         HorizontalDivider(
             appearance = appearance.dividerAppearance,
             shape = shape.dividerShape
@@ -69,7 +69,7 @@ fun CalendarHeader(
         )
     }
 
-    if (shape.divider == CalendarDivider.BOTTOM) {
+    if (shape.divider == DividerPosition.BOTTOM) {
         VerticalSpacer(shape.headerSpacing)
         HorizontalDivider(
             appearance = appearance.dividerAppearance,
