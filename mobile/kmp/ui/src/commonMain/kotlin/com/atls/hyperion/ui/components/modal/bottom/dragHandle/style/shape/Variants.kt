@@ -2,7 +2,7 @@ package com.atls.hyperion.ui.components.modal.bottom.dragHandle.style.shape
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.runtime.Composable
-import com.atls.hyperion.ui.theme.tokens.components.DragHandleSize
+import com.atls.hyperion.ui.components.modal.bottom.dragHandle.style.DragHandleSize
 import com.atls.hyperion.ui.theme.tokens.layout.CornerRadius
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 

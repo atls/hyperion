@@ -9,7 +9,7 @@ import com.atls.hyperion.ui.components.divider.style.shape.default
 import com.atls.hyperion.ui.components.modal.style.shape.ModalShape
 import com.atls.hyperion.ui.components.modal.style.shape.popup
 import com.atls.hyperion.ui.fragment.datepicker.model.DividerPosition
-import com.atls.hyperion.ui.theme.tokens.components.IconSize
+import com.atls.hyperion.ui.primitives.icon.IconSize
 import com.atls.hyperion.ui.theme.tokens.layout.CornerRadius
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 import com.atls.hyperion.ui.theme.typography.FontSize

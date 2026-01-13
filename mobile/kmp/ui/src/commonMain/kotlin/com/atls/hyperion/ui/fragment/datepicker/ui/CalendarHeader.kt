@@ -16,9 +16,9 @@ import com.atls.hyperion.ui.fragment.datepicker.style.shape.DatePickerShape
 import com.atls.hyperion.ui.generated.resources.Res
 import com.atls.hyperion.ui.generated.resources.chevron_left
 import com.atls.hyperion.ui.generated.resources.chevron_right
-import com.atls.hyperion.ui.primitives.Icon
 import com.atls.hyperion.ui.primitives.Text
 import com.atls.hyperion.ui.primitives.VerticalSpacer
+import com.atls.hyperion.ui.primitives.icon.Icon
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
