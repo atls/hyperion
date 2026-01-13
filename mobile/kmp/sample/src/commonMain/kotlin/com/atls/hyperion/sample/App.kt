@@ -11,6 +11,7 @@ import com.atls.hyperion.ui.components.carousel.stories.CarouselStory
 import com.atls.hyperion.ui.components.checkbox.stories.CheckboxStory
 import com.atls.hyperion.ui.components.divider.stories.DividerStory
 import com.atls.hyperion.ui.components.input.stories.InputStory
+import com.atls.hyperion.ui.components.list.stories.ListStories
 import com.atls.hyperion.ui.components.modal.bottom.stories.BottomDialogStory
 import com.atls.hyperion.ui.components.modal.popup.stories.PopupStory
 import com.atls.hyperion.ui.components.pagination.stories.PaginationStory
@@ -46,7 +47,8 @@ fun App() {
                 SwitchStory(),
                 TextStory(),
                 TopBarStory(),
-                LinkStory()
+                LinkStory(),
+                ListStories()
             )
         )
     }
