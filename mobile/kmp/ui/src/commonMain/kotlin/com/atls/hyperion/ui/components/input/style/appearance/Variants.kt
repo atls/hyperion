@@ -10,7 +10,7 @@ fun InputAppearance.Companion.blue(): InputAppearance =
         filled = Colors.fromColorSet(TokenColors.Input.Blue.Default),
         focused = Colors.fromColorSet(TokenColors.Input.Blue.Focus),
         disabled = Colors.fromColorSet(TokenColors.Input.Blue.Disabled),
-        error = Colors.fromColorSet(TokenColors.Input.Blue.Default), // TODO: Add error colors to tokens
+        error = Colors.fromColorSet(TokenColors.Input.Blue.Default),
         active = Colors.fromColorSet(TokenColors.Input.Blue.Active)
     )
 
@@ -21,6 +21,6 @@ fun InputAppearance.Companion.white(): InputAppearance =
         filled = Colors.fromColorSet(TokenColors.Input.White.Default),
         focused = Colors.fromColorSet(TokenColors.Input.White.Focus),
         disabled = Colors.fromColorSet(TokenColors.Input.White.Disabled),
-        error = Colors.fromColorSet(TokenColors.Input.White.Default), // TODO: Add error colors to tokens
+        error = Colors.fromColorSet(TokenColors.Input.White.Default),
         active = Colors.fromColorSet(TokenColors.Input.White.Active)
     )
