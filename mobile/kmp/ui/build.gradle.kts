@@ -34,12 +34,15 @@ kotlin {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
+            implementation(compose.material3)
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.compose.shadow)
             implementation(libs.coil.compose)
             implementation(libs.coil.network.ktor)
+            implementation(libs.compose.calendar)
+            api(libs.kotlinx.datetime)
         }
 
         androidMain {
