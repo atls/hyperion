@@ -8,7 +8,7 @@ import androidx.compose.ui.layout.ContentScale
 import coil3.compose.AsyncImage
 import com.atls.hyperion.ui.components.avatar.styles.appearance.AvatarAppearance
 import com.atls.hyperion.ui.components.avatar.styles.shape.AvatarShape
-import com.atls.hyperion.ui.primitives.Image
+import com.atls.hyperion.ui.primitives.image.Image
 
 @Composable
 fun Avatar(

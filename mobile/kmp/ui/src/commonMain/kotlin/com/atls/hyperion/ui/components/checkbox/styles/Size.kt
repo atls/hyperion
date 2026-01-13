@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.theme.tokens.components
+package com.atls.hyperion.ui.components.checkbox.styles
 
 import androidx.compose.ui.unit.dp
 
