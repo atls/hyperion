@@ -1,7 +1,7 @@
 package com.atls.hyperion.ui.components.avatar.styles.shape
 
 import androidx.compose.runtime.Composable
-import com.atls.hyperion.ui.theme.tokens.components.ImageSize
+import com.atls.hyperion.ui.primitives.image.ImageSize
 import com.atls.hyperion.ui.theme.tokens.layout.CornerRadius
 
 @Composable
