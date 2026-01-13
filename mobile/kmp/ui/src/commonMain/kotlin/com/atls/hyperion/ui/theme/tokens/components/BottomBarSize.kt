@@ -2,7 +2,6 @@ package com.atls.hyperion.ui.theme.tokens.components
 
 import androidx.compose.ui.unit.dp
 
-object IconSize {
-    val large = 32.dp
-    val medium = 24.dp
+object BottomBarSize {
+    val defaultHeight = 56.dp
 }
