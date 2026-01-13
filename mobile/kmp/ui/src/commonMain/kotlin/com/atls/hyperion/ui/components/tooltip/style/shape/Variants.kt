@@ -14,6 +14,6 @@ fun TooltipShape.Companion.default() =
             width = CaretSize.caretWidth
         ),
         padding = PaddingValues(
-            vertical = Space.g8
+            vertical = Space.xs2
         )
     )

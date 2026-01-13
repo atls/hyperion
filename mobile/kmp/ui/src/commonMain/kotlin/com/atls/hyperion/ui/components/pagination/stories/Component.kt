@@ -54,7 +54,7 @@ class PaginationStory : ComponentExample {
                 )
             }
 
-            VerticalSpacer(Space.g24)
+            VerticalSpacer(Space.xl3)
 
             ComponentVariants(
                 name = "Pagination with Carousel",

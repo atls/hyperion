@@ -13,7 +13,7 @@ import com.atls.hyperion.ui.theme.typography.LineHeights
 fun ToastShape.Companion.default(): ToastShape =
     ToastShape(
         cornerRadius = CornerRadius.xl2,
-        paddings = PaddingValues(horizontal = Space.g16, vertical = Space.g12),
+        paddings = PaddingValues(horizontal = Space.lg, vertical = Space.sm),
         typography = TextStyle(fontSize = FontSize.md, lineHeight = LineHeights.md),
         borderStroke = BorderStroke.tiny
     )
@@ -22,7 +22,7 @@ fun ToastShape.Companion.default(): ToastShape =
 fun ToastShape.Companion.rounded(): ToastShape =
     ToastShape(
         cornerRadius = CornerRadius.xl4,
-        paddings = PaddingValues(horizontal = Space.g16, vertical = Space.g12),
+        paddings = PaddingValues(horizontal = Space.lg, vertical = Space.sm),
         typography = TextStyle(fontSize = FontSize.md, lineHeight = LineHeights.md),
         borderStroke = BorderStroke.tiny
     )
@@ -31,7 +31,7 @@ fun ToastShape.Companion.rounded(): ToastShape =
 fun ToastShape.Companion.square(): ToastShape =
     ToastShape(
         cornerRadius = CornerRadius.zero,
-        paddings = PaddingValues(horizontal = Space.g16, vertical = Space.g12),
+        paddings = PaddingValues(horizontal = Space.lg, vertical = Space.sm),
         typography = TextStyle(fontSize = FontSize.md, lineHeight = LineHeights.md),
         borderStroke = BorderStroke.tiny
     )

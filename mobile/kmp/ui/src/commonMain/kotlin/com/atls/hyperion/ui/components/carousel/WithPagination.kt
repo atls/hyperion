@@ -39,7 +39,7 @@ fun CarouselWithPagination(
             content = content
         )
 
-        VerticalSpacer(Space.g12)
+        VerticalSpacer(Space.sm)
 
         Pagination(
             currentPage = pagerState.currentPage,

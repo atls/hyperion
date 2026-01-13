@@ -4,7 +4,7 @@ import com.atls.hyperion.ui.theme.tokens.layout.Space
 
 fun CarouselShape.Companion.default() =
     CarouselShape(
-        itemSpacing = Space.g16,
+        itemSpacing = Space.lg,
         peekWidth = Space.zero,
-        padding = Space.g24
+        padding = Space.xl3
     )

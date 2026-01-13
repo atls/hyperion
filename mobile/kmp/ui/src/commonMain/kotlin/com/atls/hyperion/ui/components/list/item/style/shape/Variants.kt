@@ -15,11 +15,11 @@ fun TextListItemShape.Companion.default(): TextListItemShape =
     TextListItemShape(
         cornerRadius = CornerRadius.xl2,
         paddings = PaddingValues(
-            horizontal = Space.g12,
-            vertical = Space.g8
+            horizontal = Space.sm,
+            vertical = Space.xs2
         ),
         textPaddings = PaddingValues(
-            horizontal = Space.g4,
+            horizontal = Space.xs4,
             vertical = Space.zero
         ),
         typography = TextStyle(

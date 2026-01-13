@@ -11,7 +11,7 @@ fun PaginationShape.Companion.circle(): PaginationShape =
     PaginationShape(
         activeSize = DpSize(PaginationItemSize.medium, PaginationItemSize.medium),
         disabledSize = DpSize(PaginationItemSize.small, PaginationItemSize.small),
-        spacing = Space.g16,
+        spacing = Space.lg,
         cornerRadius = CornerRadius.full
     )
 
@@ -23,6 +23,6 @@ fun PaginationShape.Companion.rectangle(): PaginationShape =
             PaginationItemSize.rectangleWidth,
             PaginationItemSize.rectangleHeight
         ),
-        spacing = Space.g8,
+        spacing = Space.xs2,
         cornerRadius = CornerRadius.md
     )

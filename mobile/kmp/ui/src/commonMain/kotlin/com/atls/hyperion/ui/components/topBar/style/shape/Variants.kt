@@ -12,7 +12,7 @@ import com.atls.hyperion.ui.theme.typography.NunitoSansFontFamily
 fun TopBarShape.Companion.default(): TopBarShape =
     TopBarShape(
         paddings = PaddingValues(
-            horizontal = Space.g24,
+            horizontal = Space.xl3,
             vertical = Space.zero
         ),
         typography = TextStyle(

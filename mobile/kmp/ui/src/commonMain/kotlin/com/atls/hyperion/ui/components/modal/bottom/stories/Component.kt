@@ -36,7 +36,7 @@ class BottomDialogStory : ComponentExample {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(Space.g12)
+                .padding(Space.sm)
         ) {
             Button(
                 text = "Show Bottom Dialog",
@@ -53,11 +53,11 @@ class BottomDialogStory : ComponentExample {
                     Column(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(Space.g16)
+                            .padding(Space.lg)
                     ) {
                         Text(text = "This is a Bottom Dialog")
                         Button(
-                            modifier = Modifier.padding(top = Space.g12),
+                            modifier = Modifier.padding(top = Space.sm),
                             text = "Close",
                             appearance = ButtonAppearance.blue(),
                             shape = ButtonShape.normal(),

@@ -42,25 +42,25 @@ class InputStory : ComponentExample {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = Space.g12),
+                    .padding(horizontal = Space.sm),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(modifier = Modifier.weight(Weight.full), text = "Enabled")
-                HorizontalSpacer(Space.g12)
+                HorizontalSpacer(Space.sm)
                 Switch(checked = enabled, onCheckedChange = { enabled = it })
             }
-            VerticalSpacer(Space.g8)
+            VerticalSpacer(Space.xs2)
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = Space.g12),
+                    .padding(horizontal = Space.sm),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(modifier = Modifier.weight(Weight.full), text = "Error")
-                HorizontalSpacer(Space.g12)
+                HorizontalSpacer(Space.sm)
                 Switch(checked = isError, onCheckedChange = { isError = it })
             }
-            VerticalSpacer(Space.g12)
+            VerticalSpacer(Space.sm)
 
             ComponentVariants(
                 name = "Input",

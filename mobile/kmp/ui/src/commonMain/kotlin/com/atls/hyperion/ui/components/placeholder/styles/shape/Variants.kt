@@ -17,7 +17,7 @@ fun PlaceholderShape.Companion.imageBox(): PlaceholderShape =
             fontWeight = FontWeight.bold,
             fontSize = FontSize.xl
         ),
-        spacing = Space.g8
+        spacing = Space.xs2
     )
 
 @Composable
@@ -29,5 +29,5 @@ fun PlaceholderShape.Companion.logo(): PlaceholderShape =
             fontWeight = FontWeight.bold,
             fontSize = FontSize.xl
         ),
-        spacing = Space.g8
+        spacing = Space.xs2
     )

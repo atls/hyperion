@@ -68,7 +68,7 @@ fun TopBar(
         }
 
         val horizontalPadding =
-            with(density) { maxOf(beforeWidthPx, afterWidthPx).toDp() } + Space.g12
+            with(density) { maxOf(beforeWidthPx, afterWidthPx).toDp() } + Space.sm
         val rowHeight = with(density) { rowHeightPx.toDp() }
 
         Box(

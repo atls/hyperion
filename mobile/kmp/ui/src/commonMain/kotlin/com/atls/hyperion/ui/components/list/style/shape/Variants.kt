@@ -15,5 +15,5 @@ fun ListShape.Companion.default(): ListShape =
 fun ListShape.Companion.flowRow(): ListShape =
     ListShape(
         paddings = PaddingValues(Space.zero),
-        spacing = Space.g12
+        spacing = Space.sm
     )

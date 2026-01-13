@@ -21,7 +21,7 @@ class DividerStory : ComponentExample {
 
     @Composable
     override fun Content() {
-        Column(modifier = Modifier.padding(Space.g12)) {
+        Column(modifier = Modifier.padding(Space.sm)) {
             ComponentVariants(
                 name = "Horizontal Divider",
                 appearances = listOf(
@@ -37,7 +37,7 @@ class DividerStory : ComponentExample {
                 )
             }
 
-            VerticalSpacer(Space.g24)
+            VerticalSpacer(Space.xl3)
 
             ComponentVariants(
                 name = "Vertical Divider",
@@ -49,7 +49,7 @@ class DividerStory : ComponentExample {
                 )
             ) { appearance: DividerAppearance, shape: DividerShape ->
                 VerticalDivider(
-                    modifier = Modifier.height(Space.g24),
+                    modifier = Modifier.height(Space.xl3),
                     appearance = appearance,
                     shape = shape
                 )

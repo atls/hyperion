@@ -8,7 +8,7 @@ data class CheckboxShape(
     val size: Dp,
     val cornerRadius: Dp,
     val borderStroke: Dp,
-    val padding: PaddingValues = PaddingValues(Space.g2)
+    val padding: PaddingValues = PaddingValues(Space.xs5)
 ) {
     companion object
 }
