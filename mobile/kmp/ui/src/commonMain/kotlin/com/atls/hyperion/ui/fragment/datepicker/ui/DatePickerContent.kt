@@ -80,7 +80,7 @@ fun DatePickerContent(
         HorizontalCalendar(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(shape.calendarPadding),
+                .padding(shape.calendarShape.padding),
 
             state = state,
             dayContent = { day ->

@@ -5,9 +5,9 @@ import androidx.compose.ui.Modifier
 import com.atls.hyperion.ui.components.modal.popup.Popup
 import com.atls.hyperion.ui.fragment.datepicker.model.DateSelection
 import com.atls.hyperion.ui.fragment.datepicker.style.appearance.DatePickerAppearance
-import com.atls.hyperion.ui.fragment.datepicker.style.appearance.default
+import com.atls.hyperion.ui.fragment.datepicker.style.appearance.variants.default
 import com.atls.hyperion.ui.fragment.datepicker.style.shape.DatePickerShape
-import com.atls.hyperion.ui.fragment.datepicker.style.shape.default
+import com.atls.hyperion.ui.fragment.datepicker.style.shape.variants.default
 import com.atls.hyperion.ui.fragment.datepicker.ui.DatePickerContent
 
 @Composable
