@@ -3,8 +3,8 @@ package com.atls.hyperion.ui.components.bottomBar.styles.shape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
+import com.atls.hyperion.ui.components.bottomBar.styles.BottomBarSize
 import com.atls.hyperion.ui.primitives.icon.IconSize
-import com.atls.hyperion.ui.theme.tokens.components.BottomBarSize
 import com.atls.hyperion.ui.theme.tokens.layout.BorderStroke
 import com.atls.hyperion.ui.theme.tokens.layout.CornerRadius
 import com.atls.hyperion.ui.theme.tokens.layout.Elevation

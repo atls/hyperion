@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.theme.tokens.components
+package com.atls.hyperion.ui.components.pagination.style
 
 import androidx.compose.ui.unit.dp
 

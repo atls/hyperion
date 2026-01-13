@@ -2,7 +2,7 @@ package com.atls.hyperion.ui.components.pagination.style.shape
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.DpSize
-import com.atls.hyperion.ui.theme.tokens.components.PaginationItemSize
+import com.atls.hyperion.ui.components.pagination.style.PaginationItemSize
 import com.atls.hyperion.ui.theme.tokens.layout.CornerRadius
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 
