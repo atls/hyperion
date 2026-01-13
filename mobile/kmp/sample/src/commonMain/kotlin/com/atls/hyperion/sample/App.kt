@@ -17,6 +17,7 @@ import com.atls.hyperion.ui.components.pagination.stories.PaginationStory
 import com.atls.hyperion.ui.components.placeholder.stories.PlaceholderStory
 import com.atls.hyperion.ui.components.progress.stories.ProgressStory
 import com.atls.hyperion.ui.components.switch.stories.SwitchStory
+import com.atls.hyperion.ui.components.topBar.stories.TopBarStory
 import com.atls.hyperion.ui.fragments.datepicker.stories.DatePickerStory
 import com.atls.hyperion.ui.fragments.datepicker.stories.DateRangePickerStory
 import com.atls.hyperion.ui.primitives.stories.LinkStory
@@ -44,6 +45,7 @@ fun App() {
                 ProgressStory(),
                 SwitchStory(),
                 TextStory(),
+                TopBarStory(),
                 LinkStory()
             )
         )
