@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.theme.tokens.colors
+package com.atls.hyperion.ui.theme.tokens.effects
 
 object Alpha {
     val huge = 0.9f
