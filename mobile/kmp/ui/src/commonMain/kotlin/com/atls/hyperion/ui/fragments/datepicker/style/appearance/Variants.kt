@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.fragment.datepicker.style.appearance
+package com.atls.hyperion.ui.fragments.datepicker.style.appearance
 
 import androidx.compose.runtime.Composable
 import com.atls.hyperion.ui.components.divider.style.appearance.DividerAppearance

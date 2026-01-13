@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.fragment.datepicker.ui
+package com.atls.hyperion.ui.fragments.datepicker.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -7,13 +7,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
-import com.atls.hyperion.ui.fragment.datepicker.config.DAYS_IN_WEEK
-import com.atls.hyperion.ui.fragment.datepicker.config.WEEK_RANGE
-import com.atls.hyperion.ui.fragment.datepicker.lib.next
-import com.atls.hyperion.ui.fragment.datepicker.lib.previous
-import com.atls.hyperion.ui.fragment.datepicker.model.DateSelection
-import com.atls.hyperion.ui.fragment.datepicker.style.appearance.DatePickerAppearance
-import com.atls.hyperion.ui.fragment.datepicker.style.shape.DatePickerShape
+import com.atls.hyperion.ui.fragments.datepicker.config.DAYS_IN_WEEK
+import com.atls.hyperion.ui.fragments.datepicker.config.WEEK_RANGE
+import com.atls.hyperion.ui.fragments.datepicker.lib.next
+import com.atls.hyperion.ui.fragments.datepicker.lib.previous
+import com.atls.hyperion.ui.fragments.datepicker.model.DateSelection
+import com.atls.hyperion.ui.fragments.datepicker.style.appearance.DatePickerAppearance
+import com.atls.hyperion.ui.fragments.datepicker.style.shape.DatePickerShape
 import com.atls.hyperion.ui.primitives.layout.column.Column
 import com.kizitonwose.calendar.compose.HorizontalCalendar
 import com.kizitonwose.calendar.compose.rememberCalendarState

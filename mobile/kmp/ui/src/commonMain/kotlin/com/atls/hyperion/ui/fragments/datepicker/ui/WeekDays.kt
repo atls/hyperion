@@ -1,13 +1,13 @@
-package com.atls.hyperion.ui.fragment.datepicker.ui
+package com.atls.hyperion.ui.fragments.datepicker.ui
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import com.atls.hyperion.ui.fragment.datepicker.config.DAYS_IN_WEEK
-import com.atls.hyperion.ui.fragment.datepicker.style.appearance.DatePickerAppearance
-import com.atls.hyperion.ui.fragment.datepicker.style.shape.DatePickerShape
+import com.atls.hyperion.ui.fragments.datepicker.config.DAYS_IN_WEEK
+import com.atls.hyperion.ui.fragments.datepicker.style.appearance.DatePickerAppearance
+import com.atls.hyperion.ui.fragments.datepicker.style.shape.DatePickerShape
 import com.atls.hyperion.ui.primitives.Text
 import com.atls.hyperion.ui.theme.tokens.layout.Weight
 import kotlinx.datetime.DayOfWeek

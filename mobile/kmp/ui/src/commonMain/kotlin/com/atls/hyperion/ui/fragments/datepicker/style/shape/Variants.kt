@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.fragment.datepicker.style.shape
+package com.atls.hyperion.ui.fragments.datepicker.style.shape
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -8,7 +8,7 @@ import com.atls.hyperion.ui.components.divider.style.shape.DividerShape
 import com.atls.hyperion.ui.components.divider.style.shape.default
 import com.atls.hyperion.ui.components.modal.style.shape.ModalShape
 import com.atls.hyperion.ui.components.modal.style.shape.popup
-import com.atls.hyperion.ui.fragment.datepicker.model.DividerPosition
+import com.atls.hyperion.ui.fragments.datepicker.model.DividerPosition
 import com.atls.hyperion.ui.theme.tokens.components.IconSize
 import com.atls.hyperion.ui.theme.tokens.layout.CornerRadius
 import com.atls.hyperion.ui.theme.tokens.layout.Space

@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.fragment.datepicker.model
+package com.atls.hyperion.ui.fragments.datepicker.model
 
 import kotlinx.datetime.LocalDate
 

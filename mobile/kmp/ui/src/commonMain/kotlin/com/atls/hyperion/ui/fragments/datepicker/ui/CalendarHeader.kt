@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.fragment.datepicker.ui
+package com.atls.hyperion.ui.fragments.datepicker.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -10,9 +10,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import com.atls.hyperion.ui.components.divider.horizontal.HorizontalDivider
-import com.atls.hyperion.ui.fragment.datepicker.model.DividerPosition
-import com.atls.hyperion.ui.fragment.datepicker.style.appearance.DatePickerAppearance
-import com.atls.hyperion.ui.fragment.datepicker.style.shape.DatePickerShape
+import com.atls.hyperion.ui.fragments.datepicker.model.DividerPosition
+import com.atls.hyperion.ui.fragments.datepicker.style.appearance.DatePickerAppearance
+import com.atls.hyperion.ui.fragments.datepicker.style.shape.DatePickerShape
 import com.atls.hyperion.ui.generated.resources.Res
 import com.atls.hyperion.ui.generated.resources.chevron_left
 import com.atls.hyperion.ui.generated.resources.chevron_right

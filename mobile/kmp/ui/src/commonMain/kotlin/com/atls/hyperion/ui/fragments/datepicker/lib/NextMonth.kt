@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.fragment.datepicker.lib
+package com.atls.hyperion.ui.fragments.datepicker.lib
 
 import kotlinx.datetime.Month
 import kotlinx.datetime.YearMonth

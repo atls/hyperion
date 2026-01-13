@@ -1,6 +1,6 @@
-package com.atls.hyperion.ui.fragment.datepicker.lib
+package com.atls.hyperion.ui.fragments.datepicker.lib
 
-import com.atls.hyperion.ui.fragment.datepicker.model.DateSelection
+import com.atls.hyperion.ui.fragments.datepicker.model.DateSelection
 import kotlinx.datetime.LocalDate
 
 fun DateSelection.Range.next(clicked: LocalDate): DateSelection.Range =

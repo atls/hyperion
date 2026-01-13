@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.fragment.datepicker.stories
+package com.atls.hyperion.ui.fragments.datepicker.stories
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -11,8 +11,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.atls.hyperion.storybook.shared.model.ComponentExample
-import com.atls.hyperion.ui.fragment.datepicker.DatePicker
-import com.atls.hyperion.ui.fragment.datepicker.model.DateSelection
+import com.atls.hyperion.ui.fragments.datepicker.DatePicker
+import com.atls.hyperion.ui.fragments.datepicker.model.DateSelection
 
 class DatePickerStory(
     override val name: String = "Date picker"
