@@ -1,6 +1,6 @@
 package com.atls.hyperion.ui.components.switch.styles.shape
 
-import com.atls.hyperion.ui.theme.tokens.components.SwitchSize
+import com.atls.hyperion.ui.components.switch.styles.SwitchSize
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 
 fun SwitchShape.Companion.medium(): SwitchShape =

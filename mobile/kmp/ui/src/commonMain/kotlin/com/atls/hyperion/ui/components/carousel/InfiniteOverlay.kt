@@ -26,7 +26,7 @@ import com.atls.hyperion.ui.components.carousel.ui.calculateDistance
 import com.atls.hyperion.ui.components.carousel.ui.centerOfItem
 import com.atls.hyperion.ui.components.carousel.ui.centerOfViewport
 import com.atls.hyperion.ui.components.carousel.ui.normalizedStartIndex
-import com.atls.hyperion.ui.theme.tokens.colors.Alpha
+import com.atls.hyperion.ui.theme.tokens.effects.Alpha
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 import kotlin.math.abs
 

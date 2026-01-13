@@ -16,9 +16,9 @@ import com.atls.hyperion.ui.fragments.datepicker.style.shape.DatePickerShape
 import com.atls.hyperion.ui.generated.resources.Res
 import com.atls.hyperion.ui.generated.resources.chevron_left
 import com.atls.hyperion.ui.generated.resources.chevron_right
-import com.atls.hyperion.ui.primitives.Icon
 import com.atls.hyperion.ui.primitives.Text
 import com.atls.hyperion.ui.primitives.VerticalSpacer
+import com.atls.hyperion.ui.primitives.icon.Icon
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
@@ -33,47 +33,47 @@ fun CalendarHeader(
     onPrevMonth: () -> Unit,
     onNextMonth: () -> Unit,
 ) {
-    if (shape.divider == DividerPosition.TOP) {
+    if (shape.calendarShape.divider == DividerPosition.TOP) {
         HorizontalDivider(
             appearance = appearance.dividerAppearance,
-            shape = shape.dividerShape
+            shape = shape.calendarShape.dividerShape
         )
-        VerticalSpacer(shape.headerSpacing)
+        VerticalSpacer(shape.headerShape.spacing)
     }
 
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = shape.headerHorizontalPadding),
+            .padding(horizontal = shape.headerShape.horizontalPadding),
         horizontalArrangement = arrangement,
         verticalAlignment = alignment
     ) {
         Icon(
             icon = beforeIcon,
-            size = shape.headerIconSize,
+            size = shape.headerShape.iconSize,
             modifier = Modifier.clickable { onPrevMonth() },
-            color = appearance.arrowColor
+            color = appearance.headerAppearance.arrowColor
         )
 
         Text(
             text = monthName,
-            typography = shape.headerTypography,
-            color = appearance.headerTextColor
+            typography = shape.headerShape.typography,
+            color = appearance.headerAppearance.textColor
         )
 
         Icon(
             icon = afterIcon,
-            size = shape.headerIconSize,
+            size = shape.headerShape.iconSize,
             modifier = Modifier.clickable { onNextMonth() },
-            color = appearance.arrowColor
+            color = appearance.headerAppearance.arrowColor
         )
     }
 
-    if (shape.divider == DividerPosition.BOTTOM) {
-        VerticalSpacer(shape.headerSpacing)
+    if (shape.calendarShape.divider == DividerPosition.BOTTOM) {
+        VerticalSpacer(shape.headerShape.spacing)
         HorizontalDivider(
             appearance = appearance.dividerAppearance,
-            shape = shape.dividerShape
+            shape = shape.calendarShape.dividerShape
         )
     }
 }

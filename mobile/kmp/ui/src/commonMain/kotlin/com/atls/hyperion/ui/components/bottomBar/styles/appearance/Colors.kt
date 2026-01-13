@@ -1,7 +1,7 @@
 package com.atls.hyperion.ui.components.bottomBar.styles.appearance
 
 import androidx.compose.ui.graphics.Color
-import com.atls.hyperion.ui.theme.tokens.colors.Alpha
+import com.atls.hyperion.ui.theme.tokens.effects.Alpha
 
 sealed class Colors {
     abstract val backgroundColor: Color

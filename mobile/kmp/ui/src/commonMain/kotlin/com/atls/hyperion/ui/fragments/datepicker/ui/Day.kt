@@ -38,47 +38,47 @@ fun Day(
     val date = LocalDate(day.date.year, day.date.monthNumber, day.date.dayOfMonth)
 
     val backgroundColor = when {
-        isSelected || isRangeStart || isRangeEnd -> appearance.cellActiveBackgroundColor
-        isInRange -> appearance.cellInRangeBackgroundColor
-        else -> appearance.cellBackgroundColor
+        isSelected || isRangeStart || isRangeEnd -> appearance.cellAppearance.activeBackgroundColor
+        isInRange -> appearance.cellAppearance.inRangeBackgroundColor
+        else -> appearance.cellAppearance.backgroundColor
     }
 
     val cellShape = when {
-        isSelected -> shape.cellActiveShape
-        isInRange -> shape.cellRangeShape
-        else -> shape.cellShape
+        isSelected -> shape.cellShape.activeShape
+        isInRange -> shape.cellShape.rangeShape
+        else -> shape.cellShape.shape
     }
 
     val textColor = when {
-        isSelected || isRangeStart || isRangeEnd -> appearance.cellActiveTextColor
-        isInRange -> appearance.cellInRangeTextColor
-        else -> appearance.cellTextColor
+        isSelected || isRangeStart || isRangeEnd -> appearance.cellAppearance.activeTextColor
+        isInRange -> appearance.cellAppearance.inRangeTextColor
+        else -> appearance.cellAppearance.textColor
     }
 
 
     val containerModifier = Modifier
         .aspectSquare()
-        .padding(shape.cellSpacing)
+        .padding(shape.cellShape.spacing)
         .clip(cellShape)
         .background(backgroundColor)
-        .padding(shape.cellPadding)
+        .padding(shape.cellShape.padding)
         .then(
-            if ((isSelected || isRangeStart || isRangeEnd) && appearance.cellActiveBorderColor != Colors.Palette.transparent)
+            if ((isSelected || isRangeStart || isRangeEnd) && appearance.cellAppearance.activeBorderColor != Colors.Palette.transparent)
                 Modifier.border(
-                    shape.cellBorderWidth,
-                    appearance.cellActiveBorderColor,
+                    shape.cellShape.borderWidth,
+                    appearance.cellAppearance.activeBorderColor,
                     cellShape
                 )
-            else if (isInRange && appearance.cellInRangeBorderColor != Colors.Palette.transparent)
+            else if (isInRange && appearance.cellAppearance.inRangeBorderColor != Colors.Palette.transparent)
                 Modifier.border(
-                    shape.cellBorderWidth,
-                    appearance.cellInRangeBorderColor,
+                    shape.cellShape.borderWidth,
+                    appearance.cellAppearance.inRangeBorderColor,
                     cellShape
                 )
-            else if (appearance.cellBorderColor != Colors.Palette.transparent)
+            else if (appearance.cellAppearance.borderColor != Colors.Palette.transparent)
                 Modifier.border(
-                    shape.cellBorderWidth,
-                    appearance.cellBorderColor,
+                    shape.cellShape.borderWidth,
+                    appearance.cellAppearance.borderColor,
                     cellShape
                 )
             else Modifier
@@ -93,7 +93,7 @@ fun Day(
         Text(
             text = day.date.dayOfMonth.toString(),
             color = textColor,
-            typography = shape.cellTypography
+            typography = shape.cellShape.typography
         )
     }
 }

@@ -1,6 +1,6 @@
 package com.atls.hyperion.ui.components.bottomBar.styles.appearance
 
-import com.atls.hyperion.ui.theme.tokens.colors.Alpha
+import com.atls.hyperion.ui.theme.tokens.effects.Alpha
 import com.atls.hyperion.ui.theme.tokens.colors.Colors as ThemeColors
 
 fun BottomBarAppearance.Companion.primary(): BottomBarAppearance =

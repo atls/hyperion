@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.primitives
+package com.atls.hyperion.ui.primitives.image
 
 import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable

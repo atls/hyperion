@@ -17,7 +17,7 @@ import com.atls.hyperion.ui.components.placeholder.styles.appearance.Placeholder
 import com.atls.hyperion.ui.components.placeholder.styles.shape.PlaceholderShape
 import com.atls.hyperion.ui.generated.resources.Res
 import com.atls.hyperion.ui.generated.resources.placeholder
-import com.atls.hyperion.ui.primitives.Icon
+import com.atls.hyperion.ui.primitives.icon.Icon
 import org.jetbrains.compose.resources.painterResource
 
 @Composable

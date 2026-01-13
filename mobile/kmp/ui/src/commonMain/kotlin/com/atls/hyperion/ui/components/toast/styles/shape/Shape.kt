@@ -3,7 +3,7 @@ package com.atls.hyperion.ui.components.toast.styles.shape
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
-import com.atls.hyperion.ui.theme.tokens.Elevation
+import com.atls.hyperion.ui.theme.tokens.layout.Elevation
 
 data class ToastShape(
     val cornerRadius: Dp,

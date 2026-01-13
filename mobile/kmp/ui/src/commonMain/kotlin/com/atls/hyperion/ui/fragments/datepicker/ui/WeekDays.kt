@@ -31,8 +31,8 @@ fun WeekDays(
                 modifier = Modifier.weight(Weight.full),
                 textAlign = TextAlign.Center,
                 text = shortName,
-                typography = shape.dayHeaderTypography,
-                color = appearance.weekDaysTextColor,
+                typography = shape.cellShape.headerTypography,
+                color = appearance.weekDaysAppearance.textColor,
             )
         }
     }
