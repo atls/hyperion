@@ -1,13 +1,17 @@
 [versions]
+calendar = "2.9.0"
 kotlin = "2.2.0"
 ktor = "3.3.1"
 compose = "1.10.0-rc02"
 composeShadow = "2.0.4"
 coilCompose = "3.3.0"
+kotlinxDatetime = "0.6.1"
 agp = "8.9.0"
 androidx-activityCompose = "1.9.3"
 
 [libraries]
+compose-calendar = { module = "com.kizitonwose.calendar:compose-multiplatform", version.ref = "calendar" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 compose-shadow = { module = "com.adamglin:compose-shadow", version.ref = "composeShadow" }
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilCompose" }
