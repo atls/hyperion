@@ -23,7 +23,7 @@ import com.atls.hyperion.ui.components.button.styles.appearance.Colors
 import com.atls.hyperion.ui.components.button.styles.shape.ButtonShape
 import com.atls.hyperion.ui.shared.addon.AddonPosition
 import com.atls.hyperion.ui.shared.addon.AddonSlotManager
-import com.atls.hyperion.ui.theme.tokens.Elevation
+import com.atls.hyperion.ui.theme.tokens.layout.Elevation
 import com.atls.hyperion.ui.theme.tokens.colors.Colors as ThemeColors
 
 @OptIn(ExperimentalMaterialApi::class)

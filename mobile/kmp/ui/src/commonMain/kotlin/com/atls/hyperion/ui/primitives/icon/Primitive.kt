@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.primitives
+package com.atls.hyperion.ui.primitives.icon
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Icon

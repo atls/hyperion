@@ -16,7 +16,7 @@ import com.atls.hyperion.ui.components.checkbox.locals.LocalState
 import com.atls.hyperion.ui.components.checkbox.state.State
 import com.atls.hyperion.ui.components.checkbox.styles.appearance.CheckboxAppearance
 import com.atls.hyperion.ui.components.checkbox.styles.shape.CheckboxShape
-import com.atls.hyperion.ui.primitives.Icon
+import com.atls.hyperion.ui.primitives.icon.Icon
 import com.atls.hyperion.ui.theme.tokens.layout.Weight
 
 @Composable

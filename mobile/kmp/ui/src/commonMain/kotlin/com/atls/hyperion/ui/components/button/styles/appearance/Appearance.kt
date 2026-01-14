@@ -2,7 +2,7 @@ package com.atls.hyperion.ui.components.button.styles.appearance
 
 import androidx.compose.ui.unit.Dp
 import com.atls.hyperion.ui.components.button.state.ButtonState
-import com.atls.hyperion.ui.theme.tokens.Elevation
+import com.atls.hyperion.ui.theme.tokens.layout.Elevation
 
 data class ButtonAppearance(
     val default: Colors,
