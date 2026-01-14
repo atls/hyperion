@@ -1,22 +1,41 @@
 package com.atls.hyperion.sample
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import com.atls.hyperion.storybook.fragments.storybook.Storybook
+import com.atls.hyperion.ui.components.avatar.stories.AvatarStory
+import com.atls.hyperion.ui.components.button.stories.ButtonStory
+import com.atls.hyperion.ui.components.card.stories.CardStory
+import com.atls.hyperion.ui.components.checkbox.stories.CheckboxStory
+import com.atls.hyperion.ui.components.divider.stories.DividerStory
+import com.atls.hyperion.ui.components.input.stories.InputStory
+import com.atls.hyperion.ui.components.modal.bottom.stories.BottomDialogStory
+import com.atls.hyperion.ui.components.modal.popup.stories.PopupStory
+import com.atls.hyperion.ui.components.switch.stories.SwitchStory
+import com.atls.hyperion.ui.fragment.datepicker.stories.DatePickerStory
+import com.atls.hyperion.ui.fragment.datepicker.stories.DateRangePickerStory
+import com.atls.hyperion.ui.primitives.stories.LinkStory
+import com.atls.hyperion.ui.primitives.stories.TextStory
 
 @Composable
 fun App() {
     MaterialTheme {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(16.dp)
-        ) {
-            //TODO use for demonstration and tests
-        }
+        Storybook(
+            components = listOf(
+                AvatarStory(),
+                BottomDialogStory(),
+                ButtonStory(),
+                CheckboxStory(),
+                DatePickerStory(),
+                DateRangePickerStory(),
+                DividerStory(),
+                InputStory(),
+                PopupStory(),
+                SwitchStory(),
+                CardStory(),
+                TextStory(),
+                LinkStory()
+            )
+        )
     }
 }
