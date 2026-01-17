@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.components.carousel.ui
+package com.atls.hyperion.ui.components.carousel.lib
 
 import kotlin.math.abs
 

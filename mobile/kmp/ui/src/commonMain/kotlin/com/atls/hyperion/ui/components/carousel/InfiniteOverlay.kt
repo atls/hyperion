@@ -22,10 +22,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.zIndex
-import com.atls.hyperion.ui.components.carousel.ui.calculateDistance
-import com.atls.hyperion.ui.components.carousel.ui.centerOfItem
-import com.atls.hyperion.ui.components.carousel.ui.centerOfViewport
-import com.atls.hyperion.ui.components.carousel.ui.normalizedStartIndex
+import com.atls.hyperion.ui.components.carousel.lib.calculateDistance
+import com.atls.hyperion.ui.components.carousel.lib.centerOfItem
+import com.atls.hyperion.ui.components.carousel.lib.centerOfViewport
+import com.atls.hyperion.ui.components.carousel.lib.normalizedStartIndex
 import com.atls.hyperion.ui.theme.tokens.effects.Alpha
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 import kotlin.math.abs
