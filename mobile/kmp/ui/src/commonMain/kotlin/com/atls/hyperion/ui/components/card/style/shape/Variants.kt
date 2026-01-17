@@ -10,6 +10,6 @@ import com.atls.hyperion.ui.theme.tokens.layout.Space
 fun CardShape.Companion.medium(): CardShape =
     CardShape(
         cornerRadius = CornerRadius.xl,
-        padding = PaddingValues(Space.g16),
+        padding = PaddingValues(Space.lg),
         borderWidth = BorderStroke.none
     )

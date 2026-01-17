@@ -19,7 +19,7 @@ class LinkStory : ComponentExample {
     @Composable
     override fun Content() {
         Column(
-            modifier = Modifier.padding(Space.g16)
+            modifier = Modifier.padding(Space.lg)
         ) {
             Link(
                 textDecoration = "Standard Blue Link",
@@ -30,7 +30,7 @@ class LinkStory : ComponentExample {
                     lineHeight = LineHeights.md
                 )
             )
-            VerticalSpacer(Space.g12)
+            VerticalSpacer(Space.sm)
             Link(
                 textDecoration = "Soft Blue Link",
                 url = "https://google.com",
@@ -40,7 +40,7 @@ class LinkStory : ComponentExample {
                     lineHeight = LineHeights.md
                 )
             )
-            VerticalSpacer(Space.g12)
+            VerticalSpacer(Space.sm)
             Link(
                 textDecoration = "Small Gray Link",
                 url = "https://google.com",

@@ -19,7 +19,7 @@ class TextStory : ComponentExample {
     @Composable
     override fun Content() {
         Column(
-            modifier = Modifier.padding(Space.g16)
+            modifier = Modifier.padding(Space.lg)
         ) {
             Text(
                 text = "Heading XL",
@@ -29,7 +29,7 @@ class TextStory : ComponentExample {
                     lineHeight = LineHeights.xl4
                 )
             )
-            VerticalSpacer(Space.g12)
+            VerticalSpacer(Space.sm)
             Text(
                 text = "Body Medium",
                 color = Colors.Text.almostBlack,
@@ -38,7 +38,7 @@ class TextStory : ComponentExample {
                     lineHeight = LineHeights.md
                 )
             )
-            VerticalSpacer(Space.g12)
+            VerticalSpacer(Space.sm)
             Text(
                 text = "Small Caption",
                 color = Colors.Text.gray,
@@ -47,7 +47,7 @@ class TextStory : ComponentExample {
                     lineHeight = LineHeights.xs
                 )
             )
-            VerticalSpacer(Space.g12)
+            VerticalSpacer(Space.sm)
             Text(
                 text = "Error Text",
                 color = Colors.Text.red,

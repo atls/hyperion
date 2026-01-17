@@ -8,5 +8,5 @@ fun SwitchShape.Companion.medium(): SwitchShape =
         trackWidth = SwitchSize.defaultWidth,
         trackHeight = SwitchSize.defaultHeight,
         thumbSize = SwitchSize.defaultTrackSize,
-        thumbPadding = Space.g2
+        thumbPadding = Space.xs5
     )
