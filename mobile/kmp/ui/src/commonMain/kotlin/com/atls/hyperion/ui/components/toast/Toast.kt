@@ -34,6 +34,11 @@ fun Toast(
             hostState = hostState
         ) { data ->
             Snackbar(
+                modifier = Modifier
+                    .border(
+                        BorderStroke(shape.borderStroke, appearance.borderColor),
+                        RoundedCornerShape(shape.cornerRadius)
+                    ),
                 shape = RoundedCornerShape(shape.cornerRadius),
                 containerColor = appearance.backgroundColor,
                 contentColor = appearance.textColor,
@@ -45,10 +50,7 @@ fun Toast(
                     textAlign = TextAlign.Center,
                     modifier = Modifier
                         .background(appearance.backgroundColor)
-                        .border(
-                            BorderStroke(shape.borderStroke, appearance.borderColor),
-                            RoundedCornerShape(shape.cornerRadius)
-                        )
+
                         .padding(shape.paddings)
                 )
             }
