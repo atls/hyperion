@@ -12,11 +12,11 @@ import androidx.compose.ui.draw.clip
 import com.atls.hyperion.ui.components.progress.config.MAX_PERCENT
 import com.atls.hyperion.ui.components.progress.config.MAX_WEIGHT
 import com.atls.hyperion.ui.components.progress.config.MIN_WEIGHT
+import com.atls.hyperion.ui.components.progress.lib.getBrush
+import com.atls.hyperion.ui.components.progress.lib.getSolidColor
 import com.atls.hyperion.ui.components.progress.styles.appearance.ProgressAppearance
 import com.atls.hyperion.ui.components.progress.styles.shape.ProgressShape
 import com.atls.hyperion.ui.components.progress.styles.shape.default
-import com.atls.hyperion.ui.components.progress.ui.getBrush
-import com.atls.hyperion.ui.components.progress.ui.getSolidColor
 
 @Composable
 fun LineProgress(

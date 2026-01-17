@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.components.progress.ui
+package com.atls.hyperion.ui.components.progress.lib
 
 import androidx.compose.ui.graphics.Color
 import com.atls.hyperion.ui.components.progress.styles.appearance.Colors
