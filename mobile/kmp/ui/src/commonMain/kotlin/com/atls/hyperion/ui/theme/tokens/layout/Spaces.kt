@@ -4,7 +4,6 @@ import androidx.compose.ui.unit.dp
 
 object Space {
     val zero = 0.dp
-    val g1 = 1.dp
     val xs5 = 2.dp
     val xs4 = 4.dp
     val xs3 = 6.dp
