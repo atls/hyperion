@@ -18,3 +18,4 @@ jobs:
           appSecret: ${{ secrets.ATLANTIS_SUPER_BOT_PRIVATE_KEY }}
           workingDirectory: mobile/kmp
           gradleArguments: :ui:publishToGitHubPackages
+
