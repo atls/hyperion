@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    `maven-publish`
 }
 
 group = "com.atls.hyperion"
@@ -83,3 +84,5 @@ android {
         targetCompatibility = JavaVersion.toVersion(javaTargetValue)
     }
 }
+
+apply(from = "publishing.gradle.kts")
