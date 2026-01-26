@@ -5,18 +5,26 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    `maven-publish`
+     base
 }
 
 group = "com.atls.hyperion"
 version = "0.1.0"
+description = "KMP Storybook"
+
+base {
+    archivesName.set("storybook")
+}
 
 kotlin {
     androidTarget {
+        publishLibraryVariants("release")
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_21)
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -27,7 +35,7 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     sourceSets {
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -62,4 +70,12 @@ android {
         sourceCompatibility = JavaVersion.toVersion(javaTargetValue)
         targetCompatibility = JavaVersion.toVersion(javaTargetValue)
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
 }
+
+apply(from = "../ui/publishing.gradle.kts")
