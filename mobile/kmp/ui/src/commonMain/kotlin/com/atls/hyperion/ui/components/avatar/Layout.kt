@@ -34,4 +34,3 @@ fun AvatarLayout(
         content()
     }
 }
-
