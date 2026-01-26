@@ -10,7 +10,7 @@ on:
 jobs:
   publish:
     if: github.event.pull_request.merged == true
-    runs-on: ubuntu-latest
+    runs-on: macos-15
     steps:
       - uses: atls/shared/.github/actions/publish/kmp@feat/kmp-lib-publish
         with:

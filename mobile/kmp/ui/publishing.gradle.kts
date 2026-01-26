@@ -5,7 +5,7 @@ import java.net.URI
 configure<PublishingExtension> {
     publications {
         named<MavenPublication>("kotlinMultiplatform") {
-            groupId = "atls"
+            groupId = project.group.toString()
             artifactId = "hyperion"
             version = project.version.toString()
 
