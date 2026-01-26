@@ -19,4 +19,6 @@ jobs:
           workingDirectory: mobile/kmp
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           ref: ${{ github.sha }}
-          gradleArguments: :ui:publishKotlinMultiplatformPublicationToGitHubPackagesRepository
+          gradleArguments: >
+            :storybook:publishKotlinMultiplatformPublicationToGitHubPackagesRepository
+            :ui:publishKotlinMultiplatformPublicationToGitHubPackagesRepository
