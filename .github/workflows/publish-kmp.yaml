@@ -3,7 +3,7 @@ name: Publish KMP Library
 on:
   pull_request:
     types: [closed]
-    branches: [master]
+    branches: [feat/test-kmp-publish]
     paths:
       - 'mobile/kmp/**'
 
@@ -12,7 +12,7 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-      - uses: atls/shared/.github/actions/publish/kmp@master
+      - uses: atls/shared/.github/actions/publish/kmp@feat/kmp-lib-publish
         with:
           appId: ${{ vars.ATLANTIS_SUPER_BOT_APP_ID }}
           appSecret: ${{ secrets.ATLANTIS_SUPER_BOT_PRIVATE_KEY }}
