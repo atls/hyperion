@@ -17,4 +17,4 @@ jobs:
           appId: ${{ vars.ATLANTIS_SUPER_BOT_APP_ID }}
           appSecret: ${{ secrets.ATLANTIS_SUPER_BOT_PRIVATE_KEY }}
           workingDirectory: mobile/kmp
-          gradleArguments: :ui:publishToGitHubPackages
+          gradleArguments: :ui:publishKotlinMultiplatformPublicationToGitHubPackagesRepository
