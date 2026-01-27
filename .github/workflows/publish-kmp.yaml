@@ -20,5 +20,5 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           ref: ${{ github.sha }}
           gradleArguments: >
-            :storybook:publishKotlinMultiplatformPublicationToGitHubPackagesRepository
-            :ui:publishKotlinMultiplatformPublicationToGitHubPackagesRepository
+            :storybook:publishAllPublicationsToGitHubPackagesRepository
+            :ui:publishAllPublicationsToGitHubPackagesRepository
