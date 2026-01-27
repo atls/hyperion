@@ -14,11 +14,8 @@ jobs:
     steps:
       - uses: atls/shared/.github/actions/publish/kmp@master
         with:
-          appId: ${{ vars.ATLANTIS_SUPER_BOT_APP_ID }}
-          appSecret: ${{ secrets.ATLANTIS_SUPER_BOT_PRIVATE_KEY }}
           workingDirectory: mobile/kmp
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          ref: ${{ github.sha }}
           gradleArguments: >
             :storybook:publishAllPublicationsToGitHubPackagesRepository
             :ui:publishAllPublicationsToGitHubPackagesRepository
