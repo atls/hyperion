@@ -21,5 +21,4 @@ jobs:
           workingDirectory: mobile/kmp
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           gradleArguments: >
-            :storybook:publishAllPublicationsToGitHubPackagesRepository
             :ui:publishAllPublicationsToGitHubPackagesRepository
