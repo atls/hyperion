@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "com.atls.hyperion"
-version = "0.4.1"
+version = "0.5.0"
 description = "Highly ordered User Interface Kit"
 
 base {
