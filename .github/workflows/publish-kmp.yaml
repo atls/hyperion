@@ -1,0 +1,25 @@
+name: Publish KMP Library
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [master]
+    paths:
+      - 'mobile/kmp/**'
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    if: github.event.pull_request.merged == true
+    runs-on: macos-15
+    steps:
+      - uses: atls/shared/.github/actions/publish/kmp@master
+        with:
+          workingDirectory: mobile/kmp
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          gradleArguments: >
+            :storybook:publishAllPublicationsToGitHubPackagesRepository
+            :ui:publishAllPublicationsToGitHubPackagesRepository

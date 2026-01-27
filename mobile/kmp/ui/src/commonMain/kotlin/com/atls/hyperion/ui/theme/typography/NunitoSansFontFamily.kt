@@ -7,8 +7,8 @@ import com.atls.hyperion.ui.generated.resources.NunitoSans_300
 import com.atls.hyperion.ui.generated.resources.NunitoSans_400
 import com.atls.hyperion.ui.generated.resources.NunitoSans_500
 import com.atls.hyperion.ui.generated.resources.NunitoSans_600
-import org.jetbrains.compose.resources.Font
 import com.atls.hyperion.ui.generated.resources.Res
+import org.jetbrains.compose.resources.Font
 
 @Composable
 fun NunitoSansFontFamily() = FontFamily(

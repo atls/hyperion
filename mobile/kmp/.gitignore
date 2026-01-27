@@ -8,3 +8,4 @@ iosApp/Pods
 iosApp/GoogleService-Info.plist
 xcuserdata/
 *.xcuserstate
+**/*.xcodeproj/xcuserdata/

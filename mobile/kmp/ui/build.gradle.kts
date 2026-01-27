@@ -5,13 +5,22 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    `maven-publish`
+    base
 }
 
 group = "com.atls.hyperion"
-version = "0.4.0"
+version = "0.4.1"
+description = "Highly ordered User Interface Kit"
+
+base {
+    archivesName.set("hyperion")
+}
 
 kotlin {
     androidTarget {
+        publishLibraryVariants("release")
+
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_21)
         }
@@ -30,7 +39,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            api(project(":storybook"))
+            implementation(project(":storybook"))
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
@@ -82,4 +91,11 @@ android {
         sourceCompatibility = JavaVersion.toVersion(javaTargetValue)
         targetCompatibility = JavaVersion.toVersion(javaTargetValue)
     }
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
 }
+
+apply(from = "publishing.gradle.kts")
