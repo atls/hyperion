@@ -12,5 +12,5 @@ fun DragHandleShape.Companion.default(): DragHandleShape =
         height = DragHandleSize.height,
         width = DragHandleSize.width,
         cornerRadius = CornerRadius.xl6,
-        paddings = PaddingValues(top = Space.g8)
+        paddings = PaddingValues(top = Space.xs2)
     )

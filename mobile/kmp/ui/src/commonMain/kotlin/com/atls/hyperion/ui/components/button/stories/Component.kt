@@ -42,13 +42,13 @@ class ButtonStory : ComponentExample {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = Space.g12)
+                    .padding(horizontal = Space.sm)
             ) {
                 Text(modifier = Modifier.weight(Weight.full), text = "Enabled")
-                HorizontalSpacer(Space.g12)
+                HorizontalSpacer(Space.sm)
                 Switch(checked = enabled, onCheckedChange = { enabled = it })
             }
-            VerticalSpacer(Space.g12)
+            VerticalSpacer(Space.sm)
 
             ComponentVariants(
                 name = "Button",

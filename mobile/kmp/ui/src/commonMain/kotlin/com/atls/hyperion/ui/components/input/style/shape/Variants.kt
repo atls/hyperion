@@ -14,8 +14,8 @@ fun InputShape.Companion.large(): InputShape =
         cornerRadius = CornerRadius.md,
         borderStroke = BorderStroke.tiny,
         paddings = PaddingValues(
-            vertical = Space.g12,
-            horizontal = Space.g16
+            vertical = Space.sm,
+            horizontal = Space.lg
         ),
         textPaddings = PaddingValues(Space.zero),
         typography = TextStyle(fontSize = FontSize.md)
@@ -27,11 +27,11 @@ fun InputShape.Companion.normal(): InputShape =
         cornerRadius = CornerRadius.xs3,
         borderStroke = BorderStroke.tiny,
         paddings = PaddingValues(
-            vertical = Space.g8,
-            horizontal = Space.g12
+            vertical = Space.xs2,
+            horizontal = Space.sm
         ),
         textPaddings = PaddingValues(
-            vertical = Space.g4,
+            vertical = Space.xs4,
             horizontal = Space.zero
         ),
         typography = TextStyle(fontSize = FontSize.sm)

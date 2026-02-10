@@ -29,7 +29,7 @@ class PopupStory : ComponentExample {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(Space.g12)
+                .padding(Space.sm)
         ) {
             Button(
                 text = "Show Popup",
@@ -45,11 +45,11 @@ class PopupStory : ComponentExample {
                     Column(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(Space.g16)
+                            .padding(Space.lg)
                     ) {
                         Text(text = "This is a Popup Dialog")
                         Button(
-                            modifier = Modifier.padding(top = Space.g12),
+                            modifier = Modifier.padding(top = Space.sm),
                             text = "Close",
                             appearance = ButtonAppearance.blue(),
                             shape = ButtonShape.normal(),

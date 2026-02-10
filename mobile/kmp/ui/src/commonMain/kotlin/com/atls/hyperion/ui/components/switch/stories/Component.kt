@@ -36,17 +36,17 @@ class SwitchStory : ComponentExample {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = Space.g12),
+                    .padding(horizontal = Space.sm),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(modifier = Modifier.weight(Weight.full), text = "Enabled")
-                HorizontalSpacer(Space.g12)
+                HorizontalSpacer(Space.sm)
                 androidx.compose.material.Switch(
                     checked = enabled,
                     onCheckedChange = { enabled = it }
                 )
             }
-            VerticalSpacer(Space.g8)
+            VerticalSpacer(Space.xs2)
             ComponentVariants(
                 name = "Switch",
                 appearances = listOf(
