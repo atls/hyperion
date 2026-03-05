@@ -24,7 +24,7 @@ fun SegmentedLineProgressVariants(percent: Float) {
         ),
         trailColor = ThemeColors.Palette.gray
     )
-    ComponentVariants<ProgressAppearance, ProgressShape>(
+    ComponentVariants(
         name = "Segmented Line Progress",
         appearances = listOf("Multi-color" to {
             ProgressAppearance.primary().copy(colors = multiColors)
