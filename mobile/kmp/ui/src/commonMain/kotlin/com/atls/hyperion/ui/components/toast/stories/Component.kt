@@ -5,61 +5,89 @@ import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
 import com.atls.hyperion.storybook.shared.model.ComponentExample
-import com.atls.hyperion.storybook.shared.ui.ComponentVariants
 import com.atls.hyperion.ui.components.toast.Toast
-import com.atls.hyperion.ui.components.toast.styles.appearance.ToastAppearance
-import com.atls.hyperion.ui.components.toast.styles.appearance.default
-import com.atls.hyperion.ui.components.toast.styles.shape.ToastShape
-import com.atls.hyperion.ui.components.toast.styles.shape.default
-import com.atls.hyperion.ui.components.toast.styles.shape.rounded
-import com.atls.hyperion.ui.components.toast.styles.shape.square
+import com.atls.hyperion.ui.generated.resources.Res
+import com.atls.hyperion.ui.generated.resources.chevron_left
+import com.atls.hyperion.ui.primitives.icon.Icon
+import com.atls.hyperion.ui.primitives.icon.IconSize
+import com.atls.hyperion.ui.theme.tokens.colors.Colors
 import kotlinx.coroutines.launch
+import org.jetbrains.compose.resources.painterResource
 
 class ToastStories : ComponentExample {
     override val name: String = "Toast"
 
     @Composable
     override fun Content() {
-        val snackbarHostState = remember { SnackbarHostState() }
         val scope = rememberCoroutineScope()
 
-        var isVisible by remember { mutableStateOf(false) }
-        var toastText by remember { mutableStateOf("This is a toast message") }
+        val hostEmpty = remember { SnackbarHostState() }
+        val hostLeading = remember { SnackbarHostState() }
+        val hostTrailing = remember { SnackbarHostState() }
+        val hostBoth = remember { SnackbarHostState() }
 
         Column {
 
-            ComponentVariants(
-                name = "Toast",
-                appearances = listOf(
-                    "Default" to { ToastAppearance.default() }
-                ),
-                shapes = listOf(
-                    "Default" to { ToastShape.default() },
-                    "Rounded" to { ToastShape.rounded() },
-                    "Square" to { ToastShape.square() }
-                )
-            ) { appearance: ToastAppearance, shape: ToastShape ->
-                Button(
-                    onClick = {
-                        scope.launch {
-                            snackbarHostState.showSnackbar("toast")
-                        }
-                    }
-                ) {
-                    Text("Show Toast")
-                }
-                Toast(
-                    hostState = snackbarHostState,
-                    shape = shape,
-                    appearance = appearance
-                )
+            Text("Empty Toast")
+            Button(onClick = { scope.launch { hostEmpty.showSnackbar("Empty toast") } }) {
+                Text("Show Empty Toast")
             }
+            Toast(hostState = hostEmpty)
+
+            Text("Leading Icon Toast")
+            Button(onClick = { scope.launch { hostLeading.showSnackbar("Leading icon") } }) {
+                Text("Show Leading Toast")
+            }
+            Toast(
+                hostState = hostLeading,
+                leadingContent = {
+                    Icon(
+                        icon = painterResource(Res.drawable.chevron_left),
+                        color = Colors.Text.red,
+                        size = IconSize.medium
+                    )
+                }
+            )
+
+            Text("Trailing Icon Toast")
+            Button(onClick = { scope.launch { hostTrailing.showSnackbar("Trailing icon") } }) {
+                Text("Show Trailing Toast")
+            }
+            Toast(
+                hostState = hostTrailing,
+                trailingContent = {
+                    Icon(
+                        icon = painterResource(Res.drawable.chevron_left),
+                        color = Colors.Text.red,
+                        size = IconSize.medium
+                    )
+                }
+            )
+
+            Text("Both Icons Toast")
+            Button(onClick = { scope.launch { hostBoth.showSnackbar("Both icons") } }) {
+                Text("Show Both Toast")
+            }
+            Toast(
+                hostState = hostBoth,
+                leadingContent = {
+                    Icon(
+                        icon = painterResource(Res.drawable.chevron_left),
+                        color = Colors.Text.red,
+                        size = IconSize.medium
+                    )
+                },
+                trailingContent = {
+                    Icon(
+                        icon = painterResource(Res.drawable.chevron_left),
+                        color = Colors.Text.red,
+                        size = IconSize.medium
+                    )
+                }
+            )
         }
     }
 }
