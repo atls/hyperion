@@ -16,6 +16,7 @@ export const Button = ({
   icon,
   iconPlacement,
   appearance = buttonAppearances.blue,
+  className,
   disabled,
   shape = buttonShapes.huge,
   ...props
@@ -47,6 +48,7 @@ export const Button = ({
         pressed && appearance.pressed,
         disabled && appearance.disabled,
         shape,
+        className,
       ]
         .filter(Boolean)
         .join(' ')}

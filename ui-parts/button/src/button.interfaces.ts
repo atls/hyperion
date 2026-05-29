@@ -10,9 +10,7 @@ export enum IconPlacement {
   RIGHT = 'Right',
 }
 
-type NativeButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'>
-
-export interface ButtonProps extends NativeButtonProps {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   appearance?: ButtonAppearance
   icon?: JSX.Element
   iconPlacement?: IconPlacement
