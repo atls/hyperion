@@ -11,6 +11,8 @@ import { Button }                 from '@atls-ui-admin/button'
 import { Column }                 from '@atls-ui-admin/layout'
 import { Layout }                 from '@atls-ui-admin/layout'
 import { ThemeProvider }          from '@atls-ui-admin/theme'
+import { buttonAppearances }      from '@atls-ui-admin/button'
+import { buttonShapes }           from '@atls-ui-admin/button'
 
 import { Text }                   from '../src/text/index.js'
 
@@ -19,6 +21,8 @@ const ToggleTheme = (): ReactNode => {
 
   return (
     <Button
+      appearance={buttonAppearances.blue}
+      shape={buttonShapes.huge}
       style={{ width: 'fit-content', margin: '0 0 10px auto' }}
       onClick={(): void => {
         setTheme(theme === 'light' ? 'dark' : 'light')

@@ -16,7 +16,6 @@
     "@atls-ui-admin/theme": "workspace:*",
     "@atls-ui-parts/button": "workspace:*",
     "@atls-utils/use-hover": "workspace:*",
-    "@vanilla-extract/recipes": "0.5.5",
     "clsx": "2.1.1",
     "rainbow-sprinkles": "1.0.0"
   },

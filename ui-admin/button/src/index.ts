@@ -1,2 +1,6 @@
 export * from './button.component.js'
+export type { ButtonAppearance } from '@atls-ui-parts/button'
 export type { ButtonProps } from '@atls-ui-parts/button'
+export type { ButtonShape } from '@atls-ui-parts/button'
+export { buttonAppearances } from './styles/appearance.css.js'
+export { buttonShapes } from './styles/shape.css.js'

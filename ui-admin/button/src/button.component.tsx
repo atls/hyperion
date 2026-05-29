@@ -1,49 +1,13 @@
-import type { ButtonProps } from '@atls-ui-parts/button'
-import type { ReactNode }   from 'react'
+import type { ButtonProps }     from '@atls-ui-parts/button'
+import type { ReactNode }       from 'react'
 
-import { useState }         from 'react'
+import { Button as RootButton } from '@atls-ui-parts/button'
 
-import { useHover }         from '@atls-utils/use-hover'
-
-import { buttonStyles }     from './styles/index.js'
+import { buttonAppearances }    from './styles/appearance.css.js'
+import { buttonShapes }         from './styles/shape.css.js'
 
 export const Button = ({
-  children,
-  icon,
-  iconPlacement,
-  size = 'huge',
-  variant = 'blue',
-  disabled,
-  ref,
+  appearance = buttonAppearances.blue,
+  shape = buttonShapes.huge,
   ...props
-}: ButtonProps): ReactNode => {
-  const [pressed, setPressed] = useState<boolean>(false)
-  const [hover, hoverProps] = useHover()
-  const onMouseDown = (): void => {
-    setPressed(true)
-  }
-  const onMouseUp = (): void => {
-    setPressed(false)
-  }
-
-  return (
-    <button
-      ref={ref}
-      type='button'
-      disabled={disabled}
-      className={buttonStyles({
-        size,
-        variant,
-        pressed: pressed ? `${variant}Pressed` : undefined,
-        hover: hover ? `${variant}Hover` : undefined,
-        disabled: disabled ? `${variant}Disabled` : undefined,
-      })}
-      onMouseDown={onMouseDown}
-      onMouseUp={onMouseUp}
-      {...hoverProps}
-      {...props}
-    >
-      {children}
-    </button>
-  )
-}
+}: ButtonProps): ReactNode => <RootButton appearance={appearance} shape={shape} {...props} />

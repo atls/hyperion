@@ -361,7 +361,6 @@ const RAW_RUNTIME_STATE =
           ["@types/vanilla-extract__dynamic", null],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
-          ["@vanilla-extract/recipes", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:0.5.5"],\
           ["clsx", "npm:2.1.1"],\
           ["next-themes", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:0.4.6"],\
           ["rainbow-sprinkles", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:1.0.0"],\
@@ -394,7 +393,6 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.1.2"],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
-          ["@vanilla-extract/recipes", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:0.5.5"],\
           ["clsx", "npm:2.1.1"],\
           ["next-themes", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:0.4.6"],\
           ["rainbow-sprinkles", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:1.0.0"],\
@@ -601,7 +599,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.1.2"],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
-          ["@vanilla-extract/recipes", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:0.5.5"],\
+          ["@vanilla-extract/recipes", "virtual:3d06fbb19d1fe3e56495101348ea0a04ee3f83383f44c49513a90168d8afa4fd0bb1beb21869c24e100c6d64fc80ac2453d3b6cf930e63e6f7b9fbd0b88593f2#npm:0.5.5"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:19.1.0"],\
           ["storybook", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:8.6.12"]\
@@ -849,7 +847,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.1.2"],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
-          ["@vanilla-extract/recipes", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:0.5.5"],\
+          ["@vanilla-extract/recipes", "virtual:3d06fbb19d1fe3e56495101348ea0a04ee3f83383f44c49513a90168d8afa4fd0bb1beb21869c24e100c6d64fc80ac2453d3b6cf930e63e6f7b9fbd0b88593f2#npm:0.5.5"],\
           ["clsx", "npm:2.1.1"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:19.1.0"],\
@@ -873,7 +871,6 @@ const RAW_RUNTIME_STATE =
           ["@types/vanilla-extract__dynamic", null],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
-          ["@vanilla-extract/recipes", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:0.5.5"],\
           ["clsx", "npm:2.1.1"],\
           ["rainbow-sprinkles", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:1.0.0"],\
           ["react", "npm:19.1.0"],\
@@ -906,7 +903,6 @@ const RAW_RUNTIME_STATE =
           ["@types/vanilla-extract__dynamic", null],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
-          ["@vanilla-extract/recipes", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:0.5.5"],\
           ["clsx", "npm:2.1.1"],\
           ["rainbow-sprinkles", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:1.0.0"],\
           ["react", "npm:19.1.0"],\
@@ -936,7 +932,6 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.1.2"],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
-          ["@vanilla-extract/recipes", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:0.5.5"],\
           ["clsx", "npm:2.1.1"],\
           ["rainbow-sprinkles", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:1.0.0"],\
           ["react", "npm:19.1.0"],\
@@ -1344,7 +1339,7 @@ const RAW_RUNTIME_STATE =
           ["@types/vanilla-extract__dynamic", null],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
-          ["@vanilla-extract/recipes", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:0.5.5"],\
+          ["@vanilla-extract/recipes", "virtual:3d06fbb19d1fe3e56495101348ea0a04ee3f83383f44c49513a90168d8afa4fd0bb1beb21869c24e100c6d64fc80ac2453d3b6cf930e63e6f7b9fbd0b88593f2#npm:0.5.5"],\
           ["clsx", "npm:2.1.1"],\
           ["rainbow-sprinkles", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:1.0.0"],\
           ["react", "npm:19.1.0"],\
@@ -1376,7 +1371,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.1.2"],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
-          ["@vanilla-extract/recipes", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:0.5.5"],\
+          ["@vanilla-extract/recipes", "virtual:3d06fbb19d1fe3e56495101348ea0a04ee3f83383f44c49513a90168d8afa4fd0bb1beb21869c24e100c6d64fc80ac2453d3b6cf930e63e6f7b9fbd0b88593f2#npm:0.5.5"],\
           ["clsx", "npm:2.1.1"],\
           ["rainbow-sprinkles", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:1.0.0"],\
           ["react", "npm:19.1.0"],\
@@ -9995,10 +9990,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:0.5.5", {\
-        "packageLocation": "./.yarn/__virtual__/@vanilla-extract-recipes-virtual-31989145b6/2/.yarn/berry/cache/@vanilla-extract-recipes-npm-0.5.5-986bba519e-10.zip/node_modules/@vanilla-extract/recipes/",\
+      ["virtual:3d06fbb19d1fe3e56495101348ea0a04ee3f83383f44c49513a90168d8afa4fd0bb1beb21869c24e100c6d64fc80ac2453d3b6cf930e63e6f7b9fbd0b88593f2#npm:0.5.5", {\
+        "packageLocation": "./.yarn/__virtual__/@vanilla-extract-recipes-virtual-e2a656f856/2/.yarn/berry/cache/@vanilla-extract-recipes-npm-0.5.5-986bba519e-10.zip/node_modules/@vanilla-extract/recipes/",\
         "packageDependencies": [\
-          ["@vanilla-extract/recipes", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:0.5.5"],\
+          ["@vanilla-extract/recipes", "virtual:3d06fbb19d1fe3e56495101348ea0a04ee3f83383f44c49513a90168d8afa4fd0bb1beb21869c24e100c6d64fc80ac2453d3b6cf930e63e6f7b9fbd0b88593f2#npm:0.5.5"],\
           ["@types/vanilla-extract__css", null],\
           ["@vanilla-extract/css", "npm:1.17.1"]\
         ],\

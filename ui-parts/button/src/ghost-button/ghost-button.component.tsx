@@ -2,19 +2,15 @@ import type { ReactNode }    from 'react'
 
 import type { ButtonProps }  from '../button.interfaces.js'
 
-import { clsx }              from 'clsx'
+import { Button }            from '../button.component.js'
+import { buttonAppearances } from '../styles/appearance.css.js'
+import { buttonShapes }      from '../styles/shape.css.js'
 
-import { baseStyles }        from '../styles/base.css.js'
-import { nulledGhostStyles } from './ghost-button.css.js'
-import { shapeGhostStyles }  from './ghost-button.css.js'
-
-export const GhostButton = ({ children, className, ref, ...props }: ButtonProps): ReactNode => (
-  <button
-    ref={ref}
-    type='button'
-    className={clsx(className, baseStyles, nulledGhostStyles, shapeGhostStyles)}
-    {...props}
-  >
-    {children}
-  </button>
-)
+/**
+ * @deprecated Use Button with buttonAppearances.ghost and buttonShapes.ghost instead.
+ */
+export const GhostButton = ({
+  appearance = buttonAppearances.ghost,
+  shape = buttonShapes.ghost,
+  ...props
+}: ButtonProps): ReactNode => <Button appearance={appearance} shape={shape} {...props} />

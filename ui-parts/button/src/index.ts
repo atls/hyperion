@@ -1,5 +1,8 @@
 export * from './button.component.js'
 export * from './button.interfaces.js'
+export type * from './styles/interfaces.js'
 export * from './content/index.js'
 export * from './ghost-button/index.js'
+export { buttonAppearances } from './styles/appearance.css.js'
+export { buttonShapes } from './styles/shape.css.js'
 export * from './utils/index.js'

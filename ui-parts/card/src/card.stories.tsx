@@ -8,6 +8,8 @@ import { Condition }              from '@atls-ui-parts/condition'
 import { Column }                 from '@atls-ui-parts/layout'
 import { Layout }                 from '@atls-ui-parts/layout'
 import { Box }                    from '@atls-ui-parts/layout'
+import { buttonAppearances }      from '@atls-ui-parts/button'
+import { buttonShapes }           from '@atls-ui-parts/button'
 
 import { Backdrop }               from './backdrop/index.js'
 import { Container }              from './container/index.js'
@@ -63,7 +65,9 @@ export const CardNotify: StoryObj = {
   name: 'Базовый',
   render: () => (
     <Card backdrop container={<h1>Card content</h1>}>
-      <Button size='small'>Open notify</Button>
+      <Button appearance={buttonAppearances.blue} shape={buttonShapes.small}>
+        Open notify
+      </Button>
     </Card>
   ),
 }
@@ -90,7 +94,9 @@ export const CardLarge: StoryObj = {
   name: 'Много контента',
   render: () => (
     <Card ghost container={<LargeContent />}>
-      <Button size='small'>Open large content</Button>
+      <Button appearance={buttonAppearances.blue} shape={buttonShapes.small}>
+        Open large content
+      </Button>
     </Card>
   ),
 }
