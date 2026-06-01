@@ -5,25 +5,16 @@ import { Input }            from '../src/input.component.js'
 import { inputAppearances } from '../src/index.js'
 import { inputShapes }      from '../src/index.js'
 
-type InputAppearanceName = keyof typeof inputAppearances
-type InputShapeName = keyof typeof inputShapes
-
-interface InputStoryProps {
-  appearance: InputAppearanceName
-  shape: InputShapeName
-}
-
-const meta: Meta<InputStoryProps> = {
+const meta: Meta<typeof Input> = {
   title: 'Components/Input',
+  component: Input,
   tags: ['autodocs'],
-  render: ({ appearance, shape, ...props }) => (
-    <Input {...props} appearance={inputAppearances[appearance]} shape={inputShapes[shape]} />
-  ),
   argTypes: {
     appearance: {
       description: 'Вариант инпута',
       control: { type: 'inline-radio' },
       options: Object.keys(inputAppearances),
+      mapping: inputAppearances,
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'blue' },
@@ -33,6 +24,7 @@ const meta: Meta<InputStoryProps> = {
       description: 'Размер инпута',
       control: { type: 'inline-radio' },
       options: Object.keys(inputShapes),
+      mapping: inputShapes,
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'normal' },
@@ -43,11 +35,11 @@ const meta: Meta<InputStoryProps> = {
 
 export default meta
 
-type Story = StoryObj<InputStoryProps>
+type Story = StoryObj<typeof Input>
 
 export const Variants: Story = {
   args: {
-    appearance: 'white',
-    shape: 'normal',
+    appearance: inputAppearances.white,
+    shape: inputShapes.normal,
   },
 }
