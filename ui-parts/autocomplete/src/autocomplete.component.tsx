@@ -13,6 +13,8 @@ import { useState }               from 'react'
 import { Input }                  from '@atls-ui-parts/input'
 import { Row }                    from '@atls-ui-parts/layout'
 import { Box }                    from '@atls-ui-parts/layout'
+import { inputAppearances }       from '@atls-ui-parts/input'
+import { inputShapes }            from '@atls-ui-parts/input'
 import { useFloat }               from '@atls-utils/use-float'
 
 import { Arrow }                  from './arrow/index.js'
@@ -85,7 +87,12 @@ export const Autocomplete = ({
 
   return (
     <Row ref={refs.setReference} {...getReferenceProps()}>
-      <Input size='normal' variant='blue' onFocus={openMenu} {...getInputProps()} />
+      <Input
+        appearance={inputAppearances.blue}
+        shape={inputShapes.normal}
+        onFocus={openMenu}
+        {...getInputProps()}
+      />
       {suffix}
       <Box ref={refs.setFloating} style={floatingStyles} {...getFloatingProps()}>
         <AnimatePresence>

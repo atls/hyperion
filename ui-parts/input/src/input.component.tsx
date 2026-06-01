@@ -11,36 +11,29 @@ import { inputAppearances } from './styles/index.js'
 import { inputShapes }      from './styles/index.js'
 
 export const Input = ({
-  appearance,
+  appearance = inputAppearances.blue,
   className,
-  size = 'normal',
-  shape,
+  shape = inputShapes.normal,
   value,
   type = 'text',
-  variant = 'blue',
   disabled,
   onChange,
   ref,
   ...props
-}: InputProps): ReactNode => {
-  const inputAppearance = appearance || inputAppearances[variant]
-  const inputShape = shape || inputShapes[size]
-
-  return (
-    <input
-      ref={ref}
-      value={value}
-      type={type}
-      disabled={disabled}
-      className={clsx(
-        baseStyles,
-        inputAppearance.default,
-        disabled && inputAppearance.disabled,
-        inputShape,
-        className
-      )}
-      onChange={onChange}
-      {...props}
-    />
-  )
-}
+}: InputProps): ReactNode => (
+  <input
+    ref={ref}
+    value={value}
+    type={type}
+    disabled={disabled}
+    className={clsx(
+      baseStyles,
+      appearance.default,
+      disabled && appearance.disabled,
+      shape,
+      className
+    )}
+    onChange={onChange}
+    {...props}
+  />
+)

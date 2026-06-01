@@ -649,7 +649,6 @@ __metadata:
     "@types/react": "npm:19.1.2"
     "@vanilla-extract/css": "npm:1.17.1"
     "@vanilla-extract/dynamic": "npm:2.1.2"
-    "@vanilla-extract/recipes": "npm:0.5.5"
     clsx: "npm:2.1.1"
     rainbow-sprinkles: "npm:1.0.0"
     react: "npm:19.1.0"
