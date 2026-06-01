@@ -1,0 +1,29 @@
+import type { CheckboxProps }           from '@atls-ui-parts/checkbox'
+import type { ReactNode }               from 'react'
+
+import { Checkbox as BaseCheckbox }     from '@atls-ui-parts/checkbox'
+
+import { boxStyles }                    from './styles.css.js'
+import { checkIconStyles }              from './styles.css.js'
+import { checkStyles }                  from './styles.css.js'
+import { containerStyles }              from './styles.css.js'
+import { labelStyles }                  from './styles.css.js'
+
+const checkedIcon = <span className={checkIconStyles}>✓</span>
+
+export const Checkbox = ({ classNames, checkedIcon: icon = checkedIcon, ...props }: CheckboxProps): ReactNode => (
+  <BaseCheckbox
+    {...props}
+    checkedIcon={icon}
+    classNames={{
+      ...classNames,
+      box: [boxStyles, classNames?.box].filter(Boolean).join(' '),
+      check: [checkStyles, classNames?.check].filter(Boolean).join(' '),
+      container: [
+        containerStyles,
+        classNames?.container,
+      ].filter(Boolean).join(' '),
+      label: [labelStyles, classNames?.label].filter(Boolean).join(' '),
+    }}
+  />
+)

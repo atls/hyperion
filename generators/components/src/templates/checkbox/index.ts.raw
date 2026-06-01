@@ -1,0 +1,2 @@
+export * from './component.js'
+export type { CheckboxClassNames, CheckboxProps } from '@atls-ui-parts/checkbox'

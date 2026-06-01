@@ -1,0 +1,28 @@
+import { style } from '@vanilla-extract/css'
+
+import { vars }  from '@ui/theme/theme-css'
+
+export const boxStyles = style({
+  borderColor: vars.colors.black,
+  borderRadius: 6,
+})
+
+export const checkIconStyles = style({
+  lineHeight: 1,
+})
+
+export const checkStyles = style({
+  color: vars.colors.white,
+  fontSize: 12,
+  fontWeight: 700,
+  backgroundColor: vars.colors.black,
+  borderRadius: 4,
+})
+
+export const containerStyles = style({
+  alignItems: 'center',
+})
+
+export const labelStyles = style({
+  color: vars.colors.black,
+})

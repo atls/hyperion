@@ -1,6 +1,5 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-
+import type { KeyboardEvent }      from 'react'
+import type { MouseEvent }         from 'react'
 import type { ReactNode }          from 'react'
 
 import type { CheckboxProps }      from './checkbox.interfaces.js'
@@ -25,46 +24,98 @@ export const Checkbox = ({
   onCheck,
   children,
   active,
+  defaultActive = false,
   labelPosition = 'end',
   size = 'medium',
   color = 'blue',
   icon,
+  checkedIcon = icon,
+  className,
+  classNames,
+  onClick,
+  onKeyDown,
   ref,
+  tabIndex,
   ...props
 }: CheckboxProps): ReactNode => {
-  const [isChecked, setIsChecked] = useState<boolean>(active)
+  const [isChecked, setIsChecked] = useState<boolean>(active ?? defaultActive)
+  const checked = active ?? isChecked
 
   useEffect(() => {
-    setIsChecked(active)
-    onCheck(active)
+    if (active !== undefined) {
+      setIsChecked(active)
+    }
   }, [active])
 
   const handleCheck = (): void => {
-    setIsChecked(!isChecked)
-    onCheck(!isChecked)
+    const nextChecked = !checked
+
+    if (active === undefined) {
+      setIsChecked(nextChecked)
+    }
+
+    onCheck?.(nextChecked)
+  }
+
+  const handleClick = (event: MouseEvent<HTMLDivElement>): void => {
+    onClick?.(event)
+
+    if (!event.defaultPrevented) {
+      handleCheck()
+    }
+  }
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>): void => {
+    onKeyDown?.(event)
+
+    if (!event.defaultPrevented && event.key === ' ') {
+      event.preventDefault()
+      handleCheck()
+    }
   }
 
   return (
     <div
-      ref={ref}
-      className={clsx(containerBaseStyles, containerPositionStyles[labelPosition])}
-      onClick={handleCheck}
       {...props}
+      ref={ref}
+      role='checkbox'
+      aria-checked={checked}
+      tabIndex={tabIndex ?? 0}
+      className={clsx(
+        containerBaseStyles,
+        containerPositionStyles[labelPosition],
+        classNames?.container,
+        className
+      )}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
     >
       <input
-        className={hiddenInputStyles}
-        checked={isChecked}
+        readOnly
+        className={clsx(hiddenInputStyles, classNames?.hiddenInput)}
+        checked={checked}
+        aria-hidden='true'
+        tabIndex={-1}
         type='checkbox'
-        onChange={handleCheck}
       />
-      <div className={clsx(boxBaseStyles, boxShapeStyles[size], boxColorStyles[color])}>
-        <div className={clsx(checkBaseStyles, isChecked && checkCheckedStyles)}>{icon}</div>
+      <div
+        className={clsx(
+          boxBaseStyles,
+          boxShapeStyles[size],
+          boxColorStyles[color],
+          classNames?.box
+        )}
+      >
+        <div className={clsx(checkBaseStyles, checked && checkCheckedStyles, classNames?.check)}>
+          {checkedIcon}
+        </div>
       </div>
       <div
         className={clsx(
           labelShapeStyles,
           labelAppearanceStyles,
-          labelPositionStyles[labelPosition]
+          labelPositionStyles[labelPosition],
+          classNames?.label
         )}
       >
         {children}

@@ -8,6 +8,11 @@ import { Layout }             from '@atls-ui-parts/layout'
 
 import { Checkbox }           from '../src/checkbox.component.js'
 
+import { customBoxStyles }       from './styles.css.js'
+import { customCheckStyles }     from './styles.css.js'
+import { customContainerStyles } from './styles.css.js'
+import { customLabelStyles }     from './styles.css.js'
+
 const meta: Meta<CheckboxProps> = {
   title: 'Components/Checkbox',
   render: (props) => (
@@ -58,5 +63,23 @@ export const Base: Story = {
     size: 'medium',
     color: 'blue',
     children: 'Checkbox Label',
+  },
+}
+
+export const Custom: Story = {
+  name: 'Кастомный',
+  args: {
+    defaultActive: true,
+    labelPosition: 'end',
+    size: 'medium',
+    color: 'blue',
+    checkedIcon: '✓',
+    classNames: {
+      box: customBoxStyles,
+      check: customCheckStyles,
+      container: customContainerStyles,
+      label: customLabelStyles,
+    },
+    children: 'Custom checkbox',
   },
 }
