@@ -2,6 +2,9 @@ import type { ButtonShapeStyles } from './create-shape-styles.interfaces.js'
 
 import { style }                  from '@vanilla-extract/css'
 
+const getDefaultPadding = (size: number | string, paddingRatio: number): number =>
+  typeof size === 'number' ? size * paddingRatio : 0
+
 export const createShapeStyles = ({
   size,
   fontFamily,
@@ -17,7 +20,7 @@ export const createShapeStyles = ({
     fontSize,
     fontWeight,
     fontFamily,
-    paddingLeft: paddingLeft ?? Number(size) * paddingRatio,
-    paddingRight: paddingRight ?? Number(size) * paddingRatio,
+    paddingLeft: paddingLeft ?? getDefaultPadding(size, paddingRatio),
+    paddingRight: paddingRight ?? getDefaultPadding(size, paddingRatio),
     borderRadius: rounding,
   })
