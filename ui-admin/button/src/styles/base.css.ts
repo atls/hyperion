@@ -8,6 +8,7 @@ export const baseStyles = style({
   wordBreak: 'break-word',
   cursor: 'pointer',
   outline: 'none',
-  padding: 0,
+  paddingTop: 0,
+  paddingBottom: 0,
   border: '1px solid transparent',
 })

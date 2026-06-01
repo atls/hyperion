@@ -5,10 +5,12 @@ import { style }                       from '@vanilla-extract/css'
 export const createAppearanceStyles = ({
   fontColor,
   backgroundColor,
+  border,
   borderColor,
 }: ButtonAppearanceStyles): string =>
   style({
     color: fontColor,
     backgroundColor,
+    border,
     borderColor: borderColor || backgroundColor,
   })

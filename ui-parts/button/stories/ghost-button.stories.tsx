@@ -1,10 +1,13 @@
-import type { Meta }     from '@storybook/react'
-import type { StoryObj } from '@storybook/react'
+import type { Meta }         from '@storybook/react'
+import type { StoryObj }     from '@storybook/react'
 
-import { Box }           from '@atls-ui-parts/layout'
-import { Column }        from '@atls-ui-parts/layout'
-import { Layout }        from '@atls-ui-parts/layout'
-import { vars }          from '@atls-ui-parts/theme'
+import { Column }            from '@atls-ui-parts/layout'
+import { Layout }            from '@atls-ui-parts/layout'
+import { vars }              from '@atls-ui-parts/theme'
+
+import { Button }            from '../src/button.component.js'
+import { buttonAppearances } from '../src/styles/appearance.css.js'
+import { buttonShapes }      from '../src/styles/shape.css.js'
 
 const meta: Meta = {
   title: 'Components/Button',
@@ -19,12 +22,13 @@ const meta: Meta = {
   }) => (
     <Column width='100%' maxWidth={`${containerWidth}px`} alignItems='center' margin='auto'>
       <Layout flexBasis='50px' />
-      <Box
-        cursor='pointer'
+      <Button
+        appearance={buttonAppearances.ghost}
+        shape={buttonShapes.ghost}
         style={{ color: fontColor, fontSize, fontWeight, backgroundColor, fontFamily }}
       >
-        <Box backgroundColor='$button.lightBlue.pressed.background'>{children}</Box>
-      </Box>
+        {children}
+      </Button>
       <Layout flexBasis='50px' />
     </Column>
   ),

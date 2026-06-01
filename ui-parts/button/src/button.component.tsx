@@ -1,21 +1,24 @@
-import type { ReactNode }   from 'react'
+import type { ReactNode }    from 'react'
 
-import type { ButtonProps } from './button.interfaces.js'
+import type { ButtonProps }  from './button.interfaces.js'
 
-import { useState }         from 'react'
+import { useState }          from 'react'
 
-import { useHover }         from '@atls-utils/use-hover'
+import { useHover }          from '@atls-utils/use-hover'
 
-import { buttonStyles }     from './styles/index.js'
+import { buttonAppearances } from './styles/appearance.css.js'
+import { baseStyles }        from './styles/base.css.js'
+import { buttonShapes }      from './styles/shape.css.js'
 
 export const Button = ({
   children,
   ref,
   icon,
   iconPlacement,
-  size = 'huge',
-  variant = 'blue',
+  appearance = buttonAppearances.blue,
+  className,
   disabled,
+  shape = buttonShapes.huge,
   ...props
 }: ButtonProps): ReactNode => {
   const [pressed, setPressed] = useState<boolean>(false)
@@ -34,17 +37,21 @@ export const Button = ({
       ref={ref}
       type='button'
       disabled={disabled}
-      className={buttonStyles({
-        size,
-        variant,
-        pressed: pressed ? `${variant}Pressed` : undefined,
-        hover: hover ? `${variant}Hover` : undefined,
-        disabled: disabled ? `${variant}Disabled` : undefined,
-      })}
       onMouseDown={onMouseDown}
       onMouseUp={onMouseUp}
       {...hoverProps}
       {...props}
+      className={[
+        baseStyles,
+        appearance.default,
+        hover && appearance.hover,
+        pressed && appearance.pressed,
+        disabled && appearance.disabled,
+        shape,
+        className,
+      ]
+        .filter(Boolean)
+        .join(' ')}
     >
       {children}
     </button>

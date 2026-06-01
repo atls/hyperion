@@ -50,6 +50,12 @@ const autoSizeRoundStyles = createShapeStyles({
   paddingRight: vars.space.g10,
 })
 
+const ghostStyles = createShapeStyles({
+  size: 'auto',
+  paddingLeft: 0,
+  paddingRight: 0,
+})
+
 export const shapeStyles = {
   huge: hugeStyles,
   large: largeStyles,
@@ -60,4 +66,7 @@ export const shapeStyles = {
   normal: normalStyles,
   semiMedium: semiMediumStyles,
   autoSizeRound: autoSizeRoundStyles,
+  ghost: ghostStyles,
 }
+
+export const buttonShapes = shapeStyles

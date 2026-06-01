@@ -1,17 +1,19 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
-import type { Meta }     from '@storybook/react'
-import type { StoryObj } from '@storybook/react'
+import type { Meta }         from '@storybook/react'
+import type { StoryObj }     from '@storybook/react'
 
-import { useState }      from 'react'
+import { useState }          from 'react'
 
-import { Button }        from '@atls-ui-parts/button'
-import { Column }        from '@atls-ui-parts/layout'
-import { Layout }        from '@atls-ui-parts/layout'
-import { Row }           from '@atls-ui-parts/layout'
+import { Button }            from '@atls-ui-parts/button'
+import { Column }            from '@atls-ui-parts/layout'
+import { Layout }            from '@atls-ui-parts/layout'
+import { Row }               from '@atls-ui-parts/layout'
+import { buttonAppearances } from '@atls-ui-parts/button'
+import { buttonShapes }      from '@atls-ui-parts/button'
 
-import { Circle }        from './circle/index.js'
-import { Line }          from './line/index.js'
+import { Circle }            from './circle/index.js'
+import { Line }              from './line/index.js'
 
 const meta: Meta = {
   title: 'Components/Progress',
@@ -88,10 +90,10 @@ export const Dinamic: StoryObj = {
         </Layout>
         <Layout flexBasis='16px' />
         <Layout>
-          <Button size='small' onClick={decline}>
+          <Button appearance={buttonAppearances.blue} shape={buttonShapes.small} onClick={decline}>
             Отнять
           </Button>
-          <Button size='small' onClick={increase}>
+          <Button appearance={buttonAppearances.blue} shape={buttonShapes.small} onClick={increase}>
             Прибавить
           </Button>
         </Layout>
