@@ -1,5 +1,17 @@
 
 
+## [1.0.7](https://github.com/atls/hyperion/compare/@atls-ui-generators/components@1.0.6...@atls-ui-generators/components@1.0.7) (2026-06-01)
+
+
+### Features
+
+
+* make checkbox reusable ([1f9b6e8](https://github.com/atls/hyperion/commit/1f9b6e8428e46198cafeb76c3e871672f19ca055))
+
+
+
+
+
 ## [1.0.6](https://github.com/atls/hyperion/compare/@atls-ui-generators/components@1.0.4...@atls-ui-generators/components@1.0.6) (2025-11-10)
 
 
