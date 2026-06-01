@@ -1,26 +1,38 @@
-import type { Meta }     from '@storybook/react'
-import type { StoryObj } from '@storybook/react'
+import type { Meta }        from '@storybook/react'
+import type { StoryObj }    from '@storybook/react'
 
-import { Input }         from '../src/input.component.js'
+import { Input }            from '../src/input.component.js'
+import { inputAppearances } from '../src/index.js'
+import { inputShapes }      from '../src/index.js'
 
-const meta: Meta<typeof Input> = {
+type InputAppearanceName = keyof typeof inputAppearances
+type InputShapeName = keyof typeof inputShapes
+
+interface InputStoryProps {
+  appearance: InputAppearanceName
+  shape: InputShapeName
+}
+
+const meta: Meta<InputStoryProps> = {
   title: 'Components/Input',
-  component: Input,
   tags: ['autodocs'],
+  render: ({ appearance, shape, ...props }) => (
+    <Input {...props} appearance={inputAppearances[appearance]} shape={inputShapes[shape]} />
+  ),
   argTypes: {
-    variant: {
+    appearance: {
       description: 'Вариант инпута',
       control: { type: 'inline-radio' },
-      options: ['blue'],
+      options: Object.keys(inputAppearances),
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'blue' },
       },
     },
-    size: {
+    shape: {
       description: 'Размер инпута',
       control: { type: 'inline-radio' },
-      options: ['normal', 'big'],
+      options: Object.keys(inputShapes),
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'normal' },
@@ -31,11 +43,11 @@ const meta: Meta<typeof Input> = {
 
 export default meta
 
-type Story = StoryObj<typeof Input>
+type Story = StoryObj<InputStoryProps>
 
 export const Variants: Story = {
   args: {
-    variant: 'white',
-    size: 'normal',
+    appearance: 'white',
+    shape: 'normal',
   },
 }
