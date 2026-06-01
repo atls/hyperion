@@ -486,6 +486,7 @@ __metadata:
   resolution: "@atls-ui-parts/checkbox@workspace:ui-parts/checkbox"
   dependencies:
     "@atls-ui-parts/layout": "workspace:*"
+    "@atls-ui-parts/theme": "workspace:*"
     "@storybook/react": "npm:8.6.12"
     "@types/react": "npm:19.1.2"
     "@vanilla-extract/css": "npm:1.17.1"
