@@ -1,16 +1,21 @@
 'use client'
 
-import type { ReactNode }  from 'react'
+import type { ReactNode }   from 'react'
 
-import type { InputProps } from './input.interfaces.js'
+import type { InputProps }  from './input.interfaces.js'
 
-import { inputStyles }     from './styles/index.js'
+import { clsx }             from 'clsx'
+
+import { baseStyles }       from './styles/index.js'
+import { inputAppearances } from './styles/index.js'
+import { inputShapes }      from './styles/index.js'
 
 export const Input = ({
-  size,
+  appearance = inputAppearances.blue,
+  className,
+  shape = inputShapes.normal,
   value,
   type = 'text',
-  variant = 'blue',
   disabled,
   onChange,
   ref,
@@ -21,11 +26,13 @@ export const Input = ({
     value={value}
     type={type}
     disabled={disabled}
-    className={inputStyles({
-      size,
-      variant,
-      disabled: disabled ? `${variant}Disabled` : undefined,
-    })}
+    className={clsx(
+      baseStyles,
+      appearance.default,
+      disabled && appearance.disabled,
+      shape,
+      className
+    )}
     onChange={onChange}
     {...props}
   />

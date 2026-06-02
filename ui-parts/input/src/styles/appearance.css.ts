@@ -1,3 +1,5 @@
+import type { InputAppearance }   from './interfaces.js'
+
 import { vars }                   from '@atls-ui-parts/theme'
 
 import { createAppearanceStyles } from '../utils/index.js'
@@ -6,24 +8,6 @@ const appearanceBlueDefaultStyles = createAppearanceStyles({
   fontColor: vars.colors['input.blue.default.font'],
   backgroundColor: vars.colors['input.blue.default.background'],
   borderColor: vars.colors['input.blue.default.border'],
-})
-
-const appearanceBlueHoverStyles = createAppearanceStyles({
-  fontColor: vars.colors['input.blue.hover.font'],
-  backgroundColor: vars.colors['input.blue.hover.background'],
-  borderColor: vars.colors['input.blue.hover.border'],
-})
-
-const appearanceBlueFocusStyles = createAppearanceStyles({
-  fontColor: vars.colors['input.blue.focus.font'],
-  backgroundColor: vars.colors['input.blue.focus.background'],
-  borderColor: vars.colors['input.blue.focus.border'],
-})
-
-const appearanceBlueActiveStyles = createAppearanceStyles({
-  fontColor: vars.colors['input.blue.active.font'],
-  backgroundColor: vars.colors['input.blue.active.background'],
-  borderColor: vars.colors['input.blue.active.border'],
 })
 
 const appearanceBlueDisabledStyles = createAppearanceStyles({
@@ -38,24 +22,6 @@ const appearanceWhiteDefaultStyles = createAppearanceStyles({
   borderColor: vars.colors['input.white.default.border'],
 })
 
-const appearanceWhiteHoverStyles = createAppearanceStyles({
-  fontColor: vars.colors['input.white.hover.font'],
-  backgroundColor: vars.colors['input.white.hover.background'],
-  borderColor: vars.colors['input.white.hover.border'],
-})
-
-const appearanceWhiteFocusStyles = createAppearanceStyles({
-  fontColor: vars.colors['input.white.focus.font'],
-  backgroundColor: vars.colors['input.white.focus.background'],
-  borderColor: vars.colors['input.white.focus.border'],
-})
-
-const appearanceWhiteActiveStyles = createAppearanceStyles({
-  fontColor: vars.colors['input.white.active.font'],
-  backgroundColor: vars.colors['input.white.active.background'],
-  borderColor: vars.colors['input.white.active.border'],
-})
-
 const appearanceWhiteDisabledStyles = createAppearanceStyles({
   fontColor: vars.colors['input.white.disabled.font'],
   backgroundColor: vars.colors['input.white.disabled.background'],
@@ -67,22 +33,18 @@ export const appearanceVariant = {
   white: appearanceWhiteDefaultStyles,
 }
 
-export const appearanceHover = {
-  blueHover: appearanceBlueHoverStyles,
-  whiteHover: appearanceWhiteHoverStyles,
-}
-
-export const appearanceFocus = {
-  blueFocus: appearanceBlueFocusStyles,
-  whiteFocus: appearanceWhiteFocusStyles,
-}
-
-export const appearanceActive = {
-  blueActive: appearanceBlueActiveStyles,
-  whiteActive: appearanceWhiteActiveStyles,
-}
-
 export const appearanceDisabled = {
   blueDisabled: appearanceBlueDisabledStyles,
   whiteDisabled: appearanceWhiteDisabledStyles,
+}
+
+export const inputAppearances: Record<'blue' | 'white', InputAppearance> = {
+  blue: {
+    default: appearanceVariant.blue,
+    disabled: appearanceDisabled.blueDisabled,
+  },
+  white: {
+    default: appearanceVariant.white,
+    disabled: appearanceDisabled.whiteDisabled,
+  },
 }

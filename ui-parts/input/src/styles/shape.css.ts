@@ -1,3 +1,5 @@
+import type { InputShape }   from './interfaces.js'
+
 import { vars }              from '@atls-ui-parts/theme'
 
 import { createShapeStyles } from '../utils/index.js'
@@ -24,3 +26,5 @@ export const shapeStyles = {
   normal: normalSizeStyles,
   big: bigSizeStyles,
 }
+
+export const inputShapes: Record<'big' | 'normal', InputShape> = shapeStyles
