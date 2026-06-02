@@ -1,5 +1,22 @@
 
 
+## [1.0.11](https://github.com/atls/hyperion/compare/@atls-ui-parts/input@1.0.10...@atls-ui-parts/input@1.0.11) (2026-06-02)
+
+
+### Bug Fixes
+
+
+* **input:** stories ([ea1a21e](https://github.com/atls/hyperion/commit/ea1a21e06989f70304653f74b99d2d0d2059ebca))
+
+### Features
+
+
+* **input:** expose appearance and shape styles ([a78ea59](https://github.com/atls/hyperion/commit/a78ea59762f2638cbfecfe1dc7dc4040c48c9db6))
+
+
+
+
+
 ## [1.0.10](https://github.com/atls/hyperion/compare/@atls-ui-parts/input@1.0.10...@atls-ui-parts/input@1.0.10) (2025-10-25)
 
 
