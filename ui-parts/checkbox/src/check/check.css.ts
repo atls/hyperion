@@ -1,5 +1,7 @@
 import { style } from '@vanilla-extract/css'
 
+import { vars }  from '@atls-ui-parts/theme'
+
 export const checkBaseStyles = style({
   display: 'none',
   alignItems: 'center',
@@ -11,15 +13,15 @@ export const checkCheckedStyles = style({
 })
 
 const checkBlueAppearanceStyles = style({
-  backgroundColor: 'blue',
+  backgroundColor: vars.colors.blue,
 })
 
 const checkGreenAppearanceStyles = style({
-  backgroundColor: 'green',
+  backgroundColor: vars.colors.green,
 })
 
 const checkRedAppearanceStyles = style({
-  backgroundColor: 'red',
+  backgroundColor: vars.colors.red,
 })
 
 export const checkAppearanceStyles = {
@@ -29,7 +31,7 @@ export const checkAppearanceStyles = {
 }
 
 export const checkShapeStyles = style({
-  width: 'calc(100% - 3px)',
-  height: 'calc(100% - 3px)',
-  borderRadius: 4,
+  width: `calc(100% - ${vars.radii.f3})`,
+  height: `calc(100% - ${vars.radii.f3})`,
+  borderRadius: vars.radii.f4,
 })

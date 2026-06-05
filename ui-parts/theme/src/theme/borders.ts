@@ -8,6 +8,8 @@ export const borders = {
   normalSilver: '1px solid rgba(224, 224, 224, 1)',
   normalCloudyWhite: '1px solid rgba(228, 228, 228, 1)',
   normalBlue: '1px solid rgba(65, 109, 223, 1)',
+  normalGreen: '1px solid rgba(52, 197, 29, 1)',
+  normalRed: '1px solid rgba(255, 47, 47, 1)',
   normalLightGray: '1px solid rgba(184, 184, 184, 1)',
   normalLightBlue: '1px solid rgba(232, 237, 251, 1)',
   normalSoftBlue: '1px solid rgba(18, 112, 252, 1)',
