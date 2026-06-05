@@ -1,10 +1,11 @@
-import type { CheckboxShape } from './interfaces.js'
+import type { CheckboxShape }     from './interfaces.js'
+import type { CheckboxShapeName } from './interfaces.js'
 
-import { boxShapeStyles }     from '../box/index.js'
-import { checkShapeStyles }   from '../check/index.js'
-import { labelShapeStyles }   from '../label/index.js'
+import { boxShapeStyles }         from '../box/index.js'
+import { checkShapeStyles }       from '../check/index.js'
+import { labelShapeStyles }       from '../label/index.js'
 
-export const checkboxShapes: Record<'large' | 'medium' | 'small', CheckboxShape> = {
+export const checkboxShapes: Record<CheckboxShapeName, CheckboxShape> = {
   large: {
     box: boxShapeStyles.large,
     check: checkShapeStyles,
