@@ -2,15 +2,28 @@ import type { HTMLAttributes } from 'react'
 import type { Ref }            from 'react'
 import type { ReactNode }      from 'react'
 
-import type { CheckboxAppearance } from './styles/index.js'
-import type { CheckboxShape }      from './styles/index.js'
-
 export interface CheckboxClassNames {
   box?: string
   check?: string
   container?: string
   hiddenInput?: string
   label?: string
+}
+
+export type CheckboxAppearanceName = 'blue' | 'green' | 'red'
+
+export interface CheckboxAppearance {
+  box: string
+  check: string
+  label: string
+}
+
+export type CheckboxShapeName = 'large' | 'medium' | 'small'
+
+export interface CheckboxShape {
+  box: string
+  check: string
+  label: string
 }
 
 export interface CheckboxProps extends HTMLAttributes<HTMLDivElement> {

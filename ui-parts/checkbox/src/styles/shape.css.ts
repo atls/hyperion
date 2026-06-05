@@ -1,5 +1,5 @@
-import type { CheckboxShape }     from './interfaces.js'
-import type { CheckboxShapeName } from './interfaces.js'
+import type { CheckboxShape }     from '../checkbox.interfaces.js'
+import type { CheckboxShapeName } from '../checkbox.interfaces.js'
 
 import { boxShapeStyles }         from '../box/index.js'
 import { checkShapeStyles }       from '../check/index.js'
