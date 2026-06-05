@@ -13,11 +13,11 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
+    "@atls-ui-parts/theme": "workspace:*",
     "clsx": "2.1.1"
   },
   "devDependencies": {
     "@atls-ui-parts/layout": "workspace:*",
-    "@atls-ui-parts/theme": "workspace:*",
     "@storybook/react": "8.6.12",
     "@types/react": "19.1.2",
     "@vanilla-extract/css": "1.17.1",
@@ -28,7 +28,6 @@
   },
   "peerDependencies": {
     "@vanilla-extract/css": "*",
-    "@vanilla-extract/dynamic": "*",
     "react": "*",
     "react-dom": "*"
   },

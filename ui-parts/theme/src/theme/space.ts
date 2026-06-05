@@ -7,7 +7,9 @@ export const space = {
   g10: '10px',
   g12: '12px',
   g14: '14px',
+  g16: '16px',
   g17: '17px',
   g22: '22px',
   g24: '24px',
+  g32: '32px',
 }

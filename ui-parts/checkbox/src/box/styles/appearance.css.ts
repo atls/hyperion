@@ -1,7 +1,21 @@
-import { styleVariants } from '@vanilla-extract/css'
+import { style } from '@vanilla-extract/css'
 
-export const boxColorStyles = styleVariants({
-  blue: { border: '1px solid blue' },
-  green: { border: '1px solid green' },
-  red: { border: '1px solid red' },
+import { vars }  from '@atls-ui-parts/theme'
+
+const boxBlueAppearanceStyles = style({
+  border: vars.borders.normalBlue,
 })
+
+const boxGreenAppearanceStyles = style({
+  border: vars.borders.normalGreen,
+})
+
+const boxRedAppearanceStyles = style({
+  border: vars.borders.normalRed,
+})
+
+export const boxAppearanceStyles = {
+  blue: boxBlueAppearanceStyles,
+  green: boxGreenAppearanceStyles,
+  red: boxRedAppearanceStyles,
+}

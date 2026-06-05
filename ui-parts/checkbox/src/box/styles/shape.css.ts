@@ -1,7 +1,27 @@
-import { styleVariants } from '@vanilla-extract/css'
+import { style } from '@vanilla-extract/css'
 
-export const boxShapeStyles = styleVariants({
-  small: { width: 16, height: 16, borderRadius: 4 },
-  medium: { width: 24, height: 24, borderRadius: 4 },
-  large: { width: 32, height: 32, borderRadius: 4 },
+import { vars }  from '@atls-ui-parts/theme'
+
+const boxSmallShapeStyles = style({
+  width: vars.space.g16,
+  height: vars.space.g16,
+  borderRadius: vars.radii.f4,
 })
+
+const boxMediumShapeStyles = style({
+  width: vars.space.g24,
+  height: vars.space.g24,
+  borderRadius: vars.radii.f4,
+})
+
+const boxLargeShapeStyles = style({
+  width: vars.space.g32,
+  height: vars.space.g32,
+  borderRadius: vars.radii.f4,
+})
+
+export const boxShapeStyles = {
+  small: boxSmallShapeStyles,
+  medium: boxMediumShapeStyles,
+  large: boxLargeShapeStyles,
+}

@@ -10,15 +10,31 @@ export interface CheckboxClassNames {
   label?: string
 }
 
+export type CheckboxAppearanceName = 'blue' | 'green' | 'red'
+
+export interface CheckboxAppearance {
+  box: string
+  check: string
+  label: string
+}
+
+export type CheckboxShapeName = 'large' | 'medium' | 'small'
+
+export interface CheckboxShape {
+  box: string
+  check: string
+  label: string
+}
+
 export interface CheckboxProps extends HTMLAttributes<HTMLDivElement> {
   active?: boolean
+  appearance?: CheckboxAppearance
   checkedIcon?: ReactNode
   classNames?: CheckboxClassNames
   defaultActive?: boolean
   onCheck?: (checked: boolean) => void
   labelPosition?: 'bottom' | 'end' | 'start' | 'top'
-  size?: 'large' | 'medium' | 'small'
-  color?: 'blue' | 'green' | 'red'
+  shape?: CheckboxShape
   icon?: ReactNode
   ref?: Ref<HTMLDivElement>
 }
