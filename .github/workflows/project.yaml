@@ -5,6 +5,12 @@ on:
     types:
       - opened
       - transferred
+  workflow_dispatch:
+    inputs:
+      issue_url:
+        description: 'Issue URL to add to the project'
+        required: true
+        type: string
 
 jobs:
   add-to-project:
@@ -23,5 +29,8 @@ jobs:
       - name: Add issue to project
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
-          ISSUE_URL: ${{ github.event.issue.html_url }}
-        run: gh project item-add 39 --owner atls --url "$ISSUE_URL"
+          EVENT_ISSUE_URL: ${{ github.event.issue.html_url }}
+          DISPATCH_ISSUE_URL: ${{ inputs.issue_url }}
+        run: |
+          issue_url="${EVENT_ISSUE_URL:-$DISPATCH_ISSUE_URL}"
+          gh project item-add 39 --owner atls --url "$issue_url"
