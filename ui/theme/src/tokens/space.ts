@@ -12,4 +12,6 @@ export const space = {
   g22: '22px',
   g24: '24px',
   g32: '32px',
-}
+} as const
+
+export type SpaceTokens = typeof space

@@ -1,6 +1,4 @@
-import type { RadiiTokens } from '../index.js'
-
-export const radii: RadiiTokens = {
+export const radii = {
   none: 'none',
   full: '100%',
   f1: '1px',
@@ -43,4 +41,6 @@ export const radii: RadiiTokens = {
   f500: '500px',
   f600: '600px',
   f9999: '9999px',
-}
+} as const
+
+export type RadiiTokens = typeof radii

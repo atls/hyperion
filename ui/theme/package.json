@@ -1,12 +1,12 @@
 {
-  "name": "@atls-ui-admin/theme",
-  "version": "1.0.7",
+  "name": "@atls-ui/theme",
+  "version": "0.0.1",
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {
+    "./package.json": "./package.json",
     ".": "./src/index.ts",
-    "./properties": "./src/properties/index.ts",
-    "./theme-css": "./src/theme.css.ts"
+    "./tokens": "./src/tokens/index.ts"
   },
   "main": "./src/index.ts",
   "files": [
@@ -17,25 +17,6 @@
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
   },
-  "dependencies": {
-    "@atls-ui/theme": "workspace:*",
-    "rainbow-sprinkles": "1.0.0"
-  },
-  "devDependencies": {
-    "@types/react": "19.1.2",
-    "@vanilla-extract/css": "1.17.1",
-    "@vanilla-extract/dynamic": "2.1.2",
-    "next-themes": "0.4.6",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
-  },
-  "peerDependencies": {
-    "@vanilla-extract/css": "*",
-    "@vanilla-extract/dynamic": "*",
-    "next-themes": "*",
-    "react": "*",
-    "react-dom": "*"
-  },
   "publishConfig": {
     "access": "public",
     "exports": {
@@ -44,6 +25,11 @@
         "import": "./dist/index.js",
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
+      },
+      "./tokens": {
+        "import": "./dist/tokens/index.js",
+        "types": "./dist/tokens/index.d.ts",
+        "default": "./dist/tokens/index.js"
       }
     },
     "main": "dist/index.js",

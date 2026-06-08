@@ -9,7 +9,9 @@ export const spaceContract = {
   g10: null,
   g12: null,
   g14: null,
+  g16: null,
   g17: null,
   g22: null,
   g24: null,
+  g32: null,
 }
