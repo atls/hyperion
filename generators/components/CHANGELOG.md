@@ -1,5 +1,17 @@
 
 
+## [1.0.8](https://github.com/atls/hyperion/compare/@atls-ui-generators/components@1.0.7...@atls-ui-generators/components@1.0.8) (2026-06-08)
+
+
+### Features
+
+
+* **components:** use example packages for component templates ([33cd9ba](https://github.com/atls/hyperion/commit/33cd9ba7e9ae164917fd619a347bf16fcb4d8b0d))
+
+
+
+
+
 ## [1.0.7](https://github.com/atls/hyperion/compare/@atls-ui-generators/components@1.0.6...@atls-ui-generators/components@1.0.7) (2026-06-01)
 
 
