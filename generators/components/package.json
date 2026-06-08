@@ -11,7 +11,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn library build && cp -R ./src/templates ./dist/templates",
+    "build": "yarn library build && node ./dist/build-templates.js",
     "generate-component": "NODE_OPTIONS=\"$NODE_OPTIONS --import tsx\" plop --plopfile=./src/config.ts",
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
