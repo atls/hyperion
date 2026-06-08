@@ -1,1 +1,1 @@
-export { radii } from '@atls-ui/theme-tokens'
+export { radii } from '@atls-ui/theme/tokens'

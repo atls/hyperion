@@ -1,1 +1,1 @@
-export { space } from '@atls-ui/theme-tokens'
+export { space } from '@atls-ui/theme/tokens'

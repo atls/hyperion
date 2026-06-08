@@ -224,7 +224,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/theme@workspace:ui-admin/theme"
   dependencies:
-    "@atls-ui/theme-tokens": "workspace:*"
+    "@atls-ui/theme": "workspace:*"
     "@types/react": "npm:19.1.2"
     "@vanilla-extract/css": "npm:1.17.1"
     "@vanilla-extract/dynamic": "npm:2.1.2"
@@ -1022,7 +1022,7 @@ __metadata:
   resolution: "@atls-ui-parts/theme@workspace:ui-parts/theme"
   dependencies:
     "@atls-ui-parts/layout": "workspace:*"
-    "@atls-ui/theme-tokens": "workspace:*"
+    "@atls-ui/theme": "workspace:*"
     "@storybook/blocks": "npm:8.6.12"
     "@storybook/react": "npm:8.6.12"
     "@types/react": "npm:19.1.2"
@@ -1121,9 +1121,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui/theme-tokens@workspace:*, @atls-ui/theme-tokens@workspace:ui/theme-tokens":
+"@atls-ui/theme@workspace:*, @atls-ui/theme@workspace:ui/theme":
   version: 0.0.0-use.local
-  resolution: "@atls-ui/theme-tokens@workspace:ui/theme-tokens"
+  resolution: "@atls-ui/theme@workspace:ui/theme"
   languageName: unknown
   linkType: soft
 

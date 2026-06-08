@@ -18,7 +18,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui/theme-tokens": "workspace:*",
+    "@atls-ui/theme": "workspace:*",
     "rainbow-sprinkles": "1.0.0"
   },
   "devDependencies": {
