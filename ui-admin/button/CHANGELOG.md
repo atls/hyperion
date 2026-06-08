@@ -1,5 +1,12 @@
 
 
+## [1.0.15](https://github.com/atls/hyperion/compare/@atls-ui-admin/button@1.0.14...@atls-ui-admin/button@1.0.15) (2026-06-08)
+
+
+
+
+
+
 ## [1.0.14](https://github.com/atls/hyperion/compare/@atls-ui-admin/button@1.0.13...@atls-ui-admin/button@1.0.14) (2026-06-05)
 
 

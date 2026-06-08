@@ -1,5 +1,12 @@
 
 
+## [1.0.11](https://github.com/atls/hyperion/compare/@atls-ui-parts/placeholder@1.0.10...@atls-ui-parts/placeholder@1.0.11) (2026-06-08)
+
+
+
+
+
+
 ## [1.0.10](https://github.com/atls/hyperion/compare/@atls-ui-parts/placeholder@1.0.9...@atls-ui-parts/placeholder@1.0.10) (2026-06-05)
 
 
