@@ -13,10 +13,10 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
+    "@atls-ui-parts/theme": "workspace:*",
     "@atls-utils/use-select": "workspace:*",
     "clsx": "2.1.1",
-    "framer-motion": "12.23.22",
-    "rainbow-sprinkles": "1.0.0"
+    "framer-motion": "12.23.22"
   },
   "devDependencies": {
     "@atls-ui-parts/layout": "workspace:*",

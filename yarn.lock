@@ -887,6 +887,7 @@ __metadata:
   resolution: "@atls-ui-parts/select@workspace:ui-parts/select"
   dependencies:
     "@atls-ui-parts/layout": "workspace:*"
+    "@atls-ui-parts/theme": "workspace:*"
     "@atls-utils/use-select": "workspace:*"
     "@storybook/react": "npm:8.6.12"
     "@types/react": "npm:19.1.2"
@@ -894,7 +895,6 @@ __metadata:
     "@vanilla-extract/dynamic": "npm:2.1.2"
     clsx: "npm:2.1.1"
     framer-motion: "npm:12.23.22"
-    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
     storybook: "npm:8.6.12"

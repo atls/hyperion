@@ -7,8 +7,22 @@ import { clsx }                      from 'clsx'
 import { baseItemStyles }            from './item.css.js'
 import { highlightedMenuItemStyles } from './item.css.js'
 
-export const MenuItem = ({ highlighted, children, ...props }: ItemProps): ReactNode => (
-  <li className={clsx(baseItemStyles, highlighted && highlightedMenuItemStyles)} {...props}>
+export const MenuItem = ({
+  highlighted,
+  highlightedClassName,
+  children,
+  className,
+  ...props
+}: ItemProps): ReactNode => (
+  <li
+    {...props}
+    className={clsx(
+      baseItemStyles,
+      highlighted && highlightedMenuItemStyles,
+      highlighted && highlightedClassName,
+      className
+    )}
+  >
     {children}
   </li>
 )

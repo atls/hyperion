@@ -1340,7 +1340,6 @@ const RAW_RUNTIME_STATE =
           ["@types/vanilla-extract__dynamic", null],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
-          ["@vanilla-extract/recipes", "virtual:3d06fbb19d1fe3e56495101348ea0a04ee3f83383f44c49513a90168d8afa4fd0bb1beb21869c24e100c6d64fc80ac2453d3b6cf930e63e6f7b9fbd0b88593f2#npm:0.5.5"],\
           ["clsx", "npm:2.1.1"],\
           ["rainbow-sprinkles", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:1.0.0"],\
           ["react", "npm:19.1.0"],\
@@ -1372,7 +1371,6 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.1.2"],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
-          ["@vanilla-extract/recipes", "virtual:3d06fbb19d1fe3e56495101348ea0a04ee3f83383f44c49513a90168d8afa4fd0bb1beb21869c24e100c6d64fc80ac2453d3b6cf930e63e6f7b9fbd0b88593f2#npm:0.5.5"],\
           ["clsx", "npm:2.1.1"],\
           ["rainbow-sprinkles", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:1.0.0"],\
           ["react", "npm:19.1.0"],\
@@ -1692,6 +1690,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@atls-ui-parts/select", "workspace:ui-parts/select"],\
           ["@atls-ui-parts/layout", "virtual:dbe1a421eee484ea0bdb9d0589d44d9184c9819d8f5bfcb1a73e3d85271cc45ecf4365a26e00f2a3256c13de48b40272578801688978809175001fb2693bc747#workspace:ui-parts/layout"],\
+          ["@atls-ui-parts/theme", "virtual:dbe1a421eee484ea0bdb9d0589d44d9184c9819d8f5bfcb1a73e3d85271cc45ecf4365a26e00f2a3256c13de48b40272578801688978809175001fb2693bc747#workspace:ui-parts/theme"],\
           ["@atls-utils/use-select", "virtual:9c076913ffd643939b8ac6e8c374fd1470f44689001261d35898fb07091ea0aa596a24d8bcdfb508f949d0c68789b448702cfb68072c423229496303e9a11342#workspace:utils/use-select"],\
           ["@storybook/react", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:8.6.12"],\
           ["@types/react", "npm:19.1.2"],\
@@ -1699,7 +1698,6 @@ const RAW_RUNTIME_STATE =
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
           ["clsx", "npm:2.1.1"],\
           ["framer-motion", "virtual:3dba37771ce499e6d5c33bd82b7263c259fd8b9b612d0bf65962a3da6b1ec4612c0f051c5ab6d1701e4760bde49cb56e2383e557801939071c5dbec0f467c0d5#npm:12.23.22"],\
-          ["rainbow-sprinkles", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:1.0.0"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:19.1.0"],\
           ["storybook", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#npm:8.6.12"]\

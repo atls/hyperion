@@ -9,15 +9,21 @@ import { useSelect }         from '@atls-utils/use-select'
 
 import { MenuItem }          from './item/index.js'
 import { baseButtonStyles }  from './button/index.js'
-import { baseMenuSprinkles } from './menu/index.js'
 import { baseMenuStyles }    from './menu/index.js'
+import { selectAppearances } from './styles/index.js'
+import { selectShapes }      from './styles/index.js'
 
 export const Select = ({
+  appearance = selectAppearances.default,
+  className,
   items,
   label,
   value,
   onChangeValue,
   placeholder,
+  shape = selectShapes.default,
+  style,
+  width,
   ...props
 }: SelectProps): ReactNode => {
   const {
@@ -33,23 +39,28 @@ export const Select = ({
     onChange: onChangeValue,
   })
 
-  const { className, style, otherProps } = baseMenuSprinkles(props)
+  const triggerValue = value || placeholder
+  const menuStyle = width === undefined ? style : { width, ...style }
 
   return (
     <>
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
       <label {...labelProps}>{label}</label>
-      <button type='button' {...buttonProps} className={baseButtonStyles}>
-        {value}
+      <button
+        type='button'
+        {...buttonProps}
+        className={clsx(baseButtonStyles, appearance.trigger, shape.trigger)}
+      >
+        {triggerValue}
       </button>
       {/* eslint-disable-next-line react/jsx-no-leaked-render */}
       {isOpen &&
         renderMenu(
           <motion.ul
-            {...otherProps}
-            className={clsx(baseMenuStyles, String(otherProps?.className || ''), className)}
+            {...props}
             {...menuProps}
-            style={{ ...style, ...otherProps?.style }}
+            className={clsx(baseMenuStyles, appearance.menu, shape.menu, className)}
+            style={menuStyle}
           >
             {items.map((item, index) => (
               <MenuItem
@@ -57,6 +68,8 @@ export const Select = ({
                 key={`${item}-${index}`}
                 highlighted={index === highlightedIndex}
                 {...getMenuItemProps(item, index)}
+                highlightedClassName={appearance.highlightedItem}
+                className={clsx(appearance.item, shape.item)}
               >
                 {item}
               </MenuItem>
