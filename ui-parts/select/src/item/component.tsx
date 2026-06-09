@@ -1,6 +1,6 @@
 import type { ReactNode }            from 'react'
 
-import type { ItemProps }            from './item.interfaces.js'
+import type { ItemProps }            from './interfaces.js'
 
 import { clsx }                      from 'clsx'
 

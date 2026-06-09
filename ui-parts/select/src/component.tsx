@@ -1,6 +1,6 @@
 import type { ReactNode }    from 'react'
 
-import type { SelectProps }  from './select.interfaces.js'
+import type { SelectProps }  from './interfaces.js'
 
 import { clsx }              from 'clsx'
 import { motion }            from 'framer-motion'
@@ -15,16 +15,14 @@ import { selectShapes }      from './styles/index.js'
 
 export const Select = ({
   appearance = selectAppearances.default,
-  className,
   items,
   label,
+  menuProps: menuPropsProperty,
   value,
   onChangeValue,
   placeholder,
   shape = selectShapes.default,
-  style,
   width,
-  ...props
 }: SelectProps): ReactNode => {
   const {
     isOpen,
@@ -40,6 +38,7 @@ export const Select = ({
   })
 
   const triggerValue = value || placeholder
+  const { className, style, ...props } = menuPropsProperty ?? {}
   const menuStyle = width === undefined ? style : { width, ...style }
 
   return (

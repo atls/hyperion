@@ -1,6 +1,6 @@
 export * from './button/index.js'
 export * from './item/index.js'
 export * from './menu/index.js'
-export * from './select.component.js'
+export * from './component.js'
 export * from './styles/index.js'
-export type * from './select.interfaces.js'
+export type * from './interfaces.js'

@@ -2,29 +2,30 @@ import type { HTMLMotionProps } from 'framer-motion'
 import type { CSSProperties }   from 'react'
 
 export interface SelectAppearance {
-  highlightedItem: string | undefined
-  item: string | undefined
-  menu: string | undefined
-  trigger: string | undefined
+  highlightedItem?: string
+  item?: string
+  menu?: string
+  trigger?: string
 }
 
-export type SelectAppearanceName = 'custom' | 'default'
+export type SelectAppearanceName = 'default'
 
 export interface SelectShape {
-  item: string | undefined
-  menu: string | undefined
-  trigger: string | undefined
+  item?: string
+  menu?: string
+  trigger?: string
 }
 
-export type SelectShapeName = 'custom' | 'default'
+export type SelectShapeName = 'default'
 
-export interface SelectProps extends HTMLMotionProps<'ul'> {
+export interface SelectProps {
   appearance?: SelectAppearance
   label: string
   value: string
   onChangeValue: (nextValue: string) => void
   placeholder: string
   items: Array<string>
+  menuProps?: HTMLMotionProps<'ul'>
   shape?: SelectShape
   width?: CSSProperties['width']
 }
