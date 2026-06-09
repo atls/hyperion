@@ -10,8 +10,7 @@ const itemDefaultAppearanceStyles = style({
 })
 
 const menuDefaultAppearanceStyles = style({
-  border: '1px solid',
-  borderColor: vars.colors.black,
+  border: vars.borders.normalBlack,
 })
 
 export const appearanceVariant = {

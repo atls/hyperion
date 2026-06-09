@@ -5,6 +5,7 @@ export const borders = {
   thinLightGray: '0.5px solid rgba(228, 228, 228, 1)',
 
   normalGray: '1px solid rgba(114, 114, 114, 1)',
+  normalBlack: '1px solid rgba(0, 0, 0, 1)',
   normalSilver: '1px solid rgba(224, 224, 224, 1)',
   normalCloudyWhite: '1px solid rgba(228, 228, 228, 1)',
   normalBlue: '1px solid rgba(65, 109, 223, 1)',
