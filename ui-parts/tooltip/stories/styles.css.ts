@@ -1,9 +1,13 @@
 import { style } from '@vanilla-extract/css'
 
-export const storyContainerStyles = style({
+export const storyContainerAppearanceStyles = style({
+  background: 'green',
+  color: 'white',
+})
+
+export const storyContainerShapeStyles = style({
   width: '150px',
   height: '30px',
-  background: 'green',
   margin: 0,
 })
 
