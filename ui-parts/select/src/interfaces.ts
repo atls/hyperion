@@ -2,18 +2,18 @@ import type { HTMLMotionProps } from 'framer-motion'
 import type { CSSProperties }   from 'react'
 
 export interface SelectAppearance {
-  highlightedItem?: string
-  item?: string
-  menu?: string
-  trigger?: string
+  highlightedItem: string
+  item: string
+  menu: string
+  trigger: string
 }
 
 export type SelectAppearanceName = 'default'
 
 export interface SelectShape {
-  item?: string
-  menu?: string
-  trigger?: string
+  item: string
+  menu: string
+  trigger: string
 }
 
 export type SelectShapeName = 'default'

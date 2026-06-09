@@ -14,9 +14,9 @@ const menuDefaultShapeStyles = style({
 
 export const shapeStyles = {
   default: {
-    item: undefined,
+    item: '',
     menu: menuDefaultShapeStyles,
-    trigger: undefined,
+    trigger: '',
   },
 }
 

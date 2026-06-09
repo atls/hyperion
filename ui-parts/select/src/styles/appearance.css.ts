@@ -15,10 +15,10 @@ const menuDefaultAppearanceStyles = style({
 
 export const appearanceVariant = {
   default: {
-    highlightedItem: undefined,
+    highlightedItem: '',
     item: itemDefaultAppearanceStyles,
     menu: menuDefaultAppearanceStyles,
-    trigger: undefined,
+    trigger: '',
   },
 }
 
