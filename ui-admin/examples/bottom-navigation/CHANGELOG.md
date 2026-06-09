@@ -1,5 +1,12 @@
 
 
+## [0.0.5](https://github.com/atls/hyperion/compare/@atls-ui-admin/bottom-navigation@0.0.4...@atls-ui-admin/bottom-navigation@0.0.5) (2026-06-09)
+
+
+
+
+
+
 ## [0.0.4](https://github.com/atls/hyperion/compare/@atls-ui-admin/bottom-navigation@0.0.3...@atls-ui-admin/bottom-navigation@0.0.4) (2026-06-08)
 
 

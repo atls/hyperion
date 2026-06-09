@@ -1,5 +1,12 @@
 
 
+## [1.0.14](https://github.com/atls/hyperion/compare/@atls-ui-parts/text@1.0.13...@atls-ui-parts/text@1.0.14) (2026-06-09)
+
+
+
+
+
+
 ## [1.0.13](https://github.com/atls/hyperion/compare/@atls-ui-parts/text@1.0.12...@atls-ui-parts/text@1.0.13) (2026-06-08)
 
 

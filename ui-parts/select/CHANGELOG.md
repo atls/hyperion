@@ -1,5 +1,17 @@
 
 
+## [1.1.3](https://github.com/atls/hyperion/compare/@atls-ui-parts/select@1.1.2...@atls-ui-parts/select@1.1.3) (2026-06-09)
+
+
+### Bug Fixes
+
+
+* **select:** storybook filename ([33fe23b](https://github.com/atls/hyperion/commit/33fe23b0fbbd6c3ef83ee44c4a2cb22e8e84b1d6))
+
+
+
+
+
 ## [1.1.2](https://github.com/atls/hyperion/compare/@atls-ui-parts/select@1.1.1...@atls-ui-parts/select@1.1.2) (2026-06-08)
 
 
