@@ -5,13 +5,13 @@ import type { JSX }                from 'react'
 import type { ReactNode }          from 'react'
 
 export interface TooltipAppearance {
-  container?: string
+  container: string
 }
 
 export type TooltipAppearanceName = 'default'
 
 export interface TooltipShape {
-  container?: string
+  container: string
 }
 
 export type TooltipShapeName = 'default'
