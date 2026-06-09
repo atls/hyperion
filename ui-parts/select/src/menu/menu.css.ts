@@ -1,16 +1,4 @@
-import { style }                  from '@vanilla-extract/css'
-import { createRainbowSprinkles } from 'rainbow-sprinkles'
-import { defineProperties }       from 'rainbow-sprinkles'
-
-const menuComponentProperties = defineProperties({
-  dynamicProperties: {
-    width: true,
-  },
-})
-
-export const baseMenuSprinkles = createRainbowSprinkles(menuComponentProperties)
-
-export type BaseMenuSprinkles = Parameters<typeof baseMenuSprinkles>[0]
+import { style } from '@vanilla-extract/css'
 
 export const baseMenuStyles = style({
   display: 'flex',
@@ -19,8 +7,5 @@ export const baseMenuStyles = style({
   flexDirection: 'column',
   outline: 'none',
   padding: 0,
-  width: 100,
   height: 'auto',
-  border: '1px solid black',
-  borderRadius: 4,
 })
