@@ -2,6 +2,7 @@
 import type { ColorSchemes }       from '../appearance.interfaces.js'
 
 import assert                      from 'node:assert/strict'
+import { readFileSync }            from 'node:fs'
 import { writeFileSync }           from 'node:fs'
 
 import { pretty }                  from '@atls-ui-generators/utils'
@@ -9,24 +10,67 @@ import { pretty }                  from '@atls-ui-generators/utils'
 import { capitalizeFirstLetter }   from '../utils/index.js'
 import { getAppearanceStylesName } from '../utils/index.js'
 
+export interface AppearanceStyleImport {
+  import: string
+  from: string
+  kind?: 'type' | 'value'
+}
+
+export interface AppearanceStyleDeclaration {
+  backgroundColor?: string
+  border?: string
+  borderColor?: string
+  fontColor?: string
+}
+
+export interface AppearanceStyleExport {
+  name: string
+  typeName: string
+  states: Record<string, string>
+}
+
+export interface AppearanceStyleGeneratorOptions {
+  createAppearanceStylesImport?: AppearanceStyleImport
+  extraImports?: Array<AppearanceStyleImport>
+  stateOverrides?: Record<string, AppearanceStyleDeclaration>
+  states?: Array<string>
+  varsImport?: AppearanceStyleImport
+  variants?: Array<string>
+  appearanceExport?: AppearanceStyleExport
+}
+
 export class AppearanceStyleGenerator {
-  readonly requiredImports = [
-    { import: '{ vars }', from: '@ui/theme/theme-css' },
-    { import: '{ createAppearanceStyles }', from: '@atls-ui-generators/appearance/create' },
-  ]
+  readonly requiredImports: Array<AppearanceStyleImport>
 
   #variants: Array<string> = []
 
   #states: Array<string> = []
 
+  readonly #options: AppearanceStyleGeneratorOptions
+
   constructor(
     private readonly prefix: string,
-    private readonly colorSchemes: ColorSchemes
+    private readonly colorSchemes: ColorSchemes,
+    options: AppearanceStyleGeneratorOptions = {}
   ) {
+    this.#options = options
+    this.requiredImports = [
+      ...(options.extraImports ?? []),
+      options.varsImport ?? { import: '{ vars }', from: '@ui/theme/theme-css' },
+      options.createAppearanceStylesImport ?? {
+        import: '{ createAppearanceStyles }',
+        from: '@atls-ui-generators/appearance/create',
+      },
+    ]
+
     const colorsKeys = Object.keys(this.colorSchemes).filter((key) =>
       key.startsWith(`${this.prefix}.`))
+    const overrideVariants = Object.keys(options.stateOverrides ?? {})
 
-    assert.ok(colorsKeys.length, `Not found color keys for prefix '${this.prefix}'`)
+    assert.ok(
+      colorsKeys.length || overrideVariants.length,
+      `Not found color keys for prefix '${this.prefix}'`
+    )
 
     colorsKeys.forEach((key) => {
       assert.match(
@@ -41,7 +85,7 @@ export class AppearanceStyleGenerator {
       []
     )
 
-    this.#variants = [...new Set(allVariants)]
+    this.#variants = options.variants ?? [...new Set([...allVariants, ...overrideVariants])]
 
     const allStates = colorsKeys.reduce<Array<string>>(
       (array, key) =>
@@ -51,7 +95,7 @@ export class AppearanceStyleGenerator {
       []
     )
 
-    this.#states = [...new Set(allStates)]
+    this.#states = options.states ?? [...new Set(allStates)]
   }
 
   async generateAppearanceStyles(): Promise<
@@ -62,42 +106,71 @@ export class AppearanceStyleGenerator {
     )
 
     const appearanceStyles = await pretty(
-      this.#states.map((state) => this.generateVariantAppearanceStyles(state)).join('\n\n')
+      [
+        ...this.#states.map((state) => this.generateVariantAppearanceStyles(state)),
+        this.generateAppearanceExport(),
+      ].join('\n\n')
     )
 
     const imports = await pretty(
       this.requiredImports
-        .map((requiredImport) => `import ${requiredImport.import} from '${requiredImport.from}'`)
+        .map((requiredImport) => {
+          if (requiredImport.kind === 'type') {
+            return `import type ${requiredImport.import} from '${requiredImport.from}'`
+          }
+
+          return `import ${requiredImport.import} from '${requiredImport.from}'`
+        })
         .join('\n')
     )
 
     return { statefulStyles, appearanceStyles, imports }
   }
 
-  async generateFile(path: string, filename = 'appearance.css.ts'): Promise<void> {
+  async generateFileContent(): Promise<string> {
     const generated = await this.generateAppearanceStyles()
 
-    const code = await pretty(`
+    return pretty(`
     ${generated.imports}
     ${generated.statefulStyles}
     ${generated.appearanceStyles}
     `)
+  }
 
+  async generateFile(path: string, filename = 'appearance.css.ts'): Promise<void> {
     if (path.split('').pop() === '/') {
       throw new Error("Path should not end with '/' character")
     }
 
+    const code = await this.generateFileContent()
+
     writeFileSync(`${path}/${filename}`, code)
+  }
+
+  async checkFile(path: string, filename = 'appearance.css.ts'): Promise<void> {
+    if (path.split('').pop() === '/') {
+      throw new Error("Path should not end with '/' character")
+    }
+
+    const expected = await this.generateFileContent()
+    const actual = await pretty(readFileSync(`${path}/${filename}`, 'utf-8'))
+
+    assert.equal(actual, expected, `${path}/${filename} is out of date`)
   }
 
   private generateVariantStatefulStyles(variant: string): string {
     const lines: Array<string> = []
 
     for (const state of this.#states) {
+      const override = this.#options.stateOverrides?.[variant]
+      const declaration = override ?? {
+        fontColor: `vars.colors['${this.prefix}.${variant}.${state}.font']`,
+        backgroundColor: `vars.colors['${this.prefix}.${variant}.${state}.background']`,
+        borderColor: `vars.colors['${this.prefix}.${variant}.${state}.border']`,
+      }
+
       lines.push(`const ${getAppearanceStylesName(variant, state)} = createAppearanceStyles({
-        fontColor: vars.colors['${this.prefix}.${variant}.${state}.font'],
-        backgroundColor: vars.colors['${this.prefix}.${variant}.${state}.background'],
-        borderColor: vars.colors['${this.prefix}.${variant}.${state}.border'],
+        ${this.generateDeclaration(declaration)}
       })`)
     }
 
@@ -123,6 +196,44 @@ export class AppearanceStyleGenerator {
 
     return `export const appearance${stateName} = {
       ${variantStyles}
+    }`
+  }
+
+  private generateDeclaration(declaration: AppearanceStyleDeclaration): string {
+    return Object.entries(declaration)
+      .filter(([, value]) => typeof value !== 'undefined')
+      .map(([property, value]) => `${property}: ${value},`)
+      .join('\n')
+  }
+
+  private generateAppearanceExport(): string {
+    const appearanceExport = this.#options.appearanceExport
+
+    if (!appearanceExport) return ''
+
+    const variants = this.#variants.map((variant) => `'${variant}'`).join(' | ')
+    const entries = this.#variants
+      .map((variant) => {
+        const states = Object.entries(appearanceExport.states)
+          .map(([property, state]) => {
+            if (state === 'default') {
+              return `${property}: appearanceVariant.${variant},`
+            }
+
+            const stateName = capitalizeFirstLetter(state)
+
+            return `${property}: appearance${stateName}.${variant}${stateName},`
+          })
+          .join('\n')
+
+        return `${variant}: {
+          ${states}
+        },`
+      })
+      .join('\n')
+
+    return `export const ${appearanceExport.name}: Record<${variants}, ${appearanceExport.typeName}> = {
+      ${entries}
     }`
   }
 }

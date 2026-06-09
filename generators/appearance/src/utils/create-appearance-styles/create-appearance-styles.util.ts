@@ -1,14 +1,16 @@
-import type { InputAppearanceStyles } from './create-appearance-styles.interfaces.js'
+import type { AppearanceStyles } from './create-appearance-styles.interfaces.js'
 
-import { style }                      from '@vanilla-extract/css'
+import { style }                 from '@vanilla-extract/css'
 
 export const createAppearanceStyles = ({
   fontColor,
   backgroundColor,
+  border,
   borderColor,
-}: InputAppearanceStyles): string =>
+}: AppearanceStyles): string =>
   style({
     color: fontColor,
     backgroundColor,
+    border,
     borderColor: borderColor || backgroundColor,
   })

@@ -1,8 +1,7 @@
 import type { InputAppearance }   from './interfaces.js'
 
+import { createAppearanceStyles } from '@atls-ui-generators/appearance'
 import { vars }                   from '@atls-ui-parts/theme'
-
-import { createAppearanceStyles } from '../utils/index.js'
 
 const appearanceBlueDefaultStyles = createAppearanceStyles({
   fontColor: vars.colors['input.blue.default.font'],

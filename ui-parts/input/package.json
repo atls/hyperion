@@ -13,6 +13,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
+    "@atls-ui-generators/appearance": "workspace:*",
     "@atls-ui-parts/theme": "workspace:*",
     "clsx": "2.1.1",
     "rainbow-sprinkles": "1.0.0"

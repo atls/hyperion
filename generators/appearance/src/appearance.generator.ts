@@ -21,10 +21,32 @@ try {
     .argument('path <string>', 'Path to save the styles')
     .requiredOption('-t, --theme path <string>', 'Path to colors file')
     .requiredOption('-p, --prefix color <string>', 'Prefix of color styles')
+    .option('-c, --check', 'Check generated styles without writing files')
+    .option('--vars-from package <string>', 'Module to import vars from', '@ui/theme/theme-css')
+    .option(
+      '--styles-from package <string>',
+      'Module to import createAppearanceStyles from',
+      '@atls-ui-generators/appearance/create'
+    )
+    .option('-s, --states states <string>', 'Comma-separated states to include')
     .parse(process.argv)
 
   const path = program.args.at(0)
-  const { theme: themePath, prefix } = program.opts()
+  const {
+    check,
+    states,
+    stylesFrom,
+    theme: themePath,
+    prefix,
+    varsFrom,
+  } = program.opts() as {
+    check?: boolean
+    prefix?: string
+    states?: string
+    stylesFrom: string
+    theme?: string
+    varsFrom: string
+  }
 
   assert.ok(path && typeof path === 'string', 'Path to save the styles is required')
   assert.ok(lstatSync(path).isDirectory(), 'Path to save the styles should point to a directory.')
@@ -40,15 +62,33 @@ try {
 
   const colors = Object.values(exports)?.[0] as ColorSchemes
 
-  const generator = new AppearanceStyleGenerator(prefix, colors)
+  const generator = new AppearanceStyleGenerator(prefix, colors, {
+    states: states
+      ? states
+          .split(',')
+          .map((state: string) => state.trim())
+          .filter(Boolean)
+      : undefined,
+    varsImport: { import: '{ vars }', from: varsFrom },
+    createAppearanceStylesImport: { import: '{ createAppearanceStyles }', from: stylesFrom },
+  })
 
   const genPath = join(process.cwd(), path)
 
-  logger.info(`Appearance styles generation started into ${path}`)
+  if (check) {
+    logger.info(`Appearance styles check started for ${path}`)
 
-  await generator.generateFile(genPath)
+    await generator.checkFile(genPath)
 
-  logger.info(`Generated into ${path}`)
+    logger.info(`Appearance styles are up to date in ${path}`)
+  } else {
+    logger.info(`Appearance styles generation started into ${path}`)
+
+    await generator.generateFile(genPath)
+
+    logger.info(`Generated into ${path}`)
+  }
 } catch (error) {
   logger.error(error)
+  process.exitCode = 1
 }

@@ -13,6 +13,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
+    "@atls-ui-generators/appearance": "workspace:*",
     "@atls-ui-parts/theme": "workspace:*",
     "@atls-utils/use-hover": "workspace:*",
     "clsx": "2.1.1",
