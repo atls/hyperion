@@ -9,16 +9,14 @@ import { useEffect }               from 'react'
 import { useState }                from 'react'
 
 import { boxBaseStyles }           from './box/index.js'
-import { boxShapeStyles }          from './box/index.js'
-import { boxColorStyles }          from './box/index.js'
 import { checkBaseStyles }         from './check/index.js'
 import { checkCheckedStyles }      from './check/index.js'
 import { containerBaseStyles }     from './container/index.js'
 import { containerPositionStyles } from './container/index.js'
 import { hiddenInputStyles }       from './hidden-input/index.js'
-import { labelAppearanceStyles }   from './label/index.js'
 import { labelPositionStyles }     from './label/index.js'
-import { labelShapeStyles }        from './label/index.js'
+import { checkboxAppearances }     from './styles/index.js'
+import { checkboxShapes }          from './styles/index.js'
 
 export const Checkbox = ({
   onCheck,
@@ -26,8 +24,8 @@ export const Checkbox = ({
   active,
   defaultActive = false,
   labelPosition = 'end',
-  size = 'medium',
-  color = 'blue',
+  appearance = checkboxAppearances.blue,
+  shape = checkboxShapes.medium,
   icon,
   checkedIcon = icon,
   className,
@@ -101,19 +99,27 @@ export const Checkbox = ({
       <div
         className={clsx(
           boxBaseStyles,
-          boxShapeStyles[size],
-          boxColorStyles[color],
+          shape.box,
+          appearance.box,
           classNames?.box
         )}
       >
-        <div className={clsx(checkBaseStyles, checked && checkCheckedStyles, classNames?.check)}>
+        <div
+          className={clsx(
+            checkBaseStyles,
+            shape.check,
+            appearance.check,
+            checked && checkCheckedStyles,
+            classNames?.check
+          )}
+        >
           {checkedIcon}
         </div>
       </div>
       <div
         className={clsx(
-          labelShapeStyles,
-          labelAppearanceStyles,
+          shape.label,
+          appearance.label,
           labelPositionStyles[labelPosition],
           classNames?.label
         )}

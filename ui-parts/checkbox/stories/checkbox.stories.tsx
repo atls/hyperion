@@ -7,6 +7,8 @@ import { Column }             from '@atls-ui-parts/layout'
 import { Layout }             from '@atls-ui-parts/layout'
 
 import { Checkbox }           from '../src/checkbox.component.js'
+import { checkboxAppearances } from '../src/index.js'
+import { checkboxShapes }      from '../src/index.js'
 
 import { customBoxStyles }       from './styles.css.js'
 import { customCheckStyles }     from './styles.css.js'
@@ -29,17 +31,19 @@ const meta: Meta<CheckboxProps> = {
       description: 'Is the checkbox checked',
       control: { type: 'boolean' },
     },
-    color: {
-      name: 'Color',
+    appearance: {
+      name: 'Appearance',
       description: 'Color of the divider',
       control: { type: 'select' },
-      options: ['red', 'blue', 'green'],
+      options: Object.keys(checkboxAppearances),
+      mapping: checkboxAppearances,
     },
-    size: {
-      name: 'Size',
+    shape: {
+      name: 'Shape',
       description: 'Size of the divider',
       control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
+      options: Object.keys(checkboxShapes),
+      mapping: checkboxShapes,
     },
     labelPosition: {
       name: 'Label position',
@@ -60,8 +64,8 @@ export const Base: Story = {
     onCheck: () => undefined,
     active: false,
     labelPosition: 'start',
-    size: 'medium',
-    color: 'blue',
+    appearance: checkboxAppearances.blue,
+    shape: checkboxShapes.medium,
     children: 'Checkbox Label',
   },
 }
@@ -71,8 +75,8 @@ export const Custom: Story = {
   args: {
     defaultActive: true,
     labelPosition: 'end',
-    size: 'medium',
-    color: 'blue',
+    appearance: checkboxAppearances.blue,
+    shape: checkboxShapes.medium,
     checkedIcon: '✓',
     classNames: {
       box: customBoxStyles,

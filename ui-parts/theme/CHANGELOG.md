@@ -1,5 +1,24 @@
 
 
+## [1.0.9](https://github.com/atls/hyperion/compare/@atls-ui-parts/theme@1.0.8...@atls-ui-parts/theme@1.0.9) (2026-06-08)
+
+
+### Features
+
+
+* **theme:** add shared theme tokens ([650896a](https://github.com/atls/hyperion/commit/650896af462c93f43ae4d4fab780abb6b4ba186a))
+
+
+
+
+
+## [1.0.8](https://github.com/atls/hyperion/compare/@atls-ui-parts/theme@1.0.7...@atls-ui-parts/theme@1.0.8) (2026-06-05)
+
+
+
+
+
+
 ## [1.0.7](https://github.com/atls/hyperion/compare/@atls-ui-parts/theme@1.0.6...@atls-ui-parts/theme@1.0.7) (2025-10-25)
 
 

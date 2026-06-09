@@ -1,5 +1,19 @@
 
 
+## [1.1.3](https://github.com/atls/hyperion/compare/@atls-ui-parts/tooltip@1.1.2...@atls-ui-parts/tooltip@1.1.3) (2026-06-08)
+
+
+
+
+
+
+## [1.1.2](https://github.com/atls/hyperion/compare/@atls-ui-parts/tooltip@1.1.1...@atls-ui-parts/tooltip@1.1.2) (2026-06-05)
+
+
+
+
+
+
 ## [1.1.1](https://github.com/atls/hyperion/compare/@atls-ui-parts/tooltip@1.1.0...@atls-ui-parts/tooltip@1.1.1) (2025-10-29)
 
 
