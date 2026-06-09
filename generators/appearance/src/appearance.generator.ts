@@ -39,14 +39,14 @@ try {
     theme: themePath,
     prefix,
     varsFrom,
-  } = program.opts() as {
+  } = program.opts<{
     check?: boolean
     prefix?: string
     states?: string
     stylesFrom: string
     theme?: string
     varsFrom: string
-  }
+  }>()
 
   assert.ok(path && typeof path === 'string', 'Path to save the styles is required')
   assert.ok(lstatSync(path).isDirectory(), 'Path to save the styles should point to a directory.')

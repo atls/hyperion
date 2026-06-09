@@ -207,11 +207,14 @@ export class AppearanceStyleGenerator {
   }
 
   private generateAppearanceExport(): string {
-    const appearanceExport = this.#options.appearanceExport
+    const { appearanceExport } = this.#options
 
     if (!appearanceExport) return ''
 
-    const variants = this.#variants.map((variant) => `'${variant}'`).join(' | ')
+    const variants = [...this.#variants]
+      .sort()
+      .map((variant) => `'${variant}'`)
+      .join(' | ')
     const entries = this.#variants
       .map((variant) => {
         const states = Object.entries(appearanceExport.states)

@@ -1,6 +1,6 @@
 import type { ButtonAppearance }  from './interfaces.js'
 
-import { createAppearanceStyles } from '@atls-ui-generators/appearance'
+import { createAppearanceStyles } from '@atls-ui-generators/appearance/create'
 import { vars }                   from '@atls-ui-parts/theme'
 
 const appearanceBlueDefaultStyles = createAppearanceStyles({
@@ -99,7 +99,7 @@ export const appearanceDisabled = {
   ghostDisabled: appearanceGhostDisabledStyles,
 }
 
-export const buttonAppearances: Record<'blue' | 'lightBlue' | 'ghost', ButtonAppearance> = {
+export const buttonAppearances: Record<'blue' | 'ghost' | 'lightBlue', ButtonAppearance> = {
   blue: {
     default: appearanceVariant.blue,
     hover: appearanceHover.blueHover,

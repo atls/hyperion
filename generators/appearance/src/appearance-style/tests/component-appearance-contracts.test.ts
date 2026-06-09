@@ -16,12 +16,12 @@ const partsThemeImport = { import: '{ vars }', from: '@atls-ui-parts/theme' }
 const styleImport = { import: '{ style }', from: '@vanilla-extract/css' }
 const createAppearanceStylesImport = {
   import: '{ createAppearanceStyles }',
-  from: '@atls-ui-generators/appearance',
+  from: '@atls-ui-generators/appearance/create',
 }
 
 const checkContract = async (
   name: string,
-  generator: AppearanceStyleGenerator | AppearanceMapGenerator,
+  generator: AppearanceMapGenerator | AppearanceStyleGenerator,
   path: string
 ): Promise<void> => {
   try {

@@ -1,6 +1,6 @@
 import type { InputAppearance }   from './interfaces.js'
 
-import { createAppearanceStyles } from '@atls-ui-generators/appearance'
+import { createAppearanceStyles } from '@atls-ui-generators/appearance/create'
 import { vars }                   from '@atls-ui-parts/theme'
 
 const appearanceBlueDefaultStyles = createAppearanceStyles({
