@@ -13,7 +13,7 @@ export const ForwardEventsState = ({
   children,
   ref,
 }: ForwardEventsStateProps): ReactNode => {
-  const state = useEventsState(ref as RefObject<HTMLElement | null>, events)
+  const state = useEventsState(ref as RefObject<HTMLElement | null> | undefined, events)
 
   if (isValidElement(children)) {
     return cloneElement(children, state)
