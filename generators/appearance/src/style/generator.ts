@@ -1,29 +1,22 @@
-/* eslint-disable n/no-sync */
-import type { ImportSchema }           from './interfaces.js'
 import type { StyleDeclarationSchema } from './interfaces.js'
 import type { StyleFileSchema }        from './interfaces.js'
 
 import assert                          from 'node:assert/strict'
-import { readFileSync }                from 'node:fs'
-import { writeFileSync }               from 'node:fs'
 
 import { pretty }                      from '@atls-ui-generators/utils'
 
 import { capitalizeFirstLetter }       from '../utils/index.js'
 import { getAppearanceStylesName }     from '../utils/index.js'
-
-const defaultThemeImport: ImportSchema = {
-  import: '{ createAppearanceStyles, vars }',
-  from: '@atls-ui-parts/theme',
-}
+import { defaultThemeImport }          from './generator.constants.js'
+import { errors }                      from './generator.constants.js'
 
 export class StyleGenerator {
   readonly #schema: StyleFileSchema
 
   constructor(schema: StyleFileSchema) {
-    assert.ok(schema.prefix, 'Prefix is required')
-    assert.ok(schema.variants.length, 'Variants are required')
-    assert.ok(schema.states.length, 'States are required')
+    assert.ok(schema.prefix, errors.prefixRequired)
+    assert.ok(schema.variants.length, errors.variantsRequired)
+    assert.ok(schema.states.length, errors.statesRequired)
 
     this.#schema = schema
   }
@@ -34,23 +27,6 @@ export class StyleGenerator {
       ${await this.generateStatefulStyles()}
       ${await this.generateStyles()}
     `)
-  }
-
-  async generateFile(path: string, filename = 'appearance.css.ts'): Promise<void> {
-    this.assertPath(path)
-
-    const code = await this.generateFileContent()
-
-    writeFileSync(`${path}/${filename}`, code)
-  }
-
-  async checkFile(path: string, filename = 'appearance.css.ts'): Promise<void> {
-    this.assertPath(path)
-
-    const expected = await this.generateFileContent()
-    const actual = await pretty(readFileSync(`${path}/${filename}`, 'utf-8'))
-
-    assert.equal(actual, expected, `${path}/${filename} is out of date`)
   }
 
   private async generateImports(): Promise<string> {
@@ -174,12 +150,6 @@ export class StyleGenerator {
         kind: 'expression',
         value: `${varsName}.colors['${this.#schema.prefix}.${variant}.${state}.border']`,
       },
-    }
-  }
-
-  private assertPath(path: string): void {
-    if (path.split('').pop() === '/') {
-      throw new Error("Path should not end with '/' character")
     }
   }
 }

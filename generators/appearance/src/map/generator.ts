@@ -1,19 +1,18 @@
-/* eslint-disable n/no-sync */
 import type { ImportSchema }  from './interfaces.js'
 import type { MapFileSchema } from './interfaces.js'
 
 import assert                 from 'node:assert/strict'
-import { readFileSync }       from 'node:fs'
-import { writeFileSync }      from 'node:fs'
 
 import { pretty }             from '@atls-ui-generators/utils'
+
+import { errors }             from './generator.constants.js'
 
 export class MapGenerator {
   readonly #schema: MapFileSchema
 
   constructor(schema: MapFileSchema) {
-    assert.ok(schema.imports?.length, 'Imports are required')
-    assert.ok(schema.styles?.length || schema.exports?.length, 'Styles or exports are required')
+    assert.ok(schema.imports?.length, errors.importsRequired)
+    assert.ok(schema.styles?.length || schema.exports?.length, errors.contentRequired)
 
     this.#schema = schema
   }
@@ -24,23 +23,6 @@ export class MapGenerator {
       ${this.generateStyles()}
       ${this.generateExports()}
     `)
-  }
-
-  async generateFile(path: string, filename = 'appearance.css.ts'): Promise<void> {
-    this.assertPath(path)
-
-    const code = await this.generateFileContent()
-
-    writeFileSync(`${path}/${filename}`, code)
-  }
-
-  async checkFile(path: string, filename = 'appearance.css.ts'): Promise<void> {
-    this.assertPath(path)
-
-    const expected = await this.generateFileContent()
-    const actual = await pretty(readFileSync(`${path}/${filename}`, 'utf-8'))
-
-    assert.equal(actual, expected, `${path}/${filename} is out of date`)
   }
 
   private generateImports(): string {
@@ -94,11 +76,5 @@ export class MapGenerator {
         }`
       })
       .join('\n\n')
-  }
-
-  private assertPath(path: string): void {
-    if (path.split('').pop() === '/') {
-      throw new Error("Path should not end with '/' character")
-    }
   }
 }
