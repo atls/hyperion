@@ -1,5 +1,17 @@
 
 
+## [1.0.3](https://github.com/atls/hyperion/compare/@atls-ui-parts/events-state@1.0.3...@atls-ui-parts/events-state@1.0.3) (2026-06-12)
+
+
+### Bug Fixes
+
+
+* **events-state:** preserve optional ref handling ([25ffa80](https://github.com/atls/hyperion/commit/25ffa80dba69f961d80dd73092d6cebb36425ec6))
+
+
+
+
+
 ## [1.0.3](https://github.com/atls/hyperion/compare/@atls-ui-parts/events-state@1.0.2...@atls-ui-parts/events-state@1.0.3) (2025-04-28)
 
 
