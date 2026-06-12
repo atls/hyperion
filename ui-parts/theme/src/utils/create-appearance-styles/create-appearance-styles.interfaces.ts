@@ -6,5 +6,3 @@ export interface AppearanceStyles {
   border?: CSSProperties['border']
   borderColor?: CSSProperties['borderColor']
 }
-
-export type InputAppearanceStyles = AppearanceStyles
