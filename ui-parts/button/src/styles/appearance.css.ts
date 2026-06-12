@@ -1,8 +1,7 @@
 import type { ButtonAppearance }  from './interfaces.js'
 
+import { createAppearanceStyles } from '@atls-ui-parts/theme'
 import { vars }                   from '@atls-ui-parts/theme'
-
-import { createAppearanceStyles } from '../utils/index.js'
 
 const appearanceBlueDefaultStyles = createAppearanceStyles({
   fontColor: vars.colors['button.blue.default.font'],
@@ -27,7 +26,6 @@ const appearanceBlueDisabledStyles = createAppearanceStyles({
   backgroundColor: vars.colors['button.blue.disabled.background'],
   borderColor: vars.colors['button.blue.disabled.border'],
 })
-
 const appearanceLightBlueDefaultStyles = createAppearanceStyles({
   fontColor: vars.colors['button.lightBlue.default.font'],
   backgroundColor: vars.colors['button.lightBlue.default.background'],
@@ -51,8 +49,25 @@ const appearanceLightBlueDisabledStyles = createAppearanceStyles({
   backgroundColor: vars.colors['button.lightBlue.disabled.background'],
   borderColor: vars.colors['button.lightBlue.disabled.border'],
 })
+const appearanceGhostDefaultStyles = createAppearanceStyles({
+  fontColor: 'inherit',
+  backgroundColor: 'transparent',
+  border: 'none',
+})
 
-const appearanceGhostStyles = createAppearanceStyles({
+const appearanceGhostHoverStyles = createAppearanceStyles({
+  fontColor: 'inherit',
+  backgroundColor: 'transparent',
+  border: 'none',
+})
+
+const appearanceGhostPressedStyles = createAppearanceStyles({
+  fontColor: 'inherit',
+  backgroundColor: 'transparent',
+  border: 'none',
+})
+
+const appearanceGhostDisabledStyles = createAppearanceStyles({
   fontColor: 'inherit',
   backgroundColor: 'transparent',
   border: 'none',
@@ -61,27 +76,23 @@ const appearanceGhostStyles = createAppearanceStyles({
 export const appearanceVariant = {
   blue: appearanceBlueDefaultStyles,
   lightBlue: appearanceLightBlueDefaultStyles,
-  ghost: appearanceGhostStyles,
+  ghost: appearanceGhostDefaultStyles,
 }
-
 export const appearanceHover = {
   blueHover: appearanceBlueHoverStyles,
   lightBlueHover: appearanceLightBlueHoverStyles,
-  ghostHover: appearanceGhostStyles,
+  ghostHover: appearanceGhostHoverStyles,
 }
-
 export const appearancePressed = {
   bluePressed: appearanceBluePressedStyles,
   lightBluePressed: appearanceLightBluePressedStyles,
-  ghostPressed: appearanceGhostStyles,
+  ghostPressed: appearanceGhostPressedStyles,
 }
-
 export const appearanceDisabled = {
   blueDisabled: appearanceBlueDisabledStyles,
   lightBlueDisabled: appearanceLightBlueDisabledStyles,
-  ghostDisabled: appearanceGhostStyles,
+  ghostDisabled: appearanceGhostDisabledStyles,
 }
-
 export const buttonAppearances: Record<'blue' | 'ghost' | 'lightBlue', ButtonAppearance> = {
   blue: {
     default: appearanceVariant.blue,

@@ -1,8 +1,7 @@
 import type { InputAppearance }   from './interfaces.js'
 
+import { createAppearanceStyles } from '@atls-ui-parts/theme'
 import { vars }                   from '@atls-ui-parts/theme'
-
-import { createAppearanceStyles } from '../utils/index.js'
 
 const appearanceBlueDefaultStyles = createAppearanceStyles({
   fontColor: vars.colors['input.blue.default.font'],
@@ -15,7 +14,6 @@ const appearanceBlueDisabledStyles = createAppearanceStyles({
   backgroundColor: vars.colors['input.blue.disabled.background'],
   borderColor: vars.colors['input.blue.disabled.border'],
 })
-
 const appearanceWhiteDefaultStyles = createAppearanceStyles({
   fontColor: vars.colors['input.white.default.font'],
   backgroundColor: vars.colors['input.white.default.background'],
@@ -32,12 +30,10 @@ export const appearanceVariant = {
   blue: appearanceBlueDefaultStyles,
   white: appearanceWhiteDefaultStyles,
 }
-
 export const appearanceDisabled = {
   blueDisabled: appearanceBlueDisabledStyles,
   whiteDisabled: appearanceWhiteDisabledStyles,
 }
-
 export const inputAppearances: Record<'blue' | 'white', InputAppearance> = {
   blue: {
     default: appearanceVariant.blue,

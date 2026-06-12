@@ -270,11 +270,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-generators/appearance@workspace:generators/appearance":
+"@atls-ui-generators/appearance@workspace:*, @atls-ui-generators/appearance@workspace:generators/appearance":
   version: 0.0.0-use.local
   resolution: "@atls-ui-generators/appearance@workspace:generators/appearance"
   dependencies:
     "@atls-ui-generators/utils": "workspace:*"
+    "@atls-ui-parts/theme": "workspace:*"
     "@swc-node/register": "npm:1.9.0"
     "@swc/core": "npm:1.6.1"
     "@types/node": "npm:22.15.3"
@@ -290,7 +291,7 @@ __metadata:
     react: "*"
     react-dom: "*"
   bin:
-    generate-styles: dist/appearance.generator.js
+    generate-styles: dist/generator.js
   languageName: unknown
   linkType: soft
 
@@ -410,6 +411,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/button@workspace:ui-parts/button"
   dependencies:
+    "@atls-ui-generators/appearance": "workspace:*"
     "@atls-ui-parts/layout": "workspace:*"
     "@atls-ui-parts/theme": "workspace:*"
     "@atls-utils/use-hover": "workspace:*"
@@ -486,6 +488,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/checkbox@workspace:ui-parts/checkbox"
   dependencies:
+    "@atls-ui-generators/appearance": "workspace:*"
     "@atls-ui-parts/layout": "workspace:*"
     "@atls-ui-parts/theme": "workspace:*"
     "@storybook/react": "npm:8.6.12"
@@ -640,6 +643,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/input@workspace:ui-parts/input"
   dependencies:
+    "@atls-ui-generators/appearance": "workspace:*"
     "@atls-ui-parts/condition": "workspace:*"
     "@atls-ui-parts/events-state": "workspace:*"
     "@atls-ui-parts/layout": "workspace:*"

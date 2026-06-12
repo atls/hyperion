@@ -13,7 +13,6 @@ const boxGreenAppearanceStyles = style({
 const boxRedAppearanceStyles = style({
   border: vars.borders.normalRed,
 })
-
 export const boxAppearanceStyles = {
   blue: boxBlueAppearanceStyles,
   green: boxGreenAppearanceStyles,

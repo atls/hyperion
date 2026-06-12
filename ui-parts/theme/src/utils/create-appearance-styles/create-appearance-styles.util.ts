@@ -1,13 +1,13 @@
-import type { ButtonAppearanceStyles } from './create-appearance-styles.interfaces.js'
+import type { AppearanceStyles } from './create-appearance-styles.interfaces.js'
 
-import { style }                       from '@vanilla-extract/css'
+import { style }                 from '@vanilla-extract/css'
 
 export const createAppearanceStyles = ({
   fontColor,
   backgroundColor,
   border,
   borderColor,
-}: ButtonAppearanceStyles): string =>
+}: AppearanceStyles): string =>
   style({
     color: fontColor,
     backgroundColor,
