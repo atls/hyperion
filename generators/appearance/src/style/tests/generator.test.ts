@@ -1,20 +1,22 @@
 /* eslint-disable n/no-sync */
 
-import type { StyleSchema }     from '../../schema/index.js'
+import type { StyleSchema }             from '../../schema/index.js'
 
-import assert                   from 'node:assert/strict'
-import { existsSync }           from 'node:fs'
-import { mkdtempSync }          from 'node:fs'
-import { readFileSync }         from 'node:fs'
-import { rmSync }               from 'node:fs'
-import { writeFileSync }        from 'node:fs'
-import { tmpdir }               from 'node:os'
-import { join }                 from 'node:path'
-import { after }                from 'node:test'
-import { describe }             from 'node:test'
-import { it }                   from 'node:test'
+import assert                           from 'node:assert/strict'
+import { existsSync }                   from 'node:fs'
+import { mkdtempSync }                  from 'node:fs'
+import { readFileSync }                 from 'node:fs'
+import { rmSync }                       from 'node:fs'
+import { writeFileSync }                from 'node:fs'
+import { tmpdir }                       from 'node:os'
+import { join }                         from 'node:path'
+import { after }                        from 'node:test'
+import { describe }                     from 'node:test'
+import { it }                           from 'node:test'
 
-import { StyleSchemaGenerator } from '../../schema/index.js'
+import { GeneratorError }               from '../../generator.error.js'
+import { StyleSchemaFileOutdatedError } from '../../schema/file-outdated.error.js'
+import { StyleSchemaGenerator }         from '../../schema/index.js'
 
 const dirname = mkdtempSync(join(tmpdir(), 'appearance-schema-'))
 
@@ -102,5 +104,14 @@ describe('style schema generator', () => {
     writeFileSync(join(dirname, 'map.css.ts'), 'export const map = {}')
 
     await assert.rejects(async () => generator.check(), /map\.css\.ts is out of date/)
+  })
+
+  it('should expose generator error contract', () => {
+    const error = new StyleSchemaFileOutdatedError('map.css.ts')
+
+    assert.ok(error instanceof GeneratorError)
+    assert.equal(error.name, 'StyleSchemaFileOutdatedError')
+    assert.equal(error.code, 'schema_file_outdated')
+    assert.equal(error.message, 'map.css.ts is out of date')
   })
 })

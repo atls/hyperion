@@ -1,5 +1,7 @@
-export class StyleSchemaTargetPathError extends Error {
+import { GeneratorError } from '../generator.error.js'
+
+export class StyleSchemaTargetPathError extends GeneratorError {
   constructor() {
-    super("Path should not end with '/' character")
+    super('schema_target_path_invalid', "Path should not end with '/' character")
   }
 }

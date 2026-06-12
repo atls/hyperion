@@ -1,5 +1,7 @@
-export class StyleStatesRequiredError extends Error {
+import { GeneratorError } from '../generator.error.js'
+
+export class StyleStatesRequiredError extends GeneratorError {
   constructor() {
-    super('States are required')
+    super('style_states_required', 'States are required')
   }
 }

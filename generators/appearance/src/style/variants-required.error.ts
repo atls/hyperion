@@ -1,5 +1,7 @@
-export class StyleVariantsRequiredError extends Error {
+import { GeneratorError } from '../generator.error.js'
+
+export class StyleVariantsRequiredError extends GeneratorError {
   constructor() {
-    super('Variants are required')
+    super('style_variants_required', 'Variants are required')
   }
 }

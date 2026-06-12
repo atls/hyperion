@@ -1,5 +1,7 @@
-export class GeneratorModeRequiredError extends Error {
+import { GeneratorError } from './generator.error.js'
+
+export class GeneratorModeRequiredError extends GeneratorError {
   constructor() {
-    super('Exactly one of --check or --write is required')
+    super('generator_mode_required', 'Exactly one of --check or --write is required')
   }
 }

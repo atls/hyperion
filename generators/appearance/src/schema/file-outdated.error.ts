@@ -1,5 +1,7 @@
-export class StyleSchemaFileOutdatedError extends Error {
+import { GeneratorError } from '../generator.error.js'
+
+export class StyleSchemaFileOutdatedError extends GeneratorError {
   constructor(filePath: string) {
-    super(`${filePath} is out of date`)
+    super('schema_file_outdated', `${filePath} is out of date`)
   }
 }

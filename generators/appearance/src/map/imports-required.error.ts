@@ -1,5 +1,7 @@
-export class MapImportsRequiredError extends Error {
+import { GeneratorError } from '../generator.error.js'
+
+export class MapImportsRequiredError extends GeneratorError {
   constructor() {
-    super('Imports are required')
+    super('map_imports_required', 'Imports are required')
   }
 }

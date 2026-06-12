@@ -1,5 +1,7 @@
-export class StyleSchemaExportRequiredError extends Error {
+import { GeneratorError } from './generator.error.js'
+
+export class StyleSchemaExportRequiredError extends GeneratorError {
   constructor() {
-    super('Style schema file should export schema')
+    super('schema_export_required', 'Style schema file should export schema')
   }
 }
