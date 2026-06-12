@@ -38,8 +38,8 @@ export const TextareaContainer = ({
     <div
       ref={ref}
       {...otherProps}
-      className={clsx(className, String(otherProps?.className || ''), baseTextareaContainerStyles)}
-      style={{ ...style, ...otherProps?.style }}
+      className={clsx(className, String(otherProps.className || ''), baseTextareaContainerStyles)}
+      style={{ ...style, ...otherProps.style }}
     >
       {children}
     </div>

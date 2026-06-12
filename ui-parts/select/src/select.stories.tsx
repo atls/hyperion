@@ -9,7 +9,7 @@ import { Column }        from '@atls-ui-parts/layout'
 import { Row }           from '@atls-ui-parts/layout'
 import { Layout }        from '@atls-ui-parts/layout'
 
-import { Select }        from './select.component.js'
+import { Select }        from './component.js'
 
 const meta: Meta = {
   title: 'Components/Select',

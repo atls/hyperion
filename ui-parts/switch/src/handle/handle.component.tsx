@@ -13,8 +13,8 @@ export const Handle = ({ children, ...props }: PropsWithChildren): ReactNode => 
     <button
       type='button'
       {...otherProps}
-      className={clsx(baseHandleStyles, String(otherProps?.className || ''), className)}
-      style={{ ...style, ...otherProps?.style }}
+      className={clsx(baseHandleStyles, String(otherProps.className || ''), className)}
+      style={{ ...style, ...otherProps.style }}
     >
       {children}
     </button>

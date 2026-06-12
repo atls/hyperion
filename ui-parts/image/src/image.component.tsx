@@ -15,10 +15,10 @@ export const Image = ({ alt, width, height, ref, ...props }: ImageProps): ReactN
   return (
     <img
       ref={ref}
-      className={clsx(baseImageStyles, className, String(otherProps?.className || ''))}
+      className={clsx(baseImageStyles, className, String(otherProps.className || ''))}
       alt={alt}
       {...otherProps}
-      style={{ ...style, ...otherProps?.style }}
+      style={{ ...style, ...otherProps.style }}
       width={width}
       height={height}
     />

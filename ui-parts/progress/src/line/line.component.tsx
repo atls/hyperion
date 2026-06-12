@@ -1,5 +1,7 @@
 import type { ReactNode }        from 'react'
+import type { CSSProperties }    from 'react'
 
+import type { LinePercentProps } from '../line-percent/index.js'
 import type { ProgressGradient } from '../progress.interfaces.js'
 import type { LineProps }        from './line.interfaces.js'
 
@@ -9,6 +11,13 @@ import { vars }                  from '@atls-ui-parts/theme'
 
 import { LineContainer }         from '../line-container/index.js'
 import { LinePercent }           from '../line-percent/index.js'
+
+type LineBackgroundStyle = Pick<CSSProperties, 'background' | 'backgroundImage'>
+
+interface LineBackgroundProps {
+  background?: LinePercentProps['background']
+  style?: LineBackgroundStyle
+}
 
 export const sortGradient = (gradients: Record<string, string>): string => {
   let tempArr: Array<{ key: number; value: string }> = []
@@ -44,16 +53,42 @@ export const Line = ({
   trailColor,
   strokeWeight = 8,
 }: LineProps): ReactNode => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const getThemeColor = (color: Array<ProgressGradient | string> | string): any =>
-    vars?.colors[color as keyof typeof vars.colors] || color
+  const colors = vars.colors as Record<string, string | undefined>
+  const getThemeColor = (color: ProgressGradient | string): ProgressGradient | string =>
+    typeof color === 'string' && !color.startsWith('$') ? (colors[color] ?? color) : color
 
   const percentList = Array.isArray(percent) ? percent : [percent]
   const strokeColorList = Array.isArray(strokeColor)
-    ? getThemeColor(strokeColor)
-    : // @ts-expect-error types mismatch
-      [getThemeColor(strokeColor)]
+    ? strokeColor.map((color) => getThemeColor(color))
+    : [getThemeColor(strokeColor)]
   const [keysList, setKeysList] = useState<Array<number>>([])
+
+  const getBackgroundProps = (index: number): LineBackgroundProps => {
+    const currentColor = strokeColorList[index]
+    const fallbackColor = strokeColorList[strokeColorList.length - 1]
+
+    if (currentColor && typeof currentColor !== 'string') {
+      return { style: handleGradient(currentColor) }
+    }
+
+    if (!currentColor && fallbackColor && typeof fallbackColor !== 'string') {
+      return { style: handleGradient(fallbackColor) }
+    }
+
+    let backgroundValue: string | undefined
+
+    if (typeof currentColor === 'string') {
+      backgroundValue = currentColor
+    } else if (typeof fallbackColor === 'string') {
+      backgroundValue = fallbackColor
+    }
+
+    if (backgroundValue?.startsWith('$')) {
+      return { background: backgroundValue as LinePercentProps['background'] }
+    }
+
+    return { style: { background: backgroundValue } }
+  }
 
   const getKey = (index: number): number => {
     if (keysList[index]) {
@@ -74,29 +109,14 @@ export const Line = ({
     >
       {percentList
         .map((item, index) => {
-          let backgroundProps = {}
-
-          if (strokeColorList[index] && typeof strokeColorList[index] !== 'string') {
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-            backgroundProps = handleGradient(strokeColorList[index])
-          } else if (
-            !strokeColorList[index] &&
-            typeof strokeColorList[strokeColorList.length - 1] !== 'string'
-          ) {
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-            backgroundProps = handleGradient(strokeColorList[strokeColorList.length - 1])
-          } else {
-            backgroundProps = {
-              background: strokeColorList[index] || strokeColorList[strokeColorList.length - 1],
-            }
-          }
+          const backgroundProps = getBackgroundProps(index)
 
           return (
             <LinePercent
               key={getKey(index)}
-              style={{ width: `${item}%` }}
+              style={{ width: `${item}%`, ...backgroundProps.style }}
+              background={backgroundProps.background}
               strokeLinecap={strokeLinecap}
-              {...backgroundProps}
             />
           )
         })

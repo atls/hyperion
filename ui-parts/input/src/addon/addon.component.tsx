@@ -41,10 +41,10 @@ export const Addon = ({
     <div
       ref={ref}
       {...otherProps}
-      style={{ ...style, ...otherProps?.style }}
+      style={{ ...style, ...otherProps.style }}
       className={clsx(
         className,
-        String(otherProps?.className || ''),
+        String(otherProps.className || ''),
         baseAddonStyles,
         position === 'before' ? addonPositionBeforeStyles : addonPositionAfterStyles
       )}

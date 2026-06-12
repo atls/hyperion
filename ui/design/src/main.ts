@@ -1,10 +1,11 @@
 import type { StorybookConfig }          from '@storybook/react-webpack5'
 import type { CompatibleString }         from '@storybook/types'
 
+import { dirname }                       from 'node:path'
+import { join }                          from 'node:path'
+
 import { VanillaExtractPlugin }          from '@vanilla-extract/webpack-plugin'
 import { NormalModuleReplacementPlugin } from 'webpack'
-import { dirname }                       from 'path'
-import { join }                          from 'path'
 import MiniCssExtractPlugin              from 'mini-css-extract-plugin'
 
 import { UI_ADMIN_URL }                  from '@atls-ui/design/constants'
@@ -28,7 +29,6 @@ const config: StorybookConfig = {
           new VanillaExtractPlugin(),
           new MiniCssExtractPlugin(),
           new NormalModuleReplacementPlugin(/\.js$/, (resource: { request: string }) => {
-            // eslint-disable-next-line no-param-reassign
             resource.request = resource.request.replace('.js', '')
           }),
         ],
@@ -77,8 +77,7 @@ const config: StorybookConfig = {
     },
   },
   webpackFinal: async (webpackConfig) => {
-    if (webpackConfig?.resolve?.fallback) {
-      // eslint-disable-next-line no-param-reassign
+    if (webpackConfig.resolve?.fallback) {
       webpackConfig.resolve.fallback = {
         ...webpackConfig.resolve.fallback,
         assert: false,

@@ -22,8 +22,8 @@ export const Pagination = ({
     <div
       ref={ref}
       {...otherProps}
-      className={clsx(className, String(otherProps?.className || ''), basePaginationStyles)}
-      style={{ ...style, ...otherProps?.style }}
+      className={clsx(className, String(otherProps.className || ''), basePaginationStyles)}
+      style={{ ...style, ...otherProps.style }}
     >
       {children}
     </div>
