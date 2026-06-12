@@ -5,10 +5,11 @@ import type { StyleSchema }     from './schema/index.js'
 import assert                   from 'node:assert/strict'
 import { lstatSync }            from 'node:fs'
 import { dirname }              from 'node:path'
-import { join }                 from 'node:path'
+import { resolve }              from 'node:path'
 import { pathToFileURL }        from 'node:url'
 
 import { program }              from 'commander'
+import { tsImport }             from 'tsx/esm/api'
 
 import { createLogger }         from '@atls-ui-generators/utils'
 
@@ -30,11 +31,14 @@ try {
   assert.ok(schemaPath && typeof schemaPath === 'string', 'Path to style schema is required')
   assert.ok(check !== write, 'Exactly one of --check or --write is required')
 
-  const absoluteSchemaPath = join(process.cwd(), schemaPath)
+  const absoluteSchemaPath = resolve(schemaPath)
 
   assert.ok(lstatSync(absoluteSchemaPath).isFile(), 'Style schema path should point to a file')
 
-  const schemaModule = (await import(pathToFileURL(absoluteSchemaPath).href)) as {
+  const schemaModule = (await tsImport(
+    pathToFileURL(absoluteSchemaPath).href,
+    import.meta.url
+  )) as {
     default?: StyleSchema
     schema?: StyleSchema
   }

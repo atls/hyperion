@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "@atls-ui-generators/utils": "workspace:*",
-    "commander": "13.1.0"
+    "commander": "13.1.0",
+    "tsx": "4.19.3"
   },
   "devDependencies": {
     "@swc-node/register": "1.9.0",
@@ -30,7 +31,6 @@
     "@types/react": "19.1.2",
     "@vanilla-extract/css": "1.17.1",
     "@vanilla-extract/dynamic": "2.1.2",
-    "tsx": "4.19.3",
     "typescript": "5.5.4"
   },
   "peerDependencies": {
