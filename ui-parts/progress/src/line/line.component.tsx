@@ -1,6 +1,7 @@
 import type { ReactNode }        from 'react'
 import type { CSSProperties }    from 'react'
 
+import type { LinePercentProps } from '../line-percent/index.js'
 import type { ProgressGradient } from '../progress.interfaces.js'
 import type { LineProps }        from './line.interfaces.js'
 
@@ -11,7 +12,12 @@ import { vars }                  from '@atls-ui-parts/theme'
 import { LineContainer }         from '../line-container/index.js'
 import { LinePercent }           from '../line-percent/index.js'
 
-type LineBackgroundProps = Pick<CSSProperties, 'background' | 'backgroundImage'>
+type LineBackgroundStyle = Pick<CSSProperties, 'background' | 'backgroundImage'>
+
+interface LineBackgroundProps {
+  background?: LinePercentProps['background']
+  style?: LineBackgroundStyle
+}
 
 export const sortGradient = (gradients: Record<string, string>): string => {
   let tempArr: Array<{ key: number; value: string }> = []
@@ -49,7 +55,7 @@ export const Line = ({
 }: LineProps): ReactNode => {
   const colors = vars.colors as Record<string, string | undefined>
   const getThemeColor = (color: ProgressGradient | string): ProgressGradient | string =>
-    typeof color === 'string' ? (colors[color] ?? color) : color
+    typeof color === 'string' && !color.startsWith('$') ? (colors[color] ?? color) : color
 
   const percentList = Array.isArray(percent) ? percent : [percent]
   const strokeColorList = Array.isArray(strokeColor)
@@ -62,22 +68,26 @@ export const Line = ({
     const fallbackColor = strokeColorList[strokeColorList.length - 1]
 
     if (currentColor && typeof currentColor !== 'string') {
-      return handleGradient(currentColor)
+      return { style: handleGradient(currentColor) }
     }
 
     if (!currentColor && fallbackColor && typeof fallbackColor !== 'string') {
-      return handleGradient(fallbackColor)
+      return { style: handleGradient(fallbackColor) }
     }
 
-    let background: string | undefined
+    let backgroundValue: string | undefined
 
     if (typeof currentColor === 'string') {
-      background = currentColor
+      backgroundValue = currentColor
     } else if (typeof fallbackColor === 'string') {
-      background = fallbackColor
+      backgroundValue = fallbackColor
     }
 
-    return { background }
+    if (backgroundValue?.startsWith('$')) {
+      return { background: backgroundValue as LinePercentProps['background'] }
+    }
+
+    return { style: { background: backgroundValue } }
   }
 
   const getKey = (index: number): number => {
@@ -104,7 +114,8 @@ export const Line = ({
           return (
             <LinePercent
               key={getKey(index)}
-              style={{ width: `${item}%`, ...backgroundProps }}
+              style={{ width: `${item}%`, ...backgroundProps.style }}
+              background={backgroundProps.background}
               strokeLinecap={strokeLinecap}
             />
           )
