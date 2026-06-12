@@ -19,8 +19,8 @@ export const Space = ({
     <span
       ref={ref}
       {...otherProps}
-      className={clsx(className, String(otherProps?.className || ''))}
-      style={{ ...style, ...otherProps?.style }}
+      className={clsx(className, String(otherProps.className || ''))}
+      style={{ ...style, ...otherProps.style }}
     >
       {SYMBOL_SPACE.repeat(count)}
     </span>

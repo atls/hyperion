@@ -12,7 +12,7 @@ export const useScale = (): UseScaleResult => {
   const [mounted, setMounted] = useState<boolean>(false)
 
   useEffect(() => {
-    if (ref?.current?.parentElement) {
+    if (ref.current?.parentElement) {
       const childrenHeight = ref.current.offsetHeight
       const childrenWidth = ref.current.offsetWidth
       const { width, height } = getContentDimensions(ref.current.parentElement)

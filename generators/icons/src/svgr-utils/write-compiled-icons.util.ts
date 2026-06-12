@@ -3,8 +3,7 @@
 import type { Source } from '../icons.interfaces.js'
 
 import fs              from 'node:fs'
-
-import path            from 'path'
+import path            from 'node:path'
 
 import { pretty }      from '@atls-ui-generators/utils'
 

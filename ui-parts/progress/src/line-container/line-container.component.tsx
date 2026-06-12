@@ -22,10 +22,10 @@ export const LineContainer = ({
     <div
       ref={ref}
       {...otherProps}
-      style={{ ...style, ...otherProps?.style }}
+      style={{ ...style, ...otherProps.style }}
       className={clsx(
         className,
-        String(otherProps?.className || ''),
+        String(otherProps.className || ''),
         baseLineContainerStyles,
         trailLinecap === 'round' ? roundLineContainerStyles : squareLineContainerStyles
       )}

@@ -19,8 +19,8 @@ export const TitleElement = ({
     {
       ref,
       ...otherProps,
-      className: clsx(className, String(otherProps?.className || '')),
-      style: { ...style, ...otherProps?.style },
+      className: clsx(className, String(otherProps.className || '')),
+      style: { ...style, ...otherProps.style },
     },
     children
   )

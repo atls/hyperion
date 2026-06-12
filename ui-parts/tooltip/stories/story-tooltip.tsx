@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-no-leaked-render */
-
 import type { ReactElement }      from 'react'
 
 import type { StoryTooltipProps } from './interfaces.js'

@@ -37,10 +37,10 @@ export const Navigation = ({
     <div
       ref={ref}
       {...otherProps}
-      style={{ ...style, ...otherProps?.style }}
+      style={{ ...style, ...otherProps.style }}
       className={clsx(
         className,
-        String(otherProps?.className || ''),
+        String(otherProps.className || ''),
         baseNavigationStyles,
         show ? showNavigationStyles : hideNavigationStyles
       )}

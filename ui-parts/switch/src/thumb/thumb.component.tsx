@@ -26,11 +26,11 @@ export const Thumb = ({
       animate={checked && !disabled ? 'checked' : 'visible'}
       variants={variants}
       {...otherProps}
-      style={{ ...style, ...otherProps?.style }}
+      style={{ ...style, ...otherProps.style }}
       className={clsx(
         baseThumbStyles,
         disabled ? disabledThumbStyles : '',
-        String(otherProps?.className || ''),
+        String(otherProps.className || ''),
         className
       )}
     />

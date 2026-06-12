@@ -23,10 +23,10 @@ export const FooterElement = ({
     <footer
       ref={ref}
       {...otherProps}
-      style={{ ...style, ...otherProps?.style }}
+      style={{ ...style, ...otherProps.style }}
       className={clsx(
         className,
-        String(otherProps?.className || ''),
+        String(otherProps.className || ''),
         fill && fillStyles,
         fullViewportWidth && fullViewportWidthStyles,
         fullViewportHeight && fullViewportHeightStyles

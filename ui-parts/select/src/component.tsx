@@ -52,7 +52,7 @@ export const Select = ({
       >
         {triggerValue}
       </button>
-      {/* eslint-disable-next-line react/jsx-no-leaked-render */}
+      {}
       {isOpen &&
         renderMenu(
           <motion.ul
