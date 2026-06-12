@@ -13,21 +13,25 @@ export class StyleSchemaGenerator {
   ) {}
 
   async write(): Promise<void> {
-    for (const fileSchema of this.schema.files) {
-      await this.getGenerator(fileSchema).generateFile(
-        join(this.basePath, fileSchema.target),
-        fileSchema.filename
-      )
-    }
+    await Promise.all(
+      this.schema.files.map(async (fileSchema) => {
+        await this.getGenerator(fileSchema).generateFile(
+          join(this.basePath, fileSchema.target),
+          fileSchema.filename
+        )
+      })
+    )
   }
 
   async check(): Promise<void> {
-    for (const fileSchema of this.schema.files) {
-      await this.getGenerator(fileSchema).checkFile(
-        join(this.basePath, fileSchema.target),
-        fileSchema.filename
-      )
-    }
+    await Promise.all(
+      this.schema.files.map(async (fileSchema) => {
+        await this.getGenerator(fileSchema).checkFile(
+          join(this.basePath, fileSchema.target),
+          fileSchema.filename
+        )
+      })
+    )
   }
 
   private getGenerator(fileSchema: StyleSchemaFile): MapGenerator | StyleGenerator {
