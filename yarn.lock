@@ -275,6 +275,7 @@ __metadata:
   resolution: "@atls-ui-generators/appearance@workspace:generators/appearance"
   dependencies:
     "@atls-ui-generators/utils": "workspace:*"
+    "@atls-ui-parts/theme": "workspace:*"
     "@swc-node/register": "npm:1.9.0"
     "@swc/core": "npm:1.6.1"
     "@types/node": "npm:22.15.3"

@@ -4,7 +4,8 @@
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./create": "./src/create/index.ts"
   },
   "main": "./src/index.ts",
   "bin": {
@@ -21,6 +22,7 @@
   },
   "dependencies": {
     "@atls-ui-generators/utils": "workspace:*",
+    "@atls-ui-parts/theme": "workspace:*",
     "commander": "13.1.0",
     "tsx": "4.19.3"
   },
@@ -47,6 +49,11 @@
         "import": "./dist/index.js",
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
+      },
+      "./create": {
+        "import": "./dist/create/index.js",
+        "types": "./dist/create/index.d.ts",
+        "default": "./dist/create/index.js"
       }
     },
     "main": "dist/index.js",
