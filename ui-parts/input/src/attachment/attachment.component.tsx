@@ -22,8 +22,8 @@ export const Attachment = ({
     <div
       ref={ref}
       {...otherProps}
-      className={clsx(className, attachmentBaseStyles, String(otherProps?.className || ''))}
-      style={{ ...style, ...otherProps?.style }}
+      className={clsx(className, attachmentBaseStyles, String(otherProps.className || ''))}
+      style={{ ...style, ...otherProps.style }}
     >
       {children}
     </div>

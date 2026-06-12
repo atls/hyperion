@@ -33,10 +33,10 @@ export const DividedFieldsContainer = ({
     <div
       ref={ref}
       {...otherProps}
-      style={{ ...style, ...otherProps?.style }}
+      style={{ ...style, ...otherProps.style }}
       className={clsx(
         className,
-        String(otherProps?.className || ''),
+        String(otherProps.className || ''),
         baseDividedFieldsContainerStyles
       )}
     >

@@ -20,8 +20,8 @@ export const Link = ({ children, href, ref, ...props }: LinkProps): ReactNode =>
       ref={ref}
       href={href}
       {...otherProps}
-      className={clsx(baseLinkStyles, String(otherProps?.className || ''), className)}
-      style={{ ...style, ...otherProps?.style }}
+      className={clsx(baseLinkStyles, String(otherProps.className || ''), className)}
+      style={{ ...style, ...otherProps.style }}
     >
       {children}
     </BaseLink>

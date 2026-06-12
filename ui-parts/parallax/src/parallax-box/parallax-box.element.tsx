@@ -41,7 +41,7 @@ export const ParallaxBoxElement = ({
     })
   }
 
-  const displayStyle = animatedStyles?.display
+  const displayStyle = Object.hasOwn(animatedStyles, 'display')
     ? { display: getTransformDisplay(animatedStyles.display) }
     : {}
 
@@ -49,8 +49,8 @@ export const ParallaxBoxElement = ({
     <motion.div
       ref={ref}
       {...otherProps}
-      className={clsx(className, String(otherProps?.className || ''))}
-      style={{ ...style, ...otherProps?.style, ...animatedStyles, ...displayStyle }}
+      className={clsx(className, String(otherProps.className || ''))}
+      style={{ ...style, ...otherProps.style, ...animatedStyles, ...displayStyle }}
     >
       {children}
     </motion.div>

@@ -64,7 +64,7 @@ export const useCardControls = ({
   }
 
   const onCloseBeforeScroll = ({ deltaY }: { deltaY: number }): void => {
-    if (!isScrolled && deltaY < 0) {
+    if (!isScrolled.current && deltaY < 0) {
       hide()
     }
   }
@@ -80,7 +80,7 @@ export const useCardControls = ({
   }, [])
 
   useEffect(() => {
-    if (cardNode?.current) {
+    if (cardNode.current) {
       setCardHeight(getContentDimensions(cardNode.current).height)
     }
   }, [])

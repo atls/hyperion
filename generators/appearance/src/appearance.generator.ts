@@ -38,7 +38,7 @@ try {
 
   const exports = processFile(absoluteThemePath)
 
-  const colors = Object.values(exports)?.[0] as ColorSchemes
+  const colors = Object.values(exports)[0] as ColorSchemes
 
   const generator = new AppearanceStyleGenerator(prefix, colors)
 

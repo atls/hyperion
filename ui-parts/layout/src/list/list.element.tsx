@@ -22,8 +22,8 @@ export const ListElement = ({
     {
       ref,
       ...otherProps,
-      style: { ...style, ...otherProps?.style },
-      className: clsx(className, String(otherProps?.className || ''), fill && fillStyles),
+      style: { ...style, ...otherProps.style },
+      className: clsx(className, String(otherProps.className || ''), fill && fillStyles),
     },
     children
   )

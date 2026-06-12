@@ -16,8 +16,8 @@ export const TextElement = ({
     <span
       ref={ref}
       {...otherProps}
-      className={clsx(className, String(otherProps?.className || ''))}
-      style={{ ...style, ...otherProps?.style }}
+      className={clsx(className, String(otherProps.className || ''))}
+      style={{ ...style, ...otherProps.style }}
     >
       {children}
     </span>

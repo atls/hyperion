@@ -1,6 +1,6 @@
 import type { MotionValue } from 'framer-motion'
 
-import { EventEmitter }     from 'events'
+import { EventEmitter }     from 'node:events'
 
 interface StoreState {
   scrollY: MotionValue<number> | null
