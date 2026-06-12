@@ -10,10 +10,3 @@ export const cliOptions = {
   check: 'Check generated styles without writing files',
   write: 'Write generated styles',
 }
-
-export const errors = {
-  schemaPathRequired: 'Path to style schema is required',
-  modeRequired: 'Exactly one of --check or --write is required',
-  schemaPathFileRequired: 'Style schema path should point to a file',
-  schemaExportRequired: 'Style schema file should export schema',
-}

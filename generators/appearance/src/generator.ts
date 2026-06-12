@@ -1,25 +1,28 @@
 /* eslint-disable n/no-sync */
 
-import type { GeneratorOptions }  from './generator.interfaces.js'
-import type { StyleSchemaModule } from './generator.interfaces.js'
+import type { GeneratorOptions }            from './generator.interfaces.js'
+import type { StyleSchemaModule }           from './generator.interfaces.js'
 
-import assert                     from 'node:assert/strict'
-import { lstatSync }              from 'node:fs'
-import { dirname }                from 'node:path'
-import { resolve }                from 'node:path'
-import { pathToFileURL }          from 'node:url'
+import { existsSync }                       from 'node:fs'
+import { lstatSync }                        from 'node:fs'
+import { dirname }                          from 'node:path'
+import { resolve }                          from 'node:path'
+import { pathToFileURL }                    from 'node:url'
 
-import { program }                from 'commander'
-import { tsImport }               from 'tsx/esm/api'
+import { program }                          from 'commander'
+import { tsImport }                         from 'tsx/esm/api'
 
-import { createLogger }           from '@atls-ui-generators/utils'
+import { createLogger }                     from '@atls-ui-generators/utils'
 
-import { StyleSchemaGenerator }   from './schema/index.js'
-import { cliArguments }           from './generator.constants.js'
-import { cliName }                from './generator.constants.js'
-import { cliOptions }             from './generator.constants.js'
-import { errors }                 from './generator.constants.js'
-import { loggerName }             from './generator.constants.js'
+import { GeneratorModeRequiredError }       from './generator-mode-required.error.js'
+import { StyleSchemaExportRequiredError }   from './schema-export-required.error.js'
+import { StyleSchemaPathFileRequiredError } from './schema-path-file-required.error.js'
+import { StyleSchemaPathRequiredError }     from './schema-path-required.error.js'
+import { StyleSchemaGenerator }             from './schema/index.js'
+import { cliArguments }                     from './generator.constants.js'
+import { cliName }                          from './generator.constants.js'
+import { cliOptions }                       from './generator.constants.js'
+import { loggerName }                       from './generator.constants.js'
 
 const logger = createLogger(loggerName)
 
@@ -34,12 +37,19 @@ try {
   const schemaPath = program.args.at(0)
   const { check, write } = program.opts<GeneratorOptions>()
 
-  assert.ok(schemaPath && typeof schemaPath === 'string', errors.schemaPathRequired)
-  assert.ok(check !== write, errors.modeRequired)
+  if (!schemaPath || typeof schemaPath !== 'string') {
+    throw new StyleSchemaPathRequiredError()
+  }
+
+  if (check === write) {
+    throw new GeneratorModeRequiredError()
+  }
 
   const absoluteSchemaPath = resolve(schemaPath)
 
-  assert.ok(lstatSync(absoluteSchemaPath).isFile(), errors.schemaPathFileRequired)
+  if (!existsSync(absoluteSchemaPath) || !lstatSync(absoluteSchemaPath).isFile()) {
+    throw new StyleSchemaPathFileRequiredError()
+  }
 
   const schemaModule = (await tsImport(
     pathToFileURL(absoluteSchemaPath).href,
@@ -47,7 +57,9 @@ try {
   )) as StyleSchemaModule
   const schema = schemaModule.default ?? schemaModule.schema
 
-  assert.ok(schema, errors.schemaExportRequired)
+  if (!schema) {
+    throw new StyleSchemaExportRequiredError()
+  }
 
   const generator = new StyleSchemaGenerator(schema, dirname(absoluteSchemaPath))
 

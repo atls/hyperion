@@ -4,7 +4,6 @@ import type { StyleSchemaFileGenerator } from './generator.interfaces.js'
 import type { StyleSchema }              from './interfaces.js'
 import type { StyleSchemaFile }          from './interfaces.js'
 
-import assert                            from 'node:assert/strict'
 import { readFileSync }                  from 'node:fs'
 import { writeFileSync }                 from 'node:fs'
 import { join }                          from 'node:path'
@@ -13,9 +12,10 @@ import { pretty }                        from '@atls-ui-generators/utils'
 
 import { MapGenerator }                  from '../map/generator.js'
 import { StyleGenerator }                from '../style/index.js'
-import { defaultFilename }               from './generator.constants.js'
-import { errors }                        from './generator.constants.js'
-import { getOutdatedFileMessage }        from './generator.constants.js'
+import { StyleSchemaFileOutdatedError }  from './file-outdated.error.js'
+import { StyleSchemaTargetPathError }    from './target-path.error.js'
+
+const defaultFilename = 'appearance.css.ts'
 
 export class StyleSchemaGenerator {
   constructor(
@@ -50,13 +50,17 @@ export class StyleSchemaGenerator {
     const expected = await this.getGenerator(fileSchema).generateFileContent()
     const actual = await pretty(readFileSync(filePath, 'utf-8'))
 
-    assert.equal(actual, expected, getOutdatedFileMessage(filePath))
+    if (actual !== expected) {
+      throw new StyleSchemaFileOutdatedError(filePath)
+    }
   }
 
   private getFilePath(fileSchema: StyleSchemaFile): string {
     const targetPath = join(this.basePath, fileSchema.target)
 
-    assert.ok(!targetPath.endsWith('/'), errors.targetPathTrailingSlash)
+    if (targetPath.endsWith('/')) {
+      throw new StyleSchemaTargetPathError()
+    }
 
     return join(targetPath, fileSchema.filename ?? defaultFilename)
   }

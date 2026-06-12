@@ -1,18 +1,22 @@
-import type { ImportSchema }  from './interfaces.js'
-import type { MapFileSchema } from './interfaces.js'
+import type { ImportSchema }       from './interfaces.js'
+import type { MapFileSchema }      from './interfaces.js'
 
-import assert                 from 'node:assert/strict'
+import { pretty }                  from '@atls-ui-generators/utils'
 
-import { pretty }             from '@atls-ui-generators/utils'
-
-import { errors }             from './generator.constants.js'
+import { MapContentRequiredError } from './content-required.error.js'
+import { MapImportsRequiredError } from './imports-required.error.js'
 
 export class MapGenerator {
   readonly #schema: MapFileSchema
 
   constructor(schema: MapFileSchema) {
-    assert.ok(schema.imports?.length, errors.importsRequired)
-    assert.ok(schema.styles?.length || schema.exports?.length, errors.contentRequired)
+    if (!schema.imports?.length) {
+      throw new MapImportsRequiredError()
+    }
+
+    if (!schema.styles?.length && !schema.exports?.length) {
+      throw new MapContentRequiredError()
+    }
 
     this.#schema = schema
   }

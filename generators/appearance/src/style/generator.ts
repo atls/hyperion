@@ -1,22 +1,30 @@
 import type { StyleDeclarationSchema } from './interfaces.js'
 import type { StyleFileSchema }        from './interfaces.js'
 
-import assert                          from 'node:assert/strict'
-
 import { pretty }                      from '@atls-ui-generators/utils'
 
+import { StylePrefixRequiredError }    from './prefix-required.error.js'
+import { StyleStatesRequiredError }    from './states-required.error.js'
+import { StyleVariantsRequiredError }  from './variants-required.error.js'
 import { capitalizeFirstLetter }       from '../utils/index.js'
 import { getAppearanceStylesName }     from '../utils/index.js'
 import { defaultThemeImport }          from './generator.constants.js'
-import { errors }                      from './generator.constants.js'
 
 export class StyleGenerator {
   readonly #schema: StyleFileSchema
 
   constructor(schema: StyleFileSchema) {
-    assert.ok(schema.prefix, errors.prefixRequired)
-    assert.ok(schema.variants.length, errors.variantsRequired)
-    assert.ok(schema.states.length, errors.statesRequired)
+    if (!schema.prefix) {
+      throw new StylePrefixRequiredError()
+    }
+
+    if (!schema.variants.length) {
+      throw new StyleVariantsRequiredError()
+    }
+
+    if (!schema.states.length) {
+      throw new StyleStatesRequiredError()
+    }
 
     this.#schema = schema
   }
