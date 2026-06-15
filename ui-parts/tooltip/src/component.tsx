@@ -29,16 +29,15 @@ export const Tooltip = ({
   const { arrowRef, refs, isOpen, context, floatingStyles, getFloatingProps, getReferenceProps } =
     useFloat({ open, role: 'tooltip', ...props })
 
+  const defaultContainer = container === undefined
   const containerElement = container ?? <Container />
-  const defaultAppearance = container === undefined ? tooltipAppearances.default : undefined
-  const defaultShape = container === undefined ? tooltipShapes.default : undefined
-  const containerAppearance = appearance ?? defaultAppearance
-  const containerShape = shape ?? defaultShape
   const TriggerElement = cloneElement(children, { ref: refs.setReference, ...getReferenceProps() })
   const containerClassName = [
     containerElement.props.className,
-    containerAppearance?.container,
-    containerShape?.container,
+    defaultContainer && tooltipAppearances.default.container,
+    defaultContainer && tooltipShapes.default.container,
+    appearance?.container,
+    shape?.container,
   ]
     .filter(Boolean)
     .join(' ')
