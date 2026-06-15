@@ -1,15 +1,14 @@
-import type { Meta }          from '@storybook/react'
-import type { StoryObj }      from '@storybook/react'
+import type { Meta }             from '@storybook/react'
+import type { StoryObj }         from '@storybook/react'
 
-import type { CheckboxProps } from '../src/checkbox.interfaces.js'
+import type { CheckboxProps }    from '../src/checkbox.interfaces.js'
 
-import { Column }             from '@atls-ui-parts/layout'
-import { Layout }             from '@atls-ui-parts/layout'
+import { Column }                from '@atls-ui-parts/layout'
+import { Layout }                from '@atls-ui-parts/layout'
 
-import { Checkbox }           from '../src/checkbox.component.js'
-import { checkboxAppearances } from '../src/index.js'
-import { checkboxShapes }      from '../src/index.js'
-
+import { Checkbox }              from '../src/checkbox.component.js'
+import { checkboxAppearances }   from '../src/index.js'
+import { checkboxShapes }        from '../src/index.js'
 import { customBoxStyles }       from './styles.css.js'
 import { customCheckStyles }     from './styles.css.js'
 import { customContainerStyles } from './styles.css.js'

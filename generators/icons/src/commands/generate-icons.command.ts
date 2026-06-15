@@ -47,7 +47,7 @@ export class GenerateIconsCommand extends BaseIconsCommand {
 
         const exports = processFile(replacementsPath)
 
-        replacements = Object.values(exports)?.[0] as Replacements
+        replacements = Object.values(exports)[0] as Replacements
       }
 
       this.logger.info(`Icon generation started into ${outputPath}`)

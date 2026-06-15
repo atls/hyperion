@@ -80,7 +80,7 @@ export const useCarousel = ({
   ])
 
   useEffect(() => {
-    if (ref?.current) {
+    if (ref.current) {
       const { width, height } = getContentDimensions(ref.current)
       const defaultWrapperSize = direction === 'horizontal' ? width : height
       const defaultSlideSize =

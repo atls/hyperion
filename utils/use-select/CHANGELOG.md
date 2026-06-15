@@ -1,5 +1,12 @@
 
 
+## [1.1.1](https://github.com/atls/hyperion/compare/@atls-utils/use-select@1.1.1...@atls-utils/use-select@1.1.1) (2026-06-12)
+
+
+
+
+
+
 ## [1.1.1](https://github.com/atls/hyperion/compare/@atls-utils/use-select@1.0.6...@atls-utils/use-select@1.1.1) (2025-10-25)
 
 

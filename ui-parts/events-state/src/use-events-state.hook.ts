@@ -9,7 +9,7 @@ import { fillOppositeEvents } from './events-state.utils.js'
 import { mergeState }         from './events-state.utils.js'
 
 export const useEventsState = (
-  ref: RefObject<HTMLElement>,
+  ref?: RefObject<HTMLElement | null>,
   originalEvents: Array<string> = []
 ): EventsState => {
   const events = fillOppositeEvents(originalEvents)

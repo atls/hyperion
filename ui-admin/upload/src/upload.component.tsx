@@ -37,7 +37,7 @@ export const Upload = ({
       let preview: string | null = null
 
       if (onPreview) {
-        preview = URL.createObjectURL(file)
+        preview = window.URL.createObjectURL(file)
 
         onPreview({ id: null, url: preview, preview })
       }

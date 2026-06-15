@@ -9,7 +9,6 @@ import { useEffect }                       from 'react'
 
 import { useFloat }                        from '@atls-utils/use-float'
 
-// eslint-disable-next-line
 const useSelect = ({ items, onChange, placement = 'bottom', ...props }: UseSelectProps) => {
   const {
     isOpen,
@@ -38,7 +37,7 @@ const useSelect = ({ items, onChange, placement = 'bottom', ...props }: UseSelec
   const renderMenu = (menu: ReactNode): ReactNode => (
     <FloatingPortal>
       <div ref={refs.setFloating} style={floatingStyles} {...getFloatingProps()}>
-        {/* eslint-disable-next-line react/jsx-no-leaked-render */}
+        {}
         <AnimatePresence>{isOpen && menu}</AnimatePresence>
       </div>
     </FloatingPortal>

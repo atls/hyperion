@@ -16,7 +16,7 @@ export const useKeyboard = (
       }
     }
 
-    const current = node?.current || null
+    const current = node.current || null
 
     // @ts-expect-error correct overload
     current?.addEventListener('keydown', onKeyDownHandler)

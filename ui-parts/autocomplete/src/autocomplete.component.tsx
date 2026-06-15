@@ -96,7 +96,7 @@ export const Autocomplete = ({
       {suffix}
       <Box ref={refs.setFloating} style={floatingStyles} {...getFloatingProps()}>
         <AnimatePresence>
-          {/* eslint-disable-next-line react/jsx-no-leaked-render */}
+          {}
           {isOpen && (
             <Layer>
               <Menu {...getMenuProps({ style: {} })}>

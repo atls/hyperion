@@ -96,14 +96,7 @@ export const Checkbox = ({
         tabIndex={-1}
         type='checkbox'
       />
-      <div
-        className={clsx(
-          boxBaseStyles,
-          shape.box,
-          appearance.box,
-          classNames?.box
-        )}
-      >
+      <div className={clsx(boxBaseStyles, shape.box, appearance.box, classNames?.box)}>
         <div
           className={clsx(
             checkBaseStyles,

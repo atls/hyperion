@@ -41,7 +41,7 @@ export const SimpleUpload = ({
       let preview: string
 
       if (onPreview) {
-        preview = URL.createObjectURL(file)
+        preview = window.URL.createObjectURL(file)
 
         onPreview({
           id: null,

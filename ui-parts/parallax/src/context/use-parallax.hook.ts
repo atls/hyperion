@@ -10,11 +10,6 @@ import { Context }            from './parallax.context.js'
 
 export const useParallax = (): [MotionValue<number> | null, number] => {
   const store: ParallaxStore = useContext(Context)
-
-  if (!store) {
-    throw new Error('Missing <ParallaxProvider>')
-  }
-
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [state, setState] = useState(store.getState())
 

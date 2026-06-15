@@ -5,7 +5,8 @@
 ```
 generate-styles --help
 
-generate-styles ./mocks -t ./mocks/colors.ts -p button
+generate-styles ./src/styles/schema.ts --check
+generate-styles ./src/styles/schema.ts --write
 ```
 
 ### Разработка
@@ -13,5 +14,5 @@ generate-styles ./mocks -t ./mocks/colors.ts -p button
 Запуск тестов
 
 ```
-yarn test unit appearance-styles.generator.test.ts
+yarn test unit generator.test.ts
 ```

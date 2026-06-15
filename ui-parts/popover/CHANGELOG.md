@@ -1,5 +1,12 @@
 
 
+## [1.1.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/popover@1.1.4...@atls-ui-parts/popover@1.1.4) (2026-06-12)
+
+
+
+
+
+
 ## [1.1.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/popover@1.1.3...@atls-ui-parts/popover@1.1.4) (2026-06-09)
 
 

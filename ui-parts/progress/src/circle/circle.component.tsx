@@ -28,7 +28,7 @@ const Circle = ({
 }: PropsWithChildren<CircleProps>): ReactNode => {
   // @ts-expect-error correct type color
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const getThemeColor = (color: string): any => vars?.colors[color] || color
+  const getThemeColor = (color: string): any => vars.colors[color] || color
   // @ts-expect-error types mismatch
   const gradientId = getGradientId(strokeColor)
   const trailThemeColor = getThemeColor(trailColor)

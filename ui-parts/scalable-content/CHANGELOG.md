@@ -1,5 +1,12 @@
 
 
+## [1.0.6](https://github.com/atls/hyperion/compare/@atls-ui-parts/scalable-content@1.0.6...@atls-ui-parts/scalable-content@1.0.6) (2026-06-12)
+
+
+
+
+
+
 ## [1.0.6](https://github.com/atls/hyperion/compare/@atls-ui-parts/scalable-content@1.0.5...@atls-ui-parts/scalable-content@1.0.6) (2025-10-25)
 
 

@@ -13,8 +13,8 @@ export const Divider = ({ ref, ...props }: DividerProps): ReactNode => {
     <span
       ref={ref}
       {...props}
-      className={clsx(className, String(otherProps?.className || ''))}
-      style={{ ...style, ...otherProps?.style }}
+      className={clsx(className, String(otherProps.className || ''))}
+      style={{ ...style, ...otherProps.style }}
     />
   )
 }
