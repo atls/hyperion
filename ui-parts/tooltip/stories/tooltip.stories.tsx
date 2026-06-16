@@ -1,19 +1,14 @@
-import type { TooltipProps }              from '@atls-ui-parts/tooltip'
 import type { Meta }                      from '@storybook/react'
 import type { StoryObj }                  from '@storybook/react'
 import type { ReactElement }              from 'react'
+
+import type { StoryTooltipProps }         from './interfaces.js'
 
 import { Tooltip }                        from '@atls-ui-parts/tooltip'
 
 import { storyContainerAppearanceStyles } from './styles.css.js'
 import { storyContainerShapeStyles }      from './styles.css.js'
 import { storyTriggerStyles }             from './styles.css.js'
-
-interface StoryTooltipProps
-  extends Pick<TooltipProps, 'animated' | 'arrow' | 'offset' | 'placement' | 'trigger'> {
-  customContainer: boolean
-  styledContainer: boolean
-}
 
 const storyContainerClassName = [storyContainerAppearanceStyles, storyContainerShapeStyles].join(
   ' '
