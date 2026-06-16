@@ -20,15 +20,18 @@ export const storyTriggerStyles = style({
   cursor: 'pointer',
 })
 
-export const storyContainerStyles = style({
+export const storyContainerAppearanceStyles = style({
+  backgroundColor: vars.colors.white,
+  boxShadow: vars.shadows.gordonsgreen,
+})
+
+export const storyContainerShapeStyles = style({
   display: 'flex',
   flexDirection: 'column',
   minWidth: STORY_CONTAINER_MIN_WIDTH,
   minHeight: STORY_CONTAINER_MIN_HEIGHT,
   padding: vars.space.g10,
   margin: 0,
-  backgroundColor: vars.colors.white,
-  boxShadow: vars.shadows.gordonsgreen,
   borderRadius: vars.radii.f8,
   zIndex: STORY_CONTAINER_Z_INDEX,
 })
@@ -36,32 +39,4 @@ export const storyContainerStyles = style({
 export const storyContainerCloseStyles = style({
   cursor: 'pointer',
   color: vars.colors.blueProtective,
-})
-
-export const storyRootAppearanceStyles = style({
-  backgroundColor: vars.colors.gray,
-  boxShadow: vars.shadows.portage,
-})
-
-export const storyRootShapeStyles = style({
-  borderRadius: vars.radii.f8,
-})
-
-export const storyTitleAppearanceStyles = style({
-  color: vars.colors.white,
-  backgroundColor: vars.colors.blue,
-  borderBottom: vars.borders.normalBlue,
-})
-
-export const storyTitleShapeStyles = style({
-  padding: `${vars.space.g8} ${vars.space.g16}`,
-})
-
-export const storyContentAppearanceStyles = style({
-  color: vars.colors.black,
-  backgroundColor: vars.colors.white,
-})
-
-export const storyContentShapeStyles = style({
-  padding: `${vars.space.g16} ${vars.space.g24}`,
 })
