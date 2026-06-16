@@ -4,8 +4,7 @@ import { vars }  from '@atls-ui-admin/theme'
 
 export const containerStyles = style({
   position: 'relative',
-  borderWidth: 2,
-  borderStyle: 'dashed',
+  border: vars.borders.dashedGray,
   cursor: 'pointer',
   outline: 'none',
   borderColor: vars.colors.black,
