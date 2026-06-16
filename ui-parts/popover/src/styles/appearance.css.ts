@@ -10,15 +10,9 @@ const rootDefaultAppearanceStyles = style({
   boxShadow: vars.shadows.gordonsgreen,
 })
 
-const titleDefaultAppearanceStyles = style({
-  borderBottom: vars.borders.normalCloudyWhite,
-})
-
 export const appearanceVariant = {
   default: {
     root: rootDefaultAppearanceStyles,
-    title: titleDefaultAppearanceStyles,
-    content: '',
   },
 }
 

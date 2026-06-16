@@ -1,7 +1,1 @@
 export const STORY_TRIGGER_HEIGHT = 32
-
-export const STORY_CONTAINER_MIN_WIDTH = 100
-
-export const STORY_CONTAINER_MIN_HEIGHT = 64
-
-export const STORY_CONTAINER_Z_INDEX = 1000

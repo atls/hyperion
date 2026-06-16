@@ -1,7 +1,5 @@
 export interface PopoverStyleSlots {
   root: string
-  title: string
-  content: string
 }
 
 export type PopoverAppearance = PopoverStyleSlots
