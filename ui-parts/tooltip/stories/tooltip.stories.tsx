@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-no-leaked-render */
-
 import type { TooltipProps }              from '@atls-ui-parts/tooltip'
 import type { Meta }                      from '@storybook/react'
 import type { StoryObj }                  from '@storybook/react'
