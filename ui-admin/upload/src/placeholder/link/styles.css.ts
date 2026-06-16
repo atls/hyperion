@@ -2,8 +2,10 @@ import { style } from '@vanilla-extract/css'
 
 import { vars }  from '@atls-ui-admin/theme'
 
-export const basePlaceholderAcceptStyles = style({
+export const baseLinkStyles = style({
   padding: `${vars.space.g8} ${vars.space.zero}`,
-  color: vars.colors['icons.placeholder'],
+  // @ts-expect-error correct text.blue field
+  color: vars.colors['text.blue'],
+  textDecoration: 'underline',
   fontFamily: vars.fonts.primary,
 })
