@@ -1681,6 +1681,7 @@ const RAW_RUNTIME_STATE =
           ["@atls-ui-parts/condition", "virtual:da655f76fb0a7abb1a892608b634316179378c6672ef2e4237cfc638bc59c4632d4d90add99f0f36fc3476fd7ba3bfb9b8da134f89edd82cecf6748f1bd98e54#workspace:ui-parts/condition"],\
           ["@atls-ui-parts/layout", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#workspace:ui-parts/layout"],\
           ["@atls-ui-parts/popover", "workspace:ui-parts/popover"],\
+          ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
           ["@atls-utils/use-float", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:utils/use-float"],\
           ["@floating-ui/react", "virtual:bdec61daa5ce18b211e41086a87aa58babcd016eed745eb318a2389812d34b0215bd01c4e05f4de11cfc30bd0259efe6cace4826920dba58cacb6c2dd7978d3e#npm:0.27.8"],\
           ["@storybook/react", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:8.6.12"],\

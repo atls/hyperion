@@ -1,32 +1,67 @@
-import { style } from '@vanilla-extract/css'
+import { style }                      from '@vanilla-extract/css'
+
+import { vars }                       from '@atls-ui-parts/theme'
+
+import { STORY_CONTAINER_MIN_HEIGHT } from './constants.js'
+import { STORY_CONTAINER_MIN_WIDTH }  from './constants.js'
+import { STORY_CONTAINER_Z_INDEX }    from './constants.js'
+import { STORY_TRIGGER_HEIGHT }       from './constants.js'
 
 export const storyTriggerStyles = style({
   boxSizing: 'border-box',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  height: 32,
-  padding: '0px 16px',
-  color: 'rgba(0, 0, 0, 0.65)',
-  backgroundColor: '#fff',
-  border: '1px solid #d9d9d9',
+  height: STORY_TRIGGER_HEIGHT,
+  padding: `${vars.space.zero} ${vars.space.g16}`,
+  color: vars.colors.blackThreeQuarters,
+  backgroundColor: vars.colors.white,
+  border: vars.borders.normalMediumGray,
   cursor: 'pointer',
 })
 
 export const storyContainerStyles = style({
   display: 'flex',
   flexDirection: 'column',
-  minWidth: 100,
-  minHeight: 64,
-  padding: 10,
+  minWidth: STORY_CONTAINER_MIN_WIDTH,
+  minHeight: STORY_CONTAINER_MIN_HEIGHT,
+  padding: vars.space.g10,
   margin: 0,
-  backgroundColor: 'rgba(255, 255, 255, 1)',
-  boxShadow: '0px 2px 24px rgba(0, 0, 0, 0.15)',
-  borderRadius: '8px',
-  zIndex: 1000,
+  backgroundColor: vars.colors.white,
+  boxShadow: vars.shadows.gordonsgreen,
+  borderRadius: vars.radii.f8,
+  zIndex: STORY_CONTAINER_Z_INDEX,
 })
 
 export const storyContainerCloseStyles = style({
   cursor: 'pointer',
-  color: '#1890ff',
+  color: vars.colors.blueProtective,
+})
+
+export const storyRootAppearanceStyles = style({
+  backgroundColor: vars.colors.gray,
+  boxShadow: vars.shadows.portage,
+})
+
+export const storyRootShapeStyles = style({
+  borderRadius: vars.radii.f8,
+})
+
+export const storyTitleAppearanceStyles = style({
+  color: vars.colors.white,
+  backgroundColor: vars.colors.blue,
+  borderBottom: vars.borders.normalBlue,
+})
+
+export const storyTitleShapeStyles = style({
+  padding: `${vars.space.g8} ${vars.space.g16}`,
+})
+
+export const storyContentAppearanceStyles = style({
+  color: vars.colors.black,
+  backgroundColor: vars.colors.white,
+})
+
+export const storyContentShapeStyles = style({
+  padding: `${vars.space.g16} ${vars.space.g24}`,
 })
