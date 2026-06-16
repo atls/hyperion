@@ -812,7 +812,6 @@ __metadata:
   resolution: "@atls-ui-parts/popover@workspace:ui-parts/popover"
   dependencies:
     "@atls-ui-parts/condition": "workspace:*"
-    "@atls-ui-parts/layout": "workspace:*"
     "@atls-ui-parts/theme": "workspace:*"
     "@atls-utils/use-float": "workspace:*"
     "@floating-ui/react": "npm:0.27.8"
