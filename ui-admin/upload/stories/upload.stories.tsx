@@ -15,17 +15,8 @@ import { buttonShapes }          from '@atls-ui-admin/button'
 
 import { DropzonePlaceholder }   from '../src/index.js'
 import { Upload }                from '../src/index.js'
-import { customPlaceholderAcceptStyles } from './styles.css.js'
-
-import { customPlaceholderIconStyles } from './styles.css.js'
-
-import { customPlaceholderLinkStyles } from './styles.css.js'
-
-import { customPlaceholderRootStyles } from './styles.css.js'
-
-import { toggleThemeStyles } from './styles.css.js'
-
-import { uploadAreaStyles } from './styles.css.js'
+import { toggleThemeStyles }     from './styles.css.js'
+import { uploadAreaStyles }      from './styles.css.js'
 
 const ToggleTheme = (props: ButtonProps): ReactElement => {
   const { theme, setTheme } = useTheme()
@@ -45,20 +36,6 @@ const ToggleTheme = (props: ButtonProps): ReactElement => {
 
 const basePlaceholder = (
   <DropzonePlaceholder accept={['.SVG', '.PNG', '.JPG']}>
-    Нажмите, чтобы загрузить
-  </DropzonePlaceholder>
-)
-
-const customPlaceholder = (
-  <DropzonePlaceholder
-    accept={['.SVG', '.PNG', '.JPG']}
-    className={customPlaceholderRootStyles}
-    slotProps={{
-      icon: { className: customPlaceholderIconStyles },
-      accept: { className: customPlaceholderAcceptStyles },
-      link: { className: customPlaceholderLinkStyles },
-    }}
-  >
     Нажмите, чтобы загрузить
   </DropzonePlaceholder>
 )
@@ -97,15 +74,6 @@ type Story = StoryObj<UploadStoryProps>
 
 export const BaseUpload: Story = {
   name: 'Базовый',
-  args: {
-    appearance: 'blue',
-    shape: 'huge',
-  },
-}
-
-export const CustomPlaceholder: Story = {
-  name: 'Кастомный placeholder',
-  render: (props): ReactElement => renderUploadStory(props, customPlaceholder),
   args: {
     appearance: 'blue',
     shape: 'huge',
