@@ -1,5 +1,18 @@
 
 
+## [1.1.5](https://github.com/atls/hyperion/compare/@atls-ui-parts/tooltip@1.1.4...@atls-ui-parts/tooltip@1.1.5) (2026-06-17)
+
+
+### Bug Fixes
+
+
+* **tooltip:** merge deafult styles ([0c8dbc5](https://github.com/atls/hyperion/commit/0c8dbc597129098558083f695717c9fa3094267b))
+* **tooltip:** remove unused eslint directive ([0b3245f](https://github.com/atls/hyperion/commit/0b3245ff64789b8a0915c8bd70abc20e564ba7e5))
+
+
+
+
+
 ## [1.1.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/tooltip@1.1.4...@atls-ui-parts/tooltip@1.1.4) (2026-06-12)
 
 
