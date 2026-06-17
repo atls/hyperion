@@ -1,35 +1,50 @@
-import type { ReactNode }    from 'react'
+import type { ReactNode }     from 'react'
 
-import type { TooltipProps } from './interfaces.js'
+import type { TooltipProps }  from './interfaces.js'
 
-import { FloatingPortal }    from '@floating-ui/react'
-import { AnimatePresence }   from 'framer-motion'
-import { motion }            from 'framer-motion'
-import { cloneElement }      from 'react'
+import { FloatingPortal }     from '@floating-ui/react'
+import { AnimatePresence }    from 'framer-motion'
+import { motion }             from 'framer-motion'
+import { cloneElement }       from 'react'
 
-import { useFloat }          from '@atls-utils/use-float'
+import { useFloat }           from '@atls-utils/use-float'
 
-import { Arrow }             from './arrow/index.js'
-import { Container }         from './container/index.js'
-import { animateProps }      from './constants.js'
+import { Arrow }              from './arrow/index.js'
+import { Container }          from './container/index.js'
+import { animateProps }       from './constants.js'
+import { tooltipAppearances } from './styles/index.js'
+import { tooltipShapes }      from './styles/index.js'
 
 export const Tooltip = ({
+  appearance,
   children,
   text,
   open,
-  container = <Container />,
+  container,
   animated = true,
   arrow = true,
+  shape,
   ...props
 }: TooltipProps): ReactNode => {
   const { arrowRef, refs, isOpen, context, floatingStyles, getFloatingProps, getReferenceProps } =
     useFloat({ open, role: 'tooltip', ...props })
 
+  const defaultContainer = container === undefined
+  const containerElement = container ?? <Container />
   const TriggerElement = cloneElement(children, { ref: refs.setReference, ...getReferenceProps() })
+  const containerClassName = [
+    containerElement.props.className,
+    defaultContainer && tooltipAppearances.default.container,
+    defaultContainer && tooltipShapes.default.container,
+    appearance?.container,
+    shape?.container,
+  ]
+    .filter(Boolean)
+    .join(' ')
 
   const ContainerElement = cloneElement(
-    container,
-    { open: isOpen },
+    containerElement,
+    { className: containerClassName || undefined, open: isOpen },
     <>
       <Arrow ref={arrowRef} context={context} arrow={arrow} />
       {text}
