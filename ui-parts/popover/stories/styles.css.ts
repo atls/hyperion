@@ -1,15 +1,17 @@
 import { style } from '@vanilla-extract/css'
 
+import { vars }  from '@atls-ui-parts/theme'
+
 export const storyTriggerStyles = style({
   boxSizing: 'border-box',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   height: 32,
-  padding: '0px 16px',
-  color: 'rgba(0, 0, 0, 0.65)',
-  backgroundColor: '#fff',
-  border: '1px solid #d9d9d9',
+  padding: `${vars.space.zero} ${vars.space.g16}`,
+  color: vars.colors.blackThreeQuarters,
+  backgroundColor: vars.colors.white,
+  border: vars.borders.normalMediumGray,
   cursor: 'pointer',
 })
 
@@ -18,15 +20,42 @@ export const storyContainerStyles = style({
   flexDirection: 'column',
   minWidth: 100,
   minHeight: 64,
-  padding: 10,
-  margin: 0,
-  backgroundColor: 'rgba(255, 255, 255, 1)',
-  boxShadow: '0px 2px 24px rgba(0, 0, 0, 0.15)',
-  borderRadius: '8px',
+  padding: vars.space.g10,
+  margin: vars.space.zero,
+  backgroundColor: vars.colors.white,
+  boxShadow: vars.shadows.gordonsgreen,
+  borderRadius: vars.radii.f8,
   zIndex: 1000,
 })
 
 export const storyContainerCloseStyles = style({
   cursor: 'pointer',
-  color: '#1890ff',
+  color: vars.colors.blueProtective,
+})
+
+export const storyRootAppearanceStyles = style({
+  backgroundColor: vars.colors.gray,
+  boxShadow: vars.shadows.jaguar,
+})
+
+export const storyRootShapeStyles = style({
+  minWidth: 220,
+  borderRadius: vars.radii.f12,
+})
+
+export const storyTitleAppearanceStyles = style({
+  color: vars.colors.green,
+  borderBottom: vars.borders.normalGreen,
+})
+
+export const storyTitleShapeStyles = style({
+  justifyContent: 'flex-start',
+})
+
+export const storyContentAppearanceStyles = style({
+  color: vars.colors['text.green'],
+})
+
+export const storyContentShapeStyles = style({
+  padding: `${vars.space.g16} 20px`,
 })
