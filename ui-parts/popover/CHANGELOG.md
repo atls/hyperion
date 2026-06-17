@@ -1,5 +1,17 @@
 
 
+# [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/popover@1.1.4...@atls-ui-parts/popover@1.2.0) (2026-06-17)
+
+
+### Features
+
+
+* **popover:** update stories ([eff0edc](https://github.com/atls/hyperion/commit/eff0edc2a0f3178f8bebb82adf835a339e6ef950))
+
+
+
+
+
 ## [1.1.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/popover@1.1.4...@atls-ui-parts/popover@1.1.4) (2026-06-12)
 
 
