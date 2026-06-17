@@ -5,6 +5,7 @@ import type { ReactNode }         from 'react'
 export interface StoryPopoverProps
   extends Pick<PopoverProps, 'animated' | 'arrow' | 'offset' | 'placement' | 'trigger'> {
   customContainer: boolean
+  styledContainer: boolean
 }
 
 export interface StoryPopoverContainerProps extends PropsWithChildren {
