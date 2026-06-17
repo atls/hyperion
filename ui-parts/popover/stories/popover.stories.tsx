@@ -24,6 +24,10 @@ const meta: Meta<StoryPopoverProps> = {
       description: 'Свой контейнер',
       control: { type: 'boolean' },
     },
+    styledContainer: {
+      description: 'Стили дефолтного контейнера',
+      control: { type: 'boolean' },
+    },
     offset: {
       description: 'Офсет',
       control: { type: 'number' },
@@ -56,6 +60,7 @@ const meta: Meta<StoryPopoverProps> = {
     animated: true,
     arrow: true,
     customContainer: false,
+    styledContainer: false,
     offset: 10,
     placement: 'top',
     trigger: 'click',
@@ -65,5 +70,12 @@ const meta: Meta<StoryPopoverProps> = {
 export default meta
 
 export const Base: StoryObj<StoryPopoverProps> = {
+  render: StoryPopover,
+}
+
+export const StyledContainer: StoryObj<StoryPopoverProps> = {
+  args: {
+    styledContainer: true,
+  },
   render: StoryPopover,
 }
