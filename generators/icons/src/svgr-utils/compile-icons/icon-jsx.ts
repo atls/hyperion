@@ -1,4 +1,4 @@
-import type { Icon }           from '../../icons.interfaces.js'
+import type { Icon }           from '../../interfaces.js'
 
 import { transform }           from '@svgr/core'
 

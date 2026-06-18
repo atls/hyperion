@@ -1,6 +1,6 @@
-import type { Icon }              from '../../icons.interfaces.js'
-import type { Replacements }      from '../../icons.interfaces.js'
-import type { Source }            from '../../icons.interfaces.js'
+import type { Icon }              from '../../interfaces.js'
+import type { Replacements }      from '../../interfaces.js'
+import type { Source }            from '../../interfaces.js'
 
 import { transform }              from '@svgr/core'
 

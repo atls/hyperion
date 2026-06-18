@@ -1,4 +1,4 @@
-import type { GetColorReplacement } from './get-color-replacement.interfaces.js'
+import type { GetColorReplacement } from './interfaces.js'
 
 export const getColorReplacement: GetColorReplacement = (options) => ({
   [options.color]: `currentColor`,

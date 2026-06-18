@@ -1,6 +1,6 @@
 /* eslint-disable n/no-sync */
 
-import type { Replacements } from '../icons.interfaces.js'
+import type { Replacements } from '../interfaces.js'
 
 import assert                from 'node:assert/strict'
 import { lstatSync }         from 'node:fs'

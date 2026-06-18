@@ -1,4 +1,4 @@
-import { quoteCharacters } from './get-svg-colors.constants.js'
+import { quoteCharacters } from '../config/constants.js'
 
 export const trimQuotes = (value: string): string => {
   const trimmedValue = value.trim()

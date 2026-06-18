@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "build": "yarn library build",
-    "generate-icons": "tsx src/icons.generator.ts",
+    "generate-icons": "tsx src/generator.ts",
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
   },

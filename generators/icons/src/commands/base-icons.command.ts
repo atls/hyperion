@@ -1,6 +1,6 @@
 /* eslint-disable n/no-sync */
 
-import type { ResolvedIconsPath } from '../icons.interfaces.js'
+import type { ResolvedIconsPath } from '../interfaces.js'
 
 import assert                     from 'node:assert/strict'
 import fs                         from 'node:fs'

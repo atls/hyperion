@@ -1,1 +1,1 @@
-export * from './get-color-replacement.util.cjs'
+export * from './get-color-replacement.js'

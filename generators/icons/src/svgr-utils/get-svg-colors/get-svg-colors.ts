@@ -1,13 +1,13 @@
-import type { GetSvgColorsOptions }    from './get-svg-colors.interfaces.js'
+import type { GetSvgColorsOptions }    from './interfaces.js'
 
-import { ATTRIBUTE_NAME_PATTERN }      from './regex.js'
-import { ATTRIBUTE_PATTERN }           from './regex.js'
-import { STYLE_PROPERTY_NAME_PATTERN } from './regex.js'
-import { STYLE_PROPERTY_PATTERN }      from './regex.js'
-import { valueGroupName }              from './get-svg-colors.constants.js'
-import { normalizeAttributeName }      from './normalize-attribute-name.helper.js'
-import { trimQuotes }                  from './trim-quotes.helper.js'
-import { validateColor }               from './validate-color.helper.js'
+import { ATTRIBUTE_NAME_PATTERN }      from './config/regex.js'
+import { ATTRIBUTE_PATTERN }           from './config/regex.js'
+import { STYLE_PROPERTY_NAME_PATTERN } from './config/regex.js'
+import { STYLE_PROPERTY_PATTERN }      from './config/regex.js'
+import { valueGroupName }              from './config/constants.js'
+import { normalizeAttributeName }      from './helpers/normalize-attribute-name.js'
+import { trimQuotes }                  from './helpers/trim-quotes.js'
+import { validateColor }               from './helpers/validate-color.js'
 
 const getColorAttributeNames = (options: GetSvgColorsOptions): Set<string> =>
   new Set(Array.from(options.colorAttributes ?? []).map(normalizeAttributeName))
