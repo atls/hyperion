@@ -6,5 +6,6 @@ export type ButtonShapeName = keyof typeof buttonShapes
 
 export interface UploadStoryProps {
   appearance: ButtonAppearanceName
+  customPlaceholder: boolean
   shape: ButtonShapeName
 }
