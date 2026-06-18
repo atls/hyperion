@@ -49,6 +49,7 @@ export class BaseIconsCommand extends Command {
       this.resolvePaths()
     } catch (error) {
       this.logger.error(error)
+      process.exitCode = 1
     }
   }
 }

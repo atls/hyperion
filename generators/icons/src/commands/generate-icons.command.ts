@@ -57,6 +57,7 @@ export class GenerateIconsCommand extends BaseIconsCommand {
       this.logger.info(`Generated into ${outputPath}`)
     } catch (error) {
       this.logger.error(error)
+      process.exitCode = 1
     }
   }
 }

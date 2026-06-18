@@ -28,14 +28,12 @@
     "@svgr/core": "8.1.0",
     "@swc-node/register": "1.9.0",
     "@swc/core": "1.6.1",
-    "cheerio": "1.1.2",
     "clipanion": "4.0.0-rc.4",
     "glob": "11.0.2",
     "is-svg": "6.1.0"
   },
   "devDependencies": {
     "@types/node": "22.15.3",
-    "domhandler": "5.0.3",
     "tsx": "4.20.5",
     "typescript": "5.5.4"
   },

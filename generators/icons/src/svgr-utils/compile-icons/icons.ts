@@ -4,12 +4,12 @@ import type { Source }            from '../../icons.interfaces.js'
 
 import { transform }              from '@svgr/core'
 
-import { MASK_ID_PATTERN }        from './compile-icons.constants.js'
-import { PROPS_SPREAD_FROM }      from './compile-icons.constants.js'
-import { PROPS_SPREAD_TO }        from './compile-icons.constants.js'
-import { FIFTY_PLUS_PATTERN }     from './compile-icons.constants.js'
-import { FIFTY_PLUS_REPLACEMENT } from './compile-icons.constants.js'
-import { svgrTransformConfig }    from './compile-icons.constants.js'
+import { MASK_ID_PATTERN }        from './constants.js'
+import { PROPS_SPREAD_FROM }      from './constants.js'
+import { PROPS_SPREAD_TO }        from './constants.js'
+import { FIFTY_PLUS_PATTERN }     from './constants.js'
+import { FIFTY_PLUS_REPLACEMENT } from './constants.js'
+import { svgrTransformConfig }    from './constants.js'
 
 export const compileIcons = async (
   icons: Array<Icon>,

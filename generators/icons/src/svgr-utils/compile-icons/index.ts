@@ -1,3 +1,3 @@
-export * from './compile-icon-jsx.util.js'
-export * from './compile-icons.template.js'
-export * from './compile-icons.util.js'
+export * from './icon-jsx.js'
+export * from './icons.js'
+export * from './template.js'
