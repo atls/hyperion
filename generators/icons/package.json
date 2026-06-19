@@ -12,7 +12,7 @@
   },
   "main": "src/index.ts",
   "bin": {
-    "generate-icons": "dist/icons.generator.js"
+    "generate-icons": "dist/generator.js"
   },
   "files": [
     "dist"
@@ -28,7 +28,9 @@
     "@svgr/core": "8.1.0",
     "@swc-node/register": "1.9.0",
     "@swc/core": "1.6.1",
+    "cheerio": "1.1.2",
     "clipanion": "4.0.0-rc.4",
+    "domhandler": "5.0.3",
     "glob": "11.0.2",
     "is-svg": "6.1.0"
   },
