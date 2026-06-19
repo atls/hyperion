@@ -1,1 +1,2 @@
-export * from './placeholder.component.js'
+export * from './component.js'
+export * from './dropzone/index.js'
