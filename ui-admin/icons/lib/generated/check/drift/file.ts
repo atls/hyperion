@@ -1,10 +1,21 @@
 import type { OutdatedFile }   from '../interfaces.js'
 
+import { readFile }            from 'node:fs/promises'
+import { stat }                from 'node:fs/promises'
 import { basename }            from 'node:path'
 
 import { outdatedFileReasons } from '../constants.js'
-import { isFile }              from '../filesystem/is-file.js'
-import { isOutdatedFile }      from '../filesystem/is-outdated-file.js'
+
+const isFile = async (targetPath: string): Promise<boolean> => {
+  try {
+    return (await stat(targetPath)).isFile()
+  } catch {
+    return false
+  }
+}
+
+export const isOutdatedFile = async (expectedPath: string, actualPath: string): Promise<boolean> =>
+  !(await readFile(expectedPath)).equals(await readFile(actualPath))
 
 export const compareFiles = async (
   expectedPath: string,

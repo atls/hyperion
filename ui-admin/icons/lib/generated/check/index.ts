@@ -3,8 +3,6 @@ import { mkdtemp }                            from 'node:fs/promises'
 import { rm }                                 from 'node:fs/promises'
 import { join }                               from 'node:path'
 
-import { DirectoryRequiredError }             from './errors/directory-required.error.js'
-import { FileRequiredError }                  from './errors/file-required.error.js'
 import { GeneratedFilesOutdatedError }        from './errors/generated-files-outdated.error.js'
 import { checkSuccessMessage }                from './constants.js'
 import { generatedIconsDirectoryName }        from './constants.js'
@@ -21,22 +19,14 @@ import { compareFiles }                       from './drift/file.js'
 import { formatFiles }                        from './expected/format.js'
 import { generateIcons }                      from './expected/icons.js'
 import { generateReplacements }               from './expected/replacements.js'
-import { collectFiles }                       from './filesystem/collect-files.js'
-import { isDirectory }                        from './filesystem/is-directory.js'
-import { isFile }                             from './filesystem/is-file.js'
+import { requireDirectory }                   from './input/constraints/directory.js'
+import { requireFile }                        from './input/constraints/file.js'
+import { readFileSystemEntry }                from './input/file-system-entry.js'
 
 export const checkGenerated = async (): Promise<void> => {
-  if (!(await isDirectory(sourceIconsPath))) {
-    throw new DirectoryRequiredError(sourceIconsPath)
-  }
-
-  if (!(await isDirectory(sourceSvgPath))) {
-    throw new DirectoryRequiredError(sourceSvgPath)
-  }
-
-  if (!(await isFile(sourceReplacementsPath))) {
-    throw new FileRequiredError(sourceReplacementsPath)
-  }
+  requireDirectory(await readFileSystemEntry(sourceIconsPath))
+  requireDirectory(await readFileSystemEntry(sourceSvgPath))
+  requireFile(await readFileSystemEntry(sourceReplacementsPath))
 
   await mkdir(packageRootPath, { recursive: true })
 
@@ -50,11 +40,7 @@ export const checkGenerated = async (): Promise<void> => {
 
     await generateReplacements(sourceSvgPath, generatedReplacementsPath)
     await generateIcons(sourceSvgPath, generatedIconsPath)
-    await formatFiles([
-      join(generatedReplacementsPath, replacementsFileName),
-      ...(await collectFiles(generatedIconsPath)).map((filePath) =>
-        join(generatedIconsPath, filePath)),
-    ])
+    await formatFiles(generatedIconsPath, join(generatedReplacementsPath, replacementsFileName))
 
     const outdatedFiles = [
       ...(await compareDirectories({
