@@ -1,7 +1,7 @@
 import type { ModalProps }   from '@atls-ui-parts/modal'
 import type { ReactElement } from 'react'
 
-import { useArgs }           from '@storybook/preview-api'
+import { useArgs }           from 'storybook/preview-api'
 
 import { Modal }             from '@atls-ui-parts/modal'
 

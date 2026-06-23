@@ -1,12 +1,13 @@
-import type { StorybookConfig }          from '@storybook/react-webpack5'
-import type { CompatibleString }         from '@storybook/types'
+import type { StorybookConfig } from '@storybook/react-webpack5'
 
-import { dirname }                       from 'node:path'
-import { join }                          from 'node:path'
+import { createRequire }        from 'node:module'
+import { dirname }              from 'node:path'
+import { join }                 from 'node:path'
 
-import { VanillaExtractPlugin }          from '@vanilla-extract/webpack-plugin'
-import { NormalModuleReplacementPlugin } from 'webpack'
-import MiniCssExtractPlugin              from 'mini-css-extract-plugin'
+import { VanillaExtractPlugin } from '@vanilla-extract/webpack-plugin'
+import MiniCssExtractPlugin     from 'mini-css-extract-plugin'
+
+const require = createRequire(import.meta.url)
 
 const getAbsolutePath = (value: string): string =>
   dirname(require.resolve(join(value, 'package.json')))
@@ -21,19 +22,12 @@ const config: StorybookConfig = {
   addons: [
     getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
     getAbsolutePath('@storybook/addon-links'),
-    getAbsolutePath('@storybook/addon-essentials'),
+    getAbsolutePath('@storybook/addon-docs'),
     getAbsolutePath('@chromatic-com/storybook'),
-    getAbsolutePath('@storybook/addon-interactions'),
     {
-      name: '@storybook/addon-styling-webpack',
+      name: getAbsolutePath('@storybook/addon-styling-webpack'),
       options: {
-        plugins: [
-          new VanillaExtractPlugin(),
-          new MiniCssExtractPlugin(),
-          new NormalModuleReplacementPlugin(/\.js$/, (resource: { request: string }) => {
-            resource.request = resource.request.replace('.js', '')
-          }),
-        ],
+        plugins: [new VanillaExtractPlugin(), new MiniCssExtractPlugin()],
         rules: [
           {
             test: /\.css$/,
@@ -63,13 +57,19 @@ const config: StorybookConfig = {
     },
   ],
   framework: {
-    name: getAbsolutePath(
-      '@storybook/react-webpack5'
-    ) as CompatibleString<'@storybook/react-webpack5'>,
+    name: getAbsolutePath('@storybook/react-webpack5'),
     options: {},
   },
   webpackFinal: async (webpackConfig) => {
-    if (webpackConfig.resolve?.fallback) {
+    webpackConfig.resolve = {
+      ...webpackConfig.resolve,
+      extensionAlias: {
+        ...webpackConfig.resolve?.extensionAlias,
+        '.js': ['.ts', '.tsx', '.js'],
+      },
+    }
+
+    if (webpackConfig.resolve.fallback) {
       webpackConfig.resolve.fallback = {
         ...webpackConfig.resolve.fallback,
         assert: false,

@@ -1,6 +1,10 @@
 import type { Meta }         from '@storybook/react'
 import type { StoryObj }     from '@storybook/react'
 
+import { expect }            from 'storybook/test'
+import { userEvent }         from 'storybook/test'
+import { within }            from 'storybook/test'
+
 import { Button }            from '../src/button.component.js'
 import { buttonAppearances } from '../src/styles/appearance.css.js'
 import { buttonShapes }      from '../src/styles/shape.css.js'
@@ -57,5 +61,13 @@ export const Variants: Story = {
     children: 'Text',
     appearance: 'blue',
     shape: 'huge',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button', { name: 'Text' })
+
+    await userEvent.click(button)
+
+    await expect(button).toBeEnabled()
   },
 }
