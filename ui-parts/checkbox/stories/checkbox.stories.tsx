@@ -3,6 +3,10 @@ import type { StoryObj }         from '@storybook/react'
 
 import type { CheckboxProps }    from '../src/checkbox.interfaces.js'
 
+import { expect }                from 'storybook/test'
+import { userEvent }             from 'storybook/test'
+import { within }                from 'storybook/test'
+
 import { Column }                from '@atls-ui-parts/layout'
 import { Layout }                from '@atls-ui-parts/layout'
 
@@ -84,5 +88,15 @@ export const Custom: Story = {
       label: customLabelStyles,
     },
     children: 'Custom checkbox',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const checkbox = canvas.getByRole('checkbox', { name: /Custom checkbox/ })
+
+    await expect(checkbox).toBeChecked()
+
+    await userEvent.click(checkbox)
+
+    await expect(checkbox).not.toBeChecked()
   },
 }

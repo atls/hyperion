@@ -3,6 +3,11 @@ import type { StoryObj }          from '@storybook/react'
 
 import type { StoryPopoverProps } from './interfaces.js'
 
+import { expect }                 from 'storybook/test'
+import { userEvent }              from 'storybook/test'
+import { waitFor }                from 'storybook/test'
+import { within }                 from 'storybook/test'
+
 import { StoryPopover }           from './story-popover.js'
 
 const meta: Meta<StoryPopoverProps> = {
@@ -71,6 +76,18 @@ export default meta
 
 export const Base: StoryObj<StoryPopoverProps> = {
   render: StoryPopover,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const documentBody = within(document.body)
+
+    await userEvent.click(canvas.getByText('Trigger'))
+
+    const content = await documentBody.findByText('Popover content')
+
+    await waitFor(async () => {
+      await expect(content).toBeVisible()
+    })
+  },
 }
 
 export const StyledContainer: StoryObj<StoryPopoverProps> = {
