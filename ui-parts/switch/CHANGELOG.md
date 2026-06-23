@@ -1,5 +1,12 @@
 
 
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/switch@1.1.0...@atls-ui-parts/switch@1.1.0) (2026-06-23)
+
+
+
+
+
+
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/switch@1.0.11...@atls-ui-parts/switch@1.1.0) (2026-06-23)
 
 

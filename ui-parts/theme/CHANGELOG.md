@@ -1,5 +1,17 @@
 
 
+## [1.1.1](https://github.com/atls/hyperion/compare/@atls-ui-parts/theme@1.1.0...@atls-ui-parts/theme@1.1.1) (2026-06-23)
+
+
+### Bug Fixes
+
+
+* **theme:** resolve global css ESM import ([4cc4f2d](https://github.com/atls/hyperion/commit/4cc4f2d225954bbe74597d6b6cef8b2b49138419))
+
+
+
+
+
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/theme@1.0.10...@atls-ui-parts/theme@1.1.0) (2026-06-23)
 
 

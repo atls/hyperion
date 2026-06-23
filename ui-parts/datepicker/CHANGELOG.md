@@ -1,5 +1,12 @@
 
 
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/datepicker@1.1.0...@atls-ui-parts/datepicker@1.1.0) (2026-06-23)
+
+
+
+
+
+
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/datepicker@1.0.14...@atls-ui-parts/datepicker@1.1.0) (2026-06-23)
 
 
