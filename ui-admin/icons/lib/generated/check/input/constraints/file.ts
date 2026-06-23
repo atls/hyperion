@@ -1,6 +1,6 @@
 import type { FileSystemEntry } from '../file-system-entry.js'
 
-import { FileRequiredError }    from '../../errors/file-required.error.js'
+import { FileRequiredError }    from '../../errors/file-required.js'
 import { fileSystemEntryKinds } from '../file-system-entry.js'
 
 export const requireFile = (entry: FileSystemEntry): void => {

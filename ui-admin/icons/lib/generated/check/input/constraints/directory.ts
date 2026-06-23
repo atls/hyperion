@@ -1,6 +1,6 @@
 import type { FileSystemEntry }   from '../file-system-entry.js'
 
-import { DirectoryRequiredError } from '../../errors/directory-required.error.js'
+import { DirectoryRequiredError } from '../../errors/directory-required.js'
 import { fileSystemEntryKinds }   from '../file-system-entry.js'
 
 export const requireDirectory = (entry: FileSystemEntry): void => {

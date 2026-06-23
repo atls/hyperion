@@ -1,8 +1,6 @@
-import { dirname }             from 'node:path'
-import { resolve }             from 'node:path'
-import { fileURLToPath }       from 'node:url'
-
-import { outdatedFileReasons } from './drift/outdated-file.js'
+import { dirname }       from 'node:path'
+import { resolve }       from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url))
 
@@ -45,17 +43,3 @@ export const relativePathSeparator = '/'
 export const outputLineBreak = '\n'
 
 export const checkSuccessMessage = 'Generated icons are up to date'
-
-export const commandFailedMessage = 'Command failed'
-
-export const directoryRequiredMessage = 'Directory is required'
-
-export const fileRequiredMessage = 'File is required'
-
-export const outdatedFilesMessage = 'Generated files are outdated'
-
-export const outdatedFileReasonMessages = {
-  [outdatedFileReasons.different]: 'content differs',
-  [outdatedFileReasons.missing]: 'missing committed file',
-  [outdatedFileReasons.unexpected]: 'unexpected committed file',
-}

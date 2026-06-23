@@ -2,7 +2,7 @@ import type { CommandOptions } from './options.js'
 
 import { spawn }               from 'node:child_process'
 
-import { CommandFailedError }  from '../errors/command-failed.error.js'
+import { CommandFailedError }  from '../errors/command-failed.js'
 
 export const runCommand = async (
   command: string,
