@@ -1,10 +1,11 @@
-import type { FileSystemEntry } from '../file-system-entry.js'
+import { FileRequiredError } from '../../errors/file-required.js'
+import { inputPathKinds }    from '../read.js'
 
-import { FileRequiredError }    from '../../errors/file-required.js'
-import { fileSystemEntryKinds } from '../file-system-entry.js'
-
-export const requireFile = (entry: FileSystemEntry): void => {
-  if (entry.kind !== fileSystemEntryKinds.file) {
-    throw new FileRequiredError(entry.path)
+export const requireFile = (
+  targetPath: string,
+  kind: (typeof inputPathKinds)[keyof typeof inputPathKinds]
+): void => {
+  if (kind !== inputPathKinds.file) {
+    throw new FileRequiredError(targetPath)
   }
 }

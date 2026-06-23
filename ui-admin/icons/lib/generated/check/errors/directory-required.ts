@@ -1,16 +1,12 @@
-import { GeneratedError }      from './generated.js'
-import { generatedErrorCodes } from './codes.js'
-
-const directoryRequiredMessage = 'Directory is required'
+import { GeneratedError }           from './generated.js'
+import { directoryRequiredMessage } from '../constants.js'
+import { generatedErrorCodes }      from './codes.js'
 
 export class DirectoryRequiredError extends GeneratedError {
   readonly path: string
 
   constructor(targetPath: string) {
-    super({
-      code: generatedErrorCodes.directoryRequired,
-      message: `${directoryRequiredMessage}: ${targetPath}`,
-    })
+    super(generatedErrorCodes.directoryRequired, `${directoryRequiredMessage}: ${targetPath}`)
 
     this.path = targetPath
   }

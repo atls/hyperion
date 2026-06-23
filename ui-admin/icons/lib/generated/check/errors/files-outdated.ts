@@ -19,10 +19,10 @@ export class FilesOutdatedError extends GeneratedError {
   readonly files: Array<OutdatedFile>
 
   constructor(files: Array<OutdatedFile>) {
-    super({
-      code: generatedErrorCodes.filesOutdated,
-      message: [outdatedFilesMessage, ...files.map(formatFile)].join('\n'),
-    })
+    super(
+      generatedErrorCodes.filesOutdated,
+      [outdatedFilesMessage, ...files.map(formatFile)].join('\n')
+    )
 
     this.files = files
   }

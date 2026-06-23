@@ -19,12 +19,12 @@ import { generateIcons }                      from './expected/icons.js'
 import { generateReplacements }               from './expected/replacements.js'
 import { requireDirectory }                   from './input/constraints/directory.js'
 import { requireFile }                        from './input/constraints/file.js'
-import { readFileSystemEntry }                from './input/file-system-entry.js'
+import { readInputPathKind }                  from './input/read.js'
 
 export const checkGenerated = async (): Promise<void> => {
-  requireDirectory(await readFileSystemEntry(sourceIconsPath))
-  requireDirectory(await readFileSystemEntry(sourceSvgPath))
-  requireFile(await readFileSystemEntry(sourceReplacementsPath))
+  requireDirectory(sourceIconsPath, await readInputPathKind(sourceIconsPath))
+  requireDirectory(sourceSvgPath, await readInputPathKind(sourceSvgPath))
+  requireFile(sourceReplacementsPath, await readInputPathKind(sourceReplacementsPath))
 
   await mkdir(packageRootPath, { recursive: true })
 
