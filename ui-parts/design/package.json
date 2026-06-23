@@ -9,7 +9,6 @@
     "build:server": "yarn service build",
     "dev": "storybook dev --config-dir ./src -p 3001",
     "prepack": "run build",
-    "start": "node dist/index.js",
     "start-image": "node dist/index.js"
   },
   "devDependencies": {
