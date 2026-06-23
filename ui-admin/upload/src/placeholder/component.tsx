@@ -3,7 +3,7 @@ import type { HTMLAttributes }   from 'react'
 
 import { clsx }                  from 'clsx'
 
-import { basePlaceholderStyles } from './placeholder.css.js'
+import { basePlaceholderStyles } from './styles.css.js'
 
 export const Placeholder = ({
   children,

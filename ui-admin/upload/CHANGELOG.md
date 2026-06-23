@@ -1,5 +1,17 @@
 
 
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/upload@1.0.14...@atls-ui-admin/upload@1.1.0) (2026-06-19)
+
+
+### Features
+
+
+* **upload:** add custom placeholder story control ([45145cd](https://github.com/atls/hyperion/commit/45145cdd8c8fd15fb6c3c81abd322a10bf095c8a))
+
+
+
+
+
 ## [1.0.14](https://github.com/atls/hyperion/compare/@atls-ui-admin/upload@1.0.14...@atls-ui-admin/upload@1.0.14) (2026-06-12)
 
 
