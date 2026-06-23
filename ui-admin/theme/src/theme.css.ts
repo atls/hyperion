@@ -1,4 +1,4 @@
-import './global.css'
+import './global.css.js'
 
 import { createTheme }         from '@vanilla-extract/css'
 import { createThemeContract } from '@vanilla-extract/css'
