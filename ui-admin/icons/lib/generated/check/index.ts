@@ -4,10 +4,8 @@ import { rm }                                 from 'node:fs/promises'
 import { join }                               from 'node:path'
 
 import { GeneratedFilesOutdatedError }        from './errors/generated-files-outdated.error.js'
-import { checkSuccessMessage }                from './constants.js'
 import { generatedIconsDirectoryName }        from './constants.js'
 import { generatedReplacementsDirectoryName } from './constants.js'
-import { outputLineBreak }                    from './constants.js'
 import { packageRootPath }                    from './constants.js'
 import { replacementsFileName }               from './constants.js'
 import { sourceIconsPath }                    from './constants.js'
@@ -56,8 +54,6 @@ export const checkGenerated = async (): Promise<void> => {
     if (outdatedFiles.length > 0) {
       throw new GeneratedFilesOutdatedError(outdatedFiles)
     }
-
-    process.stdout.write(`${checkSuccessMessage}${outputLineBreak}`)
   } finally {
     await rm(temporaryPath, { force: true, recursive: true })
   }
