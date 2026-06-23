@@ -10,7 +10,7 @@ export const outdatedFileReasons = {
   unexpected: 'unexpected',
 } as const
 
-export const packageRootPath = resolve(scriptDirectory, '../..')
+export const packageRootPath = resolve(scriptDirectory, '../../..')
 
 export const workspaceRootPath = resolve(packageRootPath, '../..')
 

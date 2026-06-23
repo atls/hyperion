@@ -1,5 +1,5 @@
-import { outputLineBreak } from '../lib/check-generated/constants.js'
-import { checkGenerated }  from '../lib/check-generated/index.js'
+import { outputLineBreak } from '../lib/generated/check/constants.js'
+import { checkGenerated }  from '../lib/generated/check/index.js'
 
 try {
   await checkGenerated()
