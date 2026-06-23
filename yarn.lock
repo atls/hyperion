@@ -1202,29 +1202,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls/code-runtime@npm:2.1.33":
-  version: 2.1.33
-  resolution: "@atls/code-runtime@npm:2.1.33"
-  dependencies:
-    "@atls/config-eslint": "npm:2.0.15"
-    "@atls/config-prettier": "npm:2.0.4"
-    "@atls/config-typescript": "npm:2.0.3"
-    "@atls/webpack-proto-imports-loader": "npm:1.0.6"
-    "@svgr/core": "npm:8.1.0"
-    "@svgr/plugin-jsx": "npm:8.1.0"
-    eslint: "npm:9.22.0"
-    node-loader: "npm:2.1.0"
-    strip-json-comments: "npm:3.1.1"
-    ts-loader: "npm:9.5.2"
-    typescript: "npm:5.5.4"
-    webpack: "npm:5.98.0"
-  checksum: 10/421ef42859204cb4ccc8562bf168a00ca2db0b9026a664db3419dc0d850eeb3ffc3f96223ffe7f9f94fa4b3c7de6bdcc978766571bcc3449669edfa2748d04ae
-  languageName: node
-  linkType: hard
-
-"@atls/config-eslint@npm:2.0.15":
-  version: 2.0.15
-  resolution: "@atls/config-eslint@npm:2.0.15"
+"@atls/config-eslint@npm:2.0.16":
+  version: 2.0.16
+  resolution: "@atls/config-eslint@npm:2.0.16"
   dependencies:
     "@atls/config-prettier": "npm:2.0.4"
     "@next/eslint-plugin-next": "npm:16.0.7"
@@ -1245,7 +1225,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10/4d6c0677ad2349f15fa16f12d952b24ce5ea006904bd0e042bf1b392243daa6a2b9fe85c37b618b1142887535ec452d6c423676fcc63847ddf4169514ac5113e
+  checksum: 10/99eac006b014f99537212782024733318a306c31e5b0e087d516bf7ef99d7f05b53265118cb563bc71cc206d3c992412a6f9afd6e27131f296e892a744861e43
   languageName: node
   linkType: hard
 
@@ -1302,6 +1282,26 @@ __metadata:
     prettier: "npm:3.5.3"
     sort-package-json: "npm:2.4.1"
   checksum: 10/16e7f225cea00975184ea3e1e5090a6bc621eed83ce35b891ba43d8e3a31aef6a2584b1ef746150a52a305440af5b757826ad724ab578080a5d84d43be34175f
+  languageName: node
+  linkType: hard
+
+"@atls/raijin@npm:0.4.0":
+  version: 0.4.0
+  resolution: "@atls/raijin@npm:0.4.0"
+  dependencies:
+    "@atls/config-eslint": "npm:2.0.16"
+    "@atls/config-typescript": "npm:2.0.3"
+    "@atls/webpack-proto-imports-loader": "npm:1.0.6"
+    "@svgr/core": "npm:8.1.0"
+    "@svgr/plugin-jsx": "npm:8.1.0"
+    eslint: "npm:9.22.0"
+    node-loader: "npm:2.1.0"
+    ts-loader: "npm:9.5.2"
+    typescript: "npm:5.5.4"
+    webpack: "npm:5.98.0"
+  bin:
+    raijin: ./bin/raijin.mjs
+  checksum: 10/833a47aeddedbc1178973386c6bf3e517da4a3ec11d40999689f80299678b13acc886a21ba40d3069c38354ccd47b973065e731a8e4e6484ebbf9094edb4b968
   languageName: node
   linkType: hard
 
@@ -9810,7 +9810,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hyperion@workspace:."
   dependencies:
-    "@atls/code-runtime": "npm:2.1.33"
+    "@atls/raijin": "npm:0.4.0"
     "@playwright/test": "npm:1.55.0"
     "@types/node": "npm:25.9.3"
     eslint: "npm:9.25.1"
@@ -14039,7 +14039,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"strip-json-comments@npm:3.1.1, strip-json-comments@npm:^3.1.1":
+"strip-json-comments@npm:^3.1.1":
   version: 3.1.1
   resolution: "strip-json-comments@npm:3.1.1"
   checksum: 10/492f73e27268f9b1c122733f28ecb0e7e8d8a531a6662efbd08e22cccb3f9475e90a1b82cab06a392f6afae6d2de636f977e231296400d0ec5304ba70f166443
