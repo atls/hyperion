@@ -1,13 +1,17 @@
-import type { DirectoryComparisonOptions } from '../interfaces.js'
-import type { OutdatedFile }               from '../interfaces.js'
+import type { OutdatedFile }     from './outdated-file.js'
 
-import { readdir }                         from 'node:fs/promises'
-import { join }                            from 'node:path'
-import { sep }                             from 'node:path'
+import { readdir }               from 'node:fs/promises'
+import { join }                  from 'node:path'
+import { sep }                   from 'node:path'
 
-import { outdatedFileReasons }             from '../constants.js'
-import { relativePathSeparator }           from '../constants.js'
-import { isOutdatedFile }                  from './file.js'
+import { relativePathSeparator } from '../constants.js'
+import { isOutdatedFile }        from './file.js'
+import { outdatedFileReasons }   from './outdated-file.js'
+
+interface DirectoryComparisonOptions {
+  actualPath: string
+  expectedPath: string
+}
 
 const collectFiles = async (directoryPath: string, currentPath = ''): Promise<Array<string>> => {
   const entries = await readdir(join(directoryPath, currentPath), { withFileTypes: true })

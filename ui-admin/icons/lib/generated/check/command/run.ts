@@ -1,4 +1,4 @@
-import type { CommandOptions } from '../interfaces.js'
+import type { CommandOptions } from './options.js'
 
 import { spawn }               from 'node:child_process'
 

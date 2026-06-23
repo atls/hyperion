@@ -1,4 +1,4 @@
-import type { OutdatedFile }          from '../interfaces.js'
+import type { OutdatedFile }          from '../drift/outdated-file.js'
 
 import { outdatedFileReasonMessages } from '../constants.js'
 import { outdatedFilesMessage }       from '../constants.js'

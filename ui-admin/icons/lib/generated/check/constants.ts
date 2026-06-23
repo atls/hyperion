@@ -1,14 +1,10 @@
-import { dirname }       from 'node:path'
-import { resolve }       from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { dirname }             from 'node:path'
+import { resolve }             from 'node:path'
+import { fileURLToPath }       from 'node:url'
+
+import { outdatedFileReasons } from './drift/outdated-file.js'
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url))
-
-export const outdatedFileReasons = {
-  different: 'different',
-  missing: 'missing',
-  unexpected: 'unexpected',
-} as const
 
 export const packageRootPath = resolve(scriptDirectory, '../../..')
 

@@ -1,4 +1,8 @@
-import type { outdatedFileReasons } from './constants.js'
+export const outdatedFileReasons = {
+  different: 'different',
+  missing: 'missing',
+  unexpected: 'unexpected',
+} as const
 
 export type OutdatedFileReason = (typeof outdatedFileReasons)[keyof typeof outdatedFileReasons]
 
@@ -7,13 +11,4 @@ export interface OutdatedFile {
   expectedPath?: string
   reason: OutdatedFileReason
   relativePath: string
-}
-
-export interface DirectoryComparisonOptions {
-  actualPath: string
-  expectedPath: string
-}
-
-export interface CommandOptions {
-  cwd?: string
 }
