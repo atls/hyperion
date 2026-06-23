@@ -2,9 +2,9 @@ import type { OutdatedFile }   from '../interfaces.js'
 
 import { basename }            from 'node:path'
 
-import { isFile }              from '../conditions/is-file.js'
-import { isOutdatedFile }      from '../conditions/is-outdated-file.js'
 import { outdatedFileReasons } from '../constants.js'
+import { isFile }              from '../filesystem/is-file.js'
+import { isOutdatedFile }      from '../filesystem/is-outdated-file.js'
 
 export const compareFiles = async (
   expectedPath: string,

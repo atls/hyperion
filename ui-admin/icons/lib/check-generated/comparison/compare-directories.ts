@@ -3,9 +3,9 @@ import type { OutdatedFile }               from '../interfaces.js'
 
 import { join }                            from 'node:path'
 
-import { isOutdatedFile }                  from '../conditions/is-outdated-file.js'
 import { outdatedFileReasons }             from '../constants.js'
-import { collectFiles }                    from './collect-files.js'
+import { collectFiles }                    from '../filesystem/collect-files.js'
+import { isOutdatedFile }                  from '../filesystem/is-outdated-file.js'
 
 export const compareDirectories = async ({
   actualPath,

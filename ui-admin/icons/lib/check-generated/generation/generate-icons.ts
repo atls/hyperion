@@ -6,7 +6,7 @@ import { sourceReplacementsPath }   from '../constants.js'
 import { workspaceRootPath }        from '../constants.js'
 import { workspaceArgument }        from '../constants.js'
 import { yarnCommand }              from '../constants.js'
-import { runCommand }               from './run-command.js'
+import { runCommand }               from '../process/run-command.js'
 
 export const generateIcons = async (svgPath: string, outputPath: string): Promise<void> => {
   await runCommand(
