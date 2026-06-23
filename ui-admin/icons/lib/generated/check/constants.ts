@@ -43,9 +43,3 @@ export const relativePathSeparator = '/'
 export const outputLineBreak = '\n'
 
 export const checkSuccessMessage = 'Generated icons are up to date'
-
-export const commandFailedMessage = 'Command failed'
-
-export const directoryRequiredMessage = 'Directory is required'
-
-export const fileRequiredMessage = 'File is required'

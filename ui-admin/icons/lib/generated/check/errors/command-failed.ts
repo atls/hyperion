@@ -1,6 +1,6 @@
 import { GeneratedError }       from './generated.js'
-import { commandFailedMessage } from '../constants.js'
 import { generatedErrorCodes }  from './codes.js'
+import { commandFailedMessage } from './messages.js'
 
 export class CommandFailedError extends GeneratedError {
   readonly args: Array<string>

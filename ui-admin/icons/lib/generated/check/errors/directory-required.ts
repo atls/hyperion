@@ -1,6 +1,6 @@
 import { GeneratedError }           from './generated.js'
-import { directoryRequiredMessage } from '../constants.js'
 import { generatedErrorCodes }      from './codes.js'
+import { directoryRequiredMessage } from './messages.js'
 
 export class DirectoryRequiredError extends GeneratedError {
   readonly path: string

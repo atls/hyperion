@@ -1,6 +1,6 @@
 import { GeneratedError }      from './generated.js'
-import { fileRequiredMessage } from '../constants.js'
 import { generatedErrorCodes } from './codes.js'
+import { fileRequiredMessage } from './messages.js'
 
 export class FileRequiredError extends GeneratedError {
   readonly path: string
