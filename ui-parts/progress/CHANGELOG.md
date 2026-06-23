@@ -1,5 +1,22 @@
 
 
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/progress@1.0.12...@atls-ui-parts/progress@1.1.0) (2026-06-23)
+
+
+### Bug Fixes
+
+
+* **progress:** keep theme tokens in sprinkles ([063763c](https://github.com/atls/hyperion/commit/063763c081db609ffd6af6e3ce0578cef0f059b0))
+
+### Features
+
+
+* **common:** upgrade dependencies ([7e73502](https://github.com/atls/hyperion/commit/7e73502b16318e20899da3867227543b39403689))
+
+
+
+
+
 ## [1.0.12](https://github.com/atls/hyperion/compare/@atls-ui-parts/progress@1.0.12...@atls-ui-parts/progress@1.0.12) (2026-06-12)
 
 

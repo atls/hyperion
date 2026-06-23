@@ -1,5 +1,27 @@
 
 
+## [1.1.3](https://github.com/atls/hyperion/compare/@atls-ui-generators/appearance@1.1.3...@atls-ui-generators/appearance@1.1.3) (2026-06-23)
+
+
+### Bug Fixes
+
+
+* **appearance:** add generator error contract ([20c238d](https://github.com/atls/hyperion/commit/20c238dc5b4bfc832a30eae788d0a80ebc54835d))
+* **appearance:** load schema paths in cli ([70090f5](https://github.com/atls/hyperion/commit/70090f55ced6fb5f1636f1f6e83e4266800a85b8))
+* **appearance:** model generator errors ([ff5cb44](https://github.com/atls/hyperion/commit/ff5cb44e85114f3503bf3ba583f8ee3fc1202188))
+* **appearance:** restore create export ([1890393](https://github.com/atls/hyperion/commit/18903936e137571c84600cd71134c5f496a0a180))
+* **appearance:** satisfy schema generator lint ([9f9bffe](https://github.com/atls/hyperion/commit/9f9bffe1f00f97c3d11225965bf1a3974f910467))
+* **appearance:** use runtime create export ([efcab65](https://github.com/atls/hyperion/commit/efcab6526649648f554c521f7299fbdfa9e1bbf1))
+
+### Features
+
+
+* **appearance:** check component appearance contracts ([a221afd](https://github.com/atls/hyperion/commit/a221afdf4c622d2205e2c26987926c89e5895daa))
+
+
+
+
+
 ## [1.1.3](https://github.com/atls/hyperion/compare/@atls-ui-generators/appearance@1.1.3...@atls-ui-generators/appearance@1.1.3) (2026-06-12)
 
 

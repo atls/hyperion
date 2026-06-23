@@ -1,5 +1,17 @@
 
 
+# [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/select@1.1.3...@atls-ui-parts/select@1.2.0) (2026-06-23)
+
+
+### Features
+
+
+* **common:** upgrade dependencies ([7e73502](https://github.com/atls/hyperion/commit/7e73502b16318e20899da3867227543b39403689))
+
+
+
+
+
 ## [1.1.3](https://github.com/atls/hyperion/compare/@atls-ui-parts/select@1.1.3...@atls-ui-parts/select@1.1.3) (2026-06-12)
 
 

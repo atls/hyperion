@@ -1,5 +1,17 @@
 
 
+# [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/tooltip@1.1.5...@atls-ui-parts/tooltip@1.2.0) (2026-06-23)
+
+
+### Features
+
+
+* **common:** upgrade dependencies ([7e73502](https://github.com/atls/hyperion/commit/7e73502b16318e20899da3867227543b39403689))
+
+
+
+
+
 ## [1.1.5](https://github.com/atls/hyperion/compare/@atls-ui-parts/tooltip@1.1.4...@atls-ui-parts/tooltip@1.1.5) (2026-06-17)
 
 

@@ -1,5 +1,17 @@
 
 
+## [1.0.13](https://github.com/atls/hyperion/compare/@atls-ui-parts/parallax@1.0.13...@atls-ui-parts/parallax@1.0.13) (2026-06-23)
+
+
+### Bug Fixes
+
+
+* **parallax:** remove node events dependency ([e611a46](https://github.com/atls/hyperion/commit/e611a46c5d32deed3ad6164992e736ec40abe5b1))
+
+
+
+
+
 ## [1.0.13](https://github.com/atls/hyperion/compare/@atls-ui-parts/parallax@1.0.13...@atls-ui-parts/parallax@1.0.13) (2026-06-12)
 
 

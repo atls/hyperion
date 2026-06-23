@@ -1,5 +1,17 @@
 
 
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/text-transform@1.0.7...@atls-ui-parts/text-transform@1.1.0) (2026-06-23)
+
+
+### Features
+
+
+* **common:** upgrade dependencies ([7e73502](https://github.com/atls/hyperion/commit/7e73502b16318e20899da3867227543b39403689))
+
+
+
+
+
 ## [1.0.7](https://github.com/atls/hyperion/compare/@atls-ui-parts/text-transform@1.0.6...@atls-ui-parts/text-transform@1.0.7) (2025-09-23)
 
 

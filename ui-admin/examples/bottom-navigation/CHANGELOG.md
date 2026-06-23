@@ -1,5 +1,17 @@
 
 
+# [0.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/bottom-navigation@0.0.5...@atls-ui-admin/bottom-navigation@0.1.0) (2026-06-23)
+
+
+### Features
+
+
+* **common:** upgrade dependencies ([7e73502](https://github.com/atls/hyperion/commit/7e73502b16318e20899da3867227543b39403689))
+
+
+
+
+
 ## [0.0.5](https://github.com/atls/hyperion/compare/@atls-ui-admin/bottom-navigation@0.0.5...@atls-ui-admin/bottom-navigation@0.0.5) (2026-06-12)
 
 

@@ -1,5 +1,18 @@
 
 
+# [1.3.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/popover@1.2.0...@atls-ui-parts/popover@1.3.0) (2026-06-23)
+
+
+### Features
+
+
+* **common:** storybook tests ([1b72a1b](https://github.com/atls/hyperion/commit/1b72a1bdc240da1eead7491b86a6f0b444065ce7))
+* **common:** upgrade dependencies ([7e73502](https://github.com/atls/hyperion/commit/7e73502b16318e20899da3867227543b39403689))
+
+
+
+
+
 # [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/popover@1.1.4...@atls-ui-parts/popover@1.2.0) (2026-06-17)
 
 

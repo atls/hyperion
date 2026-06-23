@@ -1,5 +1,23 @@
 
 
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/input@1.0.14...@atls-ui-parts/input@1.1.0) (2026-06-23)
+
+
+### Bug Fixes
+
+
+* **appearance:** use runtime create export ([efcab65](https://github.com/atls/hyperion/commit/efcab6526649648f554c521f7299fbdfa9e1bbf1))
+
+### Features
+
+
+* **appearance:** check component appearance contracts ([a221afd](https://github.com/atls/hyperion/commit/a221afdf4c622d2205e2c26987926c89e5895daa))
+* **common:** upgrade dependencies ([7e73502](https://github.com/atls/hyperion/commit/7e73502b16318e20899da3867227543b39403689))
+
+
+
+
+
 ## [1.0.14](https://github.com/atls/hyperion/compare/@atls-ui-parts/input@1.0.14...@atls-ui-parts/input@1.0.14) (2026-06-12)
 
 
