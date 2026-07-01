@@ -1,10 +1,10 @@
-import type { FileDrift }  from './file-drift.js'
+import type { FileDrift }  from './interfaces.js'
 
 import { readFile }        from 'node:fs/promises'
 import { stat }            from 'node:fs/promises'
 import { basename }        from 'node:path'
 
-import { fileDriftStates } from './file-drift.js'
+import { fileDriftStates } from './interfaces.js'
 
 const isFile = async (targetPath: string): Promise<boolean> => {
   try {

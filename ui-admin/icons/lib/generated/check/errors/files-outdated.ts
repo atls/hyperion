@@ -1,7 +1,7 @@
-import type { FileDrift }      from '../drift/file-drift.js'
+import type { FileDrift }      from '../drift/interfaces.js'
 
 import { GeneratedError }      from './generated.js'
-import { fileDriftStates }     from '../drift/file-drift.js'
+import { fileDriftStates }     from '../drift/interfaces.js'
 import { generatedErrorCodes } from './codes.js'
 
 const outdatedFilesMessage = 'Generated files are outdated'

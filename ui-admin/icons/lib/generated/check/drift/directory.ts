@@ -1,12 +1,12 @@
-import type { FileDrift }        from './file-drift.js'
+import type { FileDrift }        from './interfaces.js'
 
 import { readdir }               from 'node:fs/promises'
 import { join }                  from 'node:path'
 import { sep }                   from 'node:path'
 
 import { relativePathSeparator } from '../constants.js'
-import { fileDriftStates }       from './file-drift.js'
 import { hasFileDrift }          from './file.js'
+import { fileDriftStates }       from './interfaces.js'
 
 interface DirectoryComparisonOptions {
   actualPath: string
