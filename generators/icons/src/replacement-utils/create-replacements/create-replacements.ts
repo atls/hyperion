@@ -1,5 +1,5 @@
-import type { Replacements }          from '../../icons.interfaces.js'
-import type { ReplacementIconColors } from '../../icons.interfaces.js'
+import type { Replacements }          from '../../interfaces.js'
+import type { ReplacementIconColors } from '../../interfaces.js'
 
 import { getColorReplacement }        from '../get-color-replacement/index.js'
 

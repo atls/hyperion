@@ -1,9 +1,9 @@
-import type { Icon }                  from '../../icons.interfaces.js'
-import type { ReplacementIconColors } from '../../icons.interfaces.js'
+import type { Icon }                  from '../../interfaces.js'
+import type { ReplacementIconColors } from '../../interfaces.js'
 
 import { compileIconJsx }             from '../../svgr-utils/index.js'
 import { getSvgColors }               from '../../svgr-utils/index.js'
-import { getSvgColorsOptions }        from './create-replacement-icon-colors.constants.js'
+import { getSvgColorsOptions }        from './constants.js'
 
 export const createReplacementIconColors = async (
   icons: Array<Icon>

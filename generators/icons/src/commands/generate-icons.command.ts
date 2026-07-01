@@ -1,6 +1,6 @@
 /* eslint-disable n/no-sync */
 
-import type { Replacements } from '../icons.interfaces.js'
+import type { Replacements } from '../interfaces.js'
 
 import assert                from 'node:assert/strict'
 import { lstatSync }         from 'node:fs'
@@ -57,6 +57,7 @@ export class GenerateIconsCommand extends BaseIconsCommand {
       this.logger.info(`Generated into ${outputPath}`)
     } catch (error) {
       this.logger.error(error)
+      process.exitCode = 1
     }
   }
 }

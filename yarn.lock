@@ -328,7 +328,7 @@ __metadata:
     tsx: "npm:4.20.5"
     typescript: "npm:5.5.4"
   bin:
-    generate-icons: dist/icons.generator.js
+    generate-icons: dist/generator.js
   languageName: unknown
   linkType: soft
 
