@@ -1,12 +1,12 @@
-import type { OutdatedFile }     from './outdated-file.js'
+import type { FileDrift }        from './file-drift.js'
 
 import { readdir }               from 'node:fs/promises'
 import { join }                  from 'node:path'
 import { sep }                   from 'node:path'
 
 import { relativePathSeparator } from '../constants.js'
-import { isOutdatedFile }        from './file.js'
-import { outdatedFileReasons }   from './outdated-file.js'
+import { fileDriftStates }       from './file-drift.js'
+import { hasFileDrift }          from './file.js'
 
 interface DirectoryComparisonOptions {
   actualPath: string
@@ -37,7 +37,7 @@ const collectFiles = async (directoryPath: string, currentPath = ''): Promise<Ar
 export const compareDirectories = async ({
   actualPath,
   expectedPath,
-}: DirectoryComparisonOptions): Promise<Array<OutdatedFile>> => {
+}: DirectoryComparisonOptions): Promise<Array<FileDrift>> => {
   const expectedFiles = new Set(await collectFiles(expectedPath))
   const actualFiles = new Set(await collectFiles(actualPath))
   const relativePaths = [...new Set([...expectedFiles, ...actualFiles])].sort((pathA, pathB) =>
@@ -52,7 +52,7 @@ export const compareDirectories = async ({
         return [
           {
             actualPath: actualFilePath,
-            reason: outdatedFileReasons.unexpected,
+            state: fileDriftStates.unexpected,
             relativePath,
           },
         ]
@@ -62,18 +62,18 @@ export const compareDirectories = async ({
         return [
           {
             expectedPath: expectedFilePath,
-            reason: outdatedFileReasons.missing,
+            state: fileDriftStates.missing,
             relativePath,
           },
         ]
       }
 
-      if (await isOutdatedFile(expectedFilePath, actualFilePath)) {
+      if (await hasFileDrift(expectedFilePath, actualFilePath)) {
         return [
           {
             actualPath: actualFilePath,
             expectedPath: expectedFilePath,
-            reason: outdatedFileReasons.different,
+            state: fileDriftStates.different,
             relativePath,
           },
         ]

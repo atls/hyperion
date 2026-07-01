@@ -1,10 +1,10 @@
-import type { OutdatedFile }   from './outdated-file.js'
+import type { FileDrift }  from './file-drift.js'
 
-import { readFile }            from 'node:fs/promises'
-import { stat }                from 'node:fs/promises'
-import { basename }            from 'node:path'
+import { readFile }        from 'node:fs/promises'
+import { stat }            from 'node:fs/promises'
+import { basename }        from 'node:path'
 
-import { outdatedFileReasons } from './outdated-file.js'
+import { fileDriftStates } from './file-drift.js'
 
 const isFile = async (targetPath: string): Promise<boolean> => {
   try {
@@ -14,13 +14,13 @@ const isFile = async (targetPath: string): Promise<boolean> => {
   }
 }
 
-export const isOutdatedFile = async (expectedPath: string, actualPath: string): Promise<boolean> =>
+export const hasFileDrift = async (expectedPath: string, actualPath: string): Promise<boolean> =>
   !(await readFile(expectedPath)).equals(await readFile(actualPath))
 
 export const compareFiles = async (
   expectedPath: string,
   actualPath: string
-): Promise<Array<OutdatedFile>> => {
+): Promise<Array<FileDrift>> => {
   const relativePath = basename(actualPath)
   const hasExpectedFile = await isFile(expectedPath)
   const hasActualFile = await isFile(actualPath)
@@ -29,7 +29,7 @@ export const compareFiles = async (
     return [
       {
         actualPath,
-        reason: outdatedFileReasons.unexpected,
+        state: fileDriftStates.unexpected,
         relativePath,
       },
     ]
@@ -39,18 +39,18 @@ export const compareFiles = async (
     return [
       {
         expectedPath,
-        reason: outdatedFileReasons.missing,
+        state: fileDriftStates.missing,
         relativePath,
       },
     ]
   }
 
-  if (await isOutdatedFile(expectedPath, actualPath)) {
+  if (await hasFileDrift(expectedPath, actualPath)) {
     return [
       {
         actualPath,
         expectedPath,
-        reason: outdatedFileReasons.different,
+        state: fileDriftStates.different,
         relativePath,
       },
     ]

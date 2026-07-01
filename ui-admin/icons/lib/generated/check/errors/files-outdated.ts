@@ -1,24 +1,24 @@
-import type { OutdatedFile }   from '../drift/outdated-file.js'
+import type { FileDrift }      from '../drift/file-drift.js'
 
 import { GeneratedError }      from './generated.js'
-import { outdatedFileReasons } from '../drift/outdated-file.js'
+import { fileDriftStates }     from '../drift/file-drift.js'
 import { generatedErrorCodes } from './codes.js'
 
 const outdatedFilesMessage = 'Generated files are outdated'
 
-const outdatedFileReasonMessages = {
-  [outdatedFileReasons.different]: 'content differs',
-  [outdatedFileReasons.missing]: 'missing committed file',
-  [outdatedFileReasons.unexpected]: 'unexpected committed file',
+const fileDriftStateMessages = {
+  [fileDriftStates.different]: 'content differs',
+  [fileDriftStates.missing]: 'missing committed file',
+  [fileDriftStates.unexpected]: 'unexpected committed file',
 }
 
-const formatFile = (file: OutdatedFile): string =>
-  `${file.relativePath}: ${outdatedFileReasonMessages[file.reason]}`
+const formatFile = (file: FileDrift): string =>
+  `${file.relativePath}: ${fileDriftStateMessages[file.state]}`
 
 export class FilesOutdatedError extends GeneratedError {
-  readonly files: Array<OutdatedFile>
+  readonly files: Array<FileDrift>
 
-  constructor(files: Array<OutdatedFile>) {
+  constructor(files: Array<FileDrift>) {
     super(
       generatedErrorCodes.filesOutdated,
       [outdatedFilesMessage, ...files.map(formatFile)].join('\n')
