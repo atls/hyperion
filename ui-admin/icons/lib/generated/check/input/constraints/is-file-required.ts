@@ -1,5 +1,5 @@
-import { inputPathKinds } from '../read.js'
+import type { InputPathKind } from '../read.js'
 
-export const isFileRequired = (
-  kind: (typeof inputPathKinds)[keyof typeof inputPathKinds]
-): boolean => kind !== inputPathKinds.file
+import { inputPathKinds }     from '../read.js'
+
+export const isFileRequired = (kind: InputPathKind): boolean => kind !== inputPathKinds.file

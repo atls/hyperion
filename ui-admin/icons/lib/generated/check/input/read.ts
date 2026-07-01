@@ -8,15 +8,19 @@ export const inputPathKinds = {
   unavailable: 'unavailable',
 } as const
 
-const isMissingError = (error: unknown): boolean =>
-  typeof error === 'object' &&
-  error !== null &&
-  'code' in error &&
-  (error as { code?: unknown }).code === 'ENOENT'
+export type InputPathKind = (typeof inputPathKinds)[keyof typeof inputPathKinds]
 
-export const readInputPathKind = async (
-  targetPath: string
-): Promise<(typeof inputPathKinds)[keyof typeof inputPathKinds]> => {
+const missingInputPathErrorCode = 'ENOENT'
+
+const resolveFailedInputPathKind = (error: unknown): InputPathKind => {
+  if (error instanceof Error && 'code' in error && error.code === missingInputPathErrorCode) {
+    return inputPathKinds.missing
+  }
+
+  return inputPathKinds.unavailable
+}
+
+export const readInputPathKind = async (targetPath: string): Promise<InputPathKind> => {
   try {
     const stats = await stat(targetPath)
 
@@ -30,6 +34,6 @@ export const readInputPathKind = async (
 
     return inputPathKinds.other
   } catch (error) {
-    return isMissingError(error) ? inputPathKinds.missing : inputPathKinds.unavailable
+    return resolveFailedInputPathKind(error)
   }
 }
