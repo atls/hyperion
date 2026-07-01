@@ -1,6 +1,6 @@
-import { checkSuccessMessage } from '../lib/generated/check/constants.js'
-import { outputLineBreak }     from '../lib/generated/check/constants.js'
-import { checkGenerated }      from '../lib/generated/check/index.js'
+import { checkSuccessMessage } from './constants.js'
+import { outputLineBreak }     from './constants.js'
+import { checkGenerated }      from './index.js'
 
 try {
   await checkGenerated()
