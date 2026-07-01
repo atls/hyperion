@@ -12,3 +12,8 @@ export interface FileDrift {
   relativePath: string
   state: FileDriftState
 }
+
+export interface DirectoryComparisonOptions {
+  actualPath: string
+  expectedPath: string
+}

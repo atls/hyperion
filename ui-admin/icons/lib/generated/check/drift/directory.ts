@@ -1,17 +1,13 @@
-import type { FileDrift }        from './interfaces.js'
+import type { DirectoryComparisonOptions } from './interfaces.js'
+import type { FileDrift }                  from './interfaces.js'
 
-import { readdir }               from 'node:fs/promises'
-import { join }                  from 'node:path'
-import { sep }                   from 'node:path'
+import { readdir }                         from 'node:fs/promises'
+import { join }                            from 'node:path'
+import { sep }                             from 'node:path'
 
-import { relativePathSeparator } from '../constants.js'
-import { hasFileDrift }          from './file.js'
-import { fileDriftStates }       from './interfaces.js'
-
-interface DirectoryComparisonOptions {
-  actualPath: string
-  expectedPath: string
-}
+import { relativePathSeparator }           from '../constants.js'
+import { hasFileDrift }                    from './file.js'
+import { fileDriftStates }                 from './interfaces.js'
 
 const collectFiles = async (directoryPath: string, currentPath = ''): Promise<Array<string>> => {
   const entries = await readdir(join(directoryPath, currentPath), { withFileTypes: true })
