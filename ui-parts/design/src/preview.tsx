@@ -1,10 +1,10 @@
-import type { Preview }           from '@storybook/react'
-import type { ReactNode }         from 'react'
-import type { PropsWithChildren } from 'react'
+import type { ReactNode }               from 'react'
+import type { PropsWithChildren }       from 'react'
 
-import { useEffect }              from 'react'
+import { useEffect }                    from 'react'
 
-import { globalThemeId }          from '@atls-ui-parts/theme'
+import { globalThemeId }                from '@atls-ui-parts/theme'
+import { createDesignStorybookPreview } from '@atls-ui/design-storybook/preview'
 
 const ThemeContainer = ({ children }: PropsWithChildren): ReactNode => {
   useEffect(() => {
@@ -14,20 +14,12 @@ const ThemeContainer = ({ children }: PropsWithChildren): ReactNode => {
   return children
 }
 
-const preview: Preview = {
-  decorators: (Story) => (
-    <ThemeContainer>
-      <Story />
-    </ThemeContainer>
-  ),
-  parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
-    },
-  },
-}
-
-export default preview
+export default createDesignStorybookPreview({
+  decorators: [
+    (Story) => (
+      <ThemeContainer>
+        <Story />
+      </ThemeContainer>
+    ),
+  ],
+})
