@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/app/**/*",
+    "src/config/**/*",
+    "src/lib/**/*",
+    "src/storybook/**/*",
+    "src/ui/**/*"
+  ]
+}
