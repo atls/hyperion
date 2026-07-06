@@ -1,3 +1,0 @@
-export const designStorybookConfigDefaultExportError =
-  'design_storybook_config_default_export_required'
-export const designStorybookConfigStoriesError = 'design_storybook_config_stories_required'

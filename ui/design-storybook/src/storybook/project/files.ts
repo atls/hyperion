@@ -3,6 +3,7 @@ import type { LoadedDesignConfig }      from './interfaces.js'
 import type { StorybookProjectOptions } from './interfaces.js'
 
 import { mkdir }                        from 'node:fs/promises'
+import { rm }                           from 'node:fs/promises'
 import { writeFile }                    from 'node:fs/promises'
 import { join }                         from 'node:path'
 import { resolve }                      from 'node:path'
@@ -31,6 +32,8 @@ export const writeStorybookFiles = async (
 
   if (sources.matrixStory) {
     await writeFile(join(configDir, generatedMatrixStoryName), sources.matrixStory)
+  } else {
+    await rm(join(configDir, generatedMatrixStoryName), { force: true })
   }
 
   return configDir

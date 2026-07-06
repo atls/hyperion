@@ -1131,6 +1131,11 @@ __metadata:
     style-loader: "npm:4.0.0"
     typescript: "npm:5.5.4"
     webpack: "npm:5.107.2"
+  peerDependencies:
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
   bin:
     hyperion-design-storybook: ./dist/app/cli.js
   languageName: unknown

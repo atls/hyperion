@@ -1,10 +1,7 @@
 import { createDesignStorybookMain } from '@atls-ui/design-storybook/main'
 
+import { designStorybookStories }    from './constants.js'
+
 export default createDesignStorybookMain({
-  stories: [
-    '../../**/src/*.stories.@(js|jsx|mjs|ts|tsx|mdx)',
-    '../../**/src/*.mdx',
-    '../../**/stories/*.stories.@(js|jsx|mjs|ts|tsx|mdx)',
-    '../../**/stories/*.mdx',
-  ],
+  stories: designStorybookStories,
 })

@@ -3,7 +3,3 @@ export const storybookLinksAddon = '@storybook/addon-links'
 export const storybookDocsAddon = '@storybook/addon-docs'
 export const chromaticStorybookAddon = '@chromatic-com/storybook'
 export const storybookStylingWebpackAddon = '@storybook/addon-styling-webpack'
-
-export const cssLoaderTest = /\.css$/
-export const vanillaCssLoaderTest = /\.vanilla\.css$/i
-export const vanillaCssExclude = /\.vanilla\.css$/

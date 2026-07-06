@@ -7,13 +7,13 @@ import MiniCssExtractPlugin             from 'mini-css-extract-plugin'
 
 import { toPackageDir }                 from '../../lib/package-dir/package-dir.js'
 import { chromaticStorybookAddon }      from './constants.js'
-import { cssLoaderTest }                from './constants.js'
 import { storybookDocsAddon }           from './constants.js'
 import { storybookLinksAddon }          from './constants.js'
 import { storybookStylingWebpackAddon } from './constants.js'
 import { storybookSwcCompilerAddon }    from './constants.js'
-import { vanillaCssExclude }            from './constants.js'
-import { vanillaCssLoaderTest }         from './constants.js'
+import { cssLoaderTest }                from './regex.js'
+import { vanillaCssExclude }            from './regex.js'
+import { vanillaCssLoaderTest }         from './regex.js'
 
 const require = createRequire(import.meta.url)
 

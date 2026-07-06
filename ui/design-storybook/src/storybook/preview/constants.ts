@@ -1,12 +1,15 @@
-import type { Preview } from '@storybook/react'
+import type { Preview }        from '@storybook/react'
+
+import { colorControlMatcher } from './regex.js'
+import { dateControlMatcher }  from './regex.js'
 
 export const designStorybookPreviewModule = '@atls-ui/design-storybook/preview'
 
 export const basePreviewParameters: Preview['parameters'] = {
   controls: {
     matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/i,
+      color: colorControlMatcher,
+      date: dateControlMatcher,
     },
   },
 }
