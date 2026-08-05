@@ -1,6 +1,6 @@
 export type ColorsTokens = Record<keyof typeof colorsContract, string>
 
-export const colorsContract = {
+export const legacyColorsContract = {
   blue: null,
   blueProtective: null,
   white: null,
@@ -42,3 +42,5 @@ export const colorsContract = {
 
   'icons.placeholder': null,
 }
+
+export const colorsContract = legacyColorsContract
