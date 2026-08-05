@@ -1,6 +1,5 @@
 package com.atls.hyperion.sample
 
-import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import com.atls.hyperion.storybook.fragments.storybook.Storybook
 import com.atls.hyperion.ui.components.avatar.stories.AvatarStory
@@ -25,10 +24,11 @@ import com.atls.hyperion.ui.fragments.datepicker.stories.DatePickerStory
 import com.atls.hyperion.ui.fragments.datepicker.stories.DateRangePickerStory
 import com.atls.hyperion.ui.primitives.stories.LinkStory
 import com.atls.hyperion.ui.primitives.stories.TextStory
+import com.atls.hyperion.ui.theme.Theme
 
 @Composable
 fun App() {
-    MaterialTheme {
+    Theme {
         Storybook(
             components = listOf(
                 AvatarStory(),
