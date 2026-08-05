@@ -54,3 +54,9 @@ data class ElevationColors(
     val md: Color,
     val lg: Color
 )
+
+data class ColorSet(
+    val font: Color,
+    val background: Color,
+    val border: Color,
+)
