@@ -1,6 +1,6 @@
 package com.atls.hyperion.ui.components.checkbox.styles.appearance
 
-import com.atls.hyperion.ui.theme.tokens.colors.Colors as ThemeColors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors as ThemeColors
 
 fun CheckboxAppearance.Companion.blue(): CheckboxAppearance =
     CheckboxAppearance(

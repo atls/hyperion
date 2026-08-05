@@ -1,18 +1,18 @@
 package com.atls.hyperion.ui.components.placeholder.styles.appearance
 
-import com.atls.hyperion.ui.theme.tokens.colors.Colors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors
 
 fun PlaceholderAppearance.Companion.imageBox(): PlaceholderAppearance =
     PlaceholderAppearance(
-        backgroundColor = Colors.Palette.lightPurple,
-        iconColor = Colors.Text.darkGray,
-        textColor = Colors.Text.black
+        backgroundColor = LegacyColors.Palette.lightPurple,
+        iconColor = LegacyColors.Text.darkGray,
+        textColor = LegacyColors.Text.black
 
     )
 
 fun PlaceholderAppearance.Companion.logo(): PlaceholderAppearance =
     PlaceholderAppearance(
-        backgroundColor = Colors.Palette.transparent,
-        iconColor = Colors.Text.black,
-        textColor = Colors.Text.black
+        backgroundColor = LegacyColors.Palette.transparent,
+        iconColor = LegacyColors.Text.black,
+        textColor = LegacyColors.Text.black
     )

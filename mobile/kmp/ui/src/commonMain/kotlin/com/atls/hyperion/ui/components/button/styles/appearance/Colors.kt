@@ -2,7 +2,7 @@ package com.atls.hyperion.ui.components.button.styles.appearance
 
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import com.atls.hyperion.ui.theme.tokens.colors.Colors as ThemeColors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors as ThemeColors
 
 sealed class Colors(
     val textColor: Color,

@@ -1,7 +1,7 @@
 package com.atls.hyperion.ui.components.avatar.styles.appearance
 
 import androidx.compose.runtime.Composable
-import com.atls.hyperion.ui.theme.tokens.colors.Colors as ThemeColors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors as ThemeColors
 
 @Composable
 fun AvatarAppearance.Companion.default(): AvatarAppearance =

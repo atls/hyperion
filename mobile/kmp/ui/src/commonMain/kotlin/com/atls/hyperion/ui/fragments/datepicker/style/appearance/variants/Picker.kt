@@ -9,7 +9,7 @@ import com.atls.hyperion.ui.fragments.datepicker.style.appearance.CellAppearance
 import com.atls.hyperion.ui.fragments.datepicker.style.appearance.DatePickerAppearance
 import com.atls.hyperion.ui.fragments.datepicker.style.appearance.HeaderAppearance
 import com.atls.hyperion.ui.fragments.datepicker.style.appearance.WeekDaysAppearance
-import com.atls.hyperion.ui.theme.tokens.colors.Colors as TokenColors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors as TokenColors
 
 @Composable
 fun DatePickerAppearance.Companion.default(): DatePickerAppearance =

@@ -1,7 +1,7 @@
 package com.atls.hyperion.ui.components.input.style.appearance
 
 import androidx.compose.runtime.Composable
-import com.atls.hyperion.ui.theme.tokens.colors.Colors as TokenColors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors as TokenColors
 
 @Composable
 fun InputAppearance.Companion.blue(): InputAppearance =

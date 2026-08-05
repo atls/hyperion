@@ -2,7 +2,7 @@ package com.atls.hyperion.ui.theme.tokens.colors
 
 import androidx.compose.ui.graphics.Color
 
-object Colors {
+object LegacyColors { //TODO remove after components refactoring
     object Palette {
         val blue = Color(0xFF416DDF)
         val blueProtective = Color(0xFF1890FF)

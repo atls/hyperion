@@ -1,6 +1,6 @@
 package com.atls.hyperion.ui.components.switch.styles.appearance
 
-import com.atls.hyperion.ui.theme.tokens.colors.Colors as ThemeColors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors as ThemeColors
 
 fun SwitchAppearance.Companion.default(): SwitchAppearance =
     SwitchAppearance(

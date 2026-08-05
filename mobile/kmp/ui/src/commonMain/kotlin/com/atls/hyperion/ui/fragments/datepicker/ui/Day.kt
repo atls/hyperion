@@ -13,7 +13,7 @@ import com.atls.hyperion.ui.fragments.datepicker.style.appearance.DatePickerAppe
 import com.atls.hyperion.ui.fragments.datepicker.style.shape.DatePickerShape
 import com.atls.hyperion.ui.primitives.Text
 import com.atls.hyperion.ui.shared.layout.aspectSquare
-import com.atls.hyperion.ui.theme.tokens.colors.Colors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors
 import com.kizitonwose.calendar.core.CalendarDay
 import com.kizitonwose.calendar.core.DayPosition
 import kotlinx.datetime.LocalDate
@@ -63,19 +63,19 @@ fun Day(
         .background(backgroundColor)
         .padding(shape.cellShape.padding)
         .then(
-            if ((isSelected || isRangeStart || isRangeEnd) && appearance.cellAppearance.activeBorderColor != Colors.Palette.transparent)
+            if ((isSelected || isRangeStart || isRangeEnd) && appearance.cellAppearance.activeBorderColor != LegacyColors.Palette.transparent)
                 Modifier.border(
                     shape.cellShape.borderWidth,
                     appearance.cellAppearance.activeBorderColor,
                     cellShape
                 )
-            else if (isInRange && appearance.cellAppearance.inRangeBorderColor != Colors.Palette.transparent)
+            else if (isInRange && appearance.cellAppearance.inRangeBorderColor != LegacyColors.Palette.transparent)
                 Modifier.border(
                     shape.cellShape.borderWidth,
                     appearance.cellAppearance.inRangeBorderColor,
                     cellShape
                 )
-            else if (appearance.cellAppearance.borderColor != Colors.Palette.transparent)
+            else if (appearance.cellAppearance.borderColor != LegacyColors.Palette.transparent)
                 Modifier.border(
                     shape.cellShape.borderWidth,
                     appearance.cellAppearance.borderColor,

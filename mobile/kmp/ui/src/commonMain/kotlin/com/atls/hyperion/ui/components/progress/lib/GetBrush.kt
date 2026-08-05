@@ -2,7 +2,7 @@ package com.atls.hyperion.ui.components.progress.lib
 
 import androidx.compose.ui.graphics.Brush
 import com.atls.hyperion.ui.components.progress.styles.appearance.Colors
-import com.atls.hyperion.ui.theme.tokens.colors.Colors as ThemeColors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors as ThemeColors
 
 fun getBrush(colors: Colors, index: Int): Brush? = when (colors) {
     is Colors.Single.Gradient -> colors.strokeBrush

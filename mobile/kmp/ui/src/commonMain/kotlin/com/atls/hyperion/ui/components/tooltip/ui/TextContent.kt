@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import com.atls.hyperion.ui.primitives.Text
-import com.atls.hyperion.ui.theme.tokens.colors.Colors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors
 import com.atls.hyperion.ui.theme.tokens.layout.Weight
 import com.atls.hyperion.ui.theme.typography.FontSize
 import com.atls.hyperion.ui.theme.typography.FontWeight
@@ -19,7 +19,7 @@ import com.atls.hyperion.ui.theme.typography.FontWeight
 fun TextTooltipContent(
     modifier: Modifier = Modifier,
     text: String,
-    color: Color = Colors.Palette.black,
+    color: Color = LegacyColors.Palette.black,
     typography: TextStyle = TextStyle(
         fontSize = FontSize.xs2,
         fontWeight = FontWeight.medium,
