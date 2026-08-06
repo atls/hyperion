@@ -13,9 +13,9 @@ fun HeaderShape.Companion.default(): HeaderShape =
     HeaderShape(
         typography = TextStyle(
             fontSize = FontSize.md,
-            fontWeight = FontWeight.bold,
+            fontWeight = FontWeight.semiBold,
         ),
-        spacing = com.atls.hyperion.ui.theme.tokens.layout.Space.sm,
+        spacing = Space.sm,
         iconSize = IconSize.medium,
-        horizontalPadding = com.atls.hyperion.ui.theme.tokens.layout.Space.sm
+        horizontalPadding = Space.sm
     )

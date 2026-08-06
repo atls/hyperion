@@ -16,7 +16,7 @@ fun TopBarShape.Companion.default(): TopBarShape =
             vertical = Space.zero
         ),
         typography = TextStyle(
-            fontWeight = FontWeight.bold,
+            fontWeight = FontWeight.semiBold,
             fontSize = FontSize.xl4,
             fontFamily = NunitoSansFontFamily()
         )

@@ -14,7 +14,7 @@ fun PlaceholderShape.Companion.imageBox(): PlaceholderShape =
         iconSize = IconSize.large,
         typography = TextStyle(
             fontFamily = NunitoSansFontFamily(),
-            fontWeight = FontWeight.bold,
+            fontWeight = FontWeight.semiBold,
             fontSize = FontSize.xl
         ),
         spacing = Space.xs2
@@ -26,7 +26,7 @@ fun PlaceholderShape.Companion.logo(): PlaceholderShape =
         iconSize = IconSize.large,
         typography = TextStyle(
             fontFamily = NunitoSansFontFamily(),
-            fontWeight = FontWeight.bold,
+            fontWeight = FontWeight.semiBold,
             fontSize = FontSize.xl
         ),
         spacing = Space.xs2
