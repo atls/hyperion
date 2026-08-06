@@ -7,14 +7,14 @@ import com.atls.hyperion.ui.theme.tokens.layout.BorderStroke
 import com.atls.hyperion.ui.theme.tokens.layout.CornerRadius
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 import com.atls.hyperion.ui.theme.typography.FontSize
-import com.atls.hyperion.ui.theme.typography.LineHeights
+import com.atls.hyperion.ui.theme.typography.LineHeight
 
 @Composable
 fun ToastShape.Companion.default(): ToastShape =
     ToastShape(
         cornerRadius = CornerRadius.xl2,
         paddings = PaddingValues(horizontal = Space.lg, vertical = Space.sm),
-        typography = TextStyle(fontSize = FontSize.md, lineHeight = LineHeights.md),
+        typography = TextStyle(fontSize = FontSize.md, lineHeight = LineHeight.md),
         borderStroke = BorderStroke.tiny
     )
 
@@ -23,7 +23,7 @@ fun ToastShape.Companion.rounded(): ToastShape =
     ToastShape(
         cornerRadius = CornerRadius.xl4,
         paddings = PaddingValues(horizontal = Space.lg, vertical = Space.sm),
-        typography = TextStyle(fontSize = FontSize.md, lineHeight = LineHeights.md),
+        typography = TextStyle(fontSize = FontSize.md, lineHeight = LineHeight.md),
         borderStroke = BorderStroke.tiny
     )
 
@@ -32,6 +32,6 @@ fun ToastShape.Companion.square(): ToastShape =
     ToastShape(
         cornerRadius = CornerRadius.zero,
         paddings = PaddingValues(horizontal = Space.lg, vertical = Space.sm),
-        typography = TextStyle(fontSize = FontSize.md, lineHeight = LineHeights.md),
+        typography = TextStyle(fontSize = FontSize.md, lineHeight = LineHeight.md),
         borderStroke = BorderStroke.tiny
     )

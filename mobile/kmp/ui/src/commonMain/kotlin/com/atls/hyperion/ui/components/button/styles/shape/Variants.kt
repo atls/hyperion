@@ -7,14 +7,14 @@ import com.atls.hyperion.ui.theme.tokens.layout.BorderStroke
 import com.atls.hyperion.ui.theme.tokens.layout.CornerRadius
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 import com.atls.hyperion.ui.theme.typography.FontSize
-import com.atls.hyperion.ui.theme.typography.LineHeights
+import com.atls.hyperion.ui.theme.typography.LineHeight
 
 @Composable
 fun ButtonShape.Companion.huge(): ButtonShape =
     ButtonShape(
         cornerRadius = CornerRadius.xl4,
         paddings = PaddingValues(horizontal = Space.xl3, vertical = Space.lg),
-        typography = TextStyle(fontSize = FontSize.xl3, lineHeight = LineHeights.xl4),
+        typography = TextStyle(fontSize = FontSize.xl3, lineHeight = LineHeight.xl4),
         borderStroke = BorderStroke.none
     )
 
@@ -23,7 +23,7 @@ fun ButtonShape.Companion.large(): ButtonShape =
     ButtonShape(
         cornerRadius = CornerRadius.xl4,
         paddings = PaddingValues(horizontal = Space.xl3, vertical = Space.md),
-        typography = TextStyle(fontSize = FontSize.xl2, lineHeight = LineHeights.xl3),
+        typography = TextStyle(fontSize = FontSize.xl2, lineHeight = LineHeight.xl3),
         borderStroke = BorderStroke.none
     )
 
@@ -32,7 +32,7 @@ fun ButtonShape.Companion.semiMedium(): ButtonShape =
     ButtonShape(
         cornerRadius = CornerRadius.xl4,
         paddings = PaddingValues(horizontal = Space.xl, vertical = Space.sm),
-        typography = TextStyle(fontSize = FontSize.lg, lineHeight = LineHeights.xl),
+        typography = TextStyle(fontSize = FontSize.lg, lineHeight = LineHeight.xl),
         borderStroke = BorderStroke.none
     )
 
@@ -41,7 +41,7 @@ fun ButtonShape.Companion.medium(): ButtonShape =
     ButtonShape(
         cornerRadius = CornerRadius.xl4,
         paddings = PaddingValues(horizontal = Space.lg, vertical = Space.xs),
-        typography = TextStyle(fontSize = FontSize.md, lineHeight = LineHeights.md),
+        typography = TextStyle(fontSize = FontSize.md, lineHeight = LineHeight.md),
         borderStroke = BorderStroke.none
     )
 
@@ -50,7 +50,7 @@ fun ButtonShape.Companion.normal(): ButtonShape =
     ButtonShape(
         cornerRadius = CornerRadius.xl4,
         paddings = PaddingValues(horizontal = Space.xl3, vertical = Space.xs2),
-        typography = TextStyle(fontSize = FontSize.xs, lineHeight = LineHeights.sm),
+        typography = TextStyle(fontSize = FontSize.xs, lineHeight = LineHeight.sm),
         borderStroke = BorderStroke.none
     )
 
@@ -59,7 +59,7 @@ fun ButtonShape.Companion.small(): ButtonShape =
     ButtonShape(
         cornerRadius = CornerRadius.xl4,
         paddings = PaddingValues(horizontal = Space.lg, vertical = Space.xs3),
-        typography = TextStyle(fontSize = FontSize.xs, lineHeight = LineHeights.xs),
+        typography = TextStyle(fontSize = FontSize.xs, lineHeight = LineHeight.xs),
         borderStroke = BorderStroke.none
     )
 
@@ -68,6 +68,6 @@ fun ButtonShape.Companion.smallSizeMediumRadii(): ButtonShape =
     ButtonShape(
         cornerRadius = CornerRadius.xl2_5,
         paddings = PaddingValues(horizontal = Space.lg, vertical = Space.xs3),
-        typography = TextStyle(fontSize = FontSize.xs, lineHeight = LineHeights.xs),
+        typography = TextStyle(fontSize = FontSize.xs, lineHeight = LineHeight.xs),
         borderStroke = BorderStroke.none
     )

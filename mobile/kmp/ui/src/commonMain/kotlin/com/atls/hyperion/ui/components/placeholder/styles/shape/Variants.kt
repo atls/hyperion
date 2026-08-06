@@ -6,7 +6,7 @@ import com.atls.hyperion.ui.primitives.icon.IconSize
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 import com.atls.hyperion.ui.theme.typography.FontSize
 import com.atls.hyperion.ui.theme.typography.FontWeight
-import com.atls.hyperion.ui.theme.typography.NunitoSansFontFamily
+import com.atls.hyperion.ui.theme.typography.fontFamilies.NunitoSansFontFamily
 
 @Composable
 fun PlaceholderShape.Companion.imageBox(): PlaceholderShape =
