@@ -2182,7 +2182,8 @@ const RAW_RUNTIME_STATE =
       ["workspace:ui/theme", {\
         "packageLocation": "./ui/theme/",\
         "packageDependencies": [\
-          ["@atls-ui/theme", "workspace:ui/theme"]\
+          ["@atls-ui/theme", "workspace:ui/theme"],\
+          ["csstype", "npm:3.2.3"]\
         ],\
         "linkType": "SOFT"\
       }]\

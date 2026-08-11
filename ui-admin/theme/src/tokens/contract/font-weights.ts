@@ -1,3 +1,4 @@
+// TODO: Remove legacy typography tokens after components are refactored to @atls-ui/theme typography.
 export type FontWeightsTokens = Record<keyof typeof fontWeightsContract, string>
 
 export const fontWeightsContract = {

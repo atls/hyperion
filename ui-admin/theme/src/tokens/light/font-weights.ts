@@ -1,3 +1,4 @@
+// TODO: Remove legacy typography tokens after components are refactored to @atls-ui/theme typography.
 import type { FontWeightsTokens } from '../index.js'
 
 export const fontWeights: FontWeightsTokens = {

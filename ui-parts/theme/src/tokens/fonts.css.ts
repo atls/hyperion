@@ -1,3 +1,4 @@
+// TODO: Remove legacy typography tokens after components are refactored to @atls-ui/theme typography.
 import { globalFontFace } from '@vanilla-extract/css'
 
 const nunitoSans = 'Nunito Sans'
