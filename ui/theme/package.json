@@ -19,6 +19,9 @@
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
   },
+  "dependencies": {
+    "csstype": "3.2.3"
+  },
   "publishConfig": {
     "access": "public",
     "exports": {
