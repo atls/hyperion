@@ -1,7 +1,7 @@
-import type { fontSizes }      from '../font-sizes.js'
-import type { fontWeights }    from '../font-weights.js'
-import type { letterSpacings } from '../letter-spacings.js'
-import type { lineHeights }    from '../line-heights.js'
+import type { fontSizes }      from '../fontSizes.js'
+import type { fontWeights }    from '../fontWeights.js'
+import type { letterSpacings } from '../letterSpacings.js'
+import type { lineHeights }    from '../lineHeights.js'
 
 export type FontSizeValue = (typeof fontSizes)[keyof typeof fontSizes]
 

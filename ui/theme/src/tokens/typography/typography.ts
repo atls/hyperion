@@ -1,9 +1,9 @@
-import { scienceGothicFontFaces }  from './font-faces.js'
-import { scienceGothicFontFamily } from './font-faces.js'
-import { fontSizes }               from './font-sizes.js'
-import { fontWeights }             from './font-weights.js'
-import { letterSpacings }          from './letter-spacings.js'
-import { lineHeights }             from './line-heights.js'
+import { scienceGothicFontFaces }  from './fontFaces.js'
+import { scienceGothicFontFamily } from './fontFaces.js'
+import { fontSizes }               from './fontSizes.js'
+import { fontWeights }             from './fontWeights.js'
+import { letterSpacings }          from './letterSpacings.js'
+import { lineHeights }             from './lineHeights.js'
 import { createTypographyStyle }   from './utils/index.js'
 
 export const typography = {

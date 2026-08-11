@@ -4,7 +4,7 @@ import type { FontWeightValue }      from './interfaces.js'
 import type { LetterSpacingValue }   from './interfaces.js'
 import type { LineHeightValue }      from './interfaces.js'
 
-import { scienceGothicFontFamily }   from '../font-faces.js'
+import { scienceGothicFontFamily }   from '../fontFaces.js'
 
 export const createTypographyStyle = (
   fontSize: FontSizeValue,

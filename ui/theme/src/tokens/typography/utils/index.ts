@@ -1,1 +1,1 @@
-export * from './create-typography-style.js'
+export * from './createTypographyStyle.js'
