@@ -11,7 +11,7 @@ import com.atls.hyperion.ui.primitives.VerticalSpacer
 import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 import com.atls.hyperion.ui.theme.typography.FontSize
-import com.atls.hyperion.ui.theme.typography.LineHeights
+import com.atls.hyperion.ui.theme.typography.LineHeight
 
 class TextStory : ComponentExample {
     override val name: String = "Text"
@@ -26,7 +26,7 @@ class TextStory : ComponentExample {
                 color = LegacyColors.Text.black,
                 typography = TextStyle(
                     fontSize = FontSize.xl4,
-                    lineHeight = LineHeights.xl4
+                    lineHeight = LineHeight.xl4
                 )
             )
             VerticalSpacer(Space.sm)
@@ -35,7 +35,7 @@ class TextStory : ComponentExample {
                 color = LegacyColors.Text.almostBlack,
                 typography = TextStyle(
                     fontSize = FontSize.md,
-                    lineHeight = LineHeights.md
+                    lineHeight = LineHeight.md
                 )
             )
             VerticalSpacer(Space.sm)
@@ -44,7 +44,7 @@ class TextStory : ComponentExample {
                 color = LegacyColors.Text.gray,
                 typography = TextStyle(
                     fontSize = FontSize.xs,
-                    lineHeight = LineHeights.xs
+                    lineHeight = LineHeight.xs
                 )
             )
             VerticalSpacer(Space.sm)
@@ -53,7 +53,7 @@ class TextStory : ComponentExample {
                 color = LegacyColors.Text.red,
                 typography = TextStyle(
                     fontSize = FontSize.sm,
-                    lineHeight = LineHeights.sm
+                    lineHeight = LineHeight.sm
                 )
             )
         }

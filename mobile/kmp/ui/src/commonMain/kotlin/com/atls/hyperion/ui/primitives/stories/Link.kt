@@ -11,7 +11,7 @@ import com.atls.hyperion.ui.primitives.VerticalSpacer
 import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 import com.atls.hyperion.ui.theme.typography.FontSize
-import com.atls.hyperion.ui.theme.typography.LineHeights
+import com.atls.hyperion.ui.theme.typography.LineHeight
 
 class LinkStory : ComponentExample {
     override val name: String = "Link"
@@ -27,7 +27,7 @@ class LinkStory : ComponentExample {
                 color = LegacyColors.Text.blue,
                 typography = TextStyle(
                     fontSize = FontSize.md,
-                    lineHeight = LineHeights.md
+                    lineHeight = LineHeight.md
                 )
             )
             VerticalSpacer(Space.sm)
@@ -37,7 +37,7 @@ class LinkStory : ComponentExample {
                 color = LegacyColors.Text.softBlue,
                 typography = TextStyle(
                     fontSize = FontSize.md,
-                    lineHeight = LineHeights.md
+                    lineHeight = LineHeight.md
                 )
             )
             VerticalSpacer(Space.sm)
@@ -47,7 +47,7 @@ class LinkStory : ComponentExample {
                 color = LegacyColors.Text.gray,
                 typography = TextStyle(
                     fontSize = FontSize.xs,
-                    lineHeight = LineHeights.xs
+                    lineHeight = LineHeight.xs
                 )
             )
         }
