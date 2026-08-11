@@ -8,10 +8,10 @@ import androidx.compose.ui.text.TextStyle
 import com.atls.hyperion.storybook.shared.model.ComponentExample
 import com.atls.hyperion.ui.primitives.Text
 import com.atls.hyperion.ui.primitives.VerticalSpacer
-import com.atls.hyperion.ui.theme.tokens.colors.Colors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 import com.atls.hyperion.ui.theme.typography.FontSize
-import com.atls.hyperion.ui.theme.typography.LineHeights
+import com.atls.hyperion.ui.theme.typography.LineHeight
 
 class TextStory : ComponentExample {
     override val name: String = "Text"
@@ -23,37 +23,37 @@ class TextStory : ComponentExample {
         ) {
             Text(
                 text = "Heading XL",
-                color = Colors.Text.black,
+                color = LegacyColors.Text.black,
                 typography = TextStyle(
                     fontSize = FontSize.xl4,
-                    lineHeight = LineHeights.xl4
+                    lineHeight = LineHeight.xl4
                 )
             )
             VerticalSpacer(Space.sm)
             Text(
                 text = "Body Medium",
-                color = Colors.Text.almostBlack,
+                color = LegacyColors.Text.almostBlack,
                 typography = TextStyle(
                     fontSize = FontSize.md,
-                    lineHeight = LineHeights.md
+                    lineHeight = LineHeight.md
                 )
             )
             VerticalSpacer(Space.sm)
             Text(
                 text = "Small Caption",
-                color = Colors.Text.gray,
+                color = LegacyColors.Text.gray,
                 typography = TextStyle(
                     fontSize = FontSize.xs,
-                    lineHeight = LineHeights.xs
+                    lineHeight = LineHeight.xs
                 )
             )
             VerticalSpacer(Space.sm)
             Text(
                 text = "Error Text",
-                color = Colors.Text.red,
+                color = LegacyColors.Text.red,
                 typography = TextStyle(
                     fontSize = FontSize.sm,
-                    lineHeight = LineHeights.sm
+                    lineHeight = LineHeight.sm
                 )
             )
         }

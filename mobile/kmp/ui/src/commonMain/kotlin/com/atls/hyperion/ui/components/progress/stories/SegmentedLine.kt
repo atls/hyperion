@@ -11,7 +11,7 @@ import com.atls.hyperion.ui.components.progress.styles.appearance.primary
 import com.atls.hyperion.ui.components.progress.styles.shape.ProgressShape
 import com.atls.hyperion.ui.components.progress.styles.shape.default
 import com.atls.hyperion.ui.components.progress.styles.shape.thick
-import com.atls.hyperion.ui.theme.tokens.colors.Colors as ThemeColors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors as ThemeColors
 
 @Composable
 fun SegmentedLineProgressVariants(percent: Float) {

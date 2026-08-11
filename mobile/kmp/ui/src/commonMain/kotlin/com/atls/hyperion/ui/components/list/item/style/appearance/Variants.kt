@@ -1,17 +1,17 @@
 package com.atls.hyperion.ui.components.list.item.style.appearance
 
 import androidx.compose.runtime.Composable
-import com.atls.hyperion.ui.theme.tokens.colors.Colors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors
 
 @Composable
 fun TextListItemAppearance.Companion.default(): TextListItemAppearance =
     TextListItemAppearance(
         selected = TextListItemAppearanceColors(
-            backgroundColor = Colors.Palette.blueProtective,
-            textColor = Colors.Text.white
+            backgroundColor = LegacyColors.Palette.blueProtective,
+            textColor = LegacyColors.Text.white
         ),
         unselected = TextListItemAppearanceColors(
-            backgroundColor = Colors.Palette.white,
-            textColor = Colors.Text.black
+            backgroundColor = LegacyColors.Palette.white,
+            textColor = LegacyColors.Text.black
         )
     )

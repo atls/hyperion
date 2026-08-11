@@ -8,10 +8,10 @@ import androidx.compose.ui.text.TextStyle
 import com.atls.hyperion.storybook.shared.model.ComponentExample
 import com.atls.hyperion.ui.primitives.Link
 import com.atls.hyperion.ui.primitives.VerticalSpacer
-import com.atls.hyperion.ui.theme.tokens.colors.Colors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 import com.atls.hyperion.ui.theme.typography.FontSize
-import com.atls.hyperion.ui.theme.typography.LineHeights
+import com.atls.hyperion.ui.theme.typography.LineHeight
 
 class LinkStory : ComponentExample {
     override val name: String = "Link"
@@ -24,30 +24,30 @@ class LinkStory : ComponentExample {
             Link(
                 textDecoration = "Standard Blue Link",
                 url = "https://google.com",
-                color = Colors.Text.blue,
+                color = LegacyColors.Text.blue,
                 typography = TextStyle(
                     fontSize = FontSize.md,
-                    lineHeight = LineHeights.md
+                    lineHeight = LineHeight.md
                 )
             )
             VerticalSpacer(Space.sm)
             Link(
                 textDecoration = "Soft Blue Link",
                 url = "https://google.com",
-                color = Colors.Text.softBlue,
+                color = LegacyColors.Text.softBlue,
                 typography = TextStyle(
                     fontSize = FontSize.md,
-                    lineHeight = LineHeights.md
+                    lineHeight = LineHeight.md
                 )
             )
             VerticalSpacer(Space.sm)
             Link(
                 textDecoration = "Small Gray Link",
                 url = "https://google.com",
-                color = Colors.Text.gray,
+                color = LegacyColors.Text.gray,
                 typography = TextStyle(
                     fontSize = FontSize.xs,
-                    lineHeight = LineHeights.xs
+                    lineHeight = LineHeight.xs
                 )
             )
         }

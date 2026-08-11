@@ -20,7 +20,7 @@ import com.atls.hyperion.ui.components.input.style.appearance.InputAppearance
 import com.atls.hyperion.ui.components.input.style.shape.InputShape
 import com.atls.hyperion.ui.shared.addon.AddonSlotManager
 import com.atls.hyperion.ui.theme.tokens.layout.Weight
-import com.atls.hyperion.ui.theme.tokens.colors.Colors as ThemeColors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors as ThemeColors
 
 @Composable
 fun Input(

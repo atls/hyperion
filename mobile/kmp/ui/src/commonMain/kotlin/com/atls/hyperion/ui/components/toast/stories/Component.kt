@@ -13,7 +13,7 @@ import com.atls.hyperion.ui.generated.resources.Res
 import com.atls.hyperion.ui.generated.resources.chevron_left
 import com.atls.hyperion.ui.primitives.icon.Icon
 import com.atls.hyperion.ui.primitives.icon.IconSize
-import com.atls.hyperion.ui.theme.tokens.colors.Colors
+import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.painterResource
 
@@ -46,7 +46,7 @@ class ToastStories : ComponentExample {
                 leadingContent = {
                     Icon(
                         icon = painterResource(Res.drawable.chevron_left),
-                        color = Colors.Text.red,
+                        color = LegacyColors.Text.red,
                         size = IconSize.medium
                     )
                 }
@@ -61,7 +61,7 @@ class ToastStories : ComponentExample {
                 trailingContent = {
                     Icon(
                         icon = painterResource(Res.drawable.chevron_left),
-                        color = Colors.Text.red,
+                        color = LegacyColors.Text.red,
                         size = IconSize.medium
                     )
                 }
@@ -76,14 +76,14 @@ class ToastStories : ComponentExample {
                 leadingContent = {
                     Icon(
                         icon = painterResource(Res.drawable.chevron_left),
-                        color = Colors.Text.red,
+                        color = LegacyColors.Text.red,
                         size = IconSize.medium
                     )
                 },
                 trailingContent = {
                     Icon(
                         icon = painterResource(Res.drawable.chevron_left),
-                        color = Colors.Text.red,
+                        color = LegacyColors.Text.red,
                         size = IconSize.medium
                     )
                 }
