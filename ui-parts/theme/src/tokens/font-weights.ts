@@ -1,3 +1,4 @@
+// TODO: Remove legacy typography tokens after components are refactored to @atls-ui/theme typography.
 export const fontWeights = {
   inherit: 'inherit',
   light: '300',
