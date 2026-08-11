@@ -10,3 +10,10 @@ export type LineHeightValue = (typeof lineHeights)[keyof typeof lineHeights]
 export type FontWeightValue = (typeof fontWeights)[keyof typeof fontWeights]
 
 export type LetterSpacingValue = (typeof letterSpacings)[keyof typeof letterSpacings]
+
+export interface TypographyStyleOptions {
+  fontSize: FontSizeValue
+  lineHeight: LineHeightValue
+  fontWeight: FontWeightValue
+  letterSpacing: LetterSpacingValue
+}

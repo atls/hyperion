@@ -1,17 +1,14 @@
-import type { TypographyProperties } from '../interfaces.js'
-import type { FontSizeValue }        from './interfaces.js'
-import type { FontWeightValue }      from './interfaces.js'
-import type { LetterSpacingValue }   from './interfaces.js'
-import type { LineHeightValue }      from './interfaces.js'
+import type { TypographyProperties }   from '../interfaces.js'
+import type { TypographyStyleOptions } from './interfaces.js'
 
-import { scienceGothicFontFamily }   from '../fontFaces.js'
+import { scienceGothicFontFamily }     from '../fontFaces.js'
 
-export const createTypographyStyle = (
-  fontSize: FontSizeValue,
-  lineHeight: LineHeightValue,
-  fontWeight: FontWeightValue,
-  letterSpacing: LetterSpacingValue
-): TypographyProperties => ({
+export const createTypographyStyle = ({
+  fontSize,
+  lineHeight,
+  fontWeight,
+  letterSpacing,
+}: TypographyStyleOptions): TypographyProperties => ({
   fontFamily: scienceGothicFontFamily,
   fontSize,
   lineHeight,
