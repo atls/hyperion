@@ -10,7 +10,9 @@
   },
   "main": "./src/index.ts",
   "files": [
-    "dist"
+    "assets",
+    "dist",
+    "licenses"
   ],
   "scripts": {
     "build": "yarn library build",
