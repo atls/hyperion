@@ -1,4 +1,5 @@
 export const space = {
+  // TODO remove after components refactoring
   zero: '0',
   g1: '1px',
   g4: '4px',
