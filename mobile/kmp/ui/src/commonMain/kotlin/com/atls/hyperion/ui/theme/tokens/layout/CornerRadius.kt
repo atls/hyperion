@@ -2,7 +2,7 @@ package com.atls.hyperion.ui.theme.tokens.layout
 
 import androidx.compose.ui.unit.dp
 
-object CornerRadius {
+object CornerRadius { //TODO remove after components refactoring
     val zero = 0.dp
     val half = 50.dp
     val full = 100.dp
@@ -23,4 +23,15 @@ object CornerRadius {
     val xl5 = 28.dp
     val xl6 = 32.dp
     val xl10 = 1000.dp
+}
+
+object Radii {
+    val none = 0.dp
+    val xs3 = 2.dp
+    val xs2 = 4.dp
+    val xs = 8.dp
+    val sm = 12.dp
+    val md = 16.dp
+    val lg = 24.dp
+    val full = 9999.dp
 }
