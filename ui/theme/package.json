@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui/theme",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {
@@ -10,12 +10,17 @@
   },
   "main": "./src/index.ts",
   "files": [
-    "dist"
+    "assets",
+    "dist",
+    "licenses"
   ],
   "scripts": {
     "build": "yarn library build",
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
+  },
+  "dependencies": {
+    "csstype": "3.2.3"
   },
   "publishConfig": {
     "access": "public",

@@ -1,4 +1,4 @@
-export const colors = {
+export const legacyColors = {
   blue: 'rgba(65, 109, 223, 1)',
   blueProtective: 'rgba(24, 144 ,255, 1)',
   white: 'rgba(255, 255, 255, 1)',
@@ -40,3 +40,5 @@ export const colors = {
 
   'icons.placeholder': 'rgba(161, 170, 199, 1)',
 }
+
+export const colors = legacyColors
