@@ -1,5 +1,17 @@
 
 
+# [0.3.0](https://github.com/atls/hyperion/compare/@atls-ui/theme@0.2.0...@atls-ui/theme@0.3.0) (2026-08-13)
+
+
+### Features
+
+
+* **theme:** radii web ([c411fb8](https://github.com/atls/hyperion/commit/c411fb8f88bda5ff21bd14216d78575306cc4c7e))
+
+
+
+
+
 # [0.2.0](https://github.com/atls/hyperion/compare/@atls-ui/theme@0.1.0...@atls-ui/theme@0.2.0) (2026-08-13)
 
 

@@ -7,6 +7,13 @@
 
 
 
+## [1.1.2](https://github.com/atls/hyperion/compare/@atls-ui-parts/theme@1.1.2...@atls-ui-parts/theme@1.1.2) (2026-08-13)
+
+
+
+
+
+
 ## [1.1.2](https://github.com/atls/hyperion/compare/@atls-ui-parts/theme@1.1.1...@atls-ui-parts/theme@1.1.2) (2026-08-13)
 
 
