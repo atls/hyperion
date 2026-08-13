@@ -1,5 +1,17 @@
 
 
+# [0.2.0](https://github.com/atls/hyperion/compare/@atls-ui/theme@0.1.0...@atls-ui/theme@0.2.0) (2026-08-13)
+
+
+### Features
+
+
+* **theme:** add web spacing tokens ([fd701d5](https://github.com/atls/hyperion/commit/fd701d5911593d53d628cfa9b8a7d978af089256))
+
+
+
+
+
 # [0.1.0](https://github.com/atls/hyperion/compare/@atls-ui/theme@0.0.3...@atls-ui/theme@0.1.0) (2026-08-13)
 
 

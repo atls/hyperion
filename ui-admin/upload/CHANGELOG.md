@@ -7,6 +7,13 @@
 
 
 
+# [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/upload@1.2.0...@atls-ui-admin/upload@1.2.0) (2026-08-13)
+
+
+
+
+
+
 # [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/upload@1.2.0...@atls-ui-admin/upload@1.2.0) (2026-06-23)
 
 
