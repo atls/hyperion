@@ -1,3 +1,4 @@
+// TODO: Remove legacy typography sprinkles after components are refactored to @atls-ui/theme typography.
 import { defineProperties } from 'rainbow-sprinkles'
 
 import { vars }             from '../theme.css.js'

@@ -1,5 +1,7 @@
 export * from './animations.js'
+export * from './colors/index.js'
 export * from './opacities.js'
 export * from './radii.js'
 export * from './space.js'
+export * from './typography/index.js'
 export * from './z-index.js'

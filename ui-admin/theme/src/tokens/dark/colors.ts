@@ -1,6 +1,6 @@
 import type { ColorsTokens } from '../contract/index.js'
 
-export const colors: ColorsTokens = {
+export const legacyColors: ColorsTokens = {
   blue: 'rgba(65, 109, 223, 1)',
   blueProtective: 'rgba(24, 144 ,255, 1)',
   white: 'rgba(0, 0, 0, 1)',
@@ -42,3 +42,5 @@ export const colors: ColorsTokens = {
 
   'icons.placeholder': 'rgba(104, 110, 130, 1)',
 }
+
+export const colors = legacyColors
