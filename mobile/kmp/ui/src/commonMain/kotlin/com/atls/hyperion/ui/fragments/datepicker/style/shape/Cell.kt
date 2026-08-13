@@ -5,7 +5,7 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
-import com.atls.hyperion.ui.theme.tokens.layout.BorderStroke
+import com.atls.hyperion.ui.theme.tokens.borders.BorderStroke
 
 data class CellShape(
     val spacing: Dp,

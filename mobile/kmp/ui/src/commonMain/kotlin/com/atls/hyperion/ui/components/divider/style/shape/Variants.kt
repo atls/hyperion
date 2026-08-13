@@ -1,7 +1,7 @@
 package com.atls.hyperion.ui.components.divider.style.shape
 
 import androidx.compose.runtime.Composable
-import com.atls.hyperion.ui.theme.tokens.layout.BorderStroke
+import com.atls.hyperion.ui.theme.tokens.borders.BorderStroke
 
 @Composable
 fun DividerShape.Companion.default(): DividerShape =

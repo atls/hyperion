@@ -3,7 +3,7 @@ package com.atls.hyperion.ui.components.button.styles.shape
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.TextStyle
-import com.atls.hyperion.ui.theme.tokens.layout.BorderStroke
+import com.atls.hyperion.ui.theme.tokens.borders.BorderStroke
 import com.atls.hyperion.ui.theme.tokens.layout.CornerRadius
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 import com.atls.hyperion.ui.theme.typography.FontSize
