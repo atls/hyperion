@@ -1,6 +1,13 @@
 export const radii = {
-  none: 'none',
-  full: '100%',
+  none: '0',
+  xs3: '2px',
+  xs2: '4px',
+  xs: '8px',
+  sm: '12px',
+  md: '16px',
+  lg: '24px',
+  full: '9999px',
+  // TODO remove after components refactoring
   f1: '1px',
   f2: '2px',
   f3: '3px',
