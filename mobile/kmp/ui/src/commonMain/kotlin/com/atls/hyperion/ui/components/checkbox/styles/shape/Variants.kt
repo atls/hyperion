@@ -1,7 +1,7 @@
 package com.atls.hyperion.ui.components.checkbox.styles.shape
 
 import com.atls.hyperion.ui.components.checkbox.styles.CheckboxSize
-import com.atls.hyperion.ui.theme.tokens.layout.BorderStroke
+import com.atls.hyperion.ui.theme.tokens.borders.BorderStroke
 import com.atls.hyperion.ui.theme.tokens.layout.CornerRadius
 
 fun CheckboxShape.Companion.small(): CheckboxShape =

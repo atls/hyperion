@@ -1,6 +1,6 @@
 package com.atls.hyperion.ui.components.progress.styles.shape
 
-import com.atls.hyperion.ui.theme.tokens.layout.BorderStroke
+import com.atls.hyperion.ui.theme.tokens.borders.BorderStroke
 import com.atls.hyperion.ui.theme.tokens.layout.CornerRadius
 
 fun ProgressShape.Companion.default(): ProgressShape =

@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.text.font.FontFamily
+import com.atls.hyperion.ui.theme.tokens.borders.Borders
 import com.atls.hyperion.ui.theme.tokens.colors.Colors
 import com.atls.hyperion.ui.theme.tokens.colors.darkColors
 import com.atls.hyperion.ui.theme.tokens.colors.lightColors
@@ -11,6 +12,7 @@ import com.atls.hyperion.ui.theme.typography.TextStyles
 import com.atls.hyperion.ui.theme.typography.fontFamilies.ScienceGothicFontFamily
 
 val LocalHyperionColors = staticCompositionLocalOf { lightColors }
+val LocalHyperionBorders = staticCompositionLocalOf { Borders(lightColors) }
 val LocalHyperionTypography = staticCompositionLocalOf { TextStyles(fontFamily = FontFamily.Default) }
 
 @Composable
@@ -19,10 +21,12 @@ fun Theme(
     colors: Colors = if (darkTheme) darkColors else lightColors,
     content: @Composable () -> Unit
 ) {
+    val borders = Borders(colors)
     val typography = TextStyles(fontFamily = ScienceGothicFontFamily())
 
     CompositionLocalProvider(
         LocalHyperionColors provides colors,
+        LocalHyperionBorders provides borders,
         LocalHyperionTypography provides typography
     ) {
         content()
