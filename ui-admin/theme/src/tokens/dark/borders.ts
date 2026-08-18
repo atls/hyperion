@@ -1,3 +1,4 @@
+// TODO: Remove legacy border tokens after components are refactored to @atls-ui/theme borders.
 import type { BordersTokens } from '../contract/index.js'
 
 export const borders: BordersTokens = {
