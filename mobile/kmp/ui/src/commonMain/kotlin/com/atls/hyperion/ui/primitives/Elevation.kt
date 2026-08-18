@@ -1,8 +1,10 @@
 package com.atls.hyperion.ui.primitives
 
+import androidx.compose.foundation.background
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.dropShadow
 import androidx.compose.ui.draw.innerShadow
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.shadow.Shadow
@@ -12,18 +14,31 @@ import com.atls.hyperion.ui.theme.tokens.elevation.ShadowType
 
 fun Modifier.elevation(
     elevation: Elevation,
+    backgroundColor: Color,
     shape: Shape = RectangleShape
-): Modifier = elevation.shadows.fold(this) { modifier, shadow ->
-    when (shadow.type) {
-        ShadowType.Drop -> modifier.dropShadow(
-            shape = shape,
-            shadow = shadow.toComposeShadow()
-        )
+): Modifier {
+    val withDropShadows = elevation.shadows.fold(this) { modifier, shadow ->
+        if (shadow.type == ShadowType.Drop) {
+            modifier.dropShadow(
+                shape = shape,
+                shadow = shadow.toComposeShadow()
+            )
+        } else {
+            modifier
+        }
+    }
 
-        ShadowType.Inner -> modifier.innerShadow(
-            shape = shape,
-            shadow = shadow.toComposeShadow()
-        )
+    val withBackground = withDropShadows.background(backgroundColor, shape)
+
+    return elevation.shadows.fold(withBackground) { modifier, shadow ->
+        if (shadow.type == ShadowType.Inner) {
+            modifier.innerShadow(
+                shape = shape,
+                shadow = shadow.toComposeShadow()
+            )
+        } else {
+            modifier
+        }
     }
 }
 
