@@ -14,7 +14,7 @@ import com.atls.hyperion.ui.theme.typography.fontFamilies.ScienceGothicFontFamil
 
 val LocalHyperionColors = staticCompositionLocalOf { lightColors }
 val LocalHyperionBorders = staticCompositionLocalOf { Borders(lightColors) }
-val LocalHyperionElevations = staticCompositionLocalOf { Elevations(lightColors.elevation) }
+val LocalHyperionElevations = staticCompositionLocalOf { Elevations(lightColors) }
 val LocalHyperionTypography = staticCompositionLocalOf { TextStyles(fontFamily = FontFamily.Default) }
 
 @Composable
@@ -24,7 +24,7 @@ fun Theme(
     content: @Composable () -> Unit
 ) {
     val borders = Borders(colors)
-    val elevations = Elevations(colors.elevation)
+    val elevations = Elevations(colors)
     val typography = TextStyles(fontFamily = ScienceGothicFontFamily())
 
     CompositionLocalProvider(
