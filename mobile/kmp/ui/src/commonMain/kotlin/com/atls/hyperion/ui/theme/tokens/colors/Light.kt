@@ -8,7 +8,7 @@ val lightColors = Colors(
         hover = Color(0xFF1643A3),
         pressed = Color(0xFF12357F),
         disabled = Color(0x401E56C7),
-        subtle = Color(0xFF6B86C8)
+        subtle = Color(0x401E56C7)
     ),
     surface = SurfaceColors(
         base = Color(0xFFF8F9FF),
