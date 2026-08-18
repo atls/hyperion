@@ -1,5 +1,18 @@
 
 
+# [0.4.0](https://github.com/atls/hyperion/compare/@atls-ui/theme@0.3.0...@atls-ui/theme@0.4.0) (2026-08-18)
+
+
+### Features
+
+
+* **theme:** expose web borders ([6e0a7e8](https://github.com/atls/hyperion/commit/6e0a7e86272c8c36f819853ef3f9fd1ffbb6d000))
+* **theme:** web borders tokens ([6422b3d](https://github.com/atls/hyperion/commit/6422b3d460623a752f14e48f312c3381a8b81ece))
+
+
+
+
+
 # [0.3.0](https://github.com/atls/hyperion/compare/@atls-ui/theme@0.2.0...@atls-ui/theme@0.3.0) (2026-08-13)
 
 

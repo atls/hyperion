@@ -1,5 +1,12 @@
 
 
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.1.0...@atls-ui-parts/card@1.1.0) (2026-08-18)
+
+
+
+
+
+
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.1.0...@atls-ui-parts/card@1.1.0) (2026-08-13)
 
 
