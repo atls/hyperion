@@ -1,4 +1,4 @@
-import type { GetSvgColorsOptions } from './get-svg-colors.interfaces.js'
+import type { GetSvgColorsOptions } from '../interfaces.js'
 
 export const validateColor = (color: string, options: GetSvgColorsOptions): boolean => {
   if (!color) {

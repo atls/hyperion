@@ -1,1 +1,1 @@
-export * from './build-replacements.util.js'
+export * from './build-replacements.js'

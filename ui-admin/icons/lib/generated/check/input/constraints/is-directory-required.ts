@@ -1,0 +1,6 @@
+import type { InputPathKind } from '../read.js'
+
+import { inputPathKinds }     from '../read.js'
+
+export const isDirectoryRequired = (kind: InputPathKind): boolean =>
+  kind !== inputPathKinds.directory
