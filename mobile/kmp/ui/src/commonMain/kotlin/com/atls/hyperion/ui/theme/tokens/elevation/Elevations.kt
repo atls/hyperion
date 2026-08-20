@@ -2,7 +2,6 @@ package com.atls.hyperion.ui.theme.tokens.elevation
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.dp
 import com.atls.hyperion.ui.theme.tokens.colors.Colors
 
 class Elevations(colors: Colors) {
@@ -13,88 +12,150 @@ class Elevations(colors: Colors) {
     val modal: ElevationStates = Modal(colors.elevation.md)
 
     private class Xs(color: Color, focusedColor: Color) : PressableElevationStates {
-        override val default = elevation(drop(color, offsetY = 1.dp, blur = 2.dp))
+        override val default = elevation(
+            drop(color, offsetY = ShadowOffset.xs, blur = ShadowBlur.xs4)
+        )
         override val focused = elevation(
-            drop(color, offsetY = 1.dp, blur = 3.dp, spread = 1.dp),
+            drop(
+                color,
+                offsetY = ShadowOffset.xs,
+                blur = ShadowBlur.xs3,
+                spread = ShadowSpread.xs
+            ),
             drop(
                 focusedColor,
-                offsetX = 1.dp,
-                offsetY = 3.dp,
-                blur = 6.dp,
-                spread = (-2).dp
+                offsetX = ShadowOffset.xs,
+                offsetY = ShadowOffset.md,
+                blur = ShadowBlur.sm,
+                spread = ShadowSpread.negativeSm
             )
         )
         override val pressed = elevation(
-            inner(color, offsetY = 1.dp, blur = 1.dp),
-            drop(color, offsetY = 1.dp, blur = 1.dp, spread = (-1).dp)
+            inner(color, offsetY = ShadowOffset.xs, blur = ShadowBlur.xs5),
+            drop(
+                color,
+                offsetY = ShadowOffset.xs,
+                blur = ShadowBlur.xs5,
+                spread = ShadowSpread.negativeXs
+            )
         )
-        override val disabled = elevation(drop(color, offsetY = 1.dp, blur = 1.dp))
+        override val disabled = elevation(
+            drop(color, offsetY = ShadowOffset.xs, blur = ShadowBlur.xs5)
+        )
     }
 
     private class Sm(color: Color, focusedColor: Color) : PressableElevationStates {
-        override val default = elevation(drop(color, offsetY = 2.dp, blur = 6.dp))
+        override val default = elevation(
+            drop(color, offsetY = ShadowOffset.sm, blur = ShadowBlur.sm)
+        )
         override val focused = elevation(
-            drop(color, offsetY = 2.dp, blur = 8.dp, spread = 1.dp),
+            drop(
+                color,
+                offsetY = ShadowOffset.sm,
+                blur = ShadowBlur.md,
+                spread = ShadowSpread.xs
+            ),
             drop(
                 focusedColor,
-                offsetX = 1.dp,
-                offsetY = 4.dp,
-                blur = 8.dp,
-                spread = (-2).dp
+                offsetX = ShadowOffset.xs,
+                offsetY = ShadowOffset.lg,
+                blur = ShadowBlur.md,
+                spread = ShadowSpread.negativeSm
             )
         )
         override val pressed = elevation(
-            inner(color, offsetY = 1.dp, blur = 2.dp),
-            drop(color, offsetY = 1.dp, blur = 3.dp, spread = (-2).dp)
+            inner(color, offsetY = ShadowOffset.xs, blur = ShadowBlur.xs4),
+            drop(
+                color,
+                offsetY = ShadowOffset.xs,
+                blur = ShadowBlur.xs3,
+                spread = ShadowSpread.negativeSm
+            )
         )
-        override val disabled = elevation(drop(color, offsetY = 1.dp, blur = 2.dp))
+        override val disabled = elevation(
+            drop(color, offsetY = ShadowOffset.xs, blur = ShadowBlur.xs4)
+        )
     }
 
     private class Md(color: Color, focusedColor: Color) : PressableElevationStates {
-        override val default = elevation(drop(color, offsetY = 4.dp, blur = 12.dp))
+        override val default = elevation(
+            drop(color, offsetY = ShadowOffset.lg, blur = ShadowBlur.lg)
+        )
         override val focused = elevation(
-            drop(color, offsetY = 4.dp, blur = 14.dp),
+            drop(color, offsetY = ShadowOffset.lg, blur = ShadowBlur.xl),
             drop(
                 focusedColor,
-                offsetX = 1.dp,
-                offsetY = 6.dp,
-                blur = 14.dp,
-                spread = (-4).dp
+                offsetX = ShadowOffset.xs,
+                offsetY = ShadowOffset.xl,
+                blur = ShadowBlur.xl,
+                spread = ShadowSpread.negativeLg
             )
         )
         override val pressed = elevation(
-            inner(color, offsetY = 1.dp, blur = 3.dp),
-            drop(color, offsetY = 2.dp, blur = 6.dp, spread = (-1).dp)
+            inner(color, offsetY = ShadowOffset.xs, blur = ShadowBlur.xs3),
+            drop(
+                color,
+                offsetY = ShadowOffset.sm,
+                blur = ShadowBlur.sm,
+                spread = ShadowSpread.negativeXs
+            )
         )
-        override val disabled = elevation(drop(color, offsetY = 2.dp, blur = 5.dp))
+        override val disabled = elevation(
+            drop(color, offsetY = ShadowOffset.sm, blur = ShadowBlur.xs)
+        )
     }
 
     private class Lg(color: Color, focusedColor: Color) : PressableElevationStates {
         override val default = elevation(
-            drop(color, offsetY = 6.dp, blur = 12.dp, spread = (-4).dp)
+            drop(
+                color,
+                offsetY = ShadowOffset.xl,
+                blur = ShadowBlur.lg,
+                spread = ShadowSpread.negativeLg
+            )
         )
         override val focused = elevation(
-            drop(color, offsetY = 7.dp, blur = 16.dp, spread = (-4).dp),
+            drop(
+                color,
+                offsetY = ShadowOffset.xl2,
+                blur = ShadowBlur.xl2,
+                spread = ShadowSpread.negativeLg
+            ),
             drop(
                 focusedColor,
-                offsetX = 1.dp,
-                offsetY = 6.dp,
-                blur = 8.dp,
-                spread = (-1).dp
+                offsetX = ShadowOffset.xs,
+                offsetY = ShadowOffset.xl,
+                blur = ShadowBlur.md,
+                spread = ShadowSpread.negativeXs
             )
         )
         override val pressed = elevation(
-            inner(color, offsetY = 2.dp, blur = 4.dp),
-            drop(color, offsetY = 3.dp, blur = 8.dp, spread = (-4).dp)
+            inner(color, offsetY = ShadowOffset.sm, blur = ShadowBlur.xs2),
+            drop(
+                color,
+                offsetY = ShadowOffset.md,
+                blur = ShadowBlur.md,
+                spread = ShadowSpread.negativeLg
+            )
         )
         override val disabled = elevation(
-            drop(color, offsetY = 3.dp, blur = 6.dp, spread = (-3).dp)
+            drop(
+                color,
+                offsetY = ShadowOffset.md,
+                blur = ShadowBlur.sm,
+                spread = ShadowSpread.negativeMd
+            )
         )
     }
 
     private class Modal(color: Color) : ElevationStates {
         override val default = elevation(
-            drop(color, offsetY = 12.dp, blur = 20.dp, spread = (-2).dp)
+            drop(
+                color,
+                offsetY = ShadowOffset.xl3,
+                blur = ShadowBlur.xl3,
+                spread = ShadowSpread.negativeSm
+            )
         )
     }
 }
@@ -103,10 +164,10 @@ private fun elevation(vararg shadows: Shadow) = Elevation(shadows.toList())
 
 private fun drop(
     color: Color,
-    offsetX: Dp = 0.dp,
+    offsetX: Dp = ShadowOffset.none,
     offsetY: Dp,
     blur: Dp,
-    spread: Dp = 0.dp
+    spread: Dp = ShadowSpread.none
 ) = Shadow(
     type = ShadowType.Drop,
     offsetX = offsetX,
@@ -122,9 +183,9 @@ private fun inner(
     blur: Dp
 ) = Shadow(
     type = ShadowType.Inner,
-    offsetX = 0.dp,
+    offsetX = ShadowOffset.none,
     offsetY = offsetY,
     blur = blur,
-    spread = 0.dp,
+    spread = ShadowSpread.none,
     color = color
 )
