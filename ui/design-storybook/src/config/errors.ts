@@ -1,0 +1,12 @@
+export const designStorybookConfigDefaultExportError =
+  'design_storybook_config_default_export_required'
+export const designStorybookConfigStoriesError = 'design_storybook_config_stories_required'
+export const designStorybookConfigStoriesValueError = 'design_storybook_config_stories_invalid'
+export const designStorybookConfigStyleEntrypointsError =
+  'design_storybook_config_style_entrypoints_invalid'
+export const designStorybookConfigMatrixError = 'design_storybook_config_matrix_invalid'
+export const designStorybookConfigMatrixComponentsError =
+  'design_storybook_config_matrix_components_invalid'
+export const designStorybookConfigMatrixItemError = 'design_storybook_config_matrix_item_invalid'
+export const designStorybookConfigImportSpecifierError =
+  'design_storybook_config_import_specifier_invalid'

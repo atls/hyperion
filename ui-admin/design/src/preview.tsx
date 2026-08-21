@@ -1,14 +1,3 @@
-import type { Preview } from '@storybook/react'
+import { createDesignStorybookPreview } from '@atls-ui/design-storybook/preview'
 
-const preview: Preview = {
-  parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
-    },
-  },
-}
-
-export default preview
+export default createDesignStorybookPreview()

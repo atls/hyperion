@@ -1,0 +1,8 @@
+export const storybookBuildCommand = 'build'
+export const storybookDevCommand = 'dev'
+export const storybookPackageName = 'storybook'
+export const storybookPackageManifest = 'package.json'
+export const packageJsonEncoding = 'utf8'
+export const configDirOption = '--config-dir'
+export const outputDirOption = '-o'
+export const portOption = '-p'

@@ -1,0 +1,5 @@
+export const currentDirectorySpecifier = '.'
+export const parentDirectorySpecifier = '..'
+export const relativeDirectorySpecifierPrefix = './'
+export const posixPathSeparator = '/'
+export const windowsPathSeparator = '\\'

@@ -8,5 +8,8 @@ const UI_PARTS_URL_FALLBACK = IS_DEVELOPMENT
   ? 'http://localhost:3001/'
   : 'https://ui-parts.ui.atls.design'
 
+export const designStorybookStories = ['**/*.stories.@(js|jsx|mjs|ts|tsx|mdx)', '**/*.mdx']
+export const uiAdminRefTitle = 'Admin'
+export const uiPartsRefTitle = 'Parts'
 export const UI_ADMIN_URL = process.env.UI_ADMIN_URL || UI_ADMIN_URL_FALLBACK
 export const UI_PARTS_URL = process.env.UI_PARTS_URL || UI_PARTS_URL_FALLBACK

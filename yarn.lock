@@ -76,6 +76,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-admin/design@workspace:ui-admin/design"
   dependencies:
+    "@atls-ui/design-storybook": "workspace:*"
     "@chromatic-com/storybook": "npm:5.2.1"
     "@mdx-js/react": "npm:3.1.1"
     "@storybook/addon-docs": "npm:10.4.6"
@@ -576,6 +577,7 @@ __metadata:
   resolution: "@atls-ui-parts/design@workspace:ui-parts/design"
   dependencies:
     "@atls-ui-parts/theme": "workspace:*"
+    "@atls-ui/design-storybook": "workspace:*"
     "@chromatic-com/storybook": "npm:5.2.1"
     "@mdx-js/react": "npm:3.1.1"
     "@storybook/addon-docs": "npm:10.4.6"
@@ -1103,6 +1105,42 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui/design-storybook@workspace:*, @atls-ui/design-storybook@workspace:ui/design-storybook":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui/design-storybook@workspace:ui/design-storybook"
+  dependencies:
+    "@atls-ui-parts/theme": "workspace:*"
+    "@chromatic-com/storybook": "npm:5.2.1"
+    "@mdx-js/react": "npm:3.1.1"
+    "@storybook/addon-docs": "npm:10.4.6"
+    "@storybook/addon-links": "npm:10.4.6"
+    "@storybook/addon-styling-webpack": "npm:3.0.2"
+    "@storybook/addon-webpack5-compiler-swc": "npm:4.0.3"
+    "@storybook/react": "npm:10.4.6"
+    "@storybook/react-webpack5": "npm:10.4.6"
+    "@types/node": "npm:25.9.3"
+    "@types/react": "npm:19.1.2"
+    "@vanilla-extract/css": "npm:1.17.1"
+    "@vanilla-extract/dynamic": "npm:2.1.2"
+    "@vanilla-extract/webpack-plugin": "npm:2.3.27"
+    css-loader: "npm:7.1.4"
+    mini-css-extract-plugin: "npm:2.10.2"
+    react: "npm:19.1.0"
+    react-dom: "npm:19.1.0"
+    storybook: "npm:10.4.6"
+    style-loader: "npm:4.0.0"
+    typescript: "npm:5.5.4"
+    webpack: "npm:5.107.2"
+  peerDependencies:
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
+  bin:
+    hyperion-design-storybook: ./dist/app/cli.js
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui/design@workspace:ui/design":
   version: 0.0.0-use.local
   resolution: "@atls-ui/design@workspace:ui/design"
@@ -1112,6 +1150,7 @@ __metadata:
     "@atls-ui-parts/link": "workspace:*"
     "@atls-ui-parts/text": "workspace:*"
     "@atls-ui-parts/theme": "workspace:*"
+    "@atls-ui/design-storybook": "workspace:*"
     "@chromatic-com/storybook": "npm:5.2.1"
     "@mdx-js/react": "npm:3.1.1"
     "@storybook/addon-docs": "npm:10.4.6"

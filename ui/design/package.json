@@ -20,6 +20,7 @@
     "@atls-ui-parts/link": "workspace:*",
     "@atls-ui-parts/text": "workspace:*",
     "@atls-ui-parts/theme": "workspace:*",
+    "@atls-ui/design-storybook": "workspace:*",
     "@chromatic-com/storybook": "5.2.1",
     "@mdx-js/react": "3.1.1",
     "@storybook/addon-docs": "10.4.6",

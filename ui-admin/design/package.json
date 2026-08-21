@@ -12,6 +12,7 @@
     "start-image": "node dist/index.js"
   },
   "devDependencies": {
+    "@atls-ui/design-storybook": "workspace:*",
     "@chromatic-com/storybook": "5.2.1",
     "@mdx-js/react": "3.1.1",
     "@storybook/addon-docs": "10.4.6",
