@@ -6,19 +6,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import com.atls.hyperion.storybook.shared.model.ComponentExample
 import com.atls.hyperion.ui.components.button.Button
 import com.atls.hyperion.ui.components.button.styles.appearance.ButtonAppearance
-import com.atls.hyperion.ui.components.button.styles.appearance.blue
+import com.atls.hyperion.ui.components.button.styles.appearance.primary
 import com.atls.hyperion.ui.components.button.styles.shape.ButtonShape
-import com.atls.hyperion.ui.components.button.styles.shape.normal
+import com.atls.hyperion.ui.components.button.styles.shape.md
 import com.atls.hyperion.ui.components.modal.bottom.BottomDialog
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 import kotlinx.coroutines.launch
@@ -40,8 +35,8 @@ class BottomDialogStory : ComponentExample {
         ) {
             Button(
                 text = "Show Bottom Dialog",
-                appearance = ButtonAppearance.blue(),
-                shape = ButtonShape.normal(),
+                appearance = ButtonAppearance.primary(),
+                shape = ButtonShape.md(),
                 onClick = { showDialog = true }
             )
 
@@ -59,8 +54,8 @@ class BottomDialogStory : ComponentExample {
                         Button(
                             modifier = Modifier.padding(top = Space.sm),
                             text = "Close",
-                            appearance = ButtonAppearance.blue(),
-                            shape = ButtonShape.normal(),
+                            appearance = ButtonAppearance.primary(),
+                            shape = ButtonShape.md(),
                             onClick = {
                                 scope.launch { sheetState.hide() }.invokeOnCompletion {
                                     if (!sheetState.isVisible) {
