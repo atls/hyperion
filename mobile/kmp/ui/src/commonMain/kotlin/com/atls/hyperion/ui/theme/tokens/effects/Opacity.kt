@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.theme.tokens
+package com.atls.hyperion.ui.theme.tokens.effects
 
 object Opacity {
     val none = 0f
