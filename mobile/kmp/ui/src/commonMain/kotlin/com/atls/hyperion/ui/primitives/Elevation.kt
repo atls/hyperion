@@ -7,8 +7,9 @@ import androidx.compose.ui.draw.innerShadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.graphics.shadow.Shadow
-import androidx.compose.ui.unit.DpOffset
+import com.atls.hyperion.ui.primitives.utils.clearDropShadowInside
+import com.atls.hyperion.ui.primitives.utils.isolateDropShadows
+import com.atls.hyperion.ui.primitives.utils.toComposeShadow
 import com.atls.hyperion.ui.theme.tokens.elevation.Elevation
 import com.atls.hyperion.ui.theme.tokens.elevation.ShadowType
 
@@ -17,34 +18,29 @@ fun Modifier.elevation(
     backgroundColor: Color,
     shape: Shape = RectangleShape
 ): Modifier {
-    val withDropShadows = elevation.shadows.fold(this) { modifier, shadow ->
-        if (shadow.type == ShadowType.Drop) {
-            modifier.dropShadow(
-                shape = shape,
-                shadow = shadow.toComposeShadow()
-            )
-        } else {
-            modifier
-        }
+    val dropShadows = elevation.shadows.filter { it.type == ShadowType.Drop }
+    val withDropShadows = dropShadows.fold(isolateDropShadows(dropShadows)) { modifier, shadow ->
+        modifier.dropShadow(
+            shape = shape,
+            shadow = shadow.toComposeShadow(backgroundColor.alpha)
+        )
+    }
+    val withoutDropShadowInside = if (dropShadows.isEmpty()) {
+        withDropShadows
+    } else {
+        withDropShadows.clearDropShadowInside(shape)
     }
 
-    val withBackground = withDropShadows.background(backgroundColor, shape)
+    val withBackground = withoutDropShadowInside.background(backgroundColor, shape)
 
     return elevation.shadows.fold(withBackground) { modifier, shadow ->
         if (shadow.type == ShadowType.Inner) {
             modifier.innerShadow(
                 shape = shape,
-                shadow = shadow.toComposeShadow()
+                shadow = shadow.toComposeShadow(backgroundColor.alpha)
             )
         } else {
             modifier
         }
     }
 }
-
-private fun com.atls.hyperion.ui.theme.tokens.elevation.Shadow.toComposeShadow() = Shadow(
-    radius = blur,
-    spread = spread,
-    offset = DpOffset(offsetX, offsetY),
-    color = color
-)
