@@ -18,49 +18,62 @@ internal fun ButtonContent(
 ) {
     val beforeAddons = addons.get(AddonPosition.Before)
     val afterAddons = addons.get(AddonPosition.After)
-    val sideWidth = (shape.addonSize + shape.gap) * maxOf(
-        beforeAddons.size,
-        afterAddons.size
-    ).toFloat()
 
-    Row(
-        modifier = Modifier.padding(shape.paddings),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Addons(
-            addons = beforeAddons,
-            width = sideWidth,
-            addonSize = shape.addonSize,
-            gap = shape.gap,
-            position = AddonPosition.Before
-        )
-        Box(contentAlignment = Alignment.Center) {
-            content()
+    BoxWithConstraints(modifier = Modifier.padding(shape.paddings)) {
+        if (constraints.hasFixedWidth) {
+            Box(modifier = Modifier.fillMaxWidth()) {
+                Addons(
+                    addons = beforeAddons,
+                    addonSize = shape.addonSize,
+                    gap = shape.gap,
+                    position = AddonPosition.Before,
+                    modifier = Modifier.align(Alignment.CenterStart)
+                )
+                Box(
+                    modifier = Modifier.align(Alignment.Center),
+                    contentAlignment = Alignment.Center,
+                    content = { content() }
+                )
+                Addons(
+                    addons = afterAddons,
+                    addonSize = shape.addonSize,
+                    gap = shape.gap,
+                    position = AddonPosition.After,
+                    modifier = Modifier.align(Alignment.CenterEnd)
+                )
+            }
+        } else {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Addons(
+                    addons = beforeAddons,
+                    addonSize = shape.addonSize,
+                    gap = shape.gap,
+                    position = AddonPosition.Before
+                )
+                Box(contentAlignment = Alignment.Center) {
+                    content()
+                }
+                Addons(
+                    addons = afterAddons,
+                    addonSize = shape.addonSize,
+                    gap = shape.gap,
+                    position = AddonPosition.After
+                )
+            }
         }
-        Addons(
-            addons = afterAddons,
-            width = sideWidth,
-            addonSize = shape.addonSize,
-            gap = shape.gap,
-            position = AddonPosition.After
-        )
     }
 }
 
 @Composable
 private fun Addons(
     addons: List<Addon>,
-    width: Dp,
     addonSize: Dp,
     gap: Dp,
-    position: AddonPosition
+    position: AddonPosition,
+    modifier: Modifier = Modifier
 ) {
     Row(
-        modifier = Modifier.width(width),
-        horizontalArrangement = when (position) {
-            AddonPosition.Before -> Arrangement.End
-            AddonPosition.After -> Arrangement.Start
-        },
+        modifier = modifier,
         verticalAlignment = Alignment.CenterVertically
     ) {
         if (addons.isNotEmpty() && position == AddonPosition.After) {
