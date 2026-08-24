@@ -41,7 +41,9 @@ class ButtonStory : ComponentExample {
     override fun Content() {
         var darkTheme by remember { mutableStateOf(false) }
         var focused by remember { mutableStateOf(false) }
-        var showIcons by remember { mutableStateOf(false) }
+        var showLeadingIcon by remember { mutableStateOf(false) }
+        var showTrailingIcon by remember { mutableStateOf(false) }
+        var fullWidth by remember { mutableStateOf(false) }
         var enabled by remember { mutableStateOf(true) }
 
         Theme(darkTheme = darkTheme) {
@@ -65,9 +67,19 @@ class ButtonStory : ComponentExample {
                         onCheckedChange = { focused = it }
                     )
                     Toggle(
-                        label = "Icons",
-                        checked = showIcons,
-                        onCheckedChange = { showIcons = it }
+                        label = "Leading icon",
+                        checked = showLeadingIcon,
+                        onCheckedChange = { showLeadingIcon = it }
+                    )
+                    Toggle(
+                        label = "Trailing icon",
+                        checked = showTrailingIcon,
+                        onCheckedChange = { showTrailingIcon = it }
+                    )
+                    Toggle(
+                        label = "Full width",
+                        checked = fullWidth,
+                        onCheckedChange = { fullWidth = it }
                     )
                     Toggle(
                         label = "Enabled",
@@ -117,18 +129,27 @@ class ButtonStory : ComponentExample {
                         } else {
                             shape
                         }
-                        val previewAddons = if (showIcons) {
-                            AddonSlotManager(
-                                mapOf(
-                                    AddonPosition.Before to listOf(icon),
-                                    AddonPosition.After to listOf(icon)
-                                )
+                        val previewAddons = AddonSlotManager(
+                            mapOf(
+                                AddonPosition.Before to if (showLeadingIcon) {
+                                    listOf(icon)
+                                } else {
+                                    emptyList()
+                                },
+                                AddonPosition.After to if (showTrailingIcon) {
+                                    listOf(icon)
+                                } else {
+                                    emptyList()
+                                }
                             )
-                        } else {
-                            AddonSlotManager()
-                        }
+                        )
 
                         Button(
+                            modifier = if (fullWidth) {
+                                Modifier.fillMaxWidth()
+                            } else {
+                                Modifier
+                            },
                             text = "Button",
                             appearance = previewAppearance,
                             shape = previewShape,
