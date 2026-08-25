@@ -31,7 +31,6 @@ class ElevationStory : ComponentExample {
     @Composable
     override fun Content() {
         var darkTheme by remember { mutableStateOf(false) }
-        var focused by remember { mutableStateOf(false) }
         var enabled by remember { mutableStateOf(true) }
 
         Theme(darkTheme = darkTheme) {
@@ -59,12 +58,6 @@ class ElevationStory : ComponentExample {
                     onCheckedChange = { darkTheme = it }
                 )
                 Toggle(
-                    label = "Focused",
-                    checked = focused,
-                    textColor = colors.text.primary,
-                    onCheckedChange = { focused = it }
-                )
-                Toggle(
                     label = "Enabled",
                     checked = enabled,
                     textColor = colors.text.primary,
@@ -75,7 +68,6 @@ class ElevationStory : ComponentExample {
                     ElevationCard(
                         label = label,
                         states = states,
-                        focused = focused,
                         enabled = enabled,
                         backgroundColor = colors.surface.base,
                         textColor = colors.text.primary
@@ -114,7 +106,6 @@ private fun Toggle(
 private fun ElevationCard(
     label: String,
     states: PressableElevationStates,
-    focused: Boolean,
     enabled: Boolean,
     backgroundColor: Color,
     textColor: Color
@@ -124,7 +115,6 @@ private fun ElevationCard(
     val state = when {
         !enabled -> "disabled" to states.disabled
         pressed -> "pressed" to states.pressed
-        focused -> "focused" to states.focused
         else -> "default" to states.default
     }
 

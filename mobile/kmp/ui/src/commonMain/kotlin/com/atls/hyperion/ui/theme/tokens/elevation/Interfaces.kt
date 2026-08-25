@@ -28,7 +28,6 @@ interface ElevationStates {
 }
 
 interface PressableElevationStates : ElevationStates {
-    val focused: Elevation
     val pressed: Elevation
     val disabled: Elevation
 }
