@@ -6,7 +6,7 @@ export const darkColors: Colors = {
     hover: '#7AA7FF',
     pressed: '#3F74FF',
     disabled: '#5F8FFF',
-    subtle: '#394A6B',
+    subtle: '#5F8FFF4D',
   },
   surface: {
     base: '#111111',
