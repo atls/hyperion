@@ -1,103 +1,87 @@
-import type { ButtonAppearance }  from '@atls-ui-parts/button'
+import type { ButtonAppearance } from '@atls-ui-parts/button'
 
-import { vars }                   from '@atls-ui-admin/theme'
-import { createAppearanceStyles } from '@atls-ui-parts/button'
-
-const appearanceBlueDefaultStyles = createAppearanceStyles({
-  fontColor: vars.colors['button.blue.default.font'],
-  backgroundColor: vars.colors['button.blue.default.background'],
-  borderColor: vars.colors['button.blue.default.border'],
-})
-
-const appearanceBlueHoverStyles = createAppearanceStyles({
-  fontColor: vars.colors['button.blue.hover.font'],
-  backgroundColor: vars.colors['button.blue.hover.background'],
-  borderColor: vars.colors['button.blue.hover.border'],
-})
-
-const appearanceBluePressedStyles = createAppearanceStyles({
-  fontColor: vars.colors['button.blue.pressed.font'],
-  backgroundColor: vars.colors['button.blue.pressed.background'],
-  borderColor: vars.colors['button.blue.pressed.border'],
-})
-
-const appearanceBlueDisabledStyles = createAppearanceStyles({
-  fontColor: vars.colors['button.blue.disabled.font'],
-  backgroundColor: vars.colors['button.blue.disabled.background'],
-  borderColor: vars.colors['button.blue.disabled.border'],
-})
-
-const appearanceLightBlueDefaultStyles = createAppearanceStyles({
-  fontColor: vars.colors['button.lightBlue.default.font'],
-  backgroundColor: vars.colors['button.lightBlue.default.background'],
-  borderColor: vars.colors['button.lightBlue.default.border'],
-})
-
-const appearanceLightBlueHoverStyles = createAppearanceStyles({
-  fontColor: vars.colors['button.lightBlue.hover.font'],
-  backgroundColor: vars.colors['button.lightBlue.hover.background'],
-  borderColor: vars.colors['button.lightBlue.hover.border'],
-})
-
-const appearanceLightBluePressedStyles = createAppearanceStyles({
-  fontColor: vars.colors['button.lightBlue.pressed.font'],
-  backgroundColor: vars.colors['button.lightBlue.pressed.background'],
-  borderColor: vars.colors['button.lightBlue.pressed.border'],
-})
-
-const appearanceLightBlueDisabledStyles = createAppearanceStyles({
-  fontColor: vars.colors['button.lightBlue.disabled.font'],
-  backgroundColor: vars.colors['button.lightBlue.disabled.background'],
-  borderColor: vars.colors['button.lightBlue.disabled.border'],
-})
-
-const appearanceGhostStyles = createAppearanceStyles({
-  fontColor: 'inherit',
-  backgroundColor: 'transparent',
-  border: 'none',
-})
-
-export const appearanceVariant = {
-  blue: appearanceBlueDefaultStyles,
-  lightBlue: appearanceLightBlueDefaultStyles,
-  ghost: appearanceGhostStyles,
-}
-
-export const appearanceHover = {
-  blueHover: appearanceBlueHoverStyles,
-  lightBlueHover: appearanceLightBlueHoverStyles,
-  ghostHover: appearanceGhostStyles,
-}
-
-export const appearancePressed = {
-  bluePressed: appearanceBluePressedStyles,
-  lightBluePressed: appearanceLightBluePressedStyles,
-  ghostPressed: appearanceGhostStyles,
-}
-
-export const appearanceDisabled = {
-  blueDisabled: appearanceBlueDisabledStyles,
-  lightBlueDisabled: appearanceLightBlueDisabledStyles,
-  ghostDisabled: appearanceGhostStyles,
-}
+import { vars }                  from '@atls-ui-admin/theme'
 
 export const buttonAppearances: Record<'blue' | 'ghost' | 'lightBlue', ButtonAppearance> = {
   blue: {
-    default: appearanceVariant.blue,
-    hover: appearanceHover.blueHover,
-    pressed: appearancePressed.bluePressed,
-    disabled: appearanceDisabled.blueDisabled,
+    default: {
+      background: vars.colors['button.blue.default.background'],
+      content: vars.colors['button.blue.default.font'],
+      border: vars.colors['button.blue.default.border'],
+    },
+    hover: {
+      background: vars.colors['button.blue.hover.background'],
+      content: vars.colors['button.blue.hover.font'],
+      border: vars.colors['button.blue.hover.border'],
+    },
+    pressed: {
+      background: vars.colors['button.blue.pressed.background'],
+      content: vars.colors['button.blue.pressed.font'],
+      border: vars.colors['button.blue.pressed.border'],
+    },
+    disabled: {
+      background: vars.colors['button.blue.disabled.background'],
+      content: vars.colors['button.blue.disabled.font'],
+      border: vars.colors['button.blue.disabled.border'],
+    },
+    focused: {
+      background: vars.colors['button.blue.default.background'],
+      content: vars.colors['button.blue.default.font'],
+      border: vars.colors['button.blue.default.border'],
+    },
   },
   lightBlue: {
-    default: appearanceVariant.lightBlue,
-    hover: appearanceHover.lightBlueHover,
-    pressed: appearancePressed.lightBluePressed,
-    disabled: appearanceDisabled.lightBlueDisabled,
+    default: {
+      background: vars.colors['button.lightBlue.default.background'],
+      content: vars.colors['button.lightBlue.default.font'],
+      border: vars.colors['button.lightBlue.default.border'],
+    },
+    hover: {
+      background: vars.colors['button.lightBlue.hover.background'],
+      content: vars.colors['button.lightBlue.hover.font'],
+      border: vars.colors['button.lightBlue.hover.border'],
+    },
+    pressed: {
+      background: vars.colors['button.lightBlue.pressed.background'],
+      content: vars.colors['button.lightBlue.pressed.font'],
+      border: vars.colors['button.lightBlue.pressed.border'],
+    },
+    disabled: {
+      background: vars.colors['button.lightBlue.disabled.background'],
+      content: vars.colors['button.lightBlue.disabled.font'],
+      border: vars.colors['button.lightBlue.disabled.border'],
+    },
+    focused: {
+      background: vars.colors['button.lightBlue.default.background'],
+      content: vars.colors['button.lightBlue.default.font'],
+      border: vars.colors['button.lightBlue.default.border'],
+    },
   },
   ghost: {
-    default: appearanceVariant.ghost,
-    hover: appearanceHover.ghostHover,
-    pressed: appearancePressed.ghostPressed,
-    disabled: appearanceDisabled.ghostDisabled,
+    default: {
+      background: 'transparent',
+      content: 'inherit',
+      border: 'transparent',
+    },
+    hover: {
+      background: 'transparent',
+      content: 'inherit',
+      border: 'transparent',
+    },
+    pressed: {
+      background: 'transparent',
+      content: 'inherit',
+      border: 'transparent',
+    },
+    disabled: {
+      background: 'transparent',
+      content: 'inherit',
+      border: 'transparent',
+    },
+    focused: {
+      background: 'transparent',
+      content: 'inherit',
+      border: 'transparent',
+    },
   },
 }

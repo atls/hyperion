@@ -1,72 +1,56 @@
-import { vars }              from '@atls-ui-parts/theme'
+import { createVar } from '@vanilla-extract/css'
+import { style }     from '@vanilla-extract/css'
 
-import { createShapeStyles } from '../utils/index.js'
+export const shapeVariables = {
+  addonSize: createVar(),
+  borderRadius: createVar(),
+  borderStyle: createVar(),
+  borderWidth: createVar(),
+  elevations: {
+    default: createVar(),
+    hover: createVar(),
+    pressed: createVar(),
+    disabled: createVar(),
+    focused: createVar(),
+  },
+  gap: createVar(),
+  minHeight: createVar(),
+  paddingBlock: createVar(),
+  paddingInline: createVar(),
+  typography: {
+    fontFamily: createVar(),
+    fontSize: createVar(),
+    fontWeight: createVar(),
+    letterSpacing: createVar(),
+    lineHeight: createVar(),
+  },
+} as const
 
-const hugeStyles = createShapeStyles({
-  size: 56,
-  rounding: vars.radii.f24,
+export const shapeStyles = style({
+  minHeight: shapeVariables.minHeight,
+  paddingBlock: shapeVariables.paddingBlock,
+  paddingInline: shapeVariables.paddingInline,
+  borderRadius: shapeVariables.borderRadius,
+  boxShadow: shapeVariables.elevations.default,
+  fontFamily: shapeVariables.typography.fontFamily,
+  fontSize: shapeVariables.typography.fontSize,
+  fontWeight: shapeVariables.typography.fontWeight,
+  letterSpacing: shapeVariables.typography.letterSpacing,
+  lineHeight: shapeVariables.typography.lineHeight,
+  outlineStyle: shapeVariables.borderStyle,
+  outlineWidth: shapeVariables.borderWidth,
+  selectors: {
+    '&:hover:not(:disabled)': {
+      boxShadow: shapeVariables.elevations.hover,
+    },
+    '&:focus-visible:not(:disabled)': {
+      boxShadow: shapeVariables.elevations.focused,
+    },
+    '&:active:not(:disabled)': {
+      boxShadow: shapeVariables.elevations.pressed,
+    },
+    '&:disabled': {
+      boxShadow: shapeVariables.elevations.disabled,
+    },
+  },
 })
-
-const largeStyles = createShapeStyles({
-  size: 48,
-  rounding: vars.radii.f24,
-})
-
-const semiMediumStyles = createShapeStyles({
-  size: 43,
-  rounding: vars.radii.f24,
-})
-
-const mediumStyles = createShapeStyles({
-  size: 40,
-  rounding: vars.radii.f24,
-})
-
-const normalStyles = createShapeStyles({
-  size: 36,
-  rounding: vars.radii.f24,
-  paddingLeft: vars.space.g24,
-  paddingRight: vars.space.g24,
-})
-
-const smallStyles = createShapeStyles({
-  size: 32,
-  rounding: vars.radii.f24,
-})
-
-const smallSizeMediumRadiiStyles = createShapeStyles({
-  size: 32,
-  rounding: vars.radii.f16,
-})
-
-const autoSizeStyles = createShapeStyles({
-  size: 'auto',
-})
-
-const autoSizeRoundStyles = createShapeStyles({
-  size: 'auto',
-  rounding: vars.radii.f100,
-  paddingLeft: vars.space.g10,
-  paddingRight: vars.space.g10,
-})
-
-const ghostStyles = createShapeStyles({
-  size: 'auto',
-  paddingLeft: 0,
-  paddingRight: 0,
-})
-
-export const shapeStyles = {
-  huge: hugeStyles,
-  large: largeStyles,
-  medium: mediumStyles,
-  small: smallStyles,
-  smallSizeMediumRadii: smallSizeMediumRadiiStyles,
-  autoSize: autoSizeStyles,
-  normal: normalStyles,
-  semiMedium: semiMediumStyles,
-  autoSizeRound: autoSizeRoundStyles,
-  ghost: ghostStyles,
-}
-
-export const buttonShapes = shapeStyles

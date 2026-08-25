@@ -1,14 +1,20 @@
 import { style } from '@vanilla-extract/css'
 
 export const baseStyles = style({
+  appearance: 'none',
   boxSizing: 'border-box',
-  display: 'flex',
+  display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
-  wordBreak: 'break-word',
+  border: 0,
   cursor: 'pointer',
-  outline: 'none',
-  paddingTop: 0,
-  paddingBottom: 0,
-  border: '1px solid transparent',
+  outlineOffset: '-1px',
+  textAlign: 'center',
+  verticalAlign: 'middle',
+  wordBreak: 'break-word',
+  selectors: {
+    '&:disabled': {
+      cursor: 'not-allowed',
+    },
+  },
 })
