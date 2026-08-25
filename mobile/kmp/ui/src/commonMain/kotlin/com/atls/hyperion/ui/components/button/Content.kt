@@ -21,6 +21,11 @@ internal fun ButtonContent(
 
     BoxWithConstraints(modifier = Modifier.padding(shape.paddings)) {
         if (constraints.hasFixedWidth) {
+            val sideWidth = (shape.addonSize + shape.gap) * maxOf(
+                beforeAddons.size,
+                afterAddons.size
+            ).toFloat()
+
             Box(modifier = Modifier.fillMaxWidth()) {
                 Addons(
                     addons = beforeAddons,
@@ -30,7 +35,10 @@ internal fun ButtonContent(
                     modifier = Modifier.align(Alignment.CenterStart)
                 )
                 Box(
-                    modifier = Modifier.align(Alignment.Center),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = sideWidth)
+                        .align(Alignment.Center),
                     contentAlignment = Alignment.Center,
                     content = { content() }
                 )
