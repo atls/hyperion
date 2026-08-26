@@ -1,3 +1,4 @@
+// TODO remove after components migration to opacity
 export const opacities = {
   transparent: 0,
   disabled: 0.5,

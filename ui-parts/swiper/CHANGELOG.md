@@ -1,5 +1,26 @@
 
 
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/swiper@1.1.0...@atls-ui-parts/swiper@1.1.0) (2026-08-26)
+
+
+
+
+
+
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/swiper@1.1.0...@atls-ui-parts/swiper@1.1.0) (2026-08-25)
+
+
+
+
+
+
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/swiper@1.1.0...@atls-ui-parts/swiper@1.1.0) (2026-08-18)
+
+
+
+
+
+
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/swiper@1.1.0...@atls-ui-parts/swiper@1.1.0) (2026-08-13)
 
 

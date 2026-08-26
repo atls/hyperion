@@ -1,5 +1,26 @@
 
 
+# [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/select@1.2.0...@atls-ui-parts/select@1.2.0) (2026-08-26)
+
+
+
+
+
+
+# [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/select@1.2.0...@atls-ui-parts/select@1.2.0) (2026-08-25)
+
+
+
+
+
+
+# [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/select@1.2.0...@atls-ui-parts/select@1.2.0) (2026-08-18)
+
+
+
+
+
+
 # [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/select@1.2.0...@atls-ui-parts/select@1.2.0) (2026-08-13)
 
 
