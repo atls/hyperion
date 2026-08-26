@@ -1,5 +1,12 @@
 
 
+# [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/tooltip@1.2.0...@atls-ui-parts/tooltip@1.2.0) (2026-08-25)
+
+
+
+
+
+
 # [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/tooltip@1.2.0...@atls-ui-parts/tooltip@1.2.0) (2026-08-18)
 
 

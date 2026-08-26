@@ -26,6 +26,7 @@ import com.atls.hyperion.ui.primitives.stories.LinkStory
 import com.atls.hyperion.ui.primitives.stories.TextStory
 import com.atls.hyperion.ui.theme.Theme
 import com.atls.hyperion.ui.theme.tokens.effects.stories.opacity.OpacityStory
+import com.atls.hyperion.ui.theme.tokens.elevation.stories.ElevationStory
 
 @Composable
 fun App() {
@@ -42,6 +43,7 @@ fun App() {
                 DatePickerStory(),
                 DateRangePickerStory(),
                 DividerStory(),
+                ElevationStory(),
                 InputStory(),
                 OpacityStory(),
                 PaginationStory(),

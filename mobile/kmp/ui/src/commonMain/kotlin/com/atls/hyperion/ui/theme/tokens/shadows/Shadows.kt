@@ -3,7 +3,7 @@ package com.atls.hyperion.ui.theme.tokens.shadows
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
-object Shadows {
+object Shadows { //TODO remove after components refactoring
     val gunsmoke = Shadow(0.dp, 0.dp, 1.dp, Color(0x1A878787))
     val gray = Shadow(0.dp, 1.dp, 1.dp, Color(0x17878787))
     val grey = Shadow((-1).dp, 2.dp, 2.dp, Color(0x0D878787))
