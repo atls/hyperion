@@ -19,7 +19,10 @@ internal fun ButtonContent(
     val beforeAddons = addons.get(AddonPosition.Before)
     val afterAddons = addons.get(AddonPosition.After)
 
-    BoxWithConstraints(modifier = Modifier.padding(shape.paddings)) {
+    BoxWithConstraints(
+        modifier = Modifier.padding(shape.paddings),
+        contentAlignment = Alignment.Center
+    ) {
         if (constraints.hasFixedWidth) {
             val sideWidth = (shape.addonSize + shape.gap) * maxOf(
                 beforeAddons.size,
