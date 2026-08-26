@@ -11,4 +11,3 @@ export const shadowBlurs = {
   xl2: '16px',
   xl3: '20px',
 } as const
-

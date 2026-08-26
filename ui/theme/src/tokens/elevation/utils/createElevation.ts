@@ -17,4 +17,3 @@ export const createElevation = (...shadows: Array<ShadowOptions>): Elevation =>
       }) => `${inset ? 'inset ' : ''}${offsetX} ${offsetY} ${blur} ${spread} ${color}`
     )
     .join(', ')
-

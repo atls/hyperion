@@ -8,4 +8,3 @@ export const shadowOffsets = {
   xl2: '7px',
   xl3: '12px',
 } as const
-

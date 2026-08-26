@@ -181,4 +181,3 @@ export const elevations = (colors: Colors): ElevationsTokens => ({
     }),
   },
 })
-

@@ -35,4 +35,3 @@ export interface ElevationsTokens {
   lg: PressableElevationStates
   modal: ElevationStates
 }
-
