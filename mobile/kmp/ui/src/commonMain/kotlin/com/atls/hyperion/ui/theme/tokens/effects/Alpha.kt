@@ -1,6 +1,6 @@
 package com.atls.hyperion.ui.theme.tokens.effects
 
-object Alpha {
+object Alpha { //TODO remove after components migration to Opacity
     val full = 1f
     val huge = 0.9f
     val large = 0.8f
