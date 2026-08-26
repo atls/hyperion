@@ -1,5 +1,17 @@
 
 
+# [0.6.0](https://github.com/atls/hyperion/compare/@atls-ui/theme@0.5.0...@atls-ui/theme@0.6.0) (2026-08-26)
+
+
+### Features
+
+
+* **theme:** add web opacity tokens ([4b9cd5b](https://github.com/atls/hyperion/commit/4b9cd5b5868ae276d8bb8aa8687a322a2383ccc8))
+
+
+
+
+
 # [0.5.0](https://github.com/atls/hyperion/compare/@atls-ui/theme@0.4.0...@atls-ui/theme@0.5.0) (2026-08-25)
 
 
