@@ -45,7 +45,7 @@ export const Button = ({
       className={clsx(
         baseStyles,
         appearanceStyles,
-        shapeStyles,
+        resolvedShape && shapeStyles,
         shapeClassName,
         fullWidth && fullWidthStyles,
         className

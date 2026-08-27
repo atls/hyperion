@@ -80,10 +80,13 @@ export const buttonShapes = {
 
 export const isButtonShapeName = (shape: string): shape is ButtonShapeName => shape in buttonShapes
 
-export const resolveButtonShape = (shape: ButtonShape, theme: Theme): ButtonShapeProperties => {
+export const resolveButtonShape = (
+  shape: ButtonShape,
+  theme: Theme
+): ButtonShapeProperties | undefined => {
   if (typeof shape !== 'string') {
     return shape
   }
 
-  return variants(theme)[isButtonShapeName(shape) ? shape : buttonShapes.md]
+  return isButtonShapeName(shape) ? variants(theme)[shape] : undefined
 }
