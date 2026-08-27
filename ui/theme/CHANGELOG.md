@@ -1,5 +1,35 @@
 
 
+# [0.6.0](https://github.com/atls/hyperion/compare/@atls-ui/theme@0.5.0...@atls-ui/theme@0.6.0) (2026-08-26)
+
+
+### Features
+
+
+* **theme:** add web opacity tokens ([4b9cd5b](https://github.com/atls/hyperion/commit/4b9cd5b5868ae276d8bb8aa8687a322a2383ccc8))
+
+
+
+
+
+# [0.5.0](https://github.com/atls/hyperion/compare/@atls-ui/theme@0.4.0...@atls-ui/theme@0.5.0) (2026-08-25)
+
+
+### Bug Fixes
+
+
+* **theme:** align subtle action colors ([58f91ae](https://github.com/atls/hyperion/commit/58f91ae9bd16334a6845fbd77fa23e40fe5e2155))
+
+### Features
+
+
+* **theme:** add web elevation tokens ([2c6639e](https://github.com/atls/hyperion/commit/2c6639ec0422c2bebac0b40852af7325994f2364))
+* **theme:** expose web elevations ([a3b8e7d](https://github.com/atls/hyperion/commit/a3b8e7d2df052b382ad7b4d3bba08e79ec9d35d4))
+
+
+
+
+
 # [0.4.0](https://github.com/atls/hyperion/compare/@atls-ui/theme@0.3.0...@atls-ui/theme@0.4.0) (2026-08-18)
 
 

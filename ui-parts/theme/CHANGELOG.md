@@ -1,5 +1,29 @@
 
 
+# [1.3.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/theme@1.2.0...@atls-ui-parts/theme@1.3.0) (2026-08-26)
+
+
+### Features
+
+
+* **theme:** add opacity story ([6ac702c](https://github.com/atls/hyperion/commit/6ac702c276cd933f215b66273b4b0b3bd0a17037))
+
+
+
+
+
+# [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/theme@1.1.3...@atls-ui-parts/theme@1.2.0) (2026-08-25)
+
+
+### Features
+
+
+* **theme:** add elevation story ([cb63513](https://github.com/atls/hyperion/commit/cb63513173842c0cf6d829fdf7a2fb9aec935776))
+
+
+
+
+
 ## [1.1.3](https://github.com/atls/hyperion/compare/@atls-ui-parts/theme@1.1.2...@atls-ui-parts/theme@1.1.3) (2026-08-18)
 
 

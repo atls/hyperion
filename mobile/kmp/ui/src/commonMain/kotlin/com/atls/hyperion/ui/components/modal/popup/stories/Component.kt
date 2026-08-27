@@ -4,18 +4,14 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import com.atls.hyperion.storybook.shared.model.ComponentExample
 import com.atls.hyperion.ui.components.button.Button
 import com.atls.hyperion.ui.components.button.styles.appearance.ButtonAppearance
-import com.atls.hyperion.ui.components.button.styles.appearance.blue
+import com.atls.hyperion.ui.components.button.styles.appearance.primary
 import com.atls.hyperion.ui.components.button.styles.shape.ButtonShape
-import com.atls.hyperion.ui.components.button.styles.shape.normal
+import com.atls.hyperion.ui.components.button.styles.shape.md
 import com.atls.hyperion.ui.components.modal.popup.Popup
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 
@@ -33,8 +29,8 @@ class PopupStory : ComponentExample {
         ) {
             Button(
                 text = "Show Popup",
-                appearance = ButtonAppearance.blue(),
-                shape = ButtonShape.normal(),
+                appearance = ButtonAppearance.primary(),
+                shape = ButtonShape.md(),
                 onClick = { showDialog = true }
             )
 
@@ -51,8 +47,8 @@ class PopupStory : ComponentExample {
                         Button(
                             modifier = Modifier.padding(top = Space.sm),
                             text = "Close",
-                            appearance = ButtonAppearance.blue(),
-                            shape = ButtonShape.normal(),
+                            appearance = ButtonAppearance.primary(),
+                            shape = ButtonShape.md(),
                             onClick = { showDialog = false }
                         )
                     }

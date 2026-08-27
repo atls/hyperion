@@ -36,44 +36,6 @@ object LegacyColors { //TODO remove after components refactoring
         val green = Color(0xFF34C51D)
     }
 
-    object Button {
-        object Blue {
-            val Default = ColorSet(
-                font = Color(0xFFFFFFFF),
-                background = Color(0xFF416DDF),
-                border = Color(0x00000000)
-            )
-            val Pressed = ColorSet(
-                font = Color(0xFFFFFFFF),
-                background = Color(0xFF0042EC),
-                border = Color(0x00000000)
-            )
-            val Disabled = ColorSet(
-                font = Color(0xFF8A8A8A),
-                background = Color(0xFF2D2D2D),
-                border = Color(0x00000000)
-            )
-        }
-
-        object LightBlue {
-            val Default = ColorSet(
-                font = Color(0xFFFFFFFF),
-                background = Color(0xFF54A9EB),
-                border = Color(0x00000000)
-            )
-            val Pressed = ColorSet(
-                font = Color(0xFFFFFFFF),
-                background = Color(0xFF54A9EB),
-                border = Color(0x00000000)
-            )
-            val Disabled = ColorSet(
-                font = Color(0xFFFFFFFF),
-                background = Color(0xFFDDDDDD),
-                border = Color(0x00000000)
-            )
-        }
-    }
-
     object Input {
         object Blue {
             val Default = ColorSet(
