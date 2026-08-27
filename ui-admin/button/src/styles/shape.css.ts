@@ -1,5 +1,31 @@
-import { vars }              from '@atls-ui-admin/theme'
-import { createShapeStyles } from '@atls-ui-parts/button'
+import type { CSSProperties } from 'react'
+
+import { style }              from '@vanilla-extract/css'
+
+import { vars }               from '@atls-ui-admin/theme'
+
+interface ButtonShapeStyles {
+  size: number | string
+  rounding?: CSSProperties['borderRadius']
+  paddingLeft?: CSSProperties['paddingLeft']
+  paddingRight?: CSSProperties['paddingRight']
+}
+
+const getDefaultPadding = (size: number | string): number =>
+  typeof size === 'number' ? size * 0.5 : 0
+
+const createShapeStyles = ({
+  size,
+  rounding = 0,
+  paddingLeft,
+  paddingRight,
+}: ButtonShapeStyles): string =>
+  style({
+    height: size,
+    paddingLeft: paddingLeft ?? getDefaultPadding(size),
+    paddingRight: paddingRight ?? getDefaultPadding(size),
+    borderRadius: rounding,
+  })
 
 const hugeStyles = createShapeStyles({
   size: 56,
