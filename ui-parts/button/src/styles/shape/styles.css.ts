@@ -14,7 +14,6 @@ export const shapeVariables = {
     focused: createVar(),
   },
   gap: createVar(),
-  minHeight: createVar(),
   paddingBlock: createVar(),
   paddingInline: createVar(),
   typography: {
@@ -27,7 +26,6 @@ export const shapeVariables = {
 } as const
 
 export const shapeStyles = style({
-  minHeight: shapeVariables.minHeight,
   paddingBlock: shapeVariables.paddingBlock,
   paddingInline: shapeVariables.paddingInline,
   borderRadius: shapeVariables.borderRadius,

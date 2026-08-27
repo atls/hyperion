@@ -3,8 +3,9 @@ import type { Theme }                  from '@atls-ui/theme'
 import type { ButtonAppearance }       from './interfaces.js'
 import type { ButtonAppearanceStates } from './interfaces.js'
 import type { ButtonAppearances }      from './interfaces.js'
+import type { ButtonAppearanceName }   from './interfaces.js'
 
-const appearances = (theme: Theme): Record<keyof ButtonAppearances, ButtonAppearanceStates> => ({
+const variants = (theme: Theme): Record<ButtonAppearanceName, ButtonAppearanceStates> => ({
   primary: {
     default: {
       background: theme.colors.action.base,
@@ -89,13 +90,13 @@ const appearances = (theme: Theme): Record<keyof ButtonAppearances, ButtonAppear
 })
 
 export const buttonAppearances = {
-  primary: { preset: 'primary' },
-  secondary: { preset: 'secondary' },
-  ghost: { preset: 'ghost' },
+  primary: 'primary',
+  secondary: 'secondary',
+  ghost: 'ghost',
 } as const satisfies ButtonAppearances
 
 export const resolveButtonAppearance = (
   appearance: ButtonAppearance,
   theme: Theme
 ): ButtonAppearanceStates =>
-  'preset' in appearance ? appearances(theme)[appearance.preset] : appearance
+  typeof appearance === 'string' ? variants(theme)[appearance] : appearance

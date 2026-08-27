@@ -1,6 +1,7 @@
 import type { Theme }                 from '@atls-ui/theme'
 
 import type { ButtonShape }           from './interfaces.js'
+import type { ButtonShapeName }       from './interfaces.js'
 import type { ButtonShapeProperties } from './interfaces.js'
 import type { ButtonShapes }          from './interfaces.js'
 
@@ -10,11 +11,9 @@ import { radii }                      from '@atls-ui/theme/tokens'
 import { spacing }                    from '@atls-ui/theme/tokens'
 
 import { buttonAddonSizes }           from './constants.js'
-import { buttonMinHeights }           from './constants.js'
 
-const shapes = (theme: Theme): Record<keyof ButtonShapes, ButtonShapeProperties> => ({
+const variants = (theme: Theme): Record<ButtonShapeName, ButtonShapeProperties> => ({
   xs: {
-    minHeight: buttonMinHeights.xs,
     borderRadius: radii.xs2,
     paddingInline: spacing.component.sm,
     paddingBlock: spacing.component.xs,
@@ -29,10 +28,9 @@ const shapes = (theme: Theme): Record<keyof ButtonShapes, ButtonShapeProperties>
     },
   },
   sm: {
-    minHeight: buttonMinHeights.sm,
     borderRadius: radii.xs2,
     paddingInline: spacing.component.md,
-    paddingBlock: spacing.component.sm,
+    paddingBlock: spacing.component.xs,
     typography: theme.typography.body.md,
     borderStyle: borderStyles.solid,
     borderWidth: borderWidths.sm,
@@ -44,10 +42,9 @@ const shapes = (theme: Theme): Record<keyof ButtonShapes, ButtonShapeProperties>
     },
   },
   md: {
-    minHeight: buttonMinHeights.md,
     borderRadius: radii.xs2,
     paddingInline: spacing.component.lg,
-    paddingBlock: spacing.component.md,
+    paddingBlock: spacing.component.sm,
     typography: theme.typography.label.md,
     borderStyle: borderStyles.solid,
     borderWidth: borderWidths.sm,
@@ -59,7 +56,6 @@ const shapes = (theme: Theme): Record<keyof ButtonShapes, ButtonShapeProperties>
     },
   },
   lg: {
-    minHeight: buttonMinHeights.lg,
     borderRadius: radii.xs2,
     paddingInline: spacing.component.xl,
     paddingBlock: spacing.component.sm,
@@ -76,16 +72,18 @@ const shapes = (theme: Theme): Record<keyof ButtonShapes, ButtonShapeProperties>
 })
 
 export const buttonShapes = {
-  xs: { preset: 'xs' },
-  sm: { preset: 'sm' },
-  md: { preset: 'md' },
-  lg: { preset: 'lg' },
+  xs: 'xs',
+  sm: 'sm',
+  md: 'md',
+  lg: 'lg',
 } as const satisfies ButtonShapes
 
+export const isButtonShapeName = (shape: string): shape is ButtonShapeName => shape in buttonShapes
+
 export const resolveButtonShape = (shape: ButtonShape, theme: Theme): ButtonShapeProperties => {
-  if (typeof shape === 'string') {
-    return shapes(theme).md
+  if (typeof shape !== 'string') {
+    return shape
   }
 
-  return 'preset' in shape ? shapes(theme)[shape.preset] : shape
+  return variants(theme)[isButtonShapeName(shape) ? shape : buttonShapes.md]
 }

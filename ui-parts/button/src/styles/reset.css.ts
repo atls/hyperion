@@ -2,11 +2,14 @@ import { style } from '@vanilla-extract/css'
 
 export const baseStyles = style({
   appearance: 'none',
+  border: 0,
   boxSizing: 'border-box',
+  margin: 0,
+  textDecoration: 'none',
+  textTransform: 'none',
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
-  border: 0,
   cursor: 'pointer',
   outlineOffset: '-1px',
   textAlign: 'center',
@@ -17,4 +20,8 @@ export const baseStyles = style({
       cursor: 'not-allowed',
     },
   },
+})
+
+export const fullWidthStyles = style({
+  width: '100%',
 })
