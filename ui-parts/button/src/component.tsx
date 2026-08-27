@@ -6,7 +6,7 @@ import { clsx }                    from 'clsx'
 
 import { useTheme }                from '@atls-ui-parts/theme'
 
-import { Addons }                  from './addons.js'
+import { Addons }                  from './addons/index.js'
 import { appearanceStyles }        from './styles/index.js'
 import { assignButtonVariables }   from './styles/index.js'
 import { baseStyles }              from './styles/index.js'

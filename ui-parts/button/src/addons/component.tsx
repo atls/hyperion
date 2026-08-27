@@ -1,18 +1,14 @@
 import type { ReactNode }      from 'react'
 
+import type { AddonsProps }    from './interfaces.js'
+
 import { Children }            from 'react'
 import { clsx }                from 'clsx'
 
-import { addonStyles }         from './styles/layout/addons.css.js'
-import { addonsStyles }        from './styles/layout/addons.css.js'
-import { leadingAddonStyles }  from './styles/layout/addons.css.js'
-import { trailingAddonStyles } from './styles/layout/addons.css.js'
-
-interface AddonsProps {
-  children?: ReactNode
-  position: 'leading' | 'trailing'
-  reserveSpace: boolean
-}
+import { addonStyles }         from '../styles/layout/addons.css.js'
+import { addonsStyles }        from '../styles/layout/addons.css.js'
+import { leadingAddonStyles }  from '../styles/layout/addons.css.js'
+import { trailingAddonStyles } from '../styles/layout/addons.css.js'
 
 export const Addons = ({ children, position, reserveSpace }: AddonsProps): ReactNode => {
   const addons = Children.toArray(children)
