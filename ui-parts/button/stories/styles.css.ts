@@ -44,6 +44,6 @@ export const buttonContainerStyles = style({
 export const focusedStyles = style({
   background: appearanceVariables.focused.background,
   color: appearanceVariables.focused.content,
-  boxShadow: shapeVariables.elevations.focused,
+  filter: shapeVariables.elevations.focused,
   outlineColor: appearanceVariables.focused.border,
 })

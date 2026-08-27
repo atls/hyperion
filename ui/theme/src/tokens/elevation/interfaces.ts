@@ -4,7 +4,7 @@ import type { shadowBlurs }   from './blurs.js'
 import type { shadowOffsets } from './offsets.js'
 import type { shadowSpreads } from './spreads.js'
 
-export type Elevation = NonNullable<Properties['boxShadow']>
+export type Elevation = NonNullable<Properties['filter']>
 export type ShadowBlur = (typeof shadowBlurs)[keyof typeof shadowBlurs]
 export type ShadowOffset = (typeof shadowOffsets)[keyof typeof shadowOffsets]
 export type ShadowSpread = (typeof shadowSpreads)[keyof typeof shadowSpreads]
@@ -35,4 +35,3 @@ export interface ElevationsTokens {
   lg: PressableElevationStates
   modal: ElevationStates
 }
-

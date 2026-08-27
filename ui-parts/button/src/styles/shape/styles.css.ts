@@ -29,7 +29,7 @@ export const shapeStyles = style({
   paddingBlock: shapeVariables.paddingBlock,
   paddingInline: shapeVariables.paddingInline,
   borderRadius: shapeVariables.borderRadius,
-  boxShadow: shapeVariables.elevations.default,
+  filter: shapeVariables.elevations.default,
   fontFamily: shapeVariables.typography.fontFamily,
   fontSize: shapeVariables.typography.fontSize,
   fontWeight: shapeVariables.typography.fontWeight,
@@ -39,16 +39,16 @@ export const shapeStyles = style({
   outlineWidth: shapeVariables.borderWidth,
   selectors: {
     '&:hover:not(:disabled)': {
-      boxShadow: shapeVariables.elevations.hover,
+      filter: shapeVariables.elevations.hover,
     },
     '&:focus-visible:not(:disabled)': {
-      boxShadow: shapeVariables.elevations.focused,
+      filter: shapeVariables.elevations.focused,
     },
     '&:active:not(:disabled)': {
-      boxShadow: shapeVariables.elevations.pressed,
+      filter: shapeVariables.elevations.pressed,
     },
     '&:disabled': {
-      boxShadow: shapeVariables.elevations.disabled,
+      filter: shapeVariables.elevations.disabled,
     },
   },
 })
