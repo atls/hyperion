@@ -90,10 +90,10 @@ export const Dinamic: StoryObj = {
         </Layout>
         <Layout flexBasis='16px' />
         <Layout>
-          <Button appearance={buttonAppearances.blue} shape={buttonShapes.small} onClick={decline}>
+          <Button appearance={buttonAppearances.primary} shape={buttonShapes.md} onClick={decline}>
             Отнять
           </Button>
-          <Button appearance={buttonAppearances.blue} shape={buttonShapes.small} onClick={increase}>
+          <Button appearance={buttonAppearances.primary} shape={buttonShapes.md} onClick={increase}>
             Прибавить
           </Button>
         </Layout>
