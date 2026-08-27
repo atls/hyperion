@@ -6,6 +6,7 @@
   "exports": {
     "./package.json": "./package.json",
     ".": "./src/index.ts",
+    "./assets/*": "./assets/*",
     "./tokens": "./src/tokens/index.ts"
   },
   "main": "./src/index.ts",
@@ -31,6 +32,7 @@
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
       },
+      "./assets/*": "./assets/*",
       "./tokens": {
         "import": "./dist/tokens/index.js",
         "types": "./dist/tokens/index.d.ts",
