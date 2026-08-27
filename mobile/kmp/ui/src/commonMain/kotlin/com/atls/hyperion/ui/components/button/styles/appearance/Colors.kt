@@ -2,21 +2,21 @@ package com.atls.hyperion.ui.components.button.styles.appearance
 
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors as ThemeColors
 
-sealed class Colors(
-    val textColor: Color,
-    val borderColor: Color = ThemeColors.Palette.transparent
-) {
-    class Solid(
-        val backgroundColor: Color,
-        textColor: Color,
-        borderColor: Color = ThemeColors.Palette.transparent
-    ) : Colors(textColor, borderColor)
+sealed interface Colors {
+    val content: Color
+    val border: Color
 
-    class Gradient(
-        val backgroundBrush: Brush,
-        textColor: Color,
-        borderColor: Color = ThemeColors.Palette.transparent
-    ) : Colors(textColor, borderColor)
+    data class Solid(
+        val background: Color,
+        override val content: Color,
+        override val border: Color = Color.Transparent
+    ) : Colors
+
+    data class Gradient(
+        val background: Brush,
+        override val content: Color,
+        override val border: Color = Color.Transparent,
+        val backgroundAlpha: Float = 1f
+    ) : Colors
 }

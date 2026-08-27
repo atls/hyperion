@@ -4,7 +4,6 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import com.atls.hyperion.ui.components.button.locals.LocalState
 import com.atls.hyperion.ui.components.button.styles.appearance.ButtonAppearance
 import com.atls.hyperion.ui.components.button.styles.shape.ButtonShape
 import com.atls.hyperion.ui.shared.addon.AddonSlotManager
@@ -30,7 +29,6 @@ fun Button(
         Text(
             text = text,
             textAlign = TextAlign.Center,
-            color = appearance.fromState(LocalState.current).textColor,
             style = shape.typography
         )
     }
