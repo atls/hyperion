@@ -139,3 +139,11 @@ export const FullWidth: Story = {
     leadingAddon: true,
   },
 }
+
+export const IconOnly: Story = {
+  args: {
+    ...Variants.args,
+    children: '',
+    leadingAddon: true,
+  },
+}

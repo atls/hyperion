@@ -2,6 +2,7 @@ import type { ReactNode }          from 'react'
 
 import type { ButtonProps }        from './interfaces.js'
 
+import { Children }                from 'react'
 import { clsx }                    from 'clsx'
 
 import { useTheme }                from '@atls-ui-parts/theme'
@@ -31,6 +32,9 @@ export const Button = ({
 }: ButtonProps): ReactNode => {
   const theme = useTheme()
   const resolvedAppearance = resolveButtonAppearance(appearance, theme)
+  const hasLabel = Children.toArray(children).some(
+    (child) => typeof child !== 'string' || child.length > 0
+  )
 
   return (
     <button
@@ -49,7 +53,7 @@ export const Button = ({
         <Addons position='leading' reserveSpace={fullWidth}>
           {leadingAddon}
         </Addons>
-        <span className={labelStyles}>{children}</span>
+        {(fullWidth || hasLabel) && <span className={labelStyles}>{children}</span>}
         <Addons position='trailing' reserveSpace={fullWidth}>
           {trailingAddon}
         </Addons>
