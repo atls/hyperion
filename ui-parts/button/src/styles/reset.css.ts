@@ -1,4 +1,5 @@
-import { style } from '@vanilla-extract/css'
+import { globalStyle } from '@vanilla-extract/css'
+import { style }       from '@vanilla-extract/css'
 
 import { borderStyles } from '@atls-ui/theme/tokens'
 import { borderWidths } from '@atls-ui/theme/tokens'
@@ -25,6 +26,10 @@ export const baseStyles = style({
       cursor: 'not-allowed',
     },
   },
+})
+
+globalStyle(`:where(${baseStyles})`, {
+  paddingBlock: 0,
 })
 
 export const fullWidthStyles = style({
