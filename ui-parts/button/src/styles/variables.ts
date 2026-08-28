@@ -1,39 +1,47 @@
 import type { CSSProperties }          from 'react'
 
+import type { Theme }                  from '@atls-ui/theme'
+
 import type { ButtonAppearanceStates } from './appearance/interfaces.js'
 import type { ButtonColors }           from './appearance/interfaces.js'
-import type { ButtonShapeProperties }  from './shape/interfaces.js'
 
 import { assignInlineVars }            from '@vanilla-extract/dynamic'
 
 import { appearanceVariables }         from './appearance/styles.css.js'
-import { shapeVariables }              from './shape/styles.css.js'
+import { buttonShapes }                from './shape/variants.css.js'
+import { elevationVariables }          from './shape/variants.css.js'
+
+type ButtonElevationName = 'lg' | 'md' | 'sm' | 'xs'
+
+const elevationNames: Partial<Record<string, ButtonElevationName>> = {
+  [buttonShapes.xs]: 'xs',
+  [buttonShapes.sm]: 'sm',
+  [buttonShapes.md]: 'md',
+  [buttonShapes.lg]: 'lg',
+}
 
 const resolveElevation = (elevation: string, colors: ButtonColors): string =>
   colors.background === 'transparent' && colors.border === 'transparent' ? 'none' : elevation
 
 export const assignButtonVariables = (
   appearance: ButtonAppearanceStates,
-  shape: ButtonShapeProperties,
+  shape: string,
+  theme: Theme,
   style?: CSSProperties
-): CSSProperties => ({
-  ...assignInlineVars(appearanceVariables, appearance),
-  ...assignInlineVars(shapeVariables, {
-    ...shape,
-    elevations: {
-      default: resolveElevation(shape.elevations.default, appearance.default),
-      hover: resolveElevation(shape.elevations.hover, appearance.hover),
-      pressed: resolveElevation(shape.elevations.pressed, appearance.pressed),
-      disabled: resolveElevation(shape.elevations.disabled, appearance.disabled),
-      focused: resolveElevation(shape.elevations.focused, appearance.focused),
-    },
-    typography: {
-      fontFamily: String(shape.typography.fontFamily ?? 'inherit'),
-      fontSize: String(shape.typography.fontSize ?? 'inherit'),
-      fontWeight: String(shape.typography.fontWeight ?? 'inherit'),
-      letterSpacing: String(shape.typography.letterSpacing ?? 'inherit'),
-      lineHeight: String(shape.typography.lineHeight ?? 'inherit'),
-    },
-  }),
-  ...style,
-})
+): CSSProperties => {
+  const elevationName = elevationNames[shape]
+  const elevations = elevationName ? theme.elevations[elevationName] : undefined
+
+  return {
+    ...assignInlineVars(appearanceVariables, appearance),
+    ...(elevations &&
+      assignInlineVars(elevationVariables, {
+        default: resolveElevation(elevations.default, appearance.default),
+        hover: resolveElevation(elevations.hover, appearance.hover),
+        pressed: resolveElevation(elevations.pressed, appearance.pressed),
+        disabled: resolveElevation(elevations.disabled, appearance.disabled),
+        focused: resolveElevation(elevations.disabled, appearance.focused),
+      })),
+    ...style,
+  }
+}

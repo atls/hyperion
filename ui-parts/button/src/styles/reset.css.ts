@@ -1,5 +1,8 @@
 import { style } from '@vanilla-extract/css'
 
+import { borderStyles } from '@atls-ui/theme/tokens'
+import { borderWidths } from '@atls-ui/theme/tokens'
+
 export const baseStyles = style({
   appearance: 'none',
   border: 0,
@@ -12,6 +15,8 @@ export const baseStyles = style({
   justifyContent: 'center',
   cursor: 'pointer',
   outlineOffset: '-1px',
+  outlineStyle: borderStyles.solid,
+  outlineWidth: borderWidths.sm,
   textAlign: 'center',
   verticalAlign: 'middle',
   wordBreak: 'break-word',

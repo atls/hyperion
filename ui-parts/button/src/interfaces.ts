@@ -3,7 +3,8 @@ import type { ReactNode }            from 'react'
 import type { Ref }                  from 'react'
 
 import type { ButtonAppearance }     from './styles/appearance/interfaces.js'
-import type { ButtonShape }          from './styles/shape/interfaces.js'
+
+export type ButtonShape = string
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   appearance?: ButtonAppearance

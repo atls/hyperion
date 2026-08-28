@@ -15,11 +15,8 @@ import { buttonShapes }            from './styles/index.js'
 import { contentStyles }           from './styles/index.js'
 import { fullWidthContentStyles }  from './styles/index.js'
 import { fullWidthStyles }         from './styles/index.js'
-import { isButtonShapeName }       from './styles/index.js'
 import { labelStyles }             from './styles/index.js'
 import { resolveButtonAppearance } from './styles/index.js'
-import { resolveButtonShape }      from './styles/index.js'
-import { shapeStyles }             from './styles/index.js'
 
 export const Button = ({
   appearance = buttonAppearances.primary,
@@ -34,19 +31,16 @@ export const Button = ({
 }: ButtonProps): ReactNode => {
   const theme = useTheme()
   const resolvedAppearance = resolveButtonAppearance(appearance, theme)
-  const resolvedShape = resolveButtonShape(shape, theme)
-  const shapeClassName = typeof shape === 'string' && !isButtonShapeName(shape) ? shape : undefined
 
   return (
     <button
       type='button'
       {...props}
-      style={assignButtonVariables(resolvedAppearance, resolvedShape, style)}
+      style={assignButtonVariables(resolvedAppearance, shape, theme, style)}
       className={clsx(
         baseStyles,
         appearanceStyles,
-        !shapeClassName && shapeStyles,
-        shapeClassName,
+        shape,
         fullWidth && fullWidthStyles,
         className
       )}

@@ -1,7 +1,7 @@
 import { style }               from '@vanilla-extract/css'
 
 import { appearanceVariables } from '../src/styles/appearance/styles.css.js'
-import { shapeVariables }      from '../src/styles/shape/styles.css.js'
+import { elevationVariables }  from '../src/styles/shape/variants.css.js'
 
 export const containerStyles = style({
   boxSizing: 'border-box',
@@ -44,6 +44,6 @@ export const buttonContainerStyles = style({
 export const focusedStyles = style({
   background: appearanceVariables.focused.background,
   color: appearanceVariables.focused.content,
-  boxShadow: shapeVariables.elevations.focused,
+  boxShadow: elevationVariables.focused,
   outlineColor: appearanceVariables.focused.border,
 })

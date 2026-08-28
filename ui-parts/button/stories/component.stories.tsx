@@ -9,7 +9,7 @@ import { lightTheme }            from '@atls-ui/theme'
 
 import { Button }                from '../src/component.js'
 import { buttonAppearances }     from '../src/styles/appearance/variants.js'
-import { buttonShapes }          from '../src/styles/shape/variants.js'
+import { buttonShapes }          from '../src/styles/shape/variants.css.js'
 import { appearanceLabels }      from './constants.js'
 import { appearances }           from './constants.js'
 import { shapeLabels }           from './constants.js'
