@@ -627,6 +627,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@atls-ui-parts/icons@workspace:ui-parts/icons":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-parts/icons@workspace:ui-parts/icons"
+  dependencies:
+    "@types/react": "npm:19.1.2"
+    react: "npm:19.1.0"
+    react-dom: "npm:19.1.0"
+    typescript: "npm:5.5.4"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
 "@atls-ui-parts/image@workspace:*, @atls-ui-parts/image@workspace:ui-parts/image":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/image@workspace:ui-parts/image"

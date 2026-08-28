@@ -123,6 +123,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:ui-parts/events-state"\
     },\
     {\
+      "name": "@atls-ui-parts/icons",\
+      "reference": "workspace:ui-parts/icons"\
+    },\
+    {\
       "name": "@atls-ui-parts/image",\
       "reference": "workspace:ui-parts/image"\
     },\
@@ -266,6 +270,7 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-parts/design", ["workspace:ui-parts/design"]],\
     ["@atls-ui-parts/dom", ["virtual:937fb0364248873ae59b9853300486d03005abda92eaabc1af692cdbfe45a10bb44400f85b426164577e95380d1eb384e54a3525e8f98eff7f80d492dbab08a5#workspace:ui-parts/dom", "workspace:ui-parts/dom"]],\
     ["@atls-ui-parts/events-state", ["virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/events-state", "workspace:ui-parts/events-state"]],\
+    ["@atls-ui-parts/icons", ["workspace:ui-parts/icons"]],\
     ["@atls-ui-parts/image", ["virtual:5dae0025774218e7d5b25f9293624b65d07c18a455c0543b6b0cbcc49eab1f8daaf93f688033cd0934a58e64a6421749d3e30955e506415c50f4612545e60177#workspace:ui-parts/image", "workspace:ui-parts/image"]],\
     ["@atls-ui-parts/input", ["virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/input", "workspace:ui-parts/input"]],\
     ["@atls-ui-parts/layout", ["virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#workspace:ui-parts/layout", "virtual:937fb0364248873ae59b9853300486d03005abda92eaabc1af692cdbfe45a10bb44400f85b426164577e95380d1eb384e54a3525e8f98eff7f80d492dbab08a5#workspace:ui-parts/layout", "virtual:ba0336f2ccf109a54b4b8063d4801935b554fc6f958edd172cb3c73a5a5a49118f16d1cd01b286a3749f851b3f37efaad86c3ceef598318c20b6e7cbecad90d2#workspace:ui-parts/layout", "workspace:ui-parts/layout"]],\
@@ -1322,6 +1327,19 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@atls-ui-parts/events-state", "workspace:ui-parts/events-state"],\
           ["@types/react", "npm:19.1.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/icons", [\
+      ["workspace:ui-parts/icons", {\
+        "packageLocation": "./ui-parts/icons/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/icons", "workspace:ui-parts/icons"],\
+          ["@types/react", "npm:19.1.2"],\
+          ["react", "npm:19.1.0"],\
+          ["react-dom", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:19.1.0"],\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
         ],\
         "linkType": "SOFT"\
       }]\
