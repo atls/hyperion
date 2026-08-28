@@ -13,9 +13,11 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
+    "@atls-ui-parts/icons": "workspace:*",
     "@atls-ui-parts/theme": "workspace:*",
     "@atls-ui/theme": "workspace:*",
-    "clsx": "2.1.1"
+    "clsx": "2.1.1",
+    "libphonenumber-js": "1.13.12"
   },
   "devDependencies": {
     "@storybook/react": "10.4.6",
