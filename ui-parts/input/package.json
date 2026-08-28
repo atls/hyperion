@@ -14,15 +14,10 @@
   },
   "dependencies": {
     "@atls-ui-parts/theme": "workspace:*",
-    "clsx": "2.1.1",
-    "rainbow-sprinkles": "1.0.0"
+    "@atls-ui/theme": "workspace:*",
+    "clsx": "2.1.1"
   },
   "devDependencies": {
-    "@atls-ui-generators/appearance": "workspace:*",
-    "@atls-ui-parts/condition": "workspace:*",
-    "@atls-ui-parts/events-state": "workspace:*",
-    "@atls-ui-parts/layout": "workspace:*",
-    "@atls-ui-parts/upload": "workspace:*",
     "@storybook/react": "10.4.6",
     "@types/react": "19.1.2",
     "@vanilla-extract/css": "1.17.1",
