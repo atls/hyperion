@@ -1,19 +1,27 @@
-import type { ReactNode }  from 'react'
+import type { ReactNode }   from 'react'
 
-import type { AddonProps } from './interfaces.js'
+import type { AddonsProps } from './interfaces.js'
 
-import { addonStyles }     from '../styles/layout/addons.css.js'
-import { leadingStyles }   from '../styles/layout/addons.css.js'
-import { trailingStyles }  from '../styles/layout/addons.css.js'
+import { Children }         from 'react'
+import { clsx }             from 'clsx'
 
-export const Addon = ({ children, position }: AddonProps): ReactNode => {
-  if (children === undefined || children === null || children === false) {
+import { addonStyles }      from '../styles/layout/addons.css.js'
+import { addonsStyles }     from '../styles/layout/addons.css.js'
+import { leadingStyles }    from '../styles/layout/addons.css.js'
+import { trailingStyles }   from '../styles/layout/addons.css.js'
+
+export const Addons = ({ children, position }: AddonsProps): ReactNode => {
+  const addons = Children.toArray(children)
+
+  if (addons.length === 0) {
     return null
   }
 
   return (
-    <div className={position === 'leading' ? leadingStyles : trailingStyles}>
-      <div className={addonStyles}>{children}</div>
-    </div>
+    <span className={clsx(addonsStyles, position === 'leading' ? leadingStyles : trailingStyles)}>
+      {Children.map(addons, (addon) => (
+        <span className={addonStyles}>{addon}</span>
+      ))}
+    </span>
   )
 }

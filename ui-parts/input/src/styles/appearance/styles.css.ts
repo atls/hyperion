@@ -1,5 +1,7 @@
-import { createVar } from '@vanilla-extract/css'
-import { style }     from '@vanilla-extract/css'
+import { createVar }    from '@vanilla-extract/css'
+import { style }        from '@vanilla-extract/css'
+
+import { borderWidths } from '@atls-ui/theme/tokens'
 
 const createStateVariables = () => ({
   background: createVar(),
@@ -39,6 +41,7 @@ export const appearanceStyles = style({
     '&:focus-within:not([data-disabled="true"]):not([data-error="true"])': {
       background: appearanceVariables.focused.background,
       borderColor: appearanceVariables.focused.border,
+      borderWidth: borderWidths.md,
       boxShadow: appearanceVariables.focused.shadow,
       color: appearanceVariables.focused.content,
     },

@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 
-export interface AddonProps {
+export interface AddonsProps {
   children?: ReactNode
   position: 'leading' | 'trailing'
 }

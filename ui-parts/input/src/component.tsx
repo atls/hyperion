@@ -1,24 +1,27 @@
 'use client'
 
-import type { ReactNode }         from 'react'
+import type { PointerEventHandler } from 'react'
+import type { ReactNode }           from 'react'
 
-import type { InputProps }        from './interfaces.js'
+import type { InputProps }          from './interfaces.js'
 
-import { clsx }                   from 'clsx'
-import { useId }                  from 'react'
+import { clsx }                     from 'clsx'
+import { useCallback }              from 'react'
+import { useId }                    from 'react'
+import { useRef }                   from 'react'
 
-import { useTheme }               from '@atls-ui-parts/theme'
+import { useTheme }                 from '@atls-ui-parts/theme'
 
-import { Addon }                  from './addons/index.js'
-import { appearanceStyles }       from './styles/index.js'
-import { assignInputVariables }   from './styles/index.js'
-import { containerStyles }        from './styles/index.js'
-import { fieldStyles }            from './styles/index.js'
-import { inputAppearances }       from './styles/index.js'
-import { inputShapes }            from './styles/index.js'
-import { inputStyles }            from './styles/index.js'
-import { messageStyles }          from './styles/index.js'
-import { resolveInputAppearance } from './styles/index.js'
+import { Addons }                   from './addons/index.js'
+import { appearanceStyles }         from './styles/index.js'
+import { assignInputVariables }     from './styles/index.js'
+import { containerStyles }          from './styles/index.js'
+import { fieldStyles }              from './styles/index.js'
+import { inputAppearances }         from './styles/index.js'
+import { inputShapes }              from './styles/index.js'
+import { inputStyles }              from './styles/index.js'
+import { messageStyles }            from './styles/index.js'
+import { resolveInputAppearance }   from './styles/index.js'
 
 const isPresent = (value: ReactNode): boolean =>
   value !== undefined && value !== null && value !== false
@@ -31,7 +34,10 @@ export const Input = ({
   disabled,
   error,
   helperText,
+  inputClassName,
+  inputStyle,
   leadingAddon,
+  placeholder = '',
   ref,
   shape = inputShapes.md,
   style,
@@ -40,6 +46,7 @@ export const Input = ({
   ...props
 }: InputProps): ReactNode => {
   const theme = useTheme()
+  const inputRef = useRef<HTMLInputElement>(null)
   const generatedDescriptionId = useId()
   const resolvedAppearance = resolveInputAppearance(appearance, theme)
   const hasError = isPresent(error)
@@ -47,26 +54,55 @@ export const Input = ({
   const hasMessage = isPresent(message)
   const descriptionId = hasMessage ? generatedDescriptionId : undefined
   const describedBy = [ariaDescribedBy, descriptionId].filter(Boolean).join(' ') || undefined
+  const setInputRef = useCallback(
+    (node: HTMLInputElement | null): void => {
+      inputRef.current = node
+
+      if (typeof ref === 'function') {
+        ref(node)
+      } else if (ref) {
+        ref.current = node
+      }
+    },
+    [ref]
+  )
+  const focusInput: PointerEventHandler<HTMLDivElement> = (event) => {
+    if (event.button !== 0 || !(event.target instanceof Element)) {
+      return
+    }
+
+    if (event.target.closest('button, a, input, select, textarea')) {
+      return
+    }
+
+    event.preventDefault()
+    inputRef.current?.focus()
+  }
 
   return (
-    <div className={containerStyles}>
+    <div
+      className={clsx(containerStyles, className)}
+      style={assignInputVariables(resolvedAppearance, shape, theme, style)}
+    >
       <div
-        className={clsx(fieldStyles, appearanceStyles, shape, className)}
+        className={clsx(fieldStyles, appearanceStyles, shape)}
         data-disabled={disabled || undefined}
         data-error={hasError || undefined}
-        style={assignInputVariables(resolvedAppearance, shape, theme, style)}
+        onPointerDown={focusInput}
       >
-        <Addon position='leading'>{leadingAddon}</Addon>
+        <Addons position='leading'>{leadingAddon}</Addons>
         <input
           {...props}
-          ref={ref}
+          ref={setInputRef}
           aria-describedby={describedBy}
           aria-invalid={hasError ? true : ariaInvalid}
-          className={inputStyles}
+          className={clsx(inputStyles, inputClassName)}
           disabled={disabled}
+          placeholder={placeholder}
+          style={inputStyle}
           type={type}
         />
-        <Addon position='trailing'>{trailingAddon}</Addon>
+        <Addons position='trailing'>{trailingAddon}</Addons>
       </div>
       {hasMessage && (
         <div
