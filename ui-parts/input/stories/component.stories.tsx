@@ -1,74 +1,32 @@
-import type { Meta }                from '@storybook/react'
-import type { StoryObj }            from '@storybook/react'
-import type { ReactNode }           from 'react'
+import type { Meta }             from '@storybook/react'
+import type { StoryObj }         from '@storybook/react'
+import type { FormEventHandler } from 'react'
+import type { ReactNode }        from 'react'
 
-import type { InputStoryProps }     from './interfaces.js'
+import type { InputStoryProps }  from './interfaces.js'
 
-import { useState }                 from 'react'
+import { isValidPhoneNumber }    from 'libphonenumber-js'
+import { useState }              from 'react'
 
-import { CrossIcon }                from '@atls-ui-parts/icons'
-import { SearchIcon }               from '@atls-ui-parts/icons'
-import { ThemeProvider }            from '@atls-ui-parts/theme'
-import { darkTheme }                from '@atls-ui/theme'
-import { lightTheme }               from '@atls-ui/theme'
+import { EmailIcon }             from '@atls-ui-parts/icons'
+import { SearchIcon }            from '@atls-ui-parts/icons'
+import { ThemeProvider }         from '@atls-ui-parts/theme'
+import { darkTheme }             from '@atls-ui/theme'
+import { lightTheme }            from '@atls-ui/theme'
 
-import { Input }                    from '../src/component.js'
-import { ClearableInput }           from '../src/typed/index.js'
-import { EmailInput }               from '../src/typed/index.js'
-import { PasswordInput }            from '../src/typed/index.js'
-import { PhoneInput }               from '../src/typed/index.js'
-import { SearchInput }              from '../src/typed/index.js'
-import { inputAppearances }         from '../src/styles/appearance/variants.js'
-import { inputShapes }              from '../src/styles/shape/variants.css.js'
-import { appearanceLabels }         from './constants.js'
-import { appearances }              from './constants.js'
-import { shapeLabels }              from './constants.js'
-import { shapes }                   from './constants.js'
-import { appearanceStyles }         from './styles.css.js'
-import { containerStyles }          from './styles.css.js'
-import { exampleStyles }            from './styles.css.js'
-import { labelStyles }              from './styles.css.js'
-import { rowStyles }                from './styles.css.js'
-import { stateGridStyles }          from './styles.css.js'
-import { titleStyles }              from './styles.css.js'
-import { typedCellStyles }          from './styles.css.js'
-import { typedColumnStyles }        from './styles.css.js'
-import { typedHeadingStyles }       from './styles.css.js'
-import { typedInputStyles }         from './styles.css.js'
-import { typedTableStyles }         from './styles.css.js'
-import { typedTableViewportStyles } from './styles.css.js'
-
-const TypedCell = ({ children }: { children?: ReactNode }) => (
-  <div className={typedCellStyles}>{children}</div>
-)
-
-const TypedPasswordInput = (): ReactNode => {
-  const [value, setValue] = useState('')
-  const error = value === '11111111' ? 'Invalid password' : undefined
-
-  return (
-    <PasswordInput
-      aria-label='Password'
-      className={typedInputStyles}
-      error={error}
-      value={value}
-      onValueChange={setValue}
-    />
-  )
-}
-
-const TypedClearableInput = (): ReactNode => {
-  const [value, setValue] = useState('')
-
-  return (
-    <ClearableInput
-      aria-label='Clearable'
-      className={typedInputStyles}
-      value={value}
-      onValueChange={setValue}
-    />
-  )
-}
+import { Input }                 from '../src/component.js'
+import { ClearableInput }        from '../src/typed/index.js'
+import { EmailInput }            from '../src/typed/index.js'
+import { PasswordInput }         from '../src/typed/index.js'
+import { PhoneInput }            from '../src/typed/index.js'
+import { SearchInput }           from '../src/typed/index.js'
+import { inputAppearances }      from '../src/styles/appearance/variants.js'
+import { inputShapes }           from '../src/styles/shape/variants.css.js'
+import { appearances }           from './constants.js'
+import { shapes }                from './constants.js'
+import { containerStyles }       from './styles.css.js'
+import { inputStyles }           from './styles.css.js'
+import { previewStyles }         from './styles.css.js'
 
 const Frame = ({ children, theme }: { children: ReactNode; theme: InputStoryProps['theme'] }) => {
   const selectedTheme = theme === 'dark' ? darkTheme : lightTheme
@@ -83,52 +41,189 @@ const Frame = ({ children, theme }: { children: ReactNode; theme: InputStoryProp
           fontFamily: selectedTheme.typography.fontFamily,
         }}
       >
-        {children}
+        <div className={previewStyles}>{children}</div>
       </div>
     </ThemeProvider>
   )
 }
 
-const VariantsExample = ({
+const getAppearance = (appearance: InputStoryProps['appearance']) => inputAppearances[appearance]
+
+const getShape = (shape: InputStoryProps['shape']) => inputShapes[shape]
+
+const getError = (error: boolean, message = 'Invalid value'): string | undefined =>
+  error ? message : undefined
+
+const getHelperText = (helperText: boolean): string | undefined =>
+  helperText ? 'Helper text' : undefined
+
+const InputExample = ({
+  appearance,
   disabled,
   error,
   helperText,
   leadingAddon,
   placeholder,
+  shape,
   theme,
   trailingAddon,
-  value,
 }: InputStoryProps) => (
   <Frame theme={theme}>
-    {appearances.map((appearance) => (
-      <section key={appearance} className={appearanceStyles}>
-        <h2 className={titleStyles}>{appearanceLabels[appearance]}</h2>
-        {shapes.map((shape) => (
-          <div key={shape} className={rowStyles}>
-            <span className={labelStyles}>{shapeLabels[shape]}</span>
-            <Input
-              appearance={inputAppearances[appearance]}
-              defaultValue={value}
-              disabled={disabled}
-              error={error ? 'Invalid value' : undefined}
-              helperText={helperText ? 'Helper text' : undefined}
-              leadingAddon={leadingAddon ? <SearchIcon /> : undefined}
-              placeholder={placeholder}
-              shape={inputShapes[shape]}
-              trailingAddon={trailingAddon ? <CrossIcon /> : undefined}
-            />
-          </div>
-        ))}
-      </section>
-    ))}
+    <Input
+      appearance={getAppearance(appearance)}
+      className={inputStyles}
+      disabled={disabled}
+      error={getError(error)}
+      helperText={getHelperText(helperText)}
+      leadingAddon={leadingAddon ? <SearchIcon /> : undefined}
+      placeholder={placeholder}
+      shape={getShape(shape)}
+      trailingAddon={trailingAddon ? <EmailIcon /> : undefined}
+    />
   </Frame>
 )
 
+const SearchExample = ({
+  appearance,
+  disabled,
+  error,
+  helperText,
+  placeholder,
+  shape,
+  theme,
+}: InputStoryProps) => (
+  <Frame theme={theme}>
+    <SearchInput
+      appearance={getAppearance(appearance)}
+      className={inputStyles}
+      disabled={disabled}
+      error={getError(error)}
+      helperText={getHelperText(helperText)}
+      placeholder={placeholder}
+      shape={getShape(shape)}
+    />
+  </Frame>
+)
+
+const ClearableExample = ({
+  appearance,
+  disabled,
+  error,
+  helperText,
+  placeholder,
+  shape,
+  theme,
+}: InputStoryProps) => (
+  <Frame theme={theme}>
+    <ClearableInput
+      appearance={getAppearance(appearance)}
+      className={inputStyles}
+      defaultValue='Clear me'
+      disabled={disabled}
+      error={getError(error)}
+      helperText={getHelperText(helperText)}
+      placeholder={placeholder}
+      shape={getShape(shape)}
+    />
+  </Frame>
+)
+
+const PasswordExample = ({
+  appearance,
+  disabled,
+  error,
+  helperText,
+  placeholder,
+  shape,
+  theme,
+}: InputStoryProps) => (
+  <Frame theme={theme}>
+    <PasswordInput
+      appearance={getAppearance(appearance)}
+      className={inputStyles}
+      defaultValue='password'
+      disabled={disabled}
+      error={getError(error)}
+      helperText={getHelperText(helperText)}
+      placeholder={placeholder}
+      shape={getShape(shape)}
+    />
+  </Frame>
+)
+
+const PhoneExample = ({
+  appearance,
+  disabled,
+  error,
+  helperText,
+  placeholder,
+  shape,
+  theme,
+}: InputStoryProps) => {
+  const [value, setValue] = useState('+7 123')
+  const validationError =
+    value && !isValidPhoneNumber(value) ? 'Enter a valid phone number' : undefined
+
+  return (
+    <Frame theme={theme}>
+      <PhoneInput
+        appearance={getAppearance(appearance)}
+        className={inputStyles}
+        disabled={disabled}
+        error={getError(error) ?? validationError}
+        helperText={getHelperText(helperText)}
+        placeholder={placeholder}
+        shape={getShape(shape)}
+        value={value}
+        onValueChange={setValue}
+      />
+    </Frame>
+  )
+}
+
+const EmailExample = ({
+  appearance,
+  disabled,
+  error,
+  helperText,
+  placeholder,
+  shape,
+  theme,
+}: InputStoryProps) => {
+  const [value, setValue] = useState('invalid-email')
+  const [invalid, setInvalid] = useState(true)
+  const validate: FormEventHandler<HTMLInputElement> = (event) => {
+    setInvalid(!event.currentTarget.validity.valid)
+  }
+
+  return (
+    <Frame theme={theme}>
+      <EmailInput
+        appearance={getAppearance(appearance)}
+        className={inputStyles}
+        disabled={disabled}
+        error={getError(error) ?? (invalid ? 'Enter a valid email address' : undefined)}
+        helperText={getHelperText(helperText)}
+        placeholder={placeholder}
+        shape={getShape(shape)}
+        value={value}
+        onInput={validate}
+        onValueChange={setValue}
+      />
+    </Frame>
+  )
+}
+
 const meta: Meta<InputStoryProps> = {
   title: 'Components/Input',
-  render: (props) => <VariantsExample {...props} />,
+  render: (props) => <InputExample {...props} />,
   tags: ['autodocs'],
   argTypes: {
+    appearance: {
+      description: 'Appearance',
+      control: { type: 'inline-radio' },
+      options: appearances,
+    },
     error: {
       description: 'Показать error-состояние и сообщение',
       control: { type: 'boolean' },
@@ -140,6 +235,11 @@ const meta: Meta<InputStoryProps> = {
     leadingAddon: {
       description: 'Показать leading addon',
       control: { type: 'boolean' },
+    },
+    shape: {
+      description: 'Shape',
+      control: { type: 'inline-radio' },
+      options: shapes,
     },
     theme: {
       description: 'Тема',
@@ -157,123 +257,80 @@ export default meta
 
 type Story = StoryObj<InputStoryProps>
 
-export const Variants: Story = {
-  args: {
-    disabled: false,
-    error: false,
-    helperText: false,
-    leadingAddon: false,
-    placeholder: 'Placeholder',
-    theme: 'light',
-    trailingAddon: false,
+const defaultArgs: InputStoryProps = {
+  appearance: 'primary',
+  disabled: false,
+  error: false,
+  helperText: false,
+  leadingAddon: false,
+  placeholder: 'Placeholder',
+  shape: 'md',
+  theme: 'light',
+  trailingAddon: false,
+}
+
+const typedArgTypes = {
+  leadingAddon: {
+    table: { disable: true },
   },
+  trailingAddon: {
+    table: { disable: true },
+  },
+} as const
+
+export const Variants: Story = {
+  args: defaultArgs,
 }
 
 export const Addons: Story = {
   args: {
-    ...Variants.args,
+    ...defaultArgs,
     leadingAddon: true,
     trailingAddon: true,
-    value: 'Input value',
   },
 }
 
-export const States: Story = {
+export const Search: Story = {
+  argTypes: typedArgTypes,
   args: {
-    ...Variants.args,
+    ...defaultArgs,
+    placeholder: 'Search',
   },
-  render: ({ theme }) => (
-    <Frame theme={theme}>
-      <div className={stateGridStyles}>
-        <div className={exampleStyles}>
-          <span>Unfilled</span>
-          <Input placeholder='Email' />
-        </div>
-        <div className={exampleStyles}>
-          <span>Unfilled without placeholder</span>
-          <Input aria-label='Empty input' />
-        </div>
-        <div className={exampleStyles}>
-          <span>Filled</span>
-          <Input defaultValue='mail@example.com' placeholder='Email' />
-        </div>
-        <div className={exampleStyles}>
-          <span>Hover — наведите</span>
-          <Input placeholder='Hover me' />
-        </div>
-        <div className={exampleStyles}>
-          <span>Focused</span>
-          <Input autoFocus defaultValue='Focused value' placeholder='Email' />
-        </div>
-        <div className={exampleStyles}>
-          <span>Disabled</span>
-          <Input
-            disabled
-            defaultValue='Disabled value'
-            leadingAddon={<SearchIcon />}
-            placeholder='Email'
-            trailingAddon={<CrossIcon />}
-          />
-        </div>
-        <div className={exampleStyles}>
-          <span>Error</span>
-          <Input
-            error='Invalid email'
-            defaultValue='mail@'
-            leadingAddon={<SearchIcon />}
-            placeholder='Email'
-            trailingAddon={<CrossIcon />}
-          />
-        </div>
-      </div>
-    </Frame>
-  ),
+  render: (props) => <SearchExample {...props} />,
 }
 
-export const TypedInputs: Story = {
+export const Clearable: Story = {
+  argTypes: typedArgTypes,
   args: {
-    ...Variants.args,
+    ...defaultArgs,
+    placeholder: 'Start typing',
   },
-  render: ({ theme }) => (
-    <Frame theme={theme}>
-      <div className={typedTableViewportStyles}>
-        <div className={typedTableStyles}>
-          <section className={typedColumnStyles}>
-            <strong className={typedHeadingStyles}>Search</strong>
-            <TypedCell>
-              <SearchInput aria-label='Search' className={typedInputStyles} />
-            </TypedCell>
-          </section>
+  render: (props) => <ClearableExample {...props} />,
+}
 
-          <section className={typedColumnStyles}>
-            <strong className={typedHeadingStyles}>Clearable</strong>
-            <TypedCell>
-              <TypedClearableInput />
-            </TypedCell>
-          </section>
+export const Password: Story = {
+  argTypes: typedArgTypes,
+  args: {
+    ...defaultArgs,
+    placeholder: 'Enter password',
+  },
+  render: (props) => <PasswordExample {...props} />,
+}
 
-          <section className={typedColumnStyles}>
-            <strong className={typedHeadingStyles}>Password</strong>
-            <TypedCell>
-              <TypedPasswordInput />
-            </TypedCell>
-          </section>
+export const Phone: Story = {
+  argTypes: typedArgTypes,
+  args: {
+    ...defaultArgs,
+    placeholder: '+7 (999) 999 99-99',
+  },
+  render: (props) => <PhoneExample {...props} />,
+}
 
-          <section className={typedColumnStyles}>
-            <strong className={typedHeadingStyles}>Phone</strong>
-            <TypedCell>
-              <PhoneInput aria-label='Phone' className={typedInputStyles} />
-            </TypedCell>
-          </section>
-
-          <section className={typedColumnStyles}>
-            <strong className={typedHeadingStyles}>Email</strong>
-            <TypedCell>
-              <EmailInput aria-label='Email' className={typedInputStyles} />
-            </TypedCell>
-          </section>
-        </div>
-      </div>
-    </Frame>
-  ),
+export const Email: Story = {
+  argTypes: typedArgTypes,
+  args: {
+    ...defaultArgs,
+    placeholder: 'Enter email',
+  },
+  render: (props) => <EmailExample {...props} />,
 }
