@@ -282,14 +282,6 @@ export const Variants: Story = {
   args: defaultArgs,
 }
 
-export const Addons: Story = {
-  args: {
-    ...defaultArgs,
-    leadingAddon: true,
-    trailingAddon: true,
-  },
-}
-
 export const Search: Story = {
   argTypes: typedArgTypes,
   args: {
