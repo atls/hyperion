@@ -57,6 +57,19 @@ const TypedPasswordInput = (): ReactNode => {
   )
 }
 
+const TypedClearableInput = (): ReactNode => {
+  const [value, setValue] = useState('')
+
+  return (
+    <ClearableInput
+      aria-label='Clearable'
+      className={typedInputStyles}
+      value={value}
+      onValueChange={setValue}
+    />
+  )
+}
+
 const Frame = ({ children, theme }: { children: ReactNode; theme: InputStoryProps['theme'] }) => {
   const selectedTheme = theme === 'dark' ? darkTheme : lightTheme
 
@@ -177,6 +190,10 @@ export const States: Story = {
           <Input placeholder='Email' />
         </div>
         <div className={exampleStyles}>
+          <span>Unfilled without placeholder</span>
+          <Input aria-label='Empty input' />
+        </div>
+        <div className={exampleStyles}>
           <span>Filled</span>
           <Input defaultValue='mail@example.com' placeholder='Email' />
         </div>
@@ -190,11 +207,23 @@ export const States: Story = {
         </div>
         <div className={exampleStyles}>
           <span>Disabled</span>
-          <Input disabled defaultValue='Disabled value' placeholder='Email' />
+          <Input
+            disabled
+            defaultValue='Disabled value'
+            leadingAddon={<SearchIcon />}
+            placeholder='Email'
+            trailingAddon={<CrossIcon />}
+          />
         </div>
         <div className={exampleStyles}>
           <span>Error</span>
-          <Input error='Invalid email' defaultValue='mail@' placeholder='Email' />
+          <Input
+            error='Invalid email'
+            defaultValue='mail@'
+            leadingAddon={<SearchIcon />}
+            placeholder='Email'
+            trailingAddon={<CrossIcon />}
+          />
         </div>
       </div>
     </Frame>
@@ -219,7 +248,7 @@ export const TypedInputs: Story = {
           <section className={typedColumnStyles}>
             <strong className={typedHeadingStyles}>Clearable</strong>
             <TypedCell>
-              <ClearableInput aria-label='Clearable' className={typedInputStyles} />
+              <TypedClearableInput />
             </TypedCell>
           </section>
 
