@@ -8,7 +8,7 @@ import { EyeClosedIcon }           from '@atls-ui-parts/icons'
 import { EyeIcon }                 from '@atls-ui-parts/icons'
 import { LockIcon }                from '@atls-ui-parts/icons'
 
-import { InputAction }             from '../../addons/action/index.js'
+import { InputAction }             from '../../action/index.js'
 import { Input }                   from '../../component.js'
 import { useStringValue }          from '../shared/index.js'
 

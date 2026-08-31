@@ -4,7 +4,7 @@ import type { ClearableInputProps } from './interfaces.js'
 
 import { CrossIcon }                from '@atls-ui-parts/icons'
 
-import { InputAction }              from '../../addons/action/index.js'
+import { InputAction }              from '../../action/index.js'
 import { Input }                    from '../../component.js'
 import { useStringValue }           from '../shared/index.js'
 
