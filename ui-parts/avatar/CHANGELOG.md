@@ -1,5 +1,12 @@
 
 
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/avatar@1.1.0...@atls-ui-parts/avatar@1.1.0) (2026-08-31)
+
+
+
+
+
+
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/avatar@1.1.0...@atls-ui-parts/avatar@1.1.0) (2026-08-26)
 
 

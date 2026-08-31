@@ -1,5 +1,17 @@
 
 
+## [1.1.1](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.1.0...@atls-ui-parts/card@1.1.1) (2026-08-31)
+
+
+### Bug Fixes
+
+
+* **atls-ui-parts:** align button story variants ([8615e27](https://github.com/atls/hyperion/commit/8615e278dfc8f0f6172e6deac378b9300a097239))
+
+
+
+
+
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.1.0...@atls-ui-parts/card@1.1.0) (2026-08-26)
 
 

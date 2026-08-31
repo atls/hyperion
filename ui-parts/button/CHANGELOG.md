@@ -1,5 +1,32 @@
 
 
+# [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/button@1.1.0...@atls-ui-parts/button@1.2.0) (2026-08-31)
+
+
+### Bug Fixes
+
+
+* **button:** attenuate translucent elevations ([69e0bfd](https://github.com/atls/hyperion/commit/69e0bfd707b3e6e22209e193a23ed288958b218d))
+* **button:** center icon-only content ([ee6cde5](https://github.com/atls/hyperion/commit/ee6cde540f2666571ab6115df69421b0b5c3b999))
+* **button:** hide elevation without visible paint ([e3edcc5](https://github.com/atls/hyperion/commit/e3edcc5b1db2196bc6e79e93907d041d25f0ed5f))
+* **button:** preserve addon layout for class shapes ([d14d544](https://github.com/atls/hyperion/commit/d14d544468cb33c1855d1d53206615f9f5244ab8))
+* **button:** preserve class shape styles ([b3897ad](https://github.com/atls/hyperion/commit/b3897ad5947ee74df4d069e735b0f64bed76758c))
+* **button:** preserve elevation opacity ([2b89cbd](https://github.com/atls/hyperion/commit/2b89cbdb4d192c8eaf74c155ce6e94ae8685859e))
+* **button:** remove obsolete stories ([193922f](https://github.com/atls/hyperion/commit/193922f7f427f48b4de2e437c0c8552133cc2086))
+* **button:** reset block padding ([bae0926](https://github.com/atls/hyperion/commit/bae092687291cf92e48fa1e6d93afbf7a9ca27a2))
+* **button:** restore container elevation rendering ([a947b88](https://github.com/atls/hyperion/commit/a947b88a1bad4595c9e74d89ecec23d0ace705b8))
+* **button:** shadow visible content ([d89f947](https://github.com/atls/hyperion/commit/d89f947cf23ef63d234cbdb2024989b76e0b225f))
+
+### Features
+
+
+* **button:** add component stories ([3f61ab4](https://github.com/atls/hyperion/commit/3f61ab4799e1179dde418038ed2b9ae0472e13ae))
+* **button:** update web button ([36acf2c](https://github.com/atls/hyperion/commit/36acf2c9d17ff442fe8c739be4e4bead060a91ff))
+
+
+
+
+
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/button@1.1.0...@atls-ui-parts/button@1.1.0) (2026-08-26)
 
 

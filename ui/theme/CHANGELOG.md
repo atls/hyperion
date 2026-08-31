@@ -1,5 +1,24 @@
 
 
+# [0.7.0](https://github.com/atls/hyperion/compare/@atls-ui/theme@0.6.0...@atls-ui/theme@0.7.0) (2026-08-31)
+
+
+### Bug Fixes
+
+
+* **button:** restore container elevation rendering ([a947b88](https://github.com/atls/hyperion/commit/a947b88a1bad4595c9e74d89ecec23d0ace705b8))
+* **button:** shadow visible content ([d89f947](https://github.com/atls/hyperion/commit/d89f947cf23ef63d234cbdb2024989b76e0b225f))
+* **theme:** align disabled action colors ([788a964](https://github.com/atls/hyperion/commit/788a96468fd6001a44ca979164a34ad07bc7c8e8))
+
+### Features
+
+
+* **theme:** load Science Gothic assets ([17bd19d](https://github.com/atls/hyperion/commit/17bd19d6f06acaf983944e8865dce37c1579dbc9))
+
+
+
+
+
 # [0.6.0](https://github.com/atls/hyperion/compare/@atls-ui/theme@0.5.0...@atls-ui/theme@0.6.0) (2026-08-26)
 
 

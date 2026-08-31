@@ -1,5 +1,22 @@
 
 
+# [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/button@1.1.0...@atls-ui-admin/button@1.2.0) (2026-08-31)
+
+
+### Bug Fixes
+
+
+* **atls-ui-admin:** migrate button shape styles ([4808b10](https://github.com/atls/hyperion/commit/4808b1076e79e56cd4111c0a2db83f06da35f86f))
+
+### Features
+
+
+* **button:** update web button ([36acf2c](https://github.com/atls/hyperion/commit/36acf2c9d17ff442fe8c739be4e4bead060a91ff))
+
+
+
+
+
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/button@1.1.0...@atls-ui-admin/button@1.1.0) (2026-08-26)
 
 

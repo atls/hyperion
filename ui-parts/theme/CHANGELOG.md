@@ -1,5 +1,18 @@
 
 
+# [1.4.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/theme@1.3.0...@atls-ui-parts/theme@1.4.0) (2026-08-31)
+
+
+### Features
+
+
+* **theme:** expose web theme context ([1b7023c](https://github.com/atls/hyperion/commit/1b7023c67b07e0629b6d47e44fe72614f2a4999a))
+* **theme:** load Science Gothic assets ([17bd19d](https://github.com/atls/hyperion/commit/17bd19d6f06acaf983944e8865dce37c1579dbc9))
+
+
+
+
+
 # [1.3.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/theme@1.2.0...@atls-ui-parts/theme@1.3.0) (2026-08-26)
 
 
