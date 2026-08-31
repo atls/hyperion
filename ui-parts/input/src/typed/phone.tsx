@@ -17,7 +17,7 @@ import { useStringValue }         from './value.js'
 
 type PhoneNativeProps = Omit<
   InputProps,
-  'defaultValue' | 'inputMode' | 'leadingAddon' | 'type' | 'value'
+  'defaultValue' | 'inputMode' | 'leadingAddon' | 'onChange' | 'type' | 'value'
 >
 
 export interface PhoneInputProps extends PhoneNativeProps, StringValueProps {
@@ -32,47 +32,45 @@ export const PhoneInput = ({
   error,
   invalidMessage = 'Invalid phone',
   onBlur,
-  onChange,
   onInvalid,
   onValueChange,
   placeholder = '+7 (999) 999 99-99',
   value,
   ...props
 }: PhoneInputProps): ReactNode => {
-  const [invalid, setInvalid] = useState(false)
+  const [invalidValue, setInvalidValue] = useState<string>()
+  const state = useStringValue({
+    defaultValue,
+    normalize: (nextValue) => formatPhoneValue(nextValue, defaultCountry),
+    onValueChange,
+    value,
+  })
+  const invalid = invalidValue === state.value
   let resolvedError = error
 
   if (resolvedError === undefined && invalid) {
     resolvedError = invalidMessage
   }
 
-  const state = useStringValue({
-    defaultValue,
-    normalize: (nextValue) => formatPhoneValue(nextValue, defaultCountry),
-    onChange,
-    onValueChange,
-    value,
-  })
-
   const isValid = (input: HTMLInputElement): boolean =>
     input.validity.valid &&
     (input.value.length === 0 || isPhoneValueValid(input.value, defaultCountry))
 
   const handleBlur: FocusEventHandler<HTMLInputElement> = (event) => {
-    setInvalid(!isValid(event.currentTarget))
+    setInvalidValue(isValid(event.currentTarget) ? undefined : event.currentTarget.value)
     onBlur?.(event)
   }
 
   const handleInvalid: FormEventHandler<HTMLInputElement> = (event) => {
-    setInvalid(true)
+    setInvalidValue(event.currentTarget.value)
     onInvalid?.(event)
   }
 
   const handleChange: typeof state.onChange = (event) => {
     state.onChange(event)
 
-    if (invalid) {
-      setInvalid(!isValid(event.currentTarget))
+    if (invalidValue !== undefined) {
+      setInvalidValue(isValid(event.currentTarget) ? undefined : event.currentTarget.value)
     }
   }
 

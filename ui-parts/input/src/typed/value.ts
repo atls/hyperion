@@ -10,7 +10,6 @@ export interface StringValueProps {
 
 interface UseStringValueOptions extends StringValueProps {
   normalize?: (value: string) => string
-  onChange?: ChangeEventHandler<HTMLInputElement>
 }
 
 interface StringValueState {
@@ -24,7 +23,6 @@ const identity = (value: string): string => value
 export const useStringValue = ({
   defaultValue = '',
   normalize = identity,
-  onChange,
   onValueChange,
   value,
 }: UseStringValueOptions): StringValueState => {
@@ -50,7 +48,6 @@ export const useStringValue = ({
     }
 
     setValue(normalizedValue)
-    onChange?.(event)
   }
 
   return {

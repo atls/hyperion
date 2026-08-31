@@ -16,7 +16,7 @@ const EMAIL_PATTERN = '[^\\s@]+@[^\\s@]+\\.[^\\s@]+'
 
 type EmailNativeProps = Omit<
   InputProps,
-  'defaultValue' | 'inputMode' | 'leadingAddon' | 'pattern' | 'type' | 'value'
+  'defaultValue' | 'inputMode' | 'leadingAddon' | 'onChange' | 'pattern' | 'type' | 'value'
 >
 
 export interface EmailInputProps extends EmailNativeProps, StringValueProps {
@@ -30,7 +30,6 @@ export const EmailInput = ({
   error,
   invalidMessage = 'Invalid email',
   onBlur,
-  onChange,
   onInvalid,
   onValueChange,
   placeholder = 'Enter email',
@@ -38,30 +37,30 @@ export const EmailInput = ({
   value,
   ...props
 }: EmailInputProps): ReactNode => {
-  const [invalid, setInvalid] = useState(false)
+  const [invalidValue, setInvalidValue] = useState<string>()
+  const state = useStringValue({ defaultValue, onValueChange, value })
+  const invalid = invalidValue === state.value
   let resolvedError = error
 
   if (resolvedError === undefined && invalid) {
     resolvedError = invalidMessage
   }
 
-  const state = useStringValue({ defaultValue, onChange, onValueChange, value })
-
   const handleBlur: FocusEventHandler<HTMLInputElement> = (event) => {
-    setInvalid(!event.currentTarget.validity.valid)
+    setInvalidValue(event.currentTarget.validity.valid ? undefined : event.currentTarget.value)
     onBlur?.(event)
   }
 
   const handleInvalid: FormEventHandler<HTMLInputElement> = (event) => {
-    setInvalid(true)
+    setInvalidValue(event.currentTarget.value)
     onInvalid?.(event)
   }
 
   const handleChange: typeof state.onChange = (event) => {
     state.onChange(event)
 
-    if (invalid) {
-      setInvalid(!event.currentTarget.validity.valid)
+    if (invalidValue !== undefined) {
+      setInvalidValue(event.currentTarget.validity.valid ? undefined : event.currentTarget.value)
     }
   }
 
