@@ -4,10 +4,9 @@ import type { ReactNode }           from 'react'
 import type { Ref }                 from 'react'
 
 import type { InputAppearance }     from './styles/appearance/interfaces.js'
+import type { InputShape }          from './styles/shape/interfaces.js'
 
 type NativeInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'className' | 'size' | 'style'>
-
-export type InputShape = string
 
 export interface InputProps extends NativeInputProps {
   appearance?: InputAppearance

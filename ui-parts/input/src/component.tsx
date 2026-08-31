@@ -48,7 +48,7 @@ export const Input = ({
   const theme = useTheme()
   const inputRef = useRef<HTMLInputElement>(null)
   const generatedDescriptionId = useId()
-  const resolvedAppearance = resolveInputAppearance(appearance, theme)
+  const resolvedAppearance = resolveInputAppearance(appearance, theme, shape)
   const hasError = isPresent(error)
   const message = hasError ? error : helperText
   const hasMessage = isPresent(message)
@@ -82,10 +82,10 @@ export const Input = ({
   return (
     <div
       className={clsx(containerStyles, className)}
-      style={assignInputVariables(resolvedAppearance, shape, theme, style)}
+      style={assignInputVariables(resolvedAppearance, style)}
     >
       <div
-        className={clsx(fieldStyles, appearanceStyles, shape)}
+        className={clsx(fieldStyles, appearanceStyles, shape.className)}
         data-disabled={disabled || undefined}
         data-error={hasError || undefined}
         onPointerDown={focusInput}

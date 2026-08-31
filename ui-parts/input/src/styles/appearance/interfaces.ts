@@ -1,10 +1,8 @@
-export type InputElevation = 'default' | 'hover' | 'none' | 'pressed'
-
 export interface InputVisualState {
   background: string
   border: string
   content: string
-  elevation: InputElevation
+  shadow: string
 }
 
 export interface InputAppearanceStates {
