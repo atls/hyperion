@@ -1,30 +1,16 @@
-import type { ReactNode }        from 'react'
+import type { ReactNode }          from 'react'
 
-import type { InputProps }       from '../interfaces.js'
-import type { StringValueProps } from './value.js'
+import type { PasswordInputProps } from './interfaces.js'
 
-import { useState }              from 'react'
+import { useState }                from 'react'
 
-import { EyeClosedIcon }         from '@atls-ui-parts/icons'
-import { EyeIcon }               from '@atls-ui-parts/icons'
-import { LockIcon }              from '@atls-ui-parts/icons'
+import { EyeClosedIcon }           from '@atls-ui-parts/icons'
+import { EyeIcon }                 from '@atls-ui-parts/icons'
+import { LockIcon }                from '@atls-ui-parts/icons'
 
-import { Input }                 from '../component.js'
-import { InputAction }           from './action.js'
-import { useStringValue }        from './value.js'
-
-type PasswordNativeProps = Omit<
-  InputProps,
-  'defaultValue' | 'leadingAddon' | 'onChange' | 'trailingAddon' | 'type' | 'value'
->
-
-export interface PasswordInputProps extends PasswordNativeProps, StringValueProps {
-  defaultVisible?: boolean
-  hideLabel?: string
-  onVisibilityChange?: (visible: boolean) => void
-  showLabel?: string
-  visible?: boolean
-}
+import { InputAction }             from '../../addons/action/index.js'
+import { Input }                   from '../../component.js'
+import { useStringValue }          from '../shared/index.js'
 
 export const PasswordInput = ({
   autoComplete = 'current-password',

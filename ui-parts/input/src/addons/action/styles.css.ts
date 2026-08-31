@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css'
 
-export const actionStyles = style({
+export const inputActionStyles = style({
   alignItems: 'center',
   appearance: 'none',
   background: 'transparent',

@@ -1,29 +1,17 @@
-import type { CountryCode }       from 'libphonenumber-js'
 import type { FocusEventHandler } from 'react'
 import type { FormEventHandler }  from 'react'
 import type { ReactNode }         from 'react'
 
-import type { InputProps }        from '../interfaces.js'
-import type { StringValueProps }  from './value.js'
+import type { PhoneInputProps }   from './interfaces.js'
 
 import { useState }               from 'react'
 
 import { PhoneIcon }              from '@atls-ui-parts/icons'
 
-import { Input }                  from '../component.js'
-import { formatPhoneValue }       from './phone-format.js'
-import { isPhoneValueValid }      from './phone-format.js'
-import { useStringValue }         from './value.js'
-
-type PhoneNativeProps = Omit<
-  InputProps,
-  'defaultValue' | 'inputMode' | 'leadingAddon' | 'onChange' | 'type' | 'value'
->
-
-export interface PhoneInputProps extends PhoneNativeProps, StringValueProps {
-  defaultCountry?: CountryCode
-  invalidMessage?: ReactNode
-}
+import { Input }                  from '../../component.js'
+import { useStringValue }         from '../shared/index.js'
+import { formatPhoneValue }       from './format.js'
+import { isPhoneValueValid }      from './format.js'
 
 export const PhoneInput = ({
   autoComplete = 'tel',

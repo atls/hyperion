@@ -1,22 +1,9 @@
-import type { ChangeEventHandler } from 'react'
+import type { ChangeEventHandler }    from 'react'
 
-import { useState }                from 'react'
+import type { StringValueState }      from './interfaces.js'
+import type { UseStringValueOptions } from './interfaces.js'
 
-export interface StringValueProps {
-  defaultValue?: string
-  onValueChange?: (value: string) => void
-  value?: string
-}
-
-interface UseStringValueOptions extends StringValueProps {
-  normalize?: (value: string) => string
-}
-
-interface StringValueState {
-  onChange: ChangeEventHandler<HTMLInputElement>
-  setValue: (value: string) => void
-  value: string
-}
+import { useState }                   from 'react'
 
 const identity = (value: string): string => value
 

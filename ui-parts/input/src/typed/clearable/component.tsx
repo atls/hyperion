@@ -1,23 +1,12 @@
-import type { ReactNode }        from 'react'
+import type { ReactNode }           from 'react'
 
-import type { InputProps }       from '../interfaces.js'
-import type { StringValueProps } from './value.js'
+import type { ClearableInputProps } from './interfaces.js'
 
-import { CrossIcon }             from '@atls-ui-parts/icons'
+import { CrossIcon }                from '@atls-ui-parts/icons'
 
-import { Input }                 from '../component.js'
-import { InputAction }           from './action.js'
-import { useStringValue }        from './value.js'
-
-type ClearableNativeProps = Omit<
-  InputProps,
-  'defaultValue' | 'onChange' | 'trailingAddon' | 'value'
->
-
-export interface ClearableInputProps extends ClearableNativeProps, StringValueProps {
-  clearLabel?: string
-  onClear?: () => void
-}
+import { InputAction }              from '../../addons/action/index.js'
+import { Input }                    from '../../component.js'
+import { useStringValue }           from '../shared/index.js'
 
 export const ClearableInput = ({
   clearLabel = 'Clear input',

@@ -2,8 +2,8 @@ import assert                from 'node:assert/strict'
 import { describe }          from 'node:test'
 import { it }                from 'node:test'
 
-import { formatPhoneValue }  from './phone-format.js'
-import { isPhoneValueValid } from './phone-format.js'
+import { formatPhoneValue }  from './format.js'
+import { isPhoneValueValid } from './format.js'
 
 describe('formatPhoneValue', () => {
   it('formats an international US number', () => {

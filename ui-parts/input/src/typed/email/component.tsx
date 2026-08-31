@@ -2,26 +2,16 @@ import type { FocusEventHandler } from 'react'
 import type { FormEventHandler }  from 'react'
 import type { ReactNode }         from 'react'
 
-import type { InputProps }        from '../interfaces.js'
-import type { StringValueProps }  from './value.js'
+import type { EmailInputProps }   from './interfaces.js'
 
 import { useState }               from 'react'
 
 import { EmailIcon }              from '@atls-ui-parts/icons'
 
-import { Input }                  from '../component.js'
-import { useStringValue }         from './value.js'
+import { Input }                  from '../../component.js'
+import { useStringValue }         from '../shared/index.js'
 
 const EMAIL_PATTERN = '[^\\s@]+@[^\\s@]+\\.[^\\s@]+'
-
-type EmailNativeProps = Omit<
-  InputProps,
-  'defaultValue' | 'inputMode' | 'leadingAddon' | 'onChange' | 'pattern' | 'type' | 'value'
->
-
-export interface EmailInputProps extends EmailNativeProps, StringValueProps {
-  invalidMessage?: ReactNode
-}
 
 export const EmailInput = ({
   autoCapitalize = 'none',
