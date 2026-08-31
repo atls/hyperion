@@ -5,7 +5,7 @@ export const lightColors: Colors = {
     base: '#1E56C7',
     hover: '#1643A3',
     pressed: '#12357F',
-    disabled: '#1E56C740',
+    disabled: '#6B86C8',
     subtle: '#1E56C740',
   },
   surface: {

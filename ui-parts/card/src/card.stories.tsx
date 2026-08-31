@@ -65,7 +65,7 @@ export const CardNotify: StoryObj = {
   name: 'Базовый',
   render: () => (
     <Card backdrop container={<h1>Card content</h1>}>
-      <Button appearance={buttonAppearances.blue} shape={buttonShapes.small}>
+      <Button appearance={buttonAppearances.primary} shape={buttonShapes.md}>
         Open notify
       </Button>
     </Card>
@@ -94,7 +94,7 @@ export const CardLarge: StoryObj = {
   name: 'Много контента',
   render: () => (
     <Card ghost container={<LargeContent />}>
-      <Button appearance={buttonAppearances.blue} shape={buttonShapes.small}>
+      <Button appearance={buttonAppearances.primary} shape={buttonShapes.md}>
         Open large content
       </Button>
     </Card>
