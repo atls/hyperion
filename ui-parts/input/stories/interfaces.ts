@@ -14,3 +14,14 @@ export interface InputStoryProps {
   theme: ThemeName
   trailingAddon: boolean
 }
+
+export interface TextareaStoryProps {
+  appearance: AppearanceName
+  disabled: boolean
+  error: boolean
+  helperText: boolean
+  placeholder: string
+  rows: number
+  shape: ShapeName
+  theme: ThemeName
+}
