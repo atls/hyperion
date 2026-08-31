@@ -6,6 +6,4 @@ type EmailNativeProps = Omit<
   'defaultValue' | 'inputMode' | 'leadingAddon' | 'onChange' | 'type' | 'value'
 >
 
-export interface EmailInputProps extends EmailNativeProps, StringValueProps {
-  type?: 'email' | 'text'
-}
+export type EmailInputProps = EmailNativeProps & StringValueProps

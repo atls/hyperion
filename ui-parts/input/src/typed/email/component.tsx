@@ -14,7 +14,6 @@ export const EmailInput = ({
   onValueChange,
   placeholder = 'Enter email',
   spellCheck = false,
-  type = 'email',
   value,
   ...props
 }: EmailInputProps): ReactNode => {
@@ -29,7 +28,7 @@ export const EmailInput = ({
       leadingAddon={<EmailIcon />}
       placeholder={placeholder}
       spellCheck={spellCheck}
-      type={type}
+      type='email'
       value={state.value}
       onChange={state.onChange}
     />
