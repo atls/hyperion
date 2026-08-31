@@ -1,7 +1,6 @@
-import type { CountryCode }           from 'libphonenumber-js'
+import type { CountryCode } from 'libphonenumber-js'
 
-import { AsYouType }                  from 'libphonenumber-js'
-import { parsePhoneNumberFromString } from 'libphonenumber-js'
+import { AsYouType }        from 'libphonenumber-js'
 
 export const formatPhoneValue = (value: string, defaultCountry?: CountryCode): string => {
   if (!value) {
@@ -10,9 +9,3 @@ export const formatPhoneValue = (value: string, defaultCountry?: CountryCode): s
 
   return new AsYouType(defaultCountry).input(value)
 }
-
-export const isPhoneValueValid = (value: string, defaultCountry?: CountryCode): boolean =>
-  parsePhoneNumberFromString(value, {
-    defaultCountry,
-    extract: false,
-  })?.isValid() ?? false

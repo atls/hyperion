@@ -1,9 +1,8 @@
-import assert                from 'node:assert/strict'
-import { describe }          from 'node:test'
-import { it }                from 'node:test'
+import assert               from 'node:assert/strict'
+import { describe }         from 'node:test'
+import { it }               from 'node:test'
 
-import { formatPhoneValue }  from './format.js'
-import { isPhoneValueValid } from './format.js'
+import { formatPhoneValue } from './format.js'
 
 describe('formatPhoneValue', () => {
   it('formats an international US number', () => {
@@ -28,22 +27,5 @@ describe('formatPhoneValue', () => {
 
   it('keeps an empty value empty', () => {
     assert.equal(formatPhoneValue(''), '')
-  })
-})
-
-describe('isPhoneValueValid', () => {
-  it('accepts valid international numbers from different countries', () => {
-    assert.equal(isPhoneValueValid('+14155552671'), true)
-    assert.equal(isPhoneValueValid('+442071838750'), true)
-    assert.equal(isPhoneValueValid('+79999999999'), true)
-  })
-
-  it('accepts a valid national number with an explicit default country', () => {
-    assert.equal(isPhoneValueValid('(415) 555-2671', 'US'), true)
-  })
-
-  it('rejects incomplete and invalid numbers', () => {
-    assert.equal(isPhoneValueValid('+44 20'), false)
-    assert.equal(isPhoneValueValid('+0'), false)
   })
 })
