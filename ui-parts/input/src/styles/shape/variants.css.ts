@@ -6,6 +6,7 @@ import { spacing }         from '@atls-ui/theme/tokens'
 import { typography }      from '@atls-ui/theme/tokens'
 
 import { inputAddonSizes } from './constants.js'
+import { inputMinWidths }  from './constants.js'
 
 export const addonSize = createVar()
 export const contentGap = createVar()
@@ -13,7 +14,7 @@ export const contentGap = createVar()
 export const inputShapes = styleVariants({
   sm: {
     ...typography.body.md,
-    minWidth: '120px',
+    minWidth: inputMinWidths.sm,
     paddingBlock: spacing.component.sm,
     paddingInline: spacing.component.md,
     borderRadius: radii.xs,
@@ -24,7 +25,7 @@ export const inputShapes = styleVariants({
   },
   md: {
     ...typography.body.lg,
-    minWidth: '200px',
+    minWidth: inputMinWidths.md,
     paddingBlock: spacing.component.md,
     paddingInline: spacing.component.lg,
     borderRadius: radii.xs,
@@ -35,7 +36,7 @@ export const inputShapes = styleVariants({
   },
   lg: {
     ...typography.body.lg,
-    minWidth: '240px',
+    minWidth: inputMinWidths.lg,
     paddingBlock: spacing.component.lg,
     paddingInline: spacing.component.xl,
     borderRadius: radii.xs,
