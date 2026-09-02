@@ -1,6 +1,7 @@
 import { createVar }    from '@vanilla-extract/css'
 import { style }        from '@vanilla-extract/css'
 
+import { borderStyles } from '@atls-ui/theme/tokens'
 import { borderWidths } from '@atls-ui/theme/tokens'
 
 const createStateVariables = () => ({
@@ -41,15 +42,20 @@ export const appearanceStyles = style({
     '&:focus-within:not([data-disabled="true"]):not([data-error="true"])': {
       background: appearanceVariables.focused.background,
       borderColor: appearanceVariables.focused.border,
-      borderWidth: borderWidths.md,
       boxShadow: appearanceVariables.focused.shadow,
       color: appearanceVariables.focused.content,
+      outline: `${borderWidths.sm} ${borderStyles.solid} ${appearanceVariables.focused.border}`,
+      outlineOffset: `-${borderWidths.md}`,
     },
     '&[data-error="true"]:not([data-disabled="true"])': {
       background: appearanceVariables.error.background,
       borderColor: appearanceVariables.error.border,
       boxShadow: appearanceVariables.error.shadow,
       color: appearanceVariables.error.content,
+    },
+    '&[data-error="true"]:focus-within:not([data-disabled="true"])': {
+      outline: `${borderWidths.sm} ${borderStyles.solid} ${appearanceVariables.error.border}`,
+      outlineOffset: `-${borderWidths.md}`,
     },
     '&[data-disabled="true"]': {
       background: appearanceVariables.disabled.background,
