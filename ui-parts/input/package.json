@@ -5,6 +5,7 @@
   "type": "module",
   "main": "./src/index.ts",
   "files": [
+    "MIGRATION.md",
     "dist"
   ],
   "scripts": {
