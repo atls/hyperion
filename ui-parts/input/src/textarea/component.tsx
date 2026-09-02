@@ -6,8 +6,8 @@ import type { ReactNode }           from 'react'
 import type { TextareaProps }       from './interfaces.js'
 
 import { clsx }                     from 'clsx'
-import { useCallback }              from 'react'
 import { useId }                    from 'react'
+import { useImperativeHandle }      from 'react'
 import { useRef }                   from 'react'
 
 import { useTheme }                 from '@atls-ui-parts/theme'
@@ -50,18 +50,9 @@ export const Textarea = ({
   const hasMessage = isPresent(message)
   const descriptionId = hasMessage ? generatedDescriptionId : undefined
   const describedBy = [ariaDescribedBy, descriptionId].filter(Boolean).join(' ') || undefined
-  const setTextareaRef = useCallback(
-    (node: HTMLTextAreaElement | null): void => {
-      textareaRef.current = node
 
-      if (typeof ref === 'function') {
-        ref(node)
-      } else if (ref) {
-        ref.current = node
-      }
-    },
-    [ref]
-  )
+  useImperativeHandle(ref, () => textareaRef.current!, [])
+
   const focusTextarea: PointerEventHandler<HTMLDivElement> = (event) => {
     if (event.button !== 0 || !(event.target instanceof Element)) {
       return
@@ -88,7 +79,7 @@ export const Textarea = ({
       >
         <textarea
           {...props}
-          ref={setTextareaRef}
+          ref={textareaRef}
           aria-describedby={describedBy}
           aria-invalid={hasError ? true : ariaInvalid}
           className={clsx(inputStyles, textareaClassName)}

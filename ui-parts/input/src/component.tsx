@@ -6,8 +6,8 @@ import type { ReactNode }           from 'react'
 import type { InputProps }          from './interfaces.js'
 
 import { clsx }                     from 'clsx'
-import { useCallback }              from 'react'
 import { useId }                    from 'react'
+import { useImperativeHandle }      from 'react'
 import { useRef }                   from 'react'
 
 import { useTheme }                 from '@atls-ui-parts/theme'
@@ -54,18 +54,9 @@ export const Input = ({
   const hasMessage = isPresent(message)
   const descriptionId = hasMessage ? generatedDescriptionId : undefined
   const describedBy = [ariaDescribedBy, descriptionId].filter(Boolean).join(' ') || undefined
-  const setInputRef = useCallback(
-    (node: HTMLInputElement | null): void => {
-      inputRef.current = node
 
-      if (typeof ref === 'function') {
-        ref(node)
-      } else if (ref) {
-        ref.current = node
-      }
-    },
-    [ref]
-  )
+  useImperativeHandle(ref, () => inputRef.current!, [])
+
   const focusInput: PointerEventHandler<HTMLDivElement> = (event) => {
     if (event.button !== 0 || !(event.target instanceof Element)) {
       return
@@ -93,7 +84,7 @@ export const Input = ({
         <Addons position='leading'>{leadingAddon}</Addons>
         <input
           {...props}
-          ref={setInputRef}
+          ref={inputRef}
           aria-describedby={describedBy}
           aria-invalid={hasError ? true : ariaInvalid}
           className={clsx(inputStyles, inputClassName)}
