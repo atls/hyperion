@@ -3,6 +3,9 @@ import type { ChangeEventHandler }    from 'react'
 import type { StringValueState }      from './interfaces.js'
 import type { UseStringValueOptions } from './interfaces.js'
 
+import { useEffect }                  from 'react'
+import { useImperativeHandle }        from 'react'
+import { useRef }                     from 'react'
 import { useState }                   from 'react'
 
 const identity = (value: string): string => value
@@ -12,11 +15,40 @@ export const useStringValue = ({
   normalize = identity,
   onChange,
   onValueChange,
+  ref,
   value,
 }: UseStringValueOptions): StringValueState => {
   const controlled = value !== undefined
+  const inputRef = useRef<HTMLInputElement>(null)
   const [internalValue, setInternalValue] = useState(() => normalize(defaultValue))
   const resolvedValue = controlled ? normalize(value) : internalValue
+
+  useImperativeHandle(ref, () => inputRef.current!, [])
+
+  useEffect(() => {
+    const form = inputRef.current?.form
+
+    if (controlled || !form) {
+      return undefined
+    }
+
+    let active = true
+
+    const handleReset = (event: Event): void => {
+      queueMicrotask(() => {
+        if (active && !event.defaultPrevented) {
+          setInternalValue(normalize(defaultValue))
+        }
+      })
+    }
+
+    form.addEventListener('reset', handleReset)
+
+    return () => {
+      active = false
+      form.removeEventListener('reset', handleReset)
+    }
+  }, [controlled, defaultValue, normalize])
 
   const setValue = (nextValue: string): void => {
     const normalizedValue = normalize(nextValue)
@@ -40,6 +72,7 @@ export const useStringValue = ({
   }
 
   return {
+    inputRef,
     onChange: handleChange,
     setValue,
     value: resolvedValue,

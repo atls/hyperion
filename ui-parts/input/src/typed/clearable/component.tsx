@@ -4,9 +4,6 @@ import type { ReactNode }           from 'react'
 
 import type { ClearableInputProps } from './interfaces.js'
 
-import { useImperativeHandle }      from 'react'
-import { useRef }                   from 'react'
-
 import { CrossIcon }                from '@atls-ui-parts/icons'
 
 import { InputAction }              from '../../action/index.js'
@@ -39,23 +36,20 @@ export const ClearableInput = ({
   value,
   ...props
 }: ClearableInputProps): ReactNode => {
-  const inputRef = useRef<HTMLInputElement>(null)
-  const state = useStringValue({ defaultValue, onChange, onValueChange, value })
-
-  useImperativeHandle(ref, () => inputRef.current!, [])
+  const state = useStringValue({ defaultValue, onChange, onValueChange, ref, value })
 
   const clear = (): void => {
-    if (!inputRef.current) return
+    if (!state.inputRef.current) return
 
-    inputRef.current.focus()
-    dispatchInputValue(inputRef.current, '')
+    state.inputRef.current.focus()
+    dispatchInputValue(state.inputRef.current, '')
     onClear?.()
   }
 
   return (
     <Input
       {...props}
-      ref={inputRef}
+      ref={state.inputRef}
       disabled={disabled}
       placeholder={placeholder}
       value={state.value}

@@ -17,6 +17,7 @@ export const PhoneInput = ({
   onChange,
   onValueChange,
   placeholder = '+7 (999) 999 99-99',
+  ref,
   value,
   ...props
 }: PhoneInputProps): ReactNode => {
@@ -25,12 +26,14 @@ export const PhoneInput = ({
     normalize: (nextValue) => formatPhoneValue(nextValue, defaultCountry),
     onChange,
     onValueChange,
+    ref,
     value,
   })
 
   return (
     <Input
       {...props}
+      ref={state.inputRef}
       autoComplete={autoComplete}
       inputMode='tel'
       leadingAddon={<PhoneIcon />}

@@ -16,15 +16,17 @@ export const EmailInput = ({
   onChange,
   onValueChange,
   placeholder = 'Enter email',
+  ref,
   spellCheck = false,
   value,
   ...props
 }: EmailInputProps): ReactNode => {
-  const state = useStringValue({ defaultValue, onChange, onValueChange, value })
+  const state = useStringValue({ defaultValue, onChange, onValueChange, ref, value })
 
   return (
     <Input
       {...props}
+      ref={state.inputRef}
       autoCapitalize={autoCapitalize}
       autoComplete={autoComplete}
       inputMode='email'
