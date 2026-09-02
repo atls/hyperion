@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.components.input.style.appearance
+package com.atls.hyperion.ui.components.input.styles.appearance
 
 import com.atls.hyperion.ui.components.input.state.InputState
 
@@ -8,7 +8,8 @@ data class InputAppearance(
     val focused: Colors,
     val disabled: Colors,
     val error: Colors,
-    val active: Colors
+    val active: Colors,
+    val elevated: Boolean = false
 ) {
     companion object Companion
 

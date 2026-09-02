@@ -17,13 +17,14 @@ import androidx.compose.ui.text.input.TextFieldValue
 import com.atls.hyperion.storybook.shared.model.ComponentExample
 import com.atls.hyperion.storybook.shared.ui.ComponentVariants
 import com.atls.hyperion.ui.components.input.Input
-import com.atls.hyperion.ui.components.input.placeholder.InputPlaceholder
-import com.atls.hyperion.ui.components.input.style.appearance.InputAppearance
-import com.atls.hyperion.ui.components.input.style.appearance.blue
-import com.atls.hyperion.ui.components.input.style.appearance.white
-import com.atls.hyperion.ui.components.input.style.shape.InputShape
-import com.atls.hyperion.ui.components.input.style.shape.large
-import com.atls.hyperion.ui.components.input.style.shape.normal
+import com.atls.hyperion.ui.components.input.InputPlaceholder
+import com.atls.hyperion.ui.components.input.styles.appearance.InputAppearance
+import com.atls.hyperion.ui.components.input.styles.appearance.primary
+import com.atls.hyperion.ui.components.input.styles.appearance.secondary
+import com.atls.hyperion.ui.components.input.styles.shape.InputShape
+import com.atls.hyperion.ui.components.input.styles.shape.lg
+import com.atls.hyperion.ui.components.input.styles.shape.md
+import com.atls.hyperion.ui.components.input.styles.shape.sm
 import com.atls.hyperion.ui.primitives.HorizontalSpacer
 import com.atls.hyperion.ui.primitives.VerticalSpacer
 import com.atls.hyperion.ui.theme.tokens.layout.Space
@@ -65,12 +66,13 @@ class InputStory : ComponentExample {
             ComponentVariants(
                 name = "Input",
                 appearances = listOf(
-                    "Blue" to { InputAppearance.blue() },
-                    "White" to { InputAppearance.white() }
+                    "Primary" to { InputAppearance.primary() },
+                    "Secondary" to { InputAppearance.secondary() }
                 ),
                 shapes = listOf(
-                    "Large" to { InputShape.large() },
-                    "Normal" to { InputShape.normal() }
+                    "Sm" to { InputShape.sm() },
+                    "Md" to { InputShape.md() },
+                    "Lg" to { InputShape.lg() }
                 )
             ) { appearance: InputAppearance, shape: InputShape ->
                 Input(
