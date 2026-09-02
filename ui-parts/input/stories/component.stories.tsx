@@ -70,6 +70,7 @@ const InputExample = ({
 }: InputStoryProps) => (
   <Frame theme={theme}>
     <Input
+      aria-label='Input'
       appearance={getAppearance(appearance)}
       className={inputStyles}
       disabled={disabled}
@@ -94,6 +95,7 @@ const SearchExample = ({
 }: InputStoryProps) => (
   <Frame theme={theme}>
     <SearchInput
+      aria-label='Search'
       appearance={getAppearance(appearance)}
       className={inputStyles}
       disabled={disabled}
@@ -116,6 +118,7 @@ const ClearableExample = ({
 }: InputStoryProps) => (
   <Frame theme={theme}>
     <ClearableInput
+      aria-label='Clearable input'
       appearance={getAppearance(appearance)}
       className={inputStyles}
       defaultValue='Clear me'
@@ -139,6 +142,7 @@ const PasswordExample = ({
 }: InputStoryProps) => (
   <Frame theme={theme}>
     <PasswordInput
+      aria-label='Password'
       appearance={getAppearance(appearance)}
       className={inputStyles}
       defaultValue='password'
@@ -167,6 +171,7 @@ const PhoneExample = ({
   return (
     <Frame theme={theme}>
       <PhoneInput
+        aria-label='Phone'
         appearance={getAppearance(appearance)}
         className={inputStyles}
         disabled={disabled}
@@ -199,6 +204,7 @@ const EmailExample = ({
   return (
     <Frame theme={theme}>
       <EmailInput
+        aria-label='Email'
         appearance={getAppearance(appearance)}
         className={inputStyles}
         disabled={disabled}

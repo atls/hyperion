@@ -40,6 +40,7 @@ const TextareaExample = ({
       >
         <div className={previewStyles}>
           <Textarea
+            aria-label='Textarea'
             appearance={inputAppearances[appearance]}
             className={inputStyles}
             disabled={disabled}
