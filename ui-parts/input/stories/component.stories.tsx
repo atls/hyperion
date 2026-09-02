@@ -115,21 +115,29 @@ const ClearableExample = ({
   placeholder,
   shape,
   theme,
-}: InputStoryProps) => (
-  <Frame theme={theme}>
-    <ClearableInput
-      aria-label='Clearable input'
-      appearance={getAppearance(appearance)}
-      className={inputStyles}
-      defaultValue='Clear me'
-      disabled={disabled}
-      error={getError(error)}
-      helperText={getHelperText(helperText)}
-      placeholder={placeholder}
-      shape={getShape(shape)}
-    />
-  </Frame>
-)
+}: InputStoryProps) => {
+  const [value, setValue] = useState('Clear me')
+  const handleChange: ChangeEventHandler<HTMLInputElement> = (event) => {
+    setValue(event.currentTarget.value)
+  }
+
+  return (
+    <Frame theme={theme}>
+      <ClearableInput
+        aria-label='Clearable input'
+        appearance={getAppearance(appearance)}
+        className={inputStyles}
+        disabled={disabled}
+        error={getError(error)}
+        helperText={getHelperText(helperText)}
+        placeholder={placeholder}
+        shape={getShape(shape)}
+        value={value}
+        onChange={handleChange}
+      />
+    </Frame>
+  )
+}
 
 const PasswordExample = ({
   appearance,
