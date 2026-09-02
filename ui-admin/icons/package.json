@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "yarn library build",
+    "check-generated": "yarn workspace @atls-ui-generators/icons node --import tsx ../../ui-admin/icons/lib/generated/check/cli.ts",
     "generate-icons": "yarn workspace @atls-ui-generators/icons generate-icons ../../ui-admin/icons/src/icons -i ../../ui-admin/icons/svg -r ../../ui-admin/icons/src/replacements.ts && yarn format",
     "generate-replacements": "yarn workspace @atls-ui-generators/icons generate-icons replacements ../../ui-admin/icons/src -i ../../ui-admin/icons/svg && yarn format",
     "prepack": "yarn run build",

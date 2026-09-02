@@ -1,8 +1,8 @@
-import type { Replacements }  from '../icons.interfaces.js'
+import type { Replacements }  from '../interfaces.js'
 
 import { compileIcons }       from './compile-icons/index.js'
-import { discoverIcons }      from './discover-icons.util.js'
-import { writeCompiledIcons } from './write-compiled-icons.util.js'
+import { discoverIcons }      from './discover-icons.js'
+import { writeCompiledIcons } from './write-compiled-icons.js'
 
 export const buildSvgr = async (
   iconsPath: string,
