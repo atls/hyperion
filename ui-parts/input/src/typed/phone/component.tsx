@@ -14,6 +14,7 @@ export const PhoneInput = ({
   autoComplete = 'tel',
   defaultCountry,
   defaultValue,
+  onChange,
   onValueChange,
   placeholder = '+7 (999) 999 99-99',
   value,
@@ -22,6 +23,7 @@ export const PhoneInput = ({
   const state = useStringValue({
     defaultValue,
     normalize: (nextValue) => formatPhoneValue(nextValue, defaultCountry),
+    onChange,
     onValueChange,
     value,
   })

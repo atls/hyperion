@@ -15,12 +15,13 @@ export const ClearableInput = ({
   defaultValue,
   disabled,
   onClear,
+  onChange,
   onValueChange,
   placeholder = 'Start typing',
   value,
   ...props
 }: ClearableInputProps): ReactNode => {
-  const state = useStringValue({ defaultValue, onValueChange, value })
+  const state = useStringValue({ defaultValue, onChange, onValueChange, value })
 
   const clear = (): void => {
     state.setValue('')

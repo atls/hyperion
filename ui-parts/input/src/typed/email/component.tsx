@@ -13,13 +13,14 @@ export const EmailInput = ({
   autoCapitalize = 'none',
   autoComplete = 'email',
   defaultValue,
+  onChange,
   onValueChange,
   placeholder = 'Enter email',
   spellCheck = false,
   value,
   ...props
 }: EmailInputProps): ReactNode => {
-  const state = useStringValue({ defaultValue, onValueChange, value })
+  const state = useStringValue({ defaultValue, onChange, onValueChange, value })
 
   return (
     <Input

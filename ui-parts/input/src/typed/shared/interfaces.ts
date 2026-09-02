@@ -2,6 +2,7 @@ import type { ChangeEventHandler } from 'react'
 
 export interface StringValueProps {
   defaultValue?: string
+  onChange?: ChangeEventHandler<HTMLInputElement>
   onValueChange?: (value: string) => void
   value?: string
 }

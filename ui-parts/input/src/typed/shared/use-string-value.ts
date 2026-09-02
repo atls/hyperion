@@ -10,6 +10,7 @@ const identity = (value: string): string => value
 export const useStringValue = ({
   defaultValue = '',
   normalize = identity,
+  onChange,
   onValueChange,
   value,
 }: UseStringValueOptions): StringValueState => {
@@ -34,6 +35,7 @@ export const useStringValue = ({
       event.currentTarget.value = normalizedValue
     }
 
+    onChange?.(event)
     setValue(normalizedValue)
   }
 

@@ -1,32 +1,32 @@
-import type { Meta }             from '@storybook/react'
-import type { StoryObj }         from '@storybook/react'
-import type { FormEventHandler } from 'react'
-import type { ReactNode }        from 'react'
+import type { Meta }               from '@storybook/react'
+import type { StoryObj }           from '@storybook/react'
+import type { ChangeEventHandler } from 'react'
+import type { ReactNode }          from 'react'
 
-import type { InputStoryProps }  from './interfaces.js'
+import type { InputStoryProps }    from './interfaces.js'
 
-import { isValidPhoneNumber }    from 'libphonenumber-js'
-import { useState }              from 'react'
+import { isValidPhoneNumber }      from 'libphonenumber-js'
+import { useState }                from 'react'
 
-import { EmailIcon }             from '@atls-ui-parts/icons'
-import { SearchIcon }            from '@atls-ui-parts/icons'
-import { ThemeProvider }         from '@atls-ui-parts/theme'
-import { darkTheme }             from '@atls-ui/theme'
-import { lightTheme }            from '@atls-ui/theme'
+import { EmailIcon }               from '@atls-ui-parts/icons'
+import { SearchIcon }              from '@atls-ui-parts/icons'
+import { ThemeProvider }           from '@atls-ui-parts/theme'
+import { darkTheme }               from '@atls-ui/theme'
+import { lightTheme }              from '@atls-ui/theme'
 
-import { Input }                 from '../src/component.js'
-import { ClearableInput }        from '../src/typed/index.js'
-import { EmailInput }            from '../src/typed/index.js'
-import { PasswordInput }         from '../src/typed/index.js'
-import { PhoneInput }            from '../src/typed/index.js'
-import { SearchInput }           from '../src/typed/index.js'
-import { inputAppearances }      from '../src/styles/appearance/variants.js'
-import { inputShapes }           from '../src/styles/shape/variants.css.js'
-import { appearances }           from './constants.js'
-import { shapes }                from './constants.js'
-import { containerStyles }       from './styles.css.js'
-import { inputStyles }           from './styles.css.js'
-import { previewStyles }         from './styles.css.js'
+import { Input }                   from '../src/component.js'
+import { ClearableInput }          from '../src/typed/index.js'
+import { EmailInput }              from '../src/typed/index.js'
+import { PasswordInput }           from '../src/typed/index.js'
+import { PhoneInput }              from '../src/typed/index.js'
+import { SearchInput }             from '../src/typed/index.js'
+import { inputAppearances }        from '../src/styles/appearance/variants.js'
+import { inputShapes }             from '../src/styles/shape/variants.css.js'
+import { appearances }             from './constants.js'
+import { shapes }                  from './constants.js'
+import { containerStyles }         from './styles.css.js'
+import { inputStyles }             from './styles.css.js'
+import { previewStyles }           from './styles.css.js'
 
 const Frame = ({ children, theme }: { children: ReactNode; theme: InputStoryProps['theme'] }) => {
   const selectedTheme = theme === 'dark' ? darkTheme : lightTheme
@@ -192,7 +192,7 @@ const EmailExample = ({
 }: InputStoryProps) => {
   const [value, setValue] = useState('invalid-email')
   const [invalid, setInvalid] = useState(true)
-  const validate: FormEventHandler<HTMLInputElement> = (event) => {
+  const validate: ChangeEventHandler<HTMLInputElement> = (event) => {
     setInvalid(!event.currentTarget.validity.valid)
   }
 
@@ -207,7 +207,7 @@ const EmailExample = ({
         placeholder={placeholder}
         shape={getShape(shape)}
         value={value}
-        onInput={validate}
+        onChange={validate}
         onValueChange={setValue}
       />
     </Frame>

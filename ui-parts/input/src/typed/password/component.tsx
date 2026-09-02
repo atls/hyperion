@@ -20,6 +20,7 @@ export const PasswordInput = ({
   defaultVisible = false,
   disabled,
   hideLabel = 'Hide password',
+  onChange,
   onValueChange,
   onVisibilityChange,
   placeholder = 'Enter password',
@@ -31,7 +32,7 @@ export const PasswordInput = ({
   const visibilityControlled = visible !== undefined
   const [internalVisible, setInternalVisible] = useState(defaultVisible)
   const resolvedVisible = visibilityControlled ? visible : internalVisible
-  const state = useStringValue({ defaultValue, onValueChange, value })
+  const state = useStringValue({ defaultValue, onChange, onValueChange, value })
 
   const toggleVisibility = (): void => {
     const nextVisible = !resolvedVisible
