@@ -60,6 +60,7 @@ export const ClearableInput = ({
       disabled={disabled}
       placeholder={placeholder}
       readOnly={readOnly}
+      type='text'
       value={state.value}
       trailingAddon={
         state.value ? (
