@@ -93,6 +93,7 @@ export const Autocomplete = ({
         trailingAddon={suffix}
         onFocus={openMenu}
         {...getInputProps()}
+        style={{ width: '100%' }}
       />
       <Box ref={refs.setFloating} style={floatingStyles} {...getFloatingProps()}>
         <AnimatePresence>
