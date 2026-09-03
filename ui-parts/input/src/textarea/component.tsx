@@ -33,6 +33,7 @@ export const Textarea = ({
   disabled,
   error,
   helperText,
+  hidden,
   placeholder = '',
   ref,
   shape = inputShapes.md,
@@ -69,6 +70,7 @@ export const Textarea = ({
   return (
     <div
       className={clsx(containerStyles, className)}
+      hidden={hidden}
       style={assignInputVariables(resolvedAppearance, style)}
     >
       <div

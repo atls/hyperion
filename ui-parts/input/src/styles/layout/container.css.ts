@@ -13,6 +13,11 @@ export const containerStyles = style({
   display: 'inline-grid',
   gap: spacing.component.xs,
   maxWidth: '100%',
+  selectors: {
+    '&[hidden]': {
+      display: 'none',
+    },
+  },
 })
 
 export const fieldStyles = style({

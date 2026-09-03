@@ -34,6 +34,7 @@ export const Input = ({
   disabled,
   error,
   helperText,
+  hidden,
   inputClassName,
   inputStyle,
   leadingAddon,
@@ -73,6 +74,7 @@ export const Input = ({
   return (
     <div
       className={clsx(containerStyles, className)}
+      hidden={hidden}
       style={assignInputVariables(resolvedAppearance, style)}
     >
       <div
