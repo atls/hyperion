@@ -7,6 +7,10 @@ import type { InputStoryProps }    from './interfaces.js'
 
 import { isValidPhoneNumber }      from 'libphonenumber-js'
 import { useState }                from 'react'
+import { expect }                  from 'storybook/test'
+import { fn }                      from 'storybook/test'
+import { userEvent }               from 'storybook/test'
+import { within }                  from 'storybook/test'
 
 import { EmailIcon }               from '@atls-ui-parts/icons'
 import { SearchIcon }              from '@atls-ui-parts/icons'
@@ -138,6 +142,38 @@ const ClearableExample = ({
     </Frame>
   )
 }
+
+const readOnlyCallbacks = {
+  onChange: fn(),
+  onClear: fn(),
+  onValueChange: fn(),
+}
+
+const ReadOnlyClearableExample = ({
+  appearance,
+  error,
+  helperText,
+  placeholder,
+  shape,
+  theme,
+}: InputStoryProps) => (
+  <Frame theme={theme}>
+    <ClearableInput
+      readOnly
+      aria-label='Read-only clearable input'
+      appearance={getAppearance(appearance)}
+      className={inputStyles}
+      defaultValue='Read only value'
+      error={getError(error)}
+      helperText={getHelperText(helperText)}
+      placeholder={placeholder}
+      shape={getShape(shape)}
+      onChange={readOnlyCallbacks.onChange}
+      onClear={readOnlyCallbacks.onClear}
+      onValueChange={readOnlyCallbacks.onValueChange}
+    />
+  </Frame>
+)
 
 const PasswordExample = ({
   appearance,
@@ -312,6 +348,45 @@ export const Clearable: Story = {
     placeholder: 'Start typing',
   },
   render: (props) => <ClearableExample {...props} />,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const input = canvas.getByRole('textbox', { name: 'Clearable input' })
+
+    await userEvent.click(canvas.getByRole('button', { name: 'Clear input' }))
+
+    await expect(input).toHaveValue('')
+  },
+}
+
+export const ReadOnlyClearable: Story = {
+  argTypes: typedArgTypes,
+  args: {
+    ...defaultArgs,
+    placeholder: 'Read-only value',
+  },
+  render: (props) => <ReadOnlyClearableExample {...props} />,
+  play: async ({ canvasElement }) => {
+    readOnlyCallbacks.onChange.mockClear()
+    readOnlyCallbacks.onClear.mockClear()
+    readOnlyCallbacks.onValueChange.mockClear()
+
+    const canvas = within(canvasElement)
+    const input = canvas.getByRole('textbox', { name: 'Read-only clearable input' })
+    const clearButton = canvas.getByRole('button', { name: 'Clear input' })
+
+    await expect(input).toHaveAttribute('readonly')
+    await expect(input).not.toBeDisabled()
+    await expect(clearButton).toBeDisabled()
+
+    await userEvent.click(clearButton)
+    await userEvent.click(input)
+    await userEvent.keyboard('{Enter} ')
+
+    await expect(input).toHaveValue('Read only value')
+    await expect(readOnlyCallbacks.onChange).not.toHaveBeenCalled()
+    await expect(readOnlyCallbacks.onClear).not.toHaveBeenCalled()
+    await expect(readOnlyCallbacks.onValueChange).not.toHaveBeenCalled()
+  },
 }
 
 export const Password: Story = {

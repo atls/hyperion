@@ -32,6 +32,7 @@ export const ClearableInput = ({
   onChange,
   onValueChange,
   placeholder = 'Start typing',
+  readOnly,
   ref,
   value,
   ...props
@@ -39,7 +40,7 @@ export const ClearableInput = ({
   const state = useStringValue({ defaultValue, onChange, onValueChange, ref, value })
 
   const clear = (): void => {
-    if (!state.inputRef.current) return
+    if (disabled || readOnly || !state.inputRef.current) return
 
     state.inputRef.current.focus()
     dispatchInputValue(state.inputRef.current, '')
@@ -52,10 +53,11 @@ export const ClearableInput = ({
       ref={state.inputRef}
       disabled={disabled}
       placeholder={placeholder}
+      readOnly={readOnly}
       value={state.value}
       trailingAddon={
         state.value ? (
-          <InputAction disabled={disabled} label={clearLabel} onClick={clear}>
+          <InputAction disabled={disabled || readOnly} label={clearLabel} onClick={clear}>
             <CrossIcon />
           </InputAction>
         ) : undefined
