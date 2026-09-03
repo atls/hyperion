@@ -616,11 +616,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/events-state@workspace:*, @atls-ui-parts/events-state@workspace:ui-parts/events-state":
+"@atls-ui-parts/events-state@workspace:ui-parts/events-state":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/events-state@workspace:ui-parts/events-state"
   dependencies:
     "@types/react": "npm:19.1.2"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@atls-ui-parts/icons@workspace:*, @atls-ui-parts/icons@workspace:ui-parts/icons":
+  version: 0.0.0-use.local
+  resolution: "@atls-ui-parts/icons@workspace:ui-parts/icons"
+  dependencies:
+    "@types/react": "npm:19.1.2"
+    react: "npm:19.1.0"
+    react-dom: "npm:19.1.0"
+    typescript: "npm:5.5.4"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -648,18 +662,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/input@workspace:ui-parts/input"
   dependencies:
-    "@atls-ui-generators/appearance": "workspace:*"
-    "@atls-ui-parts/condition": "workspace:*"
-    "@atls-ui-parts/events-state": "workspace:*"
-    "@atls-ui-parts/layout": "workspace:*"
+    "@atls-ui-parts/icons": "workspace:*"
     "@atls-ui-parts/theme": "workspace:*"
-    "@atls-ui-parts/upload": "workspace:*"
+    "@atls-ui/theme": "workspace:*"
     "@storybook/react": "npm:10.4.6"
     "@types/react": "npm:19.1.2"
     "@vanilla-extract/css": "npm:1.17.1"
     "@vanilla-extract/dynamic": "npm:2.1.2"
     clsx: "npm:2.1.1"
-    rainbow-sprinkles: "npm:1.0.0"
+    libphonenumber-js: "npm:1.13.12"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
     storybook: "npm:10.4.6"
@@ -1086,7 +1097,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/upload@workspace:*, @atls-ui-parts/upload@workspace:ui-parts/upload":
+"@atls-ui-parts/upload@workspace:ui-parts/upload":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/upload@workspace:ui-parts/upload"
   dependencies:
@@ -10765,6 +10776,13 @@ __metadata:
     prelude-ls: "npm:^1.2.1"
     type-check: "npm:~0.4.0"
   checksum: 10/2e4720ff79f21ae08d42374b0a5c2f664c5be8b6c8f565bb4e1315c96ed3a8acaa9de788ffed82d7f2378cf36958573de07ef92336cb5255ed74d08b8318c9ee
+  languageName: node
+  linkType: hard
+
+"libphonenumber-js@npm:1.13.12":
+  version: 1.13.12
+  resolution: "libphonenumber-js@npm:1.13.12"
+  checksum: 10/099de991b482cf0af4776d54dbbfa2bc6461178344374ffb245eb29ee2f0b6a2939b7891ec72ae3ecafa72190b5d082e95db23f0241a60ac0dcf9075dbab6d5e
   languageName: node
   linkType: hard
 

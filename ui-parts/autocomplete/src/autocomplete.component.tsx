@@ -88,12 +88,13 @@ export const Autocomplete = ({
   return (
     <Row ref={refs.setReference} {...getReferenceProps()}>
       <Input
-        appearance={inputAppearances.blue}
-        shape={inputShapes.normal}
+        appearance={inputAppearances.primary}
+        shape={inputShapes.md}
+        trailingAddon={suffix}
         onFocus={openMenu}
         {...getInputProps()}
+        style={{ width: '100%' }}
       />
-      {suffix}
       <Box ref={refs.setFloating} style={floatingStyles} {...getFloatingProps()}>
         <AnimatePresence>
           {}

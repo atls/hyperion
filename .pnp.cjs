@@ -123,6 +123,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:ui-parts/events-state"\
     },\
     {\
+      "name": "@atls-ui-parts/icons",\
+      "reference": "workspace:ui-parts/icons"\
+    },\
+    {\
       "name": "@atls-ui-parts/image",\
       "reference": "workspace:ui-parts/image"\
     },\
@@ -249,7 +253,7 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-admin/text", ["workspace:ui-admin/text"]],\
     ["@atls-ui-admin/theme", ["virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#workspace:ui-admin/theme", "virtual:b32a26a2fdb9efe95b0d3c1680d4b91fdda6b5202d080748278d5d418cc8670dced3df8a9ed2862d4501349fbf99cee1cc30a7bdbef4b607caffd1b77c40d6b4#workspace:ui-admin/theme", "workspace:ui-admin/theme"]],\
     ["@atls-ui-admin/upload", ["workspace:ui-admin/upload"]],\
-    ["@atls-ui-generators/appearance", ["virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:generators/appearance", "workspace:generators/appearance"]],\
+    ["@atls-ui-generators/appearance", ["virtual:a9332576c7d14f9af272f44f09e153c63f49c8324c6ccaaf7552127dd7a897436a4782f545f3eaba4decf1b26740b8a328de202cc4c8f00a7c2b384d377f46ab#workspace:generators/appearance", "workspace:generators/appearance"]],\
     ["@atls-ui-generators/components", ["workspace:generators/components"]],\
     ["@atls-ui-generators/icons", ["workspace:generators/icons"]],\
     ["@atls-ui-generators/locales", ["workspace:generators/locales"]],\
@@ -265,7 +269,8 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-parts/datepicker", ["workspace:ui-parts/datepicker"]],\
     ["@atls-ui-parts/design", ["workspace:ui-parts/design"]],\
     ["@atls-ui-parts/dom", ["virtual:937fb0364248873ae59b9853300486d03005abda92eaabc1af692cdbfe45a10bb44400f85b426164577e95380d1eb384e54a3525e8f98eff7f80d492dbab08a5#workspace:ui-parts/dom", "workspace:ui-parts/dom"]],\
-    ["@atls-ui-parts/events-state", ["virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/events-state", "workspace:ui-parts/events-state"]],\
+    ["@atls-ui-parts/events-state", ["workspace:ui-parts/events-state"]],\
+    ["@atls-ui-parts/icons", ["virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons", "workspace:ui-parts/icons"]],\
     ["@atls-ui-parts/image", ["virtual:5dae0025774218e7d5b25f9293624b65d07c18a455c0543b6b0cbcc49eab1f8daaf93f688033cd0934a58e64a6421749d3e30955e506415c50f4612545e60177#workspace:ui-parts/image", "workspace:ui-parts/image"]],\
     ["@atls-ui-parts/input", ["virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/input", "workspace:ui-parts/input"]],\
     ["@atls-ui-parts/layout", ["virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#workspace:ui-parts/layout", "virtual:937fb0364248873ae59b9853300486d03005abda92eaabc1af692cdbfe45a10bb44400f85b426164577e95380d1eb384e54a3525e8f98eff7f80d492dbab08a5#workspace:ui-parts/layout", "virtual:ba0336f2ccf109a54b4b8063d4801935b554fc6f958edd172cb3c73a5a5a49118f16d1cd01b286a3749f851b3f37efaad86c3ceef598318c20b6e7cbecad90d2#workspace:ui-parts/layout", "workspace:ui-parts/layout"]],\
@@ -287,7 +292,7 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-parts/text-transform", ["virtual:144bd10b47610de450c041ff553326fefe11958aedc1da4a2a09dafd48e073b7fc7fd88c35623eafbf7d353919a302f576bfc9d4dea4795b88e73d2fea0dc288#workspace:ui-parts/text-transform", "workspace:ui-parts/text-transform"]],\
     ["@atls-ui-parts/theme", ["virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme", "virtual:9c83884c7a1bbb8b55eeb55db417f22eaf2ba48e2b1a3840cecc6737a018d63bede31efd8c8fa8a1529cfbb08be4bfc8a1a6ac9b3d61a21277c7e98446e604f8#workspace:ui-parts/theme", "workspace:ui-parts/theme"]],\
     ["@atls-ui-parts/tooltip", ["workspace:ui-parts/tooltip"]],\
-    ["@atls-ui-parts/upload", ["virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/upload", "workspace:ui-parts/upload"]],\
+    ["@atls-ui-parts/upload", ["workspace:ui-parts/upload"]],\
     ["@atls-ui/design", ["workspace:ui/design"]],\
     ["@atls-ui/theme", ["workspace:ui/theme"]],\
     ["@atls-utils/use-float", ["virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:utils/use-float", "workspace:utils/use-float"]],\
@@ -738,10 +743,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@atls-ui-generators/appearance", [\
-      ["virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:generators/appearance", {\
-        "packageLocation": "./.yarn/__virtual__/@atls-ui-generators-appearance-virtual-c407542ddb/1/generators/appearance/",\
+      ["virtual:a9332576c7d14f9af272f44f09e153c63f49c8324c6ccaaf7552127dd7a897436a4782f545f3eaba4decf1b26740b8a328de202cc4c8f00a7c2b384d377f46ab#workspace:generators/appearance", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-generators-appearance-virtual-edf42ec57b/1/generators/appearance/",\
         "packageDependencies": [\
-          ["@atls-ui-generators/appearance", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:generators/appearance"],\
+          ["@atls-ui-generators/appearance", "virtual:a9332576c7d14f9af272f44f09e153c63f49c8324c6ccaaf7552127dd7a897436a4782f545f3eaba4decf1b26740b8a328de202cc4c8f00a7c2b384d377f46ab#workspace:generators/appearance"],\
           ["@atls-ui-generators/utils", "workspace:generators/utils"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
           ["@swc-node/register", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#npm:1.9.0"],\
@@ -1037,7 +1042,7 @@ const RAW_RUNTIME_STATE =
       ["workspace:ui-parts/checkbox", {\
         "packageLocation": "./ui-parts/checkbox/",\
         "packageDependencies": [\
-          ["@atls-ui-generators/appearance", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:generators/appearance"],\
+          ["@atls-ui-generators/appearance", "virtual:a9332576c7d14f9af272f44f09e153c63f49c8324c6ccaaf7552127dd7a897436a4782f545f3eaba4decf1b26740b8a328de202cc4c8f00a7c2b384d377f46ab#workspace:generators/appearance"],\
           ["@atls-ui-parts/checkbox", "workspace:ui-parts/checkbox"],\
           ["@atls-ui-parts/layout", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#workspace:ui-parts/layout"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
@@ -1301,14 +1306,25 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@atls-ui-parts/events-state", [\
-      ["virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/events-state", {\
-        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-events-state-virtual-0eb1999d53/1/ui-parts/events-state/",\
+      ["workspace:ui-parts/events-state", {\
+        "packageLocation": "./ui-parts/events-state/",\
         "packageDependencies": [\
-          ["@atls-ui-parts/events-state", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/events-state"],\
+          ["@atls-ui-parts/events-state", "workspace:ui-parts/events-state"],\
+          ["@types/react", "npm:19.1.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/icons", [\
+      ["virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-icons-virtual-874e62a66a/1/ui-parts/icons/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons"],\
           ["@types/react", "npm:19.1.2"],\
           ["@types/react-dom", null],\
           ["react", "npm:19.1.0"],\
-          ["react-dom", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:19.1.0"]\
+          ["react-dom", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:19.1.0"],\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
         ],\
         "packagePeers": [\
           "@types/react-dom",\
@@ -1317,11 +1333,14 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["workspace:ui-parts/events-state", {\
-        "packageLocation": "./ui-parts/events-state/",\
+      ["workspace:ui-parts/icons", {\
+        "packageLocation": "./ui-parts/icons/",\
         "packageDependencies": [\
-          ["@atls-ui-parts/events-state", "workspace:ui-parts/events-state"],\
-          ["@types/react", "npm:19.1.2"]\
+          ["@atls-ui-parts/icons", "workspace:ui-parts/icons"],\
+          ["@types/react", "npm:19.1.2"],\
+          ["react", "npm:19.1.0"],\
+          ["react-dom", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:19.1.0"],\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -1370,13 +1389,10 @@ const RAW_RUNTIME_STATE =
       ["virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/input", {\
         "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-input-virtual-8480592f2a/1/ui-parts/input/",\
         "packageDependencies": [\
-          ["@atls-ui-generators/appearance", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:generators/appearance"],\
-          ["@atls-ui-parts/condition", "virtual:06315aec6049f1c6c32004d6e584058ffedd6c8eaf08aaee2ce03aaedeaf84c340968f24d92b3566001c478f3ac64eca59adabd63e33390cb5990761978a1ea2#workspace:ui-parts/condition"],\
-          ["@atls-ui-parts/events-state", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/events-state"],\
+          ["@atls-ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons"],\
           ["@atls-ui-parts/input", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/input"],\
-          ["@atls-ui-parts/layout", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#workspace:ui-parts/layout"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
-          ["@atls-ui-parts/upload", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/upload"],\
+          ["@atls-ui/theme", "workspace:ui/theme"],\
           ["@storybook/react", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:10.4.6"],\
           ["@types/react", "npm:19.1.2"],\
           ["@types/react-dom", null],\
@@ -1385,7 +1401,7 @@ const RAW_RUNTIME_STATE =
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
           ["clsx", "npm:2.1.1"],\
-          ["rainbow-sprinkles", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:1.0.0"],\
+          ["libphonenumber-js", "npm:1.13.12"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:19.1.0"],\
           ["storybook", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:10.4.6"],\
@@ -1405,19 +1421,16 @@ const RAW_RUNTIME_STATE =
       ["workspace:ui-parts/input", {\
         "packageLocation": "./ui-parts/input/",\
         "packageDependencies": [\
-          ["@atls-ui-generators/appearance", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:generators/appearance"],\
-          ["@atls-ui-parts/condition", "virtual:06315aec6049f1c6c32004d6e584058ffedd6c8eaf08aaee2ce03aaedeaf84c340968f24d92b3566001c478f3ac64eca59adabd63e33390cb5990761978a1ea2#workspace:ui-parts/condition"],\
-          ["@atls-ui-parts/events-state", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/events-state"],\
+          ["@atls-ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons"],\
           ["@atls-ui-parts/input", "workspace:ui-parts/input"],\
-          ["@atls-ui-parts/layout", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#workspace:ui-parts/layout"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
-          ["@atls-ui-parts/upload", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/upload"],\
+          ["@atls-ui/theme", "workspace:ui/theme"],\
           ["@storybook/react", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:10.4.6"],\
           ["@types/react", "npm:19.1.2"],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
           ["clsx", "npm:2.1.1"],\
-          ["rainbow-sprinkles", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:1.0.0"],\
+          ["libphonenumber-js", "npm:1.13.12"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:19.1.0"],\
           ["storybook", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:10.4.6"],\
@@ -2072,29 +2085,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@atls-ui-parts/upload", [\
-      ["virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/upload", {\
-        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-upload-virtual-6ccd5be6ef/1/ui-parts/upload/",\
-        "packageDependencies": [\
-          ["@atls-ui-parts/upload", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/upload"],\
-          ["@atls/react-upload", "virtual:6ccd5be6ef86b4df28a23e6f29855cfe18e43b2412eda586704f146ac6cb018f65e04ae470458dc5b4c4ed6be9335d2ce26d462b1e5e4264b14f7b6cce7d1507#npm:1.0.3"],\
-          ["@types/react", "npm:19.1.2"],\
-          ["@types/react-dom", "virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#npm:19.1.2"],\
-          ["graphql", "npm:16.11.0"],\
-          ["react", "npm:19.1.0"],\
-          ["react-dom", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:19.1.0"],\
-          ["react-dropzone", "virtual:ecc6b1bbaecda01b4876fa1e192199007fc275ac98b826098f5b047b9f5e5078bc2e874010bd031f331dc7f74a04d19db38a9dc54b7d146b32d9430495098e39#npm:14.3.8"]\
-        ],\
-        "packagePeers": [\
-          "react-dom",\
-          "react"\
-        ],\
-        "linkType": "SOFT"\
-      }],\
       ["workspace:ui-parts/upload", {\
         "packageLocation": "./ui-parts/upload/",\
         "packageDependencies": [\
           ["@atls-ui-parts/upload", "workspace:ui-parts/upload"],\
-          ["@atls/react-upload", "virtual:6ccd5be6ef86b4df28a23e6f29855cfe18e43b2412eda586704f146ac6cb018f65e04ae470458dc5b4c4ed6be9335d2ce26d462b1e5e4264b14f7b6cce7d1507#npm:1.0.3"],\
+          ["@atls/react-upload", "virtual:0f78743c3a966899499b1c9d77fbab0531b4c6f8711125a1165b786d45b5dfa4039ba3515183a925753c3f64da03ce3cc1a5175d4609c8a2ba30693d2398d35c#npm:1.0.3"],\
           ["@types/react", "npm:19.1.2"],\
           ["@types/react-dom", "virtual:5d5a2d83c74dbbb6a29a65ad5d9fce09aed4258bbc7c7bef7d0ae41fe2cbed3efa30eb23487731e7ba540c2485008f2e2cdc8aa4b98cd0d0d6df800a358cdf39#npm:19.1.2"],\
           ["graphql", "npm:16.11.0"],\
@@ -2382,10 +2377,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:688101d17774ecaeabb4c227cfb2b4543dab0e9b0e5d304e441f691e801e24820b4a2a36a878034347d0a67c16302e197ac17069406f9879a7829f18c057705d#npm:0.0.5", {\
-        "packageLocation": "./.yarn/__virtual__/@atls-react-app-links-virtual-4d1504210b/2/.yarn/berry/cache/@atls-react-app-links-npm-0.0.5-f581971bcb-10.zip/node_modules/@atls/react-app-links/",\
+      ["virtual:c86d4f1bc225e560eaf099a2bb0aa1fbb6ba1876ef55af8e08e1287cf6eb01f89d78765053c817d1f6321908c262fa397bca24e23a257eda77a5a76213131e78#npm:0.0.5", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-react-app-links-virtual-9ce84666a7/2/.yarn/berry/cache/@atls-react-app-links-npm-0.0.5-f581971bcb-10.zip/node_modules/@atls/react-app-links/",\
         "packageDependencies": [\
-          ["@atls/react-app-links", "virtual:688101d17774ecaeabb4c227cfb2b4543dab0e9b0e5d304e441f691e801e24820b4a2a36a878034347d0a67c16302e197ac17069406f9879a7829f18c057705d#npm:0.0.5"],\
+          ["@atls/react-app-links", "virtual:c86d4f1bc225e560eaf099a2bb0aa1fbb6ba1876ef55af8e08e1287cf6eb01f89d78765053c817d1f6321908c262fa397bca24e23a257eda77a5a76213131e78#npm:0.0.5"],\
           ["@types/react", "npm:19.1.2"],\
           ["react", "npm:19.1.0"],\
           ["tldjs", "npm:2.3.1"]\
@@ -2405,15 +2400,15 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:6ccd5be6ef86b4df28a23e6f29855cfe18e43b2412eda586704f146ac6cb018f65e04ae470458dc5b4c4ed6be9335d2ce26d462b1e5e4264b14f7b6cce7d1507#npm:1.0.3", {\
-        "packageLocation": "./.yarn/__virtual__/@atls-react-upload-virtual-688101d177/2/.yarn/berry/cache/@atls-react-upload-npm-1.0.3-75fbf74a03-10.zip/node_modules/@atls/react-upload/",\
+      ["virtual:0f78743c3a966899499b1c9d77fbab0531b4c6f8711125a1165b786d45b5dfa4039ba3515183a925753c3f64da03ce3cc1a5175d4609c8a2ba30693d2398d35c#npm:1.0.3", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-react-upload-virtual-c86d4f1bc2/2/.yarn/berry/cache/@atls-react-upload-npm-1.0.3-75fbf74a03-10.zip/node_modules/@atls/react-upload/",\
         "packageDependencies": [\
-          ["@atls/react-app-links", "virtual:688101d17774ecaeabb4c227cfb2b4543dab0e9b0e5d304e441f691e801e24820b4a2a36a878034347d0a67c16302e197ac17069406f9879a7829f18c057705d#npm:0.0.5"],\
-          ["@atls/react-upload", "virtual:6ccd5be6ef86b4df28a23e6f29855cfe18e43b2412eda586704f146ac6cb018f65e04ae470458dc5b4c4ed6be9335d2ce26d462b1e5e4264b14f7b6cce7d1507#npm:1.0.3"],\
+          ["@atls/react-app-links", "virtual:c86d4f1bc225e560eaf099a2bb0aa1fbb6ba1876ef55af8e08e1287cf6eb01f89d78765053c817d1f6321908c262fa397bca24e23a257eda77a5a76213131e78#npm:0.0.5"],\
+          ["@atls/react-upload", "virtual:0f78743c3a966899499b1c9d77fbab0531b4c6f8711125a1165b786d45b5dfa4039ba3515183a925753c3f64da03ce3cc1a5175d4609c8a2ba30693d2398d35c#npm:1.0.3"],\
           ["@types/graphql", null],\
           ["@types/react", "npm:19.1.2"],\
           ["graphql", "npm:16.11.0"],\
-          ["graphql-request", "virtual:688101d17774ecaeabb4c227cfb2b4543dab0e9b0e5d304e441f691e801e24820b4a2a36a878034347d0a67c16302e197ac17069406f9879a7829f18c057705d#npm:4.3.0"],\
+          ["graphql-request", "virtual:c86d4f1bc225e560eaf099a2bb0aa1fbb6ba1876ef55af8e08e1287cf6eb01f89d78765053c817d1f6321908c262fa397bca24e23a257eda77a5a76213131e78#npm:4.3.0"],\
           ["react", "npm:19.1.0"]\
         ],\
         "packagePeers": [\
@@ -12628,15 +12623,15 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:688101d17774ecaeabb4c227cfb2b4543dab0e9b0e5d304e441f691e801e24820b4a2a36a878034347d0a67c16302e197ac17069406f9879a7829f18c057705d#npm:4.3.0", {\
-        "packageLocation": "./.yarn/__virtual__/graphql-request-virtual-86b3900fd5/2/.yarn/berry/cache/graphql-request-npm-4.3.0-dcf481b653-10.zip/node_modules/graphql-request/",\
+      ["virtual:c86d4f1bc225e560eaf099a2bb0aa1fbb6ba1876ef55af8e08e1287cf6eb01f89d78765053c817d1f6321908c262fa397bca24e23a257eda77a5a76213131e78#npm:4.3.0", {\
+        "packageLocation": "./.yarn/__virtual__/graphql-request-virtual-a0ca97edab/2/.yarn/berry/cache/graphql-request-npm-4.3.0-dcf481b653-10.zip/node_modules/graphql-request/",\
         "packageDependencies": [\
           ["@types/graphql", null],\
           ["cross-fetch", "npm:3.1.8"],\
           ["extract-files", "npm:9.0.0"],\
           ["form-data", "npm:3.0.1"],\
           ["graphql", "npm:16.11.0"],\
-          ["graphql-request", "virtual:688101d17774ecaeabb4c227cfb2b4543dab0e9b0e5d304e441f691e801e24820b4a2a36a878034347d0a67c16302e197ac17069406f9879a7829f18c057705d#npm:4.3.0"],\
+          ["graphql-request", "virtual:c86d4f1bc225e560eaf099a2bb0aa1fbb6ba1876ef55af8e08e1287cf6eb01f89d78765053c817d1f6321908c262fa397bca24e23a257eda77a5a76213131e78#npm:4.3.0"],\
           ["type-fest", "npm:4.24.0"]\
         ],\
         "packagePeers": [\
@@ -14051,6 +14046,15 @@ const RAW_RUNTIME_STATE =
           ["levn", "npm:0.4.1"],\
           ["prelude-ls", "npm:1.2.1"],\
           ["type-check", "npm:0.4.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["libphonenumber-js", [\
+      ["npm:1.13.12", {\
+        "packageLocation": "../.yarn/berry/cache/libphonenumber-js-npm-1.13.12-7a45865af3-10.zip/node_modules/libphonenumber-js/",\
+        "packageDependencies": [\
+          ["libphonenumber-js", "npm:1.13.12"]\
         ],\
         "linkType": "HARD"\
       }]\

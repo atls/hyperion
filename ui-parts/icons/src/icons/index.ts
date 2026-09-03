@@ -1,0 +1,7 @@
+export * from './cross.icon.js'
+export * from './email.icon.js'
+export * from './eye-closed.icon.js'
+export * from './eye.icon.js'
+export * from './lock.icon.js'
+export * from './phone.icon.js'
+export * from './search.icon.js'
