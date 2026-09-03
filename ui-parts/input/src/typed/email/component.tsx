@@ -21,7 +21,14 @@ export const EmailInput = ({
   value,
   ...props
 }: EmailInputProps): ReactNode => {
-  const state = useStringValue({ defaultValue, onChange, onValueChange, ref, value })
+  const state = useStringValue({
+    defaultValue,
+    form: props.form,
+    onChange,
+    onValueChange,
+    ref,
+    value,
+  })
 
   return (
     <Input

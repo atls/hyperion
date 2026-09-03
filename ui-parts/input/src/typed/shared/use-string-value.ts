@@ -12,6 +12,7 @@ const identity = (value: string): string => value
 
 export const useStringValue = ({
   defaultValue = '',
+  form: formId,
   normalize = identity,
   onChange,
   onValueChange,
@@ -48,7 +49,7 @@ export const useStringValue = ({
       active = false
       form.removeEventListener('reset', handleReset)
     }
-  }, [controlled, defaultValue, normalize])
+  }, [controlled, defaultValue, formId, normalize])
 
   const setValue = (nextValue: string): void => {
     const normalizedValue = normalize(nextValue)

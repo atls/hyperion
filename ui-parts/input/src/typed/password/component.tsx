@@ -33,7 +33,14 @@ export const PasswordInput = ({
   const visibilityControlled = visible !== undefined
   const [internalVisible, setInternalVisible] = useState(defaultVisible)
   const resolvedVisible = visibilityControlled ? visible : internalVisible
-  const state = useStringValue({ defaultValue, onChange, onValueChange, ref, value })
+  const state = useStringValue({
+    defaultValue,
+    form: props.form,
+    onChange,
+    onValueChange,
+    ref,
+    value,
+  })
 
   const toggleVisibility = (): void => {
     const nextVisible = !resolvedVisible

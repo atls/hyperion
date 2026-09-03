@@ -37,7 +37,14 @@ export const ClearableInput = ({
   value,
   ...props
 }: ClearableInputProps): ReactNode => {
-  const state = useStringValue({ defaultValue, onChange, onValueChange, ref, value })
+  const state = useStringValue({
+    defaultValue,
+    form: props.form,
+    onChange,
+    onValueChange,
+    ref,
+    value,
+  })
 
   const clear = (): void => {
     if (disabled || readOnly || !state.inputRef.current) return

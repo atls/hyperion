@@ -10,6 +10,7 @@ export interface StringValueProps {
 }
 
 export interface UseStringValueOptions extends StringValueProps {
+  form?: string
   normalize?: (value: string) => string
   ref?: Ref<HTMLInputElement>
 }

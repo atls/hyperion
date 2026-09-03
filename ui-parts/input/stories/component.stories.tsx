@@ -175,6 +175,47 @@ const ReadOnlyClearableExample = ({
   </Frame>
 )
 
+const FormResetExample = ({
+  appearance,
+  error,
+  helperText,
+  placeholder,
+  shape,
+  theme,
+}: InputStoryProps) => {
+  const formAId = 'form-a'
+  const formBId = 'form-b'
+  const [form, setForm] = useState(formAId)
+
+  return (
+    <Frame theme={theme}>
+      <form id={formAId} />
+      <form id={formBId} />
+      <ClearableInput
+        aria-label='Form-associated input'
+        appearance={getAppearance(appearance)}
+        className={inputStyles}
+        defaultValue='Default value'
+        error={getError(error)}
+        form={form}
+        helperText={getHelperText(helperText)}
+        placeholder={placeholder}
+        shape={getShape(shape)}
+      />
+      <button
+        type='button'
+        onClick={() => {
+          setForm(formBId)
+        }}
+      >
+        Associate with form B
+      </button>
+      <input type='reset' form={formAId} value='Reset form A' />
+      <input type='reset' form={formBId} value='Reset form B' />
+    </Frame>
+  )
+}
+
 const PasswordExample = ({
   appearance,
   disabled,
@@ -386,6 +427,33 @@ export const ReadOnlyClearable: Story = {
     await expect(readOnlyCallbacks.onChange).not.toHaveBeenCalled()
     await expect(readOnlyCallbacks.onClear).not.toHaveBeenCalled()
     await expect(readOnlyCallbacks.onValueChange).not.toHaveBeenCalled()
+  },
+}
+
+export const FormReset: Story = {
+  argTypes: typedArgTypes,
+  args: {
+    ...defaultArgs,
+    placeholder: 'Form-associated value',
+  },
+  render: (props) => <FormResetExample {...props} />,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const input = canvas.getByRole('textbox', { name: 'Form-associated input' })
+
+    await userEvent.clear(input)
+    await userEvent.type(input, 'Edited value')
+    await userEvent.click(canvas.getByRole('button', { name: 'Associate with form B' }))
+
+    await expect(input).toHaveAttribute('form', 'form-b')
+
+    await userEvent.click(canvas.getByRole('button', { name: 'Reset form A' }))
+
+    await expect(input).toHaveValue('Edited value')
+
+    await userEvent.click(canvas.getByRole('button', { name: 'Reset form B' }))
+
+    await expect(input).toHaveValue('Default value')
   },
 }
 
