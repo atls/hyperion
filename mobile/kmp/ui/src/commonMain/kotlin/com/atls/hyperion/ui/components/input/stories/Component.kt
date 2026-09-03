@@ -1,5 +1,6 @@
 package com.atls.hyperion.ui.components.input.stories
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -7,17 +8,17 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.Button
+import androidx.compose.material.LocalContentColor
 import androidx.compose.material.Switch
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.TextFieldValue
 import com.atls.hyperion.storybook.shared.model.ComponentExample
 import com.atls.hyperion.storybook.shared.ui.ComponentVariants
@@ -32,6 +33,8 @@ import com.atls.hyperion.ui.components.input.styles.shape.md
 import com.atls.hyperion.ui.components.input.styles.shape.sm
 import com.atls.hyperion.ui.primitives.HorizontalSpacer
 import com.atls.hyperion.ui.primitives.VerticalSpacer
+import com.atls.hyperion.ui.theme.LocalHyperionColors
+import com.atls.hyperion.ui.theme.Theme
 import com.atls.hyperion.ui.theme.tokens.layout.Space
 import com.atls.hyperion.ui.theme.tokens.layout.Weight
 
@@ -40,73 +43,84 @@ class InputStory : ComponentExample {
 
     @Composable
     override fun Content() {
+        var darkTheme by remember { mutableStateOf(false) }
         var enabled by remember { mutableStateOf(true) }
         var isError by remember { mutableStateOf(false) }
         var textValue by remember { mutableStateOf(TextFieldValue("")) }
-        val focusManager = LocalFocusManager.current
 
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-        ) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = Space.sm),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(modifier = Modifier.weight(Weight.full), text = "Enabled")
-                HorizontalSpacer(Space.sm)
-                Switch(checked = enabled, onCheckedChange = { enabled = it })
-            }
-            VerticalSpacer(Space.xs2)
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = Space.sm),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(modifier = Modifier.weight(Weight.full), text = "Error")
-                HorizontalSpacer(Space.sm)
-                Switch(checked = isError, onCheckedChange = { isError = it })
-            }
-            VerticalSpacer(Space.xs2)
-            Button(
-                modifier = Modifier.padding(horizontal = Space.sm),
-                onClick = { focusManager.clearFocus() }
-            ) {
-                Text(text = "Hide keyboard")
-            }
-            VerticalSpacer(Space.sm)
+        Theme(darkTheme = darkTheme) {
+            val colors = LocalHyperionColors.current
 
-            ComponentVariants(
-                name = "Input",
-                appearances = listOf(
-                    "Primary" to { InputAppearance.primary() },
-                    "Secondary" to { InputAppearance.secondary() }
-                ),
-                shapes = listOf(
-                    "Sm" to { InputShape.sm() },
-                    "Md" to { InputShape.md() },
-                    "Lg" to { InputShape.lg() }
-                )
-            ) { appearance: InputAppearance, shape: InputShape ->
-                Input(
-                    value = textValue,
-                    onValueChange = { textValue = it },
-                    appearance = appearance,
-                    shape = shape,
-                    enabled = enabled,
-                    isError = isError,
-                    placeholder = {
-                        InputPlaceholder(
-                            text = "Placeholder",
+            CompositionLocalProvider(LocalContentColor provides colors.text.primary) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(colors.surface.subtle)
+                        .verticalScroll(rememberScrollState())
+                ) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = Space.sm),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(modifier = Modifier.weight(Weight.full), text = "Dark theme")
+                        HorizontalSpacer(Space.sm)
+                        Switch(checked = darkTheme, onCheckedChange = { darkTheme = it })
+                    }
+                    VerticalSpacer(Space.xs2)
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = Space.sm),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(modifier = Modifier.weight(Weight.full), text = "Enabled")
+                        HorizontalSpacer(Space.sm)
+                        Switch(checked = enabled, onCheckedChange = { enabled = it })
+                    }
+                    VerticalSpacer(Space.xs2)
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = Space.sm),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(modifier = Modifier.weight(Weight.full), text = "Error")
+                        HorizontalSpacer(Space.sm)
+                        Switch(checked = isError, onCheckedChange = { isError = it })
+                    }
+                    VerticalSpacer(Space.sm)
+
+                    ComponentVariants(
+                        name = "Input",
+                        appearances = listOf(
+                            "Primary" to { InputAppearance.primary() },
+                            "Secondary" to { InputAppearance.secondary() }
+                        ),
+                        shapes = listOf(
+                            "Sm" to { InputShape.sm() },
+                            "Md" to { InputShape.md() },
+                            "Lg" to { InputShape.lg() }
+                        )
+                    ) { appearance: InputAppearance, shape: InputShape ->
+                        Input(
+                            value = textValue,
+                            onValueChange = { textValue = it },
                             appearance = appearance,
-                            shape = shape
+                            shape = shape,
+                            enabled = enabled,
+                            isError = isError,
+                            placeholder = {
+                                InputPlaceholder(
+                                    text = "Placeholder",
+                                    appearance = appearance,
+                                    shape = shape
+                                )
+                            }
                         )
                     }
-                )
+                }
             }
         }
     }
