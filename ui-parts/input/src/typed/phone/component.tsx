@@ -33,13 +33,13 @@ export const PhoneInput = ({
   return (
     <Input
       {...props}
+      {...state.inputValueProps}
       ref={state.inputRef}
       autoComplete={autoComplete}
       inputMode='tel'
       leadingAddon={<PhoneIcon />}
       placeholder={placeholder}
       type='tel'
-      value={state.value}
       onChange={state.onChange}
     />
   )

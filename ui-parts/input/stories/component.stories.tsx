@@ -208,6 +208,7 @@ const FormResetExample = ({
         error={getError(error)}
         form={form}
         helperText={getHelperText(helperText)}
+        name='form-associated-input'
         placeholder={placeholder}
         shape={getShape(shape)}
       />
@@ -459,7 +460,9 @@ export const FormReset: Story = {
   render: (props) => <FormResetExample {...props} />,
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
-    const input = canvas.getByRole('textbox', { name: 'Form-associated input' })
+    const input = canvas.getByRole<HTMLInputElement>('textbox', {
+      name: 'Form-associated input',
+    })
 
     await userEvent.clear(input)
     await userEvent.type(input, 'Edited value')
@@ -471,9 +474,42 @@ export const FormReset: Story = {
 
     await expect(input).toHaveValue('Edited value')
 
-    await userEvent.click(canvas.getByRole('button', { name: 'Reset form B' }))
+    const formB = canvasElement.querySelector<HTMLFormElement>('#form-b')
 
+    if (!formB) {
+      throw new Error('Form B is not available')
+    }
+
+    formB.reset()
+
+    const valueAfterReset = input.value
+    const formDataAfterReset = new FormData(formB).get('form-associated-input')
+
+    await expect(valueAfterReset).toBe('Default value')
+    await expect(formDataAfterReset).toBe('Default value')
     await expect(input).toHaveValue('Default value')
+
+    await userEvent.clear(input)
+    await userEvent.type(input, 'Canceled reset')
+
+    formB.addEventListener(
+      'reset',
+      (event) => {
+        event.preventDefault()
+      },
+      { once: true }
+    )
+    formB.reset()
+
+    const valueAfterCanceledReset = input.value
+    const formDataAfterCanceledReset = new FormData(formB).get('form-associated-input')
+
+    await expect(valueAfterCanceledReset).toBe('Canceled reset')
+    await expect(formDataAfterCanceledReset).toBe('Canceled reset')
+
+    await Promise.resolve()
+
+    await expect(input).toHaveValue('Canceled reset')
 
     await userEvent.clear(input)
     await userEvent.type(input, 'Edited after remount')

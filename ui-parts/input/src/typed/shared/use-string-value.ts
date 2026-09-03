@@ -20,8 +20,12 @@ export const useStringValue = ({
 }: UseStringValueOptions): StringValueState => {
   const controlled = value !== undefined
   const inputRef = useRef<HTMLInputElement>(null)
-  const [internalValue, setInternalValue] = useState(() => normalize(defaultValue))
+  const normalizedDefaultValue = normalize(defaultValue)
+  const [internalValue, setInternalValue] = useState(normalizedDefaultValue)
   const resolvedValue = controlled ? normalize(value) : internalValue
+  const inputValueProps = controlled
+    ? { value: resolvedValue }
+    : { defaultValue: normalizedDefaultValue }
 
   useImperativeHandle(ref, () => inputRef.current!, [])
 
@@ -42,7 +46,7 @@ export const useStringValue = ({
 
       queueMicrotask(() => {
         if (active && !event.defaultPrevented) {
-          setInternalValue(normalize(defaultValue))
+          setInternalValue(input.value)
         }
       })
     }
@@ -53,7 +57,7 @@ export const useStringValue = ({
       active = false
       ownerDocument.removeEventListener('reset', handleReset, true)
     }
-  }, [controlled, defaultValue, normalize])
+  }, [controlled])
 
   const setValue = (nextValue: string): void => {
     const normalizedValue = normalize(nextValue)
@@ -78,6 +82,7 @@ export const useStringValue = ({
 
   return {
     inputRef,
+    inputValueProps,
     onChange: handleChange,
     setValue,
     value: resolvedValue,

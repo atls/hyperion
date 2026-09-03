@@ -32,6 +32,7 @@ export const EmailInput = ({
   return (
     <Input
       {...props}
+      {...state.inputValueProps}
       ref={state.inputRef}
       autoCapitalize={autoCapitalize}
       autoComplete={autoComplete}
@@ -40,7 +41,6 @@ export const EmailInput = ({
       placeholder={placeholder}
       spellCheck={spellCheck}
       type='email'
-      value={state.value}
       onChange={state.onChange}
     />
   )

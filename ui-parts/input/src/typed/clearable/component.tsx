@@ -56,12 +56,12 @@ export const ClearableInput = ({
   return (
     <Input
       {...props}
+      {...state.inputValueProps}
       ref={state.inputRef}
       disabled={disabled}
       placeholder={placeholder}
       readOnly={readOnly}
       type='text'
-      value={state.value}
       trailingAddon={
         state.value ? (
           <InputAction disabled={disabled || readOnly} label={clearLabel} onClick={clear}>

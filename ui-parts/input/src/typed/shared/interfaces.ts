@@ -16,6 +16,7 @@ export interface UseStringValueOptions extends StringValueProps {
 
 export interface StringValueState {
   inputRef: RefObject<HTMLInputElement | null>
+  inputValueProps: { defaultValue: string; value?: never } | { defaultValue?: never; value: string }
   onChange: ChangeEventHandler<HTMLInputElement>
   setValue: (value: string) => void
   value: string

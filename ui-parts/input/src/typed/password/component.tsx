@@ -54,13 +54,13 @@ export const PasswordInput = ({
   return (
     <Input
       {...props}
+      {...state.inputValueProps}
       ref={state.inputRef}
       autoComplete={autoComplete}
       disabled={disabled}
       leadingAddon={<LockIcon />}
       placeholder={placeholder}
       type={resolvedVisible ? 'text' : 'password'}
-      value={state.value}
       trailingAddon={
         state.value ? (
           <InputAction
