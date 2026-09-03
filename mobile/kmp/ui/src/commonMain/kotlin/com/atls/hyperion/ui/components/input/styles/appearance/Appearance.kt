@@ -13,7 +13,7 @@ data class InputAppearance(
 ) {
     companion object Companion
 
-    fun getColorsFromState(state: InputState): Colors =
+    internal fun getColorsFromState(state: InputState): Colors =
         when (state) {
             InputState.Default -> default
             InputState.Disabled -> disabled

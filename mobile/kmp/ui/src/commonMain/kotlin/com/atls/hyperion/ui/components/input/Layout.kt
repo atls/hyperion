@@ -19,7 +19,7 @@ import com.atls.hyperion.ui.shared.addon.AddonSlotManager
 import com.atls.hyperion.ui.theme.tokens.borders.BorderWidth
 
 @Composable
-fun InputLayout(
+internal fun InputLayout(
     modifier: Modifier = Modifier,
     value: TextFieldValue,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
