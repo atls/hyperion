@@ -12,7 +12,6 @@ const identity = (value: string): string => value
 
 export const useStringValue = ({
   defaultValue = '',
-  form: formId,
   normalize = identity,
   onChange,
   onValueChange,
@@ -27,15 +26,20 @@ export const useStringValue = ({
   useImperativeHandle(ref, () => inputRef.current!, [])
 
   useEffect(() => {
-    const form = inputRef.current?.form
+    const input = inputRef.current
+    const ownerDocument = input?.ownerDocument
 
-    if (controlled || !form) {
+    if (controlled || !input || !ownerDocument) {
       return undefined
     }
 
     let active = true
 
     const handleReset = (event: Event): void => {
+      if (event.target !== input.form) {
+        return
+      }
+
       queueMicrotask(() => {
         if (active && !event.defaultPrevented) {
           setInternalValue(normalize(defaultValue))
@@ -43,13 +47,13 @@ export const useStringValue = ({
       })
     }
 
-    form.addEventListener('reset', handleReset)
+    ownerDocument.addEventListener('reset', handleReset, true)
 
     return () => {
       active = false
-      form.removeEventListener('reset', handleReset)
+      ownerDocument.removeEventListener('reset', handleReset, true)
     }
-  }, [controlled, defaultValue, formId, normalize])
+  }, [controlled, defaultValue, normalize])
 
   const setValue = (nextValue: string): void => {
     const normalizedValue = normalize(nextValue)

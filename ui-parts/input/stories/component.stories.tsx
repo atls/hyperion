@@ -6,6 +6,7 @@ import type { ReactNode }          from 'react'
 import type { InputStoryProps }    from './interfaces.js'
 
 import { isValidPhoneNumber }      from 'libphonenumber-js'
+import { useRef }                  from 'react'
 import { useState }                from 'react'
 import { expect }                  from 'storybook/test'
 import { fn }                      from 'storybook/test'
@@ -185,12 +186,20 @@ const FormResetExample = ({
 }: InputStoryProps) => {
   const formAId = 'form-a'
   const formBId = 'form-b'
+  const formBRef = useRef<HTMLFormElement | null>(null)
+  const detachedFormBRef = useRef<HTMLFormElement | null>(null)
   const [form, setForm] = useState(formAId)
+  const [formBVersion, setFormBVersion] = useState(0)
+
+  const remountFormB = (): void => {
+    detachedFormBRef.current = formBRef.current
+    setFormBVersion((currentVersion) => currentVersion + 1)
+  }
 
   return (
     <Frame theme={theme}>
       <form id={formAId} />
-      <form id={formBId} />
+      <form key={formBVersion} ref={formBRef} id={formBId} />
       <ClearableInput
         aria-label='Form-associated input'
         appearance={getAppearance(appearance)}
@@ -209,6 +218,17 @@ const FormResetExample = ({
         }}
       >
         Associate with form B
+      </button>
+      <button type='button' onClick={remountFormB}>
+        Remount form B
+      </button>
+      <button
+        type='button'
+        onClick={() => {
+          detachedFormBRef.current?.reset()
+        }}
+      >
+        Reset detached form B
       </button>
       <input type='reset' form={formAId} value='Reset form A' />
       <input type='reset' form={formBId} value='Reset form B' />
@@ -450,6 +470,20 @@ export const FormReset: Story = {
     await userEvent.click(canvas.getByRole('button', { name: 'Reset form A' }))
 
     await expect(input).toHaveValue('Edited value')
+
+    await userEvent.click(canvas.getByRole('button', { name: 'Reset form B' }))
+
+    await expect(input).toHaveValue('Default value')
+
+    await userEvent.clear(input)
+    await userEvent.type(input, 'Edited after remount')
+    await userEvent.click(canvas.getByRole('button', { name: 'Remount form B' }))
+
+    await expect(input).toHaveAttribute('form', 'form-b')
+
+    await userEvent.click(canvas.getByRole('button', { name: 'Reset detached form B' }))
+
+    await expect(input).toHaveValue('Edited after remount')
 
     await userEvent.click(canvas.getByRole('button', { name: 'Reset form B' }))
 

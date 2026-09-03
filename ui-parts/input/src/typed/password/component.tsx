@@ -35,7 +35,6 @@ export const PasswordInput = ({
   const resolvedVisible = visibilityControlled ? visible : internalVisible
   const state = useStringValue({
     defaultValue,
-    form: props.form,
     onChange,
     onValueChange,
     ref,

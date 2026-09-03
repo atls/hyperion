@@ -23,7 +23,6 @@ export const PhoneInput = ({
 }: PhoneInputProps): ReactNode => {
   const state = useStringValue({
     defaultValue,
-    form: props.form,
     normalize: (nextValue) => formatPhoneValue(nextValue, defaultCountry),
     onChange,
     onValueChange,
