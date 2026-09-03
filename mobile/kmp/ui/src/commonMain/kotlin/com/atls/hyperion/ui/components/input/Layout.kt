@@ -4,6 +4,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsFocusedAsState
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.RowScope
+import androidx.compose.material.LocalContentColor
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
@@ -59,7 +60,10 @@ fun InputLayout(
         shape.borderWidth
     }
 
-    CompositionLocalProvider(LocalState provides state) {
+    CompositionLocalProvider(
+        LocalState provides state,
+        LocalContentColor provides colors.textColor
+    ) {
         InputContainer(
             modifier = modifier,
             colors = colors,
