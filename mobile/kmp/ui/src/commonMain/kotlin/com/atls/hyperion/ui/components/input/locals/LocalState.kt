@@ -4,5 +4,5 @@ import androidx.compose.runtime.compositionLocalOf
 import com.atls.hyperion.ui.components.input.state.InputState
 
 internal val LocalState = compositionLocalOf<InputState> {
-    error("InputState not provided")
+    InputState.Default
 }
