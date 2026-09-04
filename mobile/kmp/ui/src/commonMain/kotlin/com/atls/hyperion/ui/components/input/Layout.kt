@@ -54,7 +54,7 @@ internal fun InputLayout(
         null
     }
     val colors = appearance.getColorsFromState(state)
-    val borderWidth = if (state == InputState.Focused) {
+    val borderWidth = if (state == InputState.Focused || state == InputState.Error) {
         BorderWidth.md
     } else {
         shape.borderWidth
