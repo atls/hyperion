@@ -1,1 +1,5 @@
-export * from './switch.component.js'
+export * from './component.js'
+export type * from './interfaces.js'
+export { switchAppearances } from './styles/appearance/index.js'
+export type * from './styles/appearance/interfaces.js'
+export { switchShapes } from './styles/shape/index.js'

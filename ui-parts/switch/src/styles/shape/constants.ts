@@ -1,0 +1,16 @@
+export const switchShapeSizes = {
+  sm: {
+    thumbSize: '8px',
+    width: '24px',
+  },
+  md: {
+    thumbSize: '10px',
+    width: '30px',
+  },
+  lg: {
+    thumbSize: '12px',
+    width: '36px',
+  },
+} as const
+
+export const switchThumbWidth = '1px'
