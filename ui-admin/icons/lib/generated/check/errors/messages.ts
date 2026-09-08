@@ -1,4 +1,4 @@
-import { fileDriftStates } from '../drift/interfaces.js'
+import { fileDriftStates } from '../drift/constants.js'
 
 export const commandFailedMessage = 'Command failed'
 

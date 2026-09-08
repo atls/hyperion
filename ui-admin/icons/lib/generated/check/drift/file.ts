@@ -4,7 +4,7 @@ import { readFile }        from 'node:fs/promises'
 import { stat }            from 'node:fs/promises'
 import { basename }        from 'node:path'
 
-import { fileDriftStates } from './interfaces.js'
+import { fileDriftStates } from './constants.js'
 
 const isFile = async (targetPath: string): Promise<boolean> => {
   try {

@@ -6,8 +6,8 @@ import { join }                            from 'node:path'
 import { sep }                             from 'node:path'
 
 import { relativePathSeparator }           from '../constants.js'
+import { fileDriftStates }                 from './constants.js'
 import { hasFileDrift }                    from './file.js'
-import { fileDriftStates }                 from './interfaces.js'
 
 const collectFiles = async (directoryPath: string, currentPath = ''): Promise<Array<string>> => {
   const entries = await readdir(join(directoryPath, currentPath), { withFileTypes: true })

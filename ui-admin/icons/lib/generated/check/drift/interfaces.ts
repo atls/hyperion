@@ -1,8 +1,4 @@
-export const fileDriftStates = {
-  different: 'different',
-  missing: 'missing',
-  unexpected: 'unexpected',
-} as const
+import type { fileDriftStates } from './constants.js'
 
 export type FileDriftState = (typeof fileDriftStates)[keyof typeof fileDriftStates]
 
