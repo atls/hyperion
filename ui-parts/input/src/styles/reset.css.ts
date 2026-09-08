@@ -17,3 +17,7 @@ globalStyle(`${inputStyles}[type="number"]`, {
 globalStyle(`${inputStyles}[type="search"]::-webkit-search-cancel-button`, {
   WebkitAppearance: 'none',
 })
+
+globalStyle(`textarea${inputStyles}`, {
+  resize: 'vertical',
+})
