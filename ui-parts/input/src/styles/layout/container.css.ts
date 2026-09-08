@@ -57,8 +57,21 @@ export const inputStyles = style({
       cursor: 'not-allowed',
     },
     '&::placeholder': {
-      color: appearanceVariables.unfilled.content,
+      color: appearanceVariables.unfilled.placeholder,
       opacity: 1,
+    },
+    [`${fieldStyles}:hover:not([data-disabled="true"]):not([data-error="true"]) &::placeholder`]: {
+      color: appearanceVariables.hover.placeholder,
+    },
+    [`${fieldStyles}:focus-within:not([data-disabled="true"]):not([data-error="true"]) &::placeholder`]:
+      {
+        color: appearanceVariables.focused.placeholder,
+      },
+    [`${fieldStyles}[data-error="true"]:not([data-disabled="true"]) &::placeholder`]: {
+      color: appearanceVariables.error.placeholder,
+    },
+    [`${fieldStyles}[data-disabled="true"] &::placeholder`]: {
+      color: appearanceVariables.disabled.placeholder,
     },
   },
 })

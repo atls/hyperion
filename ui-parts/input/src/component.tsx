@@ -101,11 +101,7 @@ export const Input = ({
         <div
           id={descriptionId}
           className={messageStyles}
-          style={{
-            color: hasError
-              ? resolvedAppearance.error.content
-              : resolvedAppearance.unfilled.content,
-          }}
+          style={{ color: hasError ? theme.colors.text.error : theme.colors.text.secondary }}
         >
           {message}
         </div>

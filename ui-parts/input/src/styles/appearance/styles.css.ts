@@ -8,6 +8,7 @@ const createStateVariables = () => ({
   background: createVar(),
   border: createVar(),
   content: createVar(),
+  placeholder: createVar(),
   shadow: createVar(),
 })
 

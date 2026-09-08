@@ -2,6 +2,7 @@ export interface InputVisualState {
   background: string
   border: string
   content: string
+  placeholder: string
   shadow: string
 }
 

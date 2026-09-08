@@ -28,6 +28,9 @@ export interface TextColors {
   tertiary: string
   muted: string
   inverse: string
+  error: string
+  placeholder: string
+  placeholderHover: string
 }
 
 export interface StatusColors {
