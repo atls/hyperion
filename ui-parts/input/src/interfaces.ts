@@ -6,7 +6,10 @@ import type { Ref }                 from 'react'
 import type { InputAppearance }     from './styles/appearance/interfaces.js'
 import type { InputShape }          from './styles/shape/interfaces.js'
 
-type NativeInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'className' | 'size' | 'style'>
+type NativeInputProps = Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  'className' | 'size' | 'style' | 'type'
+>
 
 export interface InputProps extends NativeInputProps {
   appearance?: InputAppearance
@@ -20,4 +23,18 @@ export interface InputProps extends NativeInputProps {
   shape?: InputShape
   style?: CSSProperties
   trailingAddon?: ReactNode
+  type?:
+    | 'date'
+    | 'datetime-local'
+    | 'email'
+    | 'hidden'
+    | 'month'
+    | 'number'
+    | 'password'
+    | 'search'
+    | 'tel'
+    | 'text'
+    | 'time'
+    | 'url'
+    | 'week'
 }
