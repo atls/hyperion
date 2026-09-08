@@ -74,7 +74,7 @@ export const Input = ({
   return (
     <div
       className={clsx(containerStyles, className)}
-      hidden={hidden}
+      hidden={hidden || type === 'hidden'}
       style={assignInputVariables(resolvedAppearance, style)}
     >
       <div
