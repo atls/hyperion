@@ -9,6 +9,21 @@ import { thumbSizeVariable }   from './shape/variants.css.js'
 
 const switchTransitionDuration = '300ms'
 
+const thumbBaseStyles = style({
+  boxSizing: 'border-box',
+  flexShrink: 0,
+  marginInlineEnd: 'auto',
+  transformOrigin: 'center',
+  pointerEvents: 'none',
+  transitionDuration: switchTransitionDuration,
+  transitionProperty: 'color, transform',
+  '@media': {
+    '(prefers-reduced-motion: reduce)': {
+      transitionDuration: '0.01ms',
+    },
+  },
+})
+
 export const baseStyles = style({
   appearance: 'none',
   position: 'relative',
@@ -33,26 +48,33 @@ export const baseStyles = style({
   },
 })
 
-export const thumbStyles = style({
-  boxSizing: 'border-box',
-  flexShrink: 0,
-  width: switchThumbWidth,
-  height: thumbSizeVariable,
-  marginInlineEnd: 'auto',
-  borderRadius: radii.full,
-  background: 'currentColor',
-  transform: 'translateX(-0.5px) rotate(0deg)',
-  transformOrigin: 'center',
-  pointerEvents: 'none',
-  transitionDuration: switchTransitionDuration,
-  transitionProperty: 'color, transform',
-  '@media': {
-    '(prefers-reduced-motion: reduce)': {
-      transitionDuration: '0.01ms',
-    },
+export const thumbStyles = style([
+  thumbBaseStyles,
+  {
+    width: switchThumbWidth,
+    height: thumbSizeVariable,
+    borderRadius: radii.full,
+    background: 'currentColor',
+    transform: 'translateX(-0.5px) rotate(0deg)',
   },
-})
+])
 
 export const checkedThumbStyles = style({
   transform: `translateX(calc(${thumbOffsetVariable} - 0.5px)) rotate(180deg)`,
+})
+
+export const customThumbStyles = style([
+  thumbBaseStyles,
+  {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: thumbSizeVariable,
+    height: thumbSizeVariable,
+    transform: 'rotate(0deg)',
+  },
+])
+
+export const checkedCustomThumbStyles = style({
+  transform: `translateX(calc(${thumbOffsetVariable} - ${thumbSizeVariable})) rotate(180deg)`,
 })

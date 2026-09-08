@@ -15,11 +15,12 @@ import { switchShapes }          from '../src/styles/shape/variants.css.js'
 import { shapeLabels }           from './constants.js'
 import { shapes }                from './constants.js'
 import { containerStyles }       from './styles.css.js'
+import { customThumbStyles }     from './styles.css.js'
 import { focusedStyles }         from './styles.css.js'
 import { rowStyles }             from './styles.css.js'
 import { shapeLabelStyles }      from './styles.css.js'
 
-const SwitchExample = ({ checked, disabled, focused, theme }: SwitchStoryProps) => {
+const SwitchExample = ({ checked, customThumb, disabled, focused, theme }: SwitchStoryProps) => {
   const [value, setValue] = useState(checked)
   const selectedTheme = theme === 'dark' ? darkTheme : lightTheme
 
@@ -51,6 +52,7 @@ const SwitchExample = ({ checked, disabled, focused, theme }: SwitchStoryProps) 
               className={focused ? focusedStyles : undefined}
               disabled={disabled}
               shape={switchShapes[shape]}
+              thumb={customThumb ? <span className={customThumbStyles} /> : undefined}
               onChange={setValue}
             />
           </div>
@@ -65,6 +67,10 @@ const meta: Meta<SwitchStoryProps> = {
   render: (props) => <SwitchExample {...props} />,
   tags: ['autodocs'],
   argTypes: {
+    customThumb: {
+      description: 'Показать пользовательский thumb',
+      control: { type: 'boolean' },
+    },
     focused: {
       description: 'Принудительно показать focused-состояние',
       control: { type: 'boolean' },
@@ -84,6 +90,7 @@ type Story = StoryObj<SwitchStoryProps>
 export const Variants: Story = {
   args: {
     checked: false,
+    customThumb: false,
     disabled: false,
     focused: false,
     theme: 'light',
