@@ -9,12 +9,12 @@ import { useState }                 from 'react'
 import { useTheme }                 from '@atls-ui-parts/theme'
 
 import { appearanceStyles }         from './styles/index.js'
-import { assignSwitchVariables }    from './styles/index.js'
 import { baseStyles }               from './styles/index.js'
 import { checkedCustomThumbStyles } from './styles/index.js'
 import { checkedThumbStyles }       from './styles/index.js'
 import { customThumbStyles }        from './styles/index.js'
 import { resolveSwitchAppearance }  from './styles/index.js'
+import { resolveSwitchVariables }   from './styles/index.js'
 import { switchAppearances }        from './styles/index.js'
 import { switchShapes }             from './styles/index.js'
 import { thumbStyles }              from './styles/index.js'
@@ -65,7 +65,7 @@ export const Switch = ({
       role='switch'
       aria-checked={currentChecked}
       disabled={disabled}
-      style={assignSwitchVariables(resolvedAppearance, currentChecked, shape, theme, style)}
+      style={resolveSwitchVariables(resolvedAppearance, currentChecked, shape, theme, style)}
       className={clsx(baseStyles, appearanceStyles, shape, className)}
       onClick={handleClick}
     >

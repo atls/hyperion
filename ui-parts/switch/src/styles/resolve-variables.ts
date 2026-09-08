@@ -17,7 +17,7 @@ const elevationNames: Partial<Record<string, SwitchElevationName>> = {
   [switchShapes.lg]: 'lg',
 }
 
-export const assignSwitchVariables = (
+export const resolveSwitchVariables = (
   appearance: SwitchAppearanceValues,
   checked: boolean,
   shape: string,

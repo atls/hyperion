@@ -14,3 +14,4 @@ export const switchShapeSizes = {
 } as const
 
 export const switchThumbWidth = '1px'
+export const switchThumbHalfWidth = '0.5px'

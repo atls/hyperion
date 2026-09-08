@@ -1,13 +1,14 @@
-import { style }               from '@vanilla-extract/css'
+import { style }                     from '@vanilla-extract/css'
 
-import { borderStyles }        from '@atls-ui/theme/tokens'
-import { radii }               from '@atls-ui/theme/tokens'
+import { borderStyles }              from '@atls-ui/theme/tokens'
+import { radii }                     from '@atls-ui/theme/tokens'
 
-import { switchThumbWidth }    from './shape/constants.js'
-import { thumbOffsetVariable } from './shape/variants.css.js'
-import { thumbSizeVariable }   from './shape/variants.css.js'
-
-const switchTransitionDuration = '300ms'
+import { switchThumbRotations }      from './constants.js'
+import { switchTransitionDurations } from './constants.js'
+import { switchThumbHalfWidth }      from './shape/constants.js'
+import { switchThumbWidth }          from './shape/constants.js'
+import { thumbOffsetVariable }       from './shape/variants.css.js'
+import { thumbSizeVariable }         from './shape/variants.css.js'
 
 const thumbBaseStyles = style({
   boxSizing: 'border-box',
@@ -15,11 +16,11 @@ const thumbBaseStyles = style({
   marginInlineEnd: 'auto',
   transformOrigin: 'center',
   pointerEvents: 'none',
-  transitionDuration: switchTransitionDuration,
+  transitionDuration: switchTransitionDurations.default,
   transitionProperty: 'color, transform',
   '@media': {
     '(prefers-reduced-motion: reduce)': {
-      transitionDuration: '0.01ms',
+      transitionDuration: switchTransitionDurations.reducedMotion,
     },
   },
 })
@@ -34,11 +35,11 @@ export const baseStyles = style({
   borderStyle: borderStyles.solid,
   outline: 'none',
   cursor: 'pointer',
-  transitionDuration: switchTransitionDuration,
+  transitionDuration: switchTransitionDurations.default,
   transitionProperty: 'background-color, border-color, box-shadow',
   '@media': {
     '(prefers-reduced-motion: reduce)': {
-      transitionDuration: '0.01ms',
+      transitionDuration: switchTransitionDurations.reducedMotion,
     },
   },
   selectors: {
@@ -55,12 +56,12 @@ export const thumbStyles = style([
     height: thumbSizeVariable,
     borderRadius: radii.full,
     background: 'currentColor',
-    transform: 'translateX(-0.5px) rotate(0deg)',
+    transform: `translateX(-${switchThumbHalfWidth}) rotate(${switchThumbRotations.unchecked})`,
   },
 ])
 
 export const checkedThumbStyles = style({
-  transform: `translateX(calc(${thumbOffsetVariable} - 0.5px)) rotate(180deg)`,
+  transform: `translateX(calc(${thumbOffsetVariable} - ${switchThumbHalfWidth})) rotate(${switchThumbRotations.checked})`,
 })
 
 export const customThumbStyles = style([
@@ -71,10 +72,10 @@ export const customThumbStyles = style([
     justifyContent: 'center',
     width: thumbSizeVariable,
     height: thumbSizeVariable,
-    transform: 'rotate(0deg)',
+    transform: `rotate(${switchThumbRotations.unchecked})`,
   },
 ])
 
 export const checkedCustomThumbStyles = style({
-  transform: `translateX(calc(${thumbOffsetVariable} - ${thumbSizeVariable})) rotate(180deg)`,
+  transform: `translateX(calc(${thumbOffsetVariable} - ${thumbSizeVariable})) rotate(${switchThumbRotations.checked})`,
 })
