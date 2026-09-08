@@ -5,9 +5,10 @@ import { sep }                   from 'node:path'
 
 import { runCommand }            from '../command/run.js'
 import { formatCommand }         from '../constants.js'
+import { nodeExecutablePath }    from '../constants.js'
 import { relativePathSeparator } from '../constants.js'
 import { workspaceRootPath }     from '../constants.js'
-import { yarnCommand }           from '../constants.js'
+import { yarnCliPath }           from '../constants.js'
 
 const collectFiles = async (directoryPath: string, currentPath = ''): Promise<Array<string>> => {
   const entries = await readdir(join(directoryPath, currentPath), { withFileTypes: true })
@@ -37,5 +38,7 @@ export const formatFiles = async (iconsPath: string, replacementsPath: string): 
   ]
   const relativeFilePaths = filePaths.map((filePath) => relative(workspaceRootPath, filePath))
 
-  await runCommand(yarnCommand, [formatCommand, ...relativeFilePaths], { cwd: workspaceRootPath })
+  await runCommand(nodeExecutablePath, [yarnCliPath, formatCommand, ...relativeFilePaths], {
+    cwd: workspaceRootPath,
+  })
 }

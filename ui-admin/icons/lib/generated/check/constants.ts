@@ -22,7 +22,9 @@ export const generatedReplacementsDirectoryName = 'replacements'
 
 export const replacementsFileName = 'replacements.ts'
 
-export const yarnCommand = 'yarn'
+export const nodeExecutablePath = process.execPath
+
+export const yarnCliPath = resolve(workspaceRootPath, '.yarn/releases/yarn-remote.mjs')
 
 export const workspaceArgument = 'workspace'
 
