@@ -1,1 +1,4 @@
+ui-admin/icons/src/icons/** text eol=lf
+ui-admin/icons/src/replacements.ts text eol=lf
+
 *.zip filter=lfs diff=lfs merge=lfs -text
