@@ -26,6 +26,9 @@
   "dependencies": {
     "@atls-ui-generators/utils": "workspace:*",
     "@svgr/core": "8.1.0",
+    "@svgr/plugin-jsx": "8.1.0",
+    "@svgr/plugin-prettier": "8.1.0",
+    "@svgr/plugin-svgo": "8.1.0",
     "@swc-node/register": "1.9.0",
     "@swc/core": "1.6.1",
     "cheerio": "1.1.2",

@@ -1,39 +1,20 @@
-import type { Config }           from '@svgr/core'
+import type { Config }     from '@svgr/core'
 
-import type { SvgrPlugin }       from './interfaces.js'
-import type { SvgrPluginModule } from './interfaces.js'
+import type { SvgrPlugin } from './interfaces.js'
 
-import { createRequire }         from 'node:module'
+import { createRequire }   from 'node:module'
 
-import { svgrTemplate }          from './template.js'
-
-const svgrCorePackageName = '@svgr/core/package.json'
-
-const svgoPluginName = '@svgr/plugin-svgo'
-
-const jsxPluginName = '@svgr/plugin-jsx'
-
-const prettierPluginName = '@svgr/plugin-prettier'
+import { svgrTemplate }    from './template.js'
 
 const require = createRequire(import.meta.url)
 
-const svgrRequire = createRequire(require.resolve(svgrCorePackageName))
+const svgoPlugin = require('@svgr/plugin-svgo') as SvgrPlugin
 
-const loadSvgrPlugin = (pluginName: string): SvgrPlugin => {
-  const plugin = svgrRequire(pluginName) as SvgrPlugin | SvgrPluginModule
+const jsxPlugin = require('@svgr/plugin-jsx') as SvgrPlugin
 
-  if (typeof plugin === 'object' && 'default' in plugin && plugin.default) {
-    return plugin.default
-  }
+const prettierPlugin = require('@svgr/plugin-prettier') as SvgrPlugin
 
-  return plugin as SvgrPlugin
-}
-
-const svgrTransformPlugins = [
-  loadSvgrPlugin(svgoPluginName),
-  loadSvgrPlugin(jsxPluginName),
-  loadSvgrPlugin(prettierPluginName),
-]
+const svgrTransformPlugins = [svgoPlugin, jsxPlugin, prettierPlugin]
 
 export const MASK_ID_PATTERN = /mask0/g
 export const PROPS_SPREAD_FROM = '...props'
