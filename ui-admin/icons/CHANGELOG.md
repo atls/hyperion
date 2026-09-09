@@ -1,5 +1,30 @@
 
 
+# [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.1.0...@atls-ui-admin/icons@1.2.0) (2026-09-09)
+
+
+### Bug Fixes
+
+
+* **icons:** align check command interfaces ([c7bcbf9](https://github.com/atls/hyperion/commit/c7bcbf975661bc491d955d3a6e436ff4ba8669cd))
+* **icons:** clarify input path failure handling ([6257927](https://github.com/atls/hyperion/commit/625792771a99f7858940e6eb477ed6a58f4863ac))
+* **icons:** colocate check generated cli ([15d4dfa](https://github.com/atls/hyperion/commit/15d4dfa26be12f6084d4b863eb2ada593231ef7d))
+* **icons:** expose drift comparison interfaces ([180355a](https://github.com/atls/hyperion/commit/180355a1aa9fcb0a9ca5a9c9a17c1e9a5a759cdf))
+* **icons:** invoke yarn cli through node ([f59c47b](https://github.com/atls/hyperion/commit/f59c47b9438f128af6ee92bc5841cf8011daed4f))
+* **icons:** make input constraints predicates ([fd4e56b](https://github.com/atls/hyperion/commit/fd4e56bc12882a70e741a20f12f8d845c3bca11f))
+* **icons:** model generated file drift state ([b93ce1a](https://github.com/atls/hyperion/commit/b93ce1a93ed2550088a4b82bc724d3d6c60f6f44))
+* **icons:** separate drift constants ([059224b](https://github.com/atls/hyperion/commit/059224bc138a9c67169cf29fd6c61ca2543fa8f2))
+* **icons:** split drift messages and interfaces ([572f3df](https://github.com/atls/hyperion/commit/572f3df473fdbf5859da89b9e2046c0f80777e08))
+
+### Features
+
+
+* **atls-ui-admin:** check generated icons ([ae538b6](https://github.com/atls/hyperion/commit/ae538b647e496d4d8b5815c03c07c30fa69f0ee0))
+
+
+
+
+
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.1.0...@atls-ui-admin/icons@1.1.0) (2026-08-31)
 
 

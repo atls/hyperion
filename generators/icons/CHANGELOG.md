@@ -1,5 +1,19 @@
 
 
+## [1.2.3](https://github.com/atls/hyperion/compare/@atls-ui-generators/icons@1.2.2...@atls-ui-generators/icons@1.2.3) (2026-09-09)
+
+
+### Bug Fixes
+
+
+* **atls-ui-generators:** return cheerio generator instead of regex ([5d548f7](https://github.com/atls/hyperion/commit/5d548f71935d6170d805a4ca8e16a99d89b0104a))
+* **atls-ui-generators:** stabilize icon generation ([b3e16c6](https://github.com/atls/hyperion/commit/b3e16c6d3b8c5ae522cd6359201c67066ca03d58))
+* **icons:** declare svgr plugin dependencies ([afb9201](https://github.com/atls/hyperion/commit/afb9201d900e5f55e2db802816f26d986bd5242b))
+
+
+
+
+
 ## [1.2.2](https://github.com/atls/hyperion/compare/@atls-ui-generators/icons@1.2.2...@atls-ui-generators/icons@1.2.2) (2026-06-12)
 
 
