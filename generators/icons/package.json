@@ -12,30 +12,33 @@
   },
   "main": "src/index.ts",
   "bin": {
-    "generate-icons": "dist/icons.generator.js"
+    "generate-icons": "dist/generator.js"
   },
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "yarn library build",
-    "generate-icons": "tsx src/icons.generator.ts",
+    "generate-icons": "tsx src/generator.ts",
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
   },
   "dependencies": {
     "@atls-ui-generators/utils": "workspace:*",
     "@svgr/core": "8.1.0",
+    "@svgr/plugin-jsx": "8.1.0",
+    "@svgr/plugin-prettier": "8.1.0",
+    "@svgr/plugin-svgo": "8.1.0",
     "@swc-node/register": "1.9.0",
     "@swc/core": "1.6.1",
     "cheerio": "1.1.2",
     "clipanion": "4.0.0-rc.4",
+    "domhandler": "5.0.3",
     "glob": "11.0.2",
     "is-svg": "6.1.0"
   },
   "devDependencies": {
     "@types/node": "22.15.3",
-    "domhandler": "5.0.3",
     "tsx": "4.20.5",
     "typescript": "5.5.4"
   },

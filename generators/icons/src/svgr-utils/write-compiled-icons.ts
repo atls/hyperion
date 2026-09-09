@@ -1,6 +1,6 @@
 /* eslint-disable n/no-sync */
 
-import type { Source } from '../icons.interfaces.js'
+import type { Source } from '../interfaces.js'
 
 import fs              from 'node:fs'
 import path            from 'node:path'

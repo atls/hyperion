@@ -1,4 +1,4 @@
-import type { Replacements } from '../../../icons.interfaces.js'
+import type { Replacements } from '../../../interfaces.js'
 
 export interface TestCase {
   replacementIcons: Record<string, Array<string> | string>

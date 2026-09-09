@@ -1,1 +1,1 @@
-export * from './write-replacements-file.util.js'
+export * from './write-replacements-file.js'

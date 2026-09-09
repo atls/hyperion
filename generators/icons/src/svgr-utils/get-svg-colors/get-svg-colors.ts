@@ -1,9 +1,9 @@
-import type { GetSvgColorsOptions } from './get-svg-colors.interfaces.js'
+import type { GetSvgColorsOptions } from './interfaces.js'
 
-import { load }                     from 'cheerio'
+import { load }                     from 'cheerio/slim'
 
-import { extractColorFromElement }  from './extract-color-from-element.helper.js'
-import { validateColor }            from './validate-color.helper.js'
+import { extractColorFromElement }  from './extract-color-from-element.js'
+import { validateColor }            from './helpers/validate-color.js'
 
 export const getSvgColors = (source: string, options: GetSvgColorsOptions = {}): Array<string> => {
   const colors = new Set<string>()
