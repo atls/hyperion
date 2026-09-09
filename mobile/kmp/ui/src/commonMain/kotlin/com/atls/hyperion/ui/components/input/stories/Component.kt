@@ -46,7 +46,6 @@ class InputStory : ComponentExample {
         var darkTheme by remember { mutableStateOf(false) }
         var enabled by remember { mutableStateOf(true) }
         var isError by remember { mutableStateOf(false) }
-        var textValue by remember { mutableStateOf(TextFieldValue("")) }
 
         Theme(darkTheme = darkTheme) {
             val colors = LocalHyperionColors.current
@@ -104,24 +103,41 @@ class InputStory : ComponentExample {
                             "Lg" to { InputShape.lg() }
                         )
                     ) { appearance: InputAppearance, shape: InputShape ->
-                        Input(
-                            value = textValue,
-                            onValueChange = { textValue = it },
+                        InputVariant(
                             appearance = appearance,
                             shape = shape,
                             enabled = enabled,
-                            isError = isError,
-                            placeholder = {
-                                InputPlaceholder(
-                                    text = "Placeholder",
-                                    appearance = appearance,
-                                    shape = shape
-                                )
-                            }
+                            isError = isError
                         )
                     }
                 }
             }
         }
     }
+}
+
+@Composable
+private fun InputVariant(
+    appearance: InputAppearance,
+    shape: InputShape,
+    enabled: Boolean,
+    isError: Boolean
+) {
+    var value by remember { mutableStateOf(TextFieldValue("")) }
+
+    Input(
+        value = value,
+        onValueChange = { value = it },
+        appearance = appearance,
+        shape = shape,
+        enabled = enabled,
+        isError = isError,
+        placeholder = {
+            InputPlaceholder(
+                text = "Placeholder",
+                appearance = appearance,
+                shape = shape
+            )
+        }
+    )
 }
