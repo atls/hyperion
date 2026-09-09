@@ -1,4 +1,4 @@
-package com.atls.hyperion.ui.components.input.typed.password
+package com.atls.hyperion.ui.components.input.typed
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.text.KeyboardActions
@@ -16,15 +16,22 @@ import androidx.compose.ui.text.input.VisualTransformation
 import com.atls.hyperion.ui.components.input.Input
 import com.atls.hyperion.ui.components.input.InputPlaceholder
 import com.atls.hyperion.ui.components.input.styles.appearance.InputAppearance
+import com.atls.hyperion.ui.components.input.styles.appearance.primary
 import com.atls.hyperion.ui.components.input.styles.shape.InputShape
-import com.atls.hyperion.ui.components.input.typed.actionAddon
-import com.atls.hyperion.ui.components.input.typed.iconAddon
-import com.atls.hyperion.ui.components.input.typed.withInputSlots
+import com.atls.hyperion.ui.components.input.styles.shape.md
 import com.atls.hyperion.ui.generated.resources.Res
 import com.atls.hyperion.ui.generated.resources.eye
 import com.atls.hyperion.ui.generated.resources.eye_closed
+import com.atls.hyperion.ui.generated.resources.input_password_hide
+import com.atls.hyperion.ui.generated.resources.input_password_placeholder
+import com.atls.hyperion.ui.generated.resources.input_password_show
 import com.atls.hyperion.ui.generated.resources.lock
+import com.atls.hyperion.ui.shared.addon.AddonPosition
 import com.atls.hyperion.ui.shared.addon.AddonSlotManager
+import com.atls.hyperion.ui.shared.addon.ActionAddon
+import com.atls.hyperion.ui.shared.addon.IconAddon
+import org.jetbrains.compose.resources.DrawableResource
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun PasswordInput(
@@ -35,34 +42,45 @@ fun PasswordInput(
     isError: Boolean = false,
     enabled: Boolean = true,
     readOnly: Boolean = false,
-    keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     keyboardActions: KeyboardActions = KeyboardActions.Default,
-    appearance: InputAppearance,
-    shape: InputShape,
+    appearance: InputAppearance = InputAppearance.primary(),
+    shape: InputShape = InputShape.md(),
+    addons: AddonSlotManager = passwordAddons,
+    showPasswordIcon: DrawableResource = Res.drawable.eye,
+    hidePasswordIcon: DrawableResource = Res.drawable.eye_closed,
     placeholder: @Composable (() -> Unit)? = {
         InputPlaceholder(
-            text = "Enter password",
+            text = stringResource(Res.string.input_password_placeholder),
             appearance = appearance,
             shape = shape
         )
     },
     helperText: @Composable (() -> Unit)? = null,
-    error: @Composable (() -> Unit)? = null,
+    errorText: @Composable (() -> Unit)? = null,
     defaultVisible: Boolean = false,
     visible: Boolean? = null,
-    showLabel: String = "Show password",
-    hideLabel: String = "Hide password",
     onVisibilityChange: ((Boolean) -> Unit)? = null
 ) {
     var internalVisible by remember { mutableStateOf(defaultVisible) }
     val resolvedVisible = visible ?: internalVisible
-    val trailingAddons = if (value.text.isNotEmpty()) {
+    val visibilityLabel = stringResource(
+        if (resolvedVisible) {
+            Res.string.input_password_hide
+        } else {
+            Res.string.input_password_show
+        }
+    )
+    val visibilityIcon = if (resolvedVisible) {
+        hidePasswordIcon
+    } else {
+        showPasswordIcon
+    }
+    val afterAddons = addons.get(AddonPosition.After) + if (value.text.isNotEmpty()) {
         listOf(
-            actionAddon(
-                resource = if (resolvedVisible) Res.drawable.eye_closed else Res.drawable.eye,
-                label = if (resolvedVisible) hideLabel else showLabel,
-                enabled = enabled,
-                shape = shape
+            ActionAddon(
+                addon = IconAddon(visibilityIcon),
+                contentDescription = visibilityLabel,
+                enabled = enabled
             ) {
                 val nextVisible = !resolvedVisible
 
@@ -84,7 +102,7 @@ fun PasswordInput(
         isError = isError,
         enabled = enabled,
         readOnly = readOnly,
-        keyboardOptions = keyboardOptions.copy(keyboardType = KeyboardType.Password),
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
         keyboardActions = keyboardActions,
         appearance = appearance,
         shape = shape,
@@ -93,12 +111,19 @@ fun PasswordInput(
         } else {
             PasswordVisualTransformation()
         },
-        addons = AddonSlotManager().withInputSlots(
-            before = listOf(iconAddon(Res.drawable.lock, shape)),
-            after = trailingAddons
+        addons = AddonSlotManager(
+            addons = addons.addons + (AddonPosition.After to afterAddons)
         ),
         placeholder = placeholder,
         helperText = helperText,
-        error = error
+        errorText = errorText
     )
 }
+
+private val passwordAddons = AddonSlotManager(
+    addons = mapOf(
+        AddonPosition.Before to listOf(
+            IconAddon(Res.drawable.lock)
+        )
+    )
+)

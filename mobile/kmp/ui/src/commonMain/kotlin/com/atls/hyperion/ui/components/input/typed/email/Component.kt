@@ -13,12 +13,16 @@ import androidx.compose.ui.text.input.VisualTransformation
 import com.atls.hyperion.ui.components.input.Input
 import com.atls.hyperion.ui.components.input.InputPlaceholder
 import com.atls.hyperion.ui.components.input.styles.appearance.InputAppearance
+import com.atls.hyperion.ui.components.input.styles.appearance.primary
 import com.atls.hyperion.ui.components.input.styles.shape.InputShape
-import com.atls.hyperion.ui.components.input.typed.iconAddon
-import com.atls.hyperion.ui.components.input.typed.withInputSlots
+import com.atls.hyperion.ui.components.input.styles.shape.md
 import com.atls.hyperion.ui.generated.resources.Res
 import com.atls.hyperion.ui.generated.resources.email
+import com.atls.hyperion.ui.generated.resources.input_email_placeholder
+import com.atls.hyperion.ui.shared.addon.AddonPosition
 import com.atls.hyperion.ui.shared.addon.AddonSlotManager
+import com.atls.hyperion.ui.shared.addon.IconAddon
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun EmailInput(
@@ -29,31 +33,31 @@ fun EmailInput(
     isError: Boolean = false,
     enabled: Boolean = true,
     readOnly: Boolean = false,
-    keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     keyboardActions: KeyboardActions = KeyboardActions.Default,
-    appearance: InputAppearance,
-    shape: InputShape,
+    appearance: InputAppearance = InputAppearance.primary(),
+    shape: InputShape = InputShape.md(),
     visualTransformation: VisualTransformation = VisualTransformation.None,
-    addons: AddonSlotManager = AddonSlotManager(),
+    addons: AddonSlotManager = emailAddons,
+    validator: ((String) -> Boolean)? = ::isValidEmail,
     placeholder: @Composable (() -> Unit)? = {
         InputPlaceholder(
-            text = "Enter email",
+            text = stringResource(Res.string.input_email_placeholder),
             appearance = appearance,
             shape = shape
         )
     },
     helperText: @Composable (() -> Unit)? = null,
-    error: @Composable (() -> Unit)? = null
+    errorText: @Composable (() -> Unit)? = null
 ) {
     Input(
         modifier = modifier,
         value = value,
         onValueChange = onValueChange,
         interactionSource = interactionSource,
-        isError = isError,
+        isError = isError || validator?.invoke(value.text) == false,
         enabled = enabled,
         readOnly = readOnly,
-        keyboardOptions = keyboardOptions.copy(
+        keyboardOptions = KeyboardOptions(
             capitalization = KeyboardCapitalization.None,
             autoCorrectEnabled = false,
             keyboardType = KeyboardType.Email
@@ -62,11 +66,17 @@ fun EmailInput(
         appearance = appearance,
         shape = shape,
         visualTransformation = visualTransformation,
-        addons = addons.withInputSlots(
-            before = listOf(iconAddon(Res.drawable.email, shape))
-        ),
+        addons = addons,
         placeholder = placeholder,
         helperText = helperText,
-        error = error
+        errorText = errorText
     )
 }
+
+private val emailAddons = AddonSlotManager(
+    addons = mapOf(
+        AddonPosition.Before to listOf(
+            IconAddon(Res.drawable.email)
+        )
+    )
+)

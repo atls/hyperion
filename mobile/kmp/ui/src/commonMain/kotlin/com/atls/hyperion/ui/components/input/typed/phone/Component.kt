@@ -12,56 +12,67 @@ import androidx.compose.ui.text.input.VisualTransformation
 import com.atls.hyperion.ui.components.input.Input
 import com.atls.hyperion.ui.components.input.InputPlaceholder
 import com.atls.hyperion.ui.components.input.styles.appearance.InputAppearance
+import com.atls.hyperion.ui.components.input.styles.appearance.primary
 import com.atls.hyperion.ui.components.input.styles.shape.InputShape
-import com.atls.hyperion.ui.components.input.typed.iconAddon
-import com.atls.hyperion.ui.components.input.typed.withInputSlots
+import com.atls.hyperion.ui.components.input.styles.shape.md
 import com.atls.hyperion.ui.generated.resources.Res
+import com.atls.hyperion.ui.generated.resources.input_phone_placeholder
 import com.atls.hyperion.ui.generated.resources.phone
+import com.atls.hyperion.ui.shared.addon.AddonPosition
 import com.atls.hyperion.ui.shared.addon.AddonSlotManager
+import com.atls.hyperion.ui.shared.addon.IconAddon
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun PhoneInput(
     modifier: Modifier = Modifier,
     value: TextFieldValue,
     onValueChange: (TextFieldValue) -> Unit,
+    region: String,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     isError: Boolean = false,
     enabled: Boolean = true,
     readOnly: Boolean = false,
-    keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     keyboardActions: KeyboardActions = KeyboardActions.Default,
-    appearance: InputAppearance,
-    shape: InputShape,
-    visualTransformation: VisualTransformation = VisualTransformation.None,
-    addons: AddonSlotManager = AddonSlotManager(),
+    appearance: InputAppearance = InputAppearance.primary(),
+    shape: InputShape = InputShape.md(),
+    visualTransformation: VisualTransformation = rememberPhoneNumberVisualTransformation(region),
+    addons: AddonSlotManager = phoneAddons,
+    validator: ((String) -> Boolean)? = { isValidPhoneNumber(it, region) },
     placeholder: @Composable (() -> Unit)? = {
         InputPlaceholder(
-            text = "+7 (999) 999 99-99",
+            text = stringResource(Res.string.input_phone_placeholder),
             appearance = appearance,
             shape = shape
         )
     },
     helperText: @Composable (() -> Unit)? = null,
-    error: @Composable (() -> Unit)? = null
+    errorText: @Composable (() -> Unit)? = null
 ) {
     Input(
         modifier = modifier,
         value = value,
         onValueChange = onValueChange,
         interactionSource = interactionSource,
-        isError = isError,
+        isError = isError || validator?.invoke(value.text) == false,
         enabled = enabled,
         readOnly = readOnly,
-        keyboardOptions = keyboardOptions.copy(keyboardType = KeyboardType.Phone),
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone),
         keyboardActions = keyboardActions,
         appearance = appearance,
         shape = shape,
         visualTransformation = visualTransformation,
-        addons = addons.withInputSlots(
-            before = listOf(iconAddon(Res.drawable.phone, shape))
-        ),
+        addons = addons,
         placeholder = placeholder,
         helperText = helperText,
-        error = error
+        errorText = errorText
     )
 }
+
+private val phoneAddons = AddonSlotManager(
+    addons = mapOf(
+        AddonPosition.Before to listOf(
+            IconAddon(Res.drawable.phone)
+        )
+    )
+)

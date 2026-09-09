@@ -17,7 +17,9 @@ import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
 import com.atls.hyperion.ui.components.input.styles.appearance.InputAppearance
+import com.atls.hyperion.ui.components.input.styles.appearance.primary
 import com.atls.hyperion.ui.components.input.styles.shape.InputShape
+import com.atls.hyperion.ui.components.input.styles.shape.md
 import com.atls.hyperion.ui.shared.addon.AddonSlotManager
 import com.atls.hyperion.ui.theme.tokens.layout.Weight
 
@@ -32,22 +34,22 @@ fun Input(
     readOnly: Boolean = false,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     keyboardActions: KeyboardActions = KeyboardActions.Default,
-    appearance: InputAppearance,
-    shape: InputShape,
+    appearance: InputAppearance = InputAppearance.primary(),
+    shape: InputShape = InputShape.md(),
     visualTransformation: VisualTransformation = VisualTransformation.None,
     addons: AddonSlotManager = AddonSlotManager(),
     placeholder: @Composable (() -> Unit)? = null,
     helperText: @Composable (() -> Unit)? = null,
-    error: @Composable (() -> Unit)? = null,
+    errorText: @Composable (() -> Unit)? = null,
 ) {
-    val message = error ?: helperText
+    val message = errorText ?: helperText
 
     Column(modifier = modifier.width(IntrinsicSize.Min)) {
         InputLayout(
             modifier = Modifier.fillMaxWidth(),
             value = value,
             interactionSource = interactionSource,
-            isError = isError || error != null,
+            isError = isError || errorText != null,
             enabled = enabled,
             appearance = appearance,
             shape = shape,
@@ -79,7 +81,7 @@ fun Input(
 
         if (message != null) {
             InputMessage(
-                isError = error != null,
+                isError = errorText != null,
                 content = message
             )
         }

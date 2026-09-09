@@ -34,11 +34,11 @@ import com.atls.hyperion.ui.components.input.styles.shape.InputShape
 import com.atls.hyperion.ui.components.input.styles.shape.lg
 import com.atls.hyperion.ui.components.input.styles.shape.md
 import com.atls.hyperion.ui.components.input.styles.shape.sm
-import com.atls.hyperion.ui.components.input.typed.clearable.ClearableInput
+import com.atls.hyperion.ui.components.input.typed.ClearableInput
 import com.atls.hyperion.ui.components.input.typed.email.EmailInput
-import com.atls.hyperion.ui.components.input.typed.password.PasswordInput
+import com.atls.hyperion.ui.components.input.typed.PasswordInput
 import com.atls.hyperion.ui.components.input.typed.phone.PhoneInput
-import com.atls.hyperion.ui.components.input.typed.search.SearchInput
+import com.atls.hyperion.ui.components.input.typed.SearchInput
 import com.atls.hyperion.ui.primitives.HorizontalSpacer
 import com.atls.hyperion.ui.primitives.VerticalSpacer
 import com.atls.hyperion.ui.theme.LocalHyperionColors
@@ -165,7 +165,7 @@ private fun InputVariant(
             )
         },
         helperText = { Text("Helper text") },
-        error = if (isError) {
+        errorText = if (isError) {
             { Text("Error text") }
         } else {
             null
@@ -200,7 +200,7 @@ private fun TypedInputVariants(
             shape = shape,
             enabled = enabled,
             helperText = { Text("Clearable") },
-            error = errorContent
+            errorText = errorContent
         )
         EmailInput(
             value = emailValue,
@@ -209,7 +209,7 @@ private fun TypedInputVariants(
             shape = shape,
             enabled = enabled,
             helperText = { Text("Email") },
-            error = errorContent
+            errorText = errorContent
         )
         PasswordInput(
             value = passwordValue,
@@ -218,16 +218,17 @@ private fun TypedInputVariants(
             shape = shape,
             enabled = enabled,
             helperText = { Text("Password") },
-            error = errorContent
+            errorText = errorContent
         )
         PhoneInput(
             value = phoneValue,
             onValueChange = { phoneValue = it },
+            region = "RU",
             appearance = appearance,
             shape = shape,
             enabled = enabled,
             helperText = { Text("Phone") },
-            error = errorContent
+            errorText = errorContent
         )
         SearchInput(
             value = searchValue,
@@ -236,7 +237,7 @@ private fun TypedInputVariants(
             shape = shape,
             enabled = enabled,
             helperText = { Text("Search") },
-            error = errorContent
+            errorText = errorContent
         )
         Input(
             value = numericValue,
@@ -246,7 +247,7 @@ private fun TypedInputVariants(
             shape = shape,
             enabled = enabled,
             helperText = { Text("Numeric") },
-            error = errorContent
+            errorText = errorContent
         )
     }
 }
