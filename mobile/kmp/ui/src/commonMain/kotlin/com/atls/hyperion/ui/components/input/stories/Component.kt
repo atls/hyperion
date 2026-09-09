@@ -196,6 +196,7 @@ private fun TypedInputVariants(
         ClearableInput(
             value = clearableValue,
             onValueChange = { clearableValue = it },
+            modifier = Modifier.fillMaxWidth(),
             appearance = appearance,
             shape = shape,
             enabled = enabled,
@@ -205,6 +206,7 @@ private fun TypedInputVariants(
         EmailInput(
             value = emailValue,
             onValueChange = { emailValue = it },
+            modifier = Modifier.fillMaxWidth(),
             appearance = appearance,
             shape = shape,
             enabled = enabled,
@@ -214,6 +216,7 @@ private fun TypedInputVariants(
         PasswordInput(
             value = passwordValue,
             onValueChange = { passwordValue = it },
+            modifier = Modifier.fillMaxWidth(),
             appearance = appearance,
             shape = shape,
             enabled = enabled,
@@ -223,6 +226,7 @@ private fun TypedInputVariants(
         PhoneInput(
             value = phoneValue,
             onValueChange = { phoneValue = it },
+            modifier = Modifier.fillMaxWidth(),
             region = "RU",
             appearance = appearance,
             shape = shape,
@@ -233,6 +237,7 @@ private fun TypedInputVariants(
         SearchInput(
             value = searchValue,
             onValueChange = { searchValue = it },
+            modifier = Modifier.fillMaxWidth(),
             appearance = appearance,
             shape = shape,
             enabled = enabled,
@@ -242,6 +247,7 @@ private fun TypedInputVariants(
         Input(
             value = numericValue,
             onValueChange = { numericValue = it },
+            modifier = Modifier.fillMaxWidth(),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             appearance = appearance,
             shape = shape,
