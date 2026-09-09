@@ -71,6 +71,11 @@ export const thumbStyles = style([
 
 export const checkedThumbStyles = style({
   transform: `translateX(calc(${thumbOffset} - ${switchThumbHalfWidth})) rotate(${switchThumbRotations.checked})`,
+  selectors: {
+    '&:dir(rtl)': {
+      transform: `translateX(calc(${switchThumbHalfWidth} - ${thumbOffset})) rotate(${switchThumbRotations.checked})`,
+    },
+  },
 })
 
 export const customThumbStyles = style([
@@ -87,4 +92,9 @@ export const customThumbStyles = style([
 
 export const checkedCustomThumbStyles = style({
   transform: `translateX(calc(${thumbOffset} - ${thumbSize})) rotate(${switchThumbRotations.checked})`,
+  selectors: {
+    '&:dir(rtl)': {
+      transform: `translateX(calc(${thumbSize} - ${thumbOffset})) rotate(${switchThumbRotations.checked})`,
+    },
+  },
 })
