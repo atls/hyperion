@@ -1,19 +1,26 @@
 package com.atls.hyperion.ui.components.input
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.Dp
 import com.atls.hyperion.ui.components.input.locals.LocalState
 import com.atls.hyperion.ui.components.input.styles.appearance.InputAppearance
 import com.atls.hyperion.ui.components.input.styles.appearance.primary
 import com.atls.hyperion.ui.components.input.styles.shape.InputShape
 import com.atls.hyperion.ui.components.input.styles.shape.md
+import com.atls.hyperion.ui.shared.addon.Addon
 import com.atls.hyperion.ui.shared.addon.AddonPosition
 import com.atls.hyperion.ui.shared.addon.AddonSlotManager
+import com.atls.hyperion.ui.shared.addon.action
 
 @Composable
 internal fun InputContent(
@@ -25,16 +32,50 @@ internal fun InputContent(
         modifier = Modifier.padding(shape.paddings),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        addons.get(AddonPosition.Before).forEach {
-            it.Content()
-            it.Spacer()
-        }
+        Addons(
+            addons = addons.get(AddonPosition.Before),
+            addonSize = shape.addonSize,
+            gap = shape.gap,
+            position = AddonPosition.Before
+        )
 
         content()
 
-        addons.get(AddonPosition.After).forEach {
-            it.Spacer()
-            it.Content()
+        Addons(
+            addons = addons.get(AddonPosition.After),
+            addonSize = shape.addonSize,
+            gap = shape.gap,
+            position = AddonPosition.After
+        )
+    }
+}
+
+@Composable
+private fun Addons(
+    addons: List<Addon>,
+    addonSize: Dp,
+    gap: Dp,
+    position: AddonPosition
+) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        if (addons.isNotEmpty() && position == AddonPosition.After) {
+            Spacer(modifier = Modifier.width(gap))
+        }
+        addons.forEachIndexed { index, addon ->
+            if (index > 0) {
+                Spacer(modifier = Modifier.width(gap))
+            }
+            Box(
+                modifier = Modifier
+                    .size(addonSize)
+                    .action(addon),
+                contentAlignment = Alignment.Center
+            ) {
+                addon.Content()
+            }
+        }
+        if (addons.isNotEmpty() && position == AddonPosition.Before) {
+            Spacer(modifier = Modifier.width(gap))
         }
     }
 }
