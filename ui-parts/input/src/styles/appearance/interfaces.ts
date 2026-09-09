@@ -1,0 +1,22 @@
+export interface InputVisualState {
+  background: string
+  border: string
+  content: string
+  placeholder: string
+  shadow: string
+}
+
+export interface InputAppearanceStates {
+  disabled: InputVisualState
+  error: InputVisualState
+  filled: InputVisualState
+  focused: InputVisualState
+  hover: InputVisualState
+  unfilled: InputVisualState
+}
+
+export type InputAppearanceName = 'primary' | 'secondary'
+
+export type InputAppearance = InputAppearanceName | InputAppearanceStates
+
+export type InputAppearances = Record<InputAppearanceName, InputAppearanceName>

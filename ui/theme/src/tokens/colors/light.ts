@@ -21,6 +21,9 @@ export const lightColors: Colors = {
     tertiary: '#6B7DB3',
     muted: '#9BA8C8',
     inverse: '#FFFFFF',
+    error: '#C93636',
+    placeholder: '#575757',
+    placeholderHover: '#1D1D1D',
   },
   status: {
     success: '#10B981',
