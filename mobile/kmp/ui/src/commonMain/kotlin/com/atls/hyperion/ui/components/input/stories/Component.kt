@@ -1,12 +1,14 @@
 package com.atls.hyperion.ui.components.input.stories
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.LocalContentColor
 import androidx.compose.material.Switch
@@ -19,6 +21,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import com.atls.hyperion.storybook.shared.model.ComponentExample
 import com.atls.hyperion.storybook.shared.ui.ComponentVariants
@@ -31,11 +34,17 @@ import com.atls.hyperion.ui.components.input.styles.shape.InputShape
 import com.atls.hyperion.ui.components.input.styles.shape.lg
 import com.atls.hyperion.ui.components.input.styles.shape.md
 import com.atls.hyperion.ui.components.input.styles.shape.sm
+import com.atls.hyperion.ui.components.input.typed.clearable.ClearableInput
+import com.atls.hyperion.ui.components.input.typed.email.EmailInput
+import com.atls.hyperion.ui.components.input.typed.password.PasswordInput
+import com.atls.hyperion.ui.components.input.typed.phone.PhoneInput
+import com.atls.hyperion.ui.components.input.typed.search.SearchInput
 import com.atls.hyperion.ui.primitives.HorizontalSpacer
 import com.atls.hyperion.ui.primitives.VerticalSpacer
 import com.atls.hyperion.ui.theme.LocalHyperionColors
 import com.atls.hyperion.ui.theme.Theme
 import com.atls.hyperion.ui.theme.tokens.layout.Space
+import com.atls.hyperion.ui.theme.tokens.layout.Spacing
 import com.atls.hyperion.ui.theme.tokens.layout.Weight
 
 class InputStory : ComponentExample {
@@ -110,6 +119,23 @@ class InputStory : ComponentExample {
                             isError = isError
                         )
                     }
+
+                    ComponentVariants(
+                        name = "Typed inputs",
+                        appearances = listOf(
+                            "Primary" to { InputAppearance.primary() }
+                        ),
+                        shapes = listOf(
+                            "Md" to { InputShape.md() }
+                        )
+                    ) { appearance: InputAppearance, shape: InputShape ->
+                        TypedInputVariants(
+                            appearance = appearance,
+                            shape = shape,
+                            enabled = enabled,
+                            isError = isError
+                        )
+                    }
                 }
             }
         }
@@ -145,4 +171,82 @@ private fun InputVariant(
             null
         }
     )
+}
+
+@Composable
+private fun TypedInputVariants(
+    appearance: InputAppearance,
+    shape: InputShape,
+    enabled: Boolean,
+    isError: Boolean
+) {
+    var clearableValue by remember { mutableStateOf(TextFieldValue("Clear me")) }
+    var emailValue by remember { mutableStateOf(TextFieldValue("invalid-email")) }
+    var passwordValue by remember { mutableStateOf(TextFieldValue("password")) }
+    var phoneValue by remember { mutableStateOf(TextFieldValue("+7 123")) }
+    var searchValue by remember { mutableStateOf(TextFieldValue("")) }
+    var numericValue by remember { mutableStateOf(TextFieldValue("123")) }
+    val errorContent: (@Composable () -> Unit)? = if (isError) {
+        { Text("Invalid value") }
+    } else {
+        null
+    }
+
+    Column(verticalArrangement = Arrangement.spacedBy(Spacing.component.md)) {
+        ClearableInput(
+            value = clearableValue,
+            onValueChange = { clearableValue = it },
+            appearance = appearance,
+            shape = shape,
+            enabled = enabled,
+            helperText = { Text("Clearable") },
+            error = errorContent
+        )
+        EmailInput(
+            value = emailValue,
+            onValueChange = { emailValue = it },
+            appearance = appearance,
+            shape = shape,
+            enabled = enabled,
+            helperText = { Text("Email") },
+            error = errorContent
+        )
+        PasswordInput(
+            value = passwordValue,
+            onValueChange = { passwordValue = it },
+            appearance = appearance,
+            shape = shape,
+            enabled = enabled,
+            helperText = { Text("Password") },
+            error = errorContent
+        )
+        PhoneInput(
+            value = phoneValue,
+            onValueChange = { phoneValue = it },
+            appearance = appearance,
+            shape = shape,
+            enabled = enabled,
+            helperText = { Text("Phone") },
+            error = errorContent
+        )
+        SearchInput(
+            value = searchValue,
+            onValueChange = { searchValue = it },
+            appearance = appearance,
+            shape = shape,
+            enabled = enabled,
+            helperText = { Text("Search") },
+            error = errorContent
+        )
+        Input(
+            value = numericValue,
+            onValueChange = { numericValue = it },
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+            appearance = appearance,
+            shape = shape,
+            enabled = enabled,
+            helperText = { Text("Numeric") },
+            error = errorContent
+        )
+    }
 }

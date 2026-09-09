@@ -20,6 +20,8 @@ fun InputShape.Companion.sm(): InputShape =
             vertical = Spacing.component.sm
         ),
         typography = LocalHyperionTypography.current.body.md,
+        gap = Spacing.component.md,
+        addonSize = Spacing.component.xl,
         elevations = LocalHyperionElevations.current.xs
     )
 
@@ -35,6 +37,8 @@ fun InputShape.Companion.md(): InputShape =
             vertical = Spacing.component.md
         ),
         typography = LocalHyperionTypography.current.body.lg,
+        gap = Spacing.component.lg,
+        addonSize = Spacing.component.xl2,
         elevations = LocalHyperionElevations.current.sm
     )
 
@@ -50,5 +54,7 @@ fun InputShape.Companion.lg(): InputShape =
             vertical = Spacing.component.lg
         ),
         typography = LocalHyperionTypography.current.body.lg,
+        gap = Spacing.component.xl,
+        addonSize = Spacing.component.xl3,
         elevations = LocalHyperionElevations.current.md
     )

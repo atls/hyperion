@@ -12,6 +12,8 @@ data class InputShape(
     val borderWidth: Dp,
     val paddings: PaddingValues,
     val typography: TextStyle,
+    val gap: Dp,
+    val addonSize: Dp,
     val elevations: PressableElevationStates
 ) {
     companion object Companion
