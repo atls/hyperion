@@ -61,6 +61,7 @@ fun Input(
                 cursorBrush = SolidColor(colors.cursorColor),
                 textStyle = shape.typography.copy(color = colors.textColor),
                 visualTransformation = visualTransformation,
+                singleLine = true,
                 decorationBox = { innerTextField ->
                     if (value.text.isEmpty() && placeholder != null) {
                         placeholder()
