@@ -1,11 +1,12 @@
-import { createVar }        from '@vanilla-extract/css'
-import { styleVariants }    from '@vanilla-extract/css'
+import { createVar }                from '@vanilla-extract/css'
+import { styleVariants }            from '@vanilla-extract/css'
 
-import { borderWidths }     from '@atls-ui/theme/tokens'
-import { radii }            from '@atls-ui/theme/tokens'
-import { spacing }          from '@atls-ui/theme/tokens'
+import { borderWidths }             from '@atls-ui/theme/tokens'
+import { radii }                    from '@atls-ui/theme/tokens'
+import { spacing }                  from '@atls-ui/theme/tokens'
 
-import { switchShapeSizes } from './constants.js'
+import { resolveSwitchThumbOffset } from './constants.js'
+import { switchShapeSizes }         from './constants.js'
 
 export const elevationVariable = createVar()
 export const thumbOffsetVariable = createVar()
@@ -22,7 +23,7 @@ const createShape = ({
   borderWidth: borderWidths.xs,
   boxShadow: elevationVariable,
   vars: {
-    [thumbOffsetVariable]: `calc(${width} - ${spacing.component.xs2} - ${spacing.component.xs2} - ${borderWidths.xs} - ${borderWidths.xs})`,
+    [thumbOffsetVariable]: resolveSwitchThumbOffset(width),
     [thumbSizeVariable]: thumbSize,
   },
 })

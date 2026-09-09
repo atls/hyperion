@@ -1,3 +1,4 @@
+import { fallbackVar }               from '@vanilla-extract/css'
 import { style }                     from '@vanilla-extract/css'
 
 import { borderStyles }              from '@atls-ui/theme/tokens'
@@ -5,10 +6,18 @@ import { radii }                     from '@atls-ui/theme/tokens'
 
 import { switchThumbRotations }      from './constants.js'
 import { switchTransitionDurations } from './constants.js'
+import { resolveSwitchThumbOffset }  from './shape/constants.js'
+import { switchShapeSizes }          from './shape/constants.js'
 import { switchThumbHalfWidth }      from './shape/constants.js'
 import { switchThumbWidth }          from './shape/constants.js'
 import { thumbOffsetVariable }       from './shape/variants.css.js'
 import { thumbSizeVariable }         from './shape/variants.css.js'
+
+const thumbOffset = fallbackVar(
+  thumbOffsetVariable,
+  resolveSwitchThumbOffset(switchShapeSizes.sm.width)
+)
+const thumbSize = fallbackVar(thumbSizeVariable, switchShapeSizes.sm.thumbSize)
 
 const thumbBaseStyles = style({
   boxSizing: 'border-box',
@@ -53,7 +62,7 @@ export const thumbStyles = style([
   thumbBaseStyles,
   {
     width: switchThumbWidth,
-    height: thumbSizeVariable,
+    height: thumbSize,
     borderRadius: radii.full,
     background: 'currentColor',
     transform: `translateX(-${switchThumbHalfWidth}) rotate(${switchThumbRotations.unchecked})`,
@@ -61,7 +70,7 @@ export const thumbStyles = style([
 ])
 
 export const checkedThumbStyles = style({
-  transform: `translateX(calc(${thumbOffsetVariable} - ${switchThumbHalfWidth})) rotate(${switchThumbRotations.checked})`,
+  transform: `translateX(calc(${thumbOffset} - ${switchThumbHalfWidth})) rotate(${switchThumbRotations.checked})`,
 })
 
 export const customThumbStyles = style([
@@ -70,12 +79,12 @@ export const customThumbStyles = style([
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    width: thumbSizeVariable,
-    height: thumbSizeVariable,
+    width: thumbSize,
+    height: thumbSize,
     transform: `rotate(${switchThumbRotations.unchecked})`,
   },
 ])
 
 export const checkedCustomThumbStyles = style({
-  transform: `translateX(calc(${thumbOffsetVariable} - ${thumbSizeVariable})) rotate(${switchThumbRotations.checked})`,
+  transform: `translateX(calc(${thumbOffset} - ${thumbSize})) rotate(${switchThumbRotations.checked})`,
 })
