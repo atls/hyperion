@@ -131,13 +131,18 @@ private fun InputVariant(
         appearance = appearance,
         shape = shape,
         enabled = enabled,
-        isError = isError,
         placeholder = {
             InputPlaceholder(
                 text = "Placeholder",
                 appearance = appearance,
                 shape = shape
             )
+        },
+        helperText = { Text("Helper text") },
+        error = if (isError) {
+            { Text("Error text") }
+        } else {
+            null
         }
     )
 }

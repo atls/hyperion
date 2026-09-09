@@ -2,6 +2,7 @@ package com.atls.hyperion.ui.components.input
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -33,37 +34,50 @@ fun Input(
     visualTransformation: VisualTransformation = VisualTransformation.None,
     addons: AddonSlotManager = AddonSlotManager(),
     placeholder: @Composable (() -> Unit)? = null,
+    helperText: @Composable (() -> Unit)? = null,
+    error: @Composable (() -> Unit)? = null,
 ) {
-    InputLayout(
-        modifier = modifier,
-        value = value,
-        interactionSource = interactionSource,
-        isError = isError,
-        enabled = enabled,
-        appearance = appearance,
-        shape = shape,
-        addons = addons
-    ) { colors ->
-        BasicTextField(
+    val message = error ?: helperText
+
+    Column {
+        InputLayout(
+            modifier = modifier,
             value = value,
-            onValueChange = onValueChange,
-            enabled = enabled,
-            readOnly = readOnly,
             interactionSource = interactionSource,
-            keyboardOptions = keyboardOptions,
-            keyboardActions = keyboardActions,
-            cursorBrush = SolidColor(colors.cursorColor),
-            textStyle = shape.typography.copy(color = colors.textColor),
-            visualTransformation = visualTransformation,
-            decorationBox = { innerTextField ->
-                if (value.text.isEmpty() && placeholder != null) {
-                    placeholder()
-                }
-                innerTextField()
-            },
-            modifier = Modifier
-                .background(Color.Transparent)
-                .weight(Weight.full)
-        )
+            isError = isError || error != null,
+            enabled = enabled,
+            appearance = appearance,
+            shape = shape,
+            addons = addons
+        ) { colors ->
+            BasicTextField(
+                value = value,
+                onValueChange = onValueChange,
+                enabled = enabled,
+                readOnly = readOnly,
+                interactionSource = interactionSource,
+                keyboardOptions = keyboardOptions,
+                keyboardActions = keyboardActions,
+                cursorBrush = SolidColor(colors.cursorColor),
+                textStyle = shape.typography.copy(color = colors.textColor),
+                visualTransformation = visualTransformation,
+                decorationBox = { innerTextField ->
+                    if (value.text.isEmpty() && placeholder != null) {
+                        placeholder()
+                    }
+                    innerTextField()
+                },
+                modifier = Modifier
+                    .background(Color.Transparent)
+                    .weight(Weight.full)
+            )
+        }
+
+        if (message != null) {
+            InputMessage(
+                isError = error != null,
+                content = message
+            )
+        }
     }
 }
