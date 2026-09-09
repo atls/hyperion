@@ -21,6 +21,9 @@ export const darkColors: Colors = {
     tertiary: '#9AA3B2',
     muted: '#6B7485',
     inverse: '#121417',
+    error: '#FF5C5C',
+    placeholder: '#9AA3B2',
+    placeholderHover: '#B7BEC8',
   },
   status: {
     success: '#4AD27F',
