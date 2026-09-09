@@ -3,6 +3,9 @@ package com.atls.hyperion.ui.components.input
 import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -39,9 +42,9 @@ fun Input(
 ) {
     val message = error ?: helperText
 
-    Column {
+    Column(modifier = modifier.width(IntrinsicSize.Min)) {
         InputLayout(
-            modifier = modifier,
+            modifier = Modifier.fillMaxWidth(),
             value = value,
             interactionSource = interactionSource,
             isError = isError || error != null,
