@@ -51,7 +51,12 @@ kotlin {
             implementation(libs.coil.compose)
             implementation(libs.coil.network.ktor)
             implementation(libs.compose.calendar)
+            implementation(libs.kphonenumber)
             api(libs.kotlinx.datetime)
+        }
+
+        commonTest.dependencies {
+            implementation(kotlin("test"))
         }
 
         androidMain {
