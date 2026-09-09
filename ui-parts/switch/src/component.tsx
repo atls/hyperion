@@ -4,6 +4,7 @@ import type { ReactNode }           from 'react'
 import type { SwitchProps }         from './interfaces.js'
 
 import { clsx }                     from 'clsx'
+import { forwardRef }               from 'react'
 import { useState }                 from 'react'
 
 import { useTheme }                 from '@atls-ui-parts/theme'
@@ -19,20 +20,22 @@ import { switchAppearances }        from './styles/index.js'
 import { switchShapes }             from './styles/index.js'
 import { thumbStyles }              from './styles/index.js'
 
-export const Switch = ({
-  appearance = switchAppearances.default,
-  checked,
-  className,
-  defaultChecked = false,
-  disabled = false,
-  onChange,
-  onClick,
-  ref,
-  shape = switchShapes.sm,
-  style,
-  thumb,
-  ...props
-}: SwitchProps): ReactNode => {
+export const Switch = forwardRef<HTMLButtonElement, SwitchProps>((
+  {
+    appearance = switchAppearances.default,
+    checked,
+    className,
+    defaultChecked = false,
+    disabled = false,
+    onChange,
+    onClick,
+    shape = switchShapes.sm,
+    style,
+    thumb,
+    ...props
+  }: SwitchProps,
+  ref
+): ReactNode => {
   const theme = useTheme()
   const [internalChecked, setInternalChecked] = useState(defaultChecked)
   const currentChecked = checked ?? internalChecked
@@ -80,4 +83,4 @@ export const Switch = ({
       </span>
     </button>
   )
-}
+})
