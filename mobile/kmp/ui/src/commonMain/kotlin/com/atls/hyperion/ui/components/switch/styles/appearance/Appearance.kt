@@ -3,17 +3,26 @@ package com.atls.hyperion.ui.components.switch.styles.appearance
 import com.atls.hyperion.ui.components.switch.state.SwitchState
 
 data class SwitchAppearance(
-    val default: Colors,
-    val checked: Colors = default,
-    val disabled: Colors = default
+    val off: SwitchAppearanceStates,
+    val on: SwitchAppearanceStates,
 ) {
-    fun fromState(state: SwitchState): Colors {
+    internal fun fromState(checked: Boolean, state: SwitchState): Colors {
+        val states = if (checked) on else off
+
         return when (state) {
-            SwitchState.Default -> default
-            SwitchState.Checked -> checked
-            SwitchState.Disabled -> disabled
+            SwitchState.Default -> states.default
+            SwitchState.Pressed -> states.pressed
+            SwitchState.Focused -> states.focused
+            SwitchState.Disabled -> states.disabled
         }
     }
 
     companion object
 }
+
+data class SwitchAppearanceStates(
+    val default: Colors,
+    val pressed: Colors,
+    val focused: Colors,
+    val disabled: Colors,
+)
