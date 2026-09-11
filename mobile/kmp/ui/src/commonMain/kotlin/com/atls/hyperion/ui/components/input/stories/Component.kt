@@ -35,12 +35,19 @@ import com.atls.hyperion.ui.components.input.styles.shape.lg
 import com.atls.hyperion.ui.components.input.styles.shape.md
 import com.atls.hyperion.ui.components.input.styles.shape.sm
 import com.atls.hyperion.ui.components.input.typed.ClearableInput
-import com.atls.hyperion.ui.components.input.typed.email.EmailInput
 import com.atls.hyperion.ui.components.input.typed.PasswordInput
-import com.atls.hyperion.ui.components.input.typed.phone.PhoneInput
 import com.atls.hyperion.ui.components.input.typed.SearchInput
+import com.atls.hyperion.ui.components.input.typed.email.EmailInput
+import com.atls.hyperion.ui.components.input.typed.phone.PhoneInput
+import com.atls.hyperion.ui.generated.resources.Res
+import com.atls.hyperion.ui.generated.resources.chevron_left
+import com.atls.hyperion.ui.generated.resources.chevron_right
 import com.atls.hyperion.ui.primitives.HorizontalSpacer
 import com.atls.hyperion.ui.primitives.VerticalSpacer
+import com.atls.hyperion.ui.shared.addon.ActionAddon
+import com.atls.hyperion.ui.shared.addon.AddonPosition
+import com.atls.hyperion.ui.shared.addon.AddonSlotManager
+import com.atls.hyperion.ui.shared.addon.IconAddon
 import com.atls.hyperion.ui.theme.LocalHyperionColors
 import com.atls.hyperion.ui.theme.Theme
 import com.atls.hyperion.ui.theme.tokens.layout.Space
@@ -136,10 +143,66 @@ class InputStory : ComponentExample {
                             isError = isError
                         )
                     }
+
+                    ComponentVariants(
+                        name = "Action addons",
+                        appearances = listOf(
+                            "Primary" to { InputAppearance.primary() }
+                        ),
+                        shapes = listOf(
+                            "Md" to { InputShape.md() }
+                        )
+                    ) { appearance: InputAppearance, shape: InputShape ->
+                        ActionAddonsVariant(
+                            appearance = appearance,
+                            shape = shape,
+                            enabled = enabled
+                        )
+                    }
                 }
             }
         }
     }
+}
+
+@Composable
+private fun ActionAddonsVariant(
+    appearance: InputAppearance,
+    shape: InputShape,
+    enabled: Boolean
+) {
+    var value by remember { mutableStateOf(TextFieldValue("Adjacent actions")) }
+    var previousClicks by remember { mutableStateOf(0) }
+    var nextClicks by remember { mutableStateOf(0) }
+    val addons = AddonSlotManager(
+        mapOf(
+            AddonPosition.After to listOf(
+                ActionAddon(
+                    addon = IconAddon(Res.drawable.chevron_left),
+                    contentDescription = "Previous action",
+                    onClick = { previousClicks += 1 }
+                ),
+                ActionAddon(
+                    addon = IconAddon(Res.drawable.chevron_right),
+                    contentDescription = "Next action",
+                    onClick = { nextClicks += 1 }
+                )
+            )
+        )
+    )
+
+    Input(
+        value = value,
+        onValueChange = { value = it },
+        modifier = Modifier.fillMaxWidth(),
+        appearance = appearance,
+        shape = shape,
+        enabled = enabled,
+        addons = addons,
+        helperText = {
+            Text("Previous: $previousClicks, next: $nextClicks")
+        }
+    )
 }
 
 @Composable
