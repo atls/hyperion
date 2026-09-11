@@ -49,12 +49,14 @@ fun PhoneInput(
     helperText: @Composable (() -> Unit)? = null,
     errorText: @Composable (() -> Unit)? = null
 ) {
+    val hasError = isError || validator?.invoke(value.text) == false
+
     Input(
         modifier = modifier,
         value = value,
         onValueChange = onValueChange,
         interactionSource = interactionSource,
-        isError = isError || validator?.invoke(value.text) == false,
+        isError = hasError,
         enabled = enabled,
         readOnly = readOnly,
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone),
@@ -64,8 +66,8 @@ fun PhoneInput(
         visualTransformation = visualTransformation,
         addons = addons,
         placeholder = placeholder,
-        helperText = helperText,
-        errorText = errorText
+        helperText = helperText.takeUnless { hasError },
+        errorText = (errorText ?: helperText).takeIf { hasError }
     )
 }
 

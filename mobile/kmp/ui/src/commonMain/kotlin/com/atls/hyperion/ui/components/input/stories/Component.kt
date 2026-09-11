@@ -210,8 +210,9 @@ private fun TypedInputVariants(
             appearance = appearance,
             shape = shape,
             enabled = enabled,
+            isError = isError,
             helperText = { Text("Email") },
-            errorText = errorContent
+            errorText = { Text("Invalid email") }
         )
         PasswordInput(
             value = passwordValue,
@@ -231,8 +232,9 @@ private fun TypedInputVariants(
             appearance = appearance,
             shape = shape,
             enabled = enabled,
+            isError = isError,
             helperText = { Text("Phone") },
-            errorText = errorContent
+            errorText = { Text("Invalid phone") }
         )
         SearchInput(
             value = searchValue,
