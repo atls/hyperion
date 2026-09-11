@@ -4,14 +4,17 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import com.atls.hyperion.ui.components.input.locals.LocalState
 import com.atls.hyperion.ui.components.input.styles.appearance.InputAppearance
 import com.atls.hyperion.ui.components.input.styles.appearance.primary
@@ -20,7 +23,10 @@ import com.atls.hyperion.ui.components.input.styles.shape.md
 import com.atls.hyperion.ui.shared.addon.Addon
 import com.atls.hyperion.ui.shared.addon.AddonPosition
 import com.atls.hyperion.ui.shared.addon.AddonSlotManager
+import com.atls.hyperion.ui.shared.addon.ActionAddon
 import com.atls.hyperion.ui.shared.addon.action
+
+private val MinimumTouchTargetSize = 48.dp
 
 @Composable
 internal fun InputContent(
@@ -69,13 +75,24 @@ private fun Addons(
             if (index > 0) {
                 Spacer(modifier = Modifier.width(gap))
             }
+            val addonModifier = if (addon is ActionAddon) {
+                Modifier
+                    .widthIn(min = MinimumTouchTargetSize)
+                    .height(addonSize)
+            } else {
+                Modifier.size(addonSize)
+            }
+
             Box(
-                modifier = Modifier
-                    .size(addonSize)
-                    .action(addon, enabled),
+                modifier = addonModifier.action(addon, enabled),
                 contentAlignment = Alignment.Center
             ) {
-                addon.Content()
+                Box(
+                    modifier = Modifier.size(addonSize),
+                    contentAlignment = Alignment.Center
+                ) {
+                    addon.Content()
+                }
             }
         }
         if (addons.isNotEmpty() && position == AddonPosition.Before) {
