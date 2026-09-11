@@ -73,7 +73,8 @@ internal fun InputLayout(
         ) {
             InputContent(
                 addons = addons,
-                shape = shape
+                shape = shape,
+                enabled = enabled
             ) {
                 content(colors)
             }

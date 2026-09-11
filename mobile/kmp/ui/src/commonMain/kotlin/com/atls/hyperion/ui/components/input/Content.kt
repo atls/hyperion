@@ -26,6 +26,7 @@ import com.atls.hyperion.ui.shared.addon.action
 internal fun InputContent(
     addons: AddonSlotManager,
     shape: InputShape,
+    enabled: Boolean,
     content: @Composable RowScope.() -> Unit
 ) {
     Row(
@@ -36,6 +37,7 @@ internal fun InputContent(
             addons = addons.get(AddonPosition.Before),
             addonSize = shape.addonSize,
             gap = shape.gap,
+            enabled = enabled,
             position = AddonPosition.Before
         )
 
@@ -45,6 +47,7 @@ internal fun InputContent(
             addons = addons.get(AddonPosition.After),
             addonSize = shape.addonSize,
             gap = shape.gap,
+            enabled = enabled,
             position = AddonPosition.After
         )
     }
@@ -55,6 +58,7 @@ private fun Addons(
     addons: List<Addon>,
     addonSize: Dp,
     gap: Dp,
+    enabled: Boolean,
     position: AddonPosition
 ) {
     Row(verticalAlignment = Alignment.CenterVertically) {
@@ -68,7 +72,7 @@ private fun Addons(
             Box(
                 modifier = Modifier
                     .size(addonSize)
-                    .action(addon),
+                    .action(addon, enabled),
                 contentAlignment = Alignment.Center
             ) {
                 addon.Content()
