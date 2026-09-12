@@ -38,6 +38,6 @@ private fun createSwitchShape(
         thumbSize = size.thumbSize,
         paddings = PaddingValues(Spacing.component.xs2),
         cornerRadius = Radii.xs3,
-        borderWidth = BorderWidth.sm,
+        borderWidth = BorderWidth.xs,
         elevation = elevation
     )
