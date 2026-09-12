@@ -33,6 +33,11 @@ fun EmailInput(
     isError: Boolean = false,
     enabled: Boolean = true,
     readOnly: Boolean = false,
+    keyboardOptions: KeyboardOptions = KeyboardOptions(
+        capitalization = KeyboardCapitalization.None,
+        autoCorrectEnabled = false,
+        keyboardType = KeyboardType.Email
+    ),
     keyboardActions: KeyboardActions = KeyboardActions.Default,
     appearance: InputAppearance = InputAppearance.primary(),
     shape: InputShape = InputShape.md(),
@@ -59,7 +64,7 @@ fun EmailInput(
         isError = hasError,
         enabled = enabled,
         readOnly = readOnly,
-        keyboardOptions = KeyboardOptions(
+        keyboardOptions = keyboardOptions.copy(
             capitalization = KeyboardCapitalization.None,
             autoCorrectEnabled = false,
             keyboardType = KeyboardType.Email
