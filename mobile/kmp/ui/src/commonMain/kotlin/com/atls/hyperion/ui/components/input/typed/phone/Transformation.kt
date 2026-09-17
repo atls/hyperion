@@ -62,4 +62,4 @@ private fun String.offsetAfterPhoneCharacters(count: Int): Int {
     return length
 }
 
-private fun Char.isPhoneCharacter(): Boolean = isDigit() || this == '+'
+private fun Char.isPhoneCharacter(): Boolean = isDigit() || this == '+' || this == ',' || this == ';'

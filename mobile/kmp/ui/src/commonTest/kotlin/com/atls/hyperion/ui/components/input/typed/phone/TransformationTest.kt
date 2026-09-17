@@ -51,4 +51,29 @@ class TransformationTest {
             assertEquals(offset, transformed.offsetMapping.transformedToOriginal(offset))
         }
     }
+
+    @Test
+    fun mapsPausesAndWaits() {
+        val values = mapOf(
+            "+16502530000," to "+1 (650) 253-0000,",
+            "+16502530000;" to "+1 (650) 253-0000;",
+            "+16502530000,,;12" to "+1 (650) 253-0000,,;12"
+        )
+
+        values.forEach { (original, expected) ->
+            val transformed = PhoneNumberVisualTransformation(
+                createPhoneNumberFormatter("US")
+            ).filter(AnnotatedString(original))
+
+            assertEquals(expected, transformed.text.text)
+            (0..original.length).forEach { offset ->
+                assertEquals(
+                    offset,
+                    transformed.offsetMapping.transformedToOriginal(
+                        transformed.offsetMapping.originalToTransformed(offset)
+                    )
+                )
+            }
+        }
+    }
 }
