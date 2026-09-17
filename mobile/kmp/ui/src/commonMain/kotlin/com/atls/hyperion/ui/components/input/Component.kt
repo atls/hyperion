@@ -2,25 +2,26 @@ package com.atls.hyperion.ui.components.input
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.interaction.collectIsFocusedAsState
-import androidx.compose.foundation.interaction.collectIsPressedAsState
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
-import com.atls.hyperion.ui.components.input.container.InputContainer
-import com.atls.hyperion.ui.components.input.state.InputState
-import com.atls.hyperion.ui.components.input.style.appearance.InputAppearance
-import com.atls.hyperion.ui.components.input.style.shape.InputShape
+import com.atls.hyperion.ui.components.input.styles.appearance.InputAppearance
+import com.atls.hyperion.ui.components.input.styles.appearance.primary
+import com.atls.hyperion.ui.components.input.styles.shape.InputShape
+import com.atls.hyperion.ui.components.input.styles.shape.md
 import com.atls.hyperion.ui.shared.addon.AddonSlotManager
 import com.atls.hyperion.ui.theme.tokens.layout.Weight
-import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors as ThemeColors
 
 @Composable
 fun Input(
@@ -33,54 +34,56 @@ fun Input(
     readOnly: Boolean = false,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     keyboardActions: KeyboardActions = KeyboardActions.Default,
-    appearance: InputAppearance,
-    shape: InputShape,
+    appearance: InputAppearance = InputAppearance.primary(),
+    shape: InputShape = InputShape.md(),
     visualTransformation: VisualTransformation = VisualTransformation.None,
     addons: AddonSlotManager = AddonSlotManager(),
     placeholder: @Composable (() -> Unit)? = null,
+    helperText: @Composable (() -> Unit)? = null,
+    errorText: @Composable (() -> Unit)? = null,
 ) {
-    val isFocused = interactionSource.collectIsFocusedAsState().value
-    val isPressed = interactionSource.collectIsPressedAsState().value
+    val message = errorText ?: helperText
 
-    val currentState = when {
-        !enabled -> InputState.Disabled
-        isError -> InputState.Error
-        isPressed -> InputState.Active
-        isFocused -> InputState.Focused
-        value.text.isNotEmpty() -> InputState.Filled
-        else -> InputState.Default
-    }
-
-    val colors = appearance.getColorsFromState(currentState)
-
-    InputContainer(
-        modifier = modifier,
-        appearance = appearance,
-        shape = shape,
-        state = currentState,
-        addons = addons
-    ) {
-        BasicTextField(
+    Column(modifier = modifier.width(IntrinsicSize.Min)) {
+        InputLayout(
+            modifier = Modifier.fillMaxWidth(),
             value = value,
-            onValueChange = onValueChange,
-            enabled = enabled,
-            readOnly = readOnly,
             interactionSource = interactionSource,
-            keyboardOptions = keyboardOptions,
-            keyboardActions = keyboardActions,
-            cursorBrush = SolidColor(colors.cursorColor),
-            textStyle = shape.typography.copy(color = colors.textColor),
-            visualTransformation = visualTransformation,
-            decorationBox = { innerTextField ->
-                if (value.text.isEmpty() && placeholder != null) {
-                    placeholder()
-                }
-                innerTextField()
-            },
-            modifier = Modifier
-                .background(ThemeColors.Palette.transparent)
-                .padding(shape.textPaddings)
-                .weight(Weight.full)
-        )
+            isError = isError || errorText != null,
+            enabled = enabled,
+            appearance = appearance,
+            shape = shape,
+            addons = addons
+        ) { colors ->
+            BasicTextField(
+                value = value,
+                onValueChange = onValueChange,
+                enabled = enabled,
+                readOnly = readOnly,
+                interactionSource = interactionSource,
+                keyboardOptions = keyboardOptions,
+                keyboardActions = keyboardActions,
+                cursorBrush = SolidColor(colors.cursorColor),
+                textStyle = shape.typography.copy(color = colors.textColor),
+                visualTransformation = visualTransformation,
+                singleLine = true,
+                decorationBox = { innerTextField ->
+                    if (value.text.isEmpty() && placeholder != null) {
+                        placeholder()
+                    }
+                    innerTextField()
+                },
+                modifier = Modifier
+                    .background(Color.Transparent)
+                    .weight(Weight.full)
+            )
+        }
+
+        if (message != null) {
+            InputMessage(
+                isError = errorText != null,
+                content = message
+            )
+        }
     }
 }

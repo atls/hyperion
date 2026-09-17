@@ -1,0 +1,9 @@
+<resources>
+    <string name="input_clear">Clear input</string>
+    <string name="input_email_placeholder">Enter email</string>
+    <string name="input_password_hide">Hide password</string>
+    <string name="input_password_placeholder">Enter password</string>
+    <string name="input_password_show">Show password</string>
+    <string name="input_phone_placeholder">Enter phone number</string>
+    <string name="input_placeholder">Start typing</string>
+</resources>

@@ -1,6 +1,6 @@
 package com.atls.hyperion.ui.components.input.state
 
-sealed interface InputState {
+internal sealed interface InputState {
     data object Default : InputState
     data object Focused : InputState
     data object Filled : InputState
