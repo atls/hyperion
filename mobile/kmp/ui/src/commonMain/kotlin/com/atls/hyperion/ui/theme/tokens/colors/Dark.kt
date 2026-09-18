@@ -7,7 +7,7 @@ val darkColors = Colors(
         base = Color(0xFF5F8FFF),
         hover = Color(0xFF7AA7FF),
         pressed = Color(0xFF3F74FF),
-        disabled = Color(0xFF5F8FFF),
+        disabled = Color(0xFF394A6B),
         subtle = Color(0x4D5F8FFF)
     ),
     surface = SurfaceColors(
