@@ -1,19 +1,56 @@
 package com.atls.hyperion.ui.components.switch.styles.appearance
 
-import com.atls.hyperion.ui.theme.tokens.colors.LegacyColors as ThemeColors
+import androidx.compose.runtime.Composable
+import com.atls.hyperion.ui.theme.LocalHyperionColors
 
-fun SwitchAppearance.Companion.default(): SwitchAppearance =
-    SwitchAppearance(
-        default = Colors(
-            trackColor = ThemeColors.Palette.transparent,
-            trackBorderColor = ThemeColors.Palette.blue,
-            thumbColor = ThemeColors.Palette.blue,
-            thumbBorderColor = ThemeColors.Palette.blue
+@Composable
+fun SwitchAppearance.Companion.default(): SwitchAppearance {
+    val colors = LocalHyperionColors.current
+
+    return SwitchAppearance(
+        off = SwitchAppearanceStates(
+            default = Colors(
+                background = colors.action.subtle,
+                border = colors.action.subtle,
+                thumb = colors.surface.soft
+            ),
+            pressed = Colors(
+                background = colors.text.tertiary,
+                border = colors.action.subtle,
+                thumb = colors.surface.soft
+            ),
+            disabled = Colors(
+                background = colors.action.subtle,
+                border = colors.action.subtle,
+                thumb = colors.text.muted
+            ),
+            focused = Colors(
+                background = colors.action.subtle,
+                border = colors.action.hover,
+                thumb = colors.surface.soft
+            )
         ),
-        disabled = Colors(
-            trackColor = ThemeColors.Palette.transparent,
-            trackBorderColor = ThemeColors.Palette.blue,
-            thumbColor = ThemeColors.Palette.transparent,
-            thumbBorderColor = ThemeColors.Palette.blue
+        on = SwitchAppearanceStates(
+            default = Colors(
+                background = colors.action.base,
+                border = colors.action.hover,
+                thumb = colors.surface.soft
+            ),
+            pressed = Colors(
+                background = colors.action.hover,
+                border = colors.action.pressed,
+                thumb = colors.surface.soft
+            ),
+            disabled = Colors(
+                background = colors.action.disabled,
+                border = colors.action.subtle,
+                thumb = colors.text.muted
+            ),
+            focused = Colors(
+                background = colors.action.base,
+                border = colors.action.pressed,
+                thumb = colors.surface.soft
+            )
         )
     )
+}
