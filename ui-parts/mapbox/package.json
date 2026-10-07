@@ -12,9 +12,11 @@
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
   },
+  "dependencies": {
+    "@types/geojson": "7946.0.16"
+  },
   "devDependencies": {
-    "@types/mapbox-gl": "3.4.1",
-    "mapbox-gl": "3.11.1"
+    "mapbox-gl": "3.32.0"
   },
   "peerDependencies": {
     "mapbox-gl": "*"
@@ -31,6 +33,5 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts"
-  },
-  "typecheckSkipLibCheck": true
+  }
 }

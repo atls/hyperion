@@ -4,8 +4,7 @@ import type { Ref }                             from 'react'
 import type { DividedFieldsContainerSprinkles } from './divided-fields-container.css.js'
 
 export interface DividedFieldsContainerProps
-  extends Omit<HTMLAttributes<HTMLDivElement>, 'color'>,
-    DividedFieldsContainerSprinkles {
+  extends Omit<HTMLAttributes<HTMLDivElement>, 'color'>, DividedFieldsContainerSprinkles {
   paddingRatio?: number
   size?: string
   ref?: Ref<HTMLDivElement>

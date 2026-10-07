@@ -1,121 +1,39 @@
-
-
 # [0.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/sidebar@0.1.0...@atls-ui-admin/sidebar@0.1.0) (2026-08-31)
-
-
-
-
-
 
 # [0.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/sidebar@0.1.0...@atls-ui-admin/sidebar@0.1.0) (2026-08-26)
 
-
-
-
-
-
 # [0.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/sidebar@0.1.0...@atls-ui-admin/sidebar@0.1.0) (2026-08-25)
-
-
-
-
-
 
 # [0.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/sidebar@0.1.0...@atls-ui-admin/sidebar@0.1.0) (2026-08-18)
 
-
-
-
-
+# [0.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/sidebar@0.1.0...@atls-ui-admin/sidebar@0.1.0) (2026-08-13)
 
 # [0.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/sidebar@0.1.0...@atls-ui-admin/sidebar@0.1.0) (2026-08-13)
 
-
-
-
-
-
 # [0.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/sidebar@0.1.0...@atls-ui-admin/sidebar@0.1.0) (2026-08-13)
-
-
-
-
-
-
-# [0.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/sidebar@0.1.0...@atls-ui-admin/sidebar@0.1.0) (2026-08-13)
-
-
-
-
-
 
 # [0.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/sidebar@0.1.0...@atls-ui-admin/sidebar@0.1.0) (2026-06-23)
 
-
-
-
-
-
 # [0.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/sidebar@0.0.4...@atls-ui-admin/sidebar@0.1.0) (2026-06-23)
-
 
 ### Features
 
-
-* **common:** upgrade dependencies ([7e73502](https://github.com/atls/hyperion/commit/7e73502b16318e20899da3867227543b39403689))
-
-
-
-
+- **common:** upgrade dependencies ([7e73502](https://github.com/atls/hyperion/commit/7e73502b16318e20899da3867227543b39403689))
 
 ## [0.0.4](https://github.com/atls/hyperion/compare/@atls-ui-admin/sidebar@0.0.4...@atls-ui-admin/sidebar@0.0.4) (2026-06-12)
 
-
-
-
-
-
 ## [0.0.4](https://github.com/atls/hyperion/compare/@atls-ui-admin/sidebar@0.0.3...@atls-ui-admin/sidebar@0.0.4) (2026-06-09)
-
-
-
-
-
 
 ## [0.0.3](https://github.com/atls/hyperion/compare/@atls-ui-admin/sidebar@0.0.2...@atls-ui-admin/sidebar@0.0.3) (2026-06-08)
 
-
-
-
-
-
 ## [0.0.2](https://github.com/atls/hyperion/compare/@atls-ui-admin/sidebar@0.0.1...@atls-ui-admin/sidebar@0.0.2) (2026-06-05)
 
-
-
-
-
-
 ## 0.0.1 (2025-11-10)
-
-
-
-
-
 
 ## [0.0.3](https://github.com/atls/hyperion/compare/@atls-ui-examples/sidebar@0.0.1...@atls-ui-examples/sidebar@0.0.3) (2025-11-10)
 
-
-
-
-
-
 ## 0.0.1 (2025-11-10)
-
 
 ### Features
 
-
-* **ui-admin:** sidebar init ([34c3a8e](https://github.com/atls/hyperion/commit/34c3a8e9e7aaeda6ac0f3a9d5fe4444bfd8bac7b))
-
-
+- **ui-admin:** sidebar init ([34c3a8e](https://github.com/atls/hyperion/commit/34c3a8e9e7aaeda6ac0f3a9d5fe4444bfd8bac7b))

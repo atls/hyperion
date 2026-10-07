@@ -1,12 +1,12 @@
-import { fallbackVar }        from '@vanilla-extract/css'
-import { globalStyle }        from '@vanilla-extract/css'
-import { style }              from '@vanilla-extract/css'
+import { fallbackVar }      from '@vanilla-extract/css'
+import { globalStyle }      from '@vanilla-extract/css'
+import { style }            from '@vanilla-extract/css'
 
-import { spacing }            from '@atls-ui/theme/tokens'
+import { spacing }          from '@atls-ui/theme/tokens'
 
-import { buttonAddonSizes }   from '../shape/constants.js'
-import { addonSize }          from '../shape/variants.css.js'
-import { contentGap }         from '../shape/variants.css.js'
+import { buttonAddonSizes } from '../shape/constants.js'
+import { addonSize }        from '../shape/variants.css.js'
+import { contentGap }       from '../shape/variants.css.js'
 
 export const addonsStyles = style({
   display: 'inline-flex',

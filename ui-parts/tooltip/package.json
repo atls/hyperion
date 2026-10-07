@@ -17,7 +17,7 @@
     "@atls-ui-parts/theme": "workspace:*",
     "@atls-utils/use-float": "workspace:*",
     "@floating-ui/react": "0.27.8",
-    "framer-motion": "12.23.22"
+    "framer-motion": "12.43.0"
   },
   "devDependencies": {
     "@atls-ui-parts/layout": "workspace:*",
@@ -48,6 +48,5 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts"
-  },
-  "typecheckSkipLibCheck": true
+  }
 }

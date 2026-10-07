@@ -1,5 +1,4 @@
 import type { DraggableProps }            from 'framer-motion'
-import type { DragHandlers }              from 'framer-motion'
 import type { ReactElement }              from 'react'
 
 import type { UseCarouselProps }          from './use-carousel.interfaces.js'
@@ -207,7 +206,7 @@ export const useCarousel = ({
     setActiveSlide(indexes[1].index)
   }
 
-  const onDragEnd: DragHandlers['onDragEnd'] = (e, { offset, velocity }): void => {
+  const onDragEnd: DraggableProps['onDragEnd'] = (e, { offset, velocity }): void => {
     const swipe =
       direction === 'horizontal'
         ? swipePower(offset.x, velocity.x)
