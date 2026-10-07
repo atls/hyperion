@@ -10,6 +10,14 @@
     "ui/**/*",
     "utils/**/*"
   ],
+  "lint-staged": {
+    "*.{yml,yaml,json,graphql,md}": "yarn format",
+    "*.{js,mjs,cjs,jsx,ts,tsx}": [
+      "yarn format",
+      "yarn lint"
+    ],
+    "*.{test,spec}.{ts,tsx}": "yarn test unit"
+  },
   "resolutions": {
     "@types/scheduler": "0.16.8"
   },
@@ -27,13 +35,5 @@
   "packageManager": "yarn@4.18.0",
   "formatterIgnorePatterns": [
     ".github/ISSUE_TEMPLATE/*"
-  ],
-  "tools": {
-    "schematic": {
-      "collection": "@atls/schematics",
-      "schematic": "project",
-      "type": "libraries",
-      "migration": "1653826505519"
-    }
-  }
+  ]
 }
