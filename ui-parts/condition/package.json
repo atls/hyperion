@@ -15,7 +15,7 @@
   "devDependencies": {
     "@storybook/react": "10.4.6",
     "@types/react": "19.1.2",
-    "framer-motion": "12.23.22",
+    "framer-motion": "12.43.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "storybook": "10.4.6",
@@ -38,6 +38,5 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts"
-  },
-  "typecheckSkipLibCheck": true
+  }
 }

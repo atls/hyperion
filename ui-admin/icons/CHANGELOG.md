@@ -1,160 +1,66 @@
-
-
 # [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.1.0...@atls-ui-admin/icons@1.2.0) (2026-09-09)
-
 
 ### Bug Fixes
 
-
-* **icons:** align check command interfaces ([c7bcbf9](https://github.com/atls/hyperion/commit/c7bcbf975661bc491d955d3a6e436ff4ba8669cd))
-* **icons:** clarify input path failure handling ([6257927](https://github.com/atls/hyperion/commit/625792771a99f7858940e6eb477ed6a58f4863ac))
-* **icons:** colocate check generated cli ([15d4dfa](https://github.com/atls/hyperion/commit/15d4dfa26be12f6084d4b863eb2ada593231ef7d))
-* **icons:** expose drift comparison interfaces ([180355a](https://github.com/atls/hyperion/commit/180355a1aa9fcb0a9ca5a9c9a17c1e9a5a759cdf))
-* **icons:** invoke yarn cli through node ([f59c47b](https://github.com/atls/hyperion/commit/f59c47b9438f128af6ee92bc5841cf8011daed4f))
-* **icons:** make input constraints predicates ([fd4e56b](https://github.com/atls/hyperion/commit/fd4e56bc12882a70e741a20f12f8d845c3bca11f))
-* **icons:** model generated file drift state ([b93ce1a](https://github.com/atls/hyperion/commit/b93ce1a93ed2550088a4b82bc724d3d6c60f6f44))
-* **icons:** separate drift constants ([059224b](https://github.com/atls/hyperion/commit/059224bc138a9c67169cf29fd6c61ca2543fa8f2))
-* **icons:** split drift messages and interfaces ([572f3df](https://github.com/atls/hyperion/commit/572f3df473fdbf5859da89b9e2046c0f80777e08))
+- **icons:** align check command interfaces ([c7bcbf9](https://github.com/atls/hyperion/commit/c7bcbf975661bc491d955d3a6e436ff4ba8669cd))
+- **icons:** clarify input path failure handling ([6257927](https://github.com/atls/hyperion/commit/625792771a99f7858940e6eb477ed6a58f4863ac))
+- **icons:** colocate check generated cli ([15d4dfa](https://github.com/atls/hyperion/commit/15d4dfa26be12f6084d4b863eb2ada593231ef7d))
+- **icons:** expose drift comparison interfaces ([180355a](https://github.com/atls/hyperion/commit/180355a1aa9fcb0a9ca5a9c9a17c1e9a5a759cdf))
+- **icons:** invoke yarn cli through node ([f59c47b](https://github.com/atls/hyperion/commit/f59c47b9438f128af6ee92bc5841cf8011daed4f))
+- **icons:** make input constraints predicates ([fd4e56b](https://github.com/atls/hyperion/commit/fd4e56bc12882a70e741a20f12f8d845c3bca11f))
+- **icons:** model generated file drift state ([b93ce1a](https://github.com/atls/hyperion/commit/b93ce1a93ed2550088a4b82bc724d3d6c60f6f44))
+- **icons:** separate drift constants ([059224b](https://github.com/atls/hyperion/commit/059224bc138a9c67169cf29fd6c61ca2543fa8f2))
+- **icons:** split drift messages and interfaces ([572f3df](https://github.com/atls/hyperion/commit/572f3df473fdbf5859da89b9e2046c0f80777e08))
 
 ### Features
 
-
-* **atls-ui-admin:** check generated icons ([ae538b6](https://github.com/atls/hyperion/commit/ae538b647e496d4d8b5815c03c07c30fa69f0ee0))
-
-
-
-
+- **atls-ui-admin:** check generated icons ([ae538b6](https://github.com/atls/hyperion/commit/ae538b647e496d4d8b5815c03c07c30fa69f0ee0))
 
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.1.0...@atls-ui-admin/icons@1.1.0) (2026-08-31)
 
-
-
-
-
-
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.1.0...@atls-ui-admin/icons@1.1.0) (2026-08-26)
-
-
-
-
-
 
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.1.0...@atls-ui-admin/icons@1.1.0) (2026-08-25)
 
-
-
-
-
-
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.1.0...@atls-ui-admin/icons@1.1.0) (2026-08-18)
 
-
-
-
-
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.1.0...@atls-ui-admin/icons@1.1.0) (2026-08-13)
 
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.1.0...@atls-ui-admin/icons@1.1.0) (2026-08-13)
 
-
-
-
-
-
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.1.0...@atls-ui-admin/icons@1.1.0) (2026-08-13)
-
-
-
-
-
-
-# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.1.0...@atls-ui-admin/icons@1.1.0) (2026-08-13)
-
-
-
-
-
 
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.1.0...@atls-ui-admin/icons@1.1.0) (2026-06-23)
 
-
-
-
-
-
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.0.12...@atls-ui-admin/icons@1.1.0) (2026-06-23)
-
 
 ### Features
 
-
-* **common:** upgrade dependencies ([7e73502](https://github.com/atls/hyperion/commit/7e73502b16318e20899da3867227543b39403689))
-
-
-
-
+- **common:** upgrade dependencies ([7e73502](https://github.com/atls/hyperion/commit/7e73502b16318e20899da3867227543b39403689))
 
 ## [1.0.12](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.0.12...@atls-ui-admin/icons@1.0.12) (2026-06-12)
 
-
-
-
-
-
 ## [1.0.12](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.0.11...@atls-ui-admin/icons@1.0.12) (2026-06-09)
-
-
-
-
-
 
 ## [1.0.11](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.0.10...@atls-ui-admin/icons@1.0.11) (2026-06-08)
 
-
-
-
-
-
 ## [1.0.10](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.0.9...@atls-ui-admin/icons@1.0.10) (2026-06-05)
-
-
-
-
-
 
 ## [1.0.9](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.0.9...@atls-ui-admin/icons@1.0.9) (2025-10-25)
 
-
-
-
-
-
 ## [1.0.9](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.0.8...@atls-ui-admin/icons@1.0.9) (2025-10-09)
-
-
-
-
-
-
-
 
 ## [1.0.9] (2025-10-10)
 
-
 ### BREAKING CHANGES
 
-
-* Requires React version 18 or higher for proper component functionality
-
+- Requires React version 18 or higher for proper component functionality
 
 ## [1.0.8](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.0.7...@atls-ui-admin/icons@1.0.8) (2025-09-23)
 
-
 ### Features
 
-
-* **admin:** add generate-icons and generate-replacements scripts to icons ([633ce1f](https://github.com/atls/hyperion/commit/633ce1f228741fa12d600aa64a41d3ffc8bbf49e))
-
-
+- **admin:** add generate-icons and generate-replacements scripts to icons ([633ce1f](https://github.com/atls/hyperion/commit/633ce1f228741fa12d600aa64a41d3ffc8bbf49e))
 
 ## [1.0.7](https://github.com/atls/hyperion/compare/@atls-ui-admin/icons@1.0.7...@atls-ui-admin/icons@1.0.7) (2025-06-30)
 

@@ -2,6 +2,7 @@
   "name": "hyperion",
   "private": true,
   "license": "BSD 3-Clause",
+  "type": "module",
   "workspaces": [
     "generators/**/*",
     "ui-admin/**/*",
@@ -9,28 +10,30 @@
     "ui/**/*",
     "utils/**/*"
   ],
+  "lint-staged": {
+    "*.{yml,yaml,json,graphql,md}": "yarn format",
+    "*.{js,mjs,cjs,jsx,ts,tsx}": [
+      "yarn format",
+      "yarn lint"
+    ],
+    "*.{test,spec}.{ts,tsx}": "yarn test unit"
+  },
   "resolutions": {
     "@types/scheduler": "0.16.8"
   },
   "devDependencies": {
-    "@atls/raijin": "0.4.0",
+    "@atls/raijin": "1.1.1",
     "@playwright/test": "1.55.0",
-    "@types/node": "25.9.3",
+    "@types/aria-query": "5.0.4",
+    "@types/chai": "5.2.3",
+    "@types/geojson": "7946.0.16",
+    "@types/node": "24.19.1",
+    "@types/picomatch": "4.0.3",
     "eslint": "9.25.1",
     "typescript": "5.5.4"
   },
-  "packageManager": "yarn@4.14.1",
+  "packageManager": "yarn@4.18.0",
   "formatterIgnorePatterns": [
-    "**/*/CHANGELOG.md",
     ".github/ISSUE_TEMPLATE/*"
-  ],
-  "tools": {
-    "schematic": {
-      "collection": "@atls/schematics",
-      "schematic": "project",
-      "type": "libraries",
-      "migration": "1653826505519"
-    }
-  },
-  "typecheckSkipLibCheck": true
+  ]
 }

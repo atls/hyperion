@@ -16,7 +16,7 @@
     "@atls-utils/use-float": "workspace:*",
     "@floating-ui/react": "0.27.8",
     "downshift": "9.0.9",
-    "framer-motion": "12.23.22"
+    "framer-motion": "12.43.0"
   },
   "devDependencies": {
     "@types/react": "19.1.2",
@@ -39,6 +39,5 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts"
-  },
-  "typecheckSkipLibCheck": true
+  }
 }

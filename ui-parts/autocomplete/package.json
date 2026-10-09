@@ -19,7 +19,7 @@
     "@atls-utils/use-float": "workspace:*",
     "clsx": "2.1.1",
     "downshift": "9.0.9",
-    "framer-motion": "12.23.22"
+    "framer-motion": "12.43.0"
   },
   "devDependencies": {
     "@storybook/react": "10.4.6",
@@ -49,6 +49,5 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts"
-  },
-  "typecheckSkipLibCheck": true
+  }
 }

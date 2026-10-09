@@ -16,7 +16,7 @@
     "@atls-ui-parts/switch": "workspace:*",
     "@atls-utils/use-hover": "workspace:*",
     "clsx": "2.1.1",
-    "framer-motion": "12.9.2"
+    "framer-motion": "12.43.0"
   },
   "devDependencies": {
     "@atls-ui-parts/layout": "workspace:*",
@@ -47,6 +47,5 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts"
-  },
-  "typecheckSkipLibCheck": true
+  }
 }
