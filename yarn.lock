@@ -740,6 +740,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/link@workspace:ui-parts/link"
   dependencies:
+    "@types/node": "npm:24.19.1"
     "@types/react": "npm:19.1.2"
     "@vanilla-extract/css": "npm:1.17.1"
     "@vanilla-extract/dynamic": "npm:2.1.2"

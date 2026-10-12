@@ -1566,6 +1566,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@atls-ui-parts/link", "virtual:5dae0025774218e7d5b25f9293624b65d07c18a455c0543b6b0cbcc49eab1f8daaf93f688033cd0934a58e64a6421749d3e30955e506415c50f4612545e60177#workspace:ui-parts/link"],\
           ["@types/next", null],\
+          ["@types/node", "npm:24.19.1"],\
           ["@types/react", "npm:19.1.2"],\
           ["@types/react-dom", "virtual:5f86f1a5332e16c95a81a0110273983bf84bc321937a52639ecb2d1dbbe0c50b67b565e7d70a5b80d6aa73617eed1d997fb59c909e6a58a6745c2bfb79f9b253#npm:19.1.2"],\
           ["@types/vanilla-extract__css", null],\
@@ -1594,6 +1595,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./ui-parts/link/",\
         "packageDependencies": [\
           ["@atls-ui-parts/link", "workspace:ui-parts/link"],\
+          ["@types/node", "npm:24.19.1"],\
           ["@types/react", "npm:19.1.2"],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
