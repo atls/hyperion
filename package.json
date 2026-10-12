@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@atls/raijin": "latest",
-    "@playwright/test": "1.55.0",
+    "@playwright/test": "1.63.0",
     "@types/aria-query": "5.0.4",
     "@types/chai": "5.2.3",
     "@types/geojson": "7946.0.16",
