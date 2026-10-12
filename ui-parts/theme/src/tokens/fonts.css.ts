@@ -3,9 +3,13 @@ import { globalFontFace }          from '@vanilla-extract/css'
 
 import { scienceGothicFontFaces }  from '@atls-ui/theme/tokens'
 import { scienceGothicFontFamily } from '@atls-ui/theme/tokens'
+// @ts-expect-error: font asset is resolved by the bundler
 import scienceGothic300            from '@atls-ui/theme/assets/fonts/science-gothic/ScienceGothic-300.ttf'
+// @ts-expect-error: font asset is resolved by the bundler
 import scienceGothic400            from '@atls-ui/theme/assets/fonts/science-gothic/ScienceGothic-400.ttf'
+// @ts-expect-error: font asset is resolved by the bundler
 import scienceGothic500            from '@atls-ui/theme/assets/fonts/science-gothic/ScienceGothic-500.ttf'
+// @ts-expect-error: font asset is resolved by the bundler
 import scienceGothic600            from '@atls-ui/theme/assets/fonts/science-gothic/ScienceGothic-600.ttf'
 
 const nunitoSans = 'Nunito Sans'
