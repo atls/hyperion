@@ -1,0 +1,31 @@
+diff --git a/dist/index.d.ts b/dist/index.d.ts
+index e68479e773c03426d4e9daf46691896e923e8320..a4c51827660dd449bfadbf6cb5a725d924abf717 100644
+--- a/dist/index.d.ts
++++ b/dist/index.d.ts
+@@ -1147,7 +1147,7 @@ declare function __definePreview<Addons extends PreviewAddon<never>[]>(input: {
+  * export const Primary = meta.story({ args: { label: 'Click me' } });
+  * ```
+  */
+-/** @ts-expect-error We cannot implement the meta faithfully here, but that is okay. */
++// @ts-ignore We cannot implement the meta faithfully here, but that is okay.
+ interface ReactPreview<T extends AddonTypes> extends Preview$1<ReactTypes & T> {
+     /**
+      * Narrows the type of the preview to include additional type information. This is useful when you
+@@ -1179,7 +1179,7 @@ interface ReactPreview<T extends AddonTypes> extends Preview$1<ReactTypes & T> {
+  * story level.
+  */
+ interface ReactMeta<T extends ReactTypes, MetaInput extends ComponentAnnotations<T>>
+-/** @ts-expect-error ReactMeta requires two type parameters, but Meta's constraints differ */
++// @ts-ignore ReactMeta requires two type parameters, but Meta's constraints differ
+  extends Meta$1<T, MetaInput> {
+     /**
+      * Creates a story with a custom render function that takes no args.
+@@ -1227,7 +1227,7 @@ interface ReactMeta<T extends ReactTypes, MetaInput extends ComponentAnnotations
+      * ```
+      */
+     story<TInput extends Simplify<StoryAnnotations<T, AddMocks<T['args'], MetaInput['args']>, SetOptional<T['args'], keyof T['args'] & keyof MetaInput['args']>>>>(story: TInput
+-    /** @ts-expect-error hard */
++    // @ts-ignore The generic story input does not satisfy StoryAnnotations' constraint
+     ): ReactStory<T, TInput>;
+     /**
+      * Creates a story with no additional configuration.

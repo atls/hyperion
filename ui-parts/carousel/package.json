@@ -16,7 +16,7 @@
     "@atls-ui-parts/dom": "workspace:*",
     "@atls-ui-parts/theme": "workspace:*",
     "clsx": "2.1.1",
-    "framer-motion": "12.9.2",
+    "framer-motion": "12.43.0",
     "rainbow-sprinkles": "1.0.0"
   },
   "devDependencies": {
@@ -29,7 +29,7 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "storybook": "10.4.6",
-    "typescript": "5.5.4"
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "*",
@@ -49,6 +49,5 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts"
-  },
-  "typecheckSkipLibCheck": true
+  }
 }

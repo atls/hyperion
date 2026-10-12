@@ -1,14 +1,12 @@
-/// <reference path="../assets.d.ts" />
-
 // TODO: Remove legacy typography tokens after components are refactored to @atls-ui/theme typography.
-import { globalFontFace }                                  from '@vanilla-extract/css'
+import { globalFontFace }          from '@vanilla-extract/css'
 
-import { scienceGothicFontFaces }                          from '@atls-ui/theme/tokens'
+import { scienceGothicFontFaces }  from '@atls-ui/theme/tokens'
 import { scienceGothicFontFamily } from '@atls-ui/theme/tokens'
-import scienceGothic300                                    from '@atls-ui/theme/assets/fonts/science-gothic/ScienceGothic-300.ttf'
-import scienceGothic400                                    from '@atls-ui/theme/assets/fonts/science-gothic/ScienceGothic-400.ttf'
-import scienceGothic500                                    from '@atls-ui/theme/assets/fonts/science-gothic/ScienceGothic-500.ttf'
-import scienceGothic600                                    from '@atls-ui/theme/assets/fonts/science-gothic/ScienceGothic-600.ttf'
+import scienceGothic300            from '@atls-ui/theme/assets/fonts/science-gothic/ScienceGothic-300.ttf'
+import scienceGothic400            from '@atls-ui/theme/assets/fonts/science-gothic/ScienceGothic-400.ttf'
+import scienceGothic500            from '@atls-ui/theme/assets/fonts/science-gothic/ScienceGothic-500.ttf'
+import scienceGothic600            from '@atls-ui/theme/assets/fonts/science-gothic/ScienceGothic-600.ttf'
 
 const nunitoSans = 'Nunito Sans'
 

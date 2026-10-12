@@ -1,6 +1,5 @@
-import type { CSSProperties }          from 'react'
-
 import type { Theme }                  from '@atls-ui/theme'
+import type { CSSProperties }          from 'react'
 
 import type { ButtonAppearanceStates } from './appearance/interfaces.js'
 import type { ButtonColors }           from './appearance/interfaces.js'

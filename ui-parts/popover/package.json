@@ -17,7 +17,7 @@
     "@atls-ui-parts/theme": "workspace:*",
     "@atls-utils/use-float": "workspace:*",
     "@floating-ui/react": "0.27.8",
-    "framer-motion": "12.23.22"
+    "framer-motion": "12.43.0"
   },
   "devDependencies": {
     "@atls-ui-parts/layout": "workspace:*",
@@ -28,7 +28,7 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "storybook": "10.4.6",
-    "typescript": "5.5.4"
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "*",
@@ -48,6 +48,5 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts"
-  },
-  "typecheckSkipLibCheck": true
+  }
 }
