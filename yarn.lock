@@ -1068,6 +1068,7 @@ __metadata:
     "@vanilla-extract/css": "npm:1.17.1"
     "@vanilla-extract/dynamic": "npm:2.1.2"
     clsx: "npm:2.1.1"
+    framer-motion: "npm:12.43.0"
     rainbow-sprinkles: "npm:1.0.0"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
