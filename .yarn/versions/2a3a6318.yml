@@ -1,0 +1,7 @@
+releases:
+  "@atls-ui-parts/text": patch
+
+declined:
+  - "@atls-ui-admin/text"
+  - "@atls-ui-parts/placeholder"
+  - "@atls-ui/design"
