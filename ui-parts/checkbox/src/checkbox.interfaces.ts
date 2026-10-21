@@ -1,6 +1,6 @@
-import type { HTMLAttributes } from 'react'
-import type { Ref }            from 'react'
-import type { ReactNode }      from 'react'
+import type { InputHTMLAttributes } from 'react'
+import type { Ref }                 from 'react'
+import type { ReactNode }           from 'react'
 
 export interface CheckboxClassNames {
   box?: string
@@ -26,15 +26,13 @@ export interface CheckboxShape {
   label: string
 }
 
-export interface CheckboxProps extends HTMLAttributes<HTMLDivElement> {
-  active?: boolean
+export interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
+  indeterminate?: boolean
   appearance?: CheckboxAppearance
-  checkedIcon?: ReactNode
-  classNames?: CheckboxClassNames
-  defaultActive?: boolean
-  onCheck?: (checked: boolean) => void
-  labelPosition?: 'bottom' | 'end' | 'start' | 'top'
   shape?: CheckboxShape
-  icon?: ReactNode
-  ref?: Ref<HTMLDivElement>
+  checkedIcon?: ReactNode
+  indeterminateIcon?: ReactNode
+  classNames?: CheckboxClassNames
+  labelPosition?: 'bottom' | 'end' | 'start' | 'top'
+  ref?: Ref<HTMLInputElement>
 }

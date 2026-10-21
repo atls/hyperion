@@ -1,12 +1,11 @@
-import type { KeyboardEvent }      from 'react'
-import type { MouseEvent }         from 'react'
+import type { ChangeEvent }        from 'react'
 import type { ReactNode }          from 'react'
 
 import type { CheckboxProps }      from './checkbox.interfaces.js'
 
 import { clsx }                    from 'clsx'
-import { useEffect }               from 'react'
 import { useState }                from 'react'
+import { useId }                   from 'react'
 
 import { boxBaseStyles }           from './box/index.js'
 import { checkBaseStyles }         from './check/index.js'
@@ -19,82 +18,56 @@ import { checkboxAppearances }     from './styles/index.js'
 import { checkboxShapes }          from './styles/index.js'
 
 export const Checkbox = ({
-  onCheck,
-  children,
-  active,
-  defaultActive = false,
-  labelPosition = 'end',
+  onChange,
+  checked,
+  defaultChecked = false,
+  disabled,
+  indeterminate,
   appearance = checkboxAppearances.blue,
   shape = checkboxShapes.medium,
-  icon,
-  checkedIcon = icon,
   className,
   classNames,
-  onClick,
-  onKeyDown,
+  labelPosition = 'end',
+  checkedIcon,
+  indeterminateIcon,
+  children,
   ref,
-  tabIndex,
+  id,
   ...props
 }: CheckboxProps): ReactNode => {
-  const [isChecked, setIsChecked] = useState<boolean>(active ?? defaultActive)
-  const checked = active ?? isChecked
+  const [isChecked, setIsChecked] = useState<boolean>(checked ?? defaultChecked)
+  const localChecked = checked ?? isChecked
 
-  useEffect(() => {
-    if (active !== undefined) {
-      setIsChecked(active)
-    }
-  }, [active])
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const nextChecked = event.currentTarget.checked
 
-  const handleCheck = (): void => {
-    const nextChecked = !checked
-
-    if (active === undefined) {
+    if (checked === undefined) {
       setIsChecked(nextChecked)
     }
-
-    onCheck?.(nextChecked)
+    onChange?.(event)
   }
 
-  const handleClick = (event: MouseEvent<HTMLDivElement>): void => {
-    onClick?.(event)
-
-    if (!event.defaultPrevented) {
-      handleCheck()
-    }
-  }
-
-  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>): void => {
-    onKeyDown?.(event)
-
-    if (!event.defaultPrevented && event.key === ' ') {
-      event.preventDefault()
-      handleCheck()
-    }
-  }
+  const generatedId = useId()
+  const inputId = id ?? generatedId
 
   return (
     <div
-      {...props}
-      ref={ref}
-      role='checkbox'
-      aria-checked={checked}
-      tabIndex={tabIndex ?? 0}
       className={clsx(
         containerBaseStyles,
         containerPositionStyles[labelPosition],
         classNames?.container,
         className
       )}
-      onClick={handleClick}
-      onKeyDown={handleKeyDown}
     >
       <input
-        readOnly
+        ref={ref}
+        {...props}
+        id={inputId}
         className={clsx(hiddenInputStyles, classNames?.hiddenInput)}
-        checked={checked}
-        aria-hidden='true'
-        tabIndex={-1}
+        checked={localChecked}
+        disabled={disabled}
         type='checkbox'
+        onChange={handleChange}
       />
       <div className={clsx(boxBaseStyles, shape.box, appearance.box, classNames?.box)}>
         <div
@@ -102,14 +75,15 @@ export const Checkbox = ({
             checkBaseStyles,
             shape.check,
             appearance.check,
-            checked && checkCheckedStyles,
+            localChecked && checkCheckedStyles,
             classNames?.check
           )}
         >
           {checkedIcon}
         </div>
       </div>
-      <div
+      <label
+        htmlFor={inputId}
         className={clsx(
           shape.label,
           appearance.label,
@@ -118,7 +92,7 @@ export const Checkbox = ({
         )}
       >
         {children}
-      </div>
+      </label>
     </div>
   )
 }
