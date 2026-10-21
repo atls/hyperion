@@ -1,9 +1,12 @@
-import type { ChangeEvent }        from 'react'
 import type { ReactNode }          from 'react'
+import type { ChangeEvent }        from 'react'
 
 import type { CheckboxProps }      from './checkbox.interfaces.js'
 
 import { clsx }                    from 'clsx'
+import { useEffect }               from 'react'
+import { useImperativeHandle }     from 'react'
+import { useRef }                  from 'react'
 import { useState }                from 'react'
 import { useId }                   from 'react'
 
@@ -38,6 +41,21 @@ export const Checkbox = ({
   const [isChecked, setIsChecked] = useState<boolean>(checked ?? defaultChecked)
   const localChecked = checked ?? isChecked
 
+  const inputRef = useRef<HTMLInputElement>(null)
+  useImperativeHandle(ref, () => inputRef.current!, [])
+
+  useEffect(() => {
+    const input = inputRef.current
+    if (!input) {
+      return
+    }
+
+    input.indeterminate = indeterminate ?? false
+  }, [indeterminate, localChecked])
+
+  const isMarked = indeterminate || localChecked
+  const mark = indeterminate ? indeterminateIcon : checkedIcon
+
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const nextChecked = event.currentTarget.checked
 
@@ -60,7 +78,7 @@ export const Checkbox = ({
       )}
     >
       <input
-        ref={ref}
+        ref={inputRef}
         {...props}
         id={inputId}
         className={clsx(hiddenInputStyles, classNames?.hiddenInput)}
@@ -75,11 +93,11 @@ export const Checkbox = ({
             checkBaseStyles,
             shape.check,
             appearance.check,
-            localChecked && checkCheckedStyles,
+            isMarked && checkCheckedStyles,
             classNames?.check
           )}
         >
-          {checkedIcon}
+          {mark}
         </div>
       </div>
       <label
