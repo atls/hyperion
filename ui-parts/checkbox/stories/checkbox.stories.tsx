@@ -34,6 +34,10 @@ const meta: Meta<CheckboxProps> = {
       description: 'Is the checkbox checked',
       control: { type: 'boolean' },
     },
+    indeterminate: {
+      name: 'Indeterminate',
+      control: { type: 'boolean' },
+    },
     appearance: {
       name: 'Appearance',
       description: 'Color of the divider',
@@ -70,6 +74,19 @@ export const Base: Story = {
     appearance: checkboxAppearances.blue,
     shape: checkboxShapes.medium,
     children: 'Checkbox Label',
+  },
+}
+
+export const Indeterminate: Story = {
+  name: 'Indeterminate',
+  args: {
+    defaultChecked: false,
+    indeterminate: true,
+    indeterminateIcon: '−',
+    labelPosition: 'end',
+    appearance: checkboxAppearances.blue,
+    shape: checkboxShapes.medium,
+    children: 'Indeterminate checkbox',
   },
 }
 
