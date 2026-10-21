@@ -29,8 +29,8 @@ const meta: Meta<CheckboxProps> = {
   ),
   tags: ['autodocs'],
   argTypes: {
-    active: {
-      name: 'Active',
+    checked: {
+      name: 'Checked',
       description: 'Is the checkbox checked',
       control: { type: 'boolean' },
     },
@@ -64,8 +64,8 @@ type Story = StoryObj<CheckboxProps>
 export const Base: Story = {
   name: 'Базовый',
   args: {
-    onCheck: () => undefined,
-    active: false,
+    onChange: () => undefined,
+    checked: false,
     labelPosition: 'start',
     appearance: checkboxAppearances.blue,
     shape: checkboxShapes.medium,
@@ -76,7 +76,7 @@ export const Base: Story = {
 export const Custom: Story = {
   name: 'Кастомный',
   args: {
-    defaultActive: true,
+    defaultChecked: true,
     labelPosition: 'end',
     appearance: checkboxAppearances.blue,
     shape: checkboxShapes.medium,
