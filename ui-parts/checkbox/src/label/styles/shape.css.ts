@@ -1,6 +1,9 @@
-import { style } from '@vanilla-extract/css'
+import { style }      from '@vanilla-extract/css'
 
-export const labelShapeStyles = style({
-  fontSize: 16,
-  fontWeight: 'normal',
-})
+import { typography } from '@atls-ui/theme/tokens'
+
+export const labelShapeStyles = {
+  sm: style(typography.label.sm),
+  md: style(typography.label.md),
+  lg: style(typography.label.lg),
+}

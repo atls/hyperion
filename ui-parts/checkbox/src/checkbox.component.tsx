@@ -1,24 +1,31 @@
-import type { ReactNode }          from 'react'
-import type { ChangeEvent }        from 'react'
+import type { ReactNode }              from 'react'
+import type { ChangeEvent }            from 'react'
 
-import type { CheckboxProps }      from './checkbox.interfaces.js'
+import type { CheckboxProps }          from './checkbox.interfaces.js'
+import type { CheckboxSelectionState } from './checkbox.interfaces.js'
 
-import { clsx }                    from 'clsx'
-import { useEffect }               from 'react'
-import { useImperativeHandle }     from 'react'
-import { useRef }                  from 'react'
-import { useState }                from 'react'
-import { useId }                   from 'react'
+import { clsx }                        from 'clsx'
+import { useEffect }                   from 'react'
+import { useImperativeHandle }         from 'react'
+import { useRef }                      from 'react'
+import { useState }                    from 'react'
+import { useId }                       from 'react'
 
-import { boxBaseStyles }           from './box/index.js'
-import { checkBaseStyles }         from './check/index.js'
-import { checkCheckedStyles }      from './check/index.js'
-import { containerBaseStyles }     from './container/index.js'
-import { containerPositionStyles } from './container/index.js'
-import { hiddenInputStyles }       from './hidden-input/index.js'
-import { labelPositionStyles }     from './label/index.js'
-import { checkboxAppearances }     from './styles/index.js'
-import { checkboxShapes }          from './styles/index.js'
+import { useTheme }                    from '@atls-ui-parts/theme'
+
+import { boxAppearanceStyles }         from './box/index.js'
+import { boxBaseStyles }               from './box/index.js'
+import { assignCheckboxVariables }     from './box/index.js'
+import { createDefaultAppearance }     from './box/index.js'
+import { resolveCheckboxAppearance }   from './box/index.js'
+import { checkBaseStyles }             from './check/index.js'
+import { checkVisibleStyles }          from './check/index.js'
+import { containerBaseStyles }         from './container/index.js'
+import { containerPositionStyles }     from './container/index.js'
+import { hiddenInputStyles }           from './hidden-input/index.js'
+import { labelAppearanceStyles }       from './label/index.js'
+import { labelPositionStyles }         from './label/index.js'
+import { checkboxShapes }              from './styles/index.js'
 
 export const Checkbox = ({
   onChange,
@@ -26,8 +33,8 @@ export const Checkbox = ({
   defaultChecked = false,
   disabled,
   indeterminate,
-  appearance = checkboxAppearances.blue,
-  shape = checkboxShapes.medium,
+  appearance,
+  shape = checkboxShapes.md,
   className,
   classNames,
   labelPosition = 'end',
@@ -38,6 +45,7 @@ export const Checkbox = ({
   id,
   ...props
 }: CheckboxProps): ReactNode => {
+  const theme = useTheme()
   const [isChecked, setIsChecked] = useState<boolean>(checked ?? defaultChecked)
   const localChecked = checked ?? isChecked
 
@@ -54,6 +62,22 @@ export const Checkbox = ({
   }, [indeterminate, localChecked])
 
   const isMarked = indeterminate || localChecked
+  let appearanceState: CheckboxSelectionState = 'unchecked'
+
+  if (localChecked) {
+    appearanceState = 'checked'
+  }
+
+  if (indeterminate) {
+    appearanceState = 'indeterminate'
+  }
+
+  const defaultAppearance = createDefaultAppearance(theme, shape.box.elevationSize)
+  const resolvedAppearance = resolveCheckboxAppearance(
+    appearance ?? defaultAppearance,
+    appearanceState
+  )
+
   const mark = indeterminate ? indeterminateIcon : checkedIcon
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -87,13 +111,18 @@ export const Checkbox = ({
         type='checkbox'
         onChange={handleChange}
       />
-      <div className={clsx(boxBaseStyles, shape.box, appearance.box, classNames?.box)}>
+      <div
+        className={clsx(boxBaseStyles, boxAppearanceStyles, shape.box.className, classNames?.box)}
+        style={{
+          ...assignCheckboxVariables(resolvedAppearance),
+          padding: shape.box.padding,
+        }}
+      >
         <div
           className={clsx(
             checkBaseStyles,
             shape.check,
-            appearance.check,
-            isMarked && checkCheckedStyles,
+            isMarked && checkVisibleStyles,
             classNames?.check
           )}
         >
@@ -104,7 +133,7 @@ export const Checkbox = ({
         htmlFor={inputId}
         className={clsx(
           shape.label,
-          appearance.label,
+          labelAppearanceStyles,
           labelPositionStyles[labelPosition],
           classNames?.label
         )}

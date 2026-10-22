@@ -11,7 +11,6 @@ import { Column }                from '@atls-ui-parts/layout'
 import { Layout }                from '@atls-ui-parts/layout'
 
 import { Checkbox }              from '../src/checkbox.component.js'
-import { checkboxAppearances }   from '../src/index.js'
 import { checkboxShapes }        from '../src/index.js'
 import { customBoxStyles }       from './styles.css.js'
 import { customCheckStyles }     from './styles.css.js'
@@ -38,16 +37,18 @@ const meta: Meta<CheckboxProps> = {
       name: 'Indeterminate',
       control: { type: 'boolean' },
     },
+    disabled: {
+      name: 'Disabled',
+      control: { type: 'boolean' },
+    },
     appearance: {
       name: 'Appearance',
-      description: 'Color of the divider',
-      control: { type: 'select' },
-      options: Object.keys(checkboxAppearances),
-      mapping: checkboxAppearances,
+      description: 'Overrides appearance for checked and unchecked states',
+      control: { type: 'object' },
     },
     shape: {
       name: 'Shape',
-      description: 'Size of the divider',
+      description: 'Checkbox, mark, and label sizes',
       control: { type: 'select' },
       options: Object.keys(checkboxShapes),
       mapping: checkboxShapes,
@@ -71,8 +72,7 @@ export const Base: Story = {
     onChange: () => undefined,
     checked: false,
     labelPosition: 'start',
-    appearance: checkboxAppearances.blue,
-    shape: checkboxShapes.medium,
+    shape: checkboxShapes.md,
     children: 'Checkbox Label',
   },
 }
@@ -84,8 +84,7 @@ export const Indeterminate: Story = {
     indeterminate: true,
     indeterminateIcon: '−',
     labelPosition: 'end',
-    appearance: checkboxAppearances.blue,
-    shape: checkboxShapes.medium,
+    shape: checkboxShapes.md,
     children: 'Indeterminate checkbox',
   },
 }
@@ -95,8 +94,7 @@ export const Custom: Story = {
   args: {
     defaultChecked: true,
     labelPosition: 'end',
-    appearance: checkboxAppearances.blue,
-    shape: checkboxShapes.medium,
+    shape: checkboxShapes.md,
     checkedIcon: '✓',
     classNames: {
       box: customBoxStyles,
