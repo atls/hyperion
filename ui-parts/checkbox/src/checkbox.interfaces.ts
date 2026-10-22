@@ -2,6 +2,8 @@ import type { InputHTMLAttributes } from 'react'
 import type { Ref }                 from 'react'
 import type { ReactNode }           from 'react'
 
+import type { BoxShape }            from './box/index.js'
+
 export interface CheckboxClassNames {
   box?: string
   check?: string
@@ -10,18 +12,28 @@ export interface CheckboxClassNames {
   label?: string
 }
 
-export type CheckboxAppearanceName = 'blue' | 'green' | 'red'
+export type CheckboxVisualState = 'default' | 'disabled' | 'focused' | 'hover'
+export type CheckboxSelectionState = 'checked' | 'indeterminate' | 'unchecked'
 
-export interface CheckboxAppearance {
-  box: string
-  check: string
-  label: string
+export interface CheckboxAppearanceState {
+  backgroundColor: string
+  borderColor: string
+  markColor: string
+  shadow: string
 }
 
-export type CheckboxShapeName = 'large' | 'medium' | 'small'
+export type CheckboxAppearanceStates = Record<CheckboxVisualState, CheckboxAppearanceState>
+
+export interface CheckboxAppearance {
+  checked: CheckboxAppearanceStates
+  indeterminate?: CheckboxAppearanceStates
+  unchecked: CheckboxAppearanceStates
+}
+
+export type CheckboxShapeName = 'lg' | 'md' | 'sm'
 
 export interface CheckboxShape {
-  box: string
+  box: BoxShape
   check: string
   label: string
 }

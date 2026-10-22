@@ -6,19 +6,19 @@ import { checkShapeStyles }       from '../check/index.js'
 import { labelShapeStyles }       from '../label/index.js'
 
 export const checkboxShapes: Record<CheckboxShapeName, CheckboxShape> = {
-  large: {
-    box: boxShapeStyles.large,
-    check: checkShapeStyles,
-    label: labelShapeStyles,
+  sm: {
+    box: boxShapeStyles.sm,
+    check: checkShapeStyles.sm,
+    label: labelShapeStyles.sm,
   },
-  medium: {
-    box: boxShapeStyles.medium,
-    check: checkShapeStyles,
-    label: labelShapeStyles,
+  md: {
+    box: boxShapeStyles.md,
+    check: checkShapeStyles.md,
+    label: labelShapeStyles.md,
   },
-  small: {
-    box: boxShapeStyles.small,
-    check: checkShapeStyles,
-    label: labelShapeStyles,
+  lg: {
+    box: boxShapeStyles.lg,
+    check: checkShapeStyles.lg,
+    label: labelShapeStyles.lg,
   },
 }

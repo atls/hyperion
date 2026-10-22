@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "@atls-ui-parts/theme": "workspace:*",
+    "@atls-ui/theme": "workspace:*",
     "clsx": "2.1.1"
   },
   "devDependencies": {
-    "@atls-ui-generators/appearance": "workspace:*",
     "@atls-ui-parts/layout": "workspace:*",
     "@storybook/react": "10.4.6",
     "@types/react": "19.1.2",
