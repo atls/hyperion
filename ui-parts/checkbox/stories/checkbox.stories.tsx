@@ -3,13 +3,13 @@ import type { StoryObj }         from '@storybook/react'
 
 import type { CheckboxProps }    from '../src/checkbox.interfaces.js'
 
+import { useArgs }               from 'storybook/preview-api'
 import { expect }                from 'storybook/test'
 import { userEvent }             from 'storybook/test'
 import { within }                from 'storybook/test'
 
 import { Column }                from '@atls-ui-parts/layout'
 import { Layout }                from '@atls-ui-parts/layout'
-import { lightTheme }            from '@atls-ui/theme'
 
 import { Checkbox }              from '../src/checkbox.component.js'
 import { checkboxShapes }        from '../src/index.js'
@@ -21,13 +21,25 @@ import { customLabelStyles }     from './styles.css.js'
 
 const meta: Meta<CheckboxProps> = {
   title: 'Components/Checkbox',
-  render: (props) => (
-    <Column fill alignItems='center'>
-      <Layout flexBasis='40px' />
-      <Checkbox {...props} />
-      <Layout flexBasis='40px' />
-    </Column>
-  ),
+  render: function Render(props) {
+    const [{ checked, indeterminate }, updateArgs] = useArgs<CheckboxProps>()
+
+    return (
+      <Column fill alignItems='center'>
+        <Layout flexBasis='40px' />
+        <Checkbox
+          {...props}
+          checked={checked}
+          indeterminate={indeterminate}
+          onChange={(event) => {
+            updateArgs({ checked: event.currentTarget.checked, indeterminate: false })
+            props.onChange?.(event)
+          }}
+        />
+        <Layout flexBasis='40px' />
+      </Column>
+    )
+  },
   tags: ['autodocs'],
   argTypes: {
     checked: {
@@ -72,23 +84,10 @@ type Story = StoryObj<CheckboxProps>
 export const Base: Story = {
   name: 'Базовый',
   args: {
-    onChange: () => undefined,
-    checked: false,
+    defaultChecked: false,
     labelPosition: 'start',
     shape: checkboxShapes.md,
     children: 'Checkbox Label',
-  },
-}
-
-export const Indeterminate: Story = {
-  name: 'Indeterminate',
-  args: {
-    defaultChecked: false,
-    indeterminate: true,
-    indeterminateIcon: '−',
-    labelPosition: 'end',
-    shape: checkboxShapes.md,
-    children: 'Indeterminate checkbox',
   },
 }
 
@@ -116,33 +115,5 @@ export const Custom: Story = {
     await userEvent.click(checkbox)
 
     await expect(checkbox).not.toBeChecked()
-  },
-}
-
-const customAppearance = checkboxAppearances.default(lightTheme, 'sm')
-
-export const CustomAppearance: Story = {
-  name: 'Custom appearance',
-  argTypes: {
-    appearance: { control: false },
-  },
-  args: {
-    indeterminate: true,
-    indeterminateIcon: '−',
-    children: 'Custom appearance',
-    appearance: {
-      ...customAppearance,
-      indeterminate: {
-        ...customAppearance.checked,
-        box: {
-          ...customAppearance.checked.box,
-          default: {
-            ...customAppearance.checked.box.default,
-            backgroundColor: lightTheme.colors.status.success,
-            borderColor: lightTheme.colors.status.success,
-          },
-        },
-      },
-    },
   },
 }
