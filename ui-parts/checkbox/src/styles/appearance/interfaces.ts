@@ -1,6 +1,6 @@
 import type { BoxAppearance }   from '../../box/styles/appearance/interfaces.js'
-import type { CheckAppearance } from '../../check/styles/appearance/interfaces.js'
-import type { LabelAppearance } from '../../label/styles/appearance/interfaces.js'
+import type { CheckAppearance } from '../../check/appearance/interfaces.js'
+import type { LabelAppearance } from '../../label/appearance/interfaces.js'
 
 export type CheckboxVisualState = 'default' | 'disabled' | 'focused' | 'hover'
 

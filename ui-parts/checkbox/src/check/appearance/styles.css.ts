@@ -1,8 +1,8 @@
 import { createThemeContract } from '@vanilla-extract/css'
 import { style }               from '@vanilla-extract/css'
 
-import { boxBaseStyles }       from '../../../box/styles/base.css.js'
-import { hiddenInputStyles }   from '../../../hidden-input/index.js'
+import { boxBaseStyles }       from '../../box/styles/base.css.js'
+import { hiddenInputStyles }   from '../../hidden-input/index.js'
 
 export const checkAppearanceVariables = createThemeContract({
   default: {
