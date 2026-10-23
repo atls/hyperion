@@ -1,6 +1,4 @@
 export * from './appearance/styles.css.js'
 export type * from './appearance/interfaces.js'
-export * from './appearance/resolve.js'
-export * from './appearance/variants.js'
 export * from './base.css.js'
 export * from './shape/variants.css.js'

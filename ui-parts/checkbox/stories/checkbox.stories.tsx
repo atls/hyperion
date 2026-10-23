@@ -134,10 +134,13 @@ export const CustomAppearance: Story = {
       ...customAppearance,
       indeterminate: {
         ...customAppearance.checked,
-        default: {
-          ...customAppearance.checked.default,
-          backgroundColor: lightTheme.colors.status.success,
-          borderColor: lightTheme.colors.status.success,
+        box: {
+          ...customAppearance.checked.box,
+          default: {
+            ...customAppearance.checked.box.default,
+            backgroundColor: lightTheme.colors.status.success,
+            borderColor: lightTheme.colors.status.success,
+          },
         },
       },
     },
