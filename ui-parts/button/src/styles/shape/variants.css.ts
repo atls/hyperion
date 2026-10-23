@@ -1,9 +1,9 @@
-import { createVar }     from '@vanilla-extract/css'
-import { styleVariants } from '@vanilla-extract/css'
+import { createVar }        from '@vanilla-extract/css'
+import { styleVariants }    from '@vanilla-extract/css'
 
-import { radii }         from '@atls-ui/theme/tokens'
-import { spacing }       from '@atls-ui/theme/tokens'
-import { typography }    from '@atls-ui/theme/tokens'
+import { radii }            from '@atls-ui/theme/tokens'
+import { spacing }          from '@atls-ui/theme/tokens'
+import { typography }       from '@atls-ui/theme/tokens'
 
 import { buttonAddonSizes } from './constants.js'
 

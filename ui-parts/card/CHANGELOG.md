@@ -1,229 +1,101 @@
-
-
 ## [1.1.1](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.1.0...@atls-ui-parts/card@1.1.1) (2026-08-31)
-
 
 ### Bug Fixes
 
-
-* **atls-ui-parts:** align button story variants ([8615e27](https://github.com/atls/hyperion/commit/8615e278dfc8f0f6172e6deac378b9300a097239))
-
-
-
-
+- **atls-ui-parts:** align button story variants ([8615e27](https://github.com/atls/hyperion/commit/8615e278dfc8f0f6172e6deac378b9300a097239))
 
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.1.0...@atls-ui-parts/card@1.1.0) (2026-08-26)
 
-
-
-
-
-
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.1.0...@atls-ui-parts/card@1.1.0) (2026-08-25)
-
-
-
-
-
 
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.1.0...@atls-ui-parts/card@1.1.0) (2026-08-18)
 
-
-
-
-
+# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.1.0...@atls-ui-parts/card@1.1.0) (2026-08-13)
 
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.1.0...@atls-ui-parts/card@1.1.0) (2026-08-13)
 
-
-
-
-
-
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.1.0...@atls-ui-parts/card@1.1.0) (2026-08-13)
-
-
-
-
-
-
-# [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.1.0...@atls-ui-parts/card@1.1.0) (2026-08-13)
-
-
-
-
-
 
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.1.0...@atls-ui-parts/card@1.1.0) (2026-06-23)
 
-
-
-
-
-
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.12...@atls-ui-parts/card@1.1.0) (2026-06-23)
-
 
 ### Features
 
-
-* **common:** upgrade dependencies ([7e73502](https://github.com/atls/hyperion/commit/7e73502b16318e20899da3867227543b39403689))
-
-
-
-
+- **common:** upgrade dependencies ([7e73502](https://github.com/atls/hyperion/commit/7e73502b16318e20899da3867227543b39403689))
 
 ## [1.0.12](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.12...@atls-ui-parts/card@1.0.12) (2026-06-12)
 
-
-
-
-
-
 ## [1.0.12](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.11...@atls-ui-parts/card@1.0.12) (2026-06-09)
-
-
-
-
-
 
 ## [1.0.11](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.10...@atls-ui-parts/card@1.0.11) (2026-06-08)
 
-
-
-
-
-
 ## [1.0.10](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.9...@atls-ui-parts/card@1.0.10) (2026-06-05)
-
-
-
-
-
 
 ## [1.0.8](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.8...@atls-ui-parts/card@1.0.8) (2025-10-25)
 
-
-
-
-
-
 ## [1.0.8](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.6...@atls-ui-parts/card@1.0.8) (2025-10-09)
-
-
-
-
-
-
-
 
 ## [1.0.7] (2025-10-10)
 
-
 ### BREAKING CHANGES
 
-
-* Requires React version 18 or higher for proper component functionality
-
+- Requires React version 18 or higher for proper component functionality
 
 ## [1.0.6](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.5...@atls-ui-parts/card@1.0.6) (2025-09-30)
 
-
-
-
-
-
 ## [1.0.5](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.5...@atls-ui-parts/card@1.0.5) (2025-05-15)
-
-
-
-
-
 
 ## [1.0.5](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.4...@atls-ui-parts/card@1.0.5) (2025-04-29)
 
-
 ### Bug Fixes
 
-
-* **ui:** type and lint errors ([da072ab](https://github.com/atls/hyperion/commit/da072abf91f465b4a6f0b736e2b26c78a2891d1d))
-
-
-
-
+- **ui:** type and lint errors ([da072ab](https://github.com/atls/hyperion/commit/da072abf91f465b4a6f0b736e2b26c78a2891d1d))
 
 ## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.4...@atls-ui-parts/card@1.0.4) (2025-04-28)
 
-
 ### Bug Fixes
 
-
-* **ui:** type and lint errors ([da072ab](https://github.com/atls/hyperion/commit/da072abf91f465b4a6f0b736e2b26c78a2891d1d))
-
-
-
-
+- **ui:** type and lint errors ([da072ab](https://github.com/atls/hyperion/commit/da072abf91f465b4a6f0b736e2b26c78a2891d1d))
 
 ## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.4...@atls-ui-parts/card@1.0.4) (2025-02-23)
 
-
-
-
-
-
 ## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.3...@atls-ui-parts/card@1.0.4) (2025-02-19)
-
 
 ### Bug Fixes
 
-
-* **hyperion:** lintter and tests ([#593](https://github.com/atls/hyperion/issues/593)) ([a01c488](https://github.com/atls/hyperion/commit/a01c488064d6386f754aafd2eecb28a19396635e))
-
-
-
-
+- **hyperion:** lintter and tests ([#593](https://github.com/atls/hyperion/issues/593)) ([a01c488](https://github.com/atls/hyperion/commit/a01c488064d6386f754aafd2eecb28a19396635e))
 
 ## [1.0.3](https://github.com/atls/hyperion/compare/@atls-ui-parts/card@1.0.3...@atls-ui-parts/card@1.0.3) (2025-02-19)
 
-
 ### Bug Fixes
 
-
-* **hyperion:** lintter and tests ([#593](https://github.com/atls/hyperion/issues/593)) ([a01c488](https://github.com/atls/hyperion/commit/a01c488064d6386f754aafd2eecb28a19396635e))
-
-
-
-
+- **hyperion:** lintter and tests ([#593](https://github.com/atls/hyperion/issues/593)) ([a01c488](https://github.com/atls/hyperion/commit/a01c488064d6386f754aafd2eecb28a19396635e))
 
 ## 1.0.3 (2025-01-09)
 
-
 ### Bug Fixes
 
-
-* card package.json ([6f323bd](https://github.com/atls/hyperion/commit/6f323bd93c6f0a270925f92f7cd31d8e23013139))
-* **card:** scroll behavior ([8890910](https://github.com/atls/hyperion/commit/889091029a67c1161e65efa1828393ff401cc129))
-* checks ([fd35e4e](https://github.com/atls/hyperion/commit/fd35e4e5ee760fed44fc51d0dfc1d3fffaa27a9c))
-* **common:** react 18 migration ([10fdfb3](https://github.com/atls/hyperion/commit/10fdfb33f8bd5255ee29a03c52bd762d1fec029c))
-* linter and typecheck ([7c12211](https://github.com/atls/hyperion/commit/7c122114184b40e9a06e6404489b23e0ba3ee5d4))
-* linter and typecheck ([e379724](https://github.com/atls/hyperion/commit/e379724b7dbf3c8cba2b0b94647239b0b37c5fb8))
-* peer dependencies ([d29080c](https://github.com/atls/hyperion/commit/d29080cb0950b04e65ab7755571e350d3450b4dd))
-* tests & scripts ([e7dbecb](https://github.com/atls/hyperion/commit/e7dbecb12718ed243206a1ef92bbd4c45e026dbe))
-* **ui:** typecheck ([1a2a36b](https://github.com/atls/hyperion/commit/1a2a36b8baeececd0b929dcdb94da3d38ae8ad1e))
-* up version ui-parts packages ([f718cda](https://github.com/atls/hyperion/commit/f718cda36c43cc8a060dafee178f6e532a42848e))
-* versions ([ff7bdbb](https://github.com/atls/hyperion/commit/ff7bdbb281c9f6e732b06461a0c633c8cc010e46))
+- card package.json ([6f323bd](https://github.com/atls/hyperion/commit/6f323bd93c6f0a270925f92f7cd31d8e23013139))
+- **card:** scroll behavior ([8890910](https://github.com/atls/hyperion/commit/889091029a67c1161e65efa1828393ff401cc129))
+- checks ([fd35e4e](https://github.com/atls/hyperion/commit/fd35e4e5ee760fed44fc51d0dfc1d3fffaa27a9c))
+- **common:** react 18 migration ([10fdfb3](https://github.com/atls/hyperion/commit/10fdfb33f8bd5255ee29a03c52bd762d1fec029c))
+- linter and typecheck ([7c12211](https://github.com/atls/hyperion/commit/7c122114184b40e9a06e6404489b23e0ba3ee5d4))
+- linter and typecheck ([e379724](https://github.com/atls/hyperion/commit/e379724b7dbf3c8cba2b0b94647239b0b37c5fb8))
+- peer dependencies ([d29080c](https://github.com/atls/hyperion/commit/d29080cb0950b04e65ab7755571e350d3450b4dd))
+- tests & scripts ([e7dbecb](https://github.com/atls/hyperion/commit/e7dbecb12718ed243206a1ef92bbd4c45e026dbe))
+- **ui:** typecheck ([1a2a36b](https://github.com/atls/hyperion/commit/1a2a36b8baeececd0b929dcdb94da3d38ae8ad1e))
+- up version ui-parts packages ([f718cda](https://github.com/atls/hyperion/commit/f718cda36c43cc8a060dafee178f6e532a42848e))
+- versions ([ff7bdbb](https://github.com/atls/hyperion/commit/ff7bdbb281c9f6e732b06461a0c633c8cc010e46))
 
 ### Features
 
-
-* bump emotion, next ([346f6a4](https://github.com/atls/hyperion/commit/346f6a43978912f3be4b09031933ab2a572907b2))
-* card deps bump ([d64c07a](https://github.com/atls/hyperion/commit/d64c07aa9afaad6aa2d63298c20798168a906b19))
-* **card:** init ([c8eb0c5](https://github.com/atls/hyperion/commit/c8eb0c5e9d39078d3a446c66476505ed9babe7b5))
-* **common:** upgrade deps ([ff04ea9](https://github.com/atls/hyperion/commit/ff04ea97e10efa26d27a27c37337e5afc62e47bb))
-* **common:** upgrade deps ([1b2d2fa](https://github.com/atls/hyperion/commit/1b2d2fac134ec0c834b9410dcf783d2a80278691))
-* **react:** major upgrade ([f383b36](https://github.com/atls/hyperion/commit/f383b36618f9daa1b137b394de7a55a03bec25b4))
-* reinit card ([c4ded76](https://github.com/atls/hyperion/commit/c4ded76f8eeb0377fe247974e942d94fafe0fc69))
-* **ui-parts:** add create-container-styles util to theme ([#590](https://github.com/atls/hyperion/issues/590)) ([34064a3](https://github.com/atls/hyperion/commit/34064a384192b781fd6d667857f568d4f42228a4))
-* updated @atls-ui-parts/card ([e35460a](https://github.com/atls/hyperion/commit/e35460a83b7e3dad17952bbe8e961cd387dbf5c6))
-
-
+- bump emotion, next ([346f6a4](https://github.com/atls/hyperion/commit/346f6a43978912f3be4b09031933ab2a572907b2))
+- card deps bump ([d64c07a](https://github.com/atls/hyperion/commit/d64c07aa9afaad6aa2d63298c20798168a906b19))
+- **card:** init ([c8eb0c5](https://github.com/atls/hyperion/commit/c8eb0c5e9d39078d3a446c66476505ed9babe7b5))
+- **common:** upgrade deps ([ff04ea9](https://github.com/atls/hyperion/commit/ff04ea97e10efa26d27a27c37337e5afc62e47bb))
+- **common:** upgrade deps ([1b2d2fa](https://github.com/atls/hyperion/commit/1b2d2fac134ec0c834b9410dcf783d2a80278691))
+- **react:** major upgrade ([f383b36](https://github.com/atls/hyperion/commit/f383b36618f9daa1b137b394de7a55a03bec25b4))
+- reinit card ([c4ded76](https://github.com/atls/hyperion/commit/c4ded76f8eeb0377fe247974e942d94fafe0fc69))
+- **ui-parts:** add create-container-styles util to theme ([#590](https://github.com/atls/hyperion/issues/590)) ([34064a3](https://github.com/atls/hyperion/commit/34064a384192b781fd6d667857f568d4f42228a4))
+- updated @atls-ui-parts/card ([e35460a](https://github.com/atls/hyperion/commit/e35460a83b7e3dad17952bbe8e961cd387dbf5c6))

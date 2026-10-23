@@ -1,1 +1,1 @@
-export * from './create-replacement-icon-colors.util.js'
+export * from './create-replacement-icon-colors.js'

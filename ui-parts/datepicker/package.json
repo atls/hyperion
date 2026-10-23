@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/datepicker",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -30,7 +30,7 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "storybook": "10.4.6",
-    "typescript": "5.5.4"
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "*",
@@ -50,6 +50,5 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts"
-  },
-  "typecheckSkipLibCheck": true
+  }
 }

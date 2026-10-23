@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-generators/locales",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -30,6 +30,5 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts"
-  },
-  "typecheckSkipLibCheck": true
+  }
 }

@@ -51,6 +51,8 @@ dist/
 # IDE
 
 .idea
+.vscode/
+/.yarn/sdks/
 
 # Generated from tests
 

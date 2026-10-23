@@ -12,7 +12,10 @@
     "build:server": "yarn service build",
     "dev": "storybook dev --config-dir ./src -p 3000",
     "prepack": "run build",
-    "start-image": "node dist/index.js"
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "express": "5.1.0"
   },
   "devDependencies": {
     "@atls-ui-parts/image": "workspace:*",
@@ -37,13 +40,12 @@
     "@vanilla-extract/webpack-plugin": "2.3.27",
     "cors": "2.8.5",
     "css-loader": "7.1.4",
-    "express": "5.1.0",
     "mini-css-extract-plugin": "2.10.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "storybook": "10.4.6",
     "style-loader": "4.0.0",
-    "typescript": "5.5.4",
+    "typescript": "5.9.3",
     "webpack": "5.107.2"
   }
 }

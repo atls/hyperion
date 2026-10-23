@@ -1,117 +1,55 @@
-
-
 # [1.2.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.1.0...@atls-ui-parts/modal@1.2.0) (2026-06-23)
-
 
 ### Features
 
-
-* **common:** upgrade dependencies ([7e73502](https://github.com/atls/hyperion/commit/7e73502b16318e20899da3867227543b39403689))
-
-
-
-
+- **common:** upgrade dependencies ([7e73502](https://github.com/atls/hyperion/commit/7e73502b16318e20899da3867227543b39403689))
 
 # [1.1.0](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.6...@atls-ui-parts/modal@1.1.0) (2025-10-30)
 
-
 ### Features
 
-
-* **ui-parts:** floating ui modal ([#635](https://github.com/atls/hyperion/issues/635)) ([cf3665d](https://github.com/atls/hyperion/commit/cf3665d8143b3880f38fe0207630ff0d7f3cc934))
-
-
-
-
+- **ui-parts:** floating ui modal ([#635](https://github.com/atls/hyperion/issues/635)) ([cf3665d](https://github.com/atls/hyperion/commit/cf3665d8143b3880f38fe0207630ff0d7f3cc934))
 
 ## [1.0.6](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.5...@atls-ui-parts/modal@1.0.6) (2025-10-25)
 
-
-
-
-
-
 ## [1.0.5](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.4...@atls-ui-parts/modal@1.0.5) (2025-10-09)
-
-
-
-
-
-
-
 
 ## [1.0.5] (2025-10-10)
 
-
 ### BREAKING CHANGES
 
-
-* Requires React version 18 or higher for proper component functionality
-
+- Requires React version 18 or higher for proper component functionality
 
 ## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.4...@atls-ui-parts/modal@1.0.4) (2025-09-30)
 
-
-
-
-
-
 ## [1.0.4](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.3...@atls-ui-parts/modal@1.0.4) (2025-04-29)
-
-
-
-
-
 
 ## [1.0.3](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.2...@atls-ui-parts/modal@1.0.3) (2025-04-28)
 
-
-
-
-
-
 ## [1.0.2](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.1...@atls-ui-parts/modal@1.0.2) (2025-02-23)
-
 
 ### Bug Fixes
 
-
-* **hyperion:** lintter and tests ([#593](https://github.com/atls/hyperion/issues/593)) ([a01c488](https://github.com/atls/hyperion/commit/a01c488064d6386f754aafd2eecb28a19396635e))
+- **hyperion:** lintter and tests ([#593](https://github.com/atls/hyperion/issues/593)) ([a01c488](https://github.com/atls/hyperion/commit/a01c488064d6386f754aafd2eecb28a19396635e))
 
 ### Features
 
-
-* **atls-ui:** bump rainbow sprinkles ([#595](https://github.com/atls/hyperion/issues/595)) ([be18713](https://github.com/atls/hyperion/commit/be1871351926c38605bbed4d7aa11a4759f80f3d))
-
-
-
-
+- **atls-ui:** bump rainbow sprinkles ([#595](https://github.com/atls/hyperion/issues/595)) ([be18713](https://github.com/atls/hyperion/commit/be1871351926c38605bbed4d7aa11a4759f80f3d))
 
 ## [1.0.1](https://github.com/atls/hyperion/compare/@atls-ui-parts/modal@1.0.1...@atls-ui-parts/modal@1.0.1) (2025-02-19)
 
-
 ### Bug Fixes
 
-
-* **hyperion:** lintter and tests ([#593](https://github.com/atls/hyperion/issues/593)) ([a01c488](https://github.com/atls/hyperion/commit/a01c488064d6386f754aafd2eecb28a19396635e))
-
-
-
-
+- **hyperion:** lintter and tests ([#593](https://github.com/atls/hyperion/issues/593)) ([a01c488](https://github.com/atls/hyperion/commit/a01c488064d6386f754aafd2eecb28a19396635e))
 
 ## 1.0.1 (2025-01-09)
 
-
 ### Bug Fixes
 
-
-* linter and typecheck ([e379724](https://github.com/atls/hyperion/commit/e379724b7dbf3c8cba2b0b94647239b0b37c5fb8))
-* peer dependencies ([d29080c](https://github.com/atls/hyperion/commit/d29080cb0950b04e65ab7755571e350d3450b4dd))
-* **ui:** typecheck ([1a2a36b](https://github.com/atls/hyperion/commit/1a2a36b8baeececd0b929dcdb94da3d38ae8ad1e))
+- linter and typecheck ([e379724](https://github.com/atls/hyperion/commit/e379724b7dbf3c8cba2b0b94647239b0b37c5fb8))
+- peer dependencies ([d29080c](https://github.com/atls/hyperion/commit/d29080cb0950b04e65ab7755571e350d3450b4dd))
+- **ui:** typecheck ([1a2a36b](https://github.com/atls/hyperion/commit/1a2a36b8baeececd0b929dcdb94da3d38ae8ad1e))
 
 ### Features
 
-
-* **ui-parts:** add create-container-styles util to theme ([#590](https://github.com/atls/hyperion/issues/590)) ([34064a3](https://github.com/atls/hyperion/commit/34064a384192b781fd6d667857f568d4f42228a4))
-
-
+- **ui-parts:** add create-container-styles util to theme ([#590](https://github.com/atls/hyperion/issues/590)) ([34064a3](https://github.com/atls/hyperion/commit/34064a384192b781fd6d667857f568d4f42228a4))

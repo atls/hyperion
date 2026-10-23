@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-admin/theme",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {
@@ -48,6 +48,5 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts"
-  },
-  "typecheckSkipLibCheck": true
+  }
 }

@@ -1,1 +1,1 @@
-export * from './create-replacements.util.cjs'
+export * from './create-replacements.cjs'
