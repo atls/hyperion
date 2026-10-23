@@ -52,6 +52,7 @@ export const Checkbox = ({
   const theme = useTheme()
   const [isChecked, setIsChecked] = useState<boolean>(checked ?? defaultChecked)
   const localChecked = checked ?? isChecked
+  const inputCheckedProps = checked === undefined ? { defaultChecked } : { checked }
 
   const inputRef = useRef<HTMLInputElement>(null)
   useImperativeHandle(ref, () => inputRef.current!, [])
@@ -64,6 +65,27 @@ export const Checkbox = ({
 
     input.indeterminate = indeterminate ?? false
   }, [indeterminate, localChecked])
+
+  useEffect(() => {
+    const input = inputRef.current
+    const form = input?.form
+
+    if (checked !== undefined || !input || !form) {
+      return undefined
+    }
+
+    const handleReset = (): void => {
+      queueMicrotask(() => {
+        setIsChecked(input.checked)
+      })
+    }
+
+    form.addEventListener('reset', handleReset)
+
+    return () => {
+      form.removeEventListener('reset', handleReset)
+    }
+  }, [checked])
 
   const isMarked = indeterminate || localChecked
   const stateAppearance = getCheckboxAppearance({
@@ -103,7 +125,7 @@ export const Checkbox = ({
         {...props}
         id={inputId}
         className={clsx(hiddenInputStyles, classNames?.hiddenInput)}
-        checked={localChecked}
+        {...inputCheckedProps}
         disabled={disabled}
         type='checkbox'
         onChange={handleChange}
