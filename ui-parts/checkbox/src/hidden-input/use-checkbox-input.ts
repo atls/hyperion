@@ -16,7 +16,6 @@ export const useCheckboxInput = ({
 }: Pick<CheckboxProps, 'checked' | 'defaultChecked' | 'indeterminate' | 'onChange' | 'ref'>) => {
   const [isChecked, setIsChecked] = useState<boolean>(checked ?? defaultChecked)
   const localChecked = checked ?? isChecked
-  const inputCheckedProps = checked === undefined ? { defaultChecked } : { checked }
 
   const inputRef = useRef<HTMLInputElement>(null)
   useImperativeHandle(ref, () => inputRef.current!, [])
@@ -28,26 +27,39 @@ export const useCheckboxInput = ({
     }
 
     input.indeterminate = indeterminate ?? false
-  }, [indeterminate, localChecked])
+
+    if (checked === undefined) {
+      input.defaultChecked = defaultChecked
+    }
+  }, [checked, defaultChecked, indeterminate, localChecked])
 
   useEffect(() => {
     const input = inputRef.current
-    const form = input?.form
+    const ownerDocument = input?.ownerDocument
 
-    if (checked !== undefined || !input || !form) {
+    if (checked !== undefined || !input || !ownerDocument) {
       return undefined
     }
 
-    const handleReset = (): void => {
+    let active = true
+
+    const handleReset = (event: Event): void => {
+      if (event.target !== input.form) {
+        return
+      }
+
       queueMicrotask(() => {
-        setIsChecked(input.checked)
+        if (active && !event.defaultPrevented) {
+          setIsChecked(input.checked)
+        }
       })
     }
 
-    form.addEventListener('reset', handleReset)
+    ownerDocument.addEventListener('reset', handleReset, true)
 
     return () => {
-      form.removeEventListener('reset', handleReset)
+      active = false
+      ownerDocument.removeEventListener('reset', handleReset, true)
     }
   }, [checked])
 
@@ -62,6 +74,6 @@ export const useCheckboxInput = ({
 
   return {
     checked: localChecked,
-    inputProps: { ref: inputRef, ...inputCheckedProps, onChange: handleChange },
+    inputProps: { ref: inputRef, checked: localChecked, onChange: handleChange },
   }
 }
