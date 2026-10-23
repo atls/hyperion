@@ -9,9 +9,11 @@ import { within }                from 'storybook/test'
 
 import { Column }                from '@atls-ui-parts/layout'
 import { Layout }                from '@atls-ui-parts/layout'
+import { lightTheme }            from '@atls-ui/theme'
 
 import { Checkbox }              from '../src/checkbox.component.js'
 import { checkboxShapes }        from '../src/index.js'
+import { checkboxAppearances }   from '../src/index.js'
 import { customBoxStyles }       from './styles.css.js'
 import { customCheckStyles }     from './styles.css.js'
 import { customContainerStyles } from './styles.css.js'
@@ -43,8 +45,9 @@ const meta: Meta<CheckboxProps> = {
     },
     appearance: {
       name: 'Appearance',
-      description: 'Overrides appearance for checked and unchecked states',
-      control: { type: 'object' },
+      description: 'Named appearance or a custom state matrix',
+      control: { type: 'select' },
+      options: Object.keys(checkboxAppearances),
     },
     shape: {
       name: 'Shape',
@@ -113,5 +116,30 @@ export const Custom: Story = {
     await userEvent.click(checkbox)
 
     await expect(checkbox).not.toBeChecked()
+  },
+}
+
+const customAppearance = checkboxAppearances.default(lightTheme, 'sm')
+
+export const CustomAppearance: Story = {
+  name: 'Custom appearance',
+  argTypes: {
+    appearance: { control: false },
+  },
+  args: {
+    indeterminate: true,
+    indeterminateIcon: '−',
+    children: 'Custom appearance',
+    appearance: {
+      ...customAppearance,
+      indeterminate: {
+        ...customAppearance.checked,
+        default: {
+          ...customAppearance.checked.default,
+          backgroundColor: lightTheme.colors.status.success,
+          borderColor: lightTheme.colors.status.success,
+        },
+      },
+    },
   },
 }
