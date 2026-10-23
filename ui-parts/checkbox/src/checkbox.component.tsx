@@ -46,6 +46,7 @@ export const Checkbox = ({
   children,
   ref,
   id,
+  style,
   ...props
 }: CheckboxProps): ReactNode => {
   const theme = useTheme()
@@ -89,7 +90,7 @@ export const Checkbox = ({
 
   return (
     <div
-      style={{ gap: shape.gap }}
+      style={{ gap: shape.gap, ...style }}
       className={clsx(
         containerBaseStyles,
         containerPositionStyles[labelPosition],
