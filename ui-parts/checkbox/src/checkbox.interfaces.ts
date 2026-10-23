@@ -3,8 +3,8 @@ import type { Ref }                 from 'react'
 import type { ReactNode }           from 'react'
 
 import type { BoxShape }            from './box/index.js'
-import type { CheckboxAppearance }  from './box/styles/appearance/interfaces.js'
-import type { checkboxAppearances } from './box/styles/appearance/variants.js'
+import type { CheckboxAppearance }  from './styles/appearance/interfaces.js'
+import type { checkboxAppearances } from './styles/appearance/variants.js'
 
 export interface CheckboxClassNames {
   box?: string

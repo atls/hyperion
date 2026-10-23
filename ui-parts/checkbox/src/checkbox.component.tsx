@@ -1,30 +1,33 @@
-import type { ReactNode }          from 'react'
-import type { ChangeEvent }        from 'react'
+import type { ReactNode }           from 'react'
+import type { ChangeEvent }         from 'react'
 
-import type { CheckboxProps }      from './checkbox.interfaces.js'
+import type { CheckboxProps }       from './checkbox.interfaces.js'
 
-import { assignInlineVars }        from '@vanilla-extract/dynamic'
-import { clsx }                    from 'clsx'
-import { useEffect }               from 'react'
-import { useImperativeHandle }     from 'react'
-import { useRef }                  from 'react'
-import { useState }                from 'react'
-import { useId }                   from 'react'
+import { assignInlineVars }         from '@vanilla-extract/dynamic'
+import { clsx }                     from 'clsx'
+import { useEffect }                from 'react'
+import { useImperativeHandle }      from 'react'
+import { useRef }                   from 'react'
+import { useState }                 from 'react'
+import { useId }                    from 'react'
 
-import { useTheme }                from '@atls-ui-parts/theme'
+import { useTheme }                 from '@atls-ui-parts/theme'
 
-import { boxAppearanceStyles }     from './box/index.js'
-import { boxBaseStyles }           from './box/index.js'
-import { boxAppearanceVariables }  from './box/index.js'
-import { getCheckboxAppearance }   from './box/index.js'
-import { checkBaseStyles }         from './check/index.js'
-import { checkVisibleStyles }      from './check/index.js'
-import { containerBaseStyles }     from './container/index.js'
-import { containerPositionStyles } from './container/index.js'
-import { hiddenInputStyles }       from './hidden-input/index.js'
-import { labelAppearanceStyles }   from './label/index.js'
-import { labelPositionStyles }     from './label/index.js'
-import { checkboxShapes }          from './styles/index.js'
+import { boxAppearanceStyles }      from './box/index.js'
+import { boxBaseStyles }            from './box/index.js'
+import { boxAppearanceVariables }   from './box/index.js'
+import { checkAppearanceVariables } from './check/index.js'
+import { checkAppearanceStyles }    from './check/index.js'
+import { checkBaseStyles }          from './check/index.js'
+import { checkVisibleStyles }       from './check/index.js'
+import { containerBaseStyles }      from './container/index.js'
+import { containerPositionStyles }  from './container/index.js'
+import { hiddenInputStyles }        from './hidden-input/index.js'
+import { labelAppearanceVariables } from './label/index.js'
+import { labelAppearanceStyles }    from './label/index.js'
+import { labelPositionStyles }      from './label/index.js'
+import { getCheckboxAppearance }    from './styles/index.js'
+import { checkboxShapes }           from './styles/index.js'
 
 export const Checkbox = ({
   onChange,
@@ -105,13 +108,15 @@ export const Checkbox = ({
       <div
         className={clsx(boxBaseStyles, boxAppearanceStyles, shape.box.className, classNames?.box)}
         style={{
-          ...assignInlineVars(boxAppearanceVariables, stateAppearance),
+          ...assignInlineVars(boxAppearanceVariables, stateAppearance.box),
           padding: shape.box.padding,
         }}
       >
         <div
+          style={assignInlineVars(checkAppearanceVariables, stateAppearance.check)}
           className={clsx(
             checkBaseStyles,
+            checkAppearanceStyles,
             shape.check,
             isMarked && checkVisibleStyles,
             classNames?.check
@@ -121,6 +126,7 @@ export const Checkbox = ({
         </div>
       </div>
       <label
+        style={assignInlineVars(labelAppearanceVariables, stateAppearance.label)}
         htmlFor={inputId}
         className={clsx(
           shape.label,

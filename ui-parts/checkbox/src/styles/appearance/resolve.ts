@@ -1,6 +1,6 @@
 import type { Theme }                    from '@atls-ui/theme'
 
-import type { BoxShape }                 from '../shape/interfaces.js'
+import type { BoxShape }                 from '../../box/styles/shape/interfaces.js'
 import type { CheckboxAppearance }       from './interfaces.js'
 import type { CheckboxAppearanceStates } from './interfaces.js'
 
