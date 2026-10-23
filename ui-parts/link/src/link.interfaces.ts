@@ -5,7 +5,8 @@ import type { Ref }                        from 'react'
 import type { LinkSprinkles }              from './link.css.js'
 
 export interface LinkProps
-  extends LinkSprinkles,
+  extends
+    LinkSprinkles,
     BaseLinkProps,
     Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof BaseLinkProps | 'color'> {
   ref?: Ref<HTMLAnchorElement>

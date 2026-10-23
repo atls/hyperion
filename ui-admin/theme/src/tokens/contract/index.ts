@@ -20,12 +20,12 @@ export const themeContract = {
   space: spaceContract,
 }
 
-export type { BordersTokens } from './borders.js'
-export type { ColorsTokens } from './colors.js'
-export type { FontSizesTokens } from './font-sizes.js'
+export type { BordersTokens }     from './borders.js'
+export type { ColorsTokens }      from './colors.js'
+export type { FontSizesTokens }   from './font-sizes.js'
 export type { FontWeightsTokens } from './font-weights.js'
-export type { FontsTokens } from './fonts.js'
+export type { FontsTokens }       from './fonts.js'
 export type { LineHeightsTokens } from './line-heights.js'
-export type { RadiiTokens } from './radii.js'
-export type { ShadowsTokens } from './shadows.js'
-export type { SpaceTokens } from './space.js'
+export type { RadiiTokens }       from './radii.js'
+export type { ShadowsTokens }     from './shadows.js'
+export type { SpaceTokens }       from './space.js'

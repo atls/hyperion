@@ -1,5 +1,5 @@
-import { globalStyle } from '@vanilla-extract/css'
-import { style }       from '@vanilla-extract/css'
+import { globalStyle }  from '@vanilla-extract/css'
+import { style }        from '@vanilla-extract/css'
 
 import { borderStyles } from '@atls-ui/theme/tokens'
 import { borderWidths } from '@atls-ui/theme/tokens'

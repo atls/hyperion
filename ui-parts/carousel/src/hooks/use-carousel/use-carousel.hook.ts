@@ -1,21 +1,21 @@
-import type { DraggableProps }            from 'framer-motion'
-import type { DragHandlers }              from 'framer-motion'
-import type { ReactElement }              from 'react'
+import type { MotionNodeDragHandlers }     from 'framer-motion'
+import type { MotionNodeDraggableOptions } from 'framer-motion'
+import type { ReactElement }               from 'react'
 
-import type { UseCarouselProps }          from './use-carousel.interfaces.js'
-import type { UseCarouselResult }         from './use-carousel.interfaces.js'
-import type { GetSlideStylesReturn }      from './use-carousel.interfaces.js'
-import type { CarouselSlideToIndex }      from './use-carousel.interfaces.js'
-import type { CarouselSlideToTwoIndexes } from './use-carousel.interfaces.js'
+import type { UseCarouselProps }           from './use-carousel.interfaces.js'
+import type { UseCarouselResult }          from './use-carousel.interfaces.js'
+import type { GetSlideStylesReturn }       from './use-carousel.interfaces.js'
+import type { CarouselSlideToIndex }       from './use-carousel.interfaces.js'
+import type { CarouselSlideToTwoIndexes }  from './use-carousel.interfaces.js'
 
-import { Children }                       from 'react'
-import { useAnimation }                   from 'framer-motion'
-import { cloneElement }                   from 'react'
-import { useState }                       from 'react'
-import { useEffect }                      from 'react'
+import { Children }                        from 'react'
+import { useAnimation }                    from 'framer-motion'
+import { cloneElement }                    from 'react'
+import { useState }                        from 'react'
+import { useEffect }                       from 'react'
 
-import { getContentDimensions }           from '@atls-ui-parts/dom'
-import { useWindowSize }                  from '@atls-ui-parts/dom'
+import { getContentDimensions }            from '@atls-ui-parts/dom'
+import { useWindowSize }                   from '@atls-ui-parts/dom'
 
 const swipePower = (offset: number, velocity: number): number => Math.abs(offset) * velocity
 
@@ -207,7 +207,7 @@ export const useCarousel = ({
     setActiveSlide(indexes[1].index)
   }
 
-  const onDragEnd: DragHandlers['onDragEnd'] = (e, { offset, velocity }): void => {
+  const onDragEnd: MotionNodeDragHandlers['onDragEnd'] = (e, { offset, velocity }): void => {
     const swipe =
       direction === 'horizontal'
         ? swipePower(offset.x, velocity.x)
@@ -253,7 +253,7 @@ export const useCarousel = ({
     }
   }
 
-  const getDragConstraints = (): DraggableProps => {
+  const getDragConstraints = (): MotionNodeDraggableOptions => {
     const constraint =
       (activeSlide * -wrapperSize) / slidesPerView -
       (spaceBetween / slidesPerView) * activeSlide +

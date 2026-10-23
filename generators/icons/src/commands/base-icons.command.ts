@@ -1,6 +1,6 @@
 /* eslint-disable n/no-sync */
 
-import type { ResolvedIconsPath } from '../icons.interfaces.js'
+import type { ResolvedIconsPath } from '../interfaces.js'
 
 import assert                     from 'node:assert/strict'
 import fs                         from 'node:fs'
@@ -49,6 +49,7 @@ export class BaseIconsCommand extends Command {
       this.resolvePaths()
     } catch (error) {
       this.logger.error(error)
+      process.exitCode = 1
     }
   }
 }

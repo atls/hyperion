@@ -38,6 +38,7 @@ export class GenerateReplacementsCommand extends BaseIconsCommand {
       this.logger.info(`Generated into ${outputFilePath}`)
     } catch (error) {
       this.logger.error(error)
+      process.exitCode = 1
     }
   }
 }

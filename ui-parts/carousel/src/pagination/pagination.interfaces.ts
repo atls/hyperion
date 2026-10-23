@@ -14,8 +14,7 @@ export interface ActiveStyles {
 }
 
 export interface PaginationProps
-  extends Omit<HTMLAttributes<HTMLDivElement>, 'color'>,
-    PaginationSprinkles {
+  extends Omit<HTMLAttributes<HTMLDivElement>, 'color'>, PaginationSprinkles {
   active?: boolean
   activeStyleOptions?: ActiveStyles
   ref?: Ref<HTMLDivElement>

@@ -1,0 +1,35 @@
+import type { Config }     from '@svgr/core'
+
+import type { SvgrPlugin } from './interfaces.js'
+
+import { createRequire }   from 'node:module'
+
+import { svgrTemplate }    from './template.js'
+
+const require = createRequire(import.meta.url)
+
+const svgoPlugin = require('@svgr/plugin-svgo') as SvgrPlugin
+
+const jsxPlugin = require('@svgr/plugin-jsx') as SvgrPlugin
+
+const prettierPlugin = require('@svgr/plugin-prettier') as SvgrPlugin
+
+const svgrTransformPlugins = [svgoPlugin, jsxPlugin, prettierPlugin]
+
+export const MASK_ID_PATTERN = /mask0/g
+export const PROPS_SPREAD_FROM = '...props'
+export const PROPS_SPREAD_TO = '...otherProps'
+
+export const FIFTY_PLUS_PATTERN = '50+'
+export const FIFTY_PLUS_REPLACEMENT = 'FiftyPlus'
+
+export const svgrTransformConfig: Config = {
+  icon: true,
+  typescript: true,
+  template: svgrTemplate,
+  plugins: svgrTransformPlugins,
+  svgProps: {
+    className: `{clsx(className, String(otherProps.className || ''))}`,
+    style: '{iconStyle}',
+  },
+}

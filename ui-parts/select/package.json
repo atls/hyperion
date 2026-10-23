@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-parts/select",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -16,7 +16,7 @@
     "@atls-ui-parts/theme": "workspace:*",
     "@atls-utils/use-select": "workspace:*",
     "clsx": "2.1.1",
-    "framer-motion": "12.23.22"
+    "framer-motion": "12.43.0"
   },
   "devDependencies": {
     "@atls-ui-parts/layout": "workspace:*",
@@ -27,7 +27,7 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "storybook": "10.4.6",
-    "typescript": "5.5.4"
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "*",
@@ -47,6 +47,5 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts"
-  },
-  "typecheckSkipLibCheck": true
+  }
 }

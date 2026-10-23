@@ -2,6 +2,12 @@ export type RadiiTokens = Record<keyof typeof radiiContract, string>
 
 export const radiiContract = {
   none: null,
+  xs3: null,
+  xs2: null,
+  xs: null,
+  sm: null,
+  md: null,
+  lg: null,
   full: null,
   f1: null,
   f2: null,
