@@ -3,6 +3,7 @@ import type { StoryObj }         from '@storybook/react'
 
 import type { CheckboxProps }    from '../src/checkbox.interfaces.js'
 
+import { useArgs }               from 'storybook/preview-api'
 import { expect }                from 'storybook/test'
 import { userEvent }             from 'storybook/test'
 import { within }                from 'storybook/test'
@@ -11,8 +12,8 @@ import { Column }                from '@atls-ui-parts/layout'
 import { Layout }                from '@atls-ui-parts/layout'
 
 import { Checkbox }              from '../src/checkbox.component.js'
-import { checkboxAppearances }   from '../src/index.js'
 import { checkboxShapes }        from '../src/index.js'
+import { checkboxAppearances }   from '../src/index.js'
 import { customBoxStyles }       from './styles.css.js'
 import { customCheckStyles }     from './styles.css.js'
 import { customContainerStyles } from './styles.css.js'
@@ -20,30 +21,49 @@ import { customLabelStyles }     from './styles.css.js'
 
 const meta: Meta<CheckboxProps> = {
   title: 'Components/Checkbox',
-  render: (props) => (
-    <Column fill alignItems='center'>
-      <Layout flexBasis='40px' />
-      <Checkbox {...props} />
-      <Layout flexBasis='40px' />
-    </Column>
-  ),
+  render: function Render(props) {
+    const [{ checked, indeterminate }, updateArgs] = useArgs<CheckboxProps>()
+
+    return (
+      <Column fill alignItems='center'>
+        <Layout flexBasis='40px' />
+        <Checkbox
+          {...props}
+          checked={checked}
+          indeterminate={indeterminate}
+          onChange={(event) => {
+            updateArgs({ checked: event.currentTarget.checked, indeterminate: false })
+            props.onChange?.(event)
+          }}
+        />
+        <Layout flexBasis='40px' />
+      </Column>
+    )
+  },
   tags: ['autodocs'],
   argTypes: {
-    active: {
-      name: 'Active',
+    checked: {
+      name: 'Checked',
       description: 'Is the checkbox checked',
+      control: { type: 'boolean' },
+    },
+    indeterminate: {
+      name: 'Indeterminate',
+      control: { type: 'boolean' },
+    },
+    disabled: {
+      name: 'Disabled',
       control: { type: 'boolean' },
     },
     appearance: {
       name: 'Appearance',
-      description: 'Color of the divider',
+      description: 'Named appearance or a custom state matrix',
       control: { type: 'select' },
       options: Object.keys(checkboxAppearances),
-      mapping: checkboxAppearances,
     },
     shape: {
       name: 'Shape',
-      description: 'Size of the divider',
+      description: 'Checkbox, mark, and label sizes',
       control: { type: 'select' },
       options: Object.keys(checkboxShapes),
       mapping: checkboxShapes,
@@ -64,11 +84,9 @@ type Story = StoryObj<CheckboxProps>
 export const Base: Story = {
   name: 'Базовый',
   args: {
-    onCheck: () => undefined,
-    active: false,
+    checked: false,
     labelPosition: 'start',
-    appearance: checkboxAppearances.blue,
-    shape: checkboxShapes.medium,
+    shape: checkboxShapes.md,
     children: 'Checkbox Label',
   },
 }
@@ -76,10 +94,9 @@ export const Base: Story = {
 export const Custom: Story = {
   name: 'Кастомный',
   args: {
-    defaultActive: true,
+    checked: true,
     labelPosition: 'end',
-    appearance: checkboxAppearances.blue,
-    shape: checkboxShapes.medium,
+    shape: checkboxShapes.md,
     checkedIcon: '✓',
     classNames: {
       box: customBoxStyles,
