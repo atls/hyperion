@@ -11,6 +11,8 @@ import { useRef }                   from 'react'
 import { useState }                 from 'react'
 import { useId }                    from 'react'
 
+import { CheckIcon }                from '@atls-ui-parts/icons'
+import { MinusIcon }                from '@atls-ui-parts/icons'
 import { useTheme }                 from '@atls-ui-parts/theme'
 
 import { boxAppearanceStyles }      from './box/index.js'
@@ -72,7 +74,7 @@ export const Checkbox = ({
     indeterminate,
   })
 
-  const mark = indeterminate ? indeterminateIcon : checkedIcon
+  const mark = indeterminate ? (indeterminateIcon ?? <MinusIcon />) : (checkedIcon ?? <CheckIcon />)
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const nextChecked = event.currentTarget.checked
