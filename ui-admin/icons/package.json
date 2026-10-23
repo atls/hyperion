@@ -1,6 +1,6 @@
 {
   "name": "@atls-ui-admin/icons",
-  "version": "1.1.0",
+  "version": "1.2.2",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "yarn library build",
+    "check-generated": "yarn workspace @atls-ui-generators/icons node --import tsx ../../ui-admin/icons/lib/generated/check/cli.ts",
     "generate-icons": "yarn workspace @atls-ui-generators/icons generate-icons ../../ui-admin/icons/src/icons -i ../../ui-admin/icons/svg -r ../../ui-admin/icons/src/replacements.ts && yarn format",
     "generate-replacements": "yarn workspace @atls-ui-generators/icons generate-icons replacements ../../ui-admin/icons/src -i ../../ui-admin/icons/svg && yarn format",
     "prepack": "yarn run build",
@@ -31,7 +32,7 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "storybook": "10.4.6",
-    "typescript": "5.5.4"
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "*",
@@ -52,6 +53,5 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts"
-  },
-  "typecheckSkipLibCheck": true
+  }
 }

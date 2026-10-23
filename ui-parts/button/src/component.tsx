@@ -41,13 +41,7 @@ export const Button = ({
       type='button'
       {...props}
       style={assignButtonVariables(resolvedAppearance, shape, theme, style)}
-      className={clsx(
-        baseStyles,
-        appearanceStyles,
-        shape,
-        fullWidth && fullWidthStyles,
-        className
-      )}
+      className={clsx(baseStyles, appearanceStyles, shape, fullWidth && fullWidthStyles, className)}
     >
       <span className={clsx(contentStyles, fullWidth && fullWidthContentStyles)}>
         <Addons position='leading' reserveSpace={fullWidth}>

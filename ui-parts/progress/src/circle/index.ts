@@ -1,2 +1,2 @@
-export * from './circle.component.js'
+export *      from './circle.component.js'
 export type * from './circle.interfaces.js'
