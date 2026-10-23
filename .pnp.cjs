@@ -253,7 +253,7 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-admin/text", ["workspace:ui-admin/text"]],\
     ["@atls-ui-admin/theme", ["virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#workspace:ui-admin/theme", "virtual:b32a26a2fdb9efe95b0d3c1680d4b91fdda6b5202d080748278d5d418cc8670dced3df8a9ed2862d4501349fbf99cee1cc30a7bdbef4b607caffd1b77c40d6b4#workspace:ui-admin/theme", "workspace:ui-admin/theme"]],\
     ["@atls-ui-admin/upload", ["workspace:ui-admin/upload"]],\
-    ["@atls-ui-generators/appearance", ["virtual:a9332576c7d14f9af272f44f09e153c63f49c8324c6ccaaf7552127dd7a897436a4782f545f3eaba4decf1b26740b8a328de202cc4c8f00a7c2b384d377f46ab#workspace:generators/appearance", "workspace:generators/appearance"]],\
+    ["@atls-ui-generators/appearance", ["workspace:generators/appearance"]],\
     ["@atls-ui-generators/components", ["workspace:generators/components"]],\
     ["@atls-ui-generators/icons", ["workspace:generators/icons"]],\
     ["@atls-ui-generators/locales", ["workspace:generators/locales"]],\
@@ -743,38 +743,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@atls-ui-generators/appearance", [\
-      ["virtual:a9332576c7d14f9af272f44f09e153c63f49c8324c6ccaaf7552127dd7a897436a4782f545f3eaba4decf1b26740b8a328de202cc4c8f00a7c2b384d377f46ab#workspace:generators/appearance", {\
-        "packageLocation": "./.yarn/__virtual__/@atls-ui-generators-appearance-virtual-edf42ec57b/1/generators/appearance/",\
-        "packageDependencies": [\
-          ["@atls-ui-generators/appearance", "virtual:a9332576c7d14f9af272f44f09e153c63f49c8324c6ccaaf7552127dd7a897436a4782f545f3eaba4decf1b26740b8a328de202cc4c8f00a7c2b384d377f46ab#workspace:generators/appearance"],\
-          ["@atls-ui-generators/utils", "workspace:generators/utils"],\
-          ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
-          ["@swc-node/register", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#npm:1.9.0"],\
-          ["@swc/core", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#npm:1.6.1"],\
-          ["@types/node", "npm:22.15.3"],\
-          ["@types/react", "npm:19.1.2"],\
-          ["@types/react-dom", null],\
-          ["@types/vanilla-extract__css", null],\
-          ["@types/vanilla-extract__dynamic", null],\
-          ["@vanilla-extract/css", "npm:1.17.1"],\
-          ["@vanilla-extract/dynamic", "npm:2.1.2"],\
-          ["commander", "npm:13.1.0"],\
-          ["react", "npm:19.1.0"],\
-          ["react-dom", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:19.1.0"],\
-          ["tsx", "npm:4.19.3"],\
-          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
-        ],\
-        "packagePeers": [\
-          "@types/react-dom",\
-          "@types/vanilla-extract__css",\
-          "@types/vanilla-extract__dynamic",\
-          "@vanilla-extract/css",\
-          "@vanilla-extract/dynamic",\
-          "react-dom",\
-          "react"\
-        ],\
-        "linkType": "SOFT"\
-      }],\
       ["workspace:generators/appearance", {\
         "packageLocation": "./generators/appearance/",\
         "packageDependencies": [\
@@ -1042,10 +1010,11 @@ const RAW_RUNTIME_STATE =
       ["workspace:ui-parts/checkbox", {\
         "packageLocation": "./ui-parts/checkbox/",\
         "packageDependencies": [\
-          ["@atls-ui-generators/appearance", "virtual:a9332576c7d14f9af272f44f09e153c63f49c8324c6ccaaf7552127dd7a897436a4782f545f3eaba4decf1b26740b8a328de202cc4c8f00a7c2b384d377f46ab#workspace:generators/appearance"],\
           ["@atls-ui-parts/checkbox", "workspace:ui-parts/checkbox"],\
+          ["@atls-ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons"],\
           ["@atls-ui-parts/layout", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#workspace:ui-parts/layout"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
+          ["@atls-ui/theme", "workspace:ui/theme"],\
           ["@storybook/react", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:10.4.6"],\
           ["@types/react", "npm:19.1.2"],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
