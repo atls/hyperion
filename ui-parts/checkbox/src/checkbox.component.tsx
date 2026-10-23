@@ -1,31 +1,30 @@
-import type { ReactNode }              from 'react'
-import type { ChangeEvent }            from 'react'
+import type { ReactNode }          from 'react'
+import type { ChangeEvent }        from 'react'
 
-import type { CheckboxProps }          from './checkbox.interfaces.js'
-import type { CheckboxSelectionState } from './checkbox.interfaces.js'
+import type { CheckboxProps }      from './checkbox.interfaces.js'
 
-import { clsx }                        from 'clsx'
-import { useEffect }                   from 'react'
-import { useImperativeHandle }         from 'react'
-import { useRef }                      from 'react'
-import { useState }                    from 'react'
-import { useId }                       from 'react'
+import { assignInlineVars }        from '@vanilla-extract/dynamic'
+import { clsx }                    from 'clsx'
+import { useEffect }               from 'react'
+import { useImperativeHandle }     from 'react'
+import { useRef }                  from 'react'
+import { useState }                from 'react'
+import { useId }                   from 'react'
 
-import { useTheme }                    from '@atls-ui-parts/theme'
+import { useTheme }                from '@atls-ui-parts/theme'
 
-import { boxAppearanceStyles }         from './box/index.js'
-import { boxBaseStyles }               from './box/index.js'
-import { assignCheckboxVariables }     from './box/index.js'
-import { createDefaultAppearance }     from './box/index.js'
-import { resolveCheckboxAppearance }   from './box/index.js'
-import { checkBaseStyles }             from './check/index.js'
-import { checkVisibleStyles }          from './check/index.js'
-import { containerBaseStyles }         from './container/index.js'
-import { containerPositionStyles }     from './container/index.js'
-import { hiddenInputStyles }           from './hidden-input/index.js'
-import { labelAppearanceStyles }       from './label/index.js'
-import { labelPositionStyles }         from './label/index.js'
-import { checkboxShapes }              from './styles/index.js'
+import { boxAppearanceStyles }     from './box/index.js'
+import { boxBaseStyles }           from './box/index.js'
+import { boxAppearanceVariables }  from './box/index.js'
+import { getCheckboxAppearance }   from './box/index.js'
+import { checkBaseStyles }         from './check/index.js'
+import { checkVisibleStyles }      from './check/index.js'
+import { containerBaseStyles }     from './container/index.js'
+import { containerPositionStyles } from './container/index.js'
+import { hiddenInputStyles }       from './hidden-input/index.js'
+import { labelAppearanceStyles }   from './label/index.js'
+import { labelPositionStyles }     from './label/index.js'
+import { checkboxShapes }          from './styles/index.js'
 
 export const Checkbox = ({
   onChange,
@@ -33,7 +32,7 @@ export const Checkbox = ({
   defaultChecked = false,
   disabled,
   indeterminate,
-  appearance,
+  appearance = 'default',
   shape = checkboxShapes.md,
   className,
   classNames,
@@ -62,21 +61,13 @@ export const Checkbox = ({
   }, [indeterminate, localChecked])
 
   const isMarked = indeterminate || localChecked
-  let appearanceState: CheckboxSelectionState = 'unchecked'
-
-  if (localChecked) {
-    appearanceState = 'checked'
-  }
-
-  if (indeterminate) {
-    appearanceState = 'indeterminate'
-  }
-
-  const defaultAppearance = createDefaultAppearance(theme, shape.box.elevationSize)
-  const resolvedAppearance = resolveCheckboxAppearance(
-    appearance ?? defaultAppearance,
-    appearanceState
-  )
+  const stateAppearance = getCheckboxAppearance({
+    appearance,
+    theme,
+    elevationSize: shape.box.elevationSize,
+    checked: localChecked,
+    indeterminate,
+  })
 
   const mark = indeterminate ? indeterminateIcon : checkedIcon
 
@@ -114,7 +105,7 @@ export const Checkbox = ({
       <div
         className={clsx(boxBaseStyles, boxAppearanceStyles, shape.box.className, classNames?.box)}
         style={{
-          ...assignCheckboxVariables(resolvedAppearance),
+          ...assignInlineVars(boxAppearanceVariables, stateAppearance),
           padding: shape.box.padding,
         }}
       >

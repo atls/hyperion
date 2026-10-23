@@ -1,21 +1,21 @@
-import { createVar }         from '@vanilla-extract/css'
-import { style }             from '@vanilla-extract/css'
+import { createThemeContract } from '@vanilla-extract/css'
+import { style }               from '@vanilla-extract/css'
 
-import { hiddenInputStyles } from '../../../hidden-input/index.js'
+import { hiddenInputStyles }   from '../../../hidden-input/index.js'
 
-const createStateVariables = () => ({
-  backgroundColor: createVar(),
-  borderColor: createVar(),
-  markColor: createVar(),
-  shadow: createVar(),
+const appearanceValues = {
+  backgroundColor: null,
+  borderColor: null,
+  markColor: null,
+  shadow: null,
+}
+
+export const boxAppearanceVariables = createThemeContract({
+  default: appearanceValues,
+  hover: appearanceValues,
+  disabled: appearanceValues,
+  focused: appearanceValues,
 })
-
-export const boxAppearanceVariables = {
-  default: createStateVariables(),
-  hover: createStateVariables(),
-  disabled: createStateVariables(),
-  focused: createStateVariables(),
-} as const
 
 export const boxAppearanceStyles = style({
   backgroundColor: boxAppearanceVariables.default.backgroundColor,
