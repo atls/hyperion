@@ -19,6 +19,7 @@ export type CheckboxShapeName = 'lg' | 'md' | 'sm'
 export interface CheckboxShape {
   box: BoxShape
   check: string
+  gap: string
   label: string
 }
 

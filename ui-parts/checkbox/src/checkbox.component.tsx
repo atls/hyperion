@@ -27,7 +27,6 @@ import { containerPositionStyles }  from './container/index.js'
 import { hiddenInputStyles }        from './hidden-input/index.js'
 import { labelAppearanceVariables } from './label/index.js'
 import { labelAppearanceStyles }    from './label/index.js'
-import { labelPositionStyles }      from './label/index.js'
 import { getCheckboxAppearance }    from './styles/index.js'
 import { checkboxShapes }           from './styles/index.js'
 
@@ -90,6 +89,7 @@ export const Checkbox = ({
 
   return (
     <div
+      style={{ gap: shape.gap }}
       className={clsx(
         containerBaseStyles,
         containerPositionStyles[labelPosition],
@@ -130,12 +130,7 @@ export const Checkbox = ({
       <label
         style={assignInlineVars(labelAppearanceVariables, stateAppearance.label)}
         htmlFor={inputId}
-        className={clsx(
-          shape.label,
-          labelAppearanceStyles,
-          labelPositionStyles[labelPosition],
-          classNames?.label
-        )}
+        className={clsx(shape.label, labelAppearanceStyles, classNames?.label)}
       >
         {children}
       </label>
