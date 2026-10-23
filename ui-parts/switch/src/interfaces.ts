@@ -6,8 +6,10 @@ import type { SwitchAppearance }     from './styles/appearance/interfaces.js'
 
 export type SwitchShape = string
 
-export interface SwitchProps
-  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children' | 'onChange'> {
+export interface SwitchProps extends Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  'children' | 'onChange'
+> {
   appearance?: SwitchAppearance
   checked?: boolean
   defaultChecked?: boolean
