@@ -1285,7 +1285,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/raijin@npm:2.1.1":
+"@atls/raijin@npm:latest":
   version: 2.1.1
   resolution: "@atls/raijin@npm:2.1.1"
   dependencies:
@@ -10129,7 +10129,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hyperion@workspace:."
   dependencies:
-    "@atls/raijin": "npm:2.1.1"
+    "@atls/raijin": "npm:latest"
     "@playwright/test": "npm:1.63.0"
     "@types/aria-query": "npm:5.0.4"
     "@types/chai": "npm:5.2.3"

@@ -23,7 +23,7 @@
     "@types/scheduler": "0.16.8"
   },
   "devDependencies": {
-    "@atls/raijin": "2.1.1",
+    "@atls/raijin": "latest",
     "@playwright/test": "1.63.0",
     "@types/aria-query": "5.0.4",
     "@types/chai": "5.2.3",
