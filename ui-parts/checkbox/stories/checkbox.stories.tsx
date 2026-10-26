@@ -84,7 +84,7 @@ type Story = StoryObj<CheckboxProps>
 export const Base: Story = {
   name: 'Базовый',
   args: {
-    checked: false,
+    defaultChecked: true,
     labelPosition: 'start',
     shape: checkboxShapes.md,
     children: 'Checkbox Label',
@@ -94,7 +94,7 @@ export const Base: Story = {
 export const Custom: Story = {
   name: 'Кастомный',
   args: {
-    checked: true,
+    defaultChecked: true,
     labelPosition: 'end',
     shape: checkboxShapes.md,
     checkedIcon: '✓',
