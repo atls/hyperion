@@ -74,6 +74,7 @@ export const Checkbox = ({
       />
       <div
         className={clsx(boxBaseStyles, boxAppearanceStyles, shape.box.className, classNames?.box)}
+        aria-hidden='true'
         style={{
           ...assignInlineVars(boxAppearanceVariables, stateAppearance.box),
           padding: shape.box.padding,
