@@ -5,6 +5,9 @@ export const checkBaseStyles = style({
   alignItems: 'center',
   justifyContent: 'center',
   visibility: 'hidden',
+  width: '100%',
+  height: '100%',
+  lineHeight: 1,
 })
 
 export const checkVisibleStyles = style({
