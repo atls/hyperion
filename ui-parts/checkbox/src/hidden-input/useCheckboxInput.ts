@@ -65,6 +65,7 @@ export const useCheckboxInput = ({
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const nextChecked = event.currentTarget.checked
+    event.currentTarget.indeterminate = indeterminate ?? false
 
     if (checked === undefined) {
       setIsChecked(nextChecked)
