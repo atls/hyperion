@@ -1,1 +1,1 @@
-export * from './hidden-input.css.js'
+export * from './hiddenInput.css.js'
