@@ -1,68 +1,48 @@
-import type { Meta }                  from '@storybook/react'
-import type { StoryObj }              from '@storybook/react'
+import type { Meta }              from '@storybook/react'
+import type { StoryObj }          from '@storybook/react'
 
-import { Condition }                  from '@atls-ui-parts/condition'
-import { Box }                        from '@atls-ui-parts/layout'
-import { Column }                     from '@atls-ui-parts/layout'
-import { Layout }                     from '@atls-ui-parts/layout'
+import type { PlaceholderProps }  from '../src/placeholder.interfaces.js'
 
-import { BackgroundImagePlaceholder } from '../src/background-image-placeholder/index.js'
-import { ImageBoxPlaceholder }        from '../src/image-box-placeholder/index.js'
-import { ImagePlaceholder }           from '../src/image-placeholder/index.js'
-import { LogoPlaceholder }            from '../src/logo-placeholder/index.js'
+import { ImagePlaceholderIcon }   from '@atls-ui-parts/icons'
 
-const placeholderTypes = [
-  'image',
-  'image-box',
-  'background-image',
-  'horizontal-logo',
-  'vertical-logo',
-] as const
+import { Placeholder }            from '../src/placeholder.component.js'
+import { placeholderAppearances } from '../src/styles/appearance/index.js'
+import { placeholderShapes }      from '../src/styles/shape/index.js'
 
-type StoryRenderProps = { type: (typeof placeholderTypes)[number] }
-
-const meta: Meta<StoryRenderProps> = {
+const meta: Meta<PlaceholderProps> = {
   title: 'Components/Placeholder',
-  render: ({ type }) => (
-    <Column fill alignItems='center' justifyContent='center'>
-      <Layout flexBasis='50px' />
-      <Condition match={type === 'image'}>
-        <ImagePlaceholder />
-      </Condition>
-      <Condition match={type === 'image-box'}>
-        <Box width='320px' height='160px'>
-          <ImageBoxPlaceholder />
-        </Box>
-      </Condition>
-      <Condition match={type === 'background-image'}>
-        <Box position='absolute' top={0} right={0} bottom={0} left={0}>
-          <BackgroundImagePlaceholder />
-        </Box>
-      </Condition>
-      <Condition match={type === 'horizontal-logo'}>
-        <LogoPlaceholder type='horizontal' />
-      </Condition>
-      <Condition match={type === 'vertical-logo'}>
-        <LogoPlaceholder type='vertical' />
-      </Condition>
-      <Layout flexBasis='50px' />
-    </Column>
-  ),
   tags: ['autodocs'],
+  render: (props) => <Placeholder {...props} />,
   argTypes: {
-    type: {
-      name: 'Тип',
-      description: 'Тип плейсхолдера',
-      control: { type: 'radio' },
-      options: placeholderTypes,
-      table: { category: 'Варианты' },
+    appearance: {
+      name: 'Appearance',
+      control: { type: 'select' },
+      options: Object.keys(placeholderAppearances),
+    },
+    shape: {
+      name: 'Shape',
+      control: { type: 'select' },
+      options: Object.keys(placeholderShapes),
+      mapping: placeholderShapes,
+    },
+    textPosition: {
+      name: 'Text position',
+      control: { type: 'select' },
+      options: ['top', 'bottom', 'left', 'right'],
     },
   },
 }
 
 export default meta
 
-export const Placeholder: StoryObj<StoryRenderProps> = {
+export const Base: StoryObj<PlaceholderProps> = {
   name: 'Базовый',
-  args: { type: 'image' },
+  args: {
+    appearance: 'default',
+    description: 'Попробуй изменить параметры поиска',
+    icon: <ImagePlaceholderIcon />,
+    shape: placeholderShapes.md,
+    textPosition: 'bottom',
+    title: 'Ничего не найдено',
+  },
 }
