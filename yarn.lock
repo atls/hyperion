@@ -313,7 +313,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-generators/appearance@workspace:*, @atls-ui-generators/appearance@workspace:generators/appearance":
+"@atls-ui-generators/appearance@workspace:generators/appearance":
   version: 0.0.0-use.local
   resolution: "@atls-ui-generators/appearance@workspace:generators/appearance"
   dependencies:
@@ -538,9 +538,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/checkbox@workspace:ui-parts/checkbox"
   dependencies:
-    "@atls-ui-generators/appearance": "workspace:*"
+    "@atls-ui-parts/icons": "workspace:*"
     "@atls-ui-parts/layout": "workspace:*"
     "@atls-ui-parts/theme": "workspace:*"
+    "@atls-ui/theme": "workspace:*"
     "@storybook/react": "npm:10.4.6"
     "@types/react": "npm:19.1.2"
     "@vanilla-extract/css": "npm:1.17.1"
@@ -552,6 +553,7 @@ __metadata:
     typescript: "npm:5.9.3"
   peerDependencies:
     "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -1284,8 +1286,8 @@ __metadata:
   linkType: hard
 
 "@atls/raijin@npm:latest":
-  version: 2.1.0
-  resolution: "@atls/raijin@npm:2.1.0"
+  version: 2.1.1
+  resolution: "@atls/raijin@npm:2.1.1"
   dependencies:
     "@angular-devkit/core": "npm:22.1.8"
     "@angular-devkit/schematics": "npm:22.1.8"
@@ -1308,7 +1310,7 @@ __metadata:
     husky: "npm:9.1.7"
     node-loader: "npm:2.1.0"
     prettier: "npm:3.9.8"
-    protocol-buffers-schema: "npm:3.6.0"
+    protocol-buffers-schema: "npm:3.6.1"
     rxjs: "npm:7.8.2"
     sort-package-json: "npm:4.0.0"
     strip-json-comments: "npm:3.1.1"
@@ -1318,7 +1320,7 @@ __metadata:
   bin:
     raijin: bin/raijin.js
     raijin-hooks: bin/raijin-hooks.js
-  checksum: 10/949cd26efb7ecc3fd6ec14f10504a99e0ec1e9fbb69ae5656f87a310d1fbd9b2780450955dd07414d813d343eef66bc0241ba252da9559bc414831b7cf7cb72b
+  checksum: 10/89f0821a3d94f971e7a2ecae433a1343cb6e3c8e03a2ed00642f79e3ad52e534095c8822121098732f0f0f889690472e5fa590474d2083525a781859d822e083
   languageName: node
   linkType: hard
 
@@ -13064,10 +13066,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"protocol-buffers-schema@npm:3.6.0":
-  version: 3.6.0
-  resolution: "protocol-buffers-schema@npm:3.6.0"
-  checksum: 10/55a1caed123fb2385eae5ea4770dc36b3017d1fe2005ffb1ef20c97dadf43a91876238ebc23bc240ef1f8501d054bdd9d12992796e9abed18ddf958e4f942eea
+"protocol-buffers-schema@npm:3.6.1":
+  version: 3.6.1
+  resolution: "protocol-buffers-schema@npm:3.6.1"
+  checksum: 10/a7ca74e71227932f903feab9df8ffde80703b656fd024179b3a9439edb3907eca4c78f0cd6f47ad7698e832ae565a8df7585d9cedcc4f043794e6ba8e480cdec
   languageName: node
   linkType: hard
 

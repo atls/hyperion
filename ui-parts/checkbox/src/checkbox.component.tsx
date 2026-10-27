@@ -1,124 +1,102 @@
-import type { KeyboardEvent }      from 'react'
-import type { MouseEvent }         from 'react'
-import type { ReactNode }          from 'react'
+import type { ReactNode }           from 'react'
 
-import type { CheckboxProps }      from './checkbox.interfaces.js'
+import type { CheckboxProps }       from './checkbox.interfaces.js'
 
-import { clsx }                    from 'clsx'
-import { useEffect }               from 'react'
-import { useState }                from 'react'
+import { assignInlineVars }         from '@vanilla-extract/dynamic'
+import { clsx }                     from 'clsx'
+import { useId }                    from 'react'
 
-import { boxBaseStyles }           from './box/index.js'
-import { checkBaseStyles }         from './check/index.js'
-import { checkCheckedStyles }      from './check/index.js'
-import { containerBaseStyles }     from './container/index.js'
-import { containerPositionStyles } from './container/index.js'
-import { hiddenInputStyles }       from './hidden-input/index.js'
-import { labelPositionStyles }     from './label/index.js'
-import { checkboxAppearances }     from './styles/index.js'
-import { checkboxShapes }          from './styles/index.js'
+import { useTheme }                 from '@atls-ui-parts/theme'
+
+import { Check }                    from './check/component.js'
+import { boxAppearanceStyles }      from './box/index.js'
+import { boxBaseStyles }            from './box/index.js'
+import { boxAppearanceVariables }   from './box/index.js'
+import { containerBaseStyles }      from './container/index.js'
+import { containerPositionStyles }  from './container/index.js'
+import { hiddenInputStyles }        from './hidden-input/index.js'
+import { useCheckboxInput }         from './hidden-input/useCheckboxInput.js'
+import { labelAppearanceVariables } from './label/index.js'
+import { labelAppearanceStyles }    from './label/index.js'
+import { getCheckboxAppearance }    from './styles/index.js'
+import { checkboxShapes }           from './styles/index.js'
 
 export const Checkbox = ({
-  onCheck,
-  children,
-  active,
-  defaultActive = false,
-  labelPosition = 'end',
-  appearance = checkboxAppearances.blue,
-  shape = checkboxShapes.medium,
-  icon,
-  checkedIcon = icon,
+  onChange,
+  checked,
+  defaultChecked = false,
+  disabled,
+  indeterminate,
+  appearance = 'default',
+  shape = checkboxShapes.md,
   className,
   classNames,
-  onClick,
-  onKeyDown,
+  labelPosition = 'end',
+  checkedIcon,
+  indeterminateIcon,
+  children,
   ref,
-  tabIndex,
+  id,
+  style,
   ...props
 }: CheckboxProps): ReactNode => {
-  const [isChecked, setIsChecked] = useState<boolean>(active ?? defaultActive)
-  const checked = active ?? isChecked
+  const theme = useTheme()
+  const input = useCheckboxInput({ checked, defaultChecked, indeterminate, onChange, ref })
 
-  useEffect(() => {
-    if (active !== undefined) {
-      setIsChecked(active)
-    }
-  }, [active])
+  const stateAppearance = getCheckboxAppearance({
+    appearance,
+    theme,
+    elevationSize: shape.box.elevationSize,
+    checked: input.checked,
+    indeterminate,
+  })
 
-  const handleCheck = (): void => {
-    const nextChecked = !checked
-
-    if (active === undefined) {
-      setIsChecked(nextChecked)
-    }
-
-    onCheck?.(nextChecked)
-  }
-
-  const handleClick = (event: MouseEvent<HTMLDivElement>): void => {
-    onClick?.(event)
-
-    if (!event.defaultPrevented) {
-      handleCheck()
-    }
-  }
-
-  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>): void => {
-    onKeyDown?.(event)
-
-    if (!event.defaultPrevented && event.key === ' ') {
-      event.preventDefault()
-      handleCheck()
-    }
-  }
+  const generatedId = useId()
+  const inputId = id ?? generatedId
 
   return (
     <div
-      {...props}
-      ref={ref}
-      role='checkbox'
-      aria-checked={checked}
-      tabIndex={tabIndex ?? 0}
+      style={{ gap: shape.gap, ...style }}
       className={clsx(
         containerBaseStyles,
         containerPositionStyles[labelPosition],
         classNames?.container,
         className
       )}
-      onClick={handleClick}
-      onKeyDown={handleKeyDown}
     >
       <input
-        readOnly
+        {...props}
+        id={inputId}
         className={clsx(hiddenInputStyles, classNames?.hiddenInput)}
-        checked={checked}
-        aria-hidden='true'
-        tabIndex={-1}
+        {...input.inputProps}
+        disabled={disabled}
         type='checkbox'
       />
-      <div className={clsx(boxBaseStyles, shape.box, appearance.box, classNames?.box)}>
-        <div
-          className={clsx(
-            checkBaseStyles,
-            shape.check,
-            appearance.check,
-            checked && checkCheckedStyles,
-            classNames?.check
-          )}
-        >
-          {checkedIcon}
-        </div>
-      </div>
       <div
-        className={clsx(
-          shape.label,
-          appearance.label,
-          labelPositionStyles[labelPosition],
-          classNames?.label
-        )}
+        className={clsx(boxBaseStyles, boxAppearanceStyles, shape.box.className, classNames?.box)}
+        aria-hidden='true'
+        style={{
+          ...assignInlineVars(boxAppearanceVariables, stateAppearance.box),
+          padding: shape.box.padding,
+        }}
+      >
+        <Check
+          appearance={stateAppearance.check}
+          checked={input.checked}
+          checkedIcon={checkedIcon}
+          className={classNames?.check}
+          indeterminate={indeterminate}
+          indeterminateIcon={indeterminateIcon}
+          shape={shape.check}
+        />
+      </div>
+      <label
+        style={assignInlineVars(labelAppearanceVariables, stateAppearance.label)}
+        htmlFor={inputId}
+        className={clsx(shape.label, labelAppearanceStyles, classNames?.label)}
       >
         {children}
-      </div>
+      </label>
     </div>
   )
 }
