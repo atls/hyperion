@@ -13,15 +13,11 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-ui-parts/condition": "workspace:*",
-    "@atls-ui-parts/dom": "workspace:*",
-    "@atls-ui-parts/layout": "workspace:*",
-    "clsx": "2.1.1",
-    "framer-motion": "12.43.0"
+    "@atls-ui-parts/theme": "workspace:*",
+    "@atls-ui/theme": "workspace:*",
+    "clsx": "2.1.1"
   },
   "devDependencies": {
-    "@atls-ui-parts/button": "workspace:*",
-    "@atls-ui-parts/condition": "workspace:*",
     "@storybook/react": "10.4.6",
     "@types/react": "19.1.2",
     "@types/react-dom": "19.1.2",
