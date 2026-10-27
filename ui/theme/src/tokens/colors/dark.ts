@@ -12,7 +12,7 @@ export const darkColors: Colors = {
     base: '#111111',
     subtle: '#171717',
     muted: '#1F1F1F',
-    soft: '#FFFFFF',
+    soft: '#1A1A1A',
     inverse: '#F8F9FF',
   },
   text: {
