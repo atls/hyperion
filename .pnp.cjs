@@ -1638,11 +1638,10 @@ const RAW_RUNTIME_STATE =
       ["workspace:ui-parts/placeholder", {\
         "packageLocation": "./ui-parts/placeholder/",\
         "packageDependencies": [\
-          ["@atls-ui-parts/condition", "virtual:9327d95985dbaa552b114b3d4e85ad244ec46c632fd10bba0eadffef89dbb7753d95ac2e47d1e17487a6c00d4d327fc50bbab27644c34e1dfc251376c43233e7#workspace:ui-parts/condition"],\
-          ["@atls-ui-parts/layout", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#workspace:ui-parts/layout"],\
+          ["@atls-ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons"],\
           ["@atls-ui-parts/placeholder", "workspace:ui-parts/placeholder"],\
-          ["@atls-ui-parts/text", "virtual:7728a79fcf2b0d64abc5cd65d0f9bef9c7053eb23c6ec2c4146d73676dd9b275527d8237cfcc28a43165f58666e2df983bbcfde049e0b205b6d72995bc2633f7#workspace:ui-parts/text"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
+          ["@atls-ui/theme", "workspace:ui/theme"],\
           ["@storybook/react", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#patch:@storybook/react@npm%3A10.4.6#~/.yarn/patches/@storybook-react-npm-10.4.6-574597d2a0.patch::version=10.4.6&hash=1496cc"],\
           ["@types/react", "npm:19.1.2"],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
