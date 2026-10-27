@@ -37,4 +37,9 @@ export const darkColors: Colors = {
     md: '#00000073',
     lg: '#00000099',
   },
+  main: {
+    black: '#000000',
+    transparent: 'transparent',
+    white: '#FFFFFF',
+  },
 }
