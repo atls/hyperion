@@ -159,10 +159,6 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:ui-parts/parallax"\
     },\
     {\
-      "name": "@atls-ui-parts/placeholder",\
-      "reference": "workspace:ui-parts/placeholder"\
-    },\
-    {\
       "name": "@atls-ui-parts/popover",\
       "reference": "workspace:ui-parts/popover"\
     },\
@@ -279,7 +275,6 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-parts/modal", ["workspace:ui-parts/modal"]],\
     ["@atls-ui-parts/next-image", ["workspace:ui-parts/next-image"]],\
     ["@atls-ui-parts/parallax", ["workspace:ui-parts/parallax"]],\
-    ["@atls-ui-parts/placeholder", ["workspace:ui-parts/placeholder"]],\
     ["@atls-ui-parts/popover", ["workspace:ui-parts/popover"]],\
     ["@atls-ui-parts/portal", ["workspace:ui-parts/portal"]],\
     ["@atls-ui-parts/progress", ["workspace:ui-parts/progress"]],\
@@ -1661,27 +1656,6 @@ const RAW_RUNTIME_STATE =
           ["rainbow-sprinkles", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:1.0.0"],\
           ["react", "npm:19.1.0"],\
           ["react-intersection-observer", "virtual:7320150afbbc6ec55c21089a059ead3646dc2bd28dc1432babd63921eeeadcf962f3f8817d239fb13ea9630091ad4c0b28f391a95d824050b78d6e9fdb83ee59#npm:9.16.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }]\
-    ]],\
-    ["@atls-ui-parts/placeholder", [\
-      ["workspace:ui-parts/placeholder", {\
-        "packageLocation": "./ui-parts/placeholder/",\
-        "packageDependencies": [\
-          ["@atls-ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons"],\
-          ["@atls-ui-parts/placeholder", "workspace:ui-parts/placeholder"],\
-          ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
-          ["@atls-ui/theme", "workspace:ui/theme"],\
-          ["@storybook/react", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#patch:@storybook/react@npm%3A10.4.6#~/.yarn/patches/@storybook-react-npm-10.4.6-574597d2a0.patch::version=10.4.6&hash=1496cc"],\
-          ["@types/react", "npm:19.1.2"],\
-          ["@vanilla-extract/css", "npm:1.17.1"],\
-          ["@vanilla-extract/dynamic", "npm:2.1.2"],\
-          ["clsx", "npm:2.1.1"],\
-          ["react", "npm:19.1.0"],\
-          ["react-dom", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:19.1.0"],\
-          ["storybook", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:10.4.6"],\
-          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
         ],\
         "linkType": "SOFT"\
       }]\
