@@ -1,11 +1,11 @@
 import type { Meta }       from '@storybook/react'
 import type { StoryObj }   from '@storybook/react'
 
-import type { CardProps }  from '../src/card.interfaces.js'
+import type { CardProps }  from './interfaces.js'
 
-import { Card }            from '../src/card.component.js'
-import { cardAppearances } from '../src/styles/appearance/index.js'
-import { cardShapes }      from '../src/styles/shape/index.js'
+import { Card }            from './component.js'
+import { cardAppearances } from './styles/appearance/index.js'
+import { cardShapes }      from './styles/shape/index.js'
 
 const meta: Meta<CardProps> = {
   title: 'Components/Card',

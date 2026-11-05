@@ -1,5 +1,5 @@
-export { Card }                     from './card.component.js'
-export type { CardProps }           from './card.interfaces.js'
+export { Card }                     from './component.js'
+export type { CardProps }           from './interfaces.js'
 export { cardAppearances }          from './styles/index.js'
 export { cardShapes }               from './styles/index.js'
 export type { CardAppearance }      from './styles/index.js'

@@ -1,7 +1,7 @@
 import type { ReactNode }        from 'react'
 import type { Ref }              from 'react'
 
-import type { CardProps }        from './card.interfaces.js'
+import type { CardProps }        from './interfaces.js'
 
 import { clsx }                  from 'clsx'
 
