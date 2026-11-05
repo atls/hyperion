@@ -1,8 +1,0 @@
-export { Placeholder }                  from './placeholder.component.js'
-export type { PlaceholderClassNames }   from './placeholder.interfaces.js'
-export type { PlaceholderProps }        from './placeholder.interfaces.js'
-export type { PlaceholderTextPosition } from './placeholder.interfaces.js'
-export { placeholderAppearances }       from './styles/index.js'
-export { placeholderShapes }            from './styles/index.js'
-export type { PlaceholderAppearance }   from './styles/index.js'
-export type { PlaceholderShape }        from './styles/index.js'

@@ -1,5 +1,0 @@
-export type { PlaceholderAppearance }   from './appearance/index.js'
-export { placeholderAppearances }       from './appearance/index.js'
-export { resolvePlaceholderAppearance } from './appearance/index.js'
-export type { PlaceholderShape }        from './shape/index.js'
-export { placeholderShapes }            from './shape/index.js'
