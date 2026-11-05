@@ -37,4 +37,9 @@ export const lightColors: Colors = {
     md: '#0000001F',
     lg: '#0000004D',
   },
+  main: {
+    black: '#000000',
+    transparent: 'transparent',
+    white: '#FFFFFF',
+  },
 }

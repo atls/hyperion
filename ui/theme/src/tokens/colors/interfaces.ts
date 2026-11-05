@@ -4,6 +4,13 @@ export interface Colors {
   text: TextColors
   status: StatusColors
   elevation: ElevationColors
+  main: MainColors
+}
+
+export interface MainColors {
+  black: string
+  transparent: string
+  white: string
 }
 
 export interface ActionColors {
