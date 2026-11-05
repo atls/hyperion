@@ -1,9 +1,10 @@
 export const animations = {
   duration: {
-    instant: '0ms',
-    fast: '150ms',
-    normal: '200ms',
-    slow: '300ms',
+    none: '0ms',
+    xs: '80ms',
+    sm: '120ms',
+    md: '200ms',
+    lg: '300ms',
   },
   easing: {
     linear: 'linear',
