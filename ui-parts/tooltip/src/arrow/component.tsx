@@ -1,19 +1,18 @@
-import type { ReactNode }  from 'react'
+import type { ReactNode }        from 'react'
 
-import type { ArrowProps } from './interfaces.js'
+import type { ArrowProps }       from './interfaces.js'
 
-import { FloatingArrow }   from '@floating-ui/react'
+import { FloatingArrow }         from '@floating-ui/react'
 
-import { Condition }       from '@atls-ui-parts/condition'
+import { arrowAppearanceStyles } from './styles/appearance/styles.css.js'
 
-export const Arrow = ({ ref, context, arrow = true }: ArrowProps): ReactNode => (
-  <Condition match={!!arrow}>
-    <FloatingArrow
-      ref={ref}
-      context={context}
-      width={12}
-      fill='rgba(0, 0, 0, 0.75)'
-      {...(typeof arrow === 'boolean' ? {} : arrow)}
-    />
-  </Condition>
+export const Arrow = ({ context, arrowRef, shape }: ArrowProps): ReactNode => (
+  <FloatingArrow
+    ref={arrowRef}
+    className={arrowAppearanceStyles}
+    context={context}
+    fill='currentColor'
+    height={shape.height}
+    width={shape.width}
+  />
 )

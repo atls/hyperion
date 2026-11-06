@@ -1,70 +1,81 @@
-import type { ReactNode }     from 'react'
+import type { ReactNode }              from 'react'
 
-import type { TooltipProps }  from './interfaces.js'
+import type { TooltipProps }           from './interfaces.js'
 
-import { FloatingPortal }     from '@floating-ui/react'
-import { AnimatePresence }    from 'framer-motion'
-import { motion }             from 'framer-motion'
-import { cloneElement }       from 'react'
+import { FloatingPortal }              from '@floating-ui/react'
+import { useMergeRefs }                from '@floating-ui/react'
+import { useTransitionStatus }         from '@floating-ui/react'
+import { cloneElement }                from 'react'
 
-import { useFloat }           from '@atls-utils/use-float'
+import { useTheme }                    from '@atls-ui-parts/theme'
+import { useFloat }                    from '@atls-utils/use-float'
 
-import { Arrow }              from './arrow/index.js'
-import { Container }          from './container/index.js'
-import { animateProps }       from './constants.js'
-import { tooltipAppearances } from './styles/index.js'
-import { tooltipShapes }      from './styles/index.js'
+import { Arrow }                       from './arrow/component.js'
+import { Box }                         from './box/component.js'
+import { DEFAULT_PRESS_OPEN_DURATION } from './constants.js'
+import { TOOLTIP_ANIMATION_DURATION }  from './constants.js'
+import { Container }                   from './container/component.js'
+import { Text }                        from './text/component.js'
+import { resolveTooltipAppearance }    from './styles/appearance/resolve.js'
+import { tooltipShapes }               from './styles/shape/variants.js'
+import { useTooltipOpen }              from './useTooltipOpen.js'
 
 export const Tooltip = ({
-  appearance,
   children,
   text,
   open,
-  container,
-  animated = true,
-  arrow = true,
-  shape,
-  ...props
+  onOpenChange,
+  placement = 'top',
+  trigger = 'hover',
+  pressOpenDuration = DEFAULT_PRESS_OPEN_DURATION,
+  appearance = 'default',
+  shape = tooltipShapes.default,
+  mouseEnterDelay,
+  mouseLeaveDelay,
 }: TooltipProps): ReactNode => {
-  const { arrowRef, refs, isOpen, context, floatingStyles, getFloatingProps, getReferenceProps } =
-    useFloat({ open, role: 'tooltip', ...props })
-
-  const defaultContainer = container === undefined
-  const containerElement = container ?? <Container />
-  const TriggerElement = cloneElement(children, { ref: refs.setReference, ...getReferenceProps() })
-  const containerClassName = [
-    containerElement.props.className,
-    defaultContainer && tooltipAppearances.default.container,
-    defaultContainer && tooltipShapes.default.container,
-    appearance?.container,
-    shape?.container,
-  ]
-    .filter(Boolean)
-    .join(' ')
-
-  const ContainerElement = cloneElement(
-    containerElement,
-    { className: containerClassName || undefined, open: isOpen },
-    <>
-      <Arrow ref={arrowRef} context={context} arrow={arrow} />
-      {text}
-    </>
-  )
-
-  const motionProps = typeof animated === 'boolean' ? animateProps : animated
+  const theme = useTheme()
+  const tooltipOpen = useTooltipOpen(open, onOpenChange, trigger, pressOpenDuration)
+  const { refs, arrowRef, context, isOpen, floatingStyles, getReferenceProps, getFloatingProps } =
+    useFloat({
+      open: tooltipOpen.open,
+      onOpenChange: tooltipOpen.onOpenChange,
+      placement,
+      offset: shape.container.offset,
+      trigger: trigger === 'hover' ? 'hover' : 'click',
+      role: 'tooltip',
+      mouseEnterDelay,
+      mouseLeaveDelay,
+    })
+  const { isMounted, status } = useTransitionStatus(context, {
+    duration: TOOLTIP_ANIMATION_DURATION,
+  })
+  const triggerRef = useMergeRefs([children.props.ref, refs.setReference])
+  const triggerElement = cloneElement(children, {
+    ...getReferenceProps(children.props),
+    ref: triggerRef,
+  })
 
   return (
     <>
-      {TriggerElement}
-      <FloatingPortal>
-        <div ref={refs.setFloating} style={floatingStyles} {...getFloatingProps()}>
-          <AnimatePresence>
-            {!!isOpen && (
-              <motion.div {...(animated ? motionProps : {})}>{ContainerElement}</motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </FloatingPortal>
+      {triggerElement}
+      {isMounted && (
+        <FloatingPortal>
+          <Container
+            ref={refs.setFloating}
+            {...getFloatingProps()}
+            aria-hidden={isOpen ? undefined : true}
+            data-transition={status}
+            floatingStyles={floatingStyles}
+            shape={shape.container}
+            style={resolveTooltipAppearance(appearance, theme)}
+          >
+            <Box shape={shape.box}>
+              <Text shape={shape.text} text={text} />
+              <Arrow arrowRef={arrowRef} context={context} shape={shape.arrow} />
+            </Box>
+          </Container>
+        </FloatingPortal>
+      )}
     </>
   )
 }

@@ -1,9 +1,9 @@
-import type { FloatingArrowProps } from '@floating-ui/react'
-import type { UseFloatingReturn }  from '@floating-ui/react'
-import type { RefObject }          from 'react'
+import type { UseFloatReturn } from '@atls-utils/use-float'
+
+import type { ArrowShape }     from './styles/shape/interfaces.js'
 
 export interface ArrowProps {
-  ref: RefObject<SVGSVGElement | null>
-  arrow?: Omit<FloatingArrowProps, 'context'> | boolean
-  context: UseFloatingReturn['context']
+  context: UseFloatReturn['context']
+  arrowRef: UseFloatReturn['arrowRef']
+  shape: ArrowShape
 }
