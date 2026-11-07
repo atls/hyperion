@@ -1,27 +1,26 @@
 import type { UseFloatProps }      from '@atls-utils/use-float'
-import type { FloatingArrowProps } from '@floating-ui/react'
-import type { MotionProps }        from 'framer-motion'
-import type { JSX }                from 'react'
-import type { ReactNode }          from 'react'
+import type { HTMLAttributes }     from 'react'
+import type { ReactElement }       from 'react'
+import type { Ref }                from 'react'
 
-export interface TooltipAppearance {
-  container: string
-}
+import type { TooltipAppearance }  from './styles/appearance/interfaces.js'
+import type { TooltipShape }       from './styles/shape/interfaces.js'
+import type { tooltipAppearances } from './styles/appearance/variants.js'
 
-export type TooltipAppearanceName = 'default'
+export type TooltipPlacement =
+  'bottom-end' | 'bottom-start' | 'bottom' | 'left' | 'right' | 'top-end' | 'top-start' | 'top'
 
-export interface TooltipShape {
-  container: string
-}
+export type TooltipTrigger = 'hover' | 'pressed'
 
-export type TooltipShapeName = 'default'
-
-export interface TooltipProps extends UseFloatProps {
-  appearance?: TooltipAppearance
-  children: JSX.Element
-  text?: ReactNode
-  container?: JSX.Element
-  animated?: Omit<MotionProps, 'children'> | boolean
-  arrow?: Omit<FloatingArrowProps, 'context'> | boolean
+export interface TooltipProps extends Pick<
+  UseFloatProps,
+  'mouseEnterDelay' | 'mouseLeaveDelay' | 'onOpenChange' | 'open'
+> {
+  children: ReactElement<HTMLAttributes<HTMLElement> & { ref?: Ref<HTMLElement> }>
+  text: string
+  placement?: TooltipPlacement
+  trigger?: TooltipTrigger
+  pressOpenDuration?: number
+  appearance?: TooltipAppearance | keyof typeof tooltipAppearances
   shape?: TooltipShape
 }
