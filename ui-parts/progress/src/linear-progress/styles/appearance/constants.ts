@@ -1,0 +1,4 @@
+export const LINEAR_SHADOW_ACTION_BLUR = '0.5px'
+export const LINEAR_SHADOW_ACTION_SPREAD = '0.3px'
+export const LINEAR_SHADOW_ELEVATION_BLUR = '0.2px'
+export const LINEAR_SHADOW_ELEVATION_SPREAD = '0.2px'

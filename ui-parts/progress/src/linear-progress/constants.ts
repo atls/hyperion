@@ -1,0 +1,1 @@
+export const LINEAR_PROGRESS_MAX = 100
