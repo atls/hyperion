@@ -1,10 +1,14 @@
-import type { IndicatorShape } from './interfaces.js'
+import type { IndicatorShape }       from './interfaces.js'
+
+import { borderWidths }              from '@atls-ui/theme/tokens'
+
+import { DEFAULT_INDICATOR_OVERLAP } from './constants.js'
 
 export const indicatorShapes = {
-  xs2: { strokeWidth: 1 },
-  xs: { strokeWidth: 2 },
-  sm: { strokeWidth: 2 },
-  md: { strokeWidth: 2.5 },
-  lg: { strokeWidth: 3 },
-  xl: { strokeWidth: 4 },
+  xs2: { overlap: DEFAULT_INDICATOR_OVERLAP, strokeWidth: borderWidths.sm },
+  xs: { overlap: DEFAULT_INDICATOR_OVERLAP, strokeWidth: borderWidths.md },
+  sm: { overlap: DEFAULT_INDICATOR_OVERLAP, strokeWidth: borderWidths.md },
+  md: { overlap: DEFAULT_INDICATOR_OVERLAP, strokeWidth: borderWidths.lg },
+  lg: { overlap: DEFAULT_INDICATOR_OVERLAP, strokeWidth: borderWidths.xl },
+  xl: { overlap: DEFAULT_INDICATOR_OVERLAP, strokeWidth: borderWidths.xl2 },
 } satisfies Record<string, IndicatorShape>

@@ -1,24 +1,28 @@
 import type { ReactNode }     from 'react'
-import type { CSSProperties } from 'react'
+
+import type { BoxAppearance } from './styles/appearance/interfaces.js'
+import type { BoxShape }      from './styles/shape/interfaces.js'
 
 import { boxStyles }          from './styles/base.css.js'
 
 export const Box = ({
   children,
-  inset,
-  radius,
-  backgroundColor,
-  shadow,
+  shape,
+  appearance,
 }: {
   children: ReactNode
-  inset: CSSProperties['inset']
-  radius: number
-  backgroundColor: string
-  shadow: string
+  shape: BoxShape
+  appearance: BoxAppearance
 }): ReactNode => (
   <div
     className={boxStyles}
-    style={{ inset, borderRadius: radius, backgroundColor, boxShadow: shadow }}
+    style={{
+      paddingInline: shape.paddingInline,
+      paddingBlock: shape.paddingBlock,
+      borderRadius: shape.radius,
+      backgroundColor: appearance.backgroundColor,
+      boxShadow: appearance.shadow,
+    }}
   >
     {children}
   </div>

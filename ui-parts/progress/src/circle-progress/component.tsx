@@ -2,15 +2,18 @@ import type { ReactNode }            from 'react'
 
 import type { CircleProgressProps }  from './interfaces.js'
 
-import { useId }                     from 'react'
-
 import { useTheme }                  from '@atls-ui-parts/theme'
 
 import { Box }                       from './box/component.js'
+import { PROGRESS_MAX }              from './constants.js'
+import { PAINT_PIXEL_SIZE }          from './constants.js'
+import { STROKE_CENTER_RATIO }       from './constants.js'
 import { Indicator }                 from './indicator/component.js'
+import { DEFAULT_INDICATOR_OVERLAP } from './indicator/styles/shape/constants.js'
 import { Label }                     from './label/component.js'
 import { Track }                     from './track/component.js'
 import { containerStyles }           from './container/styles/base.css.js'
+import { circleProgressAnimations }  from './indicator/animation/variants.js'
 import { circleProgressAppearances } from './styles/appearance/variants.js'
 import { circleProgressShapes }      from './styles/shape/variants.js'
 
@@ -18,36 +21,46 @@ export const CircleProgress = ({
   value,
   shape = circleProgressShapes.md,
   appearance = 'primary',
-  animation = 'orbit',
+  animation = circleProgressAnimations.orbit,
   children,
   style,
   className,
   ...props
 }: CircleProgressProps): ReactNode => {
   const theme = useTheme()
-  const gradientId = useId()
   const colors =
     typeof appearance === 'string' ? circleProgressAppearances[appearance](theme) : appearance
   const progress =
-    value === undefined || !Number.isFinite(value) ? undefined : Math.max(0, Math.min(value, 100))
-  const { width, height } = shape.container
-  const { inset: boxInset, radius } = shape.box
-  const { strokeWidth } = shape.indicator
-  const { typography } = shape.label
+    value === undefined || !Number.isFinite(value)
+      ? undefined
+      : Math.max(0, Math.min(value, PROGRESS_MAX))
+  const { radius } = shape.box
+  const { strokeWidth, overlap = DEFAULT_INDICATOR_OVERLAP } = shape.indicator
+  const stroke = typeof strokeWidth === 'number' ? `${strokeWidth}px` : strokeWidth
+  const { padding: containerPadding, ...containerShape } = shape.container ?? {}
+  const padding =
+    typeof containerPadding === 'number'
+      ? `${containerPadding}px`
+      : (containerPadding ?? `calc(${stroke} / 2)`)
+
+  const contourOffset = `calc(${stroke} * (${STROKE_CENTER_RATIO} - ${overlap}))`
+  const contourInset = `calc(${padding} - ${contourOffset})`
+  const contourRadius = `max(0px, calc(${radius} + ${contourOffset}))`
+  const paintPadding = `calc(${stroke} + ${PAINT_PIXEL_SIZE})`
 
   return (
     <div
       {...props}
       role='progressbar'
       aria-valuemin={0}
-      aria-valuemax={100}
+      aria-valuemax={PROGRESS_MAX}
       aria-valuenow={progress}
       className={`${containerStyles} ${className ?? ''}`}
-      style={{ ...style, width, height }}
+      style={{ padding, ...containerShape, ...style }}
     >
       <Track
-        inset={boxInset}
-        radius={radius}
+        inset={contourInset}
+        radius={contourRadius}
         strokeWidth={strokeWidth}
         color={colors.track.color}
       />
@@ -55,43 +68,22 @@ export const CircleProgress = ({
         aria-hidden='true'
         style={{
           position: 'absolute',
-          inset: boxInset,
+          inset: `calc(0px - ${paintPadding})`,
           pointerEvents: 'none',
           containerType: 'size',
         }}
       >
-        <svg
-          width='100%'
-          height='100%'
-          style={{ display: 'block', overflow: 'visible', color: colors.indicator.color }}
-        >
-          <defs>
-            <linearGradient id={gradientId} x1='0%' y1='0%' x2='100%' y2='0%'>
-              <stop offset='0%' stopColor={colors.indicator.color} />
-              <stop offset='100%' stopColor={colors.indicator.endColor} />
-            </linearGradient>
-          </defs>
-          <Indicator
-            radius={radius}
-            strokeWidth={strokeWidth}
-            color={`url(#${gradientId})`}
-            value={progress}
-            animation={animation}
-          />
-        </svg>
+        <Indicator
+          radius={contourRadius}
+          inset={`calc(${contourInset} + ${paintPadding})`}
+          strokeWidth={strokeWidth}
+          appearance={colors.indicator}
+          value={progress}
+          animation={animation}
+        />
       </div>
-      <Box
-        inset={boxInset}
-        radius={radius}
-        backgroundColor={colors.box.backgroundColor}
-        shadow={colors.box.shadow}
-      >
-        {children ??
-          (progress === undefined ? null : (
-            <Label color={colors.label.color} typography={typography}>
-              {progress}%
-            </Label>
-          ))}
+      <Box shape={shape.box} appearance={colors.box}>
+        {children ?? <Label color={colors.label.color} shape={shape.label} value={progress} />}
       </Box>
     </div>
   )

@@ -1,4 +1,5 @@
+import type { CSSProperties } from 'react'
+
 export interface IndicatorAppearance {
-  color: string
-  endColor: string
+  background: CSSProperties['background']
 }

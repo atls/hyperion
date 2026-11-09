@@ -1,10 +1,37 @@
 import type { BoxShape } from './interfaces.js'
 
+import { radii }         from '@atls-ui/theme/tokens'
+import { spacing }       from '@atls-ui/theme/tokens'
+
 export const boxShapes = {
-  xs2: { inset: 1, radius: 7 },
-  xs: { inset: '2px 2px 1px 1px', radius: 8.5 },
-  sm: { inset: 2, radius: 10 },
-  md: { inset: 2, radius: 10 },
-  lg: { inset: 2, radius: 12 },
-  xl: { inset: 2, radius: 15 },
+  xs2: {
+    paddingInline: spacing.component.none,
+    paddingBlock: spacing.component.none,
+    radius: radii.full,
+  },
+  xs: {
+    paddingInline: spacing.component.none,
+    paddingBlock: spacing.component.none,
+    radius: radii.full,
+  },
+  sm: {
+    paddingInline: spacing.component.none,
+    paddingBlock: spacing.component.none,
+    radius: radii.full,
+  },
+  md: {
+    paddingInline: spacing.component.none,
+    paddingBlock: spacing.component.none,
+    radius: radii.full,
+  },
+  lg: {
+    paddingInline: spacing.component.none,
+    paddingBlock: spacing.component.none,
+    radius: radii.full,
+  },
+  xl: {
+    paddingInline: spacing.component.none,
+    paddingBlock: spacing.component.none,
+    radius: radii.full,
+  },
 } satisfies Record<string, BoxShape>

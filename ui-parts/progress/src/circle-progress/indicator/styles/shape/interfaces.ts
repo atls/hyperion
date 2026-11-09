@@ -1,3 +1,6 @@
+import type { CSSProperties } from 'react'
+
 export interface IndicatorShape {
-  strokeWidth: number
+  overlap?: number
+  strokeWidth: NonNullable<CSSProperties['strokeWidth']>
 }

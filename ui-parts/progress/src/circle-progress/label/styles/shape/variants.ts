@@ -1,12 +1,31 @@
-import type { LabelShape } from './interfaces.js'
+import type { LabelShape }    from './interfaces.js'
 
-import { typography }      from '@atls-ui/theme/tokens'
+import { LABEL_FONT_SIZES }   from './constants.js'
+import { LABEL_LINE_HEIGHTS } from './constants.js'
 
 export const labelShapes = {
-  xs2: { typography: { ...typography.overline, fontSize: 5, lineHeight: '7px' } },
-  xs: { typography: { ...typography.overline, fontSize: 6, lineHeight: '8px' } },
-  sm: { typography: { ...typography.overline, fontSize: 8, lineHeight: '10px' } },
-  md: { typography: typography.overline },
-  lg: { typography: typography.caption },
-  xl: { typography: typography.caption },
+  xs2: {
+    typography: (theme) => ({
+      ...theme.typography.overline,
+      fontSize: LABEL_FONT_SIZES.xs2,
+      lineHeight: LABEL_LINE_HEIGHTS.xs2,
+    }),
+  },
+  xs: {
+    typography: (theme) => ({
+      ...theme.typography.overline,
+      fontSize: LABEL_FONT_SIZES.xs,
+      lineHeight: LABEL_LINE_HEIGHTS.xs,
+    }),
+  },
+  sm: {
+    typography: (theme) => ({
+      ...theme.typography.overline,
+      fontSize: LABEL_FONT_SIZES.sm,
+      lineHeight: LABEL_LINE_HEIGHTS.sm,
+    }),
+  },
+  md: { typography: (theme) => theme.typography.overline },
+  lg: { typography: (theme) => theme.typography.caption },
+  xl: { typography: (theme) => theme.typography.caption },
 } satisfies Record<string, LabelShape>

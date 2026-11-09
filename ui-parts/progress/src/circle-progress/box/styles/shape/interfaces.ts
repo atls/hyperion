@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react'
 
 export interface BoxShape {
-  inset: CSSProperties['inset']
-  radius: number
+  paddingInline: CSSProperties['paddingInline']
+  paddingBlock: CSSProperties['paddingBlock']
+  radius: string
 }

@@ -1,12 +1,31 @@
-import type { CSSProperties } from 'react'
 import type { ReactNode }     from 'react'
 
+import type { LabelShape }    from './styles/shape/interfaces.js'
+
+import { useTheme }           from '@atls-ui-parts/theme'
+
+import { labelStyles }        from './styles/base.css.js'
+import { labelReserveStyles } from './styles/base.css.js'
+import { labelValueStyles }   from './styles/base.css.js'
+
 export const Label = ({
-  children,
+  value,
   color,
-  typography,
+  shape,
 }: {
-  children: ReactNode
+  value?: number
   color: string
-  typography: CSSProperties
-}): ReactNode => <span style={{ ...typography, color }}>{children}</span>
+  shape: LabelShape
+}): ReactNode => {
+  const theme = useTheme()
+  const typography =
+    typeof shape.typography === 'function' ? shape.typography(theme) : shape.typography
+  return (
+    <span className={labelStyles} style={{ ...typography, color }}>
+      <span aria-hidden='true' className={labelReserveStyles}>
+        100%
+      </span>
+      <span className={labelValueStyles}>{value === undefined ? null : `${value}%`}</span>
+    </span>
+  )
+}

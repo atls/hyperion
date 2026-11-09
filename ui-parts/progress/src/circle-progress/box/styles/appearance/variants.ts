@@ -2,8 +2,16 @@ import type { Theme }         from '@atls-ui/theme'
 
 import type { BoxAppearance } from './interfaces.js'
 
-const boxShadow = (theme: Theme): string =>
-  `0 0 0.5px 0.3px ${theme.colors.action.subtle}, 0 0 0.2px 0.2px ${theme.colors.elevation.sm}`
+import { shadowOffsets }      from '@atls-ui/theme/tokens'
+
+import { SUBTLE_SHADOW }      from './constants.js'
+import { ELEVATION_SHADOW }   from './constants.js'
+
+const boxShadow = (theme: Theme): BoxAppearance['shadow'] =>
+  [
+    `${shadowOffsets.none} ${shadowOffsets.none} ${SUBTLE_SHADOW.blur} ${SUBTLE_SHADOW.spread} ${theme.colors.action.subtle}`,
+    `${shadowOffsets.none} ${shadowOffsets.none} ${ELEVATION_SHADOW.blur} ${ELEVATION_SHADOW.spread} ${theme.colors.elevation.sm}`,
+  ].join(', ')
 
 export const boxAppearances = {
   primary: (theme: Theme): BoxAppearance => ({

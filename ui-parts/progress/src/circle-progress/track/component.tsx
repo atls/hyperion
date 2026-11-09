@@ -1,5 +1,7 @@
-import type { ReactNode }     from 'react'
-import type { CSSProperties } from 'react'
+import type { ReactNode }      from 'react'
+import type { CSSProperties }  from 'react'
+
+import type { IndicatorShape } from '../indicator/styles/shape/interfaces.js'
 
 export const Track = ({
   inset,
@@ -8,8 +10,8 @@ export const Track = ({
   color,
 }: {
   inset: CSSProperties['inset']
-  radius: number
-  strokeWidth: number
+  radius: string
+  strokeWidth: IndicatorShape['strokeWidth']
   color: string
 }): ReactNode => (
   <div
@@ -18,8 +20,8 @@ export const Track = ({
       position: 'absolute',
       inset,
       borderRadius: radius,
-      outline: `${strokeWidth}px solid ${color}`,
-      outlineOffset: -strokeWidth / 2,
+      outline: `${typeof strokeWidth === 'number' ? `${strokeWidth}px` : strokeWidth} solid ${color}`,
+      outlineOffset: `calc(${typeof strokeWidth === 'number' ? `${strokeWidth}px` : strokeWidth} / -2)`,
       boxSizing: 'border-box',
       pointerEvents: 'none',
     }}
