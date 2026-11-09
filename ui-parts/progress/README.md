@@ -66,3 +66,38 @@ const shape = {
   indicator: { ...circleProgressShapes.md.indicator, overlap: 0 },
 }
 ```
+
+# LinearProgress
+
+`LinearProgress` uses a single `Track` element with an `Indicator` inside it. The root track has `role="progressbar"`. Pass `value` from 0 to 100 for a determinate bar; omit it for the indeterminate animation.
+
+```tsx
+import { LinearProgress, linearProgressShapes } from '@atls-ui-parts/progress'
+
+<LinearProgress value={40} shape={linearProgressShapes.md} appearance='primary' />
+<LinearProgress aria-label='Loading' shape={linearProgressShapes.md} />
+```
+
+`shape` controls the track and indicator independently. `appearance` can be one of the theme-backed variants or a custom `{ track, indicator }` object. `animation` uses the public LinearProgressAnimation contract: duration, easing and segments with keyframes. The built-in indeterminate preset uses exactly the same renderer as consumer animations. Positions are fractions of the track width and can extend below 0 or above 1; the track clips the passing segments.
+
+`shape.track.width` defaults to the 100px Figma width. Override it in `shape` or with the root `style.width` when the bar should fill its parent.
+
+```tsx
+import type { LinearProgressAnimation } from '@atls-ui-parts/progress'
+
+const animation = {
+  duration: '2s',
+  easing: 'ease-in-out',
+  segments: [{
+    id: 'loading',
+    frames: [
+      { at: 0, start: -0.4, end: 0 },
+      { at: 1, start: 1, end: 1.4 },
+    ],
+  }],
+} satisfies LinearProgressAnimation
+
+<LinearProgress aria-label='Loading' animation={animation} />
+```
+
+`at` ranges from 0 to 1 within a repeating cycle. `start` and `end` define each segment's endpoints along the track. Intermediate frames can change both position and length. With reduced motion enabled, the animation holds its middle frame.
