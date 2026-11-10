@@ -1,28 +1,28 @@
-import type { LabelShape }    from './interfaces.js'
+import type { LabelShape } from './interfaces.js'
 
-import { LABEL_FONT_SIZES }   from './constants.js'
-import { LABEL_LINE_HEIGHTS } from './constants.js'
+import { fontSizes }       from '@atls-ui/theme/tokens'
+import { lineHeights }     from '@atls-ui/theme/tokens'
 
 export const labelShapes = {
   xs2: {
     typography: (theme) => ({
       ...theme.typography.overline,
-      fontSize: LABEL_FONT_SIZES.xs2,
-      lineHeight: LABEL_LINE_HEIGHTS.xs2,
+      fontSize: fontSizes.xs6,
+      lineHeight: lineHeights.xs6,
     }),
   },
   xs: {
     typography: (theme) => ({
       ...theme.typography.overline,
-      fontSize: LABEL_FONT_SIZES.xs,
-      lineHeight: LABEL_LINE_HEIGHTS.xs,
+      fontSize: fontSizes.xs5,
+      lineHeight: lineHeights.xs5,
     }),
   },
   sm: {
     typography: (theme) => ({
       ...theme.typography.overline,
-      fontSize: LABEL_FONT_SIZES.sm,
-      lineHeight: LABEL_LINE_HEIGHTS.sm,
+      fontSize: fontSizes.xs4,
+      lineHeight: lineHeights.xs4,
     }),
   },
   md: { typography: (theme) => theme.typography.overline },
