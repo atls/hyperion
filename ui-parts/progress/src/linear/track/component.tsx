@@ -1,18 +1,10 @@
-import type { ReactNode }       from 'react'
-import type { HTMLAttributes }  from 'react'
+import type { ReactNode }  from 'react'
 
-import type { TrackAppearance } from './styles/appearance/interfaces.js'
-import type { TrackShape }      from './styles/shape/interfaces.js'
+import type { TrackProps } from './interfaces.js'
 
-import { clsx }                 from 'clsx'
+import { clsx }            from 'clsx'
 
-import { trackStyles }          from './styles/base.css.js'
-
-export interface TrackProps extends HTMLAttributes<HTMLDivElement> {
-  shape: TrackShape
-  appearance: TrackAppearance
-  children: ReactNode
-}
+import { trackStyles }     from './styles/base.css.js'
 
 export const Track = ({
   shape,
