@@ -13,6 +13,11 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
+    "@atls-ui-parts/button": "workspace:*",
+    "@atls-ui-parts/icons": "workspace:*",
+    "@atls-ui-parts/progress": "workspace:*",
+    "@atls-ui-parts/theme": "workspace:*",
+    "@atls-ui/theme": "workspace:*",
     "@atls-utils/use-float": "workspace:*",
     "@floating-ui/react": "0.27.8",
     "clsx": "2.1.1"

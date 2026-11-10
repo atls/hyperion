@@ -783,6 +783,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/modal@workspace:ui-parts/modal"
   dependencies:
+    "@atls-ui-parts/button": "workspace:*"
+    "@atls-ui-parts/icons": "workspace:*"
+    "@atls-ui-parts/progress": "workspace:*"
+    "@atls-ui-parts/theme": "workspace:*"
+    "@atls-ui/theme": "workspace:*"
     "@atls-utils/use-float": "workspace:*"
     "@floating-ui/react": "npm:0.27.8"
     "@storybook/react": "npm:10.4.6"
@@ -884,7 +889,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/progress@workspace:ui-parts/progress":
+"@atls-ui-parts/progress@workspace:*, @atls-ui-parts/progress@workspace:ui-parts/progress":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/progress@workspace:ui-parts/progress"
   dependencies:

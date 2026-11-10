@@ -277,7 +277,7 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-parts/parallax", ["workspace:ui-parts/parallax"]],\
     ["@atls-ui-parts/popover", ["workspace:ui-parts/popover"]],\
     ["@atls-ui-parts/portal", ["workspace:ui-parts/portal"]],\
-    ["@atls-ui-parts/progress", ["workspace:ui-parts/progress"]],\
+    ["@atls-ui-parts/progress", ["virtual:20752c45b516a7cf8cf2b84e29157482069ba63be80fff17a718858cac902b29bada9110da68b0a70a390a297428f9346894fcee811de4554b109e55e7c45ba1#workspace:ui-parts/progress", "workspace:ui-parts/progress"]],\
     ["@atls-ui-parts/scalable-content", ["workspace:ui-parts/scalable-content"]],\
     ["@atls-ui-parts/select", ["workspace:ui-parts/select"]],\
     ["@atls-ui-parts/sidebar", ["workspace:ui-parts/sidebar"]],\
@@ -1543,7 +1543,12 @@ const RAW_RUNTIME_STATE =
       ["workspace:ui-parts/modal", {\
         "packageLocation": "./ui-parts/modal/",\
         "packageDependencies": [\
+          ["@atls-ui-parts/button", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#workspace:ui-parts/button"],\
+          ["@atls-ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons"],\
           ["@atls-ui-parts/modal", "workspace:ui-parts/modal"],\
+          ["@atls-ui-parts/progress", "virtual:20752c45b516a7cf8cf2b84e29157482069ba63be80fff17a718858cac902b29bada9110da68b0a70a390a297428f9346894fcee811de4554b109e55e7c45ba1#workspace:ui-parts/progress"],\
+          ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
+          ["@atls-ui/theme", "workspace:ui/theme"],\
           ["@atls-utils/use-float", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:utils/use-float"],\
           ["@floating-ui/react", "virtual:bdec61daa5ce18b211e41086a87aa58babcd016eed745eb318a2389812d34b0215bd01c4e05f4de11cfc30bd0259efe6cace4826920dba58cacb6c2dd7978d3e#npm:0.27.8"],\
           ["@storybook/react", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#patch:@storybook/react@npm%3A10.4.6#~/.yarn/patches/@storybook-react-npm-10.4.6-574597d2a0.patch::version=10.4.6&hash=1496cc"],\
@@ -1631,6 +1636,39 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@atls-ui-parts/progress", [\
+      ["virtual:20752c45b516a7cf8cf2b84e29157482069ba63be80fff17a718858cac902b29bada9110da68b0a70a390a297428f9346894fcee811de4554b109e55e7c45ba1#workspace:ui-parts/progress", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-progress-virtual-331494f0f7/1/ui-parts/progress/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/button", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#workspace:ui-parts/button"],\
+          ["@atls-ui-parts/layout", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#workspace:ui-parts/layout"],\
+          ["@atls-ui-parts/progress", "virtual:20752c45b516a7cf8cf2b84e29157482069ba63be80fff17a718858cac902b29bada9110da68b0a70a390a297428f9346894fcee811de4554b109e55e7c45ba1#workspace:ui-parts/progress"],\
+          ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
+          ["@atls-ui/theme", "workspace:ui/theme"],\
+          ["@storybook/react", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#patch:@storybook/react@npm%3A10.4.6#~/.yarn/patches/@storybook-react-npm-10.4.6-574597d2a0.patch::version=10.4.6&hash=1496cc"],\
+          ["@types/react", "npm:19.1.2"],\
+          ["@types/react-dom", null],\
+          ["@types/vanilla-extract__css", null],\
+          ["@types/vanilla-extract__dynamic", null],\
+          ["@vanilla-extract/css", "npm:1.17.1"],\
+          ["@vanilla-extract/dynamic", "npm:2.1.2"],\
+          ["clsx", "npm:2.1.1"],\
+          ["rainbow-sprinkles", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:1.0.0"],\
+          ["react", "npm:19.1.0"],\
+          ["react-dom", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:19.1.0"],\
+          ["storybook", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:10.4.6"],\
+          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/vanilla-extract__css",\
+          "@types/vanilla-extract__dynamic",\
+          "@vanilla-extract/css",\
+          "@vanilla-extract/dynamic",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["workspace:ui-parts/progress", {\
         "packageLocation": "./ui-parts/progress/",\
         "packageDependencies": [\
