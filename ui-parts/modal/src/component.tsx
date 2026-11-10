@@ -5,6 +5,7 @@ import type { ModalProps }      from './interfaces.js'
 import { FloatingFocusManager } from '@floating-ui/react'
 import { FloatingOverlay }      from '@floating-ui/react'
 import { FloatingPortal }       from '@floating-ui/react'
+import { Children }             from 'react'
 import { clsx }                 from 'clsx'
 
 import { Button }               from '@atls-ui-parts/button'
@@ -42,6 +43,10 @@ export const Modal = ({
   style,
   ...props
 }: ModalProps): ReactNode => {
+  const hasActions =
+    confirmAction === undefined ||
+    cancelAction === undefined ||
+    Children.toArray([confirmAction, cancelAction]).length > 0
   const theme = useTheme()
   const colors = typeof appearance === 'string' ? modalAppearances[appearance](theme) : appearance
   const { refs, isOpen, context, getFloatingProps } = useFloat({
@@ -91,7 +96,7 @@ export const Modal = ({
             ) : (
               children
             )}
-            {state === 'destructive' && (
+            {state === 'destructive' && hasActions && (
               <div className={actionsStyles} style={{ gap: shape.actions.gap }}>
                 {confirmAction === undefined ? (
                   <Button
