@@ -114,7 +114,7 @@ const meta: Meta<StoryArgs> = {
 export default meta
 export const Base: StoryObj<typeof meta> = {}
 export const Custom: StoryObj<typeof meta> = {
-  name: 'Кастомный круг',
+  name: 'Custom',
   render: (args) => <CustomCircle {...args} />,
   argTypes: {
     indicatorBackground: {

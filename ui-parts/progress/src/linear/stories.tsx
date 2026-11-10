@@ -67,4 +67,4 @@ const meta: Meta<StoryArgs> = {
 }
 
 export default meta
-export const Base: StoryObj<typeof meta> = { name: 'Базовый' }
+export const Base: StoryObj<typeof meta> = { name: 'Base' }
