@@ -24,5 +24,5 @@ export interface ModalProps extends Omit<HTMLAttributes<HTMLDivElement>, 'childr
   appearance?: ModalAppearance | keyof typeof modalAppearances
   shape?: ModalShape
   backdropProps?: HTMLAttributes<HTMLDivElement>
-  focusProps?: Omit<FloatingFocusManagerProps, 'children' | 'context'>
+  focusProps?: Omit<FloatingFocusManagerProps, 'children' | 'context' | 'disabled' | 'modal'>
 }
