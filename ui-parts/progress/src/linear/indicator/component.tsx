@@ -1,58 +1,11 @@
-import type { ReactNode }               from 'react'
+import type { ReactNode }      from 'react'
 
-import type { LinearAnimationSegment }  from './animation/interfaces.js'
-import type { LinearProgressAnimation } from './animation/interfaces.js'
-import type { IndicatorAppearance }     from './styles/appearance/interfaces.js'
-import type { IndicatorShape }          from './styles/shape/interfaces.js'
+import type { IndicatorProps } from './interfaces.js'
 
-import { useRef }                       from 'react'
+import { AnimatedSegment }     from './segment/component.js'
+import { indicatorStyles }     from './styles/base.css.js'
 
-import { useAnimation }                 from './animation/useAnimation.js'
-import { indicatorStyles }              from './styles/base.css.js'
-
-const AnimatedSegment = ({
-  shape,
-  appearance,
-  animation,
-  segment,
-}: {
-  shape: IndicatorShape
-  appearance: IndicatorAppearance
-  animation: LinearProgressAnimation
-  segment: LinearAnimationSegment
-}): ReactNode => {
-  const ref = useRef<HTMLDivElement>(null)
-  useAnimation(ref, animation, segment)
-  const frame = segment.frames.at(0)
-  if (!frame) return null
-  return (
-    <div
-      ref={ref}
-      aria-hidden='true'
-      className={indicatorStyles}
-      style={{
-        left: `${frame.start * 100}%`,
-        width: `${(frame.end - frame.start) * 100}%`,
-        height: shape.height,
-        borderRadius: shape.borderRadius,
-        background: appearance.background,
-        boxShadow: appearance.boxShadow,
-      }}
-    />
-  )
-}
-
-export const Indicator = ({
-  shape,
-  appearance,
-  value,
-  animation,
-}: {
-  shape: IndicatorShape
-  appearance: IndicatorAppearance
-  value?: number
-  animation: LinearProgressAnimation
-}): ReactNode => {
+export const Indicator = ({ shape, appearance, value, animation }: IndicatorProps): ReactNode => {
   if (value === undefined)
     return animation.segments.map((segment) => (
       <AnimatedSegment
