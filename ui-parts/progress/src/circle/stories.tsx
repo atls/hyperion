@@ -1,15 +1,15 @@
 import type { Meta }                    from '@storybook/react'
 import type { StoryObj }                from '@storybook/react'
 
-import type { CircleProgressAnimation } from './circle-progress/indicator/animation/interfaces.js'
-import type { CircleProgressProps }     from './circle-progress/interfaces.js'
+import type { CircleProgressAnimation } from './indicator/animation/interfaces.js'
+import type { CircleProgressProps }     from './interfaces.js'
 
 import { useTheme }                     from '@atls-ui-parts/theme'
 import { spacing }                      from '@atls-ui/theme/tokens'
 
-import { CircleProgress }               from './circle-progress/component.js'
-import { circleProgressAnimations }     from './circle-progress/indicator/animation/variants.js'
-import { circleProgressShapes }         from './circle-progress/styles/shape/variants.js'
+import { CircleProgress }               from './component.js'
+import { circleProgressAnimations }     from './indicator/animation/variants.js'
+import { circleProgressShapes }         from './styles/shape/variants.js'
 
 const storyShapes = {
   ...circleProgressShapes,

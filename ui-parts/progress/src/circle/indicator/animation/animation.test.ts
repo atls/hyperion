@@ -6,8 +6,8 @@ import { describe }                     from 'node:test'
 import { it }                           from 'node:test'
 
 import { contourPath }                  from '../contour/path.js'
-import { resolveAnimationSegments }     from './resolve-segments.js'
-import { mergeIntervals }               from './resolve-segments.js'
+import { resolveAnimationSegments }     from './resolveSegments.js'
+import { mergeIntervals }               from './resolveSegments.js'
 import { circleProgressAnimations }     from './variants.js'
 
 const linear = (value: number): number => value

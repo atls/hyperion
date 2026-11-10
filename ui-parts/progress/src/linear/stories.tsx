@@ -1,12 +1,12 @@
 import type { Meta }                 from '@storybook/react'
 import type { StoryObj }             from '@storybook/react'
 
-import type { LinearProgressProps }  from './linear-progress/interfaces.js'
+import type { LinearProgressProps }  from './interfaces.js'
 
-import { LinearProgress }            from './linear-progress/component.js'
-import { linearProgressAnimations }  from './linear-progress/indicator/animation/variants.js'
-import { linearProgressAppearances } from './linear-progress/styles/appearance/variants.js'
-import { linearProgressShapes }      from './linear-progress/styles/shape/variants.js'
+import { LinearProgress }            from './component.js'
+import { linearProgressAnimations }  from './indicator/animation/variants.js'
+import { linearProgressAppearances } from './styles/appearance/variants.js'
+import { linearProgressShapes }      from './styles/shape/variants.js'
 
 type StoryArgs = LinearProgressProps & { indeterminate: boolean }
 

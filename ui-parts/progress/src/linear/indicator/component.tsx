@@ -7,7 +7,7 @@ import type { IndicatorShape }          from './styles/shape/interfaces.js'
 
 import { useRef }                       from 'react'
 
-import { useAnimation }                 from './animation/use-animation.js'
+import { useAnimation }                 from './animation/useAnimation.js'
 import { indicatorStyles }              from './styles/base.css.js'
 
 const AnimatedSegment = ({

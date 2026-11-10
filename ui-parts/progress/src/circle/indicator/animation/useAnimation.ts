@@ -12,7 +12,7 @@ import { PROGRESS_MAX }                 from '../../constants.js'
 import { MILLISECONDS_PER_SECOND }      from './constants.js'
 import { TIMING_SAMPLE_DURATION }       from './constants.js'
 import { contourPath }                  from '../contour/path.js'
-import { resolveAnimationSegments }     from './resolve-segments.js'
+import { resolveAnimationSegments }     from './resolveSegments.js'
 
 export const useAnimation = (
   svgRef: RefObject<SVGSVGElement | null>,

@@ -7,7 +7,7 @@ import type { IndicatorShape }          from './styles/shape/interfaces.js'
 import { useId }                        from 'react'
 import { useRef }                       from 'react'
 
-import { useAnimation }                 from './animation/use-animation.js'
+import { useAnimation }                 from './animation/useAnimation.js'
 
 export const Indicator = ({
   radius,
