@@ -1,9 +1,12 @@
-import type { ReactNode }      from 'react'
+import type { ReactNode }              from 'react'
 
-import type { IndicatorProps } from './interfaces.js'
+import type { IndicatorProps }         from './interfaces.js'
 
-import { AnimatedSegment }     from './segment/component.js'
-import { indicatorStyles }     from './styles/base.css.js'
+import { assignInlineVars }            from '@vanilla-extract/dynamic'
+
+import { AnimatedSegment }             from './segment/component.js'
+import { indicatorTransitionDuration } from './styles/base.css.js'
+import { indicatorStyles }             from './styles/base.css.js'
 
 export const Indicator = ({ shape, appearance, value, animation }: IndicatorProps): ReactNode => {
   if (value === undefined)
@@ -26,7 +29,8 @@ export const Indicator = ({ shape, appearance, value, animation }: IndicatorProp
         borderRadius: shape.borderRadius,
         background: appearance.background,
         boxShadow: appearance.boxShadow,
-        transition: `width ${animation.duration} ${animation.easing ?? 'linear'}`,
+        ...assignInlineVars({ [indicatorTransitionDuration]: animation.duration }),
+        transitionTimingFunction: animation.easing ?? 'linear',
       }}
     />
   )
