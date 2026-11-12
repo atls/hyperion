@@ -5,7 +5,10 @@ import { containerShapes }          from '../../container/styles/shape/variants.
 import { indicatorShapes }          from '../../indicator/styles/shape/variants.js'
 import { labelShapes }              from '../../label/styles/shape/variants.js'
 
-export const circleProgressShapes = {
+export const circleProgressShapes: Record<
+  'lg' | 'md' | 'sm' | 'xl' | 'xs' | 'xs2',
+  CircleProgressShape
+> = {
   xs2: {
     container: containerShapes.xs2,
     box: boxShapes.xs2,
@@ -42,4 +45,4 @@ export const circleProgressShapes = {
     indicator: indicatorShapes.xl,
     label: labelShapes.xl,
   },
-} satisfies Record<string, CircleProgressShape>
+}

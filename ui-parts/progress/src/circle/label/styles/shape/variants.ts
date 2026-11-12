@@ -3,7 +3,7 @@ import type { LabelShape } from './interfaces.js'
 import { fontSizes }       from '@atls-ui/theme/tokens'
 import { lineHeights }     from '@atls-ui/theme/tokens'
 
-export const labelShapes = {
+export const labelShapes: Record<'lg' | 'md' | 'sm' | 'xl' | 'xs' | 'xs2', LabelShape> = {
   xs2: {
     typography: (theme) => ({
       ...theme.typography.overline,
@@ -28,4 +28,4 @@ export const labelShapes = {
   md: { typography: (theme) => theme.typography.overline },
   lg: { typography: (theme) => theme.typography.caption },
   xl: { typography: (theme) => theme.typography.caption },
-} satisfies Record<string, LabelShape>
+}
