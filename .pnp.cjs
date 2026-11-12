@@ -1549,8 +1549,6 @@ const RAW_RUNTIME_STATE =
           ["@atls-ui-parts/progress", "virtual:20752c45b516a7cf8cf2b84e29157482069ba63be80fff17a718858cac902b29bada9110da68b0a70a390a297428f9346894fcee811de4554b109e55e7c45ba1#workspace:ui-parts/progress"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
           ["@atls-ui/theme", "workspace:ui/theme"],\
-          ["@atls-utils/use-float", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:utils/use-float"],\
-          ["@floating-ui/react", "virtual:bdec61daa5ce18b211e41086a87aa58babcd016eed745eb318a2389812d34b0215bd01c4e05f4de11cfc30bd0259efe6cace4826920dba58cacb6c2dd7978d3e#npm:0.27.8"],\
           ["@storybook/react", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#patch:@storybook/react@npm%3A10.4.6#~/.yarn/patches/@storybook-react-npm-10.4.6-574597d2a0.patch::version=10.4.6&hash=1496cc"],\
           ["@types/react", "npm:19.1.2"],\
           ["@vanilla-extract/css", "npm:1.17.1"],\

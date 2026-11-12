@@ -10,7 +10,6 @@ export const boxShapes: Record<'lg' | 'md' | 'sm', BoxShape> = {
     paddingTop: spacing.component.lg,
     paddingBottom: spacing.component.xl,
     paddingInline: spacing.component.lg,
-    gap: spacing.component.lg,
   },
   md: {
     minWidth: 'min(220px, 100%)',
@@ -18,7 +17,6 @@ export const boxShapes: Record<'lg' | 'md' | 'sm', BoxShape> = {
     paddingTop: spacing.component.xl,
     paddingBottom: spacing.component.xl2,
     paddingInline: spacing.component.xl,
-    gap: spacing.component.lg,
   },
   lg: {
     minWidth: 'min(240px, 100%)',
@@ -26,6 +24,5 @@ export const boxShapes: Record<'lg' | 'md' | 'sm', BoxShape> = {
     paddingTop: spacing.component.xl,
     paddingBottom: spacing.component.xl2,
     paddingInline: spacing.component.xl,
-    gap: spacing.component.lg,
   },
 }

@@ -7,5 +7,4 @@ export interface BoxShape {
   paddingTop: CSSProperties['paddingTop']
   paddingBottom: CSSProperties['paddingBottom']
   paddingInline: CSSProperties['paddingInline']
-  gap: CSSProperties['gap']
 }
