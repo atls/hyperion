@@ -11,6 +11,7 @@ export const dialogStyles = style({
   height: '100%',
   maxWidth: 'none',
   maxHeight: 'none',
+  color: 'inherit',
   overflow: 'auto',
   overscrollBehavior: 'contain',
   selectors: {
