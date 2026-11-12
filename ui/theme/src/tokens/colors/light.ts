@@ -9,6 +9,7 @@ export const lightColors: Colors = {
     subtle: '#1E56C740',
   },
   surface: {
+    backdrop: '#00000080',
     base: '#F8F9FF',
     subtle: '#EFF1FF',
     muted: '#D4D8F0',

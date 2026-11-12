@@ -9,6 +9,6 @@ export const modalAppearances = {
   default: (theme: Theme): ModalAppearance => ({
     box: boxAppearances.default(theme),
     close: closeAppearances.default(theme),
-    backdropColor: '#00000080',
+    backdropColor: theme.colors.surface.backdrop,
   }),
 }

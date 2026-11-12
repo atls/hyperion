@@ -9,6 +9,7 @@ export const darkColors: Colors = {
     subtle: '#5F8FFF4D',
   },
   surface: {
+    backdrop: '#00000080',
     base: '#111111',
     subtle: '#171717',
     muted: '#1F1F1F',
