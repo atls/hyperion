@@ -25,7 +25,9 @@ export const Label = ({
       <span aria-hidden='true' className={labelReserveStyles}>
         100%
       </span>
-      <span className={labelValueStyles}>{value === undefined ? null : `${value}%`}</span>
+      <span className={labelValueStyles}>
+        {value === undefined ? null : `${Math.round(value)}%`}
+      </span>
     </span>
   )
 }
