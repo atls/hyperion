@@ -6,6 +6,7 @@ import { spacing }                          from '@atls-ui/theme/tokens'
 import { PAINT_PIXEL_SIZE }                 from '../../constants.js'
 import { STROKE_CENTER_RATIO }              from '../../constants.js'
 import { DEFAULT_INDICATOR_OVERLAP }        from '../../indicator/styles/shape/constants.js'
+import { MAX_RADIUS_RATIO }                 from './constants.js'
 import { PERCENTAGE_SCALE }                 from './constants.js'
 import { SVG_DIAGONAL_RATIO }               from './constants.js'
 
@@ -37,7 +38,12 @@ export const resolveShape = (shape: CircleProgressShape): ResolvedCircleProgress
   const paintPadding = `calc(${strokeWidth} + ${PAINT_PIXEL_SIZE})`
   const width = `calc(100cqw - 2 * ${inset})`
   const height = `calc(100cqh - 2 * ${inset})`
+  const radiusRatio = percentage(shape.box.radius)
   const radius = `min(max(0px, calc(${length(shape.box.radius)} + ${offset})), ${width} / 2, ${height} / 2)`
+  const axisRadius = (axis: string): string =>
+    radiusRatio === undefined
+      ? radius
+      : `max(0px, calc((100${axis} - 2 * ${padding}) * ${Math.min(radiusRatio, MAX_RADIUS_RATIO)} + ${offset}))`
   return {
     padding,
     paintPadding,
@@ -47,8 +53,8 @@ export const resolveShape = (shape: CircleProgressShape): ResolvedCircleProgress
       y: `calc(${inset} + ${paintPadding})`,
       width,
       height,
-      rx: radius,
-      ry: radius,
+      rx: axisRadius('cqw'),
+      ry: axisRadius('cqh'),
     },
   }
 }
