@@ -1,9 +1,9 @@
 import type { CloseShape } from './interfaces.js'
 
-import { CLOSE_SIZES }     from './constants.js'
+import { iconSizes }       from '@atls-ui/theme/tokens'
 
 export const closeShapes: Record<'lg' | 'md' | 'sm', CloseShape> = {
-  sm: { size: CLOSE_SIZES.sm },
-  md: { size: CLOSE_SIZES.md },
-  lg: { size: CLOSE_SIZES.lg },
+  sm: { size: iconSizes.sm },
+  md: { size: iconSizes.md },
+  lg: { size: iconSizes.lg },
 }
