@@ -2,6 +2,7 @@ import type { ReactNode }   from 'react'
 
 import type { ModalProps }  from './interfaces.js'
 
+import { FloatingPortal }   from '@floating-ui/react'
 import { clsx }             from 'clsx'
 
 import { CircleProgress }   from '@atls-ui-parts/progress'
@@ -39,69 +40,70 @@ export const Modal = ({
 }: ModalProps): ReactNode => {
   const theme = useTheme()
   const colors = typeof appearance === 'string' ? modalAppearances[appearance](theme) : appearance
-  const dialogRef = useModal(open, state, initialFocus)
+  const modal = useModal(open, state, initialFocus, onClose)
   return (
     <dialog
-      {...props}
-      ref={dialogRef}
+      {...modal.getDialogProps(props)}
+      ref={modal.setDialog}
       className={clsx(dialogStyles, backdropProps?.className)}
       style={{
         padding: shape.container.padding,
         backgroundColor: colors.backdropColor,
         ...backdropProps?.style,
       }}
-      onCancel={(event) => {
-        if (event.target !== event.currentTarget) return
-        event.preventDefault()
-        onClose?.()
-      }}
-      onClose={(event) => {
-        if (event.target === event.currentTarget && open && !dialogRef.current?.open) onClose?.()
-      }}
       onPointerDown={(event) => {
+        modal.resetEscape()
         props.onPointerDown?.(event)
         backdropProps?.onPointerDown?.(event)
         if (!event.defaultPrevented && event.target === event.currentTarget) onClose?.()
       }}
     >
       {open && (
-        <Box appearance={colors.box} shape={shape.box} className={className} style={style}>
-          <Container
-            shape={shape.container}
-            loading={state === 'loading'}
-            close={
-              showClose ? (
-                <Close
-                  appearance={colors.close}
-                  icon={closeIcon}
-                  label={closeLabel}
-                  shape={shape.close}
-                  onClose={onClose}
-                />
-              ) : null
-            }
-            loader={
-              loadingIndicator === undefined ? (
-                <CircleProgress aria-label='Loading' shape={shape.loading} />
-              ) : (
-                loadingIndicator
-              )
-            }
-            actions={
-              state === 'destructive' ? (
-                <Actions
-                  shape={shape.actions}
-                  confirmAction={confirmAction}
-                  cancelAction={cancelAction}
-                  onConfirm={onConfirm}
-                  onCancel={onCancel ?? onClose}
-                />
-              ) : null
-            }
+        <FloatingPortal root={modal.dialog} preserveTabOrder={false}>
+          <Box
+            ref={modal.setContent}
+            appearance={colors.box}
+            shape={shape.box}
+            className={className}
+            style={style}
           >
-            {children}
-          </Container>
-        </Box>
+            <Container
+              shape={shape.container}
+              loading={state === 'loading'}
+              close={
+                showClose ? (
+                  <Close
+                    appearance={colors.close}
+                    icon={closeIcon}
+                    label={closeLabel}
+                    shape={shape.close}
+                    onClose={onClose}
+                  />
+                ) : null
+              }
+              loader={
+                loadingIndicator === undefined ? (
+                  <CircleProgress aria-label='Loading' shape={shape.loading} />
+                ) : (
+                  loadingIndicator
+                )
+              }
+              actions={
+                state === 'destructive' ? (
+                  <Actions
+                    shape={shape.actions}
+                    confirmAction={confirmAction}
+                    cancelAction={cancelAction}
+                    onConfirm={onConfirm}
+                    onCancel={onCancel ?? onClose}
+                  />
+                ) : null
+              }
+            >
+              {children}
+            </Container>
+          </Box>
+        </FloatingPortal>
       )}
     </dialog>
   )

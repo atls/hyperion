@@ -788,6 +788,7 @@ __metadata:
     "@atls-ui-parts/progress": "workspace:*"
     "@atls-ui-parts/theme": "workspace:*"
     "@atls-ui/theme": "workspace:*"
+    "@floating-ui/react": "npm:0.27.8"
     "@storybook/react": "npm:10.4.6"
     "@types/react": "npm:19.1.2"
     "@vanilla-extract/css": "npm:1.17.1"
