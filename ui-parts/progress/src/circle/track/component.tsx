@@ -1,29 +1,23 @@
 import type { ReactNode }      from 'react'
-import type { CSSProperties }  from 'react'
 
 import type { IndicatorShape } from '../indicator/styles/shape/interfaces.js'
+import type { ContourStyles }  from '../styles/shape/interfaces.js'
 
 export const Track = ({
-  inset,
-  radius,
+  contour,
   strokeWidth,
   color,
 }: {
-  inset: CSSProperties['inset']
-  radius: string
+  contour: ContourStyles
   strokeWidth: IndicatorShape['strokeWidth']
   color: string
 }): ReactNode => (
-  <div
+  <svg
     aria-hidden='true'
-    style={{
-      position: 'absolute',
-      inset,
-      borderRadius: radius,
-      outline: `${typeof strokeWidth === 'number' ? `${strokeWidth}px` : strokeWidth} solid ${color}`,
-      outlineOffset: `calc(${typeof strokeWidth === 'number' ? `${strokeWidth}px` : strokeWidth} / -2)`,
-      boxSizing: 'border-box',
-      pointerEvents: 'none',
-    }}
-  />
+    width='100%'
+    height='100%'
+    style={{ position: 'absolute', inset: 0, display: 'block', overflow: 'visible' }}
+  >
+    <rect fill='none' stroke={color} strokeWidth={strokeWidth} style={contour} />
+  </svg>
 )

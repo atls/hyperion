@@ -1,5 +1,6 @@
 import type { ReactNode }               from 'react'
 
+import type { ContourStyles }           from '../styles/shape/interfaces.js'
 import type { CircleProgressAnimation } from './animation/interfaces.js'
 import type { IndicatorAppearance }     from './styles/appearance/interfaces.js'
 import type { IndicatorShape }          from './styles/shape/interfaces.js'
@@ -16,15 +17,13 @@ import { segmentStyles }                from './styles/base.css.js'
 import { segmentLength }                from './styles/base.css.js'
 
 export const Indicator = ({
-  radius,
-  inset,
+  contour,
   strokeWidth,
   appearance,
   value,
   animation,
 }: {
-  radius: string
-  inset: string
+  contour: ContourStyles
   strokeWidth: IndicatorShape['strokeWidth']
   appearance: IndicatorAppearance
   value?: number
@@ -32,14 +31,6 @@ export const Indicator = ({
 }): ReactNode => {
   const maskId = useId()
   const maskRef = useRef<SVGGElement>(null)
-  const contour = {
-    x: inset,
-    y: inset,
-    width: `calc(100% - 2 * ${inset})`,
-    height: `calc(100% - 2 * ${inset})`,
-    rx: `min(${radius}, calc(50cqw - ${inset}), calc(50cqh - ${inset}))`,
-    ry: `min(${radius}, calc(50cqw - ${inset}), calc(50cqh - ${inset}))`,
-  }
   useAnimation(maskRef, value === undefined ? animation : undefined)
   const segments = value === undefined ? animation.segments : [{ frames: [] }]
 
