@@ -1,0 +1,1 @@
+export const DEFAULT_INDICATOR_OVERLAP = 0.5

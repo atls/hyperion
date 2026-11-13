@@ -1,4 +1,7 @@
 export const lineHeights = {
+  xs6: '7px',
+  xs5: '8px',
+  xs4: '10px',
   xs3: '12px',
   xs2: '16px',
   xs: '20px',

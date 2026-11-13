@@ -1,0 +1,2 @@
+export const DEFAULT_SEGMENT_LENGTH = 0.69
+export const MILLISECONDS_PER_SECOND = 1000
