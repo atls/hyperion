@@ -16,8 +16,7 @@
     "@atls-ui-parts/icons": "workspace:*",
     "@atls-ui-parts/theme": "workspace:*",
     "@atls-ui/theme": "workspace:*",
-    "clsx": "2.1.1",
-    "rainbow-sprinkles": "1.0.0"
+    "clsx": "2.1.1"
   },
   "devDependencies": {
     "@storybook/react": "10.4.6",
