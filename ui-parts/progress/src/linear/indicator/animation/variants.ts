@@ -1,12 +1,13 @@
 import type { LinearProgressAnimation } from './interfaces.js'
 
-import { DEFAULT_DURATION }             from './constants.js'
+import { animations }                   from '@atls-ui/theme/tokens'
+
 import { DEFAULT_SEGMENT_LENGTH }       from './constants.js'
 
 export const linearProgressAnimations = {
   indeterminate: {
-    duration: DEFAULT_DURATION,
-    easing: 'linear',
+    duration: `${animations.loopDuration.sm}ms`,
+    easing: animations.easing.linear,
     segments: [
       {
         id: 'indeterminate',

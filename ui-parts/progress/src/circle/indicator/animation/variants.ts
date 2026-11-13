@@ -1,8 +1,7 @@
 import type { CircleProgressAnimation } from './interfaces.js'
 
-import { SPINNER_DURATION }             from './constants.js'
-import { ORBIT_DURATION }               from './constants.js'
-import { ORBIT_EASING }                 from './constants.js'
+import { animations }                   from '@atls-ui/theme/tokens'
+
 import { SPINNER_ARC_LENGTH }           from './constants.js'
 import { ORBIT_ARC_LENGTH }             from './constants.js'
 import { ORBIT_JOIN_PHASE }             from './constants.js'
@@ -10,8 +9,8 @@ import { ORBIT_JOIN_TRAVEL }            from './constants.js'
 
 export const circleProgressAnimations = {
   spinner: {
-    duration: SPINNER_DURATION,
-    easing: 'linear',
+    duration: `${animations.loopDuration.sm}ms`,
+    easing: animations.easing.linear,
     segments: [
       {
         frames: [
@@ -22,8 +21,8 @@ export const circleProgressAnimations = {
     ],
   },
   orbit: {
-    duration: ORBIT_DURATION,
-    easing: ORBIT_EASING,
+    duration: `${animations.loopDuration.md}ms`,
+    easing: `cubic-bezier(${animations.curves.smooth.join(', ')})`,
     segments: [
       {
         frames: [
