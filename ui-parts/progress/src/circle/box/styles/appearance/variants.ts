@@ -8,8 +8,8 @@ import { shadowSpreads }      from '@atls-ui/theme/tokens'
 
 const boxShadow = (theme: Theme): BoxAppearance['shadow'] =>
   [
-    `${shadowOffsets.none} ${shadowOffsets.none} ${shadowBlurs.xs5} ${shadowSpreads.none} ${theme.colors.action.subtle}`,
-    `${shadowOffsets.none} ${shadowOffsets.none} ${shadowBlurs.xs5} ${shadowSpreads.none} ${theme.colors.elevation.sm}`,
+    `${shadowOffsets.none} ${shadowOffsets.none} ${shadowBlurs.xs6} ${shadowSpreads.xs2} ${theme.colors.action.subtle}`,
+    `${shadowOffsets.none} ${shadowOffsets.none} ${shadowBlurs.xs7} ${shadowSpreads.xs3} ${theme.colors.elevation.sm}`,
   ].join(', ')
 
 export const boxAppearances = {
