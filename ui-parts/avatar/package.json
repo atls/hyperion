@@ -13,7 +13,9 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
+    "@atls-ui-parts/progress": "workspace:*",
     "@atls-ui-parts/theme": "workspace:*",
+    "@atls-ui/theme": "workspace:*",
     "@radix-ui/react-avatar": "1.1.7",
     "@vanilla-extract/recipes": "0.5.5",
     "clsx": "2.1.1"

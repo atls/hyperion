@@ -434,8 +434,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/avatar@workspace:ui-parts/avatar"
   dependencies:
+    "@atls-ui-parts/progress": "workspace:*"
     "@atls-ui-parts/text-transform": "workspace:*"
     "@atls-ui-parts/theme": "workspace:*"
+    "@atls-ui/theme": "workspace:*"
     "@radix-ui/react-avatar": "npm:1.1.7"
     "@storybook/react": "npm:10.4.6"
     "@types/react": "npm:19.1.2"
@@ -884,7 +886,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/progress@workspace:ui-parts/progress":
+"@atls-ui-parts/progress@workspace:*, @atls-ui-parts/progress@workspace:ui-parts/progress":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/progress@workspace:ui-parts/progress"
   dependencies:
