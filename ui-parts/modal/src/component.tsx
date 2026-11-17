@@ -45,6 +45,7 @@ export const Modal = ({
     <dialog
       {...modal.getDialogProps(props)}
       ref={modal.setDialog}
+      data-state={state}
       className={clsx(dialogStyles, backdropProps?.className)}
       style={{
         padding: shape.container.padding,

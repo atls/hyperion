@@ -24,3 +24,7 @@ export const dialogStyles = style({
 })
 globalStyle(`html:has(${dialogStyles}[open])`, { overflow: 'hidden' })
 globalStyle(`${dialogStyles} [data-floating-ui-portal]`, { display: 'contents' })
+globalStyle(
+  `${dialogStyles}[data-state="loading"] [data-floating-ui-portal] [data-floating-ui-portal]`,
+  { display: 'none' }
+)
