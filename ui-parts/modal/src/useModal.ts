@@ -31,7 +31,7 @@ export const useModal = (
       initialFocus?.current?.focus({ preventScroll: true })
     } else if (
       activeElement === dialog.ownerDocument.body ||
-      activeElement?.closest('[hidden], [inert]')
+      !activeElement?.getClientRects().length
     ) {
       dialog.focus({ preventScroll: true })
     }
