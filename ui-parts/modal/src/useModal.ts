@@ -25,10 +25,14 @@ export const useModal = (
       return
     }
     if (!content) return
+    const { activeElement } = dialog.ownerDocument
     if (!dialog.open) {
       dialog.showModal()
       initialFocus?.current?.focus({ preventScroll: true })
-    } else if (dialog.ownerDocument.activeElement === dialog.ownerDocument.body) {
+    } else if (
+      activeElement === dialog.ownerDocument.body ||
+      activeElement?.closest('[hidden], [inert]')
+    ) {
       dialog.focus({ preventScroll: true })
     }
   }, [content, dialog, initialFocus, open, state])

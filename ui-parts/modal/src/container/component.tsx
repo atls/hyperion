@@ -5,6 +5,7 @@ import type { ContainerProps } from './interfaces.js'
 import { containerStyles }     from './styles/base.css.js'
 import { closeStyles }         from './styles/base.css.js'
 import { loadingStyles }       from './styles/base.css.js'
+import { contentStyles }       from './styles/base.css.js'
 
 export const Container = ({
   shape,
@@ -16,7 +17,10 @@ export const Container = ({
 }: ContainerProps): ReactNode => (
   <div className={containerStyles} style={{ gap: shape.gap }}>
     {close && <div className={closeStyles}>{close}</div>}
-    {loading ? <div className={loadingStyles}>{loader}</div> : children}
+    <div hidden={loading} inert={loading} className={contentStyles}>
+      {children}
+    </div>
+    {loading && <div className={loadingStyles}>{loader}</div>}
     {actions}
   </div>
 )
