@@ -55,7 +55,8 @@ export const Modal = ({
         modal.resetEscape()
         props.onPointerDown?.(event)
         backdropProps?.onPointerDown?.(event)
-        if (!event.defaultPrevented && event.target === event.currentTarget) onClose?.()
+        if (!event.defaultPrevented && event.button === 0 && event.target === event.currentTarget)
+          onClose?.()
       }}
     >
       {open && (
