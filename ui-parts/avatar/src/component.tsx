@@ -18,6 +18,7 @@ export const Avatar = ({
   loading = false,
   loader,
   clickable = false,
+  buttonProps,
   disabled,
   shape = avatarShapes.md,
   appearance = 'default',
@@ -30,7 +31,7 @@ export const Avatar = ({
       ? avatarAppearances[appearance](theme, shape.box.elevationSize)
       : appearance
   return (
-    <Root asChild>
+    <Root {...(clickable ? buttonProps : undefined)} asChild>
       <Box
         {...props}
         role={clickable ? undefined : 'img'}
