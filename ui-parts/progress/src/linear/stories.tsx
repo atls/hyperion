@@ -6,6 +6,8 @@ import type { LinearProgressProps }     from './interfaces.js'
 
 import { LinearProgress }               from './component.js'
 import { linearProgressAnimations }     from './indicator/animation/variants.js'
+import { forward }                      from './stories.css.js'
+import { backward }                     from './stories.css.js'
 import { linearProgressAppearances }    from './styles/appearance/variants.js'
 import { linearProgressShapes }         from './styles/shape/variants.js'
 
@@ -14,22 +16,7 @@ const storyAnimations = {
   custom: {
     duration: '2s',
     easing: 'ease-in-out',
-    segments: [
-      {
-        id: 'forward',
-        frames: [
-          { at: 0, start: -0.3, end: 0 },
-          { at: 1, start: 1, end: 1.3 },
-        ],
-      },
-      {
-        id: 'backward',
-        frames: [
-          { at: 0, start: 1, end: 1.2 },
-          { at: 1, start: -0.2, end: 0 },
-        ],
-      },
-    ],
+    segments: [forward, backward],
   },
 } satisfies Record<string, LinearProgressAnimation>
 

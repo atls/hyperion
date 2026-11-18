@@ -4,34 +4,41 @@ import type { IndicatorProps }         from './interfaces.js'
 
 import { assignInlineVars }            from '@vanilla-extract/dynamic'
 
-import { AnimatedSegment }             from './segment/component.js'
 import { indicatorTransitionDuration } from './styles/base.css.js'
-import { indicatorStyles }             from './styles/base.css.js'
+import { movingStyles }                from './styles/base.css.js'
+import { valueStyles }                 from './styles/base.css.js'
 
 export const Indicator = ({ shape, appearance, value, animation }: IndicatorProps): ReactNode => {
-  if (value === undefined)
-    return animation.segments.map((segment) => (
-      <AnimatedSegment
-        key={segment.id}
-        shape={shape}
-        appearance={appearance}
-        animation={animation}
-        segment={segment}
+  const style = {
+    height: shape.height,
+    borderRadius: shape.borderRadius,
+    background: appearance.background,
+    boxShadow: appearance.boxShadow,
+    ...assignInlineVars({ [indicatorTransitionDuration]: animation.duration }),
+  }
+  if (value !== undefined)
+    return (
+      <div
+        aria-hidden='true'
+        className={valueStyles}
+        style={{
+          ...style,
+          width: `${value}%`,
+          transitionTimingFunction: animation.easing ?? 'linear',
+        }}
       />
-    ))
-  return (
+    )
+  return animation.segments.map((animationName, index) => (
     <div
+      // eslint-disable-next-line react/no-array-index-key
+      key={index}
       aria-hidden='true'
-      className={indicatorStyles}
+      className={movingStyles}
       style={{
-        width: `${value}%`,
-        height: shape.height,
-        borderRadius: shape.borderRadius,
-        background: appearance.background,
-        boxShadow: appearance.boxShadow,
-        ...assignInlineVars({ [indicatorTransitionDuration]: animation.duration }),
-        transitionTimingFunction: animation.easing ?? 'linear',
+        ...style,
+        animationName,
+        animationTimingFunction: animation.easing ?? 'linear',
       }}
     />
-  )
+  ))
 }

@@ -8,11 +8,7 @@ export { circleProgressAppearances }     from './circle/styles/appearance/varian
 export { circleProgressShapes }          from './circle/styles/shape/variants.js'
 export { LinearProgress }                from './linear/component.js'
 export type { LinearProgressProps }      from './linear/interfaces.js'
-export type {
-  LinearProgressAnimation,
-  LinearAnimationFrame,
-  LinearAnimationSegment,
-} from './linear/indicator/animation/interfaces.js'
+export type { LinearProgressAnimation }  from './linear/indicator/animation/interfaces.js'
 export { linearProgressAnimations }      from './linear/indicator/animation/variants.js'
 export type { LinearProgressAppearance } from './linear/styles/appearance/interfaces.js'
 export type { LinearProgressShape }      from './linear/styles/shape/interfaces.js'
