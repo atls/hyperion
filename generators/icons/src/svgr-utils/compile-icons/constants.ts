@@ -17,6 +17,8 @@ const prettierPlugin = require('@svgr/plugin-prettier') as SvgrPlugin
 const svgrTransformPlugins = [svgoPlugin, jsxPlugin, prettierPlugin]
 
 export const MASK_ID_PATTERN = /mask0/g
+export const PROPS_SPREAD_FROM = '...props'
+export const PROPS_SPREAD_TO = '...otherProps'
 
 export const FIFTY_PLUS_PATTERN = '50+'
 export const FIFTY_PLUS_REPLACEMENT = 'FiftyPlus'
@@ -26,4 +28,8 @@ export const svgrTransformConfig: Config = {
   typescript: true,
   template: svgrTemplate,
   plugins: svgrTransformPlugins,
+  svgProps: {
+    className: `{clsx(className, String(otherProps.className || ''))}`,
+    style: '{iconStyle}',
+  },
 }
