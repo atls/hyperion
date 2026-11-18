@@ -1,3 +1,5 @@
 export *      from './fontFaces.js'
+export *      from './fontSizes.js'
+export *      from './lineHeights.js'
 export type * from './interfaces.js'
 export *      from './typography.js'
