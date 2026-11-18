@@ -22,6 +22,7 @@ export interface ActionColors {
 }
 
 export interface SurfaceColors {
+  backdrop: string
   base: string
   subtle: string
   muted: string
