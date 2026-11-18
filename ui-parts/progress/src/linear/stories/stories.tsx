@@ -1,15 +1,15 @@
 import type { Meta }                    from '@storybook/react'
 import type { StoryObj }                from '@storybook/react'
 
-import type { LinearProgressAnimation } from './indicator/animation/interfaces.js'
-import type { LinearProgressProps }     from './interfaces.js'
+import type { LinearProgressAnimation } from '../../index.js'
+import type { LinearProgressProps }     from '../../index.js'
 
-import { LinearProgress }               from './component.js'
-import { linearProgressAnimations }     from './indicator/animation/variants.js'
-import { forward }                      from './stories.css.js'
-import { backward }                     from './stories.css.js'
-import { linearProgressAppearances }    from './styles/appearance/variants.js'
-import { linearProgressShapes }         from './styles/shape/variants.js'
+import { LinearProgress }               from '../../index.js'
+import { linearProgressAnimations }     from '../../index.js'
+import { linearProgressAppearances }    from '../../index.js'
+import { linearProgressShapes }         from '../../index.js'
+import { forward }                      from './styles.css.js'
+import { backward }                     from './styles.css.js'
 
 const storyAnimations = {
   ...linearProgressAnimations,
