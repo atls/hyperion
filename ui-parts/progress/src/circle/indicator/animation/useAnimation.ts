@@ -22,7 +22,7 @@ export const useAnimation = (
       Number.parseFloat(animation.duration) *
       (animation.duration.endsWith('ms') ? 1 : MILLISECONDS_PER_SECOND)
     const motion = view.matchMedia('(prefers-reduced-motion: reduce)')
-    const players = Array.from(element.querySelectorAll('rect')).map((segment, index) =>
+    const players = Array.from(element.children).map((segment, index) =>
       segment.animate(
         getSegmentKeyframes(
           animation.segments[index].frames,
