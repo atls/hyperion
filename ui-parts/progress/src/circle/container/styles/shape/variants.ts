@@ -1,14 +1,13 @@
-import type { ContainerShape }  from './interfaces.js'
+import type { ContainerShape } from './interfaces.js'
 
-import { space }                from '@atls-ui/theme/tokens'
-import { spacing }              from '@atls-ui/theme/tokens'
+import { space }               from '@atls-ui/theme/tokens'
+import { spacing }             from '@atls-ui/theme/tokens'
 
-import { XS_CONTAINER_PADDING } from './constants.js'
-import { CONTAINER_SIZES }      from './constants.js'
+import { CONTAINER_SIZES }     from './constants.js'
 
 export const containerShapes = {
   xs2: { ...CONTAINER_SIZES.xs2, padding: space.g1 },
-  xs: { ...CONTAINER_SIZES.xs, padding: XS_CONTAINER_PADDING },
+  xs: { ...CONTAINER_SIZES.xs, padding: spacing.component.xs3 },
   sm: { ...CONTAINER_SIZES.sm, padding: spacing.component.xs2 },
   md: { ...CONTAINER_SIZES.md, padding: spacing.component.xs2 },
   lg: { ...CONTAINER_SIZES.lg, padding: spacing.component.xs2 },

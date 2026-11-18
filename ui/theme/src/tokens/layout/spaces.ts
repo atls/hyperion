@@ -1,6 +1,7 @@
 export const spacing = {
   component: {
     none: '0',
+    xs3: '1.5px',
     xs2: '2px',
     xs: '4px',
     sm: '6px',

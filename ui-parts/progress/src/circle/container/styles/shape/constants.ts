@@ -1,5 +1,3 @@
-export const XS_CONTAINER_PADDING = '1.5px'
-
 export const CONTAINER_SIZES = {
   xs2: { width: 30, height: 14 },
   xs: { width: 41, height: 17 },
