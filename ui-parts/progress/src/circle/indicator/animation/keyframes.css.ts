@@ -1,17 +1,23 @@
-import { keyframes } from '@vanilla-extract/css'
+import { keyframes }              from '@vanilla-extract/css'
+
+import { SPINNER_DASH_ARRAY }     from './constants.js'
+import { SPINNER_OFFSETS }        from './constants.js'
+import { ORBIT_DASH_ARRAY }       from './constants.js'
+import { ORBIT_LEADING_OFFSETS }  from './constants.js'
+import { ORBIT_TRAILING_OFFSETS } from './constants.js'
 
 export const spinner = keyframes({
-  from: { strokeDasharray: '0.25 0.75', strokeDashoffset: 0.25 },
-  to: { strokeDasharray: '0.25 0.75', strokeDashoffset: 1.25 },
+  from: { strokeDasharray: SPINNER_DASH_ARRAY, strokeDashoffset: SPINNER_OFFSETS.start },
+  to: { strokeDasharray: SPINNER_DASH_ARRAY, strokeDashoffset: SPINNER_OFFSETS.end },
 })
 
 export const orbitLeading = keyframes({
-  'from, to': { strokeDasharray: '0.18 0.82', strokeDashoffset: 1 },
-  '50%': { strokeDasharray: '0.18 0.82', strokeDashoffset: 1.5 },
+  'from, to': { strokeDasharray: ORBIT_DASH_ARRAY, strokeDashoffset: ORBIT_LEADING_OFFSETS.start },
+  '50%': { strokeDasharray: ORBIT_DASH_ARRAY, strokeDashoffset: ORBIT_LEADING_OFFSETS.middle },
 })
 
 export const orbitTrailing = keyframes({
-  from: { strokeDasharray: '0.18 0.82', strokeDashoffset: 1.18 },
-  '50%': { strokeDasharray: '0.18 0.82', strokeDashoffset: 1.68 },
-  to: { strokeDasharray: '0.18 0.82', strokeDashoffset: 2.18 },
+  from: { strokeDasharray: ORBIT_DASH_ARRAY, strokeDashoffset: ORBIT_TRAILING_OFFSETS.start },
+  '50%': { strokeDasharray: ORBIT_DASH_ARRAY, strokeDashoffset: ORBIT_TRAILING_OFFSETS.middle },
+  to: { strokeDasharray: ORBIT_DASH_ARRAY, strokeDashoffset: ORBIT_TRAILING_OFFSETS.end },
 })
