@@ -1,9 +1,8 @@
 import type { BoxShape } from './interfaces.js'
 
-import { radii }         from '@atls-ui/theme/tokens'
 import { spacing }       from '@atls-ui/theme/tokens'
 
-const FULL_RADIUS = `min(${radii.full}, 50cqmin)`
+import { FULL_RADIUS }   from './constants.js'
 
 export const boxShape: BoxShape = {
   paddingInline: spacing.component.none,
