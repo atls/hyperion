@@ -6,6 +6,7 @@ import type { CircleProgressProps }     from '../../index.js'
 
 import { useTheme }                     from '@atls-ui-parts/theme'
 import { spacing }                      from '@atls-ui/theme/tokens'
+import { animations }                   from '@atls-ui/theme/tokens'
 
 import { CircleProgress }               from '../../index.js'
 import { circleProgressAnimations }     from '../../index.js'
@@ -28,8 +29,8 @@ const storyShapes = {
 const storyAnimations = {
   ...circleProgressAnimations,
   custom: {
-    duration: '3s',
-    easing: 'linear',
+    duration: `${animations.loopDuration.md}ms`,
+    easing: animations.easing.linear,
     segments: threeArcs,
   },
 } satisfies Record<string, CircleProgressAnimation>
@@ -47,8 +48,8 @@ const CustomCircle = ({ indeterminate, indicatorBackground, ...args }: StoryArgs
       animation={
         args.animation ?? {
           ...circleProgressAnimations.spinner,
-          duration: '2s',
-          easing: 'ease-in-out',
+          duration: `${animations.loopDuration.sm}ms`,
+          easing: animations.easing.easeInOut,
         }
       }
       appearance={{

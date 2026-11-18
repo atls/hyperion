@@ -4,6 +4,8 @@ import type { StoryObj }                from '@storybook/react'
 import type { LinearProgressAnimation } from '../../index.js'
 import type { LinearProgressProps }     from '../../index.js'
 
+import { animations }                   from '@atls-ui/theme/tokens'
+
 import { LinearProgress }               from '../../index.js'
 import { linearProgressAnimations }     from '../../index.js'
 import { linearProgressAppearances }    from '../../index.js'
@@ -14,8 +16,8 @@ import { backward }                     from './styles.css.js'
 const storyAnimations = {
   ...linearProgressAnimations,
   custom: {
-    duration: '2s',
-    easing: 'ease-in-out',
+    duration: `${animations.loopDuration.sm}ms`,
+    easing: animations.easing.easeInOut,
     segments: [forward, backward],
   },
 } satisfies Record<string, LinearProgressAnimation>
