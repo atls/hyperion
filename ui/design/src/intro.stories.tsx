@@ -12,7 +12,12 @@ const meta: Meta = {
   title: 'Hyperion',
   render: () => (
     <Column fill maxWidth='800px' marginX='auto'>
-      <Image src='https://user-images.githubusercontent.com/102182195/234979948-62106953-55d8-4d7f-8b2f-09fad882d8d2.png' />
+      <Image
+        alt='Hyperion UI kit'
+        width='100%'
+        height='auto'
+        src='https://user-images.githubusercontent.com/102182195/234979948-62106953-55d8-4d7f-8b2f-09fad882d8d2.png'
+      />
       <Layout flexBasis='24px' />
       <Text fontSize='$large' fontWeight='$bold' lineHeight='$extraMedium' color='$text.black'>
         Hyperion UI-Kit
