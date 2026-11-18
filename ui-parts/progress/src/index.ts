@@ -1,10 +1,6 @@
 export { CircleProgress }                from './circle/component.js'
 export type { CircleProgressProps }      from './circle/interfaces.js'
-export type {
-  CircleProgressAnimation,
-  SegmentAnimation,
-  SegmentFrame,
-} from './circle/indicator/animation/interfaces.js'
+export type { CircleProgressAnimation }  from './circle/indicator/animation/interfaces.js'
 export { circleProgressAnimations }      from './circle/indicator/animation/variants.js'
 export type { CircleProgressAppearance } from './circle/styles/appearance/interfaces.js'
 export type { CircleProgressShape }      from './circle/styles/shape/interfaces.js'

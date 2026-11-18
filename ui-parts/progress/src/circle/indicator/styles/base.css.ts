@@ -1,16 +1,30 @@
-import { createVar }                    from '@vanilla-extract/css'
-import { style }                        from '@vanilla-extract/css'
+import { style }      from '@vanilla-extract/css'
 
-import { SEGMENT_VISIBILITY_THRESHOLD } from './constants.js'
+import { animations } from '@atls-ui/theme/tokens'
 
-export const segmentStart = createVar({ syntax: '<number>', inherits: false, initialValue: '0' })
-export const segmentLength = createVar({ syntax: '<number>', inherits: false, initialValue: '0' })
-
-export const segmentStyles = style({
-  strokeDasharray: `clamp(0, ${segmentLength}, 1) calc(1 - clamp(0, ${segmentLength}, 1))`,
-  strokeDashoffset: `calc(${segmentStart} + ${segmentLength})`,
+const segmentStyles = style({
+  stroke: 'white',
+  strokeLinecap: 'round',
   transform: 'scaleX(-1)',
   transformBox: 'fill-box',
   transformOrigin: 'center',
-  opacity: `clamp(0, calc((${segmentLength} - ${SEGMENT_VISIBILITY_THRESHOLD}) * ${1 / SEGMENT_VISIBILITY_THRESHOLD}), 1)`,
 })
+export const movingStyles = style([
+  segmentStyles,
+  {
+    animationIterationCount: 'infinite',
+    animationFillMode: 'both',
+    '@media': { '(prefers-reduced-motion: reduce)': { animationPlayState: 'paused' } },
+  },
+])
+export const valueStyles = style([
+  segmentStyles,
+  {
+    transitionProperty: 'stroke-dasharray, stroke-dashoffset, opacity',
+    transitionDuration: animations.duration.md,
+    transitionTimingFunction: animations.easing.easeOut,
+    '@media': {
+      '(prefers-reduced-motion: reduce)': { transitionDuration: animations.duration.none },
+    },
+  },
+])

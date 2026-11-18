@@ -9,6 +9,7 @@ import { spacing }                      from '@atls-ui/theme/tokens'
 
 import { CircleProgress }               from './component.js'
 import { circleProgressAnimations }     from './indicator/animation/variants.js'
+import { threeArcs }                    from './stories.css.js'
 import { circleProgressShapes }         from './styles/shape/variants.js'
 
 const storyShapes = {
@@ -29,26 +30,7 @@ const storyAnimations = {
   custom: {
     duration: '3s',
     easing: 'linear',
-    segments: [
-      {
-        frames: [
-          { at: 0, start: 0, end: 0.1 },
-          { at: 1, start: 1, end: 1.1 },
-        ],
-      },
-      {
-        frames: [
-          { at: 0, start: 0.4, end: 0.5 },
-          { at: 1, start: 1.4, end: 1.5 },
-        ],
-      },
-      {
-        frames: [
-          { at: 0, start: 0.8, end: 0.9 },
-          { at: 1, start: 1.8, end: 1.9 },
-        ],
-      },
-    ],
+    segments: threeArcs,
   },
 } satisfies Record<string, CircleProgressAnimation>
 

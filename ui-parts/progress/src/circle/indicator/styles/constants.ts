@@ -1,1 +1,0 @@
-export const SEGMENT_VISIBILITY_THRESHOLD = 1e-9
