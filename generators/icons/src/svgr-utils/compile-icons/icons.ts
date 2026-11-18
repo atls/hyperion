@@ -5,8 +5,6 @@ import type { Source }            from '../../interfaces.js'
 import { transform }              from '@svgr/core'
 
 import { MASK_ID_PATTERN }        from './constants.js'
-import { PROPS_SPREAD_FROM }      from './constants.js'
-import { PROPS_SPREAD_TO }        from './constants.js'
 import { FIFTY_PLUS_PATTERN }     from './constants.js'
 import { FIFTY_PLUS_REPLACEMENT } from './constants.js'
 import { svgrTransformConfig }    from './constants.js'
@@ -25,9 +23,7 @@ export const compileIcons = async (
       { componentName: icon.name.replace(FIFTY_PLUS_PATTERN, FIFTY_PLUS_REPLACEMENT) }
     )
 
-    const code = transformed
-      .replace(MASK_ID_PATTERN, icon.name)
-      .replace(PROPS_SPREAD_FROM, PROPS_SPREAD_TO)
+    const code = transformed.replace(MASK_ID_PATTERN, icon.name)
 
     return {
       name: icon.fileName,
