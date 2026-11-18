@@ -1598,7 +1598,6 @@ const RAW_RUNTIME_STATE =
       ["workspace:ui-parts/popover", {\
         "packageLocation": "./ui-parts/popover/",\
         "packageDependencies": [\
-          ["@atls-ui-parts/condition", "virtual:06315aec6049f1c6c32004d6e584058ffedd6c8eaf08aaee2ce03aaedeaf84c340968f24d92b3566001c478f3ac64eca59adabd63e33390cb5990761978a1ea2#workspace:ui-parts/condition"],\
           ["@atls-ui-parts/layout", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#workspace:ui-parts/layout"],\
           ["@atls-ui-parts/popover", "workspace:ui-parts/popover"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
@@ -1610,7 +1609,6 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.1.2"],\
           ["@vanilla-extract/css", "npm:1.17.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
-          ["framer-motion", "virtual:06315aec6049f1c6c32004d6e584058ffedd6c8eaf08aaee2ce03aaedeaf84c340968f24d92b3566001c478f3ac64eca59adabd63e33390cb5990761978a1ea2#npm:12.43.0"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:19.1.0"],\
           ["storybook", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:10.4.6"],\
