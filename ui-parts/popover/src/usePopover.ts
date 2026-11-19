@@ -1,18 +1,18 @@
-import type { UsePopoverResult }      from './interfaces.js'
-import type { PopoverProps }          from './interfaces.js'
+import type { UsePopoverResult }    from './interfaces.js'
+import type { PopoverProps }        from './interfaces.js'
 
-import { useMergeRefs }               from '@floating-ui/react'
-import { useTransitionStatus }        from '@floating-ui/react'
-import { cloneElement }               from 'react'
-import { useId }                      from 'react'
-import { useState }                   from 'react'
+import { useMergeRefs }             from '@floating-ui/react'
+import { useTransitionStatus }      from '@floating-ui/react'
+import { cloneElement }             from 'react'
+import { useId }                    from 'react'
+import { useState }                 from 'react'
 
-import { useTheme }                   from '@atls-ui-parts/theme'
-import { useFloat }                   from '@atls-utils/use-float'
+import { useTheme }                 from '@atls-ui-parts/theme'
+import { animations }               from '@atls-ui/theme/tokens'
+import { useFloat }                 from '@atls-utils/use-float'
 
-import { POPOVER_ANIMATION_DURATION } from './constants.js'
-import { resolvePopoverAppearance }   from './styles/appearance/resolve.js'
-import { popoverShapes }              from './styles/shape/variants.js'
+import { resolvePopoverAppearance } from './styles/appearance/resolve.js'
+import { popoverShapes }            from './styles/shape/variants.js'
 export const usePopover = ({
   children,
   content,
@@ -42,7 +42,7 @@ export const usePopover = ({
       role: 'dialog',
     })
   const { isMounted, status } = useTransitionStatus(context, {
-    duration: POPOVER_ANIMATION_DURATION,
+    duration: Number.parseFloat(animations.duration.sm),
   })
   const triggerRef = useMergeRefs([children.props.ref, refs.setReference])
   const floatingRef = useMergeRefs([contentProps?.ref, refs.setFloating])
