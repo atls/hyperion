@@ -1,6 +1,11 @@
 {
   "name": "@atls-utils/use-outside-click",
   "version": "1.0.4",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "utils/use-outside-click"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {

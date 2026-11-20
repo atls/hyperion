@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-parts/conditional-render",
   "version": "1.0.4",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "ui-parts/conditional-render"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",

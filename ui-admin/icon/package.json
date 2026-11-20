@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-admin/icon",
   "version": "1.0.8",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "ui-admin/icon"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",

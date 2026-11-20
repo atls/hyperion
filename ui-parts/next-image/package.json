@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-parts/next-image",
   "version": "1.0.8",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "ui-parts/next-image"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",

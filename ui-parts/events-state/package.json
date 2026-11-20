@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-parts/events-state",
   "version": "1.0.4",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "ui-parts/events-state"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
