@@ -6,7 +6,7 @@ import { TextTransform } from '../text-transform.component.js'
 
 describe('TextTransform', () => {
   it('uppercases text', () => {
-    assert.equal(TextTransform({ upperCase: true, children: 'uppercase' }), 'UPPERCASE')
+    assert.equal(TextTransform({ upperCase: true, children: 'Mixed case' }), 'MIXED CASE')
   })
 
   it('lowercases text', () => {
