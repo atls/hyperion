@@ -18,12 +18,9 @@
     "postpack": "rm -rf dist"
   },
   "devDependencies": {
-    "@playwright/test": "1.63.0",
-    "@types/http-server": "0.12.4",
     "@types/node": "25.9.3",
     "@types/react": "19.1.2",
     "@types/react-dom": "19.1.2",
-    "http-server": "14.1.1",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
