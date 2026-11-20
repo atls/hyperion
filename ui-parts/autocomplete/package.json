@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-parts/autocomplete",
   "version": "1.1.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "ui-parts/autocomplete"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",

@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-generators/components",
   "version": "1.0.10",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "generators/components"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
