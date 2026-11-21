@@ -1,4 +1,5 @@
 import type { ComponentPropsWithRef } from 'react'
+import type { RefCallback }           from 'react'
 
 import type { ImageProps }            from './interfaces.js'
 import type { ImageLoadResult }       from './interfaces.js'
@@ -39,7 +40,7 @@ export const useImage = ({
   const hasSource = Boolean(nativeProps.src || nativeProps.srcSet)
   const state = hasSource ? requestState : 'empty'
   const busy = isLoading || state === 'loading'
-  const imageRef = useCallback(
+  const imageRef = useCallback<RefCallback<HTMLImageElement>>(
     (image: HTMLImageElement | null) => {
       if (image?.complete) {
         const nextState = image.naturalWidth > 0 ? 'loaded' : 'error'
