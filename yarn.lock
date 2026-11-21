@@ -434,14 +434,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/avatar@workspace:ui-parts/avatar"
   dependencies:
+    "@atls-ui-parts/progress": "workspace:*"
     "@atls-ui-parts/text-transform": "workspace:*"
     "@atls-ui-parts/theme": "workspace:*"
+    "@atls-ui/theme": "workspace:*"
     "@radix-ui/react-avatar": "npm:1.1.7"
     "@storybook/react": "npm:10.4.6"
     "@types/react": "npm:19.1.2"
     "@vanilla-extract/css": "npm:1.17.1"
     "@vanilla-extract/dynamic": "npm:2.1.2"
-    "@vanilla-extract/recipes": "npm:0.5.5"
     clsx: "npm:2.1.1"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
@@ -688,16 +689,24 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/image@workspace:ui-parts/image"
   dependencies:
+    "@atls-ui-parts/icons": "workspace:*"
+    "@atls-ui-parts/progress": "workspace:*"
+    "@atls-ui-parts/theme": "workspace:*"
+    "@atls-ui/theme": "workspace:*"
+    "@storybook/react": "npm:10.4.6"
     "@types/react": "npm:19.1.2"
     "@vanilla-extract/css": "npm:1.17.1"
     "@vanilla-extract/dynamic": "npm:2.1.2"
     clsx: "npm:2.1.1"
-    rainbow-sprinkles: "npm:1.0.0"
+    react: "npm:19.1.0"
+    react-dom: "npm:19.1.0"
+    storybook: "npm:10.4.6"
+    typescript: "npm:5.9.3"
   peerDependencies:
     "@vanilla-extract/css": "*"
     "@vanilla-extract/dynamic": "*"
-    react: "*"
-    react-dom: "*"
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -750,15 +759,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/link@workspace:ui-parts/link"
   dependencies:
+    "@atls-ui-parts/icons": "workspace:*"
+    "@atls-ui-parts/theme": "workspace:*"
+    "@atls-ui/theme": "workspace:*"
+    "@storybook/react": "npm:10.4.6"
     "@types/node": "npm:24.19.1"
     "@types/react": "npm:19.1.2"
     "@vanilla-extract/css": "npm:1.17.1"
     "@vanilla-extract/dynamic": "npm:2.1.2"
     clsx: "npm:2.1.1"
     next: "npm:15.3.1"
-    rainbow-sprinkles: "npm:1.0.0"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
+    storybook: "npm:10.4.6"
   peerDependencies:
     "@vanilla-extract/css": "*"
     "@vanilla-extract/dynamic": "*"
@@ -783,7 +796,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/modal@workspace:ui-parts/modal"
   dependencies:
-    "@atls-utils/use-float": "workspace:*"
+    "@atls-ui-parts/button": "workspace:*"
+    "@atls-ui-parts/icons": "workspace:*"
+    "@atls-ui-parts/progress": "workspace:*"
+    "@atls-ui-parts/theme": "workspace:*"
+    "@atls-ui/theme": "workspace:*"
     "@floating-ui/react": "npm:0.27.8"
     "@storybook/react": "npm:10.4.6"
     "@types/react": "npm:19.1.2"
@@ -884,13 +901,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/progress@workspace:ui-parts/progress":
+"@atls-ui-parts/progress@workspace:*, @atls-ui-parts/progress@workspace:ui-parts/progress":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/progress@workspace:ui-parts/progress"
   dependencies:
     "@atls-ui-parts/button": "workspace:*"
     "@atls-ui-parts/layout": "workspace:*"
     "@atls-ui-parts/theme": "workspace:*"
+    "@atls-ui/theme": "workspace:*"
     "@storybook/react": "npm:10.4.6"
     "@types/react": "npm:19.1.2"
     "@vanilla-extract/css": "npm:1.17.1"
