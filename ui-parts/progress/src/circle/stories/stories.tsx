@@ -1,0 +1,108 @@
+import type { Meta }                    from '@storybook/react'
+import type { StoryObj }                from '@storybook/react'
+
+import type { CircleProgressAnimation } from '../../index.js'
+import type { CircleProgressProps }     from '../../index.js'
+
+import { useTheme }                     from '@atls-ui-parts/theme'
+import { spacing }                      from '@atls-ui/theme/tokens'
+import { animations }                   from '@atls-ui/theme/tokens'
+
+import { CircleProgress }               from '../../index.js'
+import { circleProgressAnimations }     from '../../index.js'
+import { circleProgressShapes }         from '../../index.js'
+import { threeArcs }                    from './styles.css.js'
+
+const storyShapes = {
+  ...circleProgressShapes,
+  circle: {
+    ...circleProgressShapes.md,
+    container: { width: 64, height: 64 },
+    box: {
+      ...circleProgressShapes.md.box,
+      paddingInline: spacing.component.none,
+      paddingBlock: spacing.component.none,
+    },
+  },
+}
+
+const storyAnimations = {
+  ...circleProgressAnimations,
+  custom: {
+    duration: `${animations.loopDuration.md}ms`,
+    easing: animations.easing.linear,
+    segments: threeArcs,
+  },
+} satisfies Record<string, CircleProgressAnimation>
+
+type StoryArgs = CircleProgressProps & { indeterminate: boolean; indicatorBackground?: string }
+
+const CustomCircle = ({ indeterminate, indicatorBackground, ...args }: StoryArgs) => {
+  const theme = useTheme()
+
+  return (
+    <CircleProgress
+      {...args}
+      value={indeterminate ? undefined : args.value}
+      shape={storyShapes.circle}
+      animation={
+        args.animation ?? {
+          ...circleProgressAnimations.spinner,
+          duration: `${animations.loopDuration.sm}ms`,
+          easing: animations.easing.easeInOut,
+        }
+      }
+      appearance={{
+        box: { backgroundColor: theme.colors.main.transparent, shadow: 'none' },
+        track: { color: theme.colors.surface.muted },
+        indicator: { background: indicatorBackground || theme.colors.action.base },
+        label: { color: theme.colors.text.primary },
+      }}
+    >
+      {false}
+    </CircleProgress>
+  )
+}
+
+const meta: Meta<StoryArgs> = {
+  title: 'Components/Progress/Circle',
+  component: CircleProgress,
+  render: ({ indeterminate, indicatorBackground: _indicatorBackground, ...args }) => (
+    <CircleProgress {...args} value={indeterminate ? undefined : args.value} />
+  ),
+  args: {
+    value: 40,
+    indeterminate: false,
+    shape: circleProgressShapes.md,
+    appearance: 'primary',
+    'aria-label': 'Progress',
+  },
+  argTypes: {
+    indeterminate: { control: 'boolean' },
+    animation: {
+      control: 'select',
+      options: Object.keys(storyAnimations),
+      mapping: storyAnimations,
+    },
+    value: { control: { type: 'range', min: 0, max: 100 } },
+    shape: {
+      control: 'select',
+      options: Object.keys(storyShapes),
+      mapping: storyShapes,
+    },
+    appearance: { control: 'select', options: ['primary', 'secondary'] },
+  },
+}
+
+export default meta
+export const Base: StoryObj<typeof meta> = {}
+export const Custom: StoryObj<typeof meta> = {
+  name: 'Custom',
+  render: (args) => <CustomCircle {...args} />,
+  argTypes: {
+    indicatorBackground: {
+      control: 'text',
+      description: 'CSS color or gradient for the indicator',
+    },
+  },
+}
