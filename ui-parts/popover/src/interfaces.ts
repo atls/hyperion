@@ -28,6 +28,6 @@ export interface UsePopoverResult {
   arrowRef: UseFloatReturn['arrowRef']
   isOpen: boolean
   isMounted: boolean
-  trigger: PopoverProps['children']
+  triggerProps: PopoverProps['children']['props']
   containerProps: ContainerProps & { 'data-transition': string }
 }

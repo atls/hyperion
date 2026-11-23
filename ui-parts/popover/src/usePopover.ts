@@ -3,7 +3,6 @@ import type { PopoverProps }        from './interfaces.js'
 
 import { useMergeRefs }             from '@floating-ui/react'
 import { useTransitionStatus }      from '@floating-ui/react'
-import { cloneElement }             from 'react'
 import { useId }                    from 'react'
 import { useState }                 from 'react'
 
@@ -53,7 +52,7 @@ export const usePopover = ({
     arrowRef,
     isOpen,
     isMounted,
-    trigger: cloneElement(children, { ...getReferenceProps(referenceProps), ref: triggerRef }),
+    triggerProps: { ...getReferenceProps(referenceProps), ref: triggerRef },
     containerProps: {
       ...getFloatingProps(contentProps),
       ref: floatingRef,
