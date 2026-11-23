@@ -1,27 +1,23 @@
-import type { Meta }          from '@storybook/react'
-import type { StoryObj }      from '@storybook/react'
+import type { Meta }              from '@storybook/react'
+import type { StoryObj }          from '@storybook/react'
 
-import type { PopoverProps }  from '../interfaces.js'
+import type { PopoverStoryProps } from './interfaces.js'
 
-import { useId }              from 'react'
-import { useState }           from 'storybook/preview-api'
-import { useArgs }            from 'storybook/preview-api'
-import { expect }             from 'storybook/test'
-import { userEvent }          from 'storybook/test'
-import { waitFor }            from 'storybook/test'
-import { within }             from 'storybook/test'
+import { useId }                  from 'react'
+import { useState }               from 'storybook/preview-api'
+import { useArgs }                from 'storybook/preview-api'
+import { expect }                 from 'storybook/test'
+import { userEvent }              from 'storybook/test'
+import { waitFor }                from 'storybook/test'
+import { within }                 from 'storybook/test'
 
-import { useTheme }           from '@atls-ui-parts/theme'
+import { useTheme }               from '@atls-ui-parts/theme'
 
-import { Popover }            from '../component.js'
-import { CONTENT_SLOT_ROWS }  from './constants.js'
-import { popoverAppearances } from '../styles/appearance/variants.js'
-import { popoverShapes }      from '../styles/shape/variants.js'
-import { contentSlotStyles }  from './styles.css.js'
-interface PopoverStoryProps extends Omit<PopoverProps, 'children' | 'content' | 'shape'> {
-  shape: keyof typeof popoverShapes
-  interactiveContent: boolean
-}
+import { Popover }                from '../component.js'
+import { CONTENT_SLOT_ROWS }      from './constants.js'
+import { popoverAppearances }     from '../styles/appearance/variants.js'
+import { popoverShapes }          from '../styles/shape/variants.js'
+import { contentSlotStyles }      from './styles.css.js'
 const meta: Meta<PopoverStoryProps> = {
   title: 'Components/Popover',
   tags: ['autodocs'],
