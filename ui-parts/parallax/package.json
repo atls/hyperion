@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-parts/parallax",
-  "version": "1.0.14",
+  "version": "1.0.15",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "ui-parts/parallax"
+  },
   "license": "BSD 3-Clause",
   "type": "module",
   "main": "./src/index.ts",

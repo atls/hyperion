@@ -12,7 +12,7 @@ export const svgrTemplate: Config['template'] = ({ jsx, componentName }, { tpl }
   export const ${componentName} = (props: IconProps): ReactNode => {
     const { className, style, otherProps } = iconSprinkles(props)
 
-    const iconStyle = { ...style, ...otherProps.style } 
+    const iconStyle = { ...style, ...otherProps.style }
 
     return (
       ${jsx}

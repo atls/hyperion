@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-admin/button",
-  "version": "1.2.2",
+  "version": "1.2.3",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "ui-admin/button"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",

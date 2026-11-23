@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-generators/icons",
-  "version": "1.2.4",
+  "version": "1.2.5",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "generators/icons"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {

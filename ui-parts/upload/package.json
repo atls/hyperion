@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-parts/upload",
-  "version": "1.0.5",
+  "version": "1.0.6",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "ui-parts/upload"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",

@@ -6,6 +6,13 @@ export const animations = {
     md: '200ms',
     lg: '300ms',
   },
+  loopDuration: {
+    sm: 1500,
+    md: 5000,
+  },
+  curves: {
+    smooth: [0.45, 0, 0.55, 1],
+  },
   easing: {
     linear: 'linear',
     ease: 'ease',

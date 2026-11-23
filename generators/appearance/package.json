@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-generators/appearance",
-  "version": "1.2.0",
+  "version": "1.2.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "generators/appearance"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {

@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-generators/locales",
-  "version": "1.0.3",
+  "version": "1.0.4",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "generators/locales"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",

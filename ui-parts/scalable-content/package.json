@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-parts/scalable-content",
-  "version": "1.0.7",
+  "version": "1.0.8",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "ui-parts/scalable-content"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",

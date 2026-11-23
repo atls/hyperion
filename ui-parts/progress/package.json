@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-parts/progress",
-  "version": "1.1.2",
+  "version": "1.1.3",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "ui-parts/progress"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -14,6 +19,7 @@
   },
   "dependencies": {
     "@atls-ui-parts/theme": "workspace:*",
+    "@atls-ui/theme": "workspace:*",
     "clsx": "2.1.1",
     "rainbow-sprinkles": "1.0.0"
   },

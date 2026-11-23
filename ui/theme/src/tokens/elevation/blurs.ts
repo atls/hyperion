@@ -1,4 +1,6 @@
 export const shadowBlurs = {
+  xs7: '0.2px',
+  xs6: '0.5px',
   xs5: '1px',
   xs4: '2px',
   xs3: '3px',

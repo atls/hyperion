@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-parts/text-transform",
-  "version": "1.1.1",
+  "version": "1.1.3",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "ui-parts/text-transform"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -13,12 +18,9 @@
     "postpack": "rm -rf dist"
   },
   "devDependencies": {
-    "@playwright/test": "1.63.0",
-    "@types/http-server": "0.12.4",
     "@types/node": "25.9.3",
     "@types/react": "19.1.2",
     "@types/react-dom": "19.1.2",
-    "http-server": "14.1.1",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },

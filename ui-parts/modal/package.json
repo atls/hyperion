@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui-parts/modal",
-  "version": "1.2.1",
+  "version": "1.2.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "ui-parts/modal"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/index.ts",
@@ -13,7 +18,11 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls-utils/use-float": "workspace:*",
+    "@atls-ui-parts/button": "workspace:*",
+    "@atls-ui-parts/icons": "workspace:*",
+    "@atls-ui-parts/progress": "workspace:*",
+    "@atls-ui-parts/theme": "workspace:*",
+    "@atls-ui/theme": "workspace:*",
     "@floating-ui/react": "0.27.8",
     "clsx": "2.1.1"
   },

@@ -1,6 +1,11 @@
 {
   "name": "@atls-ui/theme",
-  "version": "0.7.1",
+  "version": "0.7.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atls/hyperion.git",
+    "directory": "ui/theme"
+  },
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {
