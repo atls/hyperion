@@ -1134,13 +1134,22 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/upload@workspace:ui-parts/upload"
   dependencies:
+    "@atls-ui-parts/button": "workspace:*"
+    "@atls-ui-parts/icons": "workspace:*"
+    "@atls-ui-parts/progress": "workspace:*"
+    "@atls-ui-parts/theme": "workspace:*"
+    "@atls-ui/theme": "workspace:*"
     "@atls/react-upload": "npm:1.0.3"
     "@types/react": "npm:19.1.2"
     "@types/react-dom": "npm:19.1.2"
+    "@vanilla-extract/css": "npm:1.17.1"
+    "@vanilla-extract/dynamic": "npm:2.1.2"
     graphql: "npm:16.11.0"
     react: "npm:19.1.0"
     react-dropzone: "npm:14.3.8"
+    typescript: "npm:5.9.3"
   peerDependencies:
+    "@vanilla-extract/css": "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
