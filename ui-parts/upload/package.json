@@ -23,9 +23,7 @@
     "@atls-ui-parts/progress": "workspace:*",
     "@atls-ui-parts/theme": "workspace:*",
     "@atls-ui/theme": "workspace:*",
-    "@atls/react-upload": "1.0.3",
     "@vanilla-extract/dynamic": "2.1.2",
-    "graphql": "16.11.0",
     "react-dropzone": "14.3.8"
   },
   "devDependencies": {
