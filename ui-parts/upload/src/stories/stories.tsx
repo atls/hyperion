@@ -9,13 +9,13 @@ import { useRef }             from 'storybook/preview-api'
 import { useState }           from 'storybook/preview-api'
 import { useArgs }            from 'storybook/preview-api'
 
+import { spacing }            from '@atls-ui/theme'
+
 import { Upload }             from '../index.js'
 import { FileItem }           from '../index.js'
-import { stageStyles }        from './styles.css.js'
-
-const DEMO_TICK = 250
-const DEMO_STEP = 20
-const COMPLETE = 100
+import { DEMO_TICK }          from './constants.js'
+import { DEMO_STEP }          from './constants.js'
+import { COMPLETE }           from './constants.js'
 
 const meta: Meta<UploadProps & { failUpload: boolean }> = {
   title: 'Components/Upload',
@@ -56,7 +56,14 @@ const meta: Meta<UploadProps & { failUpload: boolean }> = {
       }
     }, [failUpload, files])
     return (
-      <div className={stageStyles}>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: spacing.layout.xs2,
+        }}
+      >
         <Upload
           {...args}
           onSelect={(accepted, event) => {
