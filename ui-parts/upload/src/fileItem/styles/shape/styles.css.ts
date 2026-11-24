@@ -8,8 +8,6 @@ export const removeStyle = style({
   padding: spacing.component.none,
   borderWidth: borderWidths.none,
   borderRadius: radii.none,
-  background: 'transparent',
-  boxShadow: 'none',
   width: iconSizes.xs,
   height: iconSizes.xs,
   flexShrink: 0,
