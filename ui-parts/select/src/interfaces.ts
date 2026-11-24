@@ -1,31 +1,53 @@
-import type { HTMLMotionProps } from 'framer-motion'
-import type { CSSProperties }   from 'react'
+import type { ComponentPropsWithRef } from 'react'
+import type { HTMLAttributes }        from 'react'
+import type { ReactNode }             from 'react'
 
-export interface SelectAppearance {
-  highlightedItem: string
-  item: string
-  menu: string
-  trigger: string
+import type { SelectOption }          from './option/interfaces.js'
+import type { SelectAppearance }      from './styles/appearance/interfaces.js'
+import type { SelectShape }           from './styles/shape/interfaces.js'
+import type { selectAppearances }     from './styles/appearance/variants.js'
+
+export interface SelectClassNames {
+  container?: string
+  trigger?: string
+  value?: string
+  indicator?: string
+  menu?: string
+  option?: string
 }
 
-export type SelectAppearanceName = 'default'
-
-export interface SelectShape {
-  item: string
-  menu: string
-  trigger: string
-}
-
-export type SelectShapeName = 'default'
-
-export interface SelectProps {
-  appearance?: SelectAppearance
+export interface SelectProps extends Omit<
+  HTMLAttributes<HTMLDivElement>,
+  'children' | 'dangerouslySetInnerHTML' | 'defaultValue' | 'onChange'
+> {
+  options: Array<SelectOption>
   label: string
-  value: string
-  onChangeValue: (nextValue: string) => void
-  placeholder: string
-  items: Array<string>
-  menuProps?: HTMLMotionProps<'ul'>
+  value?: string | null
+  defaultValue?: string | null
+  onChange?: (value: string | null) => void
+  disabled?: boolean
+  placeholder?: string
   shape?: SelectShape
-  width?: CSSProperties['width']
+  appearance?: SelectAppearance | keyof typeof selectAppearances
+  indicator?: ReactNode
+  renderOption?: (option: SelectOption) => ReactNode
+  triggerProps?: Omit<
+    ComponentPropsWithRef<'button'>,
+    'children' | 'dangerouslySetInnerHTML' | 'disabled' | 'value'
+  >
+  menuProps?: Omit<ComponentPropsWithRef<'ul'>, 'children' | 'dangerouslySetInnerHTML'>
+  classNames?: SelectClassNames
 }
+
+export type SelectBehaviorProps = Pick<
+  SelectProps,
+  | 'defaultValue'
+  | 'disabled'
+  | 'label'
+  | 'menuProps'
+  | 'onChange'
+  | 'options'
+  | 'triggerProps'
+  | 'value'
+> &
+  Required<Pick<SelectProps, 'shape'>>

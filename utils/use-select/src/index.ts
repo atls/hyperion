@@ -1,2 +1,2 @@
-export type * from './select.interfaces.js'
-export *      from './use-select.hook.js'
+export type * from './interfaces.js'
+export *      from './useSelect.js'
