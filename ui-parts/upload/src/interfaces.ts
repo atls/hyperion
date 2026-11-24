@@ -2,8 +2,6 @@ import type { HTMLAttributes }      from 'react'
 import type { InputHTMLAttributes } from 'react'
 import type { ReactNode }           from 'react'
 import type { DropzoneOptions }     from 'react-dropzone'
-import type { DropzoneRootProps }   from 'react-dropzone'
-import type { DropzoneInputProps }  from 'react-dropzone'
 import type { DropzoneState }       from 'react-dropzone'
 
 import type { UploadState }         from './states.js'
@@ -59,4 +57,3 @@ export type UseUploadResult = Pick<
   DropzoneState,
   'getInputProps' | 'getRootProps' | 'isDragActive' | 'isDragReject'
 >
-export type { DropzoneRootProps, DropzoneInputProps }
