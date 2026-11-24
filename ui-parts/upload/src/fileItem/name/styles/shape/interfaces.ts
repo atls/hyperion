@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+import type { TypographyProperties } from '@atls-ui/theme'
 export interface NameShape {
-  typography: CSSProperties
+  typography: TypographyProperties
 }

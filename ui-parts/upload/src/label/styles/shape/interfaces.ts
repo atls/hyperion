@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+import type { TypographyProperties } from '@atls-ui/theme'
 export interface LabelShape {
-  typography: CSSProperties
+  typography: TypographyProperties
 }
