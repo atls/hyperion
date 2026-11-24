@@ -1,6 +1,7 @@
 import { createThemeContract } from '@vanilla-extract/css'
 import { style }               from '@vanilla-extract/css'
 
+import { borderStyles }        from '@atls-ui/theme/tokens'
 import { borderWidths }        from '@atls-ui/theme/tokens'
 import { spacing }             from '@atls-ui/theme/tokens'
 
@@ -23,7 +24,7 @@ export const boxAppearanceStyles = style({
       boxShadow: boxVariables.hoverShadow,
     },
     '&:focus-visible': {
-      outline: `${borderWidths.md} solid ${boxVariables.border}`,
+      outline: `${borderWidths.md} ${borderStyles.solid} ${boxVariables.border}`,
       outlineOffset: spacing.component.xs2,
     },
   },
