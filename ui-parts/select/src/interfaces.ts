@@ -21,7 +21,7 @@ export interface SelectProps extends Omit<
   'children' | 'dangerouslySetInnerHTML' | 'defaultValue' | 'onChange'
 > {
   options: Array<SelectOption>
-  label: string
+  'aria-label': string
   value?: string | null
   defaultValue?: string | null
   onChange?: (value: string | null) => void
@@ -41,9 +41,9 @@ export interface SelectProps extends Omit<
 
 export type SelectBehaviorProps = Pick<
   SelectProps,
+  | 'aria-label'
   | 'defaultValue'
   | 'disabled'
-  | 'label'
   | 'menuProps'
   | 'onChange'
   | 'options'

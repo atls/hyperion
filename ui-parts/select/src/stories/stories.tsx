@@ -13,7 +13,7 @@ const meta = {
   component: Select,
   tags: ['autodocs'],
   args: {
-    label: 'Fruit',
+    'aria-label': 'Fruit',
     options: [
       { value: 'apple', label: 'Apple' },
       { value: 'banana', label: 'Banana' },
@@ -31,7 +31,7 @@ const meta = {
     options: { control: 'object' },
     value: { control: 'text' },
     disabled: { control: 'boolean' },
-    label: { control: 'text' },
+    'aria-label': { control: 'text' },
     placeholder: { control: 'text' },
     indicator: { control: false },
     renderOption: { control: false },

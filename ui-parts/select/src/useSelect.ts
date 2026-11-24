@@ -9,7 +9,7 @@ export const useSelect = ({
   value,
   defaultValue,
   onChange,
-  label,
+  'aria-label': ariaLabel,
   disabled,
   triggerProps,
   menuProps,
@@ -25,7 +25,7 @@ export const useSelect = ({
     onSelectedItemChange: ({ selectedItem }) => onChange?.(selectedItem),
     placement: 'bottom-start',
     offset: shape.container.offset,
-    toggleButtonProps: { 'aria-label': label, ...triggerProps, disabled, type: 'button' },
-    listProps: { 'aria-label': label, ...menuProps },
+    toggleButtonProps: { 'aria-label': ariaLabel, ...triggerProps, disabled, type: 'button' },
+    listProps: { 'aria-label': ariaLabel, ...menuProps },
   })
 }
