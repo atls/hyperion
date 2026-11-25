@@ -270,12 +270,12 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-parts/design", ["workspace:ui-parts/design"]],\
     ["@atls-ui-parts/dom", ["virtual:b378c3744940a7b99c67abdb39dc737773a80c0cc25dff9c1c69af815451ed8f73418ff7e0686ab1125f5a97f0715093ece934285ed0996c6ab9e33426941881#workspace:ui-parts/dom", "workspace:ui-parts/dom"]],\
     ["@atls-ui-parts/events-state", ["workspace:ui-parts/events-state"]],\
-    ["@atls-ui-parts/icons", ["virtual:10644da7cfec7698f38071843c6ab31167ef451db4b30e149c262e1ef7e895442319533d42afd5f4433beb7cc1bc7902c2bfb61caac3807b277394304e034a4d#workspace:ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons", "workspace:ui-parts/icons"]],\
+    ["@atls-ui-parts/icons", ["virtual:10644da7cfec7698f38071843c6ab31167ef451db4b30e149c262e1ef7e895442319533d42afd5f4433beb7cc1bc7902c2bfb61caac3807b277394304e034a4d#workspace:ui-parts/icons", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/icons", "workspace:ui-parts/icons"]],\
     ["@atls-ui-parts/image", ["virtual:5dae0025774218e7d5b25f9293624b65d07c18a455c0543b6b0cbcc49eab1f8daaf93f688033cd0934a58e64a6421749d3e30955e506415c50f4612545e60177#workspace:ui-parts/image", "workspace:ui-parts/image"]],\
     ["@atls-ui-parts/input", ["virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/input", "workspace:ui-parts/input"]],\
     ["@atls-ui-parts/layout", ["virtual:5dae0025774218e7d5b25f9293624b65d07c18a455c0543b6b0cbcc49eab1f8daaf93f688033cd0934a58e64a6421749d3e30955e506415c50f4612545e60177#workspace:ui-parts/layout", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#workspace:ui-parts/layout", "virtual:ba0336f2ccf109a54b4b8063d4801935b554fc6f958edd172cb3c73a5a5a49118f16d1cd01b286a3749f851b3f37efaad86c3ceef598318c20b6e7cbecad90d2#workspace:ui-parts/layout", "workspace:ui-parts/layout"]],\
     ["@atls-ui-parts/link", ["virtual:5dae0025774218e7d5b25f9293624b65d07c18a455c0543b6b0cbcc49eab1f8daaf93f688033cd0934a58e64a6421749d3e30955e506415c50f4612545e60177#workspace:ui-parts/link", "workspace:ui-parts/link"]],\
-    ["@atls-ui-parts/listbox", ["virtual:9c076913ffd643939b8ac6e8c374fd1470f44689001261d35898fb07091ea0aa596a24d8bcdfb508f949d0c68789b448702cfb68072c423229496303e9a11342#workspace:ui-parts/listbox", "workspace:ui-parts/listbox"]],\
+    ["@atls-ui-parts/listbox", ["virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/listbox", "workspace:ui-parts/listbox"]],\
     ["@atls-ui-parts/mapbox", ["workspace:ui-parts/mapbox"]],\
     ["@atls-ui-parts/modal", ["workspace:ui-parts/modal"]],\
     ["@atls-ui-parts/next-image", ["workspace:ui-parts/next-image"]],\
@@ -889,9 +889,11 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./ui-parts/autocomplete/",\
         "packageDependencies": [\
           ["@atls-ui-parts/autocomplete", "workspace:ui-parts/autocomplete"],\
+          ["@atls-ui-parts/icons", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/icons"],\
           ["@atls-ui-parts/input", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/input"],\
-          ["@atls-ui-parts/layout", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#workspace:ui-parts/layout"],\
+          ["@atls-ui-parts/listbox", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/listbox"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
+          ["@atls-ui/theme", "workspace:ui/theme"],\
           ["@atls-utils/use-float", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:utils/use-float"],\
           ["@storybook/react", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#patch:@storybook/react@npm%3A10.4.6#~/.yarn/patches/@storybook-react-npm-10.4.6-574597d2a0.patch::version=10.4.6&hash=1496cc"],\
           ["@types/react", "npm:19.1.2"],\
@@ -899,7 +901,6 @@ const RAW_RUNTIME_STATE =
           ["@vanilla-extract/dynamic", "npm:2.1.2"],\
           ["clsx", "npm:2.1.1"],\
           ["downshift", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#npm:9.0.9"],\
-          ["framer-motion", "virtual:06315aec6049f1c6c32004d6e584058ffedd6c8eaf08aaee2ce03aaedeaf84c340968f24d92b3566001c478f3ac64eca59adabd63e33390cb5990761978a1ea2#npm:12.43.0"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:19.1.0"],\
           ["storybook", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:10.4.6"],\
@@ -1067,7 +1068,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./ui-parts/checkbox/",\
         "packageDependencies": [\
           ["@atls-ui-parts/checkbox", "workspace:ui-parts/checkbox"],\
-          ["@atls-ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons"],\
+          ["@atls-ui-parts/icons", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/icons"],\
           ["@atls-ui-parts/layout", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#workspace:ui-parts/layout"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
           ["@atls-ui/theme", "workspace:ui/theme"],\
@@ -1313,10 +1314,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons", {\
-        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-icons-virtual-874e62a66a/1/ui-parts/icons/",\
+      ["virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/icons", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-icons-virtual-c1f562c924/1/ui-parts/icons/",\
         "packageDependencies": [\
-          ["@atls-ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons"],\
+          ["@atls-ui-parts/icons", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/icons"],\
           ["@types/react", "npm:19.1.2"],\
           ["@types/react-dom", null],\
           ["react", "npm:19.1.0"],\
@@ -1378,7 +1379,7 @@ const RAW_RUNTIME_STATE =
       ["workspace:ui-parts/image", {\
         "packageLocation": "./ui-parts/image/",\
         "packageDependencies": [\
-          ["@atls-ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons"],\
+          ["@atls-ui-parts/icons", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/icons"],\
           ["@atls-ui-parts/image", "workspace:ui-parts/image"],\
           ["@atls-ui-parts/progress", "virtual:144bd10b47610de450c041ff553326fefe11958aedc1da4a2a09dafd48e073b7fc7fd88c35623eafbf7d353919a302f576bfc9d4dea4795b88e73d2fea0dc288#workspace:ui-parts/progress"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
@@ -1400,7 +1401,7 @@ const RAW_RUNTIME_STATE =
       ["virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/input", {\
         "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-input-virtual-8480592f2a/1/ui-parts/input/",\
         "packageDependencies": [\
-          ["@atls-ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons"],\
+          ["@atls-ui-parts/icons", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/icons"],\
           ["@atls-ui-parts/input", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/input"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
           ["@atls-ui/theme", "workspace:ui/theme"],\
@@ -1432,7 +1433,7 @@ const RAW_RUNTIME_STATE =
       ["workspace:ui-parts/input", {\
         "packageLocation": "./ui-parts/input/",\
         "packageDependencies": [\
-          ["@atls-ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons"],\
+          ["@atls-ui-parts/icons", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/icons"],\
           ["@atls-ui-parts/input", "workspace:ui-parts/input"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
           ["@atls-ui/theme", "workspace:ui/theme"],\
@@ -1586,7 +1587,7 @@ const RAW_RUNTIME_STATE =
       ["workspace:ui-parts/link", {\
         "packageLocation": "./ui-parts/link/",\
         "packageDependencies": [\
-          ["@atls-ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons"],\
+          ["@atls-ui-parts/icons", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/icons"],\
           ["@atls-ui-parts/link", "workspace:ui-parts/link"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
           ["@atls-ui/theme", "workspace:ui/theme"],\
@@ -1605,10 +1606,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@atls-ui-parts/listbox", [\
-      ["virtual:9c076913ffd643939b8ac6e8c374fd1470f44689001261d35898fb07091ea0aa596a24d8bcdfb508f949d0c68789b448702cfb68072c423229496303e9a11342#workspace:ui-parts/listbox", {\
-        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-listbox-virtual-ccd8f97fc4/1/ui-parts/listbox/",\
+      ["virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/listbox", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-listbox-virtual-acff708dde/1/ui-parts/listbox/",\
         "packageDependencies": [\
-          ["@atls-ui-parts/listbox", "virtual:9c076913ffd643939b8ac6e8c374fd1470f44689001261d35898fb07091ea0aa596a24d8bcdfb508f949d0c68789b448702cfb68072c423229496303e9a11342#workspace:ui-parts/listbox"],\
+          ["@atls-ui-parts/listbox", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/listbox"],\
           ["@atls-ui/theme", "workspace:ui/theme"],\
           ["@atls-utils/use-float", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:utils/use-float"],\
           ["@types/react", "npm:19.1.2"],\
@@ -1666,7 +1667,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./ui-parts/modal/",\
         "packageDependencies": [\
           ["@atls-ui-parts/button", "virtual:90c3fa37a29dbddd012ae896ef9d136c46ca1d320faf1baf430439ab5aac7e1e7c8ef5281a72424df8d016a8c33c9d5ffe66ee23d2face19f27de3042508900f#workspace:ui-parts/button"],\
-          ["@atls-ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons"],\
+          ["@atls-ui-parts/icons", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/icons"],\
           ["@atls-ui-parts/modal", "workspace:ui-parts/modal"],\
           ["@atls-ui-parts/progress", "virtual:144bd10b47610de450c041ff553326fefe11958aedc1da4a2a09dafd48e073b7fc7fd88c35623eafbf7d353919a302f576bfc9d4dea4795b88e73d2fea0dc288#workspace:ui-parts/progress"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
@@ -1863,10 +1864,10 @@ const RAW_RUNTIME_STATE =
       ["workspace:ui-parts/select", {\
         "packageLocation": "./ui-parts/select/",\
         "packageDependencies": [\
-          ["@atls-ui-parts/icons", "virtual:8480592f2ac0c5b00b17bd33d76d0c6d79665a3657c712c5bc5180464a86ac9bcb81d64ef54341b94b31e43db66a2fad906cfc6036c573c170560d657b7f96aa#workspace:ui-parts/icons"],\
+          ["@atls-ui-parts/icons", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/icons"],\
           ["@atls-ui-parts/input", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/input"],\
           ["@atls-ui-parts/layout", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#workspace:ui-parts/layout"],\
-          ["@atls-ui-parts/listbox", "virtual:9c076913ffd643939b8ac6e8c374fd1470f44689001261d35898fb07091ea0aa596a24d8bcdfb508f949d0c68789b448702cfb68072c423229496303e9a11342#workspace:ui-parts/listbox"],\
+          ["@atls-ui-parts/listbox", "virtual:e8b379d238bee0c446fdeaddb9725553fcee91eeb8db9f1f4b47e4e36a5c6c26c07ae1861b7d0a5dd574863bc008f048d25fc793392ceeaade0c9801b921d418#workspace:ui-parts/listbox"],\
           ["@atls-ui-parts/select", "workspace:ui-parts/select"],\
           ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
           ["@atls-ui/theme", "workspace:ui/theme"],\
