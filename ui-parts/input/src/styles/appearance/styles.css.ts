@@ -27,7 +27,7 @@ export const appearanceStyles = style({
   boxShadow: appearanceVariables.unfilled.shadow,
   color: appearanceVariables.unfilled.content,
   selectors: {
-    '&:where(:has(:is(input, textarea):not(:placeholder-shown))):not([data-disabled="true"]):not([data-error="true"])':
+    '&:where([data-filled="true"], :has(:is(input, textarea):not(:placeholder-shown))):not([data-disabled="true"]):not([data-error="true"])':
       {
         background: appearanceVariables.filled.background,
         borderColor: appearanceVariables.filled.border,

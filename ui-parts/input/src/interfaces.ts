@@ -3,6 +3,7 @@ import type { CSSProperties }       from 'react'
 import type { ReactNode }           from 'react'
 import type { Ref }                 from 'react'
 
+import type { InputAnimation }      from './animation/interfaces.js'
 import type { InputAppearance }     from './styles/appearance/interfaces.js'
 import type { InputShape }          from './styles/shape/interfaces.js'
 
@@ -12,8 +13,10 @@ type NativeInputProps = Omit<
 >
 
 export interface InputProps extends NativeInputProps {
+  animation?: InputAnimation
   appearance?: InputAppearance
   className?: string
+  fieldRef?: Ref<HTMLDivElement>
   error?: ReactNode
   helperText?: ReactNode
   inputClassName?: string

@@ -1,11 +1,5 @@
-export const inputAddonSizes = {
-  sm: '16px',
-  md: '20px',
-  lg: '24px',
-} as const
+import { iconSizes }          from '@atls-ui/theme'
 
-export const inputMinWidths = {
-  sm: '120px',
-  md: '200px',
-  lg: '240px',
-} as const
+import { INPUT_FIELD_WIDTHS } from '../../field/styles/shape/constants.js'
+export const inputAddonSizes = { sm: iconSizes.sm, md: iconSizes.md, lg: iconSizes.lg } as const
+export const inputMinWidths = INPUT_FIELD_WIDTHS

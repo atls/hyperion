@@ -13,10 +13,8 @@ import { useRef }                   from 'react'
 import { useTheme }                 from '@atls-ui-parts/theme'
 
 import { Addons }                   from './addons/index.js'
-import { appearanceStyles }         from './styles/index.js'
-import { assignInputVariables }     from './styles/index.js'
+import { InputField }               from './field/component.js'
 import { containerStyles }          from './styles/index.js'
-import { fieldStyles }              from './styles/index.js'
 import { inputAppearances }         from './styles/index.js'
 import { inputShapes }              from './styles/index.js'
 import { inputStyles }              from './styles/index.js'
@@ -27,11 +25,13 @@ const isPresent = (value: ReactNode): boolean =>
   value !== undefined && value !== null && value !== false
 
 export const Input = ({
+  animation,
   appearance = inputAppearances.primary,
   'aria-describedby': ariaDescribedBy,
   'aria-invalid': ariaInvalid,
   className,
   disabled,
+  fieldRef,
   error,
   helperText,
   hidden,
@@ -49,7 +49,10 @@ export const Input = ({
   const theme = useTheme()
   const inputRef = useRef<HTMLInputElement>(null)
   const generatedDescriptionId = useId()
-  const resolvedAppearance = resolveInputAppearance(appearance, theme, shape)
+  const resolvedAppearance = resolveInputAppearance(appearance, theme, {
+    ...shape,
+    elevation: shape.field?.elevationSize ?? shape.elevation,
+  })
   const hasError = isPresent(error)
   const message = hasError ? error : helperText
   const hasMessage = isPresent(message)
@@ -75,28 +78,31 @@ export const Input = ({
     <div
       className={clsx(containerStyles, className)}
       hidden={hidden || type === 'hidden'}
-      style={assignInputVariables(resolvedAppearance, style)}
+      style={style}
     >
-      <div
-        className={clsx(fieldStyles, appearanceStyles, shape.className)}
-        data-disabled={disabled || undefined}
-        data-error={hasError || undefined}
-        onPointerDown={focusInput}
+      <InputField
+        appearance={resolvedAppearance}
+        shape={shape.field}
+        animation={animation}
+        disabled={disabled}
+        error={hasError}
       >
-        <Addons position='leading'>{leadingAddon}</Addons>
-        <input
-          {...props}
-          ref={inputRef}
-          aria-describedby={describedBy}
-          aria-invalid={hasError ? true : ariaInvalid}
-          className={clsx(inputStyles, inputClassName)}
-          disabled={disabled}
-          placeholder={placeholder}
-          style={inputStyle}
-          type={type}
-        />
-        <Addons position='trailing'>{trailingAddon}</Addons>
-      </div>
+        <div ref={fieldRef} className={shape.className} onPointerDown={focusInput}>
+          <Addons position='leading'>{leadingAddon}</Addons>
+          <input
+            {...props}
+            ref={inputRef}
+            aria-describedby={describedBy}
+            aria-invalid={hasError ? true : ariaInvalid}
+            className={clsx(inputStyles, inputClassName)}
+            disabled={disabled}
+            placeholder={placeholder}
+            style={inputStyle}
+            type={type}
+          />
+          <Addons position='trailing'>{trailingAddon}</Addons>
+        </div>
+      </InputField>
       {hasMessage && (
         <div
           id={descriptionId}
