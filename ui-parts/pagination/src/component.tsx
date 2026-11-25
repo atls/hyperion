@@ -13,6 +13,7 @@ import { FIRST_PAGE }                  from './constants.js'
 import { Container }                   from './container/component.js'
 import { Item }                        from './item/component.js'
 import { getDefaultItemLabel }         from './constants.js'
+import { paginationAnimations }        from './indicator/animation/variants.js'
 import { resolvePaginationAppearance } from './styles/appearance/resolve.js'
 import { paginationShapes }            from './styles/shape/variants.js'
 import { usePagination }               from './usePagination.js'
@@ -25,7 +26,7 @@ export const Pagination = ({
   disabled,
   shape = paginationShapes.default,
   appearance = 'default',
-  animation = false,
+  animation = paginationAnimations.flow,
   getItemLabel = getDefaultItemLabel,
   getItemProps,
   classNames,

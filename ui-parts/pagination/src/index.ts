@@ -4,6 +4,7 @@ export { paginationShapes }                              from './styles/shape/va
 export type { PaginationShape }                          from './styles/shape/interfaces.js'
 export { paginationAppearances }                         from './styles/appearance/variants.js'
 export type { PaginationAppearance }                     from './styles/appearance/interfaces.js'
+export { paginationAnimations }                          from './indicator/animation/variants.js'
 export { paginationAnimationVariables } from './indicator/animation/variables.css.js'
 export type { PaginationAnimation, PaginationKeyframes } from './indicator/animation/interfaces.js'
 export type { PaginationAnimationPhase }                 from './indicator/animation/interfaces.js'
