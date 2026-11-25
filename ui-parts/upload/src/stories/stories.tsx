@@ -16,6 +16,7 @@ import { FileItem }           from '../index.js'
 import { DEMO_TICK }          from './constants.js'
 import { DEMO_STEP }          from './constants.js'
 import { COMPLETE }           from './constants.js'
+import { REJECTION_LABEL }    from './constants.js'
 
 const meta: Meta<UploadProps & { failUpload: boolean }> = {
   title: 'Components/Upload',
@@ -36,6 +37,7 @@ const meta: Meta<UploadProps & { failUpload: boolean }> = {
   },
   render: function Render({ failUpload, ...args }) {
     const [, setArgs] = useArgs()
+    const [rejectionLabel, setRejectionLabel] = useState<string | undefined>(undefined)
     const [files, setFiles] = useState<
       Array<{ id: string; name: string; progress: number; state: FileItemState }>
     >([])
@@ -66,9 +68,11 @@ const meta: Meta<UploadProps & { failUpload: boolean }> = {
       >
         <Upload
           {...args}
+          label={args.label ?? (args.state === 'error' ? rejectionLabel : undefined)}
           onSelect={(accepted, event) => {
             args.onSelect?.(accepted, event)
-            setArgs({ state: 'default', label: undefined })
+            setRejectionLabel(undefined)
+            setArgs({ state: 'default' })
             setFiles((previous) => [
               ...(args.multiple ? previous : []),
               ...accepted.map((file) => {
@@ -84,7 +88,8 @@ const meta: Meta<UploadProps & { failUpload: boolean }> = {
           }}
           onReject={(rejected, event) => {
             args.onReject?.(rejected, event)
-            setArgs({ state: 'error', label: 'Choose a PNG or JPEG image' })
+            setRejectionLabel(REJECTION_LABEL)
+            setArgs({ state: 'error' })
           }}
         >
           {files.map((file) => (
@@ -95,6 +100,10 @@ const meta: Meta<UploadProps & { failUpload: boolean }> = {
               progress={file.progress}
               onRemove={() => {
                 setFiles((items) => items.filter((item) => item.id !== file.id))
+                if (files.length === 1) {
+                  setRejectionLabel(undefined)
+                  setArgs({ state: 'default' })
+                }
               }}
             />
           ))}
