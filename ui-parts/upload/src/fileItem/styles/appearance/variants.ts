@@ -16,7 +16,7 @@ const removeAppearance = (theme: Theme, color: string): ButtonAppearanceStates =
     default: colors,
     hover: colors,
     pressed: colors,
-    focused: colors,
+    focused: { ...colors, border: theme.colors.action.hover },
     disabled: { ...colors, content: theme.colors.text.muted },
   }
 }
