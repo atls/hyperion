@@ -1,21 +1,21 @@
-import type { ReactNode }          from 'react'
+import type { ReactNode }              from 'react'
 
-import type { SelectProps }        from './interfaces.js'
+import type { SelectProps }            from './interfaces.js'
 
-import { clsx }                    from 'clsx'
+import { clsx }                        from 'clsx'
 
-import { ChevronDownIcon }         from '@atls-ui-parts/icons'
-import { useTheme }                from '@atls-ui-parts/theme'
+import { ChevronDownIcon }             from '@atls-ui-parts/icons'
+import { InputIndicator as Indicator } from '@atls-ui-parts/input'
+import { InputValue as Value }         from '@atls-ui-parts/input'
+import { Listbox as Menu }             from '@atls-ui-parts/listbox'
+import { Option }                      from '@atls-ui-parts/listbox'
+import { useTheme }                    from '@atls-ui-parts/theme'
 
-import { Container }               from './container/component.js'
-import { Indicator }               from './indicator/component.js'
-import { Menu }                    from './menu/component.js'
-import { Option }                  from './option/component.js'
-import { Trigger }                 from './trigger/component.js'
-import { Value }                   from './value/component.js'
-import { resolveSelectAppearance } from './styles/appearance/resolve.js'
-import { selectShapes }            from './styles/shape/variants.js'
-import { useSelect }               from './useSelect.js'
+import { Container }                   from './container/component.js'
+import { Trigger }                     from './trigger/component.js'
+import { resolveSelectAppearance }     from './styles/appearance/resolve.js'
+import { selectShapes }                from './styles/shape/variants.js'
+import { useSelect }                   from './useSelect.js'
 
 export const Select = ({
   options,
@@ -97,6 +97,7 @@ export const Select = ({
               appearance={resolvedAppearance.option}
               className={classNames?.option}
               highlighted={highlightedIndex === index}
+              selected={selectedItem === option.value}
               shape={shape.option}
             >
               {renderOption ? renderOption(option) : option.label}

@@ -781,7 +781,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@atls-ui-parts/listbox@workspace:ui-parts/listbox":
+"@atls-ui-parts/listbox@workspace:*, @atls-ui-parts/listbox@workspace:ui-parts/listbox":
   version: 0.0.0-use.local
   resolution: "@atls-ui-parts/listbox@workspace:ui-parts/listbox"
   dependencies:
@@ -970,7 +970,9 @@ __metadata:
   resolution: "@atls-ui-parts/select@workspace:ui-parts/select"
   dependencies:
     "@atls-ui-parts/icons": "workspace:*"
+    "@atls-ui-parts/input": "workspace:*"
     "@atls-ui-parts/layout": "workspace:*"
+    "@atls-ui-parts/listbox": "workspace:*"
     "@atls-ui-parts/theme": "workspace:*"
     "@atls-ui/theme": "workspace:*"
     "@atls-utils/use-select": "workspace:*"
@@ -1256,6 +1258,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@atls-utils/use-select@workspace:utils/use-select"
   dependencies:
+    "@atls-utils/use-float": "workspace:*"
     "@floating-ui/react": "npm:0.27.8"
     "@types/react": "npm:19.1.2"
     downshift: "npm:9.0.9"

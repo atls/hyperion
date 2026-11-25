@@ -1,16 +1,16 @@
-import type { Theme }                from '@atls-ui/theme'
+import type { InputIndicatorAppearances } from '@atls-ui-parts/input'
+import type { InputValueAppearances }     from '@atls-ui-parts/input'
+import type { ListboxAppearance }         from '@atls-ui-parts/listbox'
+import type { OptionAppearances }         from '@atls-ui-parts/listbox'
+import type { Theme }                     from '@atls-ui/theme'
 
-import type { IndicatorAppearances } from '../../indicator/styles/appearance/interfaces.js'
-import type { MenuAppearance }       from '../../menu/styles/appearance/interfaces.js'
-import type { OptionAppearances }    from '../../option/styles/appearance/interfaces.js'
-import type { TriggerAppearances }   from '../../trigger/styles/appearance/interfaces.js'
-import type { ValueAppearances }     from '../../value/styles/appearance/interfaces.js'
-import type { SelectShape }          from '../shape/interfaces.js'
+import type { TriggerAppearances }        from '../../trigger/styles/appearance/interfaces.js'
+import type { SelectShape }               from '../shape/interfaces.js'
 export interface SelectAppearance {
   trigger: TriggerAppearances
-  value: ValueAppearances
-  indicator: IndicatorAppearances
-  menu: MenuAppearance
+  value: InputValueAppearances
+  indicator: InputIndicatorAppearances
+  menu: ListboxAppearance
   option: OptionAppearances
 }
 export type SelectAppearanceVariant = (theme: Theme, shape: SelectShape) => SelectAppearance

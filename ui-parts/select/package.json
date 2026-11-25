@@ -19,6 +19,8 @@
   },
   "dependencies": {
     "@atls-ui-parts/icons": "workspace:*",
+    "@atls-ui-parts/input": "workspace:*",
+    "@atls-ui-parts/listbox": "workspace:*",
     "@atls-ui-parts/theme": "workspace:*",
     "@atls-ui/theme": "workspace:*",
     "@atls-utils/use-select": "workspace:*",

@@ -2,30 +2,31 @@ import type { Theme }              from '@atls-ui/theme'
 
 import type { TriggerShape }       from '../shape/interfaces.js'
 import type { TriggerAppearances } from './interfaces.js'
+
+import { inputFieldAppearances }   from '@atls-ui-parts/input'
 export const triggerAppearances = {
   default: (theme: Theme, shape: TriggerShape): TriggerAppearances => {
-    const { action } = theme.colors
-    const elevation = theme.elevations[shape.elevationSize]
+    const field = inputFieldAppearances.default(theme, shape)
     return {
       default: {
-        backgroundColor: action.subtle,
-        borderColor: action.disabled,
-        shadow: elevation.pressed,
+        backgroundColor: field.filled.background,
+        borderColor: field.filled.border,
+        shadow: field.filled.shadow,
       },
       hover: {
-        backgroundColor: action.disabled,
-        borderColor: action.hover,
-        shadow: elevation.hover,
+        backgroundColor: field.hover.background,
+        borderColor: field.hover.border,
+        shadow: field.hover.shadow,
       },
       focused: {
-        backgroundColor: action.subtle,
-        borderColor: action.pressed,
-        shadow: elevation.default,
+        backgroundColor: field.focused.background,
+        borderColor: field.focused.border,
+        shadow: field.focused.shadow,
       },
       disabled: {
-        backgroundColor: action.subtle,
-        borderColor: action.subtle,
-        shadow: elevation.disabled,
+        backgroundColor: field.disabled.background,
+        borderColor: field.disabled.border,
+        shadow: field.disabled.shadow,
       },
     }
   },

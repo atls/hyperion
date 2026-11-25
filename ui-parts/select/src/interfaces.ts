@@ -1,11 +1,11 @@
-import type { ComponentPropsWithRef } from 'react'
-import type { HTMLAttributes }        from 'react'
-import type { ReactNode }             from 'react'
+import type { ListboxOption as SelectOption } from '@atls-ui-parts/listbox'
+import type { ComponentPropsWithRef }         from 'react'
+import type { HTMLAttributes }                from 'react'
+import type { ReactNode }                     from 'react'
 
-import type { SelectOption }          from './option/interfaces.js'
-import type { SelectAppearance }      from './styles/appearance/interfaces.js'
-import type { SelectShape }           from './styles/shape/interfaces.js'
-import type { selectAppearances }     from './styles/appearance/variants.js'
+import type { SelectAppearance }              from './styles/appearance/interfaces.js'
+import type { SelectShape }                   from './styles/shape/interfaces.js'
+import type { selectAppearances }             from './styles/appearance/variants.js'
 
 export interface SelectClassNames {
   container?: string
