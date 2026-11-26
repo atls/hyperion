@@ -18,16 +18,26 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls/react-upload": "1.0.3",
-    "graphql": "16.11.0",
+    "@atls-ui-parts/button": "workspace:*",
+    "@atls-ui-parts/icons": "workspace:*",
+    "@atls-ui-parts/progress": "workspace:*",
+    "@atls-ui-parts/theme": "workspace:*",
+    "@atls-ui/theme": "workspace:*",
+    "@vanilla-extract/dynamic": "2.1.2",
     "react-dropzone": "14.3.8"
   },
   "devDependencies": {
+    "@storybook/react": "10.4.6",
     "@types/react": "19.1.2",
     "@types/react-dom": "19.1.2",
-    "react": "19.1.0"
+    "@vanilla-extract/css": "1.17.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "storybook": "10.4.6",
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
+    "@vanilla-extract/css": "*",
     "react": "*",
     "react-dom": "*"
   },
