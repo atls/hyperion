@@ -80,7 +80,7 @@ export interface AutocompleteBehavior {
   inputProps: ComponentPropsWithRef<'input'>
   toggleProps: ComponentPropsWithRef<'button'>
   menuProps: ComponentPropsWithRef<'ul'>
-  getOptionProps: (value: string, index: number) => ComponentPropsWithRef<'li'>
+  getOptionProps: (option: AutocompleteOption, index: number) => ComponentPropsWithRef<'li'>
   renderMenu: UseFloatingMenuReturn['renderMenu']
   referenceRef: UseFloatingMenuReturn['refs']['setReference']
   options: ReadonlyArray<AutocompleteOption>

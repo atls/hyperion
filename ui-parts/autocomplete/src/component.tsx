@@ -133,7 +133,7 @@ export const Autocomplete = ({
             behavior.options.map((option, index) => (
               <Option
                 key={option.value}
-                {...behavior.getOptionProps(option.value, index)}
+                {...behavior.getOptionProps(option, index)}
                 shape={shape.option}
                 appearance={resolvedAppearance.option}
                 focused={behavior.keyboardNavigation && index === behavior.highlightedIndex}

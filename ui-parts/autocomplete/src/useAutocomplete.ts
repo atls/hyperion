@@ -2,9 +2,11 @@ import type { PointerEvent }              from 'react'
 
 import type { AutocompleteBehaviorProps } from './interfaces.js'
 import type { AutocompleteBehavior }      from './interfaces.js'
+import type { AutocompleteOption }        from './interfaces.js'
 
 import { useCombobox }                    from 'downshift'
 import { useState }                       from 'react'
+import { useEffect }                      from 'react'
 
 import { useFloatingMenu }                from '@atls-utils/use-float'
 
@@ -40,20 +42,27 @@ export const useAutocomplete = ({
   })
   const inputValue = controlledInputValue ?? localInputValue
   const filtered = loading ? [] : filterOptions(options, inputValue)
+  const [lastSelectedOption, setLastSelectedOption] = useState<AutocompleteOption | null>(null)
+  const retainedOption = lastSelectedOption?.value === value ? lastSelectedOption : null
+  const selectedOption = value == null ? value : (byValue.get(value) ?? retainedOption)
+  useEffect(() => {
+    if (selectedOption) setLastSelectedOption(selectedOption)
+  }, [selectedOption])
   const combobox = useCombobox({
-    items: filtered.map((option) => option.value),
-    itemToString: (item) => (item === null ? '' : (byValue.get(item)?.label ?? '')),
-    isItemDisabled: (item) => disabled || Boolean(byValue.get(item)?.disabled),
+    items: [...filtered],
+    itemToString: (item) => item?.label ?? '',
+    itemToKey: (item) => item?.value ?? null,
+    isItemDisabled: (item) => disabled || Boolean(item.disabled),
     inputValue,
-    selectedItem: value,
-    initialSelectedItem: defaultValue,
+    selectedItem: selectedOption,
+    initialSelectedItem: defaultValue == null ? undefined : byValue.get(defaultValue),
     isOpen: open,
     initialIsOpen: defaultOpen,
     onInputValueChange: ({ inputValue: nextValue }) => {
       if (controlledInputValue === undefined) setLocalInputValue(nextValue)
       onInputChange?.(nextValue)
     },
-    onSelectedItemChange: ({ selectedItem }) => onChange?.(selectedItem),
+    onSelectedItemChange: ({ selectedItem }) => onChange?.(selectedItem?.value ?? null),
     onIsOpenChange: ({ isOpen }) => onOpenChange?.(isOpen),
     stateReducer: (_state, { type, changes }) =>
       type === useCombobox.stateChangeTypes.InputChange && changes.inputValue === ''
@@ -113,7 +122,7 @@ export const useAutocomplete = ({
     renderMenu,
     options: filtered,
     inputValue,
-    selectedItem: combobox.selectedItem,
+    selectedItem: combobox.selectedItem?.value ?? null,
     highlightedIndex: combobox.highlightedIndex,
     keyboardNavigation,
   }
