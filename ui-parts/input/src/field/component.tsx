@@ -23,7 +23,12 @@ export const InputField = ({
   animation = inputAnimations.default,
 }: InputFieldProps): ReactNode =>
   cloneElement(children, {
-    className: clsx(fieldStyles, appearanceStyles, fieldShapeStyles, children.props.className),
+    className: clsx(
+      fieldStyles,
+      appearanceStyles,
+      shape && fieldShapeStyles,
+      children.props.className
+    ),
     'data-disabled': disabled || undefined,
     'data-error': error || undefined,
     'data-filled': filled,
