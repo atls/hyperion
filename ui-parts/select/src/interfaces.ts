@@ -1,3 +1,4 @@
+import type { UseSelectReturn }       from '@atls-utils/use-select'
 import type { ComponentPropsWithRef } from 'react'
 import type { HTMLAttributes }        from 'react'
 import type { ReactNode }             from 'react'
@@ -51,3 +52,7 @@ export type SelectBehaviorProps = Pick<
   | 'value'
 > &
   Required<Pick<SelectProps, 'shape'>>
+
+export interface SelectBehaviorReturn extends UseSelectReturn {
+  keyboardNavigation: boolean
+}

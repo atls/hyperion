@@ -43,6 +43,7 @@ export const Select = ({
     renderMenu,
     selectedItem,
     highlightedIndex,
+    keyboardNavigation,
     getMenuItemProps,
   } = useSelect({
     options,
@@ -96,7 +97,7 @@ export const Select = ({
               {...getMenuItemProps(option.value, index)}
               appearance={resolvedAppearance.option}
               className={classNames?.option}
-              highlighted={highlightedIndex === index}
+              focused={keyboardNavigation && highlightedIndex === index}
               shape={shape.option}
             >
               {renderOption ? renderOption(option) : option.label}

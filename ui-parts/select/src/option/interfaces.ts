@@ -10,5 +10,5 @@ export interface SelectOption {
 export interface OptionProps extends ComponentPropsWithRef<'li'> {
   shape: OptionShape
   appearance: OptionAppearances
-  highlighted: boolean
+  focused: boolean
 }

@@ -11,7 +11,7 @@ import { optionBaseStyles }          from './styles/base.css.js'
 export const Option = ({
   shape,
   appearance,
-  highlighted,
+  focused,
   className,
   style,
   ...props
@@ -21,7 +21,7 @@ export const Option = ({
     <li
       {...props}
       className={clsx(optionBaseStyles, optionAppearanceStyles, className)}
-      data-highlighted={highlighted}
+      data-focused={focused}
       style={{
         ...typography,
         ...geometry,
