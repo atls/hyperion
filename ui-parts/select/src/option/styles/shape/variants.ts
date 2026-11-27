@@ -9,20 +9,20 @@ export const optionShapes: Record<'lg' | 'md' | 'sm', OptionShape> = {
     paddingBlock: spacing.component.sm,
     gap: spacing.component.xs,
     borderWidth: borderWidths.xs,
-    typography: typography.caption,
+    typography: typography.overline,
   },
   md: {
     paddingInline: spacing.component.lg,
     paddingBlock: spacing.component.sm,
     gap: spacing.component.md,
     borderWidth: borderWidths.xs,
-    typography: typography.body.sm,
+    typography: typography.label.sm,
   },
   lg: {
     paddingInline: spacing.component.xl,
     paddingBlock: spacing.component.md,
     gap: spacing.component.lg,
     borderWidth: borderWidths.xs,
-    typography: typography.body.md,
+    typography: typography.label.md,
   },
 }
