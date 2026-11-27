@@ -24,7 +24,7 @@ export const resolveFieldShape = (shape?: InputFieldShape): CSSProperties =>
           [fieldBorderWidth]:
             typeof shape.borderWidth === 'number'
               ? `${shape.borderWidth}px`
-              : (shape.borderWidth ?? borderWidths.none),
+              : (shape.borderWidth ?? borderWidths.sm),
         }),
         minWidth: spacing.component.none,
         paddingInline: shape.paddingInline,
