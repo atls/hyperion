@@ -5,12 +5,12 @@ import type { SelectProps }        from './interfaces.js'
 import { clsx }                    from 'clsx'
 
 import { ChevronDownIcon }         from '@atls-ui-parts/icons'
+import { Listbox }                 from '@atls-ui-parts/listbox'
+import { Option }                  from '@atls-ui-parts/listbox'
 import { useTheme }                from '@atls-ui-parts/theme'
 
 import { Container }               from './container/component.js'
 import { Indicator }               from './indicator/component.js'
-import { Menu }                    from './menu/component.js'
-import { Option }                  from './option/component.js'
 import { Trigger }                 from './trigger/component.js'
 import { Value }                   from './value/component.js'
 import { resolveSelectAppearance } from './styles/appearance/resolve.js'
@@ -85,7 +85,7 @@ export const Select = ({
         )}
       </Trigger>
       {renderMenu(
-        <Menu
+        <Listbox
           {...listProps}
           appearance={resolvedAppearance.menu}
           className={clsx(classNames?.menu, menuProps?.className)}
@@ -103,7 +103,7 @@ export const Select = ({
               {renderOption ? renderOption(option) : option.label}
             </Option>
           ))}
-        </Menu>
+        </Listbox>
       )}
     </Container>
   )

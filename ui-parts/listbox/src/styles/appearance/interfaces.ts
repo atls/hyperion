@@ -1,4 +1,4 @@
-export interface MenuAppearance {
+export interface ListboxAppearance {
   backgroundColor: string
   shadow: string
 }

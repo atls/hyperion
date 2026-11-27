@@ -2,7 +2,7 @@ import { style }   from '@vanilla-extract/css'
 
 import { spacing } from '@atls-ui/theme'
 import { zIndex }  from '@atls-ui/theme'
-export const menuBaseStyles = style({
+export const listboxBaseStyles = style({
   boxSizing: 'border-box',
   position: 'relative',
   listStyle: 'none',
