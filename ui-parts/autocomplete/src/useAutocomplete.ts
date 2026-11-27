@@ -1,3 +1,5 @@
+import type { PointerEvent }              from 'react'
+
 import type { AutocompleteBehaviorProps } from './interfaces.js'
 import type { AutocompleteBehavior }      from './interfaces.js'
 
@@ -30,6 +32,7 @@ export const useAutocomplete = ({
   'aria-label': ariaLabel,
 }: AutocompleteBehaviorProps): AutocompleteBehavior => {
   const byValue = new Map(options.map((option) => [option.value, option]))
+  const [keyboardNavigation, setKeyboardNavigation] = useState(false)
   const [localInputValue, setLocalInputValue] = useState(() => {
     if (defaultInputValue !== undefined) return defaultInputValue
     const initial = value === undefined ? defaultValue : value
@@ -69,10 +72,40 @@ export const useAutocomplete = ({
       'aria-label': ariaLabel,
       'aria-busy': loading,
       disabled,
+      onKeyDown: (event) => {
+        setKeyboardNavigation(true)
+        inputProps?.onKeyDown?.(event)
+      },
+      onPointerDown: (event) => {
+        setKeyboardNavigation(false)
+        inputProps?.onPointerDown?.(event)
+      },
     }),
-    toggleProps: combobox.getToggleButtonProps({ ...toggleProps, disabled }),
+    toggleProps: combobox.getToggleButtonProps({
+      ...toggleProps,
+      disabled,
+      onKeyDown: (event) => {
+        setKeyboardNavigation(true)
+        toggleProps?.onKeyDown?.(event)
+      },
+      onPointerDown: (event) => {
+        setKeyboardNavigation(false)
+        toggleProps?.onPointerDown?.(event)
+      },
+    }),
     menuProps: combobox.getMenuProps(
-      { ...menuProps, 'aria-label': ariaLabel, 'aria-busy': loading },
+      {
+        ...menuProps,
+        'aria-label': ariaLabel,
+        onPointerMove: (event: PointerEvent<HTMLUListElement>) => {
+          setKeyboardNavigation(false)
+          menuProps?.onPointerMove?.(event)
+        },
+        onPointerDown: (event: PointerEvent<HTMLUListElement>) => {
+          setKeyboardNavigation(false)
+          menuProps?.onPointerDown?.(event)
+        },
+      },
       { suppressRefError: !combobox.isOpen }
     ),
     getOptionProps: (item, index) => combobox.getItemProps({ item, index }),
@@ -82,5 +115,6 @@ export const useAutocomplete = ({
     inputValue,
     selectedItem: combobox.selectedItem,
     highlightedIndex: combobox.highlightedIndex,
+    keyboardNavigation,
   }
 }

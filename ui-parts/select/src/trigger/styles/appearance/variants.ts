@@ -3,30 +3,32 @@ import type { Theme }              from '@atls-ui/theme'
 import type { TriggerShape }       from '../shape/interfaces.js'
 import type { TriggerAppearances } from './interfaces.js'
 
-import { inputFieldAppearances }   from '@atls-ui-parts/input'
+import { HOVER_ELEVATION_SIZES }   from './constants.js'
+import { FOCUSED_ELEVATION_SIZES } from './constants.js'
 export const triggerAppearances = {
   default: (theme: Theme, shape: TriggerShape): TriggerAppearances => {
-    const field = inputFieldAppearances.default(theme, shape)
+    const { action } = theme.colors
+    const elevation = theme.elevations[shape.elevationSize]
     return {
       default: {
-        backgroundColor: field.filled.background,
-        borderColor: field.filled.border,
-        shadow: field.filled.shadow,
+        backgroundColor: action.subtle,
+        borderColor: action.disabled,
+        shadow: elevation.pressed,
       },
       hover: {
-        backgroundColor: field.hover.background,
-        borderColor: field.hover.border,
-        shadow: field.hover.shadow,
+        backgroundColor: action.disabled,
+        borderColor: action.hover,
+        shadow: theme.elevations[HOVER_ELEVATION_SIZES[shape.elevationSize]].hover,
       },
       focused: {
-        backgroundColor: field.focused.background,
-        borderColor: field.focused.border,
-        shadow: field.focused.shadow,
+        backgroundColor: action.subtle,
+        borderColor: action.pressed,
+        shadow: theme.elevations[FOCUSED_ELEVATION_SIZES[shape.elevationSize]].default,
       },
       disabled: {
-        backgroundColor: field.disabled.background,
-        borderColor: field.disabled.border,
-        shadow: field.disabled.shadow,
+        backgroundColor: action.subtle,
+        borderColor: action.subtle,
+        shadow: 'none',
       },
     }
   },

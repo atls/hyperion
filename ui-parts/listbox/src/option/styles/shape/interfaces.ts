@@ -5,5 +5,6 @@ export interface OptionShape {
   paddingBlock: CSSProperties['paddingBlock']
   gap: CSSProperties['gap']
   borderWidth: CSSProperties['borderWidth']
+  borderRadius?: CSSProperties['borderRadius']
   typography: TypographyProperties
 }

@@ -1,8 +1,6 @@
-import type { CSSProperties }   from 'react'
-
-import type { ListboxBoxShape } from '../../box/styles/shape/interfaces.js'
-export interface ListboxShape extends ListboxBoxShape {
-  statusWidth?: CSSProperties['width']
+import type { CSSProperties } from 'react'
+export interface ListboxShape {
   width: CSSProperties['width']
   maxHeight: CSSProperties['maxHeight']
+  borderRadius: CSSProperties['borderRadius']
 }

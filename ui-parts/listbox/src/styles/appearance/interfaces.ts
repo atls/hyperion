@@ -1,1 +1,4 @@
-export type { ListboxAppearance } from '../../box/styles/appearance/interfaces.js'
+export interface ListboxAppearance {
+  backgroundColor: string
+  shadow: string
+}

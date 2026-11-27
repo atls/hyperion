@@ -1,19 +1,24 @@
-import type { AutocompleteShape } from './interfaces.js'
+import type { AutocompleteShape }        from './interfaces.js'
 
-import { inputFieldShapes }       from '@atls-ui-parts/input'
-import { inputIndicatorShapes }   from '@atls-ui-parts/input'
-import { inputValueShapes }       from '@atls-ui-parts/input'
-import { listboxShapes }          from '@atls-ui-parts/listbox'
-import { optionShapes }           from '@atls-ui-parts/listbox'
+import { FLOATING_MENU_HEIGHT_PROPERTY } from '@atls-utils/use-float'
+import { inputFieldShapes }              from '@atls-ui-parts/input'
+import { inputIndicatorShapes }          from '@atls-ui-parts/input'
+import { inputValueShapes }              from '@atls-ui-parts/input'
+import { listboxShapes }                 from '@atls-ui-parts/listbox'
+import { optionShapes }                  from '@atls-ui-parts/listbox'
 
-import { containerShapes }        from '../../container/styles/shape/variants.js'
+import { containerShapes }               from '../../container/styles/shape/variants.js'
 export const autocompleteShapes: Record<'lg' | 'md' | 'sm', AutocompleteShape> = {
   sm: {
     container: containerShapes.default,
     input: inputFieldShapes.sm,
     value: inputValueShapes.sm,
     indicator: inputIndicatorShapes.sm,
-    menu: listboxShapes.sm,
+    menu: {
+      ...listboxShapes.sm,
+      maxHeight: `min(${listboxShapes.sm.maxHeight}, var(${FLOATING_MENU_HEIGHT_PROPERTY}, 100dvh))`,
+      statusWidth: 'max-content',
+    },
     option: optionShapes.sm,
   },
   md: {
@@ -21,7 +26,11 @@ export const autocompleteShapes: Record<'lg' | 'md' | 'sm', AutocompleteShape> =
     input: inputFieldShapes.md,
     value: inputValueShapes.md,
     indicator: inputIndicatorShapes.md,
-    menu: listboxShapes.md,
+    menu: {
+      ...listboxShapes.md,
+      maxHeight: `min(${listboxShapes.md.maxHeight}, var(${FLOATING_MENU_HEIGHT_PROPERTY}, 100dvh))`,
+      statusWidth: 'max-content',
+    },
     option: optionShapes.md,
   },
   lg: {
@@ -29,7 +38,11 @@ export const autocompleteShapes: Record<'lg' | 'md' | 'sm', AutocompleteShape> =
     input: inputFieldShapes.lg,
     value: inputValueShapes.lg,
     indicator: inputIndicatorShapes.lg,
-    menu: listboxShapes.lg,
+    menu: {
+      ...listboxShapes.lg,
+      maxHeight: `min(${listboxShapes.lg.maxHeight}, var(${FLOATING_MENU_HEIGHT_PROPERTY}, 100dvh))`,
+      statusWidth: 'max-content',
+    },
     option: optionShapes.lg,
   },
 }

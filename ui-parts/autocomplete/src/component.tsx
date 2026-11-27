@@ -11,7 +11,6 @@ import { Input }                         from '@atls-ui-parts/input'
 import { InputIndicator }                from '@atls-ui-parts/input'
 import { Listbox }                       from '@atls-ui-parts/listbox'
 import { Option }                        from '@atls-ui-parts/listbox'
-import { ListboxMessage }                from '@atls-ui-parts/listbox'
 import { useTheme }                      from '@atls-ui-parts/theme'
 
 import { DEFAULT_PLACEHOLDER }           from './constants.js'
@@ -19,6 +18,7 @@ import { DEFAULT_LOADING_CONTENT }       from './constants.js'
 import { DEFAULT_EMPTY_CONTENT }         from './constants.js'
 import { DEFAULT_TOGGLE_LABEL }          from './constants.js'
 import { Container }                     from './container/component.js'
+import { Message }                       from './message/component.js'
 import { Toggle }                        from './toggle/component.js'
 import { autocompleteAnimations }        from './animation/variants.js'
 import { resolveAutocompleteAppearance } from './styles/appearance/resolve.js'
@@ -80,11 +80,12 @@ export const Autocomplete = ({
   })
   const { className: inputClassName, style: inputStyle, ...nativeInputProps } = behavior.inputProps
   const statusContent = loading ? loadingContent : emptyContent
+  const { statusWidth, ...menuShape } = shape.menu
   const status =
     behavior.options.length === 0 ? (
-      <ListboxMessage shape={shape.option} appearance={resolvedAppearance.message}>
+      <Message shape={shape.option} appearance={resolvedAppearance.message}>
         {statusContent}
-      </ListboxMessage>
+      </Message>
     ) : undefined
   return (
     <Container {...props} className={clsx(classNames?.container, className)}>
@@ -121,24 +122,27 @@ export const Autocomplete = ({
       {behavior.renderMenu(
         <Listbox
           {...behavior.menuProps}
-          shape={shape.menu}
           appearance={resolvedAppearance.menu}
           className={clsx(classNames?.menu, menuProps?.className)}
-          status={status}
+          shape={{
+            ...menuShape,
+            width: status === undefined ? menuShape.width : (statusWidth ?? menuShape.width),
+          }}
         >
-          {behavior.options.map((option, index) => (
-            <Option
-              key={option.value}
-              {...behavior.getOptionProps(option.value, index)}
-              shape={shape.option}
-              appearance={resolvedAppearance.option}
-              highlighted={index === behavior.highlightedIndex}
-              selected={option.value === behavior.selectedItem}
-              className={classNames?.option}
-            >
-              {renderOption ? renderOption(option) : option.label}
-            </Option>
-          ))}
+          {status ??
+            behavior.options.map((option, index) => (
+              <Option
+                key={option.value}
+                {...behavior.getOptionProps(option.value, index)}
+                shape={shape.option}
+                appearance={resolvedAppearance.option}
+                focused={behavior.keyboardNavigation && index === behavior.highlightedIndex}
+                selected={option.value === behavior.selectedItem}
+                className={classNames?.option}
+              >
+                {renderOption ? renderOption(option) : option.label}
+              </Option>
+            ))}
         </Listbox>
       )}
     </Container>

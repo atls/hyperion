@@ -87,4 +87,5 @@ export interface AutocompleteBehavior {
   selectedItem: string | null
   inputValue: string
   highlightedIndex: number
+  keyboardNavigation: boolean
 }

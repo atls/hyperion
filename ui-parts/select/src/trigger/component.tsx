@@ -1,33 +1,41 @@
-import type { ReactNode }         from 'react'
+import type { ReactNode }             from 'react'
 
-import type { TriggerProps }      from './interfaces.js'
+import type { TriggerProps }          from './interfaces.js'
 
-import { clsx }                   from 'clsx'
+import { assignInlineVars }           from '@vanilla-extract/dynamic'
+import { clsx }                       from 'clsx'
 
-import { InputField }             from '@atls-ui-parts/input'
-import { inputAnimations }        from '@atls-ui-parts/input'
+import { borderWidths }               from '@atls-ui/theme'
 
-import { resolveFieldAppearance } from './styles/appearance/field.js'
-import { triggerBaseStyles }      from './styles/base.css.js'
+import { triggerAppearanceStyles }    from './styles/appearance/styles.css.js'
+import { triggerAppearanceVariables } from './styles/appearance/styles.css.js'
+import { triggerBaseStyles }          from './styles/base.css.js'
+import { triggerBorderWidth }         from './styles/shape/variables.css.js'
 export const Trigger = ({
   shape,
   appearance,
   className,
-  disabled,
+  style,
   ...props
 }: TriggerProps): ReactNode => (
-  <InputField
-    shape={shape}
-    appearance={resolveFieldAppearance(appearance)}
-    disabled={disabled}
-    filled
-    animation={inputAnimations.none}
-  >
-    <button
-      {...props}
-      type='button'
-      disabled={disabled}
-      className={clsx(triggerBaseStyles, className)}
-    />
-  </InputField>
+  <button
+    {...props}
+    type='button'
+    className={clsx(triggerBaseStyles, triggerAppearanceStyles, className)}
+    style={{
+      width: shape.width,
+      paddingInline: shape.paddingInline,
+      paddingBlock: shape.paddingBlock,
+      gap: shape.gap,
+      borderRadius: shape.borderRadius,
+      ...assignInlineVars({
+        [triggerBorderWidth]:
+          typeof shape.borderWidth === 'number'
+            ? `${shape.borderWidth}px`
+            : (shape.borderWidth ?? borderWidths.sm),
+      }),
+      ...assignInlineVars(triggerAppearanceVariables, appearance),
+      ...style,
+    }}
+  />
 )

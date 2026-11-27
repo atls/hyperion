@@ -1,6 +1,7 @@
-import type { UseSelectReturn }           from '@atls-utils/use-select'
-
 import type { SelectBehaviorProps }       from './interfaces.js'
+import type { SelectBehaviorReturn }      from './interfaces.js'
+
+import { useState }                       from 'react'
 
 import { useSelect as useSelectBehavior } from '@atls-utils/use-select'
 
@@ -14,9 +15,10 @@ export const useSelect = ({
   triggerProps,
   menuProps,
   shape,
-}: SelectBehaviorProps): UseSelectReturn => {
+}: SelectBehaviorProps): SelectBehaviorReturn => {
+  const [keyboardNavigation, setKeyboardNavigation] = useState(false)
   const optionsByValue = new Map(options.map((option) => [option.value, option]))
-  return useSelectBehavior({
+  const behavior = useSelectBehavior({
     items: options.map((option) => option.value),
     itemToString: (item) => (item === null ? '' : (optionsByValue.get(item)?.label ?? '')),
     isItemDisabled: (item) => disabled || Boolean(optionsByValue.get(item)?.disabled),
@@ -25,7 +27,32 @@ export const useSelect = ({
     onSelectedItemChange: ({ selectedItem }) => onChange?.(selectedItem),
     placement: 'bottom-start',
     offset: shape.container.offset,
-    toggleButtonProps: { 'aria-label': ariaLabel, ...triggerProps, disabled, type: 'button' },
-    listProps: { 'aria-label': ariaLabel, ...menuProps },
+    toggleButtonProps: {
+      'aria-label': ariaLabel,
+      ...triggerProps,
+      disabled,
+      type: 'button',
+      onKeyDown: (event) => {
+        setKeyboardNavigation(true)
+        triggerProps?.onKeyDown?.(event)
+      },
+      onPointerDown: (event) => {
+        setKeyboardNavigation(false)
+        triggerProps?.onPointerDown?.(event)
+      },
+    },
+    listProps: {
+      'aria-label': ariaLabel,
+      ...menuProps,
+      onPointerMove: (event) => {
+        setKeyboardNavigation(false)
+        menuProps?.onPointerMove?.(event)
+      },
+      onPointerDown: (event) => {
+        setKeyboardNavigation(false)
+        menuProps?.onPointerDown?.(event)
+      },
+    },
   })
+  return { ...behavior, keyboardNavigation }
 }
