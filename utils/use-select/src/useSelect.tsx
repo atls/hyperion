@@ -11,23 +11,20 @@ import { shift }                           from '@floating-ui/react'
 import { useFloating }                     from '@floating-ui/react'
 import { useMergeRefs }                    from '@floating-ui/react'
 import { useSelect as useDownshiftSelect } from 'downshift'
+import { useEffect }                       from 'react'
 
 export const useSelect = ({
   onChange,
-  onSelectedItemChange,
   placement = 'bottom',
   offset = 0,
   toggleButtonProps,
   listProps,
   ...props
 }: UseSelectProps): UseSelectReturn => {
-  const select = useDownshiftSelect({
-    ...props,
-    onSelectedItemChange: (changes) => {
-      onSelectedItemChange?.(changes)
-      if (changes.selectedItem !== null) onChange?.(changes.selectedItem)
-    },
-  })
+  const select = useDownshiftSelect(props)
+  useEffect(() => {
+    if (onChange && select.selectedItem) onChange(select.selectedItem)
+  }, [select.selectedItem, onChange])
   const { refs, floatingStyles } = useFloating({
     open: select.isOpen,
     placement,
