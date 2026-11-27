@@ -12,10 +12,8 @@ import { useRef }                   from 'react'
 
 import { useTheme }                 from '@atls-ui-parts/theme'
 
-import { appearanceStyles }         from '../styles/index.js'
-import { assignInputVariables }     from '../styles/index.js'
+import { InputField }               from '../field/component.js'
 import { containerStyles }          from '../styles/index.js'
-import { fieldStyles }              from '../styles/index.js'
 import { inputAppearances }         from '../styles/index.js'
 import { inputShapes }              from '../styles/index.js'
 import { inputStyles }              from '../styles/index.js'
@@ -26,6 +24,8 @@ const isPresent = (value: ReactNode): boolean =>
   value !== undefined && value !== null && value !== false
 
 export const Textarea = ({
+  animation,
+  fieldRef,
   appearance = inputAppearances.primary,
   'aria-describedby': ariaDescribedBy,
   'aria-invalid': ariaInvalid,
@@ -45,7 +45,10 @@ export const Textarea = ({
   const theme = useTheme()
   const textareaRef = useRef<HTMLTextAreaElement>(null)
   const generatedDescriptionId = useId()
-  const resolvedAppearance = resolveInputAppearance(appearance, theme, shape)
+  const resolvedAppearance = resolveInputAppearance(appearance, theme, {
+    ...shape,
+    elevation: shape.field?.elevationSize ?? shape.elevation,
+  })
   const hasError = isPresent(error)
   const message = hasError ? error : helperText
   const hasMessage = isPresent(message)
@@ -68,28 +71,27 @@ export const Textarea = ({
   }
 
   return (
-    <div
-      className={clsx(containerStyles, className)}
-      hidden={hidden}
-      style={assignInputVariables(resolvedAppearance, style)}
-    >
-      <div
-        className={clsx(fieldStyles, appearanceStyles, shape.className)}
-        data-disabled={disabled || undefined}
-        data-error={hasError || undefined}
-        onPointerDown={focusTextarea}
+    <div className={clsx(containerStyles, className)} hidden={hidden} style={style}>
+      <InputField
+        shape={shape.field}
+        appearance={resolvedAppearance}
+        animation={animation}
+        disabled={disabled}
+        error={hasError}
       >
-        <textarea
-          {...props}
-          ref={textareaRef}
-          aria-describedby={describedBy}
-          aria-invalid={hasError ? true : ariaInvalid}
-          className={clsx(inputStyles, textareaClassName)}
-          disabled={disabled}
-          placeholder={placeholder}
-          style={textareaStyle}
-        />
-      </div>
+        <div ref={fieldRef} className={shape.className} onPointerDown={focusTextarea}>
+          <textarea
+            {...props}
+            ref={textareaRef}
+            aria-describedby={describedBy}
+            aria-invalid={hasError ? true : ariaInvalid}
+            className={clsx(inputStyles, textareaClassName)}
+            disabled={disabled}
+            placeholder={placeholder}
+            style={textareaStyle}
+          />
+        </div>
+      </InputField>
       {hasMessage && (
         <div
           id={descriptionId}

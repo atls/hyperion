@@ -8,7 +8,7 @@ import type { InputAppearances }      from './interfaces.js'
 
 const variants = (
   theme: Theme,
-  shape: InputShape
+  shape: Pick<InputShape, 'elevation'>
 ): Record<InputAppearanceName, InputAppearanceStates> => ({
   primary: {
     unfilled: {
@@ -108,6 +108,6 @@ export const inputAppearances = {
 export const resolveInputAppearance = (
   appearance: InputAppearance,
   theme: Theme,
-  shape: InputShape
+  shape: Pick<InputShape, 'elevation'>
 ): InputAppearanceStates =>
   typeof appearance === 'string' ? variants(theme, shape)[appearance] : appearance

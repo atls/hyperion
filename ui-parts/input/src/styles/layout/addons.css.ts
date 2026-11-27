@@ -17,8 +17,10 @@ export const addonStyles = style({
   display: 'inline-flex',
   flex: '0 0 auto',
   height: fallbackVar(addonSize, inputAddonSizes.md),
+  minHeight: 'min-content',
   justifyContent: 'center',
   width: fallbackVar(addonSize, inputAddonSizes.md),
+  minWidth: 'min-content',
 })
 
 globalStyle(`${addonStyles} > svg`, {
