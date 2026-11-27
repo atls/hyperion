@@ -155,6 +155,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:ui-parts/next-image"\
     },\
     {\
+      "name": "@atls-ui-parts/pagination",\
+      "reference": "workspace:ui-parts/pagination"\
+    },\
+    {\
       "name": "@atls-ui-parts/parallax",\
       "reference": "workspace:ui-parts/parallax"\
     },\
@@ -274,6 +278,7 @@ const RAW_RUNTIME_STATE =
     ["@atls-ui-parts/mapbox", ["workspace:ui-parts/mapbox"]],\
     ["@atls-ui-parts/modal", ["workspace:ui-parts/modal"]],\
     ["@atls-ui-parts/next-image", ["workspace:ui-parts/next-image"]],\
+    ["@atls-ui-parts/pagination", ["workspace:ui-parts/pagination"]],\
     ["@atls-ui-parts/parallax", ["workspace:ui-parts/parallax"]],\
     ["@atls-ui-parts/popover", ["workspace:ui-parts/popover"]],\
     ["@atls-ui-parts/portal", ["workspace:ui-parts/portal"]],\
@@ -1645,6 +1650,26 @@ const RAW_RUNTIME_STATE =
           ["next", "virtual:b2254c2d82af19fb4b66316f70568d9bb842b90577af32d06ce4041b067382e4019e46921576ca16c5e94d26ef67d71a84d5e6edc1d9dc8c1caf4ef71a29968c#npm:15.3.1"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:19.1.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/pagination", [\
+      ["workspace:ui-parts/pagination", {\
+        "packageLocation": "./ui-parts/pagination/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/pagination", "workspace:ui-parts/pagination"],\
+          ["@atls-ui-parts/theme", "virtual:6e3d13d4bb141546c851eafb803659d9bef8a8a4b826ab761e48399dcbf8cda80227a38097da69531ddae63c1380c43a5fad649d9ff8e485d2bc4c96720b9bd0#workspace:ui-parts/theme"],\
+          ["@atls-ui/theme", "workspace:ui/theme"],\
+          ["@storybook/react", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#patch:@storybook/react@npm%3A10.4.6#~/.yarn/patches/@storybook-react-npm-10.4.6-574597d2a0.patch::version=10.4.6&hash=1496cc"],\
+          ["@types/react", "npm:19.1.2"],\
+          ["@vanilla-extract/css", "npm:1.17.1"],\
+          ["@vanilla-extract/dynamic", "npm:2.1.2"],\
+          ["clsx", "npm:2.1.1"],\
+          ["react", "npm:19.1.0"],\
+          ["react-dom", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:19.1.0"],\
+          ["storybook", "virtual:76ebc481ac02aa95961a7136f7e551f7070fbf8eb171c0ca48399e504fe0f0f0edaf1d4f5953b763ae0b309e0e91ebf7d54e047cc0a0270d8aee71a756c50a70#npm:10.4.6"],\
+          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
         ],\
         "linkType": "SOFT"\
       }]\
