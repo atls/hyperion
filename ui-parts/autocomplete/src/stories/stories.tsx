@@ -37,7 +37,7 @@ const meta = {
     disabled: { control: 'boolean' },
     'aria-label': { control: 'text' },
     placeholder: { control: 'text' },
-    value: { control: false },
+    value: { control: 'text' },
     inputValue: { control: false },
     filterOptions: { control: false },
     renderOption: { control: false },
