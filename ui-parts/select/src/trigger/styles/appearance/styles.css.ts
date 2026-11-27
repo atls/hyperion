@@ -2,7 +2,6 @@ import { createThemeContract } from '@vanilla-extract/css'
 import { style }               from '@vanilla-extract/css'
 
 import { borderWidths }        from '@atls-ui/theme'
-import { borderStyles }        from '@atls-ui/theme'
 
 export const triggerAppearanceVariables = createThemeContract({
   default: { backgroundColor: null, borderColor: null, shadow: null },
@@ -20,14 +19,9 @@ export const triggerAppearanceStyles = style({
       borderColor: triggerAppearanceVariables.hover.borderColor,
       boxShadow: triggerAppearanceVariables.hover.shadow,
     },
-    '&:focus-visible:not(:disabled)': {
-      outline: `${borderWidths.sm} ${borderStyles.solid} ${triggerAppearanceVariables.focused.borderColor}`,
-      outlineOffset: `-${borderWidths.md}`,
-      backgroundColor: triggerAppearanceVariables.focused.backgroundColor,
-      borderColor: triggerAppearanceVariables.focused.borderColor,
-      boxShadow: triggerAppearanceVariables.focused.shadow,
-    },
-    '&[aria-expanded="true"]:not(:disabled)': {
+    '&:is(:focus-visible, [aria-expanded="true"]):not(:disabled)': {
+      outlineWidth: borderWidths.none,
+      borderWidth: borderWidths.md,
       backgroundColor: triggerAppearanceVariables.focused.backgroundColor,
       borderColor: triggerAppearanceVariables.focused.borderColor,
       boxShadow: triggerAppearanceVariables.focused.shadow,

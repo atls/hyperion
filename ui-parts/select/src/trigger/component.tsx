@@ -5,9 +5,12 @@ import type { TriggerProps }          from './interfaces.js'
 import { assignInlineVars }           from '@vanilla-extract/dynamic'
 import { clsx }                       from 'clsx'
 
+import { borderWidths }               from '@atls-ui/theme'
+
 import { triggerAppearanceStyles }    from './styles/appearance/styles.css.js'
 import { triggerAppearanceVariables } from './styles/appearance/styles.css.js'
 import { triggerBaseStyles }          from './styles/base.css.js'
+import { triggerBorderWidth }         from './styles/shape/variables.css.js'
 export const Trigger = ({
   shape,
   appearance,
@@ -25,7 +28,12 @@ export const Trigger = ({
       paddingBlock: shape.paddingBlock,
       gap: shape.gap,
       borderRadius: shape.borderRadius,
-      borderWidth: shape.borderWidth,
+      ...assignInlineVars({
+        [triggerBorderWidth]:
+          typeof shape.borderWidth === 'number'
+            ? `${shape.borderWidth}px`
+            : (shape.borderWidth ?? borderWidths.sm),
+      }),
       ...assignInlineVars(triggerAppearanceVariables, appearance),
       ...style,
     }}
